@@ -1,0 +1,9 @@
+$variant: 'dark';
+$laptop: 'false';
+$trans: 'true';
+$panel: 'dark';
+$theme: 'default';
+
+@import '../variables';
+@import '../colors';
+@import 'dash-to-dock';

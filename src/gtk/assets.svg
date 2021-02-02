@@ -1,0 +1,170 @@
+<svg width="400" height="120" version="1.1" viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <linearGradient id="color-on-primary-dark" x1="6.2124" x2="29.25" y1="11.894" y2="11.894" gradientTransform="scale(1.1453 .87314)" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#FFFFFF" offset="1"/>
+  </linearGradient>
+  <linearGradient id="color-on-primary-light" x1="6.2124" x2="29.25" y1="11.894" y2="11.894" gradientTransform="scale(1.1453 .87314)" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#000000" stop-opacity=".87" offset="1"/>
+  </linearGradient>
+  <linearGradient id="color-text-secondary-disabled">
+   <stop stop-color="#000000" stop-opacity=".26" offset="1"/>
+  </linearGradient>
+  <linearGradient id="color-text-secondary-disabled-dark">
+   <stop stop-color="#FFFFFF" stop-opacity=".3" offset="1"/>
+  </linearGradient>
+  <linearGradient id="color-primary-dark">
+   <stop stop-color="#1A73E8" offset="1"/>
+  </linearGradient>
+  <linearGradient id="color-primary-light">
+   <stop stop-color="#3281ea" offset="1"/>
+  </linearGradient>
+  <linearGradient id="color-background">
+   <stop stop-color="#F2F2F2" offset="1"/>
+  </linearGradient>
+  <linearGradient id="color-background-dark">
+   <stop stop-color="#212121" offset="1"/>
+  </linearGradient>
+  <linearGradient id="color-surface" x2="40" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#FFFFFF" offset="1"/>
+  </linearGradient>
+  <linearGradient id="color-surface-dark" x2="40" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#3C3C3C" offset="1"/>
+  </linearGradient>
+  <g id="base-scale-slider">
+   <rect width="24" height="24" fill="none"/>
+   <circle cx="12" cy="12" r="6"/>
+  </g>
+  <g id="base-scale-horz-marks-before-slider">
+   <rect width="24" height="24" fill="none"/>
+   <path transform="rotate(45,12,12)" d="m6 6h6a6 6 0 1 1-6 6z"/>
+  </g>
+  <g id="base-scale-vert-marks-after-slider">
+   <use transform="rotate(90,12,12)" width="100%" height="100%" xlink:href="#base-scale-horz-marks-before-slider"/>
+  </g>
+  <g id="base-scale-horz-marks-after-slider">
+   <use transform="rotate(180,12,12)" width="100%" height="100%" xlink:href="#base-scale-horz-marks-before-slider"/>
+  </g>
+  <g id="base-scale-vert-marks-before-slider">
+   <use transform="rotate(-90,12,12)" width="100%" height="100%" xlink:href="#base-scale-horz-marks-before-slider"/>
+  </g>
+  <g id="base-selectionmode-checkbox">
+   <rect width="40" height="40" fill="none"/>
+   <rect x="2" y="2" width="36" height="36" rx="4"/>
+  </g>
+  <g id="base-selectionmode-checkmark">
+   <path transform="matrix(1.5,0,0,1.5,2,2)" d="M 9,16.17 4.83,12 3.41,13.41 9,19 21,7 19.59,5.59 Z"/>
+  </g>
+  <linearGradient id="linearGradient976" x2="200" gradientTransform="scale(1 .6)" gradientUnits="userSpaceOnUse" xlink:href="#color-background"/>
+  <linearGradient id="linearGradient978" x2="24" gradientUnits="userSpaceOnUse" xlink:href="#color-primary-dark"/>
+  <linearGradient id="linearGradient980" x2="24" gradientUnits="userSpaceOnUse" xlink:href="#color-background"/>
+  <linearGradient id="linearGradient982" x2="24" gradientUnits="userSpaceOnUse" xlink:href="#color-text-secondary-disabled"/>
+  <linearGradient id="linearGradient990" x1="-3.5527e-15" x2="24" gradientUnits="userSpaceOnUse" xlink:href="#color-primary-dark"/>
+  <linearGradient id="linearGradient992" x1="-3.5527e-15" x2="24" gradientUnits="userSpaceOnUse" xlink:href="#color-background"/>
+  <linearGradient id="linearGradient994" x1="-3.5527e-15" x2="24" gradientUnits="userSpaceOnUse" xlink:href="#color-text-secondary-disabled"/>
+  <linearGradient id="linearGradient996" x1="-2.6324e-15" x2="24" y1="-3.5527e-15" y2="-3.5527e-15" gradientUnits="userSpaceOnUse" xlink:href="#color-primary-dark"/>
+  <linearGradient id="linearGradient998" x1="-2.6324e-15" x2="24" y1="-3.5527e-15" y2="-3.5527e-15" gradientUnits="userSpaceOnUse" xlink:href="#color-background"/>
+  <linearGradient id="linearGradient1000" x1="-2.6324e-15" x2="24" y1="-3.5527e-15" y2="-3.5527e-15" gradientUnits="userSpaceOnUse" xlink:href="#color-text-secondary-disabled"/>
+  <linearGradient id="linearGradient1008" x2="40" gradientUnits="userSpaceOnUse" xlink:href="#color-primary-dark"/>
+  <linearGradient id="linearGradient1041" x2="200" gradientTransform="matrix(1 0 0 .6 200 0)" gradientUnits="userSpaceOnUse" xlink:href="#color-background-dark"/>
+  <linearGradient id="linearGradient1043" x2="24" gradientUnits="userSpaceOnUse" xlink:href="#color-primary-light"/>
+  <linearGradient id="linearGradient1045" x2="24" gradientUnits="userSpaceOnUse" xlink:href="#color-background-dark"/>
+  <linearGradient id="linearGradient1047" x2="24" gradientUnits="userSpaceOnUse" xlink:href="#color-text-secondary-disabled-dark"/>
+  <linearGradient id="linearGradient1055" x1="-3.5527e-15" x2="24" gradientUnits="userSpaceOnUse" xlink:href="#color-primary-light"/>
+  <linearGradient id="linearGradient1057" x1="-3.5527e-15" x2="24" gradientUnits="userSpaceOnUse" xlink:href="#color-background-dark"/>
+  <linearGradient id="linearGradient1059" x1="-3.5527e-15" x2="24" gradientUnits="userSpaceOnUse" xlink:href="#color-text-secondary-disabled-dark"/>
+  <linearGradient id="linearGradient1061" x1="-2.6324e-15" x2="24" y1="-3.5527e-15" y2="-3.5527e-15" gradientUnits="userSpaceOnUse" xlink:href="#color-primary-light"/>
+  <linearGradient id="linearGradient1063" x1="-2.6324e-15" x2="24" y1="-3.5527e-15" y2="-3.5527e-15" gradientUnits="userSpaceOnUse" xlink:href="#color-background-dark"/>
+  <linearGradient id="linearGradient1065" x1="-2.6324e-15" x2="24" y1="-3.5527e-15" y2="-3.5527e-15" gradientUnits="userSpaceOnUse" xlink:href="#color-text-secondary-disabled-dark"/>
+  <linearGradient id="linearGradient1073" x2="40" gradientUnits="userSpaceOnUse" xlink:href="#color-primary-light"/>
+  <linearGradient id="linearGradient1019" x1="110" x2="113" y1="92" y2="92" gradientUnits="userSpaceOnUse" xlink:href="#color-primary-dark"/>
+  <linearGradient id="linearGradient1023" x1="110" x2="113" y1="92" y2="92" gradientTransform="translate(199.35)" gradientUnits="userSpaceOnUse" xlink:href="#color-primary-light"/>
+ </defs>
+ <rect width="200" height="120" fill="url(#linearGradient976)" stroke-width=".7746"/>
+ <g id="scale-slider" transform="translate(8,8)">
+  <use width="100%" height="100%" fill="url(#linearGradient978)" xlink:href="#base-scale-slider"/>
+ </g>
+ <g id="scale-slider-disabled" transform="translate(8,40)">
+  <use width="100%" height="100%" fill="url(#linearGradient980)" xlink:href="#base-scale-slider"/>
+  <use width="100%" height="100%" fill="url(#linearGradient982)" xlink:href="#base-scale-slider"/>
+ </g>
+ <g id="scale-horz-marks-before-slider" transform="translate(40,8)">
+  <use width="100%" height="100%" fill="url(#linearGradient978)" xlink:href="#base-scale-horz-marks-before-slider"/>
+ </g>
+ <g id="scale-horz-marks-before-slider-disabled" transform="translate(40,40)">
+  <use width="100%" height="100%" fill="url(#linearGradient980)" xlink:href="#base-scale-horz-marks-before-slider"/>
+  <use width="100%" height="100%" fill="url(#linearGradient982)" xlink:href="#base-scale-horz-marks-before-slider"/>
+ </g>
+ <g id="scale-horz-marks-after-slider" transform="translate(72,8)">
+  <use width="100%" height="100%" fill="url(#linearGradient990)" xlink:href="#base-scale-horz-marks-after-slider"/>
+ </g>
+ <g id="scale-horz-marks-after-slider-disabled" transform="translate(72,40)">
+  <use width="100%" height="100%" fill="url(#linearGradient992)" xlink:href="#base-scale-horz-marks-after-slider"/>
+  <use width="100%" height="100%" fill="url(#linearGradient994)" xlink:href="#base-scale-horz-marks-after-slider"/>
+ </g>
+ <g id="scale-vert-marks-before-slider" transform="translate(104,8)">
+  <use width="100%" height="100%" fill="url(#linearGradient996)" xlink:href="#base-scale-vert-marks-before-slider"/>
+ </g>
+ <g id="scale-vert-marks-before-slider-disabled" transform="translate(104,40)">
+  <use width="100%" height="100%" fill="url(#linearGradient998)" xlink:href="#base-scale-vert-marks-before-slider"/>
+  <use width="100%" height="100%" fill="url(#linearGradient1000)" xlink:href="#base-scale-vert-marks-before-slider"/>
+ </g>
+ <g id="scale-vert-marks-after-slider" transform="translate(136,8)">
+  <use width="100%" height="100%" fill="url(#linearGradient978)" xlink:href="#base-scale-vert-marks-after-slider"/>
+ </g>
+ <g id="scale-vert-marks-after-slider-disabled" transform="translate(136,40)">
+  <use width="100%" height="100%" fill="url(#linearGradient980)" xlink:href="#base-scale-vert-marks-after-slider"/>
+  <use width="100%" height="100%" fill="url(#linearGradient982)" xlink:href="#base-scale-vert-marks-after-slider"/>
+ </g>
+ <g id="selectionmode-checkbox-unchecked" transform="translate(8,72)">
+  <use width="100%" height="100%" fill="url(#color-surface)" xlink:href="#base-selectionmode-checkbox"/>
+ </g>
+ <g id="selectionmode-checkbox-checked" transform="translate(56,72)">
+  <use width="100%" height="100%" fill="url(#linearGradient1008)" xlink:href="#base-selectionmode-checkbox"/>
+  <use width="100%" height="100%" fill="url(#color-on-primary-dark)" xlink:href="#base-selectionmode-checkmark"/>
+ </g>
+ <rect x="200" width="200" height="120" fill="url(#linearGradient1041)" stroke-width=".7746"/>
+ <g id="scale-slider-dark" transform="translate(208,8)">
+  <use width="100%" height="100%" fill="url(#linearGradient1043)" xlink:href="#base-scale-slider"/>
+ </g>
+ <g id="scale-slider-disabled-dark" transform="translate(208,40)">
+  <use width="100%" height="100%" fill="url(#linearGradient1045)" xlink:href="#base-scale-slider"/>
+  <use width="100%" height="100%" fill="url(#linearGradient1047)" xlink:href="#base-scale-slider"/>
+ </g>
+ <g id="scale-horz-marks-before-slider-dark" transform="translate(240,8)">
+  <use width="100%" height="100%" fill="url(#linearGradient1043)" xlink:href="#base-scale-horz-marks-before-slider"/>
+ </g>
+ <g id="scale-horz-marks-before-slider-disabled-dark" transform="translate(240,40)">
+  <use width="100%" height="100%" fill="url(#linearGradient1045)" xlink:href="#base-scale-horz-marks-before-slider"/>
+  <use width="100%" height="100%" fill="url(#linearGradient1047)" xlink:href="#base-scale-horz-marks-before-slider"/>
+ </g>
+ <g id="scale-horz-marks-after-slider-dark" transform="translate(272,8)">
+  <use width="100%" height="100%" fill="url(#linearGradient1055)" xlink:href="#base-scale-horz-marks-after-slider"/>
+ </g>
+ <g id="scale-horz-marks-after-slider-disabled-dark" transform="translate(272,40)">
+  <use width="100%" height="100%" fill="url(#linearGradient1057)" xlink:href="#base-scale-horz-marks-after-slider"/>
+  <use width="100%" height="100%" fill="url(#linearGradient1059)" xlink:href="#base-scale-horz-marks-after-slider"/>
+ </g>
+ <g id="scale-vert-marks-before-slider-dark" transform="translate(304,8)">
+  <use width="100%" height="100%" fill="url(#linearGradient1061)" xlink:href="#base-scale-vert-marks-before-slider"/>
+ </g>
+ <g id="scale-vert-marks-before-slider-disabled-dark" transform="translate(304,40)">
+  <use width="100%" height="100%" fill="url(#linearGradient1063)" xlink:href="#base-scale-vert-marks-before-slider"/>
+  <use width="100%" height="100%" fill="url(#linearGradient1065)" xlink:href="#base-scale-vert-marks-before-slider"/>
+ </g>
+ <g id="scale-vert-marks-after-slider-dark" transform="translate(336,8)">
+  <use width="100%" height="100%" fill="url(#linearGradient1043)" xlink:href="#base-scale-vert-marks-after-slider"/>
+ </g>
+ <g id="scale-vert-marks-after-slider-disabled-dark" transform="translate(336,40)">
+  <use width="100%" height="100%" fill="url(#linearGradient1045)" xlink:href="#base-scale-vert-marks-after-slider"/>
+  <use width="100%" height="100%" fill="url(#linearGradient1047)" xlink:href="#base-scale-vert-marks-after-slider"/>
+ </g>
+ <g id="selectionmode-checkbox-unchecked-dark" transform="translate(208,72)">
+  <use width="100%" height="100%" fill="url(#color-surface-dark)" xlink:href="#base-selectionmode-checkbox"/>
+ </g>
+ <g id="selectionmode-checkbox-checked-dark" transform="translate(256,72)">
+  <use width="100%" height="100%" fill="url(#linearGradient1073)" xlink:href="#base-selectionmode-checkbox"/>
+  <use width="100%" height="100%" fill="url(#color-on-primary-light)" xlink:href="#base-selectionmode-checkmark"/>
+ </g>
+ <path id="selected-line" d="m111.5 82c0.831 0 1.5 0.669 1.5 1.5v17c0 0.831-0.669 1.5-1.5 1.5s-1.5-0.669-1.5-1.5v-17c0-0.831 0.669-1.5 1.5-1.5z" fill="url(#linearGradient1019)" stroke-width="0" style="paint-order:stroke fill markers"/>
+ <path id="selected-line-dark" d="m310.85 82c0.831 0 1.5 0.669 1.5 1.5v17c0 0.831-0.669 1.5-1.5 1.5s-1.5-0.669-1.5-1.5v-17c0-0.831 0.669-1.5 1.5-1.5z" fill="url(#linearGradient1023)" stroke-width="0" style="paint-order:stroke fill markers"/>
+</svg>

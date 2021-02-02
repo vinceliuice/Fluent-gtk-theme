@@ -1,0 +1,8 @@
+<svg width="24" height="24" enable-background="new" version="1.0" xmlns="http://www.w3.org/2000/svg">
+ <g transform="matrix(1.0526 0 0 1.0526 -.10526 -.10526)" stroke-linecap="round" stroke-linejoin="round" stroke-width=".58295">
+  <rect x="2" y="2" width="8.55" height="8.55" rx="0" ry="0" enable-background="new" fill="#00b2ff" opacity=".75" style="paint-order:stroke fill markers"/>
+  <rect x="12.45" y="2" width="8.55" height="8.55" rx="0" ry="0" enable-background="new" fill="#00ccff" style="paint-order:stroke fill markers"/>
+  <rect x="2" y="12.45" width="8.55" height="8.55" rx="0" ry="0" enable-background="new" fill="#00a2ff" opacity=".25" style="paint-order:stroke fill markers"/>
+  <rect x="12.45" y="12.45" width="8.55" height="8.55" rx="0" ry="0" enable-background="new" fill="#00b2ff" opacity=".5" style="paint-order:stroke fill markers"/>
+ </g>
+</svg>

@@ -1,0 +1,168 @@
+//
+// Dash to Dock
+//
+
+// Scrollview style
+.bottom #dashtodockDashScrollview,
+.top #dashtodockDashScrollview {
+  -st-hfade-offset: 24px;
+}
+
+.left #dashtodockDashScrollview,
+.right #dashtodockDashScrollview {
+  -st-vfade-offset: 24px;
+}
+
+#dashtodockContainer {
+  background-color: transparent;
+
+  .number-overlay {
+    color: white;
+    background-color: rgba(black, 0.75);
+    text-align: center;
+  }
+
+  .notification-badge {
+    color: white;
+    background-color: $primary_color;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.25);
+    border-radius: 1000px;
+    margin: 2px;
+    padding: 0.2em 0.6em;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  &.straight-corner #dash,
+  &.shrink.straight-corner #dash {
+    border-radius: 0;
+    margin: 0;
+  }
+
+  @each $_dock, $_radius in (top, $material_radius),
+                            (bottom, $material_radius),
+                            (left, $material_radius),
+                            (right, $material_radius) {
+    &.#{$_dock}.dashtodock #dash,
+    &.#{$_dock}.dashtodock:overview #dash {
+      border-radius: #{$_radius};
+      margin-#{$_dock}: $container_padding / 2;
+      padding: $container_padding / 2;
+    }
+
+    &.#{$_dock}.extended #dash,
+    &.#{$_dock}.extended:overview #dash {
+      margin: 0;
+      padding: 0;
+      border-radius: 0;
+    }
+  }
+
+  &.extended.top,
+  &.extended.bottom {
+    #dash {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  &.extended.right,
+  &.extended.left {
+    #dash {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  #dash { // default-mode
+    .app-well-app-running-dot { //running apps indicator
+      width: 28px; height: 2px;
+      border-radius: 0;
+      background-color: $inverse_hint_fg_color;
+      margin-bottom: 0;
+    }
+
+    StWidget.focused .app-well-app-running-dot {
+      width: 32px;
+      background-color: $primary_color;
+    }
+  }
+
+  &.dashtodock #dash { background-color: $panel_bg_color; }
+
+  &.opaque #dash { // solid-mode
+    background-color: #202020;
+  }
+
+  &.transparent #dash { // translucent-mode
+    background-color: $panel_bg_color; // does not work
+  }
+
+  &:overview #dash { // overview-mode #1
+    background-color: $inverse_divider_color;
+  }
+
+  &.opaque:overview,
+  &.transparent:overview { // overview-mode #2
+    #dash {
+      background-color: transparent;
+      box-shadow: none;
+    }
+  }
+
+  &.extended:overview, // overview-mode #3
+  &.opaque.extended:overview,
+  &.transparent.extended:overview {
+    #dash {
+      background-color: $panel_bg_color;
+    }
+  }
+
+  &.running-dots,
+  &.dashtodock {
+    .dash-item-container > StButton {
+      transition-duration: 250ms;
+      background-size: contain;
+    }
+  }
+
+  &.shrink,
+  &.dashtodock {
+    .dash-item-container > StButton {
+       padding: 1px 2px;
+    }
+  }
+
+  .app-well-app,
+  .show-apps {
+    .overview-icon {
+      padding: 8px;
+      background-size: contain;
+    }
+  }
+
+  &.extended,
+  &.extended:overview {
+    .app-well-app,
+    .show-apps {
+      .overview-icon {
+        border-radius: $buttons_radius;
+      }
+    }
+  }
+
+  .metro .overview-icon {
+    border-radius: 0;
+  }
+}
+
+.dashtodock-app-well-preview-menu-item {
+  padding: 1em 1em 0.5em 1em;
+}
+
+#dashtodockPreviewSeparator.popup-separator-menu-item-horizontal {
+  width: 1px;
+  height: auto;
+  border-right-width: 1px;
+  margin: 32px 0;
+}
