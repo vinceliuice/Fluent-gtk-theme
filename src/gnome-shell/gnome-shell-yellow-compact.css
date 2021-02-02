@@ -1058,21 +1058,21 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   -arrow-border-width: 0;
   -arrow-border-color: transparent;
   -arrow-base: 64px;
-  -arrow-rise: 6px;
+  -arrow-rise: 4px;
   -arrow-box-shadow: none;
-  margin-left: 4px;
+  margin: 4px;
   background-color: rgba(255, 255, 255, 0.97);
   border-radius: 3px;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.35);
 }
 
 .popup-menu-boxpointer {
-  -arrow-border-radius: 0;
+  -arrow-border-radius: 3px;
   -arrow-background-color: transparent;
   -arrow-border-width: 0;
   -arrow-border-color: transparent;
   -arrow-base: 64px;
-  -arrow-rise: 0;
+  -arrow-rise: 4px;
   -arrow-box-shadow: none;
   margin: 0;
   background-image: none;
@@ -1081,8 +1081,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .popup-menu-boxpointer .popup-menu-content {
-  margin-left: 6px;
-  margin-right: 2px;
+  margin: 0 2px 0 4px;
   background-color: rgba(255, 255, 255, 0.97);
   border-radius: 3px;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.35);
@@ -2403,8 +2402,8 @@ Gjs_ui_panel_ActivitiesButton.panel-button:overview {
   font-size: 1em;
   color: rgba(255, 255, 255, 0.85);
   background-color: rgba(255, 255, 255, 0.13);
-  padding: 3px 0;
-  margin: 3px;
+  padding: 2px;
+  margin: 0 2px;
   border: none;
   border-radius: 3px;
 }
@@ -3864,45 +3863,13 @@ StWidget.focused .app-well-app-running-dot {
   box-shadow: 0 14px 14px rgba(0, 0, 0, 0.5);
 }
 
-.bottom #dashtodockDashScrollview,
-.top #dashtodockDashScrollview {
-  -st-hfade-offset: 24px;
-}
-
-.left #dashtodockDashScrollview,
-.right #dashtodockDashScrollview {
-  -st-vfade-offset: 24px;
-}
-
 #dashtodockContainer {
   background-color: transparent;
 }
 
-#dashtodockContainer .number-overlay {
-  color: white;
-  background-color: rgba(0, 0, 0, 0.75);
-  text-align: center;
-}
-
-#dashtodockContainer .notification-badge {
-  color: white;
-  background-color: #FBC02D;
-  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.25);
-  border-radius: 1000px;
-  margin: 2px;
-  padding: 0.2em 0.6em;
-  font-weight: bold;
-  text-align: center;
-}
-
-#dashtodockContainer.straight-corner #dash, #dashtodockContainer.shrink.straight-corner #dash {
-  border-radius: 0;
-  margin: 0;
-}
-
 #dashtodockContainer.top.dashtodock #dash, #dashtodockContainer.top.dashtodock:overview #dash {
-  border-radius: 5px 5px 5px 5px !important;
-  margin-top: 0 !important;
+  margin: 0;
+  border-radius: 5px;
   padding: 2px;
 }
 
@@ -3913,8 +3880,8 @@ StWidget.focused .app-well-app-running-dot {
 }
 
 #dashtodockContainer.bottom.dashtodock #dash, #dashtodockContainer.bottom.dashtodock:overview #dash {
-  border-radius: 5px 5px 5px 5px !important;
-  margin-bottom: 0 !important;
+  margin: 0;
+  border-radius: 5px;
   padding: 2px;
 }
 
@@ -3925,8 +3892,8 @@ StWidget.focused .app-well-app-running-dot {
 }
 
 #dashtodockContainer.left.dashtodock #dash, #dashtodockContainer.left.dashtodock:overview #dash {
-  border-radius: 5px 5px 5px 5px !important;
-  margin-left: 0 !important;
+  margin: 0;
+  border-radius: 5px;
   padding: 2px;
 }
 
@@ -3937,8 +3904,8 @@ StWidget.focused .app-well-app-running-dot {
 }
 
 #dashtodockContainer.right.dashtodock #dash, #dashtodockContainer.right.dashtodock:overview #dash {
-  border-radius: 5px 5px 5px 5px !important;
-  margin-right: 0 !important;
+  margin: 0;
+  border-radius: 5px;
   padding: 2px;
 }
 
@@ -3948,96 +3915,21 @@ StWidget.focused .app-well-app-running-dot {
   border-radius: 0;
 }
 
-#dashtodockContainer.extended.top #dash, #dashtodockContainer.extended.bottom #dash {
-  padding-top: 0;
-  padding-bottom: 0;
-}
-
-#dashtodockContainer.extended.right #dash, #dashtodockContainer.extended.left #dash {
-  padding-left: 0;
-  padding-right: 0;
-}
-
-#dashtodockContainer.dashtodock #dash {
+#dashtodockContainer #dash {
   background-color: rgba(0, 0, 0, 0.5);
-}
-
-#dashtodockContainer #dash .app-well-app-running-dot {
-  width: 28px;
-  height: 2px;
-  border-radius: 0;
-  background-color: rgba(255, 255, 255, 0.5);
-  margin-bottom: 0;
-}
-
-#dashtodockContainer #dash StWidget.focused .app-well-app-running-dot {
-  width: 32px;
-  background-color: #FBC02D;
+  padding: 2px;
 }
 
 #dashtodockContainer.opaque #dash {
   background-color: #202020;
 }
 
-#dashtodockContainer.transparent #dash {
+#dashtodockContainer.dashtodock #dash, #dashtodockContainer.transparent #dash {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-#dashtodockContainer:overview #dash {
+#dashtodockContainer:overview #dash, #dashtodockContainer.opaque:overview #dash, #dashtodockContainer.transparent:overview #dash, #dashtodockContainer.extended:overview #dash, #dashtodockContainer.opaque.extended:overview #dash, #dashtodockContainer.transparent.extended:overview #dash {
   background-color: rgba(255, 255, 255, 0.15);
-}
-
-#dashtodockContainer:overview #dash .app-well-app-running-dot {
-  background-color: rgba(255, 255, 255, 0.5);
-}
-
-#dashtodockContainer:overview #dash StWidget.focused .app-well-app-running-dot {
-  background-color: #FBC02D;
-}
-
-#dashtodockContainer.opaque:overview #dash, #dashtodockContainer.transparent:overview #dash {
-  background-color: transparent;
-  box-shadow: none;
-}
-
-#dashtodockContainer.extended:overview #dash, #dashtodockContainer.opaque.extended:overview #dash, #dashtodockContainer.transparent.extended:overview #dash {
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-#dashtodockContainer.running-dots .dash-item-container > StButton, #dashtodockContainer.dashtodock .dash-item-container > StButton {
-  transition-duration: 250ms;
-  background-size: contain;
-}
-
-#dashtodockContainer.shrink .dash-item-container > StButton, #dashtodockContainer.dashtodock .dash-item-container > StButton {
-  padding: 1px 2px;
-}
-
-#dashtodockContainer .app-well-app .overview-icon,
-#dashtodockContainer .show-apps .overview-icon {
-  padding: 8px;
-  background-size: contain;
-}
-
-#dashtodockContainer.extended .app-well-app .overview-icon,
-#dashtodockContainer.extended .show-apps .overview-icon, #dashtodockContainer.extended:overview .app-well-app .overview-icon,
-#dashtodockContainer.extended:overview .show-apps .overview-icon {
-  border-radius: 3px;
-}
-
-#dashtodockContainer .metro .overview-icon {
-  border-radius: 0;
-}
-
-.dashtodock-app-well-preview-menu-item {
-  padding: 1em 1em 0.5em 1em;
-}
-
-#dashtodockPreviewSeparator.popup-separator-menu-item-horizontal {
-  width: 1px;
-  height: auto;
-  border-right-width: 1px;
-  margin: 32px 0;
 }
 
 #dash:desktop {
