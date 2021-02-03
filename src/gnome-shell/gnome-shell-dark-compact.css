@@ -1456,14 +1456,14 @@ Gjs_ui_panel_ActivitiesButton.panel-button:overview {
   icon-shadow: none;
 }
 
-#panel .panel-button:hover, #panel .panel-button:focus {
+#panel .panel-button:hover {
   color: #dedede;
   background-color: rgba(0, 0, 0, 0.15);
   text-shadow: none;
   box-shadow: none;
 }
 
-#panel .panel-button:active, #panel .panel-button:checked {
+#panel .panel-button:active, #panel .panel-button:checked, #panel .panel-button:focus {
   background-color: rgba(0, 0, 0, 0.3);
   color: rgba(255, 255, 255, 0.85);
   text-shadow: none;

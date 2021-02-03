@@ -406,6 +406,7 @@ treeview entry {
 
 %button-on-dark {
   color: on(dark, secondary);
+  @extend %button-flat;
 
   &:focus, &:hover, &:active, &:checked { color: on(dark); }
   &:disabled { color: on(dark, secondary-disabled); }
@@ -1490,6 +1491,13 @@ headerbar {
   switch {
     margin-top: ($large-size - 24px) / 2;
     margin-bottom: ($large-size - 24px) / 2;
+    box-shadow: inset 0 0 0 1px $titlebar-text-secondary-disabled;
+
+    &:hover { box-shadow: inset 0 0 0 1px $titlebar-text-disabled; }
+
+    checked { box-shadow: none; }
+
+    slider { background-color: $titlebar-text-secondary-disabled; }
   }
 
   // reset button margins of the spinbutton
@@ -2283,6 +2291,11 @@ switch {
   &:checked {
     box-shadow: none;
     background-color: $primary;
+
+    &:hover {
+      box-shadow: none;
+      background-color: lighten($primary, 5%);
+    }
   }
 
   &:disabled { opacity: 0.5; }
@@ -3441,12 +3454,12 @@ infobar {
       color: on($primary);
 
       button {
+        @extend %button-on-dark;
+
         &, &:hover, &:focus, &:active, &:checked, &.text-button:not(:disabled) { color: on($primary); }
       }
-    }
 
-    &:hover > revealer > box {
-      background-color: if($variant == 'light', lighten($primary, 5%), darken($primary, 5%));
+      *:link { color: on($primary); }
     }
   }
 
@@ -3464,10 +3477,6 @@ infobar {
 
       *:link { color: on($warning); }
     }
-
-    &:hover > revealer > box {
-      background-color: if($variant == 'light', lighten($warning, 5%), darken($warning, 5%));
-    }
   }
 
   &.error {
@@ -3477,14 +3486,12 @@ infobar {
       color: on($error);
 
       button {
+        @extend %button-on-dark;
+
         &, &:hover, &:focus, &:active, &:checked, &.text-button:not(:disabled) { color: on($error); }
       }
 
       *:link { color: on($error); }
-    }
-
-    &:hover > revealer > box {
-      background-color: if($variant == 'light', lighten($error, 5%), darken($error, 5%));
     }
   }
 }

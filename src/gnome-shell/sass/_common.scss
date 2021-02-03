@@ -1257,14 +1257,14 @@ Gjs_ui_panel_ActivitiesButton.panel-button {
       icon-shadow: none;
     }
 
-    &:hover, &:focus {
+    &:hover {
       color: $panel_fg_color;
       background-color: rgba(black, 0.15);
       text-shadow: none;
       box-shadow: none;
     }
 
-    &:active, &:checked {
+    &:active, &:checked, &:focus {
       background-color: rgba(black, 0.3);
       color: $inverse_fg_color;
       text-shadow: none;
