@@ -31,7 +31,9 @@
 //
 
   @if $t == normal {
-    transition: $transition, box-shadow $ripple-fade-out-duration $ease-out;
+    transition: $transition,
+                border $ripple-fade-out-duration $ease-out,
+                box-shadow $ripple-fade-out-duration $ease-out;
     box-shadow: inset 0 0 0 1px transparent;
     background-color: $base;
     color: $text;
@@ -45,6 +47,9 @@
   }
 
   @if $t == focus {
+    transition: $transition,
+                border $ripple-fade-out-duration $ease-out,
+                box-shadow $ripple-fade-out-duration $ease-out;
     background-color: $base;
     box-shadow: inset 0 0 0 1px if($fc == $primary, $track, $fc);
     border-color: if($fc == $primary, $track, $fc);
@@ -95,16 +100,18 @@
 //
 
   @if $t == normal {
-    transition: $transition, box-shadow $ripple-fade-out-duration $ease-out;
+    transition: $transition,
+                border $ripple-fade-out-duration $ease-out,
+                box-shadow $ripple-fade-out-duration $ease-out;
     outline: none;
-    box-shadow: inset 0 0 0 9999px transparent;
+    box-shadow: inset 0 0 0 1px transparent;
     background-color: $base;
     border-color: $divider;
     color: $text;
   }
 
   @if $t == hover {
-    // box-shadow: inset 0 0 0 9999px $overlay-hover;
+    box-shadow: inset 0 0 0 1px transparent;
     background-color: $base;
     border-color: $track;
   }
@@ -115,8 +122,11 @@
   }
 
   @if $t == active {
-    transition: $transition, box-shadow $ripple-fade-out-duration $ease-out;
-    box-shadow: inset 0 0 0 9999px $overlay-active;
+    animation: none;
+    transition: $transition,
+                border $ripple-fade-out-duration $ease-out,
+                box-shadow $ripple-fade-out-duration $ease-out;
+    box-shadow: inset 0 0 0 1px $track;
   }
 
   @if $t == disabled {
@@ -126,11 +136,12 @@
   }
 
   @if $t == checked {
-    box-shadow: none;
+    box-shadow: inset 0 0 0 1px transparent;
     background-clip: border-box;
     background-color: $primary;
     color: on($primary);
     border-color: $primary;
+    transition: $transition, background-color $ripple-fade-out-duration $ease-out;
   }
 
   @if $t == checked-hover {

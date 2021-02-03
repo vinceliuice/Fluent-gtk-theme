@@ -9,7 +9,7 @@
 
 /* Toolbox colors */
 #navigator-toolbox {
-	border: 0 !important;
+	border-bottom: 1px solid var(--gnome-toolbar-border-color) !important;
 	background: none !important;
 }
 
@@ -19,7 +19,7 @@
 	background: var(--gnome-toolbar-background) !important;
 }
 
-#TabsToolbar, #toolbar-menubar, #tabbrowser-tabs {
+#TabsToolbar, #toolbar-menubar {
 	border: 0 !important;
 	background: var(--gnome-tabstoolbar-background) !important;
 	border-radius: 2px 2px 0 0;
@@ -36,8 +36,7 @@
 }
 
 #TabsToolbar:-moz-window-inactive,
-#toolbar-menubar:-moz-window-inactive,
-#tabbrowser-tabs:-moz-window-inactive {
+#toolbar-menubar:-moz-window-inactive {
 	background: var(--gnome-inactive-tabstoolbar-background) !important;
 }
 
@@ -71,24 +70,26 @@ findbar:-moz-window-inactive label,
 }
 
 #PersonalToolbar {
-	padding-top: 2px !important;
-	height: 28px;
-	border-bottom: 1px solid var(--gnome-inactive-toolbar-border-color) !important;
+	padding: 2px 6px !important;
+	height: 32px;
 }
 
 toolbarbutton.bookmark-item:not(.subviewbutton) {
 	padding: 2px 8px !important;
-	margin: 0 0 !important;
+	margin: 0 2px !important;
 	color: var(--gnome-button-color) !important;
-	border-radius: 3px !important;
+	border-radius: 2px !important;
+	transition: background 200ms cubic-bezier(0.0, 0.0, 0.2, 1);
 }
 
 toolbarbutton.bookmark-item:not(.subviewbutton):hover {
 	background: var(--gnome-button-hover-background) !important;
+	transition: background 200ms cubic-bezier(0.0, 0.0, 0.2, 1);
 }
 
 toolbarbutton.bookmark-item:not(.subviewbutton)[open="true"] {
 	background: var(--gnome-button-active-background) !important;
+	transition: background 200ms cubic-bezier(0.0, 0.0, 0.2, 1);
 }
 
 /* Overrides: Remove border below the menu bar / above the header bar */

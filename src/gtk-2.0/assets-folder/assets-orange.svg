@@ -1,5 +1,5 @@
 <svg width="200" height="480" version="1.1" viewBox="0 0 200 480" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
- <rect width="200" height="480" fill="url(#color-background)"/>
+ <rect width="200" height="480" fill="url(#linearGradient1771)"/>
  <defs>
   <linearGradient id="color-text">
    <stop stop-color="#000000" stop-opacity=".87" offset="1"/>
@@ -16,11 +16,8 @@
   <linearGradient id="color-track-disabled">
    <stop stop-color="#000000" stop-opacity=".12" offset="1"/>
   </linearGradient>
-  <linearGradient id="color-fill">
-   <stop stop-color="#000000" stop-opacity=".04" offset="1"/>
-  </linearGradient>
   <linearGradient id="color-primary">
-   <stop stop-color="#F57C00" offset="1"/>
+   <stop stop-color="#FB8C00" offset="1"/>
   </linearGradient>
   <linearGradient id="color-background">
    <stop stop-color="#F2F2F2" offset="1"/>
@@ -31,108 +28,7 @@
   <linearGradient id="color-base-alt">
    <stop stop-color="#FAFAFA" offset="1"/>
   </linearGradient>
-  <clipPath id="top">
-   <rect x="2" y="2" width="36" height="16"/>
-  </clipPath>
-  <clipPath id="left">
-   <rect width="20" height="20"/>
-  </clipPath>
-  <clipPath id="right">
-   <rect x="20" width="20" height="20"/>
-  </clipPath>
-  <clipPath id="left-top">
-   <rect width="20" height="10"/>
-  </clipPath>
-  <clipPath id="left-bottom">
-   <rect y="10" width="20" height="10"/>
-  </clipPath>
-  <clipPath id="right-top">
-   <rect x="20" width="20" height="10"/>
-  </clipPath>
-  <clipPath id="right-bottom">
-   <rect x="20" y="10" width="20" height="10"/>
-  </clipPath>
   <rect id="icon-size" width="16" height="16" fill="none"/>
-  <g id="base-button-box">
-   <rect width="20" height="20" fill="none"/>
-   <rect x="2" y="2" width="16" height="16" rx="4"/>
-  </g>
-  <g id="base-button-disabled">
-   <use fill="url(#color-fill)" xlink:href="#base-button-box"/>
-  </g>
-  <g id="base-entry-box">
-   <rect width="40" height="20" fill="none"/>
-   <rect x="2" y="2" width="36" height="36" rx="4" clip-path="url(#top)"/>
-  </g>
-  <g id="base-entry">
-   <use fill="url(#color-fill)" xlink:href="#base-entry-box"/>
-   <rect x="2" y="17" width="36" height="1" fill="url(#color-text-secondary-disabled)"/>
-  </g>
-  <g id="base-entry-hover">
-   <use xlink:href="#base-entry"/>
-   <use fill="url(#color-text)" fill-opacity=".08" xlink:href="#base-entry-box"/>
-  </g>
-  <g id="base-entry-active">
-   <use xlink:href="#base-entry"/>
-   <use fill="url(#color-text)" fill-opacity=".2" xlink:href="#base-entry-box"/>
-  </g>
-  <g id="base-entry-focus">
-   <use xlink:href="#base-entry"/>
-   <rect x="2" y="16" width="36" height="2" fill="url(#color-primary)"/>
-  </g>
-  <g id="base-entry-disabled">
-   <use fill="url(#color-fill)" xlink:href="#base-entry-box"/>
-   <rect x="2" y="17" width="36" height="1" fill="url(#color-track-disabled)"/>
-  </g>
-  <rect id="button-fill" width="24" height="24" rx="4"/>
-  <g id="base-checkbox-unchecked">
-   <use xlink:href="#button-fill"/>
-   <path d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"/>
-  </g>
-  <g id="base-checkbox-checked">
-   <use xlink:href="#button-fill"/>
-   <path d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-  </g>
-  <g id="base-checkbox-mixed">
-   <use xlink:href="#button-fill"/>
-   <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10H7v-2h10v2z"/>
-  </g>
-  <g id="base-radio-unchecked">
-   <use xlink:href="#button-fill"/>
-   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"/>
-  </g>
-  <g id="base-radio-checked">
-   <use xlink:href="#button-fill"/>
-   <path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm0-5C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"/>
-  </g>
-  <g id="base-radio-mixed">
-   <use xlink:href="#button-fill"/>
-   <path d="M7 11v2h10v-2H7zm5-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
-  </g>
-  <g id="base-menu-checkbox-unchecked">
-   <use xlink:href="#icon-size"/>
-   <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm0 2h12v12H2V2z"/>
-  </g>
-  <g id="base-menu-checkbox-checked">
-   <use xlink:href="#icon-size"/>
-   <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm10.6 3.59L14.01 5l-8 8-4-4 1.41-1.41 2.59 2.59 6.59-6.59z"/>
-  </g>
-  <g id="base-menu-checkbox-mixed">
-   <use xlink:href="#icon-size"/>
-   <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm2 7h8v2H4V7z"/>
-  </g>
-  <g id="base-menu-radio-unchecked">
-   <use xlink:href="#icon-size"/>
-   <path d="m8 0a8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8 8 8 0 0 0-8-8zm0 2a6 6 0 0 1 6 6 6 6 0 0 1-6 6 6 6 0 0 1-6-6 6 6 0 0 1 6-6z"/>
-  </g>
-  <g id="base-menu-radio-checked">
-   <use xlink:href="#icon-size"/>
-   <path d="m8 0a8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8 8 8 0 0 0-8-8zm0 2a6 6 0 0 1 6 6 6 6 0 0 1-6 6 6 6 0 0 1-6-6 6 6 0 0 1 6-6zm0 2a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4z"/>
-  </g>
-  <g id="base-menu-radio-mixed">
-   <use xlink:href="#icon-size"/>
-   <path d="M8 0a8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8 8 8 0 0 0-8-8zm0 2a6 6 0 0 1 6 6 6 6 0 0 1-6 6 6 6 0 0 1-6-6 6 6 0 0 1 6-6zM4 7v2h8V7H4z"/>
-  </g>
   <g id="base-scale-horz-trough">
    <rect width="24" height="24" fill="none"/>
    <rect x="6" y="11" width="12" height="2"/>
@@ -202,217 +98,65 @@
   <g id="base-treeview-rtl-button">
    <use transform="scale(-1 1)" xlink:href="#base-treeview-ltr-button"/>
   </g>
-  <linearGradient id="b" x2="20" gradientUnits="userSpaceOnUse" xlink:href="#color-fill"/>
-  <linearGradient id="linearGradient3064" x2="20" gradientUnits="userSpaceOnUse" xlink:href="#color-text"/>
-  <linearGradient id="linearGradient1542" x2="1" gradientUnits="userSpaceOnUse" xlink:href="#color-fill"/>
+  <linearGradient id="linearGradient4104" x2="20" gradientUnits="userSpaceOnUse" xlink:href="#color-text"/>
+  <linearGradient id="linearGradient1441" x1="279" x2="297" y1="108" y2="108" gradientUnits="userSpaceOnUse" xlink:href="#color-text-secondary"/>
+  <linearGradient id="linearGradient1443" x1="366" x2="386" y1="108" y2="108" gradientUnits="userSpaceOnUse" xlink:href="#color-text-secondary"/>
+  <linearGradient id="linearGradient1451" x1="307" x2="325" y1="108" y2="108" gradientUnits="userSpaceOnUse" xlink:href="#color-primary"/>
+  <linearGradient id="linearGradient1453" x1="394" x2="414" y1="108" y2="108" gradientUnits="userSpaceOnUse" xlink:href="#color-primary"/>
+  <linearGradient id="linearGradient1461" x1="335" x2="353" y1="108" y2="108" gradientUnits="userSpaceOnUse" xlink:href="#color-primary"/>
+  <linearGradient id="linearGradient1463" x1="422" x2="442" y1="108" y2="108" gradientUnits="userSpaceOnUse" xlink:href="#color-primary"/>
+  <linearGradient id="linearGradient1511" x1="366" x2="386" y1="108" y2="108" gradientUnits="userSpaceOnUse" xlink:href="#color-text"/>
+  <linearGradient id="linearGradient1523" x1="279" x2="297" y1="108" y2="108" gradientUnits="userSpaceOnUse" xlink:href="#color-text"/>
+  <linearGradient id="linearGradient1608" x1="422" x2="442" y1="108" y2="108" gradientUnits="userSpaceOnUse" xlink:href="#color-track-disabled"/>
+  <linearGradient id="linearGradient1610" x1="394" x2="414" y1="108" y2="108" gradientUnits="userSpaceOnUse" xlink:href="#color-track-disabled"/>
+  <linearGradient id="linearGradient1612" x1="335" x2="353" y1="108" y2="108" gradientUnits="userSpaceOnUse" xlink:href="#color-track-disabled"/>
+  <linearGradient id="linearGradient1614" x1="307" x2="325" y1="108" y2="108" gradientUnits="userSpaceOnUse" xlink:href="#color-track-disabled"/>
+  <linearGradient id="linearGradient1654" x1="422" x2="442" y1="108" y2="108" gradientUnits="userSpaceOnUse" xlink:href="#color-text-disabled"/>
+  <linearGradient id="linearGradient1658" x1="394" x2="414" y1="108" y2="108" gradientUnits="userSpaceOnUse" xlink:href="#color-text-disabled"/>
+  <linearGradient id="linearGradient1662" x1="366" x2="386" y1="108" y2="108" gradientUnits="userSpaceOnUse" xlink:href="#color-text-disabled"/>
+  <linearGradient id="linearGradient1666" x1="335" x2="353" y1="108" y2="108" gradientUnits="userSpaceOnUse" xlink:href="#color-text-disabled"/>
+  <linearGradient id="linearGradient1670" x1="307" x2="325" y1="108" y2="108" gradientUnits="userSpaceOnUse" xlink:href="#color-text-disabled"/>
+  <linearGradient id="linearGradient1674" x1="279" x2="297" y1="108" y2="108" gradientUnits="userSpaceOnUse" xlink:href="#color-text-disabled"/>
+  <linearGradient id="linearGradient1802" x1="309" x2="323" y1="236" y2="236" gradientUnits="userSpaceOnUse" xlink:href="#color-primary"/>
+  <linearGradient id="linearGradient1804" x1="337" x2="351" y1="236" y2="236" gradientUnits="userSpaceOnUse" xlink:href="#color-primary"/>
+  <linearGradient id="linearGradient1806" x1="400.06" x2="416.06" y1="236" y2="236" gradientUnits="userSpaceOnUse" xlink:href="#color-primary"/>
+  <linearGradient id="linearGradient1808" x1="432" x2="448" y1="236" y2="236" gradientUnits="userSpaceOnUse" xlink:href="#color-primary"/>
+  <linearGradient id="linearGradient1816" x1="368.09" x2="384.09" y1="236" y2="236" gradientUnits="userSpaceOnUse" xlink:href="#color-text-secondary"/>
+  <linearGradient id="linearGradient1818" x1="281" x2="295" y1="236" y2="236" gradientUnits="userSpaceOnUse" xlink:href="#color-text-secondary"/>
+  <linearGradient id="linearGradient1858" x1="368.09" x2="384.09" y1="236" y2="236" gradientUnits="userSpaceOnUse" xlink:href="#color-text-disabled"/>
+  <linearGradient id="linearGradient1862" x1="432" x2="448" y1="236" y2="236" gradientUnits="userSpaceOnUse" xlink:href="#color-text-disabled"/>
+  <linearGradient id="linearGradient1866" x1="400.06" x2="416.06" y1="236" y2="236" gradientUnits="userSpaceOnUse" xlink:href="#color-text-disabled"/>
+  <linearGradient id="linearGradient1870" x1="337" x2="351" y1="236" y2="236" gradientUnits="userSpaceOnUse" xlink:href="#color-text-disabled"/>
+  <linearGradient id="linearGradient1874" x1="309" x2="323" y1="236" y2="236" gradientUnits="userSpaceOnUse" xlink:href="#color-text-disabled"/>
+  <linearGradient id="linearGradient1878" x1="281" x2="295" y1="236" y2="236" gradientUnits="userSpaceOnUse" xlink:href="#color-text-disabled"/>
+  <linearGradient id="linearGradient1951" x1="422" x2="442" y1="108" y2="108" gradientUnits="userSpaceOnUse" xlink:href="#color-base"/>
+  <linearGradient id="linearGradient1953" x1="394" x2="414" y1="108" y2="108" gradientUnits="userSpaceOnUse" xlink:href="#color-base"/>
+  <linearGradient id="linearGradient1955" x1="335" x2="353" y1="108" y2="108" gradientUnits="userSpaceOnUse" xlink:href="#color-base"/>
+  <linearGradient id="linearGradient1957" x1="307" x2="325" y1="108" y2="108" gradientUnits="userSpaceOnUse" xlink:href="#color-base"/>
+  <linearGradient id="linearGradient1975" x2="28.284" gradientTransform="matrix(1.4142 0 0 .31427 64 9.1111)" gradientUnits="userSpaceOnUse" xlink:href="#color-track-disabled"/>
+  <linearGradient id="linearGradient1992" x2="28.284" gradientTransform="matrix(1.3356 0 0 .27499 65.111 10.222)" gradientUnits="userSpaceOnUse" xlink:href="#color-base-alt"/>
+  <clipPath id="clipPath1603">
+   <rect x="59" y="3" width="25" height="30" rx="0" ry="0" fill="#ffffff" opacity=".15" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8516" style="paint-order:stroke fill markers"/>
+  </clipPath>
+  <clipPath id="clipPath1633">
+   <rect x="59" y="3" width="25" height="15" rx="0" ry="0" fill="#ffffff" opacity=".15" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="paint-order:stroke fill markers"/>
+  </clipPath>
+  <linearGradient id="linearGradient1729" x2="28.284" gradientTransform="matrix(1.4142 0 0 .31427 64 9.1111)" gradientUnits="userSpaceOnUse" xlink:href="#color-text-disabled"/>
+  <linearGradient id="linearGradient1769" x2="28.284" gradientTransform="matrix(1.257 0 0 .23571 66.222 11.333)" gradientUnits="userSpaceOnUse" xlink:href="#color-base-alt"/>
+  <linearGradient id="linearGradient1771" x2="309.84" gradientTransform="scale(.6455 1.5492)" gradientUnits="userSpaceOnUse" xlink:href="#color-background"/>
+  <linearGradient id="linearGradient1775" x2="28.284" gradientTransform="matrix(1.4142 0 0 .31427 64 49.111)" gradientUnits="userSpaceOnUse" xlink:href="#color-primary"/>
+  <clipPath id="clipPath1796">
+   <rect x="61" y="5" width="23" height="28" rx="0" ry="0" fill="#ffffff" opacity=".15" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="paint-order:stroke fill markers"/>
+  </clipPath>
+  <clipPath id="clipPath1829">
+   <rect x="59" y="2" width="25" height="16" rx="0" ry="0" fill="#ffffff" opacity=".15" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="paint-order:stroke fill markers"/>
+  </clipPath>
+  <linearGradient id="linearGradient2015" x2="20" gradientTransform="matrix(1.125,0,0,1.125,30.75,4.75)" gradientUnits="userSpaceOnUse" xlink:href="#color-track-disabled"/>
+  <linearGradient id="linearGradient2022" x2="20" gradientUnits="userSpaceOnUse" xlink:href="#color-base-alt"/>
+  <linearGradient id="linearGradient2034" x2="20" gradientTransform="matrix(1.125,0,0,1.125,30.75,4.75)" gradientUnits="userSpaceOnUse" xlink:href="#color-text-disabled"/>
+  <linearGradient id="linearGradient2052" x2="20" gradientUnits="userSpaceOnUse" xlink:href="#color-track-disabled"/>
+  <linearGradient id="linearGradient1582" x2="1" gradientUnits="userSpaceOnUse" xlink:href="#color-base-alt"/>
  </defs>
- <g id="flat-button" transform="translate(8 8)">
-  <use fill="url(#color-text)" fill-opacity="0" xlink:href="#base-button-box"/>
- </g>
- <g id="flat-button-hover" transform="translate(8 28)">
-  <use fill="url(#color-text)" fill-opacity=".08" xlink:href="#base-button-box"/>
- </g>
- <g id="flat-button-active" transform="translate(8 48)">
-  <use fill="url(#color-text)" fill-opacity=".2" xlink:href="#base-button-box"/>
- </g>
- <g id="flat-button-disabled" transform="translate(8 68)">
-  <use fill="url(#color-text)" fill-opacity="0" xlink:href="#base-button-box"/>
- </g>
- <g id="button-disabled" transform="translate(32 68)">
-  <use xlink:href="#base-button-disabled"/>
- </g>
- <g id="entry" transform="translate(64 8)">
-  <use xlink:href="#base-entry"/>
- </g>
- <g id="entry-hover" transform="translate(64 28)">
-  <use xlink:href="#base-entry-hover"/>
- </g>
- <g id="entry-active" transform="translate(64 48)">
-  <use xlink:href="#base-entry-focus"/>
- </g>
- <g id="entry-disabled" transform="translate(64 68)">
-  <use xlink:href="#base-entry-disabled"/>
- </g>
- <g id="combo-left-entry" transform="translate(108 8)">
-  <use clip-path="url(#left)" xlink:href="#base-entry"/>
- </g>
- <g id="combo-left-entry-hover" transform="translate(108 28)">
-  <use clip-path="url(#left)" xlink:href="#base-entry-hover"/>
- </g>
- <g id="combo-left-entry-active" transform="translate(108 48)">
-  <use clip-path="url(#left)" xlink:href="#base-entry-focus"/>
- </g>
- <g id="combo-left-entry-disabled" transform="translate(108 68)">
-  <use clip-path="url(#left)" xlink:href="#base-entry-disabled"/>
- </g>
- <g id="combo-right-entry" transform="translate(108 8)">
-  <use clip-path="url(#right)" xlink:href="#base-entry"/>
- </g>
- <g id="combo-right-entry-hover" transform="translate(108 28)">
-  <use clip-path="url(#right)" xlink:href="#base-entry-hover"/>
- </g>
- <g id="combo-right-entry-active" transform="translate(108 48)">
-  <use clip-path="url(#right)" xlink:href="#base-entry-focus"/>
- </g>
- <g id="combo-right-entry-disabled" transform="translate(108 68)">
-  <use clip-path="url(#right)" xlink:href="#base-entry-disabled"/>
- </g>
- <g id="spin-rtl-up" transform="translate(152 8)">
-  <use clip-path="url(#left-top)" xlink:href="#base-entry"/>
- </g>
- <g id="spin-rtl-up-hover" transform="translate(152 28)">
-  <use clip-path="url(#left-top)" xlink:href="#base-entry-hover"/>
- </g>
- <g id="spin-rtl-up-active" transform="translate(152 48)">
-  <use clip-path="url(#left-top)" xlink:href="#base-entry-active"/>
- </g>
- <g id="spin-rtl-up-disabled" transform="translate(152 68)">
-  <use clip-path="url(#left-top)" xlink:href="#base-entry-disabled"/>
- </g>
- <g id="spin-rtl-down" transform="translate(152 8)">
-  <use clip-path="url(#left-bottom)" xlink:href="#base-entry"/>
- </g>
- <g id="spin-rtl-down-hover" transform="translate(152 28)">
-  <use clip-path="url(#left-bottom)" xlink:href="#base-entry-hover"/>
- </g>
- <g id="spin-rtl-down-active" transform="translate(152 48)">
-  <use clip-path="url(#left-bottom)" xlink:href="#base-entry-active"/>
- </g>
- <g id="spin-rtl-down-disabled" transform="translate(152 68)">
-  <use clip-path="url(#left-bottom)" xlink:href="#base-entry-disabled"/>
- </g>
- <g id="spin-ltr-up" transform="translate(152 8)">
-  <use clip-path="url(#right-top)" xlink:href="#base-entry"/>
- </g>
- <g id="spin-ltr-up-hover" transform="translate(152 28)">
-  <use clip-path="url(#right-top)" xlink:href="#base-entry-hover"/>
- </g>
- <g id="spin-ltr-up-active" transform="translate(152 48)">
-  <use clip-path="url(#right-top)" xlink:href="#base-entry-active"/>
- </g>
- <g id="spin-ltr-up-disabled" transform="translate(152 68)">
-  <use clip-path="url(#right-top)" xlink:href="#base-entry-disabled"/>
- </g>
- <g id="spin-ltr-down" transform="translate(152 8)">
-  <use clip-path="url(#right-bottom)" xlink:href="#base-entry"/>
- </g>
- <g id="spin-ltr-down-hover" transform="translate(152 28)">
-  <use clip-path="url(#right-bottom)" xlink:href="#base-entry-hover"/>
- </g>
- <g id="spin-ltr-down-active" transform="translate(152 48)">
-  <use clip-path="url(#right-bottom)" xlink:href="#base-entry-active"/>
- </g>
- <g id="spin-ltr-down-disabled" transform="translate(152 68)">
-  <use clip-path="url(#right-bottom)" xlink:href="#base-entry-disabled"/>
- </g>
- <g id="checkbox-unchecked" transform="translate(8 92)">
-  <use fill="url(#color-text-secondary)" fill-opacity="0" xlink:href="#base-checkbox-unchecked"/>
- </g>
- <g id="checkbox-unchecked-hover" transform="translate(8 124)">
-  <use fill="url(#color-text)" fill-opacity=".08" xlink:href="#base-checkbox-unchecked"/>
- </g>
- <g id="checkbox-unchecked-active" transform="translate(8 156)">
-  <use fill="url(#color-text)" fill-opacity=".2" xlink:href="#base-checkbox-unchecked"/>
- </g>
- <g id="checkbox-unchecked-disabled" transform="translate(8 188)">
-  <use fill="url(#color-text-secondary-disabled)" fill-opacity="0" xlink:href="#base-checkbox-unchecked"/>
- </g>
- <g id="checkbox-checked" transform="translate(40 92)">
-  <use fill="url(#color-primary)" fill-opacity="0" xlink:href="#base-checkbox-checked"/>
- </g>
- <g id="checkbox-checked-hover" transform="translate(40 124)">
-  <use fill="url(#color-primary)" fill-opacity=".08" xlink:href="#base-checkbox-checked"/>
- </g>
- <g id="checkbox-checked-active" transform="translate(40 156)">
-  <use fill="url(#color-primary)" fill-opacity=".2" xlink:href="#base-checkbox-checked"/>
- </g>
- <g id="checkbox-checked-disabled" transform="translate(40 188)">
-  <use fill="url(#color-text-secondary-disabled)" fill-opacity="0" xlink:href="#base-checkbox-checked"/>
- </g>
- <g id="checkbox-mixed" transform="translate(72 92)">
-  <use fill="url(#color-primary)" fill-opacity="0" xlink:href="#base-checkbox-mixed"/>
- </g>
- <g id="checkbox-mixed-hover" transform="translate(72 124)">
-  <use fill="url(#color-primary)" fill-opacity=".08" xlink:href="#base-checkbox-mixed"/>
- </g>
- <g id="checkbox-mixed-active" transform="translate(72 156)">
-  <use fill="url(#color-primary)" fill-opacity=".2" xlink:href="#base-checkbox-mixed"/>
- </g>
- <g id="checkbox-mixed-disabled" transform="translate(72 188)">
-  <use fill="url(#color-text-secondary-disabled)" fill-opacity="0" xlink:href="#base-checkbox-mixed"/>
- </g>
- <g id="radio-unchecked" transform="translate(104 92)">
-  <use fill="url(#color-text-secondary)" fill-opacity="0" xlink:href="#base-radio-unchecked"/>
- </g>
- <g id="radio-unchecked-hover" transform="translate(104 124)">
-  <use fill="url(#color-text)" fill-opacity=".08" xlink:href="#base-radio-unchecked"/>
- </g>
- <g id="radio-unchecked-active" transform="translate(104 156)">
-  <use fill="url(#color-text)" fill-opacity=".2" xlink:href="#base-radio-unchecked"/>
- </g>
- <g id="radio-unchecked-disabled" transform="translate(104 188)">
-  <use fill="url(#color-text-secondary-disabled)" fill-opacity="0" xlink:href="#base-radio-unchecked"/>
- </g>
- <g id="radio-checked" transform="translate(136 92)">
-  <use fill="url(#color-primary)" fill-opacity="0" xlink:href="#base-radio-checked"/>
- </g>
- <g id="radio-checked-hover" transform="translate(136 124)">
-  <use fill="url(#color-primary)" fill-opacity=".08" xlink:href="#base-radio-checked"/>
- </g>
- <g id="radio-checked-active" transform="translate(136 156)">
-  <use fill="url(#color-primary)" fill-opacity=".2" xlink:href="#base-radio-checked"/>
- </g>
- <g id="radio-checked-disabled" transform="translate(136 188)">
-  <use fill="url(#color-text-secondary-disabled)" fill-opacity="0" xlink:href="#base-radio-checked"/>
- </g>
- <g id="radio-mixed" transform="translate(168 92)">
-  <use fill="url(#color-primary)" fill-opacity="0" xlink:href="#base-radio-mixed"/>
- </g>
- <g id="radio-mixed-hover" transform="translate(168 124)">
-  <use fill="url(#color-primary)" fill-opacity=".08" xlink:href="#base-radio-mixed"/>
- </g>
- <g id="radio-mixed-active" transform="translate(168 156)">
-  <use fill="url(#color-primary)" fill-opacity=".2" xlink:href="#base-radio-mixed"/>
- </g>
- <g id="radio-mixed-disabled" transform="translate(168 188)">
-  <use fill="url(#color-text-secondary-disabled)" fill-opacity="0" xlink:href="#base-radio-mixed"/>
- </g>
- <g id="menu-checkbox-unchecked" transform="translate(12 220)">
-  <use fill="url(#color-text-secondary)" xlink:href="#base-menu-checkbox-unchecked"/>
- </g>
- <g id="menu-checkbox-unchecked-disabled" transform="translate(12 244)">
-  <use fill="url(#color-text-secondary-disabled)" xlink:href="#base-menu-checkbox-unchecked"/>
- </g>
- <g id="menu-checkbox-checked" transform="translate(44 220)">
-  <use fill="url(#color-primary)" xlink:href="#base-menu-checkbox-checked"/>
- </g>
- <g id="menu-checkbox-checked-disabled" transform="translate(44 244)">
-  <use fill="url(#color-text-secondary-disabled)" xlink:href="#base-menu-checkbox-checked"/>
- </g>
- <g id="menu-checkbox-mixed" transform="translate(76 220)">
-  <use fill="url(#color-primary)" xlink:href="#base-menu-checkbox-mixed"/>
- </g>
- <g id="menu-checkbox-mixed-disabled" transform="translate(76 244)">
-  <use fill="url(#color-text-secondary-disabled)" xlink:href="#base-menu-checkbox-mixed"/>
- </g>
- <g id="menu-radio-unchecked" transform="translate(108 220)">
-  <use fill="url(#color-text-secondary)" xlink:href="#base-menu-radio-unchecked"/>
- </g>
- <g id="menu-radio-unchecked-disabled" transform="translate(108 244)">
-  <use fill="url(#color-text-secondary-disabled)" xlink:href="#base-menu-radio-unchecked"/>
- </g>
- <g id="menu-radio-checked" transform="translate(140 220)">
-  <use fill="url(#color-primary)" xlink:href="#base-menu-radio-checked"/>
- </g>
- <g id="menu-radio-checked-disabled" transform="translate(140 244)">
-  <use fill="url(#color-text-secondary-disabled)" xlink:href="#base-menu-radio-checked"/>
- </g>
- <g id="menu-radio-mixed" transform="translate(172 220)">
-  <use fill="url(#color-primary)" xlink:href="#base-menu-radio-mixed"/>
- </g>
- <g id="menu-radio-mixed-disabled" transform="translate(172 244)">
-  <use fill="url(#color-text-secondary-disabled)" xlink:href="#base-menu-radio-mixed"/>
- </g>
  <g id="scale-slider" transform="translate(8 268)" fill="url(#color-primary)">
   <circle cx="12" cy="12" r="12" fill-opacity="0"/>
   <circle cx="12" cy="12" r="6"/>
@@ -610,19 +354,342 @@
  <g id="treeview-rtl-button-active" transform="translate(190 412)">
   <use fill="url(#color-text)" fill-opacity=".2" xlink:href="#base-treeview-rtl-button"/>
  </g>
+ <g id="flat-button" fill-opacity="0">
+  <rect x="8" y="8" width="20" height="20" fill="none"/>
+  <rect x="10" y="10" width="16" height="16" rx="4"/>
+ </g>
+ <g id="flat-button-hover" transform="translate(8,28)">
+  <g fill="url(#linearGradient4104)" fill-opacity=".08">
+   <rect width="20" height="20" fill="none"/>
+   <rect x="2" y="2" width="16" height="16" rx="2" ry="2"/>
+  </g>
+ </g>
+ <g id="flat-button-active" transform="translate(8,48)">
+  <g fill="url(#linearGradient4104)" fill-opacity=".2">
+   <rect width="20" height="20" fill="none"/>
+   <rect x="2" y="2" width="16" height="16" rx="2" ry="2"/>
+  </g>
+ </g>
+ <g id="flat-button-disabled" fill-opacity="0">
+  <rect x="8" y="68" width="20" height="20" fill="none"/>
+  <rect x="10" y="70" width="16" height="16" rx="4"/>
+ </g>
+ <g id="button" transform="translate(32,8)">
+  <path transform="translate(-32,-6)" d="m36 7c-1.662 0-3 1.338-3 3v12c0 1.662 1.338 3 3 3h12c1.662 0 3-1.338 3-3v-12c0-1.662-1.338-3-3-3zm0 1h12c1.108 0 2 0.892 2 2v12c0 1.108-0.892 2-2 2h-12c-1.108 0-2-0.892-2-2v-12c0-1.108 0.892-2 2-2z" fill="url(#linearGradient2015)" stroke-width="1.125"/>
+  <rect width="20" height="20" fill="none"/>
+  <rect x="2" y="2" width="16" height="16" rx="2" ry="2" fill="url(#linearGradient2022)"/>
+ </g>
+ <g id="checkbox-unchecked" transform="translate(-268,4)">
+  <rect x="276" y="96" width="24" height="24" rx="0" ry="0" opacity="0" stroke-width="3" style="paint-order:stroke fill markers"/>
+  <path d="m281 99c-1.108 0-2 0.892-2 2v14c0 1.108 0.892 2 2 2h14c1.108 0 2-0.892 2-2v-14c0-1.108-0.892-2-2-2zm0 1h14c0.554 0 1 0.446 1 1v14c0 0.554-0.446 1-1 1h-14c-0.554 0-1-0.446-1-1v-14c0-0.554 0.446-1 1-1z" fill="url(#linearGradient1441)" stroke-width="0" style="paint-order:stroke fill markers"/>
+ </g>
+ <g id="checkbox-checked" transform="translate(-268,4)">
+  <rect x="304" y="96" width="24" height="24" rx="0" ry="0" opacity="0" stroke-width="3" style="paint-order:stroke fill markers"/>
+  <path d="m309 99c-1.108 0-2 0.892-2 2v14c0 1.108 0.892 2 2 2h14c1.108 0 2-0.892 2-2v-14c0-1.108-0.892-2-2-2zm11.648 5.6484 0.70312 0.70312-7.3516 7.3594-3.3516-3.3594 0.70312-0.70312 2.6484 2.6406 6.6484-6.6406z" fill="url(#linearGradient1451)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" style="paint-order:stroke fill markers"/>
+ </g>
+ <g id="checkbox-mixed" transform="translate(-268,4)">
+  <rect x="332" y="96" width="24" height="24" rx="0" ry="0" opacity="0" stroke-width="3" style="paint-order:stroke fill markers"/>
+  <path d="m337 99c-1.108 0-2 0.892-2 2v14c0 1.108 0.892 2 2 2h14c1.108 0 2-0.892 2-2v-14c0-1.108-0.892-2-2-2zm4 5h6c0.554 0 1 0.446 1 1v6c0 0.554-0.446 1-1 1h-6c-0.554 0-1-0.446-1-1v-6c0-0.554 0.446-1 1-1z" fill="url(#linearGradient1461)" style="paint-order:stroke fill markers"/>
+ </g>
+ <g id="radio-unchecked" transform="translate(-268,4)">
+  <rect x="364" y="96" width="24" height="24" rx="0" ry="0" opacity="0" stroke-width="3" style="paint-order:stroke fill markers"/>
+  <path d="m376 98c-5.52 0-10 4.48-10 10s4.48 10 10 10 10-4.48 10-10-4.48-10-10-10zm-0.01 1a9 9 0 0 1 0.01 0 9 9 0 0 1 9 9 9 9 0 0 1-9 9 9 9 0 0 1-9-9 9 9 0 0 1 8.9902-9z" fill="url(#linearGradient1443)"/>
+ </g>
+ <g id="radio-mixed" transform="translate(-232,4)">
+  <rect x="392" y="96" width="24" height="24" rx="0" ry="0" opacity="0" stroke-width="3" style="paint-order:stroke fill markers"/>
+  <path d="m404 98c-5.52 0-10 4.48-10 10s4.48 10 10 10 10-4.48 10-10-4.48-10-10-10zm-5 9h10v2h-10z" fill="url(#linearGradient1453)"/>
+ </g>
+ <g id="radio-checked" transform="translate(-292,4)">
+  <rect x="420" y="96" width="24" height="24" rx="0" ry="0" opacity="0" stroke-width="3" style="paint-order:stroke fill markers"/>
+  <path d="m432 98c-5.52 0-10 4.48-10 10s4.48 10 10 10 10-4.48 10-10-4.48-10-10-10zm0 5a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5z" fill="url(#linearGradient1463)"/>
+ </g>
+ <g id="checkbox-unchecked-hover" transform="translate(-268,32)">
+  <rect x="276" y="96" width="24" height="24" rx="0" ry="0" opacity="0" stroke-width="3" style="paint-order:stroke fill markers"/>
+  <path d="m281 99c-1.108 0-2 0.892-2 2v14c0 1.108 0.892 2 2 2h14c1.108 0 2-0.892 2-2v-14c0-1.108-0.892-2-2-2zm0 1h14c0.554 0 1 0.446 1 1v14c0 0.554-0.446 1-1 1h-14c-0.554 0-1-0.446-1-1v-14c0-0.554 0.446-1 1-1z" fill="url(#linearGradient1523)" stroke-width="0" style="paint-order:stroke fill markers"/>
+ </g>
+ <g id="checkbox-checked-hover" transform="translate(-268,32)">
+  <rect x="304" y="96" width="24" height="24" rx="0" ry="0" opacity="0" stroke-width="3" style="paint-order:stroke fill markers"/>
+  <path d="m309 99c-1.108 0-2 0.892-2 2v14c0 1.108 0.892 2 2 2h14c1.108 0 2-0.892 2-2v-14c0-1.108-0.892-2-2-2zm11.648 5.6484 0.70312 0.70312-7.3516 7.3594-3.3516-3.3594 0.70312-0.70312 2.6484 2.6406 6.6484-6.6406z" fill="url(#linearGradient1451)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" style="paint-order:stroke fill markers"/>
+  <path d="m309 99c-1.108 0-2 0.892-2 2v14c0 1.108 0.892 2 2 2h14c1.108 0 2-0.892 2-2v-14c0-1.108-0.892-2-2-2zm11.648 5.6484 0.70312 0.70312-7.3516 7.3594-3.3516-3.3594 0.70312-0.70312 2.6484 2.6406 6.6484-6.6406z" fill="url(#linearGradient1957)" opacity=".15" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" style="paint-order:stroke fill markers"/>
+ </g>
+ <g id="checkbox-mixed-hover" transform="translate(-268,32)">
+  <rect x="332" y="96" width="24" height="24" rx="0" ry="0" opacity="0" stroke-width="3" style="paint-order:stroke fill markers"/>
+  <path d="m337 99c-1.108 0-2 0.892-2 2v14c0 1.108 0.892 2 2 2h14c1.108 0 2-0.892 2-2v-14c0-1.108-0.892-2-2-2zm4 5h6c0.554 0 1 0.446 1 1v6c0 0.554-0.446 1-1 1h-6c-0.554 0-1-0.446-1-1v-6c0-0.554 0.446-1 1-1z" fill="url(#linearGradient1461)" style="paint-order:stroke fill markers"/>
+  <path d="m337 99c-1.108 0-2 0.892-2 2v14c0 1.108 0.892 2 2 2h14c1.108 0 2-0.892 2-2v-14c0-1.108-0.892-2-2-2zm4 5h6c0.554 0 1 0.446 1 1v6c0 0.554-0.446 1-1 1h-6c-0.554 0-1-0.446-1-1v-6c0-0.554 0.446-1 1-1z" fill="url(#linearGradient1955)" opacity=".15" style="paint-order:stroke fill markers"/>
+ </g>
+ <g id="radio-unchecked-hover" transform="translate(-268,32)">
+  <rect x="364" y="96" width="24" height="24" rx="0" ry="0" opacity="0" stroke-width="3" style="paint-order:stroke fill markers"/>
+  <path d="m376 98c-5.52 0-10 4.48-10 10s4.48 10 10 10 10-4.48 10-10-4.48-10-10-10zm-0.01 1a9 9 0 0 1 0.01 0 9 9 0 0 1 9 9 9 9 0 0 1-9 9 9 9 0 0 1-9-9 9 9 0 0 1 8.9902-9z" fill="url(#linearGradient1511)"/>
+ </g>
+ <g id="radio-mixed-hover" transform="translate(-232,32)">
+  <rect x="392" y="96" width="24" height="24" rx="0" ry="0" opacity="0" stroke-width="3" style="paint-order:stroke fill markers"/>
+  <path d="m404 98c-5.52 0-10 4.48-10 10s4.48 10 10 10 10-4.48 10-10-4.48-10-10-10zm-5 9h10v2h-10z" fill="url(#linearGradient1453)"/>
+  <path d="m404 98c-5.52 0-10 4.48-10 10s4.48 10 10 10 10-4.48 10-10-4.48-10-10-10zm-5 9h10v2h-10z" fill="url(#linearGradient1953)" opacity=".15"/>
+ </g>
+ <g id="radio-checked-hover" transform="translate(-292,32)">
+  <rect x="420" y="96" width="24" height="24" rx="0" ry="0" opacity="0" stroke-width="3" style="paint-order:stroke fill markers"/>
+  <path d="m432 98c-5.52 0-10 4.48-10 10s4.48 10 10 10 10-4.48 10-10-4.48-10-10-10zm0 5a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5z" fill="url(#linearGradient1463)"/>
+  <path d="m432 98c-5.52 0-10 4.48-10 10s4.48 10 10 10 10-4.48 10-10-4.48-10-10-10zm0 5a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5z" fill="url(#linearGradient1951)" opacity=".15"/>
+ </g>
+ <g id="checkbox-unchecked-active" transform="translate(-268,60)">
+  <rect x="276" y="96" width="24" height="24" rx="0" ry="0" opacity="0" stroke-width="3" style="paint-order:stroke fill markers"/>
+  <path d="m281 99c-1.108 0-2 0.892-2 2v14c0 1.108 0.892 2 2 2h14c1.108 0 2-0.892 2-2v-14c0-1.108-0.892-2-2-2zm0 1h14c0.554 0 1 0.446 1 1v14c0 0.554-0.446 1-1 1h-14c-0.554 0-1-0.446-1-1v-14c0-0.554 0.446-1 1-1z" fill="url(#linearGradient1523)" stroke-width="0" style="paint-order:stroke fill markers"/>
+ </g>
+ <g id="checkbox-checked-active" transform="translate(-268,60)">
+  <rect x="304" y="96" width="24" height="24" rx="0" ry="0" opacity="0" stroke-width="3" style="paint-order:stroke fill markers"/>
+  <path d="m309 99c-1.108 0-2 0.892-2 2v14c0 1.108 0.892 2 2 2h14c1.108 0 2-0.892 2-2v-14c0-1.108-0.892-2-2-2zm11.648 5.6484 0.70312 0.70312-7.3516 7.3594-3.3516-3.3594 0.70312-0.70312 2.6484 2.6406 6.6484-6.6406z" fill="url(#linearGradient1451)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" style="paint-order:stroke fill markers"/>
+  <path d="m309 99c-1.108 0-2 0.892-2 2v14c0 1.108 0.892 2 2 2h14c1.108 0 2-0.892 2-2v-14c0-1.108-0.892-2-2-2zm11.648 5.6484 0.70312 0.70312-7.3516 7.3594-3.3516-3.3594 0.70312-0.70312 2.6484 2.6406 6.6484-6.6406z" fill="url(#linearGradient1614)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" style="paint-order:stroke fill markers"/>
+ </g>
+ <g id="checkbox-mixed-active" transform="translate(-268,60)">
+  <rect x="332" y="96" width="24" height="24" rx="0" ry="0" opacity="0" stroke-width="3" style="paint-order:stroke fill markers"/>
+  <path d="m337 99c-1.108 0-2 0.892-2 2v14c0 1.108 0.892 2 2 2h14c1.108 0 2-0.892 2-2v-14c0-1.108-0.892-2-2-2zm4 5h6c0.554 0 1 0.446 1 1v6c0 0.554-0.446 1-1 1h-6c-0.554 0-1-0.446-1-1v-6c0-0.554 0.446-1 1-1z" fill="url(#linearGradient1461)" style="paint-order:stroke fill markers"/>
+  <path d="m337 99c-1.108 0-2 0.892-2 2v14c0 1.108 0.892 2 2 2h14c1.108 0 2-0.892 2-2v-14c0-1.108-0.892-2-2-2zm4 5h6c0.554 0 1 0.446 1 1v6c0 0.554-0.446 1-1 1h-6c-0.554 0-1-0.446-1-1v-6c0-0.554 0.446-1 1-1z" fill="url(#linearGradient1612)" style="paint-order:stroke fill markers"/>
+ </g>
+ <g id="radio-unchecked-active" transform="translate(-268,60)">
+  <rect x="364" y="96" width="24" height="24" rx="0" ry="0" opacity="0" stroke-width="3" style="paint-order:stroke fill markers"/>
+  <path d="m376 98c-5.52 0-10 4.48-10 10s4.48 10 10 10 10-4.48 10-10-4.48-10-10-10zm-0.01 1a9 9 0 0 1 0.01 0 9 9 0 0 1 9 9 9 9 0 0 1-9 9 9 9 0 0 1-9-9 9 9 0 0 1 8.9902-9z" fill="url(#linearGradient1511)"/>
+ </g>
+ <g id="radio-mixed-active" transform="translate(-232,60)">
+  <rect x="392" y="96" width="24" height="24" rx="0" ry="0" opacity="0" stroke-width="3" style="paint-order:stroke fill markers"/>
+  <path d="m404 98c-5.52 0-10 4.48-10 10s4.48 10 10 10 10-4.48 10-10-4.48-10-10-10zm-5 9h10v2h-10z" fill="url(#linearGradient1453)"/>
+  <path d="m404 98c-5.52 0-10 4.48-10 10s4.48 10 10 10 10-4.48 10-10-4.48-10-10-10zm-5 9h10v2h-10z" fill="url(#linearGradient1610)"/>
+ </g>
+ <g id="radio-checked-active" transform="translate(-292,60)">
+  <rect x="420" y="96" width="24" height="24" rx="0" ry="0" opacity="0" stroke-width="3" style="paint-order:stroke fill markers"/>
+  <path d="m432 98c-5.52 0-10 4.48-10 10s4.48 10 10 10 10-4.48 10-10-4.48-10-10-10zm0 5a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5z" fill="url(#linearGradient1463)"/>
+  <path d="m432 98c-5.52 0-10 4.48-10 10s4.48 10 10 10 10-4.48 10-10-4.48-10-10-10zm0 5a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5z" fill="url(#linearGradient1608)"/>
+ </g>
+ <g id="checkbox-unchecked-disabled" transform="translate(-268,88)">
+  <rect x="276" y="96" width="24" height="24" rx="0" ry="0" opacity="0" stroke-width="3" style="paint-order:stroke fill markers"/>
+  <path d="m281 99c-1.108 0-2 0.892-2 2v14c0 1.108 0.892 2 2 2h14c1.108 0 2-0.892 2-2v-14c0-1.108-0.892-2-2-2zm0 1h14c0.554 0 1 0.446 1 1v14c0 0.554-0.446 1-1 1h-14c-0.554 0-1-0.446-1-1v-14c0-0.554 0.446-1 1-1z" fill="url(#linearGradient1674)" stroke-width="0" style="paint-order:stroke fill markers"/>
+ </g>
+ <g id="checkbox-checked-disabled" transform="translate(-268,88)">
+  <rect x="304" y="96" width="24" height="24" rx="0" ry="0" opacity="0" stroke-width="3" style="paint-order:stroke fill markers"/>
+  <path d="m309 99c-1.108 0-2 0.892-2 2v14c0 1.108 0.892 2 2 2h14c1.108 0 2-0.892 2-2v-14c0-1.108-0.892-2-2-2zm11.648 5.6484 0.70312 0.70312-7.3516 7.3594-3.3516-3.3594 0.70312-0.70312 2.6484 2.6406 6.6484-6.6406z" fill="url(#linearGradient1670)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" style="paint-order:stroke fill markers"/>
+ </g>
+ <g id="checkbox-mixed-disabled" transform="translate(-268,88)">
+  <rect x="332" y="96" width="24" height="24" rx="0" ry="0" opacity="0" stroke-width="3" style="paint-order:stroke fill markers"/>
+  <path d="m337 99c-1.108 0-2 0.892-2 2v14c0 1.108 0.892 2 2 2h14c1.108 0 2-0.892 2-2v-14c0-1.108-0.892-2-2-2zm4 5h6c0.554 0 1 0.446 1 1v6c0 0.554-0.446 1-1 1h-6c-0.554 0-1-0.446-1-1v-6c0-0.554 0.446-1 1-1z" fill="url(#linearGradient1666)" style="paint-order:stroke fill markers"/>
+ </g>
+ <g id="radio-unchecked-disabled" transform="translate(-268,88)">
+  <rect x="364" y="96" width="24" height="24" rx="0" ry="0" opacity="0" stroke-width="3" style="paint-order:stroke fill markers"/>
+  <path d="m376 98c-5.52 0-10 4.48-10 10s4.48 10 10 10 10-4.48 10-10-4.48-10-10-10zm-0.01 1a9 9 0 0 1 0.01 0 9 9 0 0 1 9 9 9 9 0 0 1-9 9 9 9 0 0 1-9-9 9 9 0 0 1 8.9902-9z" fill="url(#linearGradient1662)"/>
+ </g>
+ <g id="radio-mixed-disabled" transform="translate(-232,88)">
+  <rect x="392" y="96" width="24" height="24" rx="0" ry="0" opacity="0" stroke-width="3" style="paint-order:stroke fill markers"/>
+  <path d="m404 98c-5.52 0-10 4.48-10 10s4.48 10 10 10 10-4.48 10-10-4.48-10-10-10zm-5 9h10v2h-10z" fill="url(#linearGradient1658)"/>
+ </g>
+ <g id="radio-checked-disabled" transform="translate(-292,88)">
+  <rect x="420" y="96" width="24" height="24" rx="0" ry="0" opacity="0" stroke-width="3" style="paint-order:stroke fill markers"/>
+  <path d="m432 98c-5.52 0-10 4.48-10 10s4.48 10 10 10 10-4.48 10-10-4.48-10-10-10zm0 5a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5z" fill="url(#linearGradient1654)"/>
+ </g>
+ <g id="menu-checkbox-unchecked" transform="translate(-268,-12)">
+  <rect x="280" y="228" width="16" height="16" rx="0" ry="0" opacity="0" stroke-width="1.3333" style="paint-order:stroke fill markers"/>
+  <path d="m283 229c-1.108 0-2 0.892-2 2v10c0 1.108 0.892 2 2 2h10c1.108 0 2-0.892 2-2v-10c0-1.108-0.892-2-2-2zm0 1h10c0.554 0 1 0.446 1 1v10c0 0.554-0.446 1-1 1h-10c-0.554 0-1-0.446-1-1v-10c0-0.554 0.446-1 1-1z" fill="url(#linearGradient1818)" stroke-width="0" style="paint-order:stroke fill markers"/>
+ </g>
+ <g id="menu-checkbox-checked" transform="translate(-268,-12)">
+  <rect x="308" y="228" width="16" height="16" rx="0" ry="0" opacity="0" stroke-width="1.3333" style="paint-order:stroke fill markers"/>
+  <path d="m311 229c-1.108 0-2 0.892-2 2v10c0 1.108 0.892 2 2 2h10c1.108 0 2-0.892 2-2v-10c0-1.108-0.892-2-2-2zm9.6484 3.6484 0.70312 0.70312-7.3516 7.3594-3.3516-3.3594 0.70312-0.70312 2.6484 2.6406 6.6484-6.6406z" fill="url(#linearGradient1802)" style="paint-order:stroke fill markers"/>
+ </g>
+ <g id="menu-checkbox-mixed" transform="translate(-268,-12)">
+  <rect x="336" y="228" width="16" height="16" rx="0" ry="0" opacity="0" stroke-width="1.3333" style="paint-order:stroke fill markers"/>
+  <path d="m339 229c-1.108 0-2 0.892-2 2v10c0 1.108 0.892 2 2 2h10c1.108 0 2-0.892 2-2v-10c0-1.108-0.892-2-2-2zm2 3h6c0.554 0 1 0.446 1 1v6c0 0.554-0.446 1-1 1h-6c-0.554 0-1-0.446-1-1v-6c0-0.554 0.446-1 1-1z" fill="url(#linearGradient1804)" style="paint-order:stroke fill markers"/>
+ </g>
+ <g id="menu-radio-checked" transform="translate(-268,-12)">
+  <rect x="400" y="228" width="16" height="16" rx="0" ry="0" opacity="0" stroke-width="1.3333" style="paint-order:stroke fill markers"/>
+  <path d="m408.06 228c-4.4183 0-8 3.5817-8 8s3.5817 8 8 8 8-3.5817 8-8-3.5817-8-8-8zm-0.0606 4a4 4 0 0 1 0.0606 0 4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4 4 4 0 0 1 3.9395-4z" fill="url(#linearGradient1806)"/>
+ </g>
+ <g id="menu-radio-mixed" transform="translate(-268,-12)">
+  <rect x="432" y="228" width="16" height="16" rx="0" ry="0" opacity="0" stroke-width="1.3333" style="paint-order:stroke fill markers"/>
+  <path d="m440 228c-4.4183 0-8 3.5817-8 8s3.5817 8 8 8 8-3.5817 8-8-3.5817-8-8-8zm-4 7h8v2h-8z" fill="url(#linearGradient1808)"/>
+ </g>
+ <g id="menu-radio-unchecked" transform="translate(-268,-12)">
+  <rect x="368" y="228" width="16" height="16" rx="0" ry="0" opacity="0" stroke-width="1.3333" style="paint-order:stroke fill markers"/>
+  <path d="m376.09 228a8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8 8 8 0 0 0-8-8zm-0.0937 1a7 7 0 0 1 0.0937 0 7 7 0 0 1 7 7 7 7 0 0 1-7 7 7 7 0 0 1-7-7 7 7 0 0 1 6.9062-7z" fill="url(#linearGradient1816)"/>
+ </g>
+ <g id="menu-checkbox-unchecked-disabled" transform="translate(-268,12)">
+  <rect x="280" y="228" width="16" height="16" rx="0" ry="0" opacity="0" stroke-width="1.3333" style="paint-order:stroke fill markers"/>
+  <path d="m283 229c-1.108 0-2 0.892-2 2v10c0 1.108 0.892 2 2 2h10c1.108 0 2-0.892 2-2v-10c0-1.108-0.892-2-2-2zm0 1h10c0.554 0 1 0.446 1 1v10c0 0.554-0.446 1-1 1h-10c-0.554 0-1-0.446-1-1v-10c0-0.554 0.446-1 1-1z" fill="url(#linearGradient1878)" stroke-width="0" style="paint-order:stroke fill markers"/>
+ </g>
+ <g id="menu-checkbox-checked-disabled" transform="translate(-268,12)">
+  <rect x="308" y="228" width="16" height="16" rx="0" ry="0" opacity="0" stroke-width="1.3333" style="paint-order:stroke fill markers"/>
+  <path d="m311 229c-1.108 0-2 0.892-2 2v10c0 1.108 0.892 2 2 2h10c1.108 0 2-0.892 2-2v-10c0-1.108-0.892-2-2-2zm9.6484 3.6484 0.70312 0.70312-7.3516 7.3594-3.3516-3.3594 0.70312-0.70312 2.6484 2.6406 6.6484-6.6406z" fill="url(#linearGradient1874)" style="paint-order:stroke fill markers"/>
+ </g>
+ <g id="menu-checkbox-mixed-disabled" transform="translate(-268,12)">
+  <rect x="336" y="228" width="16" height="16" rx="0" ry="0" opacity="0" stroke-width="1.3333" style="paint-order:stroke fill markers"/>
+  <path d="m339 229c-1.108 0-2 0.892-2 2v10c0 1.108 0.892 2 2 2h10c1.108 0 2-0.892 2-2v-10c0-1.108-0.892-2-2-2zm2 3h6c0.554 0 1 0.446 1 1v6c0 0.554-0.446 1-1 1h-6c-0.554 0-1-0.446-1-1v-6c0-0.554 0.446-1 1-1z" fill="url(#linearGradient1870)" style="paint-order:stroke fill markers"/>
+ </g>
+ <g id="menu-radio-checked-disabled" transform="translate(-268,12)">
+  <rect x="400" y="228" width="16" height="16" rx="0" ry="0" opacity="0" stroke-width="1.3333" style="paint-order:stroke fill markers"/>
+  <path d="m408.06 228c-4.4183 0-8 3.5817-8 8s3.5817 8 8 8 8-3.5817 8-8-3.5817-8-8-8zm-0.0606 4a4 4 0 0 1 0.0606 0 4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4 4 4 0 0 1 3.9395-4z" fill="url(#linearGradient1866)"/>
+ </g>
+ <g id="menu-radio-mixed-disabled" transform="translate(-268,12)">
+  <rect x="432" y="228" width="16" height="16" rx="0" ry="0" opacity="0" stroke-width="1.3333" style="paint-order:stroke fill markers"/>
+  <path d="m440 228c-4.4183 0-8 3.5817-8 8s3.5817 8 8 8 8-3.5817 8-8-3.5817-8-8-8zm-4 7h8v2h-8z" fill="url(#linearGradient1862)"/>
+ </g>
+ <g id="menu-radio-unchecked-disabled" transform="translate(-268,12)">
+  <rect x="368" y="228" width="16" height="16" rx="0" ry="0" opacity="0" stroke-width="1.3333" style="paint-order:stroke fill markers"/>
+  <path d="m376.09 228a8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8 8 8 0 0 0-8-8zm-0.0937 1a7 7 0 0 1 0.0937 0 7 7 0 0 1 7 7 7 7 0 0 1-7 7 7 7 0 0 1-7-7 7 7 0 0 1 6.9062-7z" fill="url(#linearGradient1858)"/>
+ </g>
+ <g id="entry-hover" transform="translate(0,20)">
+  <rect x="64" y="8" width="40" height="20" fill="none"/>
+  <path d="m69 10c-1.662 0-3 1.338-3 3v10c0 1.662 1.338 3 3 3h30c1.662 0 3-1.338 3-3v-10c0-1.662-1.338-3-3-3zm0 1h30c1.108 0 2 0.892 2 2v10c0 1.108-0.892 2-2 2h-30c-1.108 0-2-0.892-2-2v-10c0-1.108 0.892-2 2-2z" fill="url(#linearGradient1729)" stroke-width=".66667"/>
+  <rect x="67" y="11" width="34" height="14" rx="2" ry="2" fill="url(#linearGradient1992)" stroke-width=".60604"/>
+ </g>
+ <g id="combo-left-entry-hover" transform="translate(43,20)" clip-path="url(#clipPath1603)">
+  <rect x="64" y="8" width="40" height="20" fill="none"/>
+  <path d="m69 10c-1.662 0-3 1.338-3 3v10c0 1.662 1.338 3 3 3h30c1.662 0 3-1.338 3-3v-10c0-1.662-1.338-3-3-3zm0 1h30c1.108 0 2 0.892 2 2v10c0 1.108-0.892 2-2 2h-30c-1.108 0-2-0.892-2-2v-10c0-1.108 0.892-2 2-2z" fill="url(#linearGradient1729)" stroke-width=".66667"/>
+  <rect x="67" y="11" width="34" height="14" rx="2" ry="2" fill="url(#linearGradient1992)" stroke-width=".60604"/>
+ </g>
+ <g id="spin-rtl-up-hover" transform="translate(87,20)" clip-path="url(#clipPath1633)">
+  <rect x="64" y="8" width="40" height="20" fill="none"/>
+  <path d="m69 10c-1.662 0-3 1.338-3 3v10c0 1.662 1.338 3 3 3h30c1.662 0 3-1.338 3-3v-10c0-1.662-1.338-3-3-3zm0 1h30c1.108 0 2 0.892 2 2v10c0 1.108-0.892 2-2 2h-30c-1.108 0-2-0.892-2-2v-10c0-1.108 0.892-2 2-2z" fill="url(#linearGradient1729)" stroke-width=".66667"/>
+  <rect x="67" y="11" width="34" height="14" rx="2" ry="2" fill="url(#linearGradient1992)" stroke-width=".60604"/>
+ </g>
+ <g id="entry-active" transform="translate(0,40)">
+  <path transform="translate(0,-40)" d="m69 50c-1.662 0-3 1.338-3 3v10c0 1.662 1.338 3 3 3h30c1.662 0 3-1.338 3-3v-10c0-1.662-1.338-3-3-3h-30zm0 2h30c0.554 0 1 0.446 1 1v10c0 0.554-0.446 1-1 1h-30c-0.554 0-1-0.446-1-1v-10c0-0.554 0.446-1 1-1z" fill="url(#linearGradient1775)" stroke-width=".66667"/>
+  <rect x="64" y="8" width="40" height="20" fill="none"/>
+  <rect x="68" y="12" width="32" height="12" rx="1" ry="1" fill="url(#linearGradient1769)" stroke-width=".54433"/>
+ </g>
+ <g id="combo-right-entry-active" transform="matrix(-1,0,0,1,211,40)" clip-path="url(#clipPath1796)">
+  <path transform="translate(0,-40)" d="m69 50c-1.662 0-3 1.338-3 3v10c0 1.662 1.338 3 3 3h30c1.662 0 3-1.338 3-3v-10c0-1.662-1.338-3-3-3zm0 2h30c0.554 0 1 0.446 1 1v10c0 0.554-0.446 1-1 1h-30c-0.554 0-1-0.446-1-1v-10c0-0.554 0.446-1 1-1z" fill="url(#linearGradient1775)" stroke-width=".66667"/>
+  <rect x="64" y="8" width="40" height="20" fill="none"/>
+  <rect x="68" y="12" width="32" height="12" rx="1" ry="1" fill="url(#linearGradient1769)" stroke-width=".54433"/>
+ </g>
+ <g id="spin-ltr-down-active" transform="rotate(180,127.5,38)" clip-path="url(#clipPath1829)">
+  <path transform="translate(0,-40)" d="m69 50c-1.662 0-3 1.338-3 3v10c0 1.662 1.338 3 3 3h30c1.662 0 3-1.338 3-3v-10c0-1.662-1.338-3-3-3zm0 2h30c0.554 0 1 0.446 1 1v10c0 0.554-0.446 1-1 1h-30c-0.554 0-1-0.446-1-1v-10c0-0.554 0.446-1 1-1z" fill="url(#linearGradient1775)" stroke-width=".66667"/>
+  <rect x="64" y="8" width="40" height="20" fill="none"/>
+  <rect x="68" y="12" width="32" height="12" rx="1" ry="1" fill="url(#linearGradient1769)" stroke-width=".54433"/>
+ </g>
+ <g id="entry-disabled" transform="translate(0,60)" opacity=".45">
+  <rect x="64" y="8" width="40" height="20" fill="none"/>
+  <path d="m69 10c-1.662 0-3 1.338-3 3v10c0 1.662 1.338 3 3 3h30c1.662 0 3-1.338 3-3v-10c0-1.662-1.338-3-3-3zm0 1h30c1.108 0 2 0.892 2 2v10c0 1.108-0.892 2-2 2h-30c-1.108 0-2-0.892-2-2v-10c0-1.108 0.892-2 2-2z" fill="url(#linearGradient1975)" stroke-width=".66667"/>
+  <rect x="67" y="11" width="34" height="14" rx="2" ry="2" fill="url(#linearGradient1992)" stroke-width=".60604"/>
+ </g>
+ <g id="combo-right-entry-disabled" transform="matrix(-1,0,0,1,211,60)" clip-path="url(#clipPath1603)" opacity=".45">
+  <rect x="64" y="8" width="40" height="20" fill="none"/>
+  <path d="m69 10c-1.662 0-3 1.338-3 3v10c0 1.662 1.338 3 3 3h30c1.662 0 3-1.338 3-3v-10c0-1.662-1.338-3-3-3zm0 1h30c1.108 0 2 0.892 2 2v10c0 1.108-0.892 2-2 2h-30c-1.108 0-2-0.892-2-2v-10c0-1.108 0.892-2 2-2z" fill="url(#linearGradient1975)" stroke-width=".66667"/>
+  <rect x="67" y="11" width="34" height="14" rx="2" ry="2" fill="url(#linearGradient1992)" stroke-width=".60604"/>
+ </g>
+ <g id="spin-ltr-down-disabled" transform="rotate(180,127.5,48)" clip-path="url(#clipPath1633)" opacity=".45">
+  <rect x="64" y="8" width="40" height="20" fill="none"/>
+  <path d="m69 10c-1.662 0-3 1.338-3 3v10c0 1.662 1.338 3 3 3h30c1.662 0 3-1.338 3-3v-10c0-1.662-1.338-3-3-3zm0 1h30c1.108 0 2 0.892 2 2v10c0 1.108-0.892 2-2 2h-30c-1.108 0-2-0.892-2-2v-10c0-1.108 0.892-2 2-2z" fill="url(#linearGradient1975)" stroke-width=".66667"/>
+  <rect x="67" y="11" width="34" height="14" rx="2" ry="2" fill="url(#linearGradient1992)" stroke-width=".60604"/>
+ </g>
+ <g id="combo-right-entry-hover" transform="matrix(-1,0,0,1,211,20)" clip-path="url(#clipPath1603)">
+  <rect x="64" y="8" width="40" height="20" fill="none"/>
+  <path d="m69 10c-1.662 0-3 1.338-3 3v10c0 1.662 1.338 3 3 3h30c1.662 0 3-1.338 3-3v-10c0-1.662-1.338-3-3-3zm0 1h30c1.108 0 2 0.892 2 2v10c0 1.108-0.892 2-2 2h-30c-1.108 0-2-0.892-2-2v-10c0-1.108 0.892-2 2-2z" fill="url(#linearGradient1729)" stroke-width=".66667"/>
+  <rect x="67" y="11" width="34" height="14" rx="2" ry="2" fill="url(#linearGradient1992)" stroke-width=".60604"/>
+ </g>
+ <g id="combo-left-entry" transform="translate(43)" clip-path="url(#clipPath1603)">
+  <rect x="64" y="8" width="40" height="20" fill="none"/>
+  <path d="m69 10c-1.662 0-3 1.338-3 3v10c0 1.662 1.338 3 3 3h30c1.662 0 3-1.338 3-3v-10c0-1.662-1.338-3-3-3zm0 1h30c1.108 0 2 0.892 2 2v10c0 1.108-0.892 2-2 2h-30c-1.108 0-2-0.892-2-2v-10c0-1.108 0.892-2 2-2z" fill="url(#linearGradient1975)" stroke-width=".66667"/>
+  <rect x="67" y="11" width="34" height="14" rx="2" ry="2" fill="url(#linearGradient1992)" stroke-width=".60604"/>
+ </g>
+ <g id="spin-rtl-up" transform="translate(87)" clip-path="url(#clipPath1633)">
+  <rect x="64" y="8" width="40" height="20" fill="none"/>
+  <path d="m69 10c-1.662 0-3 1.338-3 3v10c0 1.662 1.338 3 3 3h30c1.662 0 3-1.338 3-3v-10c0-1.662-1.338-3-3-3zm0 1h30c1.108 0 2 0.892 2 2v10c0 1.108-0.892 2-2 2h-30c-1.108 0-2-0.892-2-2v-10c0-1.108 0.892-2 2-2z" fill="url(#linearGradient1975)" stroke-width=".66667"/>
+  <rect x="67" y="11" width="34" height="14" rx="2" ry="2" fill="url(#linearGradient1992)" stroke-width=".60604"/>
+ </g>
+ <g id="spin-ltr-up-hover" transform="matrix(-1,0,0,1,255,20)" clip-path="url(#clipPath1633)">
+  <rect x="64" y="8" width="40" height="20" fill="none"/>
+  <path d="m69 10c-1.662 0-3 1.338-3 3v10c0 1.662 1.338 3 3 3h30c1.662 0 3-1.338 3-3v-10c0-1.662-1.338-3-3-3zm0 1h30c1.108 0 2 0.892 2 2v10c0 1.108-0.892 2-2 2h-30c-1.108 0-2-0.892-2-2v-10c0-1.108 0.892-2 2-2z" fill="url(#linearGradient1729)" stroke-width=".66667"/>
+  <rect x="67" y="11" width="34" height="14" rx="2" ry="2" fill="url(#linearGradient1992)" stroke-width=".60604"/>
+ </g>
+ <g id="spin-ltr-down-hover" transform="rotate(180,127.5,28)" clip-path="url(#clipPath1633)">
+  <rect x="64" y="8" width="40" height="20" fill="none"/>
+  <path d="m69 10c-1.662 0-3 1.338-3 3v10c0 1.662 1.338 3 3 3h30c1.662 0 3-1.338 3-3v-10c0-1.662-1.338-3-3-3zm0 1h30c1.108 0 2 0.892 2 2v10c0 1.108-0.892 2-2 2h-30c-1.108 0-2-0.892-2-2v-10c0-1.108 0.892-2 2-2z" fill="url(#linearGradient1729)" stroke-width=".66667"/>
+  <rect x="67" y="11" width="34" height="14" rx="2" ry="2" fill="url(#linearGradient1992)" stroke-width=".60604"/>
+ </g>
+ <g id="spin-rtl-down-hover" transform="matrix(1,0,0,-1,87,56)" clip-path="url(#clipPath1633)">
+  <rect x="64" y="8" width="40" height="20" fill="none"/>
+  <path d="m69 10c-1.662 0-3 1.338-3 3v10c0 1.662 1.338 3 3 3h30c1.662 0 3-1.338 3-3v-10c0-1.662-1.338-3-3-3zm0 1h30c1.108 0 2 0.892 2 2v10c0 1.108-0.892 2-2 2h-30c-1.108 0-2-0.892-2-2v-10c0-1.108 0.892-2 2-2z" fill="url(#linearGradient1729)" stroke-width=".66667"/>
+  <rect x="67" y="11" width="34" height="14" rx="2" ry="2" fill="url(#linearGradient1992)" stroke-width=".60604"/>
+ </g>
+ <g id="spin-ltr-up-active" transform="matrix(-1,0,0,1,255,40)" clip-path="url(#clipPath1829)">
+  <path transform="translate(0,-40)" d="m69 50c-1.662 0-3 1.338-3 3v10c0 1.662 1.338 3 3 3h30c1.662 0 3-1.338 3-3v-10c0-1.662-1.338-3-3-3zm0 2h30c0.554 0 1 0.446 1 1v10c0 0.554-0.446 1-1 1h-30c-0.554 0-1-0.446-1-1v-10c0-0.554 0.446-1 1-1z" fill="url(#linearGradient1775)" stroke-width=".66667"/>
+  <rect x="64" y="8" width="40" height="20" fill="none"/>
+  <rect x="68" y="12" width="32" height="12" rx="1" ry="1" fill="url(#linearGradient1769)" stroke-width=".54433"/>
+ </g>
+ <g id="spin-rtl-up-active" transform="translate(87,40)" clip-path="url(#clipPath1829)">
+  <path transform="translate(0,-40)" d="m69 50c-1.662 0-3 1.338-3 3v10c0 1.662 1.338 3 3 3h30c1.662 0 3-1.338 3-3v-10c0-1.662-1.338-3-3-3zm0 2h30c0.554 0 1 0.446 1 1v10c0 0.554-0.446 1-1 1h-30c-0.554 0-1-0.446-1-1v-10c0-0.554 0.446-1 1-1z" fill="url(#linearGradient1775)" stroke-width=".66667"/>
+  <rect x="64" y="8" width="40" height="20" fill="none"/>
+  <rect x="68" y="12" width="32" height="12" rx="1" ry="1" fill="url(#linearGradient1769)" stroke-width=".54433"/>
+ </g>
+ <g id="spin-rtl-down-active" transform="matrix(1,0,0,-1,87,76)" clip-path="url(#clipPath1829)">
+  <path transform="translate(0,-40)" d="m69 50c-1.662 0-3 1.338-3 3v10c0 1.662 1.338 3 3 3h30c1.662 0 3-1.338 3-3v-10c0-1.662-1.338-3-3-3zm0 2h30c0.554 0 1 0.446 1 1v10c0 0.554-0.446 1-1 1h-30c-0.554 0-1-0.446-1-1v-10c0-0.554 0.446-1 1-1z" fill="url(#linearGradient1775)" stroke-width=".66667"/>
+  <rect x="64" y="8" width="40" height="20" fill="none"/>
+  <rect x="68" y="12" width="32" height="12" rx="1" ry="1" fill="url(#linearGradient1769)" stroke-width=".54433"/>
+ </g>
+ <g id="combo-left-entry-active" transform="translate(43,40)" clip-path="url(#clipPath1796)">
+  <path transform="translate(0,-40)" d="m69 50c-1.662 0-3 1.338-3 3v10c0 1.662 1.338 3 3 3h30c1.662 0 3-1.338 3-3v-10c0-1.662-1.338-3-3-3zm0 2h30c0.554 0 1 0.446 1 1v10c0 0.554-0.446 1-1 1h-30c-0.554 0-1-0.446-1-1v-10c0-0.554 0.446-1 1-1z" fill="url(#linearGradient1775)" stroke-width=".66667"/>
+  <rect x="64" y="8" width="40" height="20" fill="none"/>
+  <rect x="68" y="12" width="32" height="12" rx="1" ry="1" fill="url(#linearGradient1769)" stroke-width=".54433"/>
+ </g>
+ <g id="combo-left-entry-disabled" transform="translate(43,60)" clip-path="url(#clipPath1603)" opacity=".45">
+  <rect x="64" y="8" width="40" height="20" fill="none"/>
+  <path d="m69 10c-1.662 0-3 1.338-3 3v10c0 1.662 1.338 3 3 3h30c1.662 0 3-1.338 3-3v-10c0-1.662-1.338-3-3-3zm0 1h30c1.108 0 2 0.892 2 2v10c0 1.108-0.892 2-2 2h-30c-1.108 0-2-0.892-2-2v-10c0-1.108 0.892-2 2-2z" fill="url(#linearGradient1975)" stroke-width=".66667"/>
+  <rect x="67" y="11" width="34" height="14" rx="2" ry="2" fill="url(#linearGradient1992)" stroke-width=".60604"/>
+ </g>
+ <g id="spin-ltr-up-disabled" transform="matrix(-1,0,0,1,255,60)" clip-path="url(#clipPath1633)" opacity=".45">
+  <rect x="64" y="8" width="40" height="20" fill="none"/>
+  <path d="m69 10c-1.662 0-3 1.338-3 3v10c0 1.662 1.338 3 3 3h30c1.662 0 3-1.338 3-3v-10c0-1.662-1.338-3-3-3zm0 1h30c1.108 0 2 0.892 2 2v10c0 1.108-0.892 2-2 2h-30c-1.108 0-2-0.892-2-2v-10c0-1.108 0.892-2 2-2z" fill="url(#linearGradient1975)" stroke-width=".66667"/>
+  <rect x="67" y="11" width="34" height="14" rx="2" ry="2" fill="url(#linearGradient1992)" stroke-width=".60604"/>
+ </g>
+ <g id="spin-rtl-up-disabled" transform="translate(87,60)" clip-path="url(#clipPath1633)" opacity=".45">
+  <rect x="64" y="8" width="40" height="20" fill="none"/>
+  <path d="m69 10c-1.662 0-3 1.338-3 3v10c0 1.662 1.338 3 3 3h30c1.662 0 3-1.338 3-3v-10c0-1.662-1.338-3-3-3zm0 1h30c1.108 0 2 0.892 2 2v10c0 1.108-0.892 2-2 2h-30c-1.108 0-2-0.892-2-2v-10c0-1.108 0.892-2 2-2z" fill="url(#linearGradient1975)" stroke-width=".66667"/>
+  <rect x="67" y="11" width="34" height="14" rx="2" ry="2" fill="url(#linearGradient1992)" stroke-width=".60604"/>
+ </g>
+ <g id="spin-rtl-down-disabled" transform="matrix(1,0,0,-1,87,96)" clip-path="url(#clipPath1633)" opacity=".45">
+  <rect x="64" y="8" width="40" height="20" fill="none"/>
+  <path d="m69 10c-1.662 0-3 1.338-3 3v10c0 1.662 1.338 3 3 3h30c1.662 0 3-1.338 3-3v-10c0-1.662-1.338-3-3-3zm0 1h30c1.108 0 2 0.892 2 2v10c0 1.108-0.892 2-2 2h-30c-1.108 0-2-0.892-2-2v-10c0-1.108 0.892-2 2-2z" fill="url(#linearGradient1975)" stroke-width=".66667"/>
+  <rect x="67" y="11" width="34" height="14" rx="2" ry="2" fill="url(#linearGradient1992)" stroke-width=".60604"/>
+ </g>
  <g id="button-hover" transform="translate(32,28)">
-  <use width="100%" height="100%" fill="url(#linearGradient3064)" fill-opacity=".08" xlink:href="#base-button-box"/>
+  <path transform="translate(-32,-6)" d="m36 7c-1.662 0-3 1.338-3 3v12c0 1.662 1.338 3 3 3h12c1.662 0 3-1.338 3-3v-12c0-1.662-1.338-3-3-3zm0 1h12c1.108 0 2 0.892 2 2v12c0 1.108-0.892 2-2 2h-12c-1.108 0-2-0.892-2-2v-12c0-1.108 0.892-2 2-2z" fill="url(#linearGradient2034)" stroke-width="1.125"/>
+  <rect width="20" height="20" fill="none"/>
+  <rect x="2" y="2" width="16" height="16" rx="2" ry="2" fill="url(#linearGradient2022)"/>
  </g>
  <g id="button-active" transform="translate(32,48)">
-  <use width="100%" height="100%" fill="url(#linearGradient3064)" fill-opacity=".2" xlink:href="#base-button-box"/>
+  <path transform="translate(-32,-6)" d="m36 7c-1.662 0-3 1.338-3 3v12c0 1.662 1.338 3 3 3h12c1.662 0 3-1.338 3-3v-12c0-1.662-1.338-3-3-3zm0 1h12c1.108 0 2 0.892 2 2v12c0 1.108-0.892 2-2 2h-12c-1.108 0-2-0.892-2-2v-12c0-1.108 0.892-2 2-2z" fill="url(#linearGradient2034)" stroke-width="1.125"/>
+  <rect width="20" height="20" fill="none"/>
+  <rect x="2" y="2" width="16" height="16" rx="2" ry="2" fill="url(#linearGradient2052)"/>
  </g>
- <g id="button" transform="translate(32,6)">
-  <use width="100%" height="100%" fill="url(#b)" xlink:href="#base-button-box"/>
+ <g id="button-disabled" transform="translate(32,68)" opacity=".45">
+  <path transform="translate(-32,-6)" d="m36 7c-1.662 0-3 1.338-3 3v12c0 1.662 1.338 3 3 3h12c1.662 0 3-1.338 3-3v-12c0-1.662-1.338-3-3-3zm0 1h12c1.108 0 2 0.892 2 2v12c0 1.108-0.892 2-2 2h-12c-1.108 0-2-0.892-2-2v-12c0-1.108 0.892-2 2-2z" fill="url(#linearGradient2015)" stroke-width="1.125"/>
+  <rect width="20" height="20" fill="none"/>
+  <rect x="2" y="2" width="16" height="16" rx="2" ry="2" fill="url(#linearGradient2022)"/>
+ </g>
+ <g id="entry">
+  <rect x="64" y="8" width="40" height="20" fill="none"/>
+  <path d="m69 10c-1.662 0-3 1.338-3 3v10c0 1.662 1.338 3 3 3h30c1.662 0 3-1.338 3-3v-10c0-1.662-1.338-3-3-3h-30zm0 1h30c1.108 0 2 0.892 2 2v10c0 1.108-0.892 2-2 2h-30c-1.108 0-2-0.892-2-2v-10c0-1.108 0.892-2 2-2z" fill="url(#linearGradient1975)" stroke-width=".66667"/>
+  <rect x="67" y="11" width="34" height="14" rx="2" ry="2" fill="url(#linearGradient1992)" stroke-width=".60604"/>
+ </g>
+ <g id="combo-right-entry" transform="matrix(-1,0,0,1,211,0)" clip-path="url(#clipPath1603)">
+  <rect x="64" y="8" width="40" height="20" fill="none"/>
+  <path d="m69 10c-1.662 0-3 1.338-3 3v10c0 1.662 1.338 3 3 3h30c1.662 0 3-1.338 3-3v-10c0-1.662-1.338-3-3-3zm0 1h30c1.108 0 2 0.892 2 2v10c0 1.108-0.892 2-2 2h-30c-1.108 0-2-0.892-2-2v-10c0-1.108 0.892-2 2-2z" fill="url(#linearGradient1975)" stroke-width=".66667"/>
+  <rect x="67" y="11" width="34" height="14" rx="2" ry="2" fill="url(#linearGradient1992)" stroke-width=".60604"/>
+ </g>
+ <g id="spin-rtl-down" transform="matrix(1,0,0,-1,87,36)" clip-path="url(#clipPath1633)">
+  <rect x="64" y="8" width="40" height="20" fill="none"/>
+  <path d="m69 10c-1.662 0-3 1.338-3 3v10c0 1.662 1.338 3 3 3h30c1.662 0 3-1.338 3-3v-10c0-1.662-1.338-3-3-3zm0 1h30c1.108 0 2 0.892 2 2v10c0 1.108-0.892 2-2 2h-30c-1.108 0-2-0.892-2-2v-10c0-1.108 0.892-2 2-2z" fill="url(#linearGradient1975)" stroke-width=".66667"/>
+  <rect x="67" y="11" width="34" height="14" rx="2" ry="2" fill="url(#linearGradient1992)" stroke-width=".60604"/>
+ </g>
+ <g id="spin-ltr-up" transform="matrix(-1,0,0,1,255,0)" clip-path="url(#clipPath1633)">
+  <rect x="64" y="8" width="40" height="20" fill="none"/>
+  <path d="m69 10c-1.662 0-3 1.338-3 3v10c0 1.662 1.338 3 3 3h30c1.662 0 3-1.338 3-3v-10c0-1.662-1.338-3-3-3zm0 1h30c1.108 0 2 0.892 2 2v10c0 1.108-0.892 2-2 2h-30c-1.108 0-2-0.892-2-2v-10c0-1.108 0.892-2 2-2z" fill="url(#linearGradient1975)" stroke-width=".66667"/>
+  <rect x="67" y="11" width="34" height="14" rx="2" ry="2" fill="url(#linearGradient1992)" stroke-width=".60604"/>
+ </g>
+ <g id="spin-ltr-down" transform="rotate(180,127.5,18)" clip-path="url(#clipPath1633)">
+  <rect x="64" y="8" width="40" height="20" fill="none"/>
+  <path d="m69 10c-1.662 0-3 1.338-3 3v10c0 1.662 1.338 3 3 3h30c1.662 0 3-1.338 3-3v-10c0-1.662-1.338-3-3-3zm0 1h30c1.108 0 2 0.892 2 2v10c0 1.108-0.892 2-2 2h-30c-1.108 0-2-0.892-2-2v-10c0-1.108 0.892-2 2-2z" fill="url(#linearGradient1975)" stroke-width=".66667"/>
+  <rect x="67" y="11" width="34" height="14" rx="2" ry="2" fill="url(#linearGradient1992)" stroke-width=".60604"/>
  </g>
  <g id="entry-background" transform="translate(56,8)">
-  <rect width="1" height="1" fill="url(#linearGradient1542)"/>
+  <rect width="1" height="1" fill="url(#linearGradient1582)"/>
  </g>
  <g id="entry-background-disabled" transform="translate(56,68)">
-  <rect width="1" height="1" fill="url(#linearGradient1542)"/>
+  <rect width="1" height="1" fill="url(#linearGradient1582)"/>
  </g>
 </svg>

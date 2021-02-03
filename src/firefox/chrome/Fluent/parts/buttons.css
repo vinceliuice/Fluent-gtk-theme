@@ -36,11 +36,11 @@
 	-moz-appearance: none !important;
 	background: var(--gnome-button-background) !important;
 	box-shadow: none !important;
-	border: none !important;
+	border: 1px solid var(--gnome-button-border-color) !important;
 	border-radius: 2px !important;
 	max-height: 30px !important;
 	min-height: 30px !important;
-	min-width: 42px !important;
+	min-width: 38px !important;
 	color: var(--gnome-button-color) !important;
 	transition: all .2s ease;
 }
@@ -53,6 +53,7 @@
 #nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton) {
 	margin: 0 2px !important;
 	background: transparent !important;
+	border: none !important;
 }
 
 /* Text buttons */

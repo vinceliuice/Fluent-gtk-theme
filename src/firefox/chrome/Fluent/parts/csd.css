@@ -14,7 +14,7 @@
 	padding: 0 0;
 	position: absolute !important;
 	right: 0;
-	top: 0;
+	top: 2px;
 	display: block !important;
 }
 :root[tabsintitlebar] #titlebar .titlebar-buttonbox {

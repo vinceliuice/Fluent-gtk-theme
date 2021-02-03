@@ -96,6 +96,7 @@ tab[selected]:-moz-window-inactive {
 	align-items: center;
 	min-width: 100% !important;
 	padding: 0 10px !important;
+	margin-top: 3px;
 }
 
 /* Prevent tab icons size breaking */
@@ -153,6 +154,7 @@ tab[selected]:-moz-window-inactive {
 :root {
 	--gnome-fill-icon: red !important;
 }
+
 .tab-close-button {
 	-moz-appearance: none !important;
 	border: none !important;
@@ -161,9 +163,10 @@ tab[selected]:-moz-window-inactive {
 	list-style-image: url("../icons/window-close-symbolic.svg") !important;
 	height: 16px;
 	opacity: .3;
-	padding: 2px;
+	padding: 0;
 	width: 16px;
 }
+
 @media (prefers-color-scheme: dark) {
 	.tab-close-button {
 		list-style-image: url("../icons/window-close-symbolic-dark.svg") !important;
@@ -231,7 +234,7 @@ tab[selected]:-moz-window-inactive {
 
 /* Tab hover */
 :root:not(:-moz-window-inactive) .tabbrowser-tab:hover > .tab-stack > .tab-background[selected=true] {
-	background-color: var(--gnome-tabbar-tab-active-hover-background) !important;
+	background-color: var(--gnome-tabbar-tab-active-background) !important;
 	border-radius: 5px 5px 0 0;
 	border: none !important;
 	border-image: none !important;
