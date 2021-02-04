@@ -37,8 +37,6 @@ Run the following commands in the terminal:
 
 > Install different accent color version, run: `./install.sh -t [color name]`
 
-![theme-color](theme-color.png?raw=true)
-
 ```
 ./install.sh -t purple # install purple accent color version
 ```
@@ -46,6 +44,10 @@ Run the following commands in the terminal:
 ### Firefox theme
 [Install Firefox theme](src/firefox)
 
-## Preview
+#### Preview
+![01](preview01.png?raw=true)
+![02](preview02.png?raw=true)
+
+## Gtk theme screenshots
 ![1](screenshot01.png?raw=true)
 ![2](screenshot02.png?raw=true)

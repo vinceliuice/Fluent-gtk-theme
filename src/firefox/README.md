@@ -1,7 +1,7 @@
 
-## Firefox Orchis theme
+## Firefox Fluent theme
 
-<p align="center">A flat theme for Firefox 60+</p>
+<p align="center">A Fluent design theme for Firefox 80+</p>
 
 #### Preview
 ![01](preview01.png?raw=true)
