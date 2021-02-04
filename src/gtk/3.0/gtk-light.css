@@ -288,21 +288,21 @@ spinbutton.vertical:hover, spinbutton:hover:not(.vertical),
 entry:hover {
   background-color: #FFFFFF;
   box-shadow: inset 0 0 0 1px transparent;
-  border-color: rgba(0, 0, 0, 0.26);
+  border-color: rgba(0, 0, 0, 0.38);
 }
 
 spinbutton.vertical:focus, spinbutton:focus:not(.vertical),
 entry:focus {
   background-color: #FFFFFF;
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.26);
-  border-color: rgba(0, 0, 0, 0.26);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.38);
+  border-color: rgba(0, 0, 0, 0.38);
 }
 
 spinbutton.vertical:drop(active), spinbutton:drop(active):not(.vertical),
 entry:drop(active) {
   background-color: #FFFFFF;
   box-shadow: inset 0 0 0 1px transparent;
-  border-color: rgba(0, 0, 0, 0.26);
+  border-color: rgba(0, 0, 0, 0.38);
 }
 
 spinbutton.vertical:disabled, spinbutton:disabled:not(.vertical),
@@ -2820,6 +2820,7 @@ menu menuitem check, menu menuitem radio {
   transition: none;
   margin: 0;
   padding: 0;
+  background-size: 10px 10px;
 }
 
 menu menuitem check:dir(ltr), menu menuitem radio:dir(ltr) {

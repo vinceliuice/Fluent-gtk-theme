@@ -41,8 +41,9 @@
 	max-height: 30px !important;
 	min-height: 30px !important;
 	min-width: 38px !important;
+	padding: 0 0 !important;
 	color: var(--gnome-button-color) !important;
-	transition: all .2s ease;
+	transition: all 200ms cubic-bezier(0.0, 0.0, 0.2, 1);
 }
 
 #PanelUI-menu-button {
@@ -72,7 +73,7 @@
 .dialog-button {
 	padding: 2px 10px !important;
 	text-align: center !important;
-	transition: all .2s ease;
+	transition: all 200ms cubic-bezier(0.0, 0.0, 0.2, 1);
 }
 
 .subviewbutton.panel-subview-footer label {
@@ -127,7 +128,7 @@ menulist:hover .menulist-label-box,
 .dialog-button:hover {
 	outline: 0 !important;
 	background: var(--gnome-button-hover-background) !important;
-	transition: all .1s ease;
+	transition: all 150ms cubic-bezier(0.0, 0.0, 0.2, 1);
 }
 
 /* Active buttons */
@@ -192,6 +193,7 @@ menulist[open] .menulist-label-box,
 	background: transparent !important;
 	box-shadow: none !important;
 	border-color: transparent !important;
+	transition: all 200ms cubic-bezier(0.0, 0.0, 0.2, 1);
 }
 
 .subviewbutton-back:not(#hack):not(:active):hover,
@@ -205,12 +207,17 @@ menulist[open] .menulist-label-box,
 	background: transparent !important;
 	box-shadow: none !important;
 	border: none !important;
-	border-radius: 2px !important;
+	border-radius: 100px !important;
 	padding: 0 0 !important;
-	height: 32px !important;
-	width: 32px !important;
-	min-height: 32px !important;
-	min-width: 32px !important;
+	height: 28px !important;
+	width: 28px !important;
+	min-height: 28px !important;
+	min-width: 28px !important;
+	transition: all 200ms cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+
+.findbar-closebutton .close-icon {
+	margin: 6px !important;
 }
 
 .close-icon:not(.tab-close-button) image {
@@ -277,7 +284,6 @@ menulist[open] .menulist-label-box,
 
 /* Combined buttons */
 #nav-bar .toolbaritem-combined-buttons toolbarbutton:not(:last-of-type):not(#hack),
-/* #nav-bar #back-button:not(#hack), */
 .subviewbutton.panel-subview-footer:not(:only-of-type):not(:last-of-type),
 .panel-footer button:not(:only-of-type):not(:last-of-type),
 #appMenu-popup .toolbaritem-combined-buttons toolbarbutton:not(:last-of-type):not(#appMenu-zoomEnlarge-button),
@@ -291,7 +297,6 @@ menulist[open] .menulist-label-box,
 }
 
 #nav-bar .toolbaritem-combined-buttons toolbarbutton:not(:first-of-type):not(#hack),
-/* #nav-bar #forward-button:not(#hack), */
 .subviewbutton.panel-subview-footer:not(:only-of-type):not(:first-of-type),
 .panel-footer button:not(:only-of-type):not(:first-of-type),
 #appMenu-popup .toolbaritem-combined-buttons toolbarbutton:not(:first-of-type):not(#appMenu-fullscreen-button),
@@ -318,6 +323,9 @@ button.popup-notification-primary-button,
 	color: white !important;
 	background: var(--gnome-button-suggested-action-background) !important;
 	transition: none !important;
+	border: none !important;
+	border-radius: 2px !important;
+	margin-left: 2px !important;
 }
 
 #appMenu-popup .panel-banner-item[notificationid="update-restart"]:hover,
@@ -325,6 +333,7 @@ button.popup-notification-primary-button.popup-notification-button:hover,
 #editBookmarkPanelDoneButton:hover,
 #tracking-action-block:hover {
 	background: var(--gnome-button-suggested-action-hover-background) !important;
+	transition: background 100ms ease !important;
 }
 
 #appMenu-popup .panel-banner-item[notificationid="update-restart"]:active,
@@ -332,6 +341,7 @@ button.popup-notification-primary-button.popup-notification-button:active,
 #editBookmarkPanelDoneButton:active,
 #tracking-action-block:active {
 	background: var(--gnome-button-suggested-action-active-background) !important;
+	transition: background 200ms ease !important;
 }
 
 /* Buttons with destructive action */
@@ -339,21 +349,25 @@ button.popup-notification-primary-button.popup-notification-button:active,
 .identity-popup-permission-remove-button,
 #PanelUI-panic-view-button {
 	outline-style: none !important;
-	color: white !important;
 	background: var(--gnome-button-destructive-action-background) !important;
 	transition: none !important;
+	border: none !important;
+	border-radius: 2px !important;
+	margin-right: 1px !important;
 }
 
 #editBookmarkPanelRemoveButton:hover,
 .identity-popup-permission-remove-button:not(#hack):hover,
 #PanelUI-panic-view-button:hover {
 	background: var(--gnome-button-destructive-action-hover-background) !important;
+	transition: background 100ms ease !important;
 }
 
 #editBookmarkPanelRemoveButton:active,
 .identity-popup-permission-remove-button:not(#hack):active,
 #PanelUI-panic-view-button:active {
 	background: var(--gnome-button-destructive-action-active-background) !important;
+	transition: background 200ms ease !important;
 }
 
 .identity-popup-permission-remove-button:not(#hack):hover { /* Is flat */

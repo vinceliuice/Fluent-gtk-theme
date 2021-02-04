@@ -13,7 +13,7 @@
 	color: var(--gnome-urlbar-color) !important;
 	height: 30px !important;
 	max-height: 30px !important;
-	padding: 6px 12px !important;
+	padding: 6px 8px !important;
 	box-sizing: border-box;
 	transition: all 100ms;
 }
@@ -23,7 +23,7 @@
 .findbar-textbox[focused],
 .findbar-textbox:focus {
 	background: var(--gnome-focused-urlbar-background) !important;
-	outline: 2px solid var(--gnome-focused-urlbar-border-color) !important;
+	outline: 2px solid var(--gnome-urlbar-hover-border-color) !important;
 	outline-offset: -2px;
 	-moz-outline-radius: 2px !important;
 	border-radius: 2px !important;
@@ -33,6 +33,7 @@
 #search-box:hover,
 .findbar-textbox:hover {
 	background: var(--gnome-focused-urlbar-background) !important;
+	border: 1px solid var(--gnome-urlbar-hover-border-color) !important;
 }
 
 /* Inactive window entries */

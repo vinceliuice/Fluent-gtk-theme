@@ -1,7 +1,5 @@
 <svg width="16" height="16" version="1.1" xmlns="http://www.w3.org/2000/svg">
- <g fill="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.1909">
-  <rect x="2" y="4" width="12" height="1" ry=".5"/>
-  <rect x="2" y="8" width="12" height="1" ry=".5"/>
-  <rect x="2" y="12" width="12" height="1" ry=".5"/>
- </g>
+ <circle cx="2.5" cy="7.5" r="1.5" color="#363636" fill="#333333" stroke-width="1.5"/>
+ <circle cx="7.5" cy="7.5" r="1.5" color="#363636" fill="#333333" stroke-width="1.5"/>
+ <circle cx="12.5" cy="7.5" r="1.5" color="#363636" fill="#333333" stroke-width="1.5"/>
 </svg>

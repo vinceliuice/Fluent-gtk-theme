@@ -108,7 +108,7 @@
 	margin-top: 10px;
 	z-index: 10;
 }
-#customization-panelWrapper > .panel-arrowbox {    
+#customization-panelWrapper > .panel-arrowbox {
 	margin-bottom: -5px !important;
 }
 
@@ -228,8 +228,8 @@
 
 #protections-popup[hasException] #protections-popup-tp-switch-section,
 #protections-popup[hasException] #protections-popup-mainView-panel-header{
-	background: var(--gnome-button-destructive-action-background) !important;
-	border-color: var(--gnome-button-destructive-action-border-color) !important;
+/*	background: var(--gnome-button-destructive-action-background) !important;*/
+/*	border-color: var(--gnome-button-destructive-action-border-color) !important;*/
 }
 
 #protections-popup-no-trackers-found-description {

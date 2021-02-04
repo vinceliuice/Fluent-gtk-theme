@@ -71,18 +71,19 @@
 	--gnome-button-suggested-action-active-background: #1961b9;
 	--gnome-button-suggested-action-active-border-color: #1b6acb;
 	--gnome-button-suggested-action-active-box-shadow: inset 0 1px rgba(255, 255, 255, 0);
-	--gnome-button-destructive-action-background: linear-gradient(to top, #ce1921 2px, #e01b24);
+	--gnome-button-destructive-action-background: linear-gradient(to top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
 	--gnome-button-destructive-action-border-color: #b2161d;
 	--gnome-button-destructive-action-border-accent-color: #851015;
 	--gnome-button-destructive-action-box-shadow: inset 0 1px rgba(255, 255, 255, 0.1), 0 1px 2px rgba(0, 0, 0, 0.07);
-	--gnome-button-destructive-action-hover-background: linear-gradient(to top, #e01b24, #e41c26 1px);
-	--gnome-button-destructive-action-active-background: #a0131a;
+	--gnome-button-destructive-action-hover-background: linear-gradient(to top, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15));
+	--gnome-button-destructive-action-active-background: rgba(0, 0, 0, 0.25);
 	--gnome-button-destructive-action-active-border-color: #b2161d;
 	--gnome-button-destructive-action-active-box-shadow: inset 0 1px rgba(255, 255, 255, 0);
 
 	/* URL bar */
 	--gnome-urlbar-background: rgba(255, 255, 255, 0.9);
 	--gnome-urlbar-border-color: #cccccc;
+	--gnome-urlbar-hover-border-color: #888888;
 	--gnome-urlbar-box-shadow: none;
 	--gnome-urlbar-color: #202020;
 	--gnome-inactive-urlbar-background: #f2f2f2;
@@ -96,13 +97,13 @@
 	/* Tabs */
 	--gnome-tabbar-tab-background: transparent;
 	--gnome-tabbar-tab-color: rgba(75, 75, 75, 0.55);
-	--gnome-tabbar-tab-hover-background: rgba(0, 0, 0, 0.08);
+	--gnome-tabbar-tab-hover-background: rgba(250, 250, 250, 0.5);
 	--gnome-tabbar-tab-hover-border-bottom-color: #bbbbbb;
 	--gnome-tabbar-tab-hover-color: rgba(75, 75, 75, 0.8);
 	--gnome-tabbar-tab-active-background: #F7F7F7;
 	--gnome-tabbar-tab-active-border-bottom-color: #bbbbbb;
 	--gnome-tabbar-tab-active-color: rgba(75, 75, 75, 1);
-	--gnome-tabbar-tab-active-hover-background: #ffffff;
+	--gnome-tabbar-tab-active-hover-background: #F7F7F7;
 	--gnome-inactive-tabbar-tab-color: rgba(75, 75, 75, 0.35);
 	--gnome-inactive-tabbar-tab-active-background: #fafafa;
 	--gnome-inactive-tabbar-tab-active-border-bottom-color: var(--gnome-tabbar-tab-active-border-bottom-color);

@@ -43,7 +43,7 @@
   @if $t == hover {
     background-color: $base;
     box-shadow: inset 0 0 0 1px transparent;
-    border-color: $track;
+    border-color: $text-disabled;
   }
 
   @if $t == focus {
@@ -51,14 +51,14 @@
                 border $ripple-fade-out-duration $ease-out,
                 box-shadow $ripple-fade-out-duration $ease-out;
     background-color: $base;
-    box-shadow: inset 0 0 0 1px if($fc == $primary, $track, $fc);
-    border-color: if($fc == $primary, $track, $fc);
+    box-shadow: inset 0 0 0 1px if($fc == $primary, $text-disabled, $fc);
+    border-color: if($fc == $primary, $text-disabled, $fc);
   }
 
   @if $t == checked {
     background-color: $base;
-    box-shadow: inset 0 0 0 1px if($fc == $primary, $track, $fc);
-    border-color: if($fc == $primary, $track, $fc);
+    box-shadow: inset 0 0 0 1px if($fc == $primary, $text-disabled, $fc);
+    border-color: if($fc == $primary, $text-disabled, $fc);
   }
 
   @if $t == disabled {

@@ -2428,6 +2428,7 @@ radio {
     transition: none;
     margin: 0; // this is a workaround for a menu check/radio size allocation issue
     padding: 0;
+    background-size: 10px 10px;
 
     &:dir(ltr) { margin-right: 8px; }
 

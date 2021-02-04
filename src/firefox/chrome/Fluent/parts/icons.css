@@ -129,9 +129,6 @@ menuitem[type="checkbox"][checked="true"] {
 menuitem[type="checkbox"][disabled="true"] .menu-iconic-icon {
 	opacity: 0.5;
 }
-menuitem[type="checkbox"]:not([disabled="true"]):hover .menu-iconic-icon {
-	filter: invert(100%) brightness(200%);
-}
 
 /* Menu radio */
 menuitem[type="radio"] {
@@ -142,9 +139,6 @@ menuitem[type="radio"][checked="true"] {
 }
 menuitem[type="radio"][disabled="true"] .menu-iconic-icon {
 	opacity: 0.5;
-}
-menuitem[type="radio"]:not([disabled="true"]):hover .menu-iconic-icon {
-	filter: invert(100%) brightness(200%);
 }
 
 /* Close button */
@@ -433,8 +427,8 @@ menuitem[type="radio"]:not([disabled="true"]):hover .menu-iconic-icon {
 	#sidebar-switcher-arrow,
 	#viewButton .button-menu-dropmarker,
 
-	menuitem[type="checkbox"] .menu-iconic-icon,
-	menuitem[type="radio"] .menu-iconic-icon,
+	menuitem[type="checkbox"]:not([checked="true"]) .menu-iconic-icon,
+	menuitem[type="radio"]:not([checked="true"]) .menu-iconic-icon,
 
 	.close-icon:not(.tab-close-button) image,
 	.identity-popup-permission-remove-button .button-icon,
@@ -505,8 +499,7 @@ menuitem[type="radio"]:not([disabled="true"]):hover .menu-iconic-icon {
 	#star-button:not([starred]),
 	#geo-sharing-icon[sharing], .geo-icon,
 	.plugin-icon, .autoplay-media-icon,
-	.popup-notification-icon[popupid="drmContentPlaying"], .drm-icon,
-	.bookmark-item[container] .toolbarbutton-icon {
+	.popup-notification-icon[popupid="drmContentPlaying"], .drm-icon {
 		filter: invert(60%) brightness(150%);
 	}
 

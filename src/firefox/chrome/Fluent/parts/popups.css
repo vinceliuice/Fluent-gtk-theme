@@ -27,6 +27,11 @@ menuitem, menupopup menu {
 	padding: 4px 8px !important;
 }
 
+menuitem[type="checkbox"], menuitem[type="radio"] {
+	border-radius: 2px !important;
+	background-color: var(--gnome-menu-background) !important;
+}
+
 menuitem[type="checkbox"] image, menuitem[type="radio"] image {
 	visibility: visible !important;
 }
@@ -52,7 +57,7 @@ panelview {
 
 .panel-arrowcontent {
 	background: var(--gnome-popover-background) !important;
-	border: none !important;
+	border: 1px solid var(--gnome-popover-border-color) !important;
 	border-radius: 3px;
 	box-shadow: var(--gnome-popover-shadow) !important;
 	padding: 12px !important;

@@ -63,6 +63,15 @@ tab > stack {
 	border-image: none !important;
 }
 
+/* Add tab separators */
+.tabbrowser-tab:not([selected=true]):not(:hover) {
+	border-image: linear-gradient(to bottom, transparent 16%, var(--gnome-button-border-color) 16%, var(--gnome-button-border-color) 84%, transparent 84%) 0 0 0 1 / 0 0 0 1px stretch !important;
+}
+
+.tabbrowser-tab[selected=true] + .tabbrowser-tab {
+	border-image: none !important;
+}
+
 /* Space between tabs */
 .tabbrowser-tab:not([pinned=true]) {
 	margin: 0 0 !important;
@@ -162,9 +171,11 @@ tab[selected]:-moz-window-inactive {
 	border-radius: 2px;
 	list-style-image: url("../icons/window-close-symbolic.svg") !important;
 	height: 16px;
-	opacity: .3;
+	opacity: 0.75;
 	padding: 0;
+	margin-right: 2px !important;
 	width: 16px;
+	transition: all 200ms cubic-bezier(0.0, 0.0, 0.2, 1) !important;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -210,36 +221,32 @@ tab[selected]:-moz-window-inactive {
 
 .tab-background {
 	background-color: var(--gnome-tabbar-tab-background) !important;
-	transition: all .2s ease;
-	margin-top: 3px;
+	transition: all 200ms cubic-bezier(0.0, 0.0, 0.2, 1), background-color 0 !important;
 }
 
 /* Active tab */
 .tab-background[selected=true] {
 	background-color: var(--gnome-tabbar-tab-active-background) !important;
 	background-image: none !important;
-	border-radius: 5px 5px 0 0;
+	border-radius: 0 0 0 0;
 	border: none !important;
-	border-image: none !important;
-	transition: all .2s ease;
-	box-shadow: 0 2px 5px rgba(0,0,0, 0.15), 0 0 1px rgba(0,0,0, 0.1);
+	border-image: url("../icons/tab-active-background.svg") 8 12 8 12 / 8px 12px 8px 12px stretch !important;
 }
 .tab-background[selected=true]:-moz-window-inactive {
 	background-color: var(--gnome-inactive-tabbar-tab-active-background) !important;
-	border-radius: 5px 5px 0 0;
+	border-radius: 0 0 0 0;
 	border: none !important;
-	border-image: none !important;
+	border-image: url("../icons/tab-inactive-active-background.svg") 8 12 8 12 / 8px 12px 8px 12px stretch !important;
 	border-top: none !important;
 }
 
 /* Tab hover */
 :root:not(:-moz-window-inactive) .tabbrowser-tab:hover > .tab-stack > .tab-background[selected=true] {
 	background-color: var(--gnome-tabbar-tab-active-background) !important;
-	border-radius: 5px 5px 0 0;
+	border-radius: 0 0 0 0;
 	border: none !important;
-	border-image: none !important;
+	border-image: url("../icons/tab-active-background.svg") 8 12 8 12 / 8px 12px 8px 12px stretch !important;
 	border-top: none !important;
-	transition: all .2s ease;
 }
 .tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected=true]),
 #TabsToolbar[brighttext] > #tabbrowser-tabs > .tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected=true]),
@@ -247,8 +254,40 @@ tab[selected]:-moz-window-inactive {
 	background-color: var(--gnome-tabbar-tab-hover-background) !important;
 	border-radius: 5px 5px 0 0;
 	border: none !important;
-	border-image: none !important;
-	transition: all .2s ease;
+	border-image: url("../icons/tab-hover-background.svg") 8 12 8 12 / 8px 12px 8px 12px stretch !important;
+}
+.tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected=true]):-moz-window-inactive,
+#TabsToolbar[brighttext] > #tabbrowser-tabs > .tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected=true]):-moz-window-inactive,
+#TabsToolbar[brighttext] > #tabbrowser-tabs > .tabbrowser-tab:hover > .tab-stack > .tab-background > .tab-line:not([selected=true]):-moz-window-inactive {
+	background-color: var(--gnome-tabbar-tab-hover-background) !important;
+	border-radius: 5px 5px 0 0;
+	border: none !important;
+	border-image: url("../icons/tab-inactive-hover-background.svg") 8 12 8 12 / 8px 12px 8px 12px stretch !important;
+}
+
+@media (prefers-color-scheme: dark) {
+	/* Active tab */
+	.tab-background[selected=true] {
+		border-image: url("../icons/tab-active-background-dark.svg") 8 12 8 12 / 8px 12px 8px 12px stretch !important;
+	}
+	.tab-background[selected=true]:-moz-window-inactive {
+		border-image: url("../icons/tab-inactive-active-background-dark.svg") 8 12 8 12 / 8px 12px 8px 12px stretch !important;
+	}
+
+	/* Tab hover */
+	:root:not(:-moz-window-inactive) .tabbrowser-tab:hover > .tab-stack > .tab-background[selected=true] {
+		border-image: url("../icons/tab-active-background-dark.svg") 8 12 8 12 / 8px 12px 8px 12px stretch !important;
+	}
+	.tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected=true]),
+	#TabsToolbar[brighttext] > #tabbrowser-tabs > .tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected=true]),
+	#TabsToolbar[brighttext] > #tabbrowser-tabs > .tabbrowser-tab:hover > .tab-stack > .tab-background > .tab-line:not([selected=true]) {
+		border-image: url("../icons/tab-hover-background-dark.svg") 8 12 8 12 / 8px 12px 8px 12px stretch !important;
+	}
+	.tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected=true]):-moz-window-inactive,
+	#TabsToolbar[brighttext] > #tabbrowser-tabs > .tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected=true]):-moz-window-inactive,
+	#TabsToolbar[brighttext] > #tabbrowser-tabs > .tabbrowser-tab:hover > .tab-stack > .tab-background > .tab-line:not([selected=true]):-moz-window-inactive {
+		border-image: url("../icons/tab-inactive-hover-background-dark.svg") 8 12 8 12 / 8px 12px 8px 12px stretch !important;
+	}
 }
 
 /* Tabs scroll buttons hover */
