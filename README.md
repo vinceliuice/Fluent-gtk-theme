@@ -2,6 +2,8 @@
 
 Fluent is a Fluent design theme for GNOME/GTK based desktop environments.
 
+![1](screenshot01.png?raw=true)
+
 ## Requirements
 
 - GTK `>=3.20`
@@ -48,6 +50,5 @@ Run the following commands in the terminal:
 ![01](src/firefox/preview01.png?raw=true)
 ![02](src/firefox/preview02.png?raw=true)
 
-## Gtk theme screenshots
-![1](screenshot01.png?raw=true)
+## Gtk theme widgets
 ![2](screenshot02.png?raw=true)
