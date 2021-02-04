@@ -5907,7 +5907,7 @@ tooltip.background.chromium {
 }
 
 #MozillaGtkWidget > widget > frame > border {
-  border-color: rgba(0, 0, 0, 0.26);
+  border-color: #d9d9d9;
 }
 
 #MozillaGtkWidget > widget > entry,
