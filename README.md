@@ -45,8 +45,8 @@ Run the following commands in the terminal:
 [Install Firefox theme](src/firefox)
 
 #### Preview
-![01](preview01.png?raw=true)
-![02](preview02.png?raw=true)
+![01](src/firefox/preview01.png?raw=true)
+![02](src/firefox/preview02.png?raw=true)
 
 ## Gtk theme screenshots
 ![1](screenshot01.png?raw=true)
