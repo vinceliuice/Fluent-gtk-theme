@@ -56,7 +56,7 @@ tab > stack {
 	display: none;
 }
 
-/* Remove tab separators */
+/* tab separators */
 .tabbrowser-tab::after,
 .tabbrowser-tab::before {
 	border-color: transparent !important;
@@ -65,9 +65,10 @@ tab > stack {
 
 /* Add tab separators */
 .tabbrowser-tab:not([selected=true]):not(:hover) {
-	border-image: linear-gradient(to bottom, transparent 16%, var(--gnome-button-border-color) 16%, var(--gnome-button-border-color) 84%, transparent 84%) 0 0 0 1 / 0 0 0 1px stretch !important;
+	border-image: linear-gradient(to bottom, transparent 25%, var(--gnome-button-border-color) 25%, var(--gnome-button-border-color) 85%, transparent 84%) 0 0 0 1 / 0 0 0 1px stretch !important;
 }
 
+.tabbrowser-tab:hover + .tabbrowser-tab,
 .tabbrowser-tab[selected=true] + .tabbrowser-tab {
 	border-image: none !important;
 }
