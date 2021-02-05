@@ -52,9 +52,9 @@
 menu[disabled] > .menu-right {
 	opacity: 0.3;
 }
-menu:not([disabled]):hover > .menu-right {
+/* menu:not([disabled]):hover > .menu-right {
 	filter: invert(100%) brightness(200%);
-}
+} */
 
 /* Arrow down buttons */
 .expander-down > .button-box,
@@ -121,7 +121,7 @@ menuitem[type="checkbox"] {
 	list-style-image: url("../icons/checkbox-symbolic.svg") !important;
 }
 menuitem[type="checkbox"][hover="true"] {
-
+	list-style-image: url("../icons/checkbox-symbolic.svg") !important;
 }
 menuitem[type="checkbox"][checked="true"] {
 	list-style-image: url("../icons/checkbox-checked-symbolic.svg") !important;
@@ -132,6 +132,9 @@ menuitem[type="checkbox"][disabled="true"] .menu-iconic-icon {
 
 /* Menu radio */
 menuitem[type="radio"] {
+	list-style-image: url("../icons/radio-symbolic.svg") !important;
+}
+menuitem[type="radio"][hover="true"] {
 	list-style-image: url("../icons/radio-symbolic.svg") !important;
 }
 menuitem[type="radio"][checked="true"] {

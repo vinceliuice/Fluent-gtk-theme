@@ -29,7 +29,6 @@ menuitem, menupopup menu {
 
 menuitem[type="checkbox"], menuitem[type="radio"] {
 	border-radius: 2px !important;
-	background-color: var(--gnome-menu-background) !important;
 }
 
 menuitem[type="checkbox"] image, menuitem[type="radio"] image {

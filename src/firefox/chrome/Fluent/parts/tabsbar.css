@@ -17,6 +17,7 @@
 tab > stack {
 	height: 32px !important;
 }
+
 /* Extra margin for the first and last tabs */
 .tabbrowser-tab[first-tab]:not([pinned=true]) {
 	margin-left: 8px !important;
@@ -212,9 +213,9 @@ tab[selected]:-moz-window-inactive {
 }
 
 /* Move container lines to the top */
-.tabbrowser-tab[usercontextid] > .tab-stack > .tab-background {
+/* .tabbrowser-tab[usercontextid] > .tab-stack > .tab-background {
 	border-top: 3px solid var(--identity-tab-color) !important;
-}
+} */
 
 .tabbrowser-tab[usercontextid] > .tab-stack > .tab-background > .tab-bottom-line {
 	display: none;
@@ -223,6 +224,8 @@ tab[selected]:-moz-window-inactive {
 .tab-background {
 	background-color: var(--gnome-tabbar-tab-background) !important;
 	transition: all 200ms cubic-bezier(0.0, 0.0, 0.2, 1), background-color 0 !important;
+	/* margin-left: -3px !important; */
+	/* margin-right: -3px !important; */
 }
 
 /* Active tab */
