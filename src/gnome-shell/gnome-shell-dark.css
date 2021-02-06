@@ -1081,7 +1081,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .popup-menu-boxpointer .popup-menu-content {
-  margin: 0 3px 0 6px;
+  margin: 0 2px 0 8px;
   background-color: rgba(32, 32, 32, 0.97);
   border-radius: 3px;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.35);
@@ -1369,6 +1369,9 @@ Gjs_ui_panel_ActivitiesButton.panel-button {
   background-size: auto;
   box-shadow: none;
   color: transparent !important;
+  padding: 0;
+  -natural-hpadding: 3px;
+  -minimum-hpadding: 3px;
 }
 
 Gjs_ui_panel_ActivitiesButton.panel-button:overview {

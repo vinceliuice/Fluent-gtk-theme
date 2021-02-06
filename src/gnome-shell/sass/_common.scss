@@ -869,7 +869,7 @@ $slider_color: if($variant == 'light', $accent_color, $accent_color);
   -arrow-base: 64px;
   -arrow-rise: 4px;
   -arrow-box-shadow: none; //dreaming. bug #689995
-  margin: $container_padding;
+  margin: 6px;
   background-color: $menu_bg_color;
   border-radius: $buttons_radius;
   box-shadow: $shadow_3;
@@ -889,7 +889,7 @@ $slider_color: if($variant == 'light', $accent_color, $accent_color);
   box-shadow: none;
 
   .popup-menu-content {
-    margin: 0 ($container_padding / 2) 0 $container_padding;
+    margin: 0 2px 0 8px;
     background-color: $menu_bg_color;
     border-radius: $buttons_radius;
     box-shadow: $shadow_3;
@@ -1175,6 +1175,9 @@ Gjs_ui_panel_ActivitiesButton.panel-button {
   background-size: auto;
   box-shadow: none;
   color: transparent !important;
+  padding: 0;
+  -natural-hpadding: $container-padding / 2;
+  -minimum-hpadding: $container-padding / 2;
 
   &:overview {
     background-color: transparent;

@@ -9,7 +9,7 @@
   :root {
 	/* Browser area before a page starts loading */
 	--gnome-browser-before-load-background: #333333;
-	--theme-primary-color: #8AB4F8;
+	--theme-primary-color: #0078D4;
 
 	/* Toolbars */
 	--gnome-toolbar-background: #383838;
@@ -119,16 +119,16 @@
 	--gnome-titlebutton-close-active-background: rgba(255, 255, 255, 0.25);
 
 	/* Switch */
-	--gnome-switch-background: rgba(255, 255, 255, 0.25);
-	--gnome-switch-border-color: transparent;
-	--gnome-switch-slider-background: #2E2E2E;
-	--gnome-switch-slider-active-background: #3281EA;
+	--gnome-switch-background: rgba(255, 255, 255, 0.65);
+	--gnome-switch-border-color: rgba(255, 255, 255, 0.65);
+	--gnome-switch-slider-background: #ffffff;
+	--gnome-switch-slider-active-background: #ffffff;
 	--gnome-switch-slider-border-color: transparent;
 	--gnome-switch-slider-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.35);
 	--gnome-switch-slider-hover-box-shadow: 0 0 0 12px rgba(0, 0, 0, 0.10);
 	--gnome-switch-slider-active-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.35);
 	--gnome-switch-slider-active-hover-box-shadow: 0 0 0 12px rgba(255, 255, 255, 0.10);
-	--gnome-switch-active-background: #295085;
+	--gnome-switch-active-background: #0078D4;
 	--gnome-switch-active-border-color: transparent;
 	--gnome-switch-active-slider-border-color: transparent;
 

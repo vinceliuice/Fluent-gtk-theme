@@ -287,49 +287,50 @@
 	display: none !important;
 }
 #protections-popup-tp-switch {
-	background: var(--gnome-switch-background) !important;
-	border: none !important;
+	background: transparent !important;
+	border: 1px solid var(--gnome-switch-background) !important;
 	border-radius: 100px !important;
 	min-width: 38px !important;
 	width: 38px !important;
-	min-height: 16px !important;
+	min-height: 18px !important;
 	padding: 0 !important;
 	position: absolute !important;
 	display: block !important;
-	margin: 4px !important;
+	margin: 0 !important;
 }
 /*#protections-popup-tp-switch:hover {*/
 /*	border-color: var(--gnome-switch-border-color) !important;*/
 /*}*/
 #protections-popup-tp-switch::before {
 	position: absolute !important;
-	top: 0px;
-	left: 0px;
+	top: 3px;
+	left: 3px;
 	background: var(--gnome-switch-slider-background) !important;
 	border: none !important;
-	box-shadow: var(--gnome-switch-slider-box-shadow);
+	box-shadow: none;
 	border-radius: 100px !important;
-	height: 24px !important;
-	width: 24px !important;
+	height: 12px !important;
+	width: 12px !important;
 	transition: left .2s ease;
 	outline: 0 !important;
 }
 #protections-popup-tp-switch[enabled] {
 	background: var(--gnome-switch-active-background) !important;
-	padding-inline-start: 24px !important;
+	border: 1px solid var(--gnome-switch-active-background) !important;
+	padding-inline-start: 22px !important;
 }
 /*#protections-popup-tp-switch[enabled]:hover {*/
 /*}*/
 #protections-popup-tp-switch[enabled]::before {
 	background: var(--gnome-switch-slider-active-background) !important;
-	box-shadow: var(--gnome-switch-slider-active-box-shadow);
-	left: 24px;
+	box-shadow: none;
+	left: 22px;
 }
 #protections-popup-tp-switch:hover:before{
-	box-shadow: var(--gnome-switch-slider-hover-box-shadow);
+	box-shadow: none;
 }
 #protections-popup-tp-switch[enabled]:hover:before{
-	box-shadow: var(--gnome-switch-slider-active-hover-box-shadow);
+	box-shadow: none;
 }
 
 /* Feature recommendation notification, fix width */

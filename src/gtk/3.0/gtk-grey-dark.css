@@ -277,7 +277,7 @@ entry {
   border-radius: 2px;
   caret-color: currentColor;
   border: 1px solid rgba(255, 255, 255, 0.12);
-  transition: all 75ms cubic-bezier(0, 0, 0.2, 1), box-shadow 300ms cubic-bezier(0, 0, 0.2, 1);
+  transition: all 75ms cubic-bezier(0, 0, 0.2, 1), border 300ms cubic-bezier(0, 0, 0.2, 1), box-shadow 300ms cubic-bezier(0, 0, 0.2, 1);
   box-shadow: inset 0 0 0 1px transparent;
   background-color: #2B2B2B;
   color: white;
@@ -288,21 +288,21 @@ spinbutton.vertical:hover, spinbutton:hover:not(.vertical),
 entry:hover {
   background-color: #2B2B2B;
   box-shadow: inset 0 0 0 1px transparent;
-  border-color: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
 }
 
 spinbutton.vertical:focus, spinbutton:focus:not(.vertical),
 entry:focus {
   background-color: #2B2B2B;
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3);
-  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+  border-color: rgba(255, 255, 255, 0.5);
 }
 
 spinbutton.vertical:drop(active), spinbutton:drop(active):not(.vertical),
 entry:drop(active) {
   background-color: #2B2B2B;
   box-shadow: inset 0 0 0 1px transparent;
-  border-color: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
 }
 
 spinbutton.vertical:disabled, spinbutton:disabled:not(.vertical),
@@ -376,7 +376,7 @@ entry undershoot.right {
 
 spinbutton.error.vertical, spinbutton.error:not(.vertical),
 entry.error {
-  transition: all 75ms cubic-bezier(0, 0, 0.2, 1), box-shadow 300ms cubic-bezier(0, 0, 0.2, 1);
+  transition: all 75ms cubic-bezier(0, 0, 0.2, 1), border 300ms cubic-bezier(0, 0, 0.2, 1), box-shadow 300ms cubic-bezier(0, 0, 0.2, 1);
   box-shadow: inset 0 0 0 1px transparent;
   background-color: #2B2B2B;
   color: white;
@@ -399,7 +399,7 @@ entry.error:disabled {
 
 spinbutton.warning.vertical, spinbutton.warning:not(.vertical),
 entry.warning {
-  transition: all 75ms cubic-bezier(0, 0, 0.2, 1), box-shadow 300ms cubic-bezier(0, 0, 0.2, 1);
+  transition: all 75ms cubic-bezier(0, 0, 0.2, 1), border 300ms cubic-bezier(0, 0, 0.2, 1), box-shadow 300ms cubic-bezier(0, 0, 0.2, 1);
   box-shadow: inset 0 0 0 1px transparent;
   background-color: #2B2B2B;
   color: white;
@@ -505,9 +505,9 @@ treeview entry.flat, treeview entry.flat:focus, treeview entry, treeview entry:f
 
 button {
   border: 1px solid rgba(255, 255, 255, 0.12);
-  transition: all 75ms cubic-bezier(0, 0, 0.2, 1), box-shadow 300ms cubic-bezier(0, 0, 0.2, 1);
+  transition: all 75ms cubic-bezier(0, 0, 0.2, 1), border 300ms cubic-bezier(0, 0, 0.2, 1), box-shadow 300ms cubic-bezier(0, 0, 0.2, 1);
   outline: none;
-  box-shadow: inset 0 0 0 9999px transparent;
+  box-shadow: inset 0 0 0 1px transparent;
   background-color: #2B2B2B;
   border-color: rgba(255, 255, 255, 0.12);
   color: white;
@@ -519,13 +519,15 @@ button:focus {
 }
 
 button:hover {
+  box-shadow: inset 0 0 0 1px transparent;
   background-color: #2B2B2B;
   border-color: rgba(255, 255, 255, 0.3);
 }
 
 button:active {
-  transition: all 75ms cubic-bezier(0, 0, 0.2, 1), box-shadow 300ms cubic-bezier(0, 0, 0.2, 1);
-  box-shadow: inset 0 0 0 9999px alpha(currentColor, 0.16);
+  animation: none;
+  transition: all 75ms cubic-bezier(0, 0, 0.2, 1), border 300ms cubic-bezier(0, 0, 0.2, 1), box-shadow 300ms cubic-bezier(0, 0, 0.2, 1);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3);
 }
 
 button:disabled {
@@ -535,11 +537,12 @@ button:disabled {
 }
 
 button:checked {
-  box-shadow: none;
+  box-shadow: inset 0 0 0 1px transparent;
   background-clip: border-box;
   background-color: #616161;
   color: white;
   border-color: #616161;
+  transition: all 75ms cubic-bezier(0, 0, 0.2, 1), background-color 300ms cubic-bezier(0, 0, 0.2, 1);
 }
 
 button:checked:hover {
@@ -563,6 +566,7 @@ button {
 }
 
 button:drop(active) {
+  box-shadow: inset 0 0 0 1px transparent;
   background-color: #2B2B2B;
   border-color: rgba(255, 255, 255, 0.3);
 }
@@ -2816,6 +2820,7 @@ menu menuitem check, menu menuitem radio {
   transition: none;
   margin: 0;
   padding: 0;
+  background-size: 10px 10px;
 }
 
 menu menuitem check:dir(ltr), menu menuitem radio:dir(ltr) {
@@ -5902,7 +5907,7 @@ tooltip.background.chromium {
 }
 
 #MozillaGtkWidget > widget > frame > border {
-  border-color: rgba(255, 255, 255, 0.3);
+  border-color: transparent;
 }
 
 #MozillaGtkWidget > widget > entry,
