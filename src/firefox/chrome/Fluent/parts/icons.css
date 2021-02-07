@@ -508,7 +508,7 @@ menuitem[type="radio"][disabled="true"] .menu-iconic-icon {
 
 	#pocket-button,
 	#pageAction-panel-pocket {
-		list-style-image: url("../icons/save-to-pocket-light.svg") !important;
+		list-style-image: url("../icons/save-to-pocket-dark.svg") !important;
 	}
 
 	/* Tree views */
