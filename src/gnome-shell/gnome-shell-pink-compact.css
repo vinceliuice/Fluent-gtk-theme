@@ -1,22 +1,4 @@
 /* This stylesheet is generated, DO NOT EDIT */
-/* Copyright 2009, 2015 Red Hat, Inc.
- *
- * Portions adapted from Mx's data/style/default.css
- *   Copyright 2009 Intel Corporation
- *
- * This program is free software; you can redistribute it and/or modify it
- * under the terms and conditions of the GNU Lesser General Public License,
- * version 2.1, as published by the Free Software Foundation.
- *
- * This program is distributed in the hope it will be useful, but WITHOUT ANY
- * WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE.  See the GNU Lesser General Public License for
- * more details.
- *
- * You should have received a copy of the GNU Lesser General Public License
- * along with this program; if not, write to the Free Software Foundation,
- * Inc., 51 Franklin St - Fifth Floor, Boston, MA 02110-1301 USA.
- */
 /* GLOBALS */
 * {
   transition-duration: 150ms;
@@ -1362,19 +1344,20 @@ Gjs_ui_panel_AggregateMenu.panel-button {
   border-radius: 0 5px 5px 0 !important;
 }
 
-Gjs_ui_panel_ActivitiesButton.panel-button {
+#panelActivities.panel-button {
   background-image: url("assets/activities-small.svg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: auto;
   box-shadow: none;
   color: transparent !important;
-  padding: 0;
-  -natural-hpadding: 2px;
-  -minimum-hpadding: 2px;
 }
 
-Gjs_ui_panel_ActivitiesButton.panel-button:overview {
+#panelActivities.panel-button > * {
+  width: 32px;
+}
+
+#panelActivities.panel-button:overview {
   background-color: transparent;
   box-shadow: none;
 }
