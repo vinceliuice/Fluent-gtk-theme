@@ -130,7 +130,7 @@ StEntry StIcon.peek-password {
 GPasteSearchEntry StLabel.hint-text,
 StEntry StLabel.hint-text {
   margin-left: 2px;
-  color: rgba(255, 255, 255, 0.56);
+  color: rgba(255, 255, 255, 0.26);
 }
 
 /* Scrollbars */
@@ -1034,20 +1034,6 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   height: 16px;
 }
 
-.candidate-popup-boxpointer {
-  -arrow-border-radius: 3px;
-  -arrow-background-color: transparent;
-  -arrow-border-width: 0;
-  -arrow-border-color: transparent;
-  -arrow-base: 64px;
-  -arrow-rise: 4px;
-  -arrow-box-shadow: none;
-  margin: 6px;
-  background-color: rgba(32, 32, 32, 0.97);
-  border-radius: 3px;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.35);
-}
-
 .popup-menu-boxpointer {
   -arrow-border-radius: 3px;
   -arrow-background-color: transparent;
@@ -1690,8 +1676,8 @@ Gjs_ui_panel_AggregateMenu.panel-button {
   width: 32px;
   height: 32px;
   padding: 0 0;
-  margin: 2px;
-  border-radius: 1000px;
+  margin: 3px 6px;
+  border-radius: 9999px;
   color: rgba(255, 255, 255, 0.54);
   border: none;
   font-feature-settings: "tnum";
@@ -1835,8 +1821,8 @@ Gjs_ui_panel_AggregateMenu.panel-button {
 
 .weather-grid,
 .world-clocks-grid {
-  spacing-rows: 8px;
-  spacing-columns: 16px;
+  spacing-rows: 6px;
+  spacing-columns: 18px;
 }
 
 .world-clocks-header,
@@ -1892,11 +1878,12 @@ Gjs_ui_panel_AggregateMenu.panel-button {
 }
 
 .weather-button .weather-header-box {
-  spacing: 8px;
+  spacing: 6px;
 }
 
 .weather-button .weather-header.location {
   font-weight: normal;
+  font-size: 0.8em;
   color: rgba(255, 255, 255, 0.38);
 }
 
@@ -1922,7 +1909,7 @@ Gjs_ui_panel_AggregateMenu.panel-button {
 
 .message-list {
   width: 31.5em;
-  padding: 0 12px;
+  padding: 0 6px;
   color: rgba(255, 255, 255, 0.54);
   text-shadow: none;
 }
@@ -1947,7 +1934,7 @@ Gjs_ui_panel_AggregateMenu.panel-button {
 .message-list-section,
 .message-list-sections,
 .message-list-section-list {
-  spacing: 8px;
+  spacing: 6px;
 }
 
 .message-list-controls {
@@ -2310,6 +2297,10 @@ Gjs_ui_panel_AggregateMenu.panel-button {
 
 .search-entry:hover .search-entry-icon, .search-entry:focus .search-entry-icon {
   color: rgba(0, 0, 0, 0.75);
+}
+
+.search-entry:focus StLabel.hint-text {
+  color: transparent;
 }
 
 .search-entry:insensitive {
@@ -3178,9 +3169,25 @@ StWidget.focused .app-well-app-running-dot {
   background-color: #FBC02D;
 }
 
+.candidate-popup-boxpointer {
+  -arrow-border-radius: 3px;
+  -arrow-background-color: transparent;
+  -arrow-border-width: 0;
+  -arrow-border-color: transparent;
+  -arrow-base: 64px;
+  -arrow-rise: 12px;
+  -arrow-box-shadow: none;
+  background-color: transparent;
+  box-shadow: none;
+}
+
 .candidate-popup-content {
-  padding: 8px;
-  spacing: 0;
+  background-color: rgba(32, 32, 32, 0.97);
+  border-radius: 3px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.35);
+  margin: 3px 8px;
+  padding: 6px;
+  spacing: 6px;
 }
 
 .candidate-index {
@@ -3196,6 +3203,7 @@ StWidget.focused .app-well-app-running-dot {
   transition-duration: 0ms;
   min-height: 32px;
   padding: 0 8px;
+  margin-right: 3px;
   border-radius: 3px;
 }
 
@@ -3212,6 +3220,10 @@ StWidget.focused .app-well-app-running-dot {
 .candidate-box:selected {
   background-color: #FBC02D;
   color: rgba(255, 255, 255, 0.85);
+}
+
+.candidate-box:last-child {
+  margin-right: 0;
 }
 
 .candidate-page-button-box {
