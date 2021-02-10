@@ -111,7 +111,7 @@
 }
 
 .panel-corner.hidden:active, .panel-corner.hidden:overview, .panel-corner.hidden:focus {
-    -panel-corner-border-color: rgba(0, 0, 0, .001);
+	-panel-corner-border-color: rgba(0, 0, 0, .001);
 }
 #dashtopanelScrollview .badge {
 	color: rgba(255, 255, 255, 1);
@@ -124,5 +124,5 @@
 }
 
 #dashtopanelScrollview .notification-badge {
-    background-color: rgba(255,0,0,0.8);
+	background-color: rgba(255,0,0,0.8);
 }

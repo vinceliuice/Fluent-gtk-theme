@@ -53,6 +53,13 @@ Run the following commands in the terminal:
 ### Dash to dock theme
 [Install dash-to-dock theme](src/dash-to-dock)
 
+### Fix for dash to panel theme
+Go to `src/gnome-shell/extensions/dash-to-panel` run the following commands in the terminal:
+
+```sh
+./install.sh
+```
+
 #### Screenshot
 ![01](src/dash-to-dock/screenshot.png?raw=true)
 
