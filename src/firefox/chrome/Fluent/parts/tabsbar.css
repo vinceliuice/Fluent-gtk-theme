@@ -111,7 +111,7 @@ tab[selected]:-moz-window-inactive {
 	justify-content: center;
 	align-items: center;
 	min-width: 100% !important;
-	padding: 0 10px !important;
+	padding: 0 16px !important;
 	margin-top: 3px;
 }
 
@@ -180,7 +180,6 @@ tab[selected]:-moz-window-inactive {
 	height: 16px;
 	opacity: 0.75;
 	padding: 0;
-	margin-right: 2px !important;
 	width: 16px;
 	transition: all 200ms cubic-bezier(0.0, 0.0, 0.2, 1) !important;
 }
@@ -228,7 +227,9 @@ tab[selected]:-moz-window-inactive {
 
 .tab-background {
 	background-color: var(--gnome-tabbar-tab-background) !important;
-	transition: all 200ms cubic-bezier(0.0, 0.0, 0.2, 1), background-color 0 !important;
+	transition: all 200ms cubic-bezier(0.0, 0.0, 0.2, 1),
+	            background-color 0,
+	            box-shadow 0 !important;
 	/* margin-left: -3px !important; */
 	/* margin-right: -3px !important; */
 }

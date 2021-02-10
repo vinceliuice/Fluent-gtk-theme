@@ -167,7 +167,6 @@ done
 
 for color in '' '-dark'; do
   sassc "${SASSC_OPT[@]}" "src/gnome-shell/gnome-shell$color."{scss,css}
-  sassc "${SASSC_OPT[@]}" "src/gnome-shell/sass/dash-to-dock/stylesheet."{scss,css}
 done
 
 for color in "${colors[@]}"; do

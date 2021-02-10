@@ -4,6 +4,6 @@ $trans: 'true';
 $panel: 'dark';
 $theme: 'default';
 
-@import '../variables';
-@import '../colors';
+@import '../gnome-shell/sass/variables';
+@import '../gnome-shell/sass/colors';
 @import 'dash-to-dock';
