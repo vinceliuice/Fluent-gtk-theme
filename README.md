@@ -51,7 +51,9 @@ Run the following commands in the terminal:
 ![02](src/firefox/preview02.png?raw=true)
 
 ### Dash to dock theme
-[Install Dash to dock theme](src/dash-to-dock)
+[Install dash-to-dock theme](src/dash-to-dock)
+
+#### Screenshot
 ![01](src/dash-to-dock/screenshot.png?raw=true)
 
 ## Gtk theme widgets

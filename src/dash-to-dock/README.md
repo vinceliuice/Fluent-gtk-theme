@@ -12,7 +12,7 @@ Fluent theme for `dash to dock`
 ./install.sh
 ```
 
-- (2) After installation finished you need go to [Dash to Dock Settings] > [Appearance] > [Use built-in theme] and turn it on!
+- (2) After installation finished you need go to `Dash to Dock Settings` > `Appearance` > `Use built-in theme` and turn it on!
 
 - (3) Then run `alt` + `F2` put `r` in entry then `Enter` to resart gnome-shell
 
