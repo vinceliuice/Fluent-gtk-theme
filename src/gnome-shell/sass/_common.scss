@@ -916,11 +916,14 @@ $slider_color: if($variant == 'light', $accent_color, $accent_color);
   }
 
   .popup-sub-menu .popup-menu-item > :first-child {
-    &:ltr { /* 12px spacing + 2*4px padding */
-      padding-left: 4px + (2 * $container_padding); margin-left: 1.09em;
+    &:ltr {
+      padding-left: 4px + (2 * $container_padding);
+      margin-left: 1em;
     }
-    &:rtl { /* 12px spacing + 2*4px padding */
-      padding-right: 4px + (2 * $container_padding); margin-right: 1.09em;
+
+    &:rtl {
+      padding-right: 4px + (2 * $container_padding);
+      margin-right: 1em;
     }
   }
 }
