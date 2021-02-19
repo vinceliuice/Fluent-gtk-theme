@@ -12,6 +12,8 @@
     background-color: $titlebar;
     border-bottom: 1px solid $divider;
 
+    &:backdrop { background-color: $titlebar-backdrop; }
+
     // FIXME: workaround for wrong size allocation of Nemo
     entry {
       @extend %titlebar-entry;
