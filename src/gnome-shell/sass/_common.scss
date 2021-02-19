@@ -101,12 +101,12 @@ StScrollBar {
 
   StBin#trough {
     margin: 6px;
-    border-radius: 100px;
+    border-radius: $circular_radius;
     background-color: $divider_color;
   }
 
   StButton#vhandle, StButton#hhandle {
-    border-radius: 100px;
+    border-radius: $circular_radius;
     background-color: $hint_fg_color;
     //border: 4px solid transparent; //would be nice to margin or at least to transparent
     margin: 6px;
@@ -168,7 +168,7 @@ $slider_color: if($variant == 'light', $accent_color, $accent_color);
     width: 24px;
     height: 24px;
     padding: ($medium_size - 24px) / 2;
-    border-radius: 100px;
+    border-radius: $circular_radius;
     background-image: url("assets/checkbox-off.svg");
   }
   &:focus StBin {
@@ -931,7 +931,7 @@ $slider_color: if($variant == 'light', $accent_color, $accent_color);
 .system-menu-action {
   color: $secondary_fg_color;
   background-color: $divider_color;
-  border-radius: 100px; /* wish we could do 50% */
+  border-radius: $circular_radius; /* wish we could do 50% */
   padding: ($large_size - 20px) / 2;
   border: none;
   -st-icon-style: symbolic; // >= 3.29.90
@@ -1283,7 +1283,6 @@ $size_suffix: if($laptop == 'true', '-small', '');
 
   &.solid {
     background-color: #202020;
-    /* transition from transparent to solid */
     transition-duration: 250ms;
     background-gradient-direction: none; // for Ubuntu session
     text-shadow: none; // for Ubuntu session
@@ -1380,12 +1379,12 @@ $size_suffix: if($laptop == 'true', '-small', '');
   }
 
   &:hover, &:focus {
-    color: $fg_color;
+    // color: $fg_color;
     background-color: $divider_color;
   }
 
   &:active {
-    color: $fg_color;
+    // color: $fg_color;
     background-color: $track_color;
   }
 }
@@ -1407,7 +1406,7 @@ $size_suffix: if($laptop == 'true', '-small', '');
   width: $menuitem_size;
   height: $menuitem_size;
   margin: 2px;
-  border-radius: 100px;
+  border-radius: $circular_radius;
   background-color: transparent;
   color: $secondary_fg_color;
 
@@ -1434,7 +1433,7 @@ $size_suffix: if($laptop == 'true', '-small', '');
   width: $menuitem_size;
   height: $menuitem_size;
   padding: 0 0;
-  margin: ($container_padding / 2) $container_padding;
+  margin: $container_padding / 2;
   border-radius: $circular_radius;
   color: $secondary_fg_color;
   border: none;
@@ -1459,7 +1458,7 @@ $size_suffix: if($laptop == 'true', '-small', '');
     width: $menuitem_size; height: $menuitem_size - 7px;
     margin-top: 2px;
     padding: 7px 0 0;
-    border-radius: 100px;
+    border-radius: $circular_radius;
     background-color: transparent;
     color: $hint_fg_color;
     @include font(caption);
@@ -1517,10 +1516,11 @@ $size_suffix: if($laptop == 'true', '-small', '');
 }
 
 .calendar-week-number {
-  height: 1.8em;
-  width: 2em;
-  margin: $container_padding 0;
-  border-radius: 100px;
+  height: $menuitem_size - $container_padding;
+  width: $menuitem_size - $container_padding;
+  margin: $container_padding ($container_padding / 2) $container_padding 0;
+  padding: 0;
+  border-radius: $circular_radius;
   background-color: if($variant == 'light', rgba(black, 0.04), rgba(white, 0.03));
   color: $hint_fg_color;
   font-size: inherit;
@@ -1542,12 +1542,12 @@ $size_suffix: if($laptop == 'true', '-small', '');
   background-color: if($variant == 'light', rgba(black, 0.04), rgba(white, 0.03));
 
   &:hover, &:focus {
-    color: $fg_color;
+    // color: $fg_color;
     background-color: $divider_color;
   }
 
   &:active {
-    color: $fg_color;
+    // color: $fg_color;
     background-color: $track_color;
   }
 }
@@ -1748,7 +1748,7 @@ $size_suffix: if($laptop == 'true', '-small', '');
   padding: 0;
   height: 24px;
   width: 24px;
-  border-radius: 100px;
+  border-radius: $circular_radius;
 
   &:hover, &:focus { color: $fg_color; background-color: $divider_color; }
   &:active { color: $fg_color; background-color: $track_color; }
@@ -1763,7 +1763,7 @@ $size_suffix: if($laptop == 'true', '-small', '');
 .message-media-control {
   margin: 16px 4px;
   padding: 8px;
-  border-radius: 100px;
+  border-radius: $circular_radius;
   color: $secondary_fg_color;
   &:hover,&:focus { color: $fg_color; background-color: $divider_color; }
   &:active { color: $fg_color; background-color: $track_color; }
@@ -2102,14 +2102,14 @@ $size_suffix: if($laptop == 'true', '-small', '');
   width: 320px;
   margin-bottom: 32px;
   padding: 0;
-  border-radius: 100px;
+  border-radius: $circular_radius;
   background-color: $inverse_divider_color;
 }
 
 .app-view-control { //favorties | all toggle button
   padding: 0 16px;
   margin: 3px;
-  border-radius: 100px;
+  border-radius: $circular_radius;
   font-weight: bold;
   color: $inverse_secondary_fg_color;
   background-color: transparent;
@@ -2818,7 +2818,7 @@ $keyboard_active_bg_color: if($variant == 'light', darken($keyboard_bg_color, 20
 .login-dialog-button-box { spacing: 5px; }
 .login-dialog-message-warning { color: $warning_color; }
 .login-dialog-message-hint { padding-top: 0; padding-bottom: 20px; }
-.login-dialog-user-selection-box { padding: 100px 0px; }
+.login-dialog-user-selection-box { padding: $circular_radius 0px; }
 .login-dialog-not-listed-label {
   padding-left: 2px;
   .login-dialog-not-listed-button:focus &,

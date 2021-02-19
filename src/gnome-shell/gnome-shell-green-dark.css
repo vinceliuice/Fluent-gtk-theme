@@ -153,12 +153,12 @@ StScrollView StScrollBar {
 
 StScrollBar StBin#trough {
   margin: 6px;
-  border-radius: 100px;
+  border-radius: 9999px;
   background-color: rgba(255, 255, 255, 0.12);
 }
 
 StScrollBar StButton#vhandle, StScrollBar StButton#hhandle {
-  border-radius: 100px;
+  border-radius: 9999px;
   background-color: rgba(255, 255, 255, 0.38);
   margin: 6px;
 }
@@ -225,7 +225,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   width: 24px;
   height: 24px;
   padding: 6px;
-  border-radius: 100px;
+  border-radius: 9999px;
   background-image: url("assets/checkbox-off.svg");
 }
 
@@ -1119,7 +1119,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .system-menu-action {
   color: rgba(255, 255, 255, 0.54);
   background-color: rgba(255, 255, 255, 0.12);
-  border-radius: 100px;
+  border-radius: 9999px;
   /* wish we could do 50% */
   padding: 14px;
   border: none;
@@ -1481,7 +1481,6 @@ Gjs_ui_panel_AggregateMenu.panel-button {
 
 #panel.solid {
   background-color: #202020;
-  /* transition from transparent to solid */
   transition-duration: 250ms;
   background-gradient-direction: none;
   text-shadow: none;
@@ -1605,12 +1604,10 @@ Gjs_ui_panel_AggregateMenu.panel-button {
 }
 
 .datemenu-today-button:hover, .datemenu-today-button:focus {
-  color: rgba(255, 255, 255, 0.86);
   background-color: rgba(255, 255, 255, 0.12);
 }
 
 .datemenu-today-button:active {
-  color: rgba(255, 255, 255, 0.86);
   background-color: rgba(255, 255, 255, 0.26);
 }
 
@@ -1634,7 +1631,7 @@ Gjs_ui_panel_AggregateMenu.panel-button {
   width: 32px;
   height: 32px;
   margin: 2px;
-  border-radius: 100px;
+  border-radius: 9999px;
   background-color: transparent;
   color: rgba(255, 255, 255, 0.54);
 }
@@ -1674,7 +1671,7 @@ Gjs_ui_panel_AggregateMenu.panel-button {
   width: 32px;
   height: 32px;
   padding: 0 0;
-  margin: 3px 6px;
+  margin: 3px;
   border-radius: 9999px;
   color: rgba(255, 255, 255, 0.54);
   border: none;
@@ -1703,7 +1700,7 @@ Gjs_ui_panel_AggregateMenu.panel-button {
   height: 25px;
   margin-top: 2px;
   padding: 7px 0 0;
-  border-radius: 100px;
+  border-radius: 9999px;
   background-color: transparent;
   color: rgba(255, 255, 255, 0.38);
   font-size: 9pt;
@@ -1766,10 +1763,11 @@ Gjs_ui_panel_AggregateMenu.panel-button {
 }
 
 .calendar-week-number {
-  height: 1.8em;
-  width: 2em;
-  margin: 6px 0;
-  border-radius: 100px;
+  height: 26px;
+  width: 26px;
+  margin: 6px 3px 6px 0;
+  padding: 0;
+  border-radius: 9999px;
   background-color: rgba(255, 255, 255, 0.03);
   color: rgba(255, 255, 255, 0.38);
   font-size: inherit;
@@ -1795,14 +1793,12 @@ Gjs_ui_panel_AggregateMenu.panel-button {
 .weather-button:focus,
 .events-button:hover,
 .events-button:focus {
-  color: rgba(255, 255, 255, 0.86);
   background-color: rgba(255, 255, 255, 0.12);
 }
 
 .world-clocks-button:active,
 .weather-button:active,
 .events-button:active {
-  color: rgba(255, 255, 255, 0.86);
   background-color: rgba(255, 255, 255, 0.26);
 }
 
@@ -2011,7 +2007,7 @@ Gjs_ui_panel_AggregateMenu.panel-button {
   padding: 0;
   height: 24px;
   width: 24px;
-  border-radius: 100px;
+  border-radius: 9999px;
 }
 
 .message-close-button:hover, .message-close-button:focus {
@@ -2035,7 +2031,7 @@ Gjs_ui_panel_AggregateMenu.panel-button {
 .message-media-control {
   margin: 16px 4px;
   padding: 8px;
-  border-radius: 100px;
+  border-radius: 9999px;
   color: rgba(255, 255, 255, 0.54);
 }
 
@@ -2445,14 +2441,14 @@ Gjs_ui_panel_AggregateMenu.panel-button {
   width: 320px;
   margin-bottom: 32px;
   padding: 0;
-  border-radius: 100px;
+  border-radius: 9999px;
   background-color: rgba(255, 255, 255, 0.15);
 }
 
 .app-view-control {
   padding: 0 16px;
   margin: 3px;
-  border-radius: 100px;
+  border-radius: 9999px;
   font-weight: bold;
   color: rgba(255, 255, 255, 0.7);
   background-color: transparent;
@@ -3414,7 +3410,7 @@ StWidget.focused .app-well-app-running-dot {
 }
 
 .login-dialog-user-selection-box {
-  padding: 100px 0px;
+  padding: 9999px 0px;
 }
 
 .login-dialog-not-listed-label {
