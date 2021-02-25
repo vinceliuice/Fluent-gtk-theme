@@ -12,18 +12,11 @@
 #tabbrowser-tabs arrowscrollbox {
 	height: initial !important;
 	min-height: initial !important;
-	margin: 2px 6px 0 6px;
+	margin: 0 2px !important;
+	padding-top: 2px !important;
 }
 tab > stack {
-	height: 32px !important;
-}
-
-/* Extra margin for the first and last tabs */
-.tabbrowser-tab[first-tab]:not([pinned=true]) {
-	margin-left: 8px !important;
-}
-.tabbrowser-tab[last-tab]:not([pinned=true]) {
-	margin-right: 8px !important;
+	height: 24px !important;
 }
 
 :root[tabsintitlebar][inFullscreen] #TabsToolbar .toolbar-items {
@@ -88,7 +81,7 @@ tab > stack {
 tab {
 	color: var(--gnome-tabbar-tab-color) !important;
 	font-family: Cantarell, inherit;
-	font-weight: bold;
+	font-weight: normal;
 	font-size: 1em;
 }
 
@@ -112,7 +105,7 @@ tab[selected]:-moz-window-inactive {
 	align-items: center;
 	min-width: 100% !important;
 	padding: 0 16px !important;
-	margin-top: 3px;
+	margin-top: 3px !important;
 }
 
 /* Prevent tab icons size breaking */
@@ -229,9 +222,7 @@ tab[selected]:-moz-window-inactive {
 	background-color: var(--gnome-tabbar-tab-background) !important;
 	transition: all 200ms cubic-bezier(0.0, 0.0, 0.2, 1),
 	            background-color 0,
-	            box-shadow 0 !important;
-	/* margin-left: -3px !important; */
-	/* margin-right: -3px !important; */
+	            box-shadow 0 !important; 
 }
 
 /* Active tab */

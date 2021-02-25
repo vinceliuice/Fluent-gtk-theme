@@ -1693,7 +1693,7 @@ menubar,
   .csd & { transition: $transition; }
 
   > menuitem {
-    transition: $transition;
+    transition: background-color $duration $ease-out;
     min-height: 8px + $container-padding * 2;
     padding: ($container-padding - 2px) ($container-padding + 2px);
     color: $titlebar-text-secondary;
@@ -1735,7 +1735,7 @@ menu,
   }
 
   menuitem {
-    transition: background-color $duration $ease-out;
+    transition: none;
     min-height: 8px + $container-padding * 2;
     min-width: 40px;
     padding: ($container-padding - 2px) ($container-padding + 2px);
