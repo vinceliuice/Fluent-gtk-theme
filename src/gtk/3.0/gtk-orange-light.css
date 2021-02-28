@@ -2001,7 +2001,7 @@ menubar:backdrop,
 
 menubar > menuitem,
 .menubar > menuitem {
-  transition: all 75ms cubic-bezier(0, 0, 0.2, 1);
+  transition: background-color 75ms cubic-bezier(0, 0, 0.2, 1);
   min-height: 20px;
   padding: 4px 8px;
   color: rgba(0, 0, 0, 0.6);
@@ -2051,7 +2051,7 @@ menu,
 menu menuitem,
 .menu menuitem,
 .context-menu menuitem {
-  transition: background-color 75ms cubic-bezier(0, 0, 0.2, 1);
+  transition: none;
   min-height: 20px;
   min-width: 40px;
   padding: 4px 8px;
