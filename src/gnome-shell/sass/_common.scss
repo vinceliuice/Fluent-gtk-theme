@@ -2423,8 +2423,9 @@ StWidget.focused .app-well-app-running-dot {
   color: $inverse_hint_fg_color;
 }
 
-/* NOTIFICATIONS & MESSAGE TRAY */
-
+//
+// NOTIFICATIONS & MESSAGE TRAY
+//
 .url-highlighter { link-color: $link_color; }
 
 // Banners
@@ -2594,14 +2595,12 @@ StWidget.focused .app-well-app-running-dot {
 }
 
 // Eeeky things
-
 .magnifier-zoom-region { //magnifier
   border: 2px solid $primary_color;
   &.full-screen { border-width: 0; }
 }
 
 //Keyboard
-
 .word-suggestions { // On-screen Keyboard
   font-size: 14pt;
   spacing: 12px;
@@ -2760,8 +2759,7 @@ $keyboard_active_bg_color: if($variant == 'light', darken($keyboard_bg_color, 20
 .candidate-page-button-next { border-radius: $buttons_radius;  }
 .candidate-page-button-icon { icon-size: 1em; }
 
-/* Auth Dialogs & Screen Shield */
-
+// Auth Dialogs & Screen Shield
 .framed-user-icon {
   background-size: contain;
   border: none;
