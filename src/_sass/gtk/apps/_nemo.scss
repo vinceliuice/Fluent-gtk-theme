@@ -58,11 +58,17 @@
   .nemo-inactive-pane .view:not(:selected) { background-color: $base-alt; }
 
   // Rename box styling in the icon view.
-  .nemo-window-pane widget.entry {
-    border-radius: $corner-radius;
-    background-color: $fill;
+  .nemo-window-pane {
+    widget.entry {
+      border-radius: $corner-radius;
+      background-color: $fill;
 
-    &:selected { @extend %selected_items_primary; }
+      &:selected { @extend %selected_items_primary; }
+    }
+
+    notebook .view {
+      &:selected { @extend %selected_items_color; }
+    }
   }
 
   .toolbar button {

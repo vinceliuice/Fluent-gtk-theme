@@ -2776,7 +2776,6 @@ StWidget.focused .app-well-app-running-dot {
   color: rgba(255, 255, 255, 0.5);
 }
 
-/* NOTIFICATIONS & MESSAGE TRAY */
 .url-highlighter {
   link-color: #616161;
 }
@@ -3248,7 +3247,6 @@ StWidget.focused .app-well-app-running-dot {
   icon-size: 1em;
 }
 
-/* Auth Dialogs & Screen Shield */
 .framed-user-icon {
   background-size: contain;
   border: none;
