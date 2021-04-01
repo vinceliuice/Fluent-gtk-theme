@@ -392,7 +392,7 @@ $slider_color: if($variant == 'light', $accent_color, $accent_color);
   @include font(title);
 }
 
-/* Message Dialog */
+// Message Dialog
 .message-dialog-content {
   spacing: 18px;
 
@@ -409,7 +409,7 @@ $slider_color: if($variant == 'light', $accent_color, $accent_color);
   .message-dialog-description { text-align: center; }
 }
 
-/* End Session Dialog */
+// End Session Dialog
 .end-session-dialog {
   width: 30em;
   border: none;

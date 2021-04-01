@@ -104,9 +104,9 @@ FIXME this is really an API */
 // Budgie-desktop specific indicator colours
 
 // unfocused window 'dot(s)'
-@define-color budgie_tasklist_indicator_color #{"" + white};
+@define-color budgie_tasklist_indicator_color #{"" + $primary};
 // focused window 'line'
-@define-color budgie_tasklist_indicator_color_active #{"" + white};
+@define-color budgie_tasklist_indicator_color_active #{"" + $primary};
 // group-ed and unfocused window 'line(s)'
 @define-color budgie_tasklist_indicator_color_active_window #{"" + mix(white, $panel, 54%)};
 // attention 'dot'

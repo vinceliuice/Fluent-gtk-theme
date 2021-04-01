@@ -19,14 +19,13 @@
 }
 
 .budgie-popover {
-  border-style: solid;
-  border-width: 1px;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.2) rgba(0, 0, 0, 0.3);
+  border: none;
+  border-color: transparent;
   border-radius: $corner-radius + 1px;
   box-shadow: $shadow-z4;
   background-color: $surface;
 
-  .container { padding: 2px; }
+  .container { padding: 0; }
 
   border { border: none; }
 
@@ -55,16 +54,18 @@
     entry.search { background-color: transparent; }
 
     entry.search {
+      border: none;
       border-bottom: 1px solid $divider;
       border-image: none;
       border-radius: 0;
       box-shadow: none;
       font-size: 120%;
+
+      &:focus { box-shadow: none; }
     }
 
     button.flat:not(.image-button):not(.indicator-item) {
       @extend %row_activatable;
-
       min-height: 32px;
       padding: 0 8px;
       border-radius: 0;
@@ -72,6 +73,52 @@
       &:checked { @extend %selected_items; }
 
       &:checked:disabled { background-color: transparent; } // remove pointless indicator
+    }
+  }
+
+  treeview.view.sidebar { //AppMenu (budgie)
+    // min-height: 36px;
+    background: none;
+    border-right: none;
+    color: $text;
+
+    label { padding: 3px 8px; }
+
+    &:hover { background-color: $divider; }
+  }
+
+  scrolledwindow.sidebar:not(.categories) { //AppMenu (Elementary)
+    // min-height: 36px;
+    background: none;
+    border-right: none;
+
+    &, row.activatable {
+      color: $text;
+      padding: $container-padding $container-padding / 2;
+      border-radius: $corner-radius;
+
+      label { padding: $container-padding / 2 $container-padding; }
+
+      &:hover { background-color: $divider; }
+
+      &:active { background-color: $overlay-active; }
+
+      &:selected, &:selected:hover {
+        background-color: $overlay-checked;
+      }
+    }
+  }
+
+  > frame.container > grid.horizontal > grid.horizontal {
+    > widget > grid.horizontal > stack {
+      border-top: 1px solid $divider;
+    }
+  }
+
+  &.bottom > frame.container > grid.horizontal > grid.horizontal {
+    > widget > grid.horizontal > stack {
+      border-top: none;
+      border-bottom: 1px solid $divider;
     }
   }
 
@@ -221,67 +268,29 @@
   }
 }
 
-%panel_circlebutton {
-  padding: 0;
-  margin: 0;
-  min-width: 32px;
-  min-width: 32px;
-  color: on($panel, secondary);
-
-  &, &:hover, &:active, &:checked {
-    background: none;
-    box-shadow: none;
-  }
-
-  image {
-    padding: 0;
-    margin: 0;
-    background-size: 32px 32px;
-    border-radius: 100px;
-    background-image: image(on($panel, divider));
-  }
-
-  &:hover {
-    color: on($panel);
-
-    image {
-      background-image: image(rgba(white, 0.20));
-    }
-  }
-
-  &:active, &:checked {
-    color: on($panel);
-
-    image {
-      background-image: image(rgba(white, 0.28));
-    }
-  }
-}
-
 // Panel
 .budgie-panel {
   transition: background-color $duration $ease-out;
   background-color: $panel;
   color: on($panel, secondary);
   font-weight: 500;
-  padding-left: 10px;
-  padding-right: 10px;
+  // padding-left: 10px;
+  // padding-right: 10px;
 
   &.transparent { background-color: $scrim; }
 
-  @each $pos, $bpos, $p_radius in (top, bottom,  $circular-radius),
-                                  (bottom, top,  $circular-radius),
-                                  (left, right,  $circular-radius),
-                                  (right, left,  $circular-radius) {
-    .#{$pos} &.transparent, .#{$pos} &:not(.dock-mode) {
-      border-radius: $p_radius;
-      margin: 4px 6px;
-      margin-#{$bpos}: 8px;
-    }
-  }
+  // @each $pos, $bpos, $p_radius in (top, bottom,  $window-radius),
+  //                                 (bottom, top,  $window-radius),
+  //                                 (left, right,  $window-radius),
+  //                                 (right, left,  $window-radius) {
+  //   .#{$pos} &.transparent, .#{$pos} &:not(.dock-mode) {
+  //     border-radius: $p_radius;
+  //     margin: 2px 2px;
+  //     margin-#{$bpos}: 0;
+  //   }
+  // }
 
   button {
-    @extend %button-flat;
     @extend %button-on-dark;
     color: on($panel, secondary);
 
@@ -290,16 +299,18 @@
     padding: 0;
     border-radius: 0;
 
+    &:hover, &:active, &:checked, &:checked:hover, &:focus { color: on($panel); }
+
+    &:disabled { color: on($panel, disabled); }
+
     // Menu Button
     &.budgie-menu-launcher {
       // padding: 0 2px;
-      // @extend %panel_circlebutton;
-      @extend %button-flat;
       @extend %button-on-dark;
       color: on($panel, secondary);
-      border-radius: $circular-radius;
+      border-radius: 0;
 
-      &:focus { // Fixed issues when global menubar item is hovering
+      &:not(:active):not(:checked):focus { // Fixed issues when global menubar item is hovering
         background: none;
         box-shadow: none;
         border: none;
@@ -310,7 +321,7 @@
     // Raven Trigger
     &.raven-trigger {
       color: on($panel, secondary);
-      border-radius: $circular-radius;
+      border-radius: 0;
     }
   }
 
@@ -373,6 +384,7 @@
   // Icon Tasklist
   button.flat.launcher {
     padding: 0;
+    color: on($panel, secondary);
 
     // @extend %underscores;
 
@@ -380,7 +392,8 @@
     &:not(:checked) {
       color: on($panel, disabled);
 
-      &:hover, &:active { color: on($panel, secondary); }
+      &:hover, &:active {
+      color: on($panel, secondary); }
 
       &:disabled { color: on($panel, secondary-disabled); }
     }
@@ -412,14 +425,14 @@
     .#{$pos} & {
       & {
         border-image: radial-gradient(circle closest-corner at #{$b_pos},
-                                      currentColor 0%,
+                                      $primary 0%,
                                       transparent 0%)
                                       0 0 0 0 / 0 0 0 0;
       }
 
       &:checked {
         border-image: radial-gradient(circle closest-corner at #{$b_pos},
-                                      currentColor 100%,
+                                      $primary 100%,
                                       transparent 0%)
                                       #{$b_wid};
       }
