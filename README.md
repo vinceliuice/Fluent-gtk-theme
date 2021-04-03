@@ -43,6 +43,12 @@ Run the following commands in the terminal:
 ./install.sh -t purple # install purple accent color version
 ```
 
+### Wallpaper
+[Install Wallpapers](src/wallpaper)
+
+#### Preview
+![01](src/wallpaper/wallpaper-1080p/wallpaper-default-flat.png?raw=true)
+
 ### Firefox theme
 [Install Firefox theme](src/firefox)
 
