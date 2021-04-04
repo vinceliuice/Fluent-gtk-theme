@@ -693,6 +693,27 @@ window.background.csd {
   border-bottom-left-radius: $window-radius;
 }
 
+window.background.csd.unified {
+  headerbar.titlebar.windowhandle {
+    viewswitchertitle > squeezer {
+      margin-top: 0;
+      margin-bottom: 0;
+      background: none;
+
+      > viewswitcher {
+        margin: 0 0;
+        background: none;
+
+        > box.horizontal > button.radio {
+          margin: 0;
+          padding: 0;
+          border-radius: 0;
+        }
+      }
+    }
+  }
+}
+
 
 /***************
  * Gnome Music *
@@ -736,11 +757,6 @@ window.background.csd.unified {
     }
   }
 }
-
-
-// /*************
-//  * Gnome web *
-//  *************/
 
 
 /*************
@@ -1576,41 +1592,6 @@ window#GearyMainWindow.background.csd {
 
     .geary-composer-box {
       actionbar > revealer > box { border-bottom-left-radius: 0; }
-    }
-  }
-}
-
-window.background.csd.unified {
-  squeezer {
-    min-height: 0;
-    padding: 0 0;
-    margin: $container-padding 0;
-    border-radius: $corner-radius;
-    background-color: $overlay-normal;
-    color: on($titlebar);
-
-    viewswitcher { margin: 0 0; }
-
-    button {
-      margin: 0 0;
-      border-radius: $corner-radius;
-      background-color: transparent;
-
-      &:focus { box-shadow: inset 0 0 0 2px $overlay-focus; }
-
-      &:active {
-        box-shadow: inset 0 0 0 9999px gtkalpha($primary, 0.08);
-        background-image: radial-gradient(circle, gtkalpha($primary, 0.08) 10%, transparent 0%);
-      }
-
-      &:checked {
-        background-color: $primary;
-        color: on($primary);
-
-        &:backdrop {
-          @include button(checked-disabled);
-        }
-      }
     }
   }
 }

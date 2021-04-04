@@ -1515,9 +1515,12 @@ headerbar {
   &.windowhandle {
     > viewswitcher > box > button:not(.titlebutton):not(.suggested-action):not(.destructive-action) {
       border-radius: 0;
-      min-height: 0;
       margin-top: 0;
       margin-bottom: 0;
+    }
+
+    > button.popup {
+      label, image { min-height: 0; }
     }
   }
 }

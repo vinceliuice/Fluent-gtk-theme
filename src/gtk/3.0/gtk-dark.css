@@ -1801,9 +1801,12 @@ headerbar .entry-tag {
 
 headerbar.windowhandle > viewswitcher > box > button:not(.titlebutton):not(.suggested-action):not(.destructive-action) {
   border-radius: 0;
-  min-height: 0;
   margin-top: 0;
   margin-bottom: 0;
+}
+
+headerbar.windowhandle > button.popup label, headerbar.windowhandle > button.popup image {
+  min-height: 0;
 }
 
 /************
@@ -4877,6 +4880,23 @@ window.background.csd scrolledwindow.contacts-contact-form {
   border-bottom-left-radius: 3px;
 }
 
+window.background.csd.unified headerbar.titlebar.windowhandle viewswitchertitle > squeezer {
+  margin-top: 0;
+  margin-bottom: 0;
+  background: none;
+}
+
+window.background.csd.unified headerbar.titlebar.windowhandle viewswitchertitle > squeezer > viewswitcher {
+  margin: 0 0;
+  background: none;
+}
+
+window.background.csd.unified headerbar.titlebar.windowhandle viewswitchertitle > squeezer > viewswitcher > box.horizontal > button.radio {
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+}
+
 /***************
  * Gnome Music *
  ***************/
@@ -5650,47 +5670,6 @@ window#GearyMainWindow.background.csd stack#conversation_viewer .geary-expanded 
 window.background.csd.geary-main-window stack#conversation_viewer .geary-composer-box actionbar > revealer > box,
 window#GearyMainWindow.background.csd stack#conversation_viewer .geary-composer-box actionbar > revealer > box {
   border-bottom-left-radius: 0;
-}
-
-window.background.csd.unified squeezer {
-  min-height: 0;
-  padding: 0 0;
-  margin: 6px 0;
-  border-radius: 2px;
-  background-color: alpha(currentColor, 0.05);
-  color: white;
-}
-
-window.background.csd.unified squeezer viewswitcher {
-  margin: 0 0;
-}
-
-window.background.csd.unified squeezer button {
-  margin: 0 0;
-  border-radius: 2px;
-  background-color: transparent;
-}
-
-window.background.csd.unified squeezer button:focus {
-  box-shadow: inset 0 0 0 2px alpha(currentColor, 0.08);
-}
-
-window.background.csd.unified squeezer button:active {
-  box-shadow: inset 0 0 0 9999px alpha(#0078D4, 0.08);
-  background-image: radial-gradient(circle, alpha(#0078D4, 0.08) 10%, transparent 0%);
-}
-
-window.background.csd.unified squeezer button:checked {
-  background-color: #0078D4;
-  color: white;
-}
-
-window.background.csd.unified squeezer button:checked:backdrop {
-  box-shadow: none;
-  background-color: rgba(0, 120, 212, 0.35);
-  border-color: rgba(0, 120, 212, 0.35);
-  background-clip: padding-box;
-  color: rgba(255, 255, 255, 0.5);
 }
 
 .geary-accounts-editor-pane frame:not(.geary-signature) > border,
