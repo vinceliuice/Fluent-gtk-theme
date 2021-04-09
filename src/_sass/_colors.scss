@@ -100,7 +100,7 @@ $suggested:                             $primary;
 $destructive:                           $error;
 
 $frame:                                 if($variant == 'light', rgba(black, 0.08), rgba(black, 0.16)); // instead of shadows
-$solid-border:                          if($variant == 'light', darken($background, 10%), transparent);
+$solid-border:                          if($variant == 'light', darken($background, 10%), lighten($background, 10%));
 $border-alt:                            rgba(black, 0.16); // darker border color for Chrome and Firefox
 $titlebar-indicator:                    if($topbar == 'dark', currentColor, $primary);
 

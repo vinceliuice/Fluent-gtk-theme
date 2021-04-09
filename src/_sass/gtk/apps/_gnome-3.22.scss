@@ -759,6 +759,32 @@ window.background.csd.unified {
 }
 
 
+/************************
+ * Epiphany (Gnome Web) *
+ ************************/
+
+tabbox { // Gnome 40.0
+  background-color: $background;
+  box-shadow: inset 0 -1px $divider;
+  padding: ($container-padding / 2) ($container-padding / 2) 0;
+
+  > tab {
+    @extend %tabs_tab;
+    border-radius: $tab-radius $tab-radius 0 0;
+    border-bottom: none;
+
+    // close button
+    button {
+      min-height: 16px;
+      min-width: 16px;
+      border-radius: $corner-radius;
+      border: none;
+      padding: 0;
+      @extend %button-flat-simple;
+    }
+  }
+}
+
 /*************
  * Rhythmbox *
  *************/

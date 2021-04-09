@@ -517,7 +517,6 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   font-weight: 500;
 }
 
-/* Message Dialog */
 .message-dialog-content {
   spacing: 18px;
 }
@@ -537,7 +536,6 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   text-align: center;
 }
 
-/* End Session Dialog */
 .end-session-dialog {
   width: 30em;
   border: none;

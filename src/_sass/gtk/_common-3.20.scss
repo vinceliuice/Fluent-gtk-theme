@@ -1893,6 +1893,43 @@ popover.background {
 
 $tab-radius: 2px;
 
+%tabs_tab {
+  transition: $transition,
+              background-size 0ms,
+              background-image 0ms;
+  min-height: $small-size;
+  min-width: $small-size;
+  padding: ($container-padding / 2) 12px;
+  border-width: 1px;
+  border-color: transparent;
+  border-style: solid;
+  outline: none;
+  background-clip: padding-box;
+  color: $text-secondary;
+  font-weight: 500;
+
+  &:hover {
+    background-color: if($variant == 'light', $divider, $fill);
+    color: $text;
+  }
+
+  &:disabled { color: $text-secondary-disabled; }
+
+  &:checked {
+    transition: $transition;
+    background-color: $base;
+    background-clip: padding-box;
+    border-color: $solid-border;
+    color: $text;
+
+    &:disabled { color: $text-disabled; }
+
+    &.reorderable-page {
+      background-color: $base;
+    }
+  }
+}
+
 notebook {
   frame > paned > & > header,
   &.frame > header { background-color: $base-alt; }
@@ -2046,40 +2083,7 @@ notebook {
     }
 
     tab {
-      transition: $transition,
-                  background-size 0ms,
-                  background-image 0ms;
-      min-height: $small-size;
-      min-width: $small-size;
-      padding: ($container-padding / 2) 12px;
-      border-width: 1px;
-      border-color: transparent;
-      border-style: solid;
-      outline: none;
-      background-clip: padding-box;
-      color: $text-secondary;
-      font-weight: 500;
-
-      &:hover {
-        background-color: if($variant == 'light', $divider, $fill);
-        color: $text;
-      }
-
-      &:disabled { color: $text-secondary-disabled; }
-
-      &:checked {
-        transition: $transition;
-        background-color: $base;
-        background-clip: padding-box;
-        border-color: $divider;
-        color: $text;
-
-        &:disabled { color: $text-disabled; }
-
-        &.reorderable-page {
-          background-color: $base;
-        }
-      }
+      @extend %tabs_tab;
 
       // FIXME: The tab node doesn't have :drop(active), instead its child box has it.
       > box {
@@ -2950,7 +2954,9 @@ separator {
 %hide_separators {
   min-width: 0;
   min-height: 0;
-  background-color: transparent;
+  // background-color: transparent;
+  background: none;
+  border: none;
 }
 
 
