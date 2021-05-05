@@ -130,22 +130,6 @@ tab[selected]:-moz-window-inactive {
 	margin-right: 6px;
 }
 
-/* Force tab favicon to the center */
-.tab-throbber, .tab-throbber-fallback {
-	margin-left: auto;
-}
-.tabbrowser-tab:not([busy]) .tab-icon-image {
-	margin-left: auto;
-}
-
-/* If tab favicon is not present, force tab label to the center */
-.tabbrowser-tab .tab-label-container {
-	margin-left: 0 !important;
-}
-.tabbrowser-tab:not([image]):not([busy]):not([progress]) .tab-label-container {
-	margin-left: auto !important;
-}
-
 /* If tab close button is not present, don't force favicon to the center */
 #tabbrowser-tabs[closebuttons="activetab"] .tabbrowser-tab:not([selected="true"]) .tab-throbber,
 #tabbrowser-tabs[closebuttons="activetab"] .tabbrowser-tab:not([selected="true"]) .tab-throbber-fallback,
@@ -162,6 +146,12 @@ tab[selected]:-moz-window-inactive {
 /* Close tab button */
 :root {
 	--gnome-fill-icon: red !important;
+}
+
+.close-icon {
+	height: 16px !important;
+	padding: 0 !important;
+	width: 16px !important;
 }
 
 .tab-close-button {

@@ -1,0 +1,186 @@
+/* Popovers/Menus */
+
+$popover_arrow_height: 12px;
+
+//.the popover itself
+.popup-menu-boxpointer {
+  -arrow-border-radius: 3px;
+  -arrow-background-color: transparent;
+  -arrow-border-width: 0;
+  -arrow-border-color: transparent;
+  -arrow-base: 64px;
+  -arrow-rise: 6px;
+  -arrow-box-shadow: none; //dreaming. bug #689995
+  margin: 0;
+  background-image: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+// container of the popover menu
+.popup-menu {
+  min-width: 15em;
+  color: $fg_color;
+
+  //.popup-status-menu-item { font-weight: normal;  color: pink; } //dunno what that is
+  &.panel-menu {
+    -boxpointer-gap: $container_margin; // distance from the panel
+    margin-bottom: 1.75em;
+  }
+}
+
+.popup-menu-content {
+  padding: $container_padding 0;
+  margin: 0 2px 0 8px;
+  background-color: $menu_bg_color;
+  border-radius: $buttons_radius;
+  box-shadow: $shadow_3;
+}
+
+// menu items
+.popup-menu-item {
+  spacing: $container_padding;
+  padding: $container_padding;
+  margin: 0 $container_padding;
+  color: $fg_color;
+  transition-duration: $shorter_duration;
+  border-radius: $buttons_radius;
+  background-image: none;
+
+  &:ltr { padding-right:1.5em; padding-left: 0; }
+  &:rtl { padding-right: 0; padding-left:1.5em; }
+
+  &:checked {
+    background-color: $primary_color;
+    font-weight: normal;
+    border-radius: $buttons_radius $buttons_radius 0 0;
+    border: none;
+    box-shadow: none;
+    color: $inverse_fg_color;
+
+    &.selected {
+      background-color: lighten($primary_color, 5%);
+      color: $inverse_fg_color;
+    }
+
+    &:active, &.selected:active {
+      background-color: darken($primary_color, 5%);
+      color: $inverse_fg_color;
+    }
+
+    &:insensitive { color: $inverse_disabled_fg_color; }
+  }
+
+  &.selected {
+    background-color: $divider_color;
+    color: $fg_color;
+    transition-duration: 0ms;
+  }
+
+  &:active {
+    background-color: $track_color;
+    color: $fg_color;
+    transition-duration: $longer_duration;
+  }
+
+  &.selected:active { color: $fg_color; }
+  &:insensitive { color: $disabled_fg_color; }
+}
+
+// all icons and other graphical elements
+.popup-inactive-menu-item {
+  color: $fg_color;
+
+  &:insensitive { color: $hint_fg_color; }
+}
+
+// symbolic icons in popover
+.popup-menu-arrow,
+.popup-menu-icon { icon-size: 16px; }
+
+// popover submenus
+.popup-sub-menu {
+  margin: 0 $container_padding;
+  background-color: if($variant == 'light', rgba(black, 0.05), rgba(white, 0.05));
+  border-radius: 0 0 $buttons_radius $buttons_radius;
+  border: none;
+  box-shadow: none;
+  background-image: none;
+
+  .popup-menu-item {
+    margin: 0;
+    border-radius: $buttons_radius;
+    background-image: none;
+
+    &:hover {
+      background-color: $divider_color;
+    }
+
+    &:active {
+      background-color: $track_color;
+    }
+
+    &:not(:first-child):last-child {
+      border-radius: 0 0 $buttons_radius $buttons_radius;
+    }
+  }
+}
+
+// container for radio and check boxes
+.popup-menu-ornament {
+  width: 1.2em;
+
+  &:ltr { text-align: right };
+  &:rtl { text-align: left };
+}
+
+// separator
+.popup-separator-menu-item {
+  background: none;
+  border: none;
+  padding: 0 0;
+  margin: 0 0;
+  height: $container_padding - 2px;
+
+  .popup-separator-menu-item-separator {
+    //-margin-horizontal: 24px;
+    height: 1px; //not really the whole box
+    margin: 0 0;
+    padding: 0 0;
+    background: none;
+
+    .popup-sub-menu & { //submenu separators
+      margin: 0 0;
+      padding: 0 0;
+      background: none;
+    }
+  }
+}
+
+// desktop background menu
+.background-menu {
+  -boxpointer-gap: $container_margin;
+  -arrow-rise: 0px; // hide the beak on the menu
+}
+
+// system status menu
+.aggregate-menu {
+  min-width: if($laptop == 'true', 19em, 21em);
+
+  .popup-menu-icon {
+    padding: 0;
+    margin: 0;
+    -st-icon-style: symbolic;
+
+    &:ltr { margin-right: $container_margin; }
+  }
+
+  .popup-sub-menu .popup-menu-item > :first-child {
+    &:ltr { /* 12px spacing + 2*4px padding */
+      padding-left: $container_padding * 2; margin-left: 1em;
+    }
+    &:rtl { /* 12px spacing + 2*4px padding */
+      padding-right: $container_padding * 2; margin-right: 1em;
+    }
+  }
+}

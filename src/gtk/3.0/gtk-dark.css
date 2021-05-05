@@ -7294,12 +7294,11 @@ calendar.raven-calendar:selected {
 }
 
 .budgie-run-dialog, .budgie-polkit-dialog, .budgie-session-dialog {
-  border-radius: 3px;
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
   background-color: #3C3C3C;
 }
 
-.budgie-run-dialog decoration, .budgie-polkit-dialog decoration, .budgie-session-dialog decoration {
+.background.csd.budgie-run-dialog, .background.csd.budgie-polkit-dialog, .background.csd.budgie-session-dialog {
   border-radius: 3px;
 }
 

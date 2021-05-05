@@ -8,14 +8,25 @@
 }
 
 @function theme($color) {
-  @if ($theme == 'default') { @return #3476CF; }
-  @if ($theme == 'purple') { @return $purple-400; }
-  @if ($theme == 'pink') { @return $pink-400; }
-  @if ($theme == 'red') { @return $red-600; }
-  @if ($theme == 'orange') { @return $orange-700; }
-  @if ($theme == 'yellow') { @return $yellow-700; }
-  @if ($theme == 'green') { @return $green-500; }
-  @if ($theme == 'grey') { @return $grey-700; }
+  @if ($variant == 'light') {
+    @if ($theme == 'default') { @return #1A73E8; }
+    @if ($theme == 'purple') { @return $purple-400; }
+    @if ($theme == 'pink') { @return $pink-400; }
+    @if ($theme == 'red') { @return $red-600; }
+    @if ($theme == 'orange') { @return $orange-700; }
+    @if ($theme == 'yellow') { @return $yellow-700; }
+    @if ($theme == 'green') { @return $green-500; }
+    @if ($theme == 'grey') { @return $grey-700; }
+  } @else {
+    @if ($theme == 'default') { @return #3281ea; }
+    @if ($theme == 'purple') { @return $purple-300; }
+    @if ($theme == 'pink') { @return $pink-300; }
+    @if ($theme == 'red') { @return $red-500; }
+    @if ($theme == 'orange') { @return $orange-600; }
+    @if ($theme == 'yellow') { @return $yellow-a700; }
+    @if ($theme == 'green') { @return $green-400; }
+    @if ($theme == 'grey') { @return $grey-600; }
+  }
 }
 
 // Foreground colors
@@ -23,22 +34,22 @@ $dark_fg_color:   rgba($black, 0.87);
 $light_fg_color:  $white;
 $button_fg_color: if($variant == 'light', rgba($black, 0.62), rgba($white, 0.8)); // extra fg color for raised buttons
 
-$fg_color:                    if($variant == 'light', rgba($black, 0.86), rgba($white, 0.86));
-$secondary_fg_color:          if($variant == 'light', rgba($black, 0.54), rgba($white, 0.54));
-$hint_fg_color:               if($variant == 'light', rgba($black, 0.38), rgba($white, 0.38));
-$disabled_fg_color:           if($variant == 'light', rgba($black, 0.35), rgba($white, 0.35));
-$disabled_secondary_fg_color: if($variant == 'light', rgba($black, 0.26), rgba($white, 0.26));
-$track_color:                 if($variant == 'light', rgba($black, 0.26), rgba($white, 0.26));
-$visit_color:                 if($variant == 'light', rgba($black, 0.15), rgba($white, 0.15));
-$divider_color:               if($variant == 'light', rgba($black, 0.12), rgba($white, 0.12));
+$fg_color:                    if($variant == 'light', rgba($black, 0.87), rgba($white, 0.9));
+$secondary_fg_color:          if($variant == 'light', rgba($black, 0.54), rgba($white, 0.7));
+$hint_fg_color:               if($variant == 'light', rgba($black, 0.38), rgba($white, 0.5));
+$disabled_fg_color:           if($variant == 'light', rgba($black, 0.38), rgba($white, 0.5));
+$disabled_secondary_fg_color: if($variant == 'light', rgba($black, 0.26), rgba($white, 0.3));
+$track_color:                 if($variant == 'light', rgba($black, 0.2), rgba($white, 0.1));
+$visit_color:                 if($variant == 'light', rgba($black, 0.16), rgba($white, 0.08));
+$divider_color:               if($variant == 'light', rgba($black, 0.12), rgba($white, 0.06));
 
-$titlebar_fg_color:                    if($panel == 'light', rgba($black, 0.87), rgba($white, 0.87));
-$titlebar_secondary_fg_color:          if($panel == 'light', rgba($black, 0.54), rgba($white, 0.54));
-$titlebar_hint_fg_color:               if($panel == 'light', rgba($black, 0.38), rgba($white, 0.38));
-$titlebar_disabled_fg_color:           if($panel == 'light', rgba($black, 0.35), rgba($white, 0.35));
-$titlebar_disabled_secondary_fg_color: if($panel == 'light', rgba($black, 0.26), rgba($white, 0.26));
-$titlebar_track_color:                 if($panel == 'light', rgba($black, 0.26), rgba($white, 0.26));
-$titlebar_divider_color:               if($panel == 'light', rgba($black, 0.12), rgba($white, 0.12));
+$titlebar_fg_color:                    if($panel == 'light', rgba($black, 0.87), $white);
+$titlebar_secondary_fg_color:          if($panel == 'light', rgba($black, 0.54), rgba($white, 0.7));
+$titlebar_hint_fg_color:               if($panel == 'light', rgba($black, 0.38), rgba($white, 0.5));
+$titlebar_disabled_fg_color:           if($panel == 'light', rgba($black, 0.38), rgba($white, 0.5));
+$titlebar_disabled_secondary_fg_color: if($panel == 'light', rgba($black, 0.26), rgba($white, 0.3));
+$titlebar_track_color:                 if($panel == 'light', rgba($black, 0.26), rgba($white, 0.1));
+$titlebar_divider_color:               if($panel == 'light', rgba($black, 0.12), rgba($white, 0.06));
 
 $inverse_fg_color:                    rgba($white, 0.85);
 $inverse_secondary_fg_color:          rgba($white, 0.7);
@@ -52,8 +63,8 @@ $inverse_divider_color:               rgba($white, 0.15);
 $base_color:     if($variant =='dark', #202020, #ffffff);
 $alt_base_color: if($variant =='dark', lighten($base_color, 25%), darken($base_color, 25%));
 
-$bg_color:         rgba($black, $middle_opacity);
-$alt_bg_color:     rgba($black, $lower_opacity);
+$dark_bg_color:         rgba(#202020, 0.9);
+$alt_dark_bg_color:     rgba(#202020, 0.75);
 $inverse_bg_color: rgba($inverse_fg_color, 0.13);
 $button_bg_color:  if($variant == 'light', rgba(black, 0.1), rgba(white, 0.1));
 $keyboard_bg_color:  if($variant == 'light', $grey_50, fade($grey_700)); // for gnome-shell keyboard
@@ -65,9 +76,11 @@ $primary_color: theme(color);
 $alt_primary_color: darken($primary_color, 3%);
 $accent_color: lighten($primary_color, 3%);
 
-$panel_bg_color: if($trans == 'true', rgba($black, 0.5), #202020);
+$panel_bg: if($variant == 'light', #000000, #000000);
+$panel_bg_color: if($trans == 'true', rgba($panel_bg, 0.5), $panel_bg);
 $panel_fg_color: if($panel == 'dark', #dedede, #dedede);
-$menu_bg_color: if($trans == 'true', rgba($base_color, 0.97), $base_color);
+$menu_bg_color: if($trans == 'true', rgba($base_color, 0.95), $base_color);
+$system_bg_color: #222222;
 
 $link_color:         $primary_color;
 $visited_link_color: if($variant == 'light', $purple-500, $purple-200);
