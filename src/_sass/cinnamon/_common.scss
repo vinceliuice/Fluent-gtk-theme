@@ -5,8 +5,6 @@
 
 $asset_path: assets;
 $font-size: 9;
-$panel_bg: rgba(#222, 0.75);
-$panel_fg: on(#222, secondary);
 
 stage {
   @include fontsize($font-size);
@@ -74,7 +72,7 @@ stage {
   selection-background-color: $primary;
   selected-color: on($primary);
   transition-duration: 300ms;
-  border-radius: $circular-radius;
+  border-radius: $corner-radius;
   @include entry(normal);
 
   &:focus, &:hover { @include entry(focus); }
@@ -90,7 +88,7 @@ stage {
 %osd_entry {
   padding: $container-padding/2 $container-padding*2;
   caret-size: 1px;
-  caret-color: on($os-background);
+  caret-color: on($tooltip);
   selection-background-color: $primary;
   selected-color: on($primary);
   transition-duration: 300ms;
@@ -256,8 +254,8 @@ StScrollBar {
 #Tooltip {
   border-radius: $corner-radius;
   padding: 5px 12px;
-  background-color: $os-background;
-  color: on($os-background);
+  background-color: $tooltip;
+  color: on($tooltip);
   font-size: 1em;
   font-weight: normal;
   text-align: center;
@@ -268,13 +266,13 @@ StScrollBar {
 //
 
 $menu_bg: if($variant=='light', rgba($base, 0.95), rgba($background, 0.95));
-$sub_menu_bg: if($variant == 'light', #555555, #eaeaea);
-$menu_item_radius: $window-radius - $container-padding;
+$sub_menu_bg: if($variant == 'light', rgba(black, 0.05), rgba(white, 0.05));
+$menu_item_radius: $corner-radius;
 
 .menu,
 .popup-menu,
 %menu {
-  padding: $container-padding / 2;
+  padding: 0;
   color: $text;
   background-color: $menu_bg;
   border-radius: $window-radius;
@@ -288,11 +286,11 @@ $menu_item_radius: $window-radius - $container-padding;
     background-gradient-direction: none;
     box-shadow: none;
     background-color: $sub_menu_bg;
-    color: on($sub_menu_bg, secondary);
+    color: on($menu_bg, secondary);
 
     .popup-menu-item:active {
-      background-color: on($sub_menu_bg, divider);
-      color: on($sub_menu_bg);
+      background-color: on($menu_bg, divider);
+      color: on($menu_bg);
     }
 
     StScrollBar {
@@ -436,10 +434,10 @@ $menu_item_radius: $window-radius - $container-padding;
 
 .panel {
   &-top, &-bottom, &-left, &-right {
-    color: $panel_fg;
+    color: on($panel);
     font-size: 1em;
     padding: 0px;
-    background-color: $panel_bg;
+    background-color: $panel;
     box-shadow: 0 0 5px rgba(#000, 0.5), 0 0 16px rgba(#000, 0.24);
 
     .panel-button,
@@ -468,7 +466,7 @@ $menu_item_radius: $window-radius - $container-padding;
     -minimum-hpadding: 3px;
     font-weight: bold;
     height: 22px;
-    color: $panel_fg;
+    color: on($panel);
   }
 
   &-button {
@@ -476,7 +474,7 @@ $menu_item_radius: $window-radius - $container-padding;
     -minimum-hpadding: 2px;
     font-weight: bold;
     transition-duration: 100ms;
-    color: $panel_fg;
+    color: on($panel);
   }
 }
 
@@ -491,9 +489,9 @@ $menu_item_radius: $window-radius - $container-padding;
 #overview { spacing: 12px; }
 
 .window-caption {
-  background-color: $os-background;
-  border: 1px solid $os-background;
-  color: on($os-background);
+  background-color: $tooltip;
+  border: 1px solid $tooltip;
+  color: on($tooltip);
   spacing: 25px;
   border-radius: $corner-radius;
   font-size: 9pt;
@@ -541,7 +539,7 @@ $menu_item_radius: $window-radius - $container-padding;
 }
 
 .expo-background {
-  background-color: opacify($os-background, 1);
+  background-color: opacify($tooltip, 1);
 }
 
 .workspace {
@@ -903,11 +901,11 @@ $menu_item_radius: $window-radius - $container-padding;
 
 .switcher-arrow {
   border-color: rgba(0,0,0,0);
-  color: on($os-background);
+  color: on($tooltip);
 
   &:highlighted {
     border-color: rgba(0,0,0,0);
-    color: $panel_fg;
+    color: on($panel);
   }
 }
 
@@ -946,8 +944,8 @@ $menu_item_radius: $window-radius - $container-padding;
 .flashspot { background-color: white; }
 
 .modal-dialog {
-  color: on($os-background);
-  background-color: rgba(darken($os-background, 3%), 0.95);
+  color: on($tooltip);
+  background-color: rgba(darken($tooltip, 3%), 0.95);
   border: 1px solid rgba(black, 0.65);
   padding: 0 5px 6px 5px;
   border-radius: $corner-radius;
@@ -979,16 +977,16 @@ $menu_item_radius: $window-radius - $container-padding;
 //
 .run-dialog {
   padding: $container-padding $container-padding*2;
-  background-color: $os-background;
+  background-color: $tooltip;
   border-radius: $corner-radius;
-  color: on($os-background);
+  color: on($tooltip);
 
   > * { padding: 0; }
 
   &-label {
     font-size: 0;
     font-weight: bold;
-    color: on($os-background);
+    color: on($tooltip);
     padding-bottom: 0;
   }
 
@@ -1008,7 +1006,7 @@ $menu_item_radius: $window-radius - $container-padding;
     width: 21em;
     padding: $container-padding/2 $container-padding*2;
     border-radius: $corner-radius;
-    caret-color: on($os-background);
+    caret-color: on($tooltip);
     selected-color: on($primary);
     selection-background-color: $primary;
     @include entry(osd);
@@ -1094,7 +1092,7 @@ $menu_item_radius: $window-radius - $container-padding;
 // On-Screen Keyboard
 //
 #keyboard {
-  background-color: $os-background;
+  background-color: $tooltip;
   border-width: 0;
   border-top-width: 1px;
   border-color: transparentize(black, 0.6);
@@ -1126,10 +1124,10 @@ $menu_item_radius: $window-radius - $container-padding;
 }
 
 .keyboard-subkeys { //long press on a key popup
-  color: on($os-background);
+  color: on($tooltip);
   padding: 5px;
   -arrow-border-radius: $corner-radius;
-  -arrow-background-color: $os-background;
+  -arrow-background-color: $tooltip;
   -arrow-border-width: 1px;
   -arrow-border-color: transparentize(black, 0.6);;
   -arrow-base: 20px;
@@ -1205,22 +1203,22 @@ $menu_item_radius: $window-radius - $container-padding;
     padding: $container-padding/2 0;
     border-radius: $corner-radius;
     background-color: $sub_menu_bg;
-    color: on($sub_menu_bg);
+    color: $text-secondary;
 
     .popup-menu-item {
       padding: 0;
       spacing: 0;
       margin: 0 $container-padding/2;
       border-radius: $corner-radius;
-      color: on($sub_menu_bg);
+      color: $text-secondary;
 
       &:ltr { padding-left: $container-padding; }
       &:rtl { padding-right: $container-padding; }
 
       &:active {
         border-image: none; // image independent
-        background-color: on($sub_menu_bg, divider);
-        color: on($sub_menu_bg);
+        background-color: on($menu_bg, divider);
+        color: $text;
       }
 
       StIcon { min-width: 22px; } // indentation
@@ -1301,8 +1299,8 @@ $menu_item_radius: $window-radius - $container-padding;
   font-weight: bold;
   spacing: 1em;
   padding: 16px;
-  color: $panel_fg;
-  background-color: $panel_bg;
+  color: on($panel);
+  background-color: $panel;
 }
 
 .osd-window {
@@ -1312,9 +1310,9 @@ $menu_item_radius: $window-radius - $container-padding;
   padding: 20px;
   min-width: 64px;
   min-height: 64px;
-  color: $panel_fg;
+  color: on($panel);
   border-radius: 0;
-  background-color: $panel_bg;
+  background-color: $panel;
   border: none;
 
   .osd-monitor-label { font-size: 3em; }
@@ -1368,7 +1366,7 @@ $menu_item_radius: $window-radius - $container-padding;
     font-weight: normal;
     background-image: none;
     transition-duration: 100ms;
-    color: rgba($panel_fg, 0.9);
+    color: rgba(on($panel), 0.9);
     border-radius: 0;
 
     .panel-bottom & StLabel { padding-left: $container-padding; }
@@ -1387,33 +1385,33 @@ $menu_item_radius: $window-radius - $container-padding;
     }
 
     &:hover {
-      color: $panel_fg;
+      color: on($panel);
       background-gradient-direction: none;
-      background-color: rgba($panel_fg, 0.15);
+      background-color: rgba(on($panel), 0.15);
     }
 
     &:active,
     &:checked,
     &:running {
-      color: $panel_fg;
+      color: on($panel);
       background-gradient-direction: none;
-      background-color: rgba($panel_fg, 0.25);
-      border-color: on($panel_bg, track);
+      background-color: rgba(on($panel), 0.25);
+      border-color: on($panel, track);
 
       &:hover {
-        background-color: rgba($panel_fg, 0.3);
+        background-color: rgba(on($panel), 0.3);
       }
     }
 
     &:focus {
-      color: $panel_fg;
+      color: on($panel);
       background-gradient-direction: none;
-      background-image: radial-gradient(5px 5px 45deg, circle cover, $panel_fg 0%, $panel_fg 100%);
+      background-image: radial-gradient(5px 5px 45deg, circle cover, on($panel) 0%, on($panel) 100%);
       border-color: $primary;
-      background-color: rgba($panel_fg, 0.2);
+      background-color: rgba(on($panel), 0.2);
 
       &:hover {
-        background-color: rgba($panel_fg, 0.3);
+        background-color: rgba(on($panel), 0.3);
       }
 
       @each $position in (top),
@@ -1519,7 +1517,7 @@ $menu_item_radius: $window-radius - $container-padding;
     transition-duration: 100ms;
     border: none;
     margin: 0;
-    color: rgba($panel_fg, 0.6);
+    color: rgba(on($panel), 0.6);
     border-radius: 0;
     spacing: $container-padding;
     border-bottom: 2px solid transparent;
@@ -1529,30 +1527,30 @@ $menu_item_radius: $window-radius - $container-padding;
     }
 
     &:hover {
-      color: $panel_fg;
+      color: on($panel);
       background-gradient-direction: none;
-      background-color: rgba($panel_fg, 0.15);
+      background-color: rgba(on($panel), 0.15);
     }
 
     &:active {
-      color: $panel_fg;
+      color: on($panel);
       background-gradient-direction: none;
       background-color: transparent;
-      border-color: on($panel_bg, track);
+      border-color: on($panel, track);
 
       &:hover {
-        background-color: rgba($panel_fg, 0.15);
+        background-color: rgba(on($panel), 0.15);
       }
     }
 
     &:focus {
-      color: $panel_fg;
+      color: on($panel);
       background-gradient-direction: none;
-      background-color: rgba($panel_fg, 0.2);
+      background-color: rgba(on($panel), 0.2);
       border-color: $primary;
 
       &:hover {
-        background-color: rgba($panel_fg, 0.3);
+        background-color: rgba(on($panel), 0.3);
       }
     }
 
@@ -1637,7 +1635,7 @@ $menu_item_radius: $window-radius - $container-padding;
   margin-top: 6px;
   border-radius: $corner-radius;
   background-color: $sub_menu_bg;
-  color: on($sub_menu_bg);
+  color: $text;
 
   > StBoxLayout:first-child {
     padding: 5px 10px 10px 10px;
@@ -1648,8 +1646,8 @@ $menu_item_radius: $window-radius - $container-padding;
       height: 24px;
       border-radius: $circular-radius;
 
-      &:hover { background-color: on($sub_menu_bg, divider); }
-      &:active { background-color: on($sub_menu_bg, track); }
+      &:hover { background-color: on($menu_bg, divider); }
+      &:active { background-color: on($menu_bg, track); }
 
       StIcon { icon-size: 16px; }
     }
@@ -1664,27 +1662,27 @@ $menu_item_radius: $window-radius - $container-padding;
     height: 80px;
     padding: $container-padding*2 $container-padding*3;
     spacing: $container-padding;
-    background-color: on($sub_menu_bg, track);
+    background-color: on($menu_bg, track);
     border: none;
     border-radius: 0 0 $corner-radius $corner-radius;
-    color: on($sub_menu_bg);
+    color: on($menu_bg);
 
     StButton {
       width: 16px;
       height: 16px;
       padding: 8px;
       margin: 0 $container-padding $container-padding;
-      color: on($sub_menu_bg);
+      color: on($menu_bg);
       border-radius: $circular-radius;
       border: none;
 
       StIcon { icon-size: 16px; }
 
-      &:hover { background-color: rgba(on($os-background), 0.1); }
-      &:active { background-color: rgba(on($os-background), 0.25); }
+      &:hover { background-color: rgba(on($tooltip), 0.1); }
+      &:active { background-color: rgba(on($tooltip), 0.25); }
       &:insensitive {
         opacty: 0.35;
-        color: rgba(on($os-background), 0.35);
+        color: rgba(on($tooltip), 0.35);
       }
     }
 
@@ -1698,7 +1696,7 @@ $menu_item_radius: $window-radius - $container-padding;
   .slider {
     height: 0.5em;
     padding: 0;
-    border: 0px solid darken($os-background, 8%);
+    border: 0px solid darken($tooltip, 8%);
     border-bottom: 1px;
     -slider-height: 0.5em;
     -slider-background-color: if($variant == 'light', $divider, darken($background, 5%));
@@ -1727,7 +1725,7 @@ $menu_item_radius: $window-radius - $container-padding;
 .workspace-button {
   width: 20px;
   height: 10px;
-  color: $panel_fg;
+  color: on($panel);
   padding: 3px;
   padding-top: 4px;
   transition-duration: 300;
@@ -1754,16 +1752,16 @@ $menu_item_radius: $window-radius - $container-padding;
 }
 
 .workspace-graph .workspace .windows {
-  -active-window-background: lighten($panel_bg, 15%);
+  -active-window-background: lighten($panel, 15%);
   -active-window-border: rgba(0, 0, 0, 0.8);
-  -inactive-window-background: lighten($panel_bg, 15%);
+  -inactive-window-background: lighten($panel, 15%);
   -inactive-window-border: rgba(0, 0, 0, 0.8);
 }
 
 .workspace-graph .workspace:active .windows {
-  -active-window-background: lighten($panel_bg, 20%);
+  -active-window-background: lighten($panel, 20%);
   -active-window-border: rgba(0, 0, 0, 0.8);
-  -inactive-window-background: lighten($panel_bg, 5%);
+  -inactive-window-background: lighten($panel, 5%);
   -inactive-window-border: rgba(0, 0, 0, 0.8);
 }
 
@@ -1785,11 +1783,11 @@ $menu_item_radius: $window-radius - $container-padding;
 
   &:hover {
     background-gradient-direction: none;
-    background-color: rgba($panel_fg, 0.1);
+    background-color: rgba(on($panel), 0.1);
   }
 
   &:active {
-    background-color: rgba($panel_fg, 0.2);
+    background-color: rgba(on($panel), 0.2);
   }
 }
 
@@ -1802,11 +1800,11 @@ $menu_item_radius: $window-radius - $container-padding;
 
   &:hover {
     background-gradient-direction: none;
-    background-color: rgba($panel_fg, 0.1);
+    background-color: rgba(on($panel), 0.1);
   }
 
   &:active {
-    background-color: rgba($panel_fg, 0.2);
+    background-color: rgba(on($panel), 0.2);
   }
 
   .icon-box { padding: 2px; }
@@ -1829,12 +1827,12 @@ $menu_item_radius: $window-radius - $container-padding;
 
   &-separator-line {
     width: 1px;
-    background: rgba($panel_fg, 0.12);
+    background: rgba(on($panel), 0.12);
   }
 
   &-box {
     padding: 0 8px;
-    color: $panel_fg;
+    color: on($panel);
     text-shadow: none;
     transition-duration: 100ms;
     border-radius: 0;
@@ -1844,13 +1842,13 @@ $menu_item_radius: $window-radius - $container-padding;
     }
 
     &:hover {
-      color: $panel_fg;
-      background-color: rgba($panel_fg, 0.15);
+      color: on($panel);
+      background-color: rgba(on($panel), 0.15);
     }
 
     &:checked, &:checked:hover {
-      color: $panel_fg;
-      background-color: rgba($panel_fg, 0.25);
+      color: on($panel);
+      background-color: rgba(on($panel), 0.25);
     }
 
     &:highlight {
@@ -1862,20 +1860,20 @@ $menu_item_radius: $window-radius - $container-padding;
 
   &-label {
     font-weight: bold;
-    color: $panel_fg;
+    color: on($panel);
 
     .applet-box:checked & {
-      color: $panel_fg;
+      color: on($panel);
       text-shadow: none;
     }
   }
 
   &-icon {
-    color: $panel_fg;
+    color: on($panel);
     icon-size: 16px;
 
     .applet-box:checked & {
-      color: $panel_fg;
+      color: on($panel);
       text-shadow: none;
     }
   }
@@ -1903,15 +1901,15 @@ $menu_item_radius: $window-radius - $container-padding;
 // Desklets (desklet.js)
 //
 .desklet {
-  color: on($os-background);
+  color: on($tooltip);
 
   &:highlight {
     background-color: transparentize($error, 0.5);
   }
 
   &-with-borders {
-    color: on($os-background);
-    background-color: $os-background;
+    color: on($tooltip);
+    background-color: $tooltip;
     padding: 12px;
     padding-bottom: 16px;
 
@@ -1921,8 +1919,8 @@ $menu_item_radius: $window-radius - $container-padding;
   }
 
   &-with-borders-and-header {
-    color: on($os-background);
-    background-color: $os-background;
+    color: on($tooltip);
+    background-color: $tooltip;
     border-radius: 6px;
     border-radius-topleft: 0;
     border-radius-topright: 0;
@@ -1934,8 +1932,8 @@ $menu_item_radius: $window-radius - $container-padding;
     }
   }
   &-header {
-    color: on($os-background);
-    background-color: $os-background;
+    color: on($tooltip);
+    background-color: $tooltip;
     border-radius: 0;
     border-radius-topleft: 6px;
     border-radius-topright: 6px;
@@ -1950,8 +1948,8 @@ $menu_item_radius: $window-radius - $container-padding;
 }
 
 .photoframe-box {
-  color: on($os-background);
-  background-color: $os-background;
+  color: on($tooltip);
+  background-color: $tooltip;
   padding: 12px;
   padding-bottom: 16px;
 }

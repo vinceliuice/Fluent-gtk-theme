@@ -6177,7 +6177,7 @@ UnityDecoration .menuitem:hover {
 
 UnityPanelWidget,
 .unity-panel {
-  background-color: #CCCCCC;
+  background-color: #F7F7F7;
   color: rgba(0, 0, 0, 0.87);
 }
 
@@ -6213,8 +6213,8 @@ UnityPanelWidget:backdrop,
 }
 
 .mate-panel-menu-bar {
-  background-color: rgba(0, 0, 0, 0.6);
-  color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(247, 247, 247, 0.8);
+  color: rgba(0, 0, 0, 0.6);
   font-weight: 500;
 }
 
@@ -6234,12 +6234,12 @@ PanelToplevel.vertical > grid > button {
 }
 
 PanelSeparator {
-  color: rgba(255, 255, 255, 0.12);
+  color: rgba(0, 0, 0, 0.12);
 }
 
 MatePanelAppletFrameDBus {
   border-style: solid;
-  border-color: rgba(255, 255, 255, 0.12);
+  border-color: rgba(0, 0, 0, 0.12);
 }
 
 .mate-panel-menu-bar.horizontal MatePanelAppletFrameDBus {
@@ -6251,15 +6251,15 @@ MatePanelAppletFrameDBus {
 }
 
 .mate-panel-menu-bar menubar > menuitem {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .mate-panel-menu-bar menubar > menuitem:hover {
-  color: white;
+  color: rgba(0, 0, 0, 0.87);
 }
 
 .mate-panel-menu-bar menubar > menuitem:disabled {
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(0, 0, 0, 0.26);
 }
 
 .mate-panel-menu-bar.horizontal menubar > menuitem {
@@ -6397,7 +6397,7 @@ na-tray-applet {
 
 #PanelApplet:selected > box {
   background-color: alpha(currentColor, 0.1);
-  color: white;
+  color: rgba(0, 0, 0, 0.87);
 }
 
 #mate-menu {
@@ -6888,7 +6888,7 @@ MsdOsdWindow.background.osd .progressbar {
 }
 
 .workspace-switcher .workspace-layout {
-  border: 0 solid rgba(255, 255, 255, 0.12);
+  border: 0 solid rgba(0, 0, 0, 0.12);
 }
 
 .top .workspace-switcher .workspace-layout:dir(ltr), .bottom .workspace-switcher .workspace-layout:dir(ltr) {
@@ -6905,7 +6905,7 @@ MsdOsdWindow.background.osd .progressbar {
 
 .workspace-switcher .workspace-item,
 .workspace-switcher .workspace-add-button {
-  border: 0 solid rgba(255, 255, 255, 0.12);
+  border: 0 solid rgba(0, 0, 0, 0.12);
 }
 
 .top .workspace-switcher .workspace-item:dir(ltr), .bottom .workspace-switcher .workspace-item:dir(ltr), .top .workspace-switcher .workspace-add-button:dir(ltr), .bottom .workspace-switcher .workspace-add-button:dir(ltr) {
@@ -6949,8 +6949,8 @@ MsdOsdWindow.background.osd .progressbar {
 
 .budgie-panel {
   transition: background-color 75ms cubic-bezier(0, 0, 0.2, 1);
-  background-color: rgba(0, 0, 0, 0.6);
-  color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(247, 247, 247, 0.8);
+  color: rgba(0, 0, 0, 0.6);
   font-weight: 500;
 }
 
@@ -6959,7 +6959,7 @@ MsdOsdWindow.background.osd .progressbar {
 }
 
 .budgie-panel button {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(0, 0, 0, 0.6);
   min-height: 24px;
   min-width: 24px;
   padding: 0;
@@ -6967,15 +6967,15 @@ MsdOsdWindow.background.osd .progressbar {
 }
 
 .budgie-panel button:hover, .budgie-panel button:active, .budgie-panel button:checked, .budgie-panel button:checked:hover, .budgie-panel button:focus {
-  color: white;
+  color: rgba(0, 0, 0, 0.87);
 }
 
 .budgie-panel button:disabled {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(0, 0, 0, 0.38);
 }
 
 .budgie-panel button.budgie-menu-launcher {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(0, 0, 0, 0.6);
   border-radius: 0;
 }
 
@@ -6983,11 +6983,11 @@ MsdOsdWindow.background.osd .progressbar {
   background: none;
   box-shadow: none;
   border: none;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .budgie-panel button.raven-trigger {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(0, 0, 0, 0.6);
   border-radius: 0;
 }
 
@@ -7000,7 +7000,7 @@ MsdOsdWindow.background.osd .progressbar {
 }
 
 .budgie-panel separator {
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(0, 0, 0, 0.26);
 }
 
 .budgie-panel .alert {
@@ -7012,31 +7012,31 @@ MsdOsdWindow.background.osd .progressbar {
   padding: 0;
   box-shadow: none;
   background-color: transparent;
-  color: white;
+  color: rgba(0, 0, 0, 0.87);
 }
 
 .budgie-panel .titlebar:not(headerbar) button:not(.suggested-action):not(.destructive-action) {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .budgie-panel .titlebar:not(headerbar) button:not(.suggested-action):not(.destructive-action):hover, .budgie-panel .titlebar:not(headerbar) button:not(.suggested-action):not(.destructive-action):active {
-  color: white;
+  color: rgba(0, 0, 0, 0.87);
 }
 
 .budgie-panel menubar,
 .budgie-panel .menubar {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .budgie-panel menubar > menuitem,
 .budgie-panel .menubar > menuitem {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .budgie-panel menubar > menuitem:hover, .budgie-panel menubar > menuitem:active,
 .budgie-panel .menubar > menuitem:hover,
 .budgie-panel .menubar > menuitem:active {
-  color: white;
+  color: rgba(0, 0, 0, 0.87);
 }
 
 .budgie-panel menubar > menuitem > window.background.popup > decoration,
@@ -7056,19 +7056,19 @@ MsdOsdWindow.background.osd .progressbar {
 
 .budgie-panel button.flat.launcher {
   padding: 0;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .budgie-panel button.flat.launcher:not(:checked) {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(0, 0, 0, 0.38);
 }
 
 .budgie-panel button.flat.launcher:not(:checked):hover, .budgie-panel button.flat.launcher:not(:checked):active {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .budgie-panel button.flat.launcher:not(:checked):disabled {
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(0, 0, 0, 0.26);
 }
 
 .top .budgie-panel .unpinned button.flat.launcher:checked, .top .budgie-panel .pinned button.flat.launcher.running:checked {
@@ -7278,7 +7278,7 @@ calendar.raven-calendar:selected {
 }
 
 .budgie-panel .lock-keys image:disabled {
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(0, 0, 0, 0.26);
 }
 
 .drop-shadow {
@@ -7365,8 +7365,8 @@ calendar.raven-calendar:selected {
  ***************/
 .xfce4-panel.background {
   border: none;
-  background-color: rgba(0, 0, 0, 0.6);
-  color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(247, 247, 247, 0.8);
+  color: rgba(0, 0, 0, 0.6);
   font-weight: 500;
 }
 
@@ -7675,7 +7675,7 @@ FIXME this is really an API */
 @define-color text_view_bg #FFFFFF;
 @define-color budgie_tasklist_indicator_color #F57C00;
 @define-color budgie_tasklist_indicator_color_active #F57C00;
-@define-color budgie_tasklist_indicator_color_active_window rgba(187, 187, 187, 0.816);
+@define-color budgie_tasklist_indicator_color_active_window rgba(252, 252, 252, 0.908);
 @define-color budgie_tasklist_indicator_color_attention #F4B400;
 @define-color STRAWBERRY_100 #FF9262;
 @define-color STRAWBERRY_300 #FF793E;

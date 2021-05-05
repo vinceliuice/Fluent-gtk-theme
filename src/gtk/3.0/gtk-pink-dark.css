@@ -6213,7 +6213,7 @@ UnityPanelWidget:backdrop,
 }
 
 .mate-panel-menu-bar {
-  background-color: #1F1F1F;
+  background-color: rgba(31, 31, 31, 0.8);
   color: rgba(255, 255, 255, 0.7);
   font-weight: 500;
 }
@@ -6949,7 +6949,7 @@ MsdOsdWindow.background.osd .progressbar {
 
 .budgie-panel {
   transition: background-color 75ms cubic-bezier(0, 0, 0.2, 1);
-  background-color: #1F1F1F;
+  background-color: rgba(31, 31, 31, 0.8);
   color: rgba(255, 255, 255, 0.7);
   font-weight: 500;
 }
@@ -7365,7 +7365,7 @@ calendar.raven-calendar:selected {
  ***************/
 .xfce4-panel.background {
   border: none;
-  background-color: #1F1F1F;
+  background-color: rgba(31, 31, 31, 0.8);
   color: rgba(255, 255, 255, 0.7);
   font-weight: 500;
 }
@@ -7675,7 +7675,7 @@ FIXME this is really an API */
 @define-color text_view_bg #1c1c1c;
 @define-color budgie_tasklist_indicator_color #EC407A;
 @define-color budgie_tasklist_indicator_color_active #EC407A;
-@define-color budgie_tasklist_indicator_color_active_window #989898;
+@define-color budgie_tasklist_indicator_color_active_window rgba(174, 174, 174, 0.908);
 @define-color budgie_tasklist_indicator_color_attention #FDD633;
 @define-color STRAWBERRY_100 #FF9262;
 @define-color STRAWBERRY_300 #FF793E;

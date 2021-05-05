@@ -122,9 +122,28 @@ install() {
   [[ "$color" != '-dark' ]] && \
   cp -r "$SRC_DIR/gtk/4.0/gtk$theme-dark$size.css"                              "$THEME_DIR/gtk-4.0/gtk-dark.css"
 
-  mkdir -p                                                                      "$THEME_DIR/xfwm4"
-  cp -r "${SRC_DIR}/xfwm4/assets${ELSE_LIGHT:-}/"*.png                          "$THEME_DIR/xfwm4"
-  cp -r "${SRC_DIR}/xfwm4/themerc${ELSE_LIGHT:-}"                               "$THEME_DIR/xfwm4/themerc"
+  if [[ "$theme" == '' && "$size" == '' ]]; then
+    if [[ "$color" != '' ]]; then
+      mkdir -p                                                                  "$THEME_DIR/xfwm4"
+      cp -r "$SRC_DIR/xfwm4/assets${ELSE_LIGHT:-}/"*.png                        "$THEME_DIR/xfwm4"
+      cp -r "$SRC_DIR/xfwm4/themerc${ELSE_LIGHT:-}"                             "$THEME_DIR/xfwm4/themerc"
+    fi
+
+    if [[ "$color" != '-light' ]]; then
+      mkdir -p                                                                  "$THEME_DIR/cinnamon"
+      cp -r "$SRC_DIR/cinnamon/common-assets"                                   "$THEME_DIR/cinnamon/assets"
+      cp -r "$SRC_DIR/cinnamon/assets${ELSE_DARK:-}/"*.svg                      "$THEME_DIR/cinnamon/assets"
+      cp -r "$SRC_DIR/cinnamon/cinnamon${ELSE_DARK:-}.css"                      "$THEME_DIR/cinnamon/cinnamon.css"
+      cp -r "$SRC_DIR/cinnamon/thumbnail${ELSE_DARK:-}.png"                     "$THEME_DIR/cinnamon/thumbnail.png"
+    fi
+
+    mkdir -p                                                                    "$THEME_DIR/metacity-1"
+    cp -r "$SRC_DIR/metacity-1/metacity-theme-2${color}.xml"                    "$THEME_DIR/metacity-1/metacity-theme-2.xml"
+    cp -r "$SRC_DIR/metacity-1/metacity-theme-3.xml"                            "$THEME_DIR/metacity-1"
+    cp -r "$SRC_DIR/metacity-1/assets"                                          "$THEME_DIR/metacity-1"
+    cp -r "$SRC_DIR/metacity-1/thumbnail${ELSE_DARK:-}.png"                     "$THEME_DIR/metacity-1/thumbnail.png"
+    cd "$THEME_DIR/metacity-1" && ln -s metacity-theme-2.xml metacity-theme-1.xml
+  fi
 
   mkdir -p                                                                      "$THEME_DIR/plank"
   cp -r "$SRC_DIR/plank/dock.theme"                                             "$THEME_DIR/plank"

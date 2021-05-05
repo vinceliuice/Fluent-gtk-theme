@@ -82,8 +82,8 @@ $scrim-inverse:                         rgba(white, 0.1);
 $titlebar:                              titlebar(normal);
 $titlebar-backdrop:                     titlebar(backdrop);
 
-$panel:                                 if($topbar == 'dark', #1F1F1F, $scrim);
-$panel-solid:                           if($topbar == 'dark', #1F1F1F, #CCCCCC); // for Unity panel which doesn't allow translucent colors
+$panel:                                 if($topbar == 'light', rgba(#F7F7F7, 0.8), rgba(#1F1F1F, 0.8));
+$panel-solid:                           if($topbar == 'light', #F7F7F7, #1F1F1F); // for Unity panel which doesn't allow translucent colors
 
 //
 // Misc colors

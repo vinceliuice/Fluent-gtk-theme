@@ -117,22 +117,22 @@ install() {
   [[ "$color" != '-dark' ]] && \
   cp -r "$SRC_DIR/gtk/4.0/gtk-dark.css"                                         "$THEME_DIR/gtk-4.0/gtk-dark.css"
 
-#  mkdir -p                                                                      "$THEME_DIR/cinnamon"
-#  cp -r "$SRC_DIR/cinnamon/common-assets"                                       "$THEME_DIR/cinnamon/assets"
-#  cp -r "$SRC_DIR/cinnamon/assets${ELSE_DARK:-}/"*.svg                          "$THEME_DIR/cinnamon/assets"
-#  cp -r "$SRC_DIR/cinnamon/cinnamon${ELSE_DARK:-}.css"                          "$THEME_DIR/cinnamon/cinnamon.css"
-#  cp -r "$SRC_DIR/cinnamon/thumbnail${ELSE_DARK:-}.png"                         "$THEME_DIR/cinnamon/thumbnail.png"
+  mkdir -p                                                                      "$THEME_DIR/cinnamon"
+  cp -r "$SRC_DIR/cinnamon/common-assets"                                       "$THEME_DIR/cinnamon/assets"
+  cp -r "$SRC_DIR/cinnamon/assets${ELSE_DARK:-}/"*.svg                          "$THEME_DIR/cinnamon/assets"
+  cp -r "$SRC_DIR/cinnamon/cinnamon$color.css"                                  "$THEME_DIR/cinnamon/cinnamon.css"
+  cp -r "$SRC_DIR/cinnamon/thumbnail$color.png"                                 "$THEME_DIR/cinnamon/thumbnail.png"
 
   mkdir -p                                                                      "$THEME_DIR/xfwm4"
   cp -r "$SRC_DIR/xfwm4/assets${ELSE_LIGHT:-}/"*.png                            "$THEME_DIR/xfwm4"
   cp -r "$SRC_DIR/xfwm4/themerc${ELSE_LIGHT:-}"                                 "$THEME_DIR/xfwm4/themerc"
 
-#  mkdir -p                                                                      "$THEME_DIR/metacity-1"
-#  cp -r "$SRC_DIR/metacity-1/metacity-theme-2${color}.xml"                      "$THEME_DIR/metacity-1/metacity-theme-2.xml"
-#  cp -r "$SRC_DIR/metacity-1/metacity-theme-3.xml"                              "$THEME_DIR/metacity-1"
-#  cp -r "$SRC_DIR/metacity-1/assets/"*.svg                                      "$THEME_DIR/metacity-1"
-#  cp -r "$SRC_DIR/metacity-1/thumbnail${ELSE_DARK:-}.png"                       "$THEME_DIR/metacity-1/thumbnail.png"
-#  cd "$THEME_DIR/metacity-1" && ln -s metacity-theme-2.xml metacity-theme-1.xml
+  mkdir -p                                                                      "$THEME_DIR/metacity-1"
+  cp -r "$SRC_DIR/metacity-1/metacity-theme-2${color}.xml"                      "$THEME_DIR/metacity-1/metacity-theme-2.xml"
+  cp -r "$SRC_DIR/metacity-1/metacity-theme-3.xml"                              "$THEME_DIR/metacity-1"
+  cp -r "$SRC_DIR/metacity-1/assets"                                            "$THEME_DIR/metacity-1"
+  cp -r "$SRC_DIR/metacity-1/thumbnail${ELSE_DARK:-}.png"                       "$THEME_DIR/metacity-1/thumbnail.png"
+  cd "$THEME_DIR/metacity-1" && ln -s metacity-theme-2.xml metacity-theme-1.xml
 
   mkdir -p                                                                      "$THEME_DIR/plank"
   cp -r "$SRC_DIR/plank/dock.theme"                                             "$THEME_DIR/plank"
@@ -200,12 +200,12 @@ echo
 for color in "${colors[@]}"; do
   sassc "${SASSC_OPT[@]}" "src/gtk/3.0/gtk$color."{scss,css}
   sassc "${SASSC_OPT[@]}" "src/gtk/4.0/gtk$color."{scss,css}
+  sassc "${SASSC_OPT[@]}" "src/cinnamon/cinnamon$color."{scss,css}
 done
 
 for color in '' '-dark'; do
   sassc "${SASSC_OPT[@]}" "src/gnome-shell/shell-3-28/gnome-shell$color."{scss,css}
   sassc "${SASSC_OPT[@]}" "src/gnome-shell/shell-40-0/gnome-shell$color."{scss,css}
-#  sassc "${SASSC_OPT[@]}" "src/cinnamon/cinnamon$color."{scss,css}
 done
 
 for color in "${colors[@]}"; do
