@@ -5,12 +5,19 @@ $panel_transition_duration: 250ms; // same as the overview transition duration
 
 #panel {
   background-color: $panel_bg_color;
-  font-weight: bold;
-  height: $medium_size + 2px;
+  font-weight: normal;
   font-feature-settings: "tnum";
-  border-radius: $material_radius;
-  margin: $container_padding / 2;
   transition-duration: $panel_transition_duration;
+
+  @if $panel_style == 'compact' {
+    margin: 0;
+    border-radius: 0;
+    height: $medium_size - 2px;
+  } @else {
+    border-radius: $material_radius;
+    margin: $container_padding / 2;
+    height: $medium_size + 2px;
+  }
 
   // transparent panel on lock & login screens
   &.unlock-screen,
@@ -18,6 +25,18 @@ $panel_transition_duration: 250ms; // same as the overview transition duration
   &.lock-screen,
   &:overview {
     background-color: transparent;
+
+    .panel-button {
+      border-radius: $buttons_radius;
+
+      &:hover {
+        background-color: rgba(white, 0.08);
+      }
+
+      &:active, &:checked, &:focus {
+        background-color: rgba(white, 0.18);
+      }
+    }
 
     .panel-corner {
       -panel-corner-opacity: 0;
@@ -41,52 +60,24 @@ $panel_transition_duration: 250ms; // same as the overview transition duration
     transition-duration: $panel_transition_duration;
   }
 
-  // First and last panel buttons
-  Gjs_ArcMenu_ApplicationsButton.panel-button,
-  Gjs_arc-menu_linuxgem33_com_menuButton_ArcMenu_MenuButton.panel-button,
-  Gjs_ui_panel_ActivitiesButton.panel-button { // Activities button
-    border-radius: $material_radius 0 0 $material_radius !important;
-  }
-
-  Gjs_AggregateMenu.panel-button,
-  Gjs_ui_panel_AggregateMenu.panel-button {
-    border-radius: 0 $material_radius $material_radius 0 !important;
-  }
-
   // panel menus
   .panel-button {
     -natural-hpadding: $minimum_hpadding * 2;
     -minimum-hpadding: $minimum_hpadding;
-    font-weight: bold;
+    font-weight: normal;
     color: $panel_fg_color;
     transition-duration: 150ms;
     border: none;
     border-radius: 0;
     text-shadow: none;
 
+    StLabel { padding: 0 3px; }
+
     &.clock-display {
       .clock {
         transition-duration: 150ms;
         border: none;
         border-radius: 0;
-      }
-    }
-
-    &:hover {
-      color: $panel_fg_color;
-      background-color: rgba(black, 0.15);
-      text-shadow: none;
-      box-shadow: none;
-
-      // The clock display needs to have the background on .clock because
-      // we want to exclude the do-not-disturb indicator from the background
-      &.clock-display {
-        box-shadow: none;
-
-        .clock {
-          box-shadow: none;
-          background: none;
-        }
       }
     }
 
@@ -119,13 +110,19 @@ $panel_transition_duration: 250ms; // same as the overview transition duration
     // status area icons
     .system-status-icon {
       icon-size: 16px;
-      padding: $container_padding;
-      margin: 0 $container_margin;
+      padding: $container_padding / 2;
+      margin: 0 $container_margin - 2px;
     }
 
     // .panel-status-indicators-box .system-status-icon,
     .panel-status-menu-box .system-status-icon {
       margin: 0;
+    }
+
+    .panel-status-indicators-box,
+    .panel-status-menu-box,
+    .power-status.panel-status-indicators-box { // spacing between power icon and (optional) percentage label
+      spacing: 2px;
     }
 
     // app menu icon
@@ -152,42 +149,30 @@ $panel_transition_duration: 250ms; // same as the overview transition duration
     }
   }
 
-  &.unlock-screen,
-  &.login-screen,
-  &.lock-screen,
-  &:overview {
-    .panel-button {
-      border-radius: $material_radius !important;
-
-      &:hover, &:overview, &:focus {
-        color: $inverse_fg_color;
-        background-color: $inverse_divider_color;
-      }
-
-      &:active {
-        color: $inverse_fg_color;
-        background-color: $inverse_track_color;
-      }
-    }
-
-    // First and last panel buttons
+  @if $panel_style == 'float' {
     Gjs_ArcMenu_ApplicationsButton.panel-button,
     Gjs_arc-menu_linuxgem33_com_menuButton_ArcMenu_MenuButton.panel-button,
-    Gjs_ui_panel_ActivitiesButton.panel-button,
+    Gjs_ui_panel_ActivitiesButton.panel-button { // Activities button
+      border-radius: $material_radius 0 0 $material_radius !important;
+    }
+
     Gjs_AggregateMenu.panel-button,
     Gjs_ui_panel_AggregateMenu.panel-button {
-      border-radius: $material_radius !important;
+      border-radius: 0 $material_radius $material_radius 0 !important;
     }
-  }
 
-  .panel-status-indicators-box,
-  .panel-status-menu-box {
-    spacing: 2px;
-  }
-
-  // spacing between power icon and (optional) percentage label
-  .power-status.panel-status-indicators-box {
-    spacing: 0;
+    &:overview,
+    &.unlock-screen,
+    &.login-screen,
+    &.lock-screen {
+      Gjs_ArcMenu_ApplicationsButton.panel-button,
+      Gjs_arc-menu_linuxgem33_com_menuButton_ArcMenu_MenuButton.panel-button,
+      Gjs_ui_panel_ActivitiesButton.panel-button,
+      Gjs_AggregateMenu.panel-button,
+      Gjs_ui_panel_AggregateMenu.panel-button {
+        border-radius: $buttons_radius !important;
+      }
+    }
   }
 
   // indicator for active

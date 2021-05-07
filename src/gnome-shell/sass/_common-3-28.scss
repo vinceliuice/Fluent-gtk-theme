@@ -1120,25 +1120,7 @@ $slider_color: if($variant == 'light', $accent_color, $accent_color);
 // TOP BAR
 //
 
-// First and last panel buttons
-Gjs_ArcMenu_ApplicationsButton.panel-button,
-Gjs_arc-menu_linuxgem33_com_menuButton_ArcMenu_MenuButton.panel-button,
-Gjs_ui_panel_ActivitiesButton.panel-button { // Activities button
-  border-radius: $material_radius 0 0 $material_radius !important;
-
-  // &:active, &:overview, &:focus, &:checked {
-  //   background: $primary_color !important;
-  //   color: white !important;
-  // }
-}
-
-Gjs_AggregateMenu.panel-button,
-Gjs_ui_panel_AggregateMenu.panel-button {
-  border-radius: 0 $material_radius $material_radius 0 !important;
-}
-
 // Activities button
-
 $size_suffix: if($laptop == 'true', '-small', '');
 
 // Gjs_ui_panel_ActivitiesButton.panel-button,
@@ -1164,21 +1146,15 @@ $size_suffix: if($laptop == 'true', '-small', '');
   background-color: $panel_bg_color;
   transition-duration: 250ms; // transition from solid to transparent
   font-weight: bold;
-  height: $medium_size + 2px;
-  border-radius: $material_radius;
-  margin: $container_padding / 2;
 
-  &:overview,
-  &.unlock-screen,
-  &.login-screen,
-  &.lock-screen {
-    background-color: $inverse_bg_color;
-
-    .panel-corner {
-      -panel-corner-radius: 0;
-      -panel-corner-background-color: transparent;
-      -panel-corner-border-color: transparent;
-    }
+  @if $panel_style == 'compact' {
+    margin: 0;
+    border-radius: 0;
+    height: $medium_size - 2px;
+  } @else {
+    border-radius: $material_radius;
+    margin: $container_padding / 2;
+    height: $medium_size + 2px;
   }
 
   #panelLeft, #panelCenter { // spacing between activities<>app menu and such
@@ -1202,10 +1178,6 @@ $size_suffix: if($laptop == 'true', '-small', '');
     }
 
     StLabel { padding: 0 4px; }
-  }
-
-  arc-menu-panel-menu {
-    border-radius: $material_radius 0 0 $material_radius;
   }
 
   .panel-button {
@@ -1277,41 +1249,62 @@ $size_suffix: if($laptop == 'true', '-small', '');
     }
   }
 
-  .screencast-indicator { color: $error_color; }
-  .remote-access-indicator { color: $warning_color; } // > 3.29.4
-
-  &.solid {
-    background-color: #202020;
-    transition-duration: 250ms;
-    background-gradient-direction: none; // for Ubuntu session
-    text-shadow: none; // for Ubuntu session
-
-    &:overview { background-color: transparent; } // for Ubuntu session
-
-    .panel-corner {
-      -panel-corner-background-color: $panel_bg_color;
-    }
+  &:overview,
+  &.unlock-screen,
+  &.login-screen,
+  &.lock-screen {
+    background: none;
 
     .panel-button {
-      color: $panel_fg_color;
-      text-shadow: none;
+      border-radius: $buttons_radius;
 
-      &:active, &:overview, &:focus, &:checked {
-        color: $inverse_fg_color;
-        text-shadow: none;
+      &:hover {
+        background-color: rgba(white, 0.08);
+      }
+
+      &:active, &:checked, &:focus {
+        background-color: rgba(white, 0.18);
       }
     }
 
-    .system-status-icon,
-    .app-menu-icon > StIcon,
-    .popup-menu-arrow {
-      icon-shadow: none;
+    .panel-corner {
+      -panel-corner-radius: 0;
+      -panel-corner-background-color: transparent;
+      -panel-corner-border-color: transparent;
+    }
+  }
 
-      &:active, &:overview, &:focus, &:checked {
-        icon-shadow: none;
+  @if $panel_style == 'float' {
+    Gjs_ArcMenu_ApplicationsButton.panel-button,
+    Gjs_arc-menu_linuxgem33_com_menuButton_ArcMenu_MenuButton.panel-button,
+    Gjs_ui_panel_ActivitiesButton.panel-button { // Activities button
+      border-radius: $material_radius 0 0 $material_radius !important;
+    }
+
+    Gjs_AggregateMenu.panel-button,
+    Gjs_ui_panel_AggregateMenu.panel-button {
+      border-radius: 0 $material_radius $material_radius 0 !important;
+    }
+
+    &:overview,
+    &.unlock-screen,
+    &.login-screen,
+    &.lock-screen {
+      Gjs_ArcMenu_ApplicationsButton.panel-button,
+      Gjs_arc-menu_linuxgem33_com_menuButton_ArcMenu_MenuButton.panel-button,
+      Gjs_ui_panel_ActivitiesButton.panel-button { // Activities button
+        border-radius: $buttons_radius !important;
+      }
+
+      Gjs_AggregateMenu.panel-button,
+      Gjs_ui_panel_AggregateMenu.panel-button {
+        border-radius: $buttons_radius !important;
       }
     }
   }
+
+  .screencast-indicator { color: $error_color; }
+  .remote-access-indicator { color: $warning_color; } // > 3.29.4
 }
 
 // calendar popover

@@ -1774,16 +1774,28 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 /* Top Bar */
 #panel {
   background-color: rgba(0, 0, 0, 0.5);
-  font-weight: bold;
-  height: 38px;
+  font-weight: normal;
   font-feature-settings: "tnum";
+  transition-duration: 250ms;
   border-radius: 5px;
   margin: 3px;
-  transition-duration: 250ms;
+  height: 38px;
 }
 
 #panel.unlock-screen, #panel.login-screen, #panel.lock-screen, #panel:overview {
   background-color: transparent;
+}
+
+#panel.unlock-screen .panel-button, #panel.login-screen .panel-button, #panel.lock-screen .panel-button, #panel:overview .panel-button {
+  border-radius: 3px;
+}
+
+#panel.unlock-screen .panel-button:hover, #panel.login-screen .panel-button:hover, #panel.lock-screen .panel-button:hover, #panel:overview .panel-button:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+#panel.unlock-screen .panel-button:active, #panel.unlock-screen .panel-button:checked, #panel.unlock-screen .panel-button:focus, #panel.login-screen .panel-button:active, #panel.login-screen .panel-button:checked, #panel.login-screen .panel-button:focus, #panel.lock-screen .panel-button:active, #panel.lock-screen .panel-button:checked, #panel.lock-screen .panel-button:focus, #panel:overview .panel-button:active, #panel:overview .panel-button:checked, #panel:overview .panel-button:focus {
+  background-color: rgba(255, 255, 255, 0.18);
 }
 
 #panel.unlock-screen .panel-corner, #panel.login-screen .panel-corner, #panel.lock-screen .panel-corner, #panel:overview .panel-corner {
@@ -1806,48 +1818,25 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   transition-duration: 250ms;
 }
 
-#panel Gjs_ArcMenu_ApplicationsButton.panel-button,
-#panel Gjs_arc-menu_linuxgem33_com_menuButton_ArcMenu_MenuButton.panel-button,
-#panel Gjs_ui_panel_ActivitiesButton.panel-button {
-  border-radius: 5px 0 0 5px !important;
-}
-
-#panel Gjs_AggregateMenu.panel-button,
-#panel Gjs_ui_panel_AggregateMenu.panel-button {
-  border-radius: 0 5px 5px 0 !important;
-}
-
 #panel .panel-button {
   -natural-hpadding: 8px;
   -minimum-hpadding: 4px;
-  font-weight: bold;
+  font-weight: normal;
   color: #dedede;
   transition-duration: 150ms;
   border: none;
   border-radius: 0;
   text-shadow: none;
+}
+
+#panel .panel-button StLabel {
+  padding: 0 3px;
 }
 
 #panel .panel-button.clock-display .clock {
   transition-duration: 150ms;
   border: none;
   border-radius: 0;
-}
-
-#panel .panel-button:hover {
-  color: #dedede;
-  background-color: rgba(0, 0, 0, 0.15);
-  text-shadow: none;
-  box-shadow: none;
-}
-
-#panel .panel-button.clock-display:hover {
-  box-shadow: none;
-}
-
-#panel .panel-button.clock-display:hover .clock {
-  box-shadow: none;
-  background: none;
 }
 
 #panel .panel-button:hover {
@@ -1876,12 +1865,18 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 #panel .panel-button .system-status-icon {
   icon-size: 16px;
-  padding: 6px;
-  margin: 0 4px;
+  padding: 3px;
+  margin: 0 2px;
 }
 
 #panel .panel-button .panel-status-menu-box .system-status-icon {
   margin: 0;
+}
+
+#panel .panel-button .panel-status-indicators-box,
+#panel .panel-button .panel-status-menu-box,
+#panel .panel-button .power-status.panel-status-indicators-box {
+  spacing: 2px;
 }
 
 #panel .panel-button .app-menu-icon {
@@ -1906,21 +1901,22 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   box-shadow: none;
 }
 
-#panel.unlock-screen .panel-button, #panel.login-screen .panel-button, #panel.lock-screen .panel-button, #panel:overview .panel-button {
-  border-radius: 5px !important;
+#panel Gjs_ArcMenu_ApplicationsButton.panel-button,
+#panel Gjs_arc-menu_linuxgem33_com_menuButton_ArcMenu_MenuButton.panel-button,
+#panel Gjs_ui_panel_ActivitiesButton.panel-button {
+  border-radius: 5px 0 0 5px !important;
 }
 
-#panel.unlock-screen .panel-button:hover, #panel.unlock-screen .panel-button:overview, #panel.unlock-screen .panel-button:focus, #panel.login-screen .panel-button:hover, #panel.login-screen .panel-button:overview, #panel.login-screen .panel-button:focus, #panel.lock-screen .panel-button:hover, #panel.lock-screen .panel-button:overview, #panel.lock-screen .panel-button:focus, #panel:overview .panel-button:hover, #panel:overview .panel-button:overview, #panel:overview .panel-button:focus {
-  color: rgba(255, 255, 255, 0.85);
-  background-color: rgba(255, 255, 255, 0.15);
+#panel Gjs_AggregateMenu.panel-button,
+#panel Gjs_ui_panel_AggregateMenu.panel-button {
+  border-radius: 0 5px 5px 0 !important;
 }
 
-#panel.unlock-screen .panel-button:active, #panel.login-screen .panel-button:active, #panel.lock-screen .panel-button:active, #panel:overview .panel-button:active {
-  color: rgba(255, 255, 255, 0.85);
-  background-color: rgba(255, 255, 255, 0.3);
-}
-
-#panel.unlock-screen Gjs_ArcMenu_ApplicationsButton.panel-button,
+#panel:overview Gjs_ArcMenu_ApplicationsButton.panel-button,
+#panel:overview Gjs_arc-menu_linuxgem33_com_menuButton_ArcMenu_MenuButton.panel-button,
+#panel:overview Gjs_ui_panel_ActivitiesButton.panel-button,
+#panel:overview Gjs_AggregateMenu.panel-button,
+#panel:overview Gjs_ui_panel_AggregateMenu.panel-button, #panel.unlock-screen Gjs_ArcMenu_ApplicationsButton.panel-button,
 #panel.unlock-screen Gjs_arc-menu_linuxgem33_com_menuButton_ArcMenu_MenuButton.panel-button,
 #panel.unlock-screen Gjs_ui_panel_ActivitiesButton.panel-button,
 #panel.unlock-screen Gjs_AggregateMenu.panel-button,
@@ -1932,21 +1928,8 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 #panel.lock-screen Gjs_arc-menu_linuxgem33_com_menuButton_ArcMenu_MenuButton.panel-button,
 #panel.lock-screen Gjs_ui_panel_ActivitiesButton.panel-button,
 #panel.lock-screen Gjs_AggregateMenu.panel-button,
-#panel.lock-screen Gjs_ui_panel_AggregateMenu.panel-button, #panel:overview Gjs_ArcMenu_ApplicationsButton.panel-button,
-#panel:overview Gjs_arc-menu_linuxgem33_com_menuButton_ArcMenu_MenuButton.panel-button,
-#panel:overview Gjs_ui_panel_ActivitiesButton.panel-button,
-#panel:overview Gjs_AggregateMenu.panel-button,
-#panel:overview Gjs_ui_panel_AggregateMenu.panel-button {
-  border-radius: 5px !important;
-}
-
-#panel .panel-status-indicators-box,
-#panel .panel-status-menu-box {
-  spacing: 2px;
-}
-
-#panel .power-status.panel-status-indicators-box {
-  spacing: 0;
+#panel.lock-screen Gjs_ui_panel_AggregateMenu.panel-button {
+  border-radius: 3px !important;
 }
 
 #panel .screencast-indicator,
@@ -2153,7 +2136,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 #dash {
   font-size: 1em;
   margin-top: 12px;
-  padding: 0 6px;
+  padding: 0;
 }
 
 #dash .placeholder {
@@ -2168,35 +2151,36 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 #dash .overview-icon {
-  padding: 5px;
+  padding: 6px;
 }
 
 .dash-background {
   background-color: rgba(255, 255, 255, 0.2);
   margin-bottom: 16px;
-  padding: 10px;
+  padding: 6px 3px;
   border-radius: 4.5px;
 }
 
 .dash-item-container .app-well-app, .show-apps {
-  padding: 10px 1.5px 26px;
+  padding: 6px 3px 22px;
 }
 
 .dash-separator {
   width: 1px;
-  margin: 0 6.5px 16px;
+  margin: 0 6px 16px;
   background-color: rgba(255, 255, 255, 0.15);
 }
 
 .dash-label {
-  border-radius: 100px;
-  padding: 8px 10px;
+  border-radius: 3px;
+  padding: 6px 12px;
+  margin: 6px;
   color: rgba(255, 255, 255, 0.85);
   background-color: rgba(0, 0, 0, 0.75);
   border: none;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.35);
   text-align: center;
-  -y-offset: 12px;
+  -y-offset: 20px;
 }
 
 /* App Grid */

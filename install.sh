@@ -1,6 +1,4 @@
 #!/bin/bash
-set -ueo pipefail
-#set -x
 
 REPO_DIR="$(cd "$(dirname "$0")" && pwd)"
 SRC_DIR="$REPO_DIR/src"
@@ -14,6 +12,8 @@ if [ "$UID" -eq "$ROOT_UID" ]; then
 else
   DEST_DIR="$HOME/.themes"
 fi
+
+SASSC_OPT="-M -t expanded"
 
 THEME_NAME=Fluent
 THEME_VARIANTS=('' '-purple' '-pink' '-red' '-orange' '-yellow' '-green' '-grey')
@@ -42,6 +42,7 @@ OPTIONS:
   -t, --theme VARIANT     Specify theme color variant(s) [default|purple|pink|red|orange|yellow|green|grey|all] (Default: blue)
   -c, --color VARIANT...  Specify color variant(s) [standard|light|dark] (Default: All variants)s)
   -s, --size VARIANT      Specify size variant [standard|compact] (Default: All variants)
+  -p, --panel VARIANT     Specify panel variant [float|compact] (Default: float variant)
   -h, --help              Show help
 
 INSTALLATION EXAMPLES:
@@ -86,17 +87,26 @@ install() {
   echo "CursorTheme=$name${ELSE_DARK:-}" >>                                     "$THEME_DIR/index.theme"
   echo "ButtonLayout=close,minimize,maximize:menu" >>                           "$THEME_DIR/index.theme"
 
-  mkdir -p                                                                                "$THEME_DIR/gnome-shell"
-  cp -r "$SRC_DIR/gnome-shell/pad-osd.css"                                                "$THEME_DIR/gnome-shell"
+  mkdir -p                                                                      "$THEME_DIR/gnome-shell"
+  cp -r "$SRC_DIR/gnome-shell/pad-osd.css"                                      "$THEME_DIR/gnome-shell"
 
-  if [[ "${GS_VERSION:-}" == 'new' ]]; then
-    cp -r "$SRC_DIR/gnome-shell/shell-40-0/gnome-shell$theme${ELSE_DARK:-}$size.css"      "$THEME_DIR/gnome-shell/gnome-shell.css"
+  if [[ "$panel" == 'compact' ]]; then
+    if [[ "${GS_VERSION:-}" == 'new' ]]; then
+      sassc $SASSC_OPT "$SRC_DIR/gnome-shell/shell-40-0/gnome-shell$theme${ELSE_DARK:-}$size.scss" "$THEME_DIR/gnome-shell/gnome-shell.css"
+    else
+      sassc $SASSC_OPT "$SRC_DIR/gnome-shell/shell-3-28/gnome-shell$theme${ELSE_DARK:-}$size.scss" "$THEME_DIR/gnome-shell/gnome-shell.css"
+    fi
   else
-    cp -r "$SRC_DIR/gnome-shell/shell-3-28/gnome-shell$theme${ELSE_DARK:-}$size.css"      "$THEME_DIR/gnome-shell/gnome-shell.css"
+    if [[ "${GS_VERSION:-}" == 'new' ]]; then
+      cp -r "$SRC_DIR/gnome-shell/shell-40-0/gnome-shell$theme${ELSE_DARK:-}$size.css"      "$THEME_DIR/gnome-shell/gnome-shell.css"
+    else
+      cp -r "$SRC_DIR/gnome-shell/shell-3-28/gnome-shell$theme${ELSE_DARK:-}$size.css"      "$THEME_DIR/gnome-shell/gnome-shell.css"
+    fi
   fi
-  cp -r "${SRC_DIR}/gnome-shell/common-assets"                                            "$THEME_DIR/gnome-shell/assets"
-  cp -r "${SRC_DIR}/gnome-shell/assets${ELSE_DARK:-}/"*.svg                               "$THEME_DIR/gnome-shell/assets"
-  cp -r "${SRC_DIR}/gnome-shell/theme$theme/"*.svg                                        "$THEME_DIR/gnome-shell/assets"
+
+  cp -r "${SRC_DIR}/gnome-shell/common-assets"                                  "$THEME_DIR/gnome-shell/assets"
+  cp -r "${SRC_DIR}/gnome-shell/assets${ELSE_DARK:-}/"*.svg                     "$THEME_DIR/gnome-shell/assets"
+  cp -r "${SRC_DIR}/gnome-shell/theme$theme/"*.svg                              "$THEME_DIR/gnome-shell/assets"
 
   cd "$THEME_DIR/gnome-shell"
   ln -s assets/no-events.svg no-events.svg
@@ -164,6 +174,29 @@ while [[ "$#" -gt 0 ]]; do
     -n|--name)
       _name="$2"
       shift 2
+      ;;
+    -p|--panel)
+      shift
+      for panel in "$@"; do
+        case "$panel" in
+          float)
+            panel="float"
+            shift
+            ;;
+          compact)
+            panel="compact"
+            shift
+            ;;
+          -*)
+            break
+            ;;
+          *)
+            echo "ERROR: Unrecognized panel variant '$1'."
+            echo "Try '$0 --help' for more information."
+            exit 1
+            ;;
+        esac
+      done
       ;;
     -t|--theme)
       accent='true'
@@ -279,6 +312,53 @@ while [[ "$#" -gt 0 ]]; do
   esac
 done
 
+#  Check command avalibility
+function has_command() {
+  command -v $1 > /dev/null
+}
+
+#  Install needed packages
+install_package() {
+  if [ ! "$(which sassc 2> /dev/null)" ]; then
+    echo sassc needs to be installed to generate the css.
+    if has_command zypper; then
+      sudo zypper in sassc
+    elif has_command apt-get; then
+      sudo apt-get install sassc
+    elif has_command dnf; then
+      sudo dnf install sassc
+    elif has_command dnf; then
+      sudo dnf install sassc
+    elif has_command pacman; then
+      sudo pacman -S --noconfirm sassc
+    fi
+  fi
+}
+
+install_compact_panel() {
+  cd ${SRC_DIR}/gnome-shell/sass
+  cp -an _tweaks.scss _tweaks.scss.bak
+  sed -i "/\$panel_style:/s/float/compact/" _tweaks.scss
+  echo -e "Install compact panel version ..."
+}
+
+restore_panel() {
+  cd ${SRC_DIR}/gnome-shell/sass
+  [[ -f _tweaks.scss.bak ]] && rm -rf _tweaks.scss
+  mv _tweaks.scss.bak _tweaks.scss
+  echo -e "Restore _tweaks.scss file ..."
+}
+
+install_theme() {
+  for theme in "${themes[@]}"; do
+    for color in "${colors[@]}"; do
+      for size in "${sizes[@]}"; do
+        install "${dest:-$DEST_DIR}" "${_name:-$THEME_NAME}" "$theme" "$color" "$size"
+      done
+    done
+  done
+}
+
 if [[ "${#themes[@]}" -eq 0 ]] ; then
   themes=("${THEME_VARIANTS[0]}")
 fi
@@ -291,13 +371,11 @@ if [[ "${#sizes[@]}" -eq 0 ]] ; then
   sizes=("${SIZE_VARIANTS[@]}")
 fi
 
-for theme in "${themes[@]}"; do
-  for color in "${colors[@]}"; do
-    for size in "${sizes[@]}"; do
-      install "${dest:-$DEST_DIR}" "${_name:-$THEME_NAME}" "$theme" "$color" "$size"
-    done
-  done
-done
+if [[ "$panel" = "compact" ]] ; then
+  install_package && install_compact_panel && install_theme && restore_panel
+else
+  install_theme
+fi
 
 echo
 echo "Done."

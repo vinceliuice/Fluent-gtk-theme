@@ -1316,17 +1316,6 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   border-radius: 0 0 0 0;
 }
 
-Gjs_ArcMenu_ApplicationsButton.panel-button,
-Gjs_arc-menu_linuxgem33_com_menuButton_ArcMenu_MenuButton.panel-button,
-Gjs_ui_panel_ActivitiesButton.panel-button {
-  border-radius: 5px 0 0 5px !important;
-}
-
-Gjs_AggregateMenu.panel-button,
-Gjs_ui_panel_AggregateMenu.panel-button {
-  border-radius: 0 5px 5px 0 !important;
-}
-
 #panelActivities.panel-button {
   background-image: url("assets/activities-small.svg");
   background-position: center center;
@@ -1349,19 +1338,9 @@ Gjs_ui_panel_AggregateMenu.panel-button {
   background-color: rgba(0, 0, 0, 0.5);
   transition-duration: 250ms;
   font-weight: bold;
-  height: 34px;
   border-radius: 5px;
   margin: 2px;
-}
-
-#panel:overview, #panel.unlock-screen, #panel.login-screen, #panel.lock-screen {
-  background-color: rgba(255, 255, 255, 0.13);
-}
-
-#panel:overview .panel-corner, #panel.unlock-screen .panel-corner, #panel.login-screen .panel-corner, #panel.lock-screen .panel-corner {
-  -panel-corner-radius: 0;
-  -panel-corner-background-color: transparent;
-  -panel-corner-border-color: transparent;
+  height: 34px;
 }
 
 #panel #panelLeft, #panel #panelCenter {
@@ -1387,10 +1366,6 @@ Gjs_ui_panel_AggregateMenu.panel-button {
 
 #panel .panel-corner StLabel {
   padding: 0 4px;
-}
-
-#panel arc-menu-panel-menu {
-  border-radius: 5px 0 0 5px;
 }
 
 #panel .panel-button {
@@ -1466,55 +1441,65 @@ Gjs_ui_panel_AggregateMenu.panel-button {
   box-shadow: none;
 }
 
+#panel:overview, #panel.unlock-screen, #panel.login-screen, #panel.lock-screen {
+  background: none;
+}
+
+#panel:overview .panel-button, #panel.unlock-screen .panel-button, #panel.login-screen .panel-button, #panel.lock-screen .panel-button {
+  border-radius: 3px;
+}
+
+#panel:overview .panel-button:hover, #panel.unlock-screen .panel-button:hover, #panel.login-screen .panel-button:hover, #panel.lock-screen .panel-button:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+#panel:overview .panel-button:active, #panel:overview .panel-button:checked, #panel:overview .panel-button:focus, #panel.unlock-screen .panel-button:active, #panel.unlock-screen .panel-button:checked, #panel.unlock-screen .panel-button:focus, #panel.login-screen .panel-button:active, #panel.login-screen .panel-button:checked, #panel.login-screen .panel-button:focus, #panel.lock-screen .panel-button:active, #panel.lock-screen .panel-button:checked, #panel.lock-screen .panel-button:focus {
+  background-color: rgba(255, 255, 255, 0.18);
+}
+
+#panel:overview .panel-corner, #panel.unlock-screen .panel-corner, #panel.login-screen .panel-corner, #panel.lock-screen .panel-corner {
+  -panel-corner-radius: 0;
+  -panel-corner-background-color: transparent;
+  -panel-corner-border-color: transparent;
+}
+
+#panel Gjs_ArcMenu_ApplicationsButton.panel-button,
+#panel Gjs_arc-menu_linuxgem33_com_menuButton_ArcMenu_MenuButton.panel-button,
+#panel Gjs_ui_panel_ActivitiesButton.panel-button {
+  border-radius: 5px 0 0 5px !important;
+}
+
+#panel Gjs_AggregateMenu.panel-button,
+#panel Gjs_ui_panel_AggregateMenu.panel-button {
+  border-radius: 0 5px 5px 0 !important;
+}
+
+#panel:overview Gjs_ArcMenu_ApplicationsButton.panel-button,
+#panel:overview Gjs_arc-menu_linuxgem33_com_menuButton_ArcMenu_MenuButton.panel-button,
+#panel:overview Gjs_ui_panel_ActivitiesButton.panel-button, #panel.unlock-screen Gjs_ArcMenu_ApplicationsButton.panel-button,
+#panel.unlock-screen Gjs_arc-menu_linuxgem33_com_menuButton_ArcMenu_MenuButton.panel-button,
+#panel.unlock-screen Gjs_ui_panel_ActivitiesButton.panel-button, #panel.login-screen Gjs_ArcMenu_ApplicationsButton.panel-button,
+#panel.login-screen Gjs_arc-menu_linuxgem33_com_menuButton_ArcMenu_MenuButton.panel-button,
+#panel.login-screen Gjs_ui_panel_ActivitiesButton.panel-button, #panel.lock-screen Gjs_ArcMenu_ApplicationsButton.panel-button,
+#panel.lock-screen Gjs_arc-menu_linuxgem33_com_menuButton_ArcMenu_MenuButton.panel-button,
+#panel.lock-screen Gjs_ui_panel_ActivitiesButton.panel-button {
+  border-radius: 3px !important;
+}
+
+#panel:overview Gjs_AggregateMenu.panel-button,
+#panel:overview Gjs_ui_panel_AggregateMenu.panel-button, #panel.unlock-screen Gjs_AggregateMenu.panel-button,
+#panel.unlock-screen Gjs_ui_panel_AggregateMenu.panel-button, #panel.login-screen Gjs_AggregateMenu.panel-button,
+#panel.login-screen Gjs_ui_panel_AggregateMenu.panel-button, #panel.lock-screen Gjs_AggregateMenu.panel-button,
+#panel.lock-screen Gjs_ui_panel_AggregateMenu.panel-button {
+  border-radius: 3px !important;
+}
+
 #panel .screencast-indicator {
   color: #DD2C00;
 }
 
 #panel .remote-access-indicator {
   color: #FF6D00;
-}
-
-#panel.solid {
-  background-color: #202020;
-  transition-duration: 250ms;
-  background-gradient-direction: none;
-  text-shadow: none;
-}
-
-#panel.solid:overview {
-  background-color: transparent;
-}
-
-#panel.solid .panel-corner {
-  -panel-corner-background-color: rgba(0, 0, 0, 0.5);
-}
-
-#panel.solid .panel-button {
-  color: #dedede;
-  text-shadow: none;
-}
-
-#panel.solid .panel-button:active, #panel.solid .panel-button:overview, #panel.solid .panel-button:focus, #panel.solid .panel-button:checked {
-  color: rgba(255, 255, 255, 0.85);
-  text-shadow: none;
-}
-
-#panel.solid .system-status-icon,
-#panel.solid .app-menu-icon > StIcon,
-#panel.solid .popup-menu-arrow {
-  icon-shadow: none;
-}
-
-#panel.solid .system-status-icon:active, #panel.solid .system-status-icon:overview, #panel.solid .system-status-icon:focus, #panel.solid .system-status-icon:checked,
-#panel.solid .app-menu-icon > StIcon:active,
-#panel.solid .app-menu-icon > StIcon:overview,
-#panel.solid .app-menu-icon > StIcon:focus,
-#panel.solid .app-menu-icon > StIcon:checked,
-#panel.solid .popup-menu-arrow:active,
-#panel.solid .popup-menu-arrow:overview,
-#panel.solid .popup-menu-arrow:focus,
-#panel.solid .popup-menu-arrow:checked {
-  icon-shadow: none;
 }
 
 .clock-display-box {
