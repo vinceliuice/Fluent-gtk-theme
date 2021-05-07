@@ -42,7 +42,7 @@ OPTIONS:
   -t, --theme VARIANT     Specify theme color variant(s) [default|purple|pink|red|orange|yellow|green|grey|all] (Default: blue)
   -c, --color VARIANT...  Specify color variant(s) [standard|light|dark] (Default: All variants)s)
   -s, --size VARIANT      Specify size variant [standard|compact] (Default: All variants)
-  --tweaks VARIANT        Specify version for tweaks [solid|compact] (solid: no transparency variant, compact: no floating panel)
+  --tweaks                Specify versions for tweaks [solid|compact] (solid: no transparency variant, compact: no floating panel)
   -h, --help              Show help
 
 INSTALLATION EXAMPLES:
