@@ -4142,7 +4142,7 @@ XfdesktopIconView.view:active, calendar.raven-calendar:selected, .budgie-popover
   background-color: rgba(245, 124, 0, 0.2);
 }
 
-.nemo-window .nemo-window-pane widget.entry:selected, window.background.csd evview.view.content-view:selected, window.background.csd evview.view.content-view:selected:backdrop, textview text selection:focus, textview text selection, label selection,
+.nemo-window .nemo-window-pane widget.entry:selected, window.background.csd evview.view.content-view:selected, window.background.csd evview.view.content-view:selected:backdrop, widget.view:selected, textview text selection:focus, textview text selection, label selection,
 entry selection, spinbutton:not(.vertical) selection, spinbutton.vertical selection {
   color: white;
   background-color: #F57C00;

@@ -87,8 +87,6 @@
 }
 
 .view {
-  // @extend %row_activatable;
-
   background-color: $base;
   color: $text;
 
@@ -102,6 +100,12 @@
 
   &:selected {
     @extend %selected_items;
+  }
+}
+
+widget.view {
+  &:selected {
+    @extend %selected_items_primary;
   }
 }
 
