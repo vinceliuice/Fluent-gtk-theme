@@ -375,7 +375,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .popup-menu-content {
   padding: 6px 0;
-  margin: 0 2px 0 8px;
+  margin: 0 2px 0 10px;
   background-color: rgba(255, 255, 255, 0.95);
   border-radius: 3px;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.35);
@@ -1094,7 +1094,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   background-color: rgba(255, 255, 255, 0.95);
   border-radius: 3px;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.35);
-  margin: 3px 8px;
+  margin: 3px 10px;
   padding: 6px;
   spacing: 6px;
 }
@@ -1876,11 +1876,10 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 #panel .panel-button .system-status-icon {
   icon-size: 16px;
-  padding: 0 3px;
+  padding: 6px;
   margin: 0 4px;
 }
 
-#panel .panel-button .panel-status-indicators-box .system-status-icon,
 #panel .panel-button .panel-status-menu-box .system-status-icon {
   margin: 0;
 }

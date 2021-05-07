@@ -119,11 +119,11 @@ $panel_transition_duration: 250ms; // same as the overview transition duration
     // status area icons
     .system-status-icon {
       icon-size: 16px;
-      padding: 0 $container_padding/2;
+      padding: $container_padding;
       margin: 0 $container_margin;
     }
 
-    .panel-status-indicators-box .system-status-icon,
+    // .panel-status-indicators-box .system-status-icon,
     .panel-status-menu-box .system-status-icon {
       margin: 0;
     }

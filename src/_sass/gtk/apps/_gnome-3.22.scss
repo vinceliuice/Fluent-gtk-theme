@@ -7,9 +7,17 @@
     background-color: rgba($base-alt, 0.95);
     border-radius: 0 0 $window-radius $window-radius;
 
-    // headerbar.titlebar {
-    //   background-color: rgba($titlebar, 0.95);
-    // }
+    &.unified { // >= 40.0
+      background: none;
+
+      headerbar.titlebar {
+        background-color: rgba($titlebar, 0.95);
+      }
+
+      placessidebar.sidebar {
+        background-color: rgba($base-alt, 0.95);
+      }
+    }
 
     placessidebar.sidebar {
       &, > viewport.frame > list > separator { background: none; }
@@ -31,11 +39,11 @@
     }
 
     notebook {
-      border-radius: $window-radius;
+      border-radius: 0 0 $window-radius $window-radius;
 
       > stack {
         background-color: $base;
-        border-radius: $window-radius;
+        border-radius: 0 0 $window-radius $window-radius;
       }
 
       scrolledwindow > .view:not(:selected):not(:hover):not(:checked) {

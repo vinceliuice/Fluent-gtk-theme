@@ -6,6 +6,7 @@ $cakeisalie: "This stylesheet is generated, DO NOT EDIT";
 
 /* GLOBALS */
 * {
+  @include font(body-1);
   // transition-timing-function: $deceleration_curve;
   transition-duration: $longer_duration;
 }
@@ -858,7 +859,7 @@ $slider_color: if($variant == 'light', $accent_color, $accent_color);
   box-shadow: none;
 
   .popup-menu-content {
-    margin: 0 2px 0 8px;
+    margin: 0 2px 0 10px;
     background-color: $menu_bg_color;
     border-radius: $buttons_radius;
     box-shadow: $shadow_3;
@@ -868,21 +869,21 @@ $slider_color: if($variant == 'light', $accent_color, $accent_color);
 .popup-separator-menu-item {
   background: none;
   border: none;
-  padding: 0 0;
-  margin: 0 0;
-  height: 0;
+  padding: 0 0 !important;
+  margin: 0 0 !important;
+  height: $container_padding - 2px !important;
 
   .popup-separator-menu-item-separator {
+    //-margin-horizontal: 24px;
+    height: 1px; //not really the whole box
+    margin: 0 0 !important;
+    padding: 0 0 !important;
     background: none;
-    padding: 0 0;
-    margin: 0 0;
-    height: 0;
 
     .popup-sub-menu & { //submenu separators
-      background: none;
-      padding: 0 0;
       margin: 0 0;
-      height: 0;
+      padding: 0 0;
+      background: none;
     }
   }
 }
@@ -1208,7 +1209,7 @@ $size_suffix: if($laptop == 'true', '-small', '');
   }
 
   .panel-button {
-    -natural-hpadding: $minimum_hpadding;
+    -natural-hpadding: $minimum_hpadding*2;
     -minimum-hpadding: $minimum_hpadding;
     font-weight: bold;
     color: $panel_fg_color;
@@ -1248,7 +1249,15 @@ $size_suffix: if($laptop == 'true', '-small', '');
       box-shadow: none;
     }
 
-    .system-status-icon { icon-size: em(16px); padding: 0 3px; }
+    // status area icons
+    .system-status-icon {
+      icon-size: 16px;
+      padding: $container_padding / 2;
+      margin: 0 $container_margin - 2px;
+    }
+
+    .panel-status-menu-box .system-status-icon { margin: 0; }
+
     .unlock-screen &,
     .login-screen &,
     .lock-screen & {
@@ -1266,16 +1275,6 @@ $size_suffix: if($laptop == 'true', '-small', '');
         box-shadow: none;
       }
     }
-  }
-
-  .panel-status-indicators-box,
-  .panel-status-menu-box {
-    spacing: 2px;
-  }
-
-  // spacing between power icon and (optional) percentage label
-  .power-status.panel-status-indicators-box {
-    spacing: 0;
   }
 
   .screencast-indicator { color: $error_color; }
@@ -2720,7 +2719,7 @@ $keyboard_active_bg_color: if($variant == 'light', darken($keyboard_bg_color, 20
   background-color: $menu_bg_color;
   border-radius: $buttons_radius;
   box-shadow: $shadow_3;
-  margin: ($container_padding / 2) 8px;
+  margin: ($container_padding / 2) 10px;
   padding: $container_padding;
   spacing: $container_padding;
 }

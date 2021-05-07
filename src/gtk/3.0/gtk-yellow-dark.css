@@ -2830,7 +2830,6 @@ menu menuitem check, menu menuitem radio {
   transition: none;
   margin: 0;
   padding: 0;
-  background-size: 10px 10px;
 }
 
 menu menuitem check:dir(ltr), menu menuitem radio:dir(ltr) {
@@ -2847,6 +2846,7 @@ menu menuitem check:not(:checked):not(:indeterminate):not(:disabled), menu menui
 
 menu menuitem check:checked, menu menuitem check:indeterminate, menu menuitem radio:checked, menu menuitem radio:indeterminate {
   color: rgba(255, 255, 255, 0.7);
+  background-image: none;
 }
 
 menu menuitem check:checked:hover, menu menuitem check:indeterminate:hover, menu menuitem radio:checked:hover, menu menuitem radio:indeterminate:hover {
@@ -2885,6 +2885,7 @@ treeview.view check:hover, window#gnome-system-monitor.background.csd > box.vert
 
 
 check {
+  border-radius: 2px;
   -gtk-icon-source: -gtk-recolor(url("assets/scalable/checkbox-unchecked-symbolic.svg"));
 }
 
@@ -2900,6 +2901,7 @@ check:indeterminate {
 
 
 radio {
+  border-radius: 9999px;
   -gtk-icon-source: -gtk-recolor(url("assets/scalable/radio-unchecked-symbolic.svg"));
 }
 
@@ -2921,6 +2923,12 @@ menu menuitem check {
   -gtk-icon-source: -gtk-recolor(url("assets/scalable/small-checkbox-unchecked-symbolic.svg"));
 }
 
+#MozillaGtkWidget > widget > checkbutton > check:checked, #MozillaGtkWidget > widget > checkbutton > check:indeterminate,
+menu menuitem check:checked,
+menu menuitem check:indeterminate {
+  background-size: 12px 12px;
+}
+
 #MozillaGtkWidget > widget > checkbutton > check:checked,
 menu menuitem check:checked {
   -gtk-icon-source: -gtk-recolor(url("assets/scalable/small-checkbox-checked-symbolic.svg"));
@@ -2936,7 +2944,14 @@ menu menuitem radio {
   min-height: 16px;
   min-width: 16px;
   border-image: none;
+  border-radius: 9999px;
   -gtk-icon-source: -gtk-recolor(url("assets/scalable/small-radio-unchecked-symbolic.svg"));
+}
+
+#MozillaGtkWidget > widget > radiobutton > radio:checked, #MozillaGtkWidget > widget > radiobutton > radio:indeterminate,
+menu menuitem radio:checked,
+menu menuitem radio:indeterminate {
+  background-size: 8px 8px;
 }
 
 #MozillaGtkWidget > widget > radiobutton > radio:checked,
@@ -4301,6 +4316,18 @@ popover.emoji-completion .emoji:hover {
   border-radius: 0 0 3px 3px;
 }
 
+.nautilus-window.background.csd.unified {
+  background: none;
+}
+
+.nautilus-window.background.csd.unified headerbar.titlebar {
+  background-color: rgba(32, 32, 32, 0.95);
+}
+
+.nautilus-window.background.csd.unified placessidebar.sidebar {
+  background-color: rgba(48, 48, 48, 0.95);
+}
+
 .nautilus-window.background.csd placessidebar.sidebar, .nautilus-window.background.csd placessidebar.sidebar > viewport.frame > list > separator {
   background: none;
 }
@@ -4324,12 +4351,12 @@ popover.emoji-completion .emoji:hover {
 }
 
 .nautilus-window.background.csd notebook {
-  border-radius: 3px;
+  border-radius: 0 0 3px 3px;
 }
 
 .nautilus-window.background.csd notebook > stack {
   background-color: #2B2B2B;
-  border-radius: 3px;
+  border-radius: 0 0 3px 3px;
 }
 
 .nautilus-window.background.csd notebook scrolledwindow > .view:not(:selected):not(:hover):not(:checked), .nautilus-window.background.csd notebook window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow > treeview.view:not(:selected):not(:hover):not(:checked):not(.progressbar):not(.trough), .nautilus-window.background.csd notebook filechooser stack.view scrolledwindow > treeview.view:not(:selected):not(:hover):not(:checked), filechooser stack.view .nautilus-window.background.csd notebook scrolledwindow > treeview.view:not(:selected):not(:hover):not(:checked) {

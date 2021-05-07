@@ -1,6 +1,8 @@
 /* This stylesheet is generated, DO NOT EDIT */
 /* GLOBALS */
 * {
+  font-size: 10.5pt;
+  font-weight: 400;
   transition-duration: 150ms;
 }
 
@@ -1047,7 +1049,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .popup-menu-boxpointer .popup-menu-content {
-  margin: 0 2px 0 8px;
+  margin: 0 2px 0 10px;
   background-color: rgba(32, 32, 32, 0.95);
   border-radius: 3px;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.35);
@@ -1056,23 +1058,22 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .popup-separator-menu-item {
   background: none;
   border: none;
-  padding: 0 0;
-  margin: 0 0;
-  height: 0;
+  padding: 0 0 !important;
+  margin: 0 0 !important;
+  height: 4px !important;
 }
 
 .popup-separator-menu-item .popup-separator-menu-item-separator {
+  height: 1px;
+  margin: 0 0 !important;
+  padding: 0 0 !important;
   background: none;
-  padding: 0 0;
-  margin: 0 0;
-  height: 0;
 }
 
 .popup-sub-menu .popup-separator-menu-item .popup-separator-menu-item-separator {
-  background: none;
-  padding: 0 0;
   margin: 0 0;
-  height: 0;
+  padding: 0 0;
+  background: none;
 }
 
 .system-switch-user-submenu-icon.user-icon {
@@ -1393,7 +1394,7 @@ Gjs_ui_panel_AggregateMenu.panel-button {
 }
 
 #panel .panel-button {
-  -natural-hpadding: 4px;
+  -natural-hpadding: 8px;
   -minimum-hpadding: 4px;
   font-weight: bold;
   color: #dedede;
@@ -1439,8 +1440,13 @@ Gjs_ui_panel_AggregateMenu.panel-button {
 }
 
 #panel .panel-button .system-status-icon {
-  icon-size: 1.1428571429em;
-  padding: 0 3px;
+  icon-size: 16px;
+  padding: 3px;
+  margin: 0 2px;
+}
+
+#panel .panel-button .panel-status-menu-box .system-status-icon {
+  margin: 0;
 }
 
 .unlock-screen #panel .panel-button, .login-screen #panel .panel-button, .lock-screen #panel .panel-button {
@@ -1458,15 +1464,6 @@ Gjs_ui_panel_AggregateMenu.panel-button {
 #panel .panel-button.clock-display:active .clock, #panel .panel-button.clock-display:overview .clock, #panel .panel-button.clock-display:focus .clock, #panel .panel-button.clock-display:checked .clock {
   background: none;
   box-shadow: none;
-}
-
-#panel .panel-status-indicators-box,
-#panel .panel-status-menu-box {
-  spacing: 2px;
-}
-
-#panel .power-status.panel-status-indicators-box {
-  spacing: 0;
 }
 
 #panel .screencast-indicator {
@@ -3174,7 +3171,7 @@ StWidget.focused .app-well-app-running-dot {
   background-color: rgba(32, 32, 32, 0.95);
   border-radius: 3px;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.35);
-  margin: 3px 8px;
+  margin: 3px 10px;
   padding: 6px;
   spacing: 6px;
 }

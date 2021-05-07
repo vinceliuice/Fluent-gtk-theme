@@ -2444,7 +2444,6 @@ radio {
     transition: none;
     margin: 0; // this is a workaround for a menu check/radio size allocation issue
     padding: 0;
-    background-size: 10px 10px;
 
     &:dir(ltr) { margin-right: 8px; }
 
@@ -2454,6 +2453,7 @@ radio {
 
     &:checked, &:indeterminate {
       color: $text-secondary;
+      background-image: none;
 
       &:hover { color: $text; }
     }
@@ -2485,6 +2485,7 @@ radio {
 
 %check,
 check {
+  border-radius: $corner-radius;
   -gtk-icon-source: -gtk-recolor(url("assets/scalable/checkbox-unchecked-symbolic.svg"));
 
   &:checked { -gtk-icon-source: -gtk-recolor(url("assets/scalable/checkbox-checked-symbolic.svg")); }
@@ -2494,6 +2495,7 @@ check {
 
 %radio,
 radio {
+  border-radius: $circular-radius;
   -gtk-icon-source: -gtk-recolor(url("assets/scalable/radio-unchecked-symbolic.svg"));
 
   &:checked { -gtk-icon-source: -gtk-recolor(url("assets/scalable/radio-checked-symbolic.svg")); }
@@ -2510,6 +2512,10 @@ menu menuitem check {
     -gtk-icon-source: -gtk-recolor(url("assets/scalable/small-checkbox-unchecked-symbolic.svg"));
   }
 
+  &:checked, &:indeterminate {
+    background-size: 12px 12px;
+  }
+
   &:checked { -gtk-icon-source: -gtk-recolor(url("assets/scalable/small-checkbox-checked-symbolic.svg")); }
 
   &:indeterminate { -gtk-icon-source: -gtk-recolor(url("assets/scalable/small-checkbox-mixed-symbolic.svg")); }
@@ -2521,7 +2527,12 @@ menu menuitem radio {
     min-height: 16px;
     min-width: 16px;
     border-image: none;
+    border-radius: $circular-radius;
     -gtk-icon-source: -gtk-recolor(url("assets/scalable/small-radio-unchecked-symbolic.svg"));
+  }
+
+  &:checked, &:indeterminate {
+    background-size: 8px 8px;
   }
 
   &:checked { -gtk-icon-source: -gtk-recolor(url("assets/scalable/small-radio-checked-symbolic.svg")); }
