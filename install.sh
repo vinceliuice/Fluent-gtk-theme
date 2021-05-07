@@ -42,7 +42,7 @@ OPTIONS:
   -t, --theme VARIANT     Specify theme color variant(s) [default|purple|pink|red|orange|yellow|green|grey|all] (Default: blue)
   -c, --color VARIANT...  Specify color variant(s) [standard|light|dark] (Default: All variants)s)
   -s, --size VARIANT      Specify size variant [standard|compact] (Default: All variants)
-  -p, --panel VARIANT     Specify panel variant [float|compact] (Default: float variant)
+  --tweaks VARIANT        Specify version for tweaks [solid|compact] (solid: no transparency variant, compact: no floating panel)
   -h, --help              Show help
 
 INSTALLATION EXAMPLES:
@@ -90,7 +90,7 @@ install() {
   mkdir -p                                                                      "$THEME_DIR/gnome-shell"
   cp -r "$SRC_DIR/gnome-shell/pad-osd.css"                                      "$THEME_DIR/gnome-shell"
 
-  if [[ "$panel" == 'compact' ]]; then
+  if [[ "$panel" == 'compact' || "$opacity" == 'solid' ]]; then
     if [[ "${GS_VERSION:-}" == 'new' ]]; then
       sassc $SASSC_OPT "$SRC_DIR/gnome-shell/shell-40-0/gnome-shell$theme${ELSE_DARK:-}$size.scss" "$THEME_DIR/gnome-shell/gnome-shell.css"
     else
@@ -122,16 +122,30 @@ install() {
   cp -r "$SRC_DIR/gtk/assets$theme"                                             "$THEME_DIR/gtk-3.0/assets"
   cp -r "$SRC_DIR/gtk/scalable"                                                 "$THEME_DIR/gtk-3.0/assets"
   cp -r "$SRC_DIR/gtk/thumbnail$theme${ELSE_DARK:-}.png"                        "$THEME_DIR/gtk-3.0/thumbnail.png"
-  cp -r "$SRC_DIR/gtk/3.0/gtk$theme$color$size.css"                             "$THEME_DIR/gtk-3.0/gtk.css"
-  [[ "$color" != '-dark' ]] && \
-  cp -r "$SRC_DIR/gtk/3.0/gtk$theme-dark$size.css"                              "$THEME_DIR/gtk-3.0/gtk-dark.css"
+
+  if [[ "$opacity" == 'solid' ]]; then
+    sassc $SASSC_OPT "$SRC_DIR/gtk/3.0/gtk$theme$color$size.scss"               "$THEME_DIR/gtk-3.0/gtk.css"
+    [[ "$color" != '-dark' ]] && \
+    sassc $SASSC_OPT "$SRC_DIR/gtk/3.0/gtk$theme-dark$size.scss"                "$THEME_DIR/gtk-3.0/gtk-dark.css"
+  else
+    cp -r "$SRC_DIR/gtk/3.0/gtk$theme$color$size.css"                           "$THEME_DIR/gtk-3.0/gtk.css"
+    [[ "$color" != '-dark' ]] && \
+    cp -r "$SRC_DIR/gtk/3.0/gtk$theme-dark$size.css"                            "$THEME_DIR/gtk-3.0/gtk-dark.css"
+  fi
 
   mkdir -p                                                                      "$THEME_DIR/gtk-4.0"
   cp -r "$SRC_DIR/gtk/assets$theme"                                             "$THEME_DIR/gtk-4.0/assets"
   cp -r "$SRC_DIR/gtk/scalable"                                                 "$THEME_DIR/gtk-4.0/assets"
-  cp -r "$SRC_DIR/gtk/4.0/gtk$theme$color$size.css"                             "$THEME_DIR/gtk-4.0/gtk.css"
-  [[ "$color" != '-dark' ]] && \
-  cp -r "$SRC_DIR/gtk/4.0/gtk$theme-dark$size.css"                              "$THEME_DIR/gtk-4.0/gtk-dark.css"
+
+  if [[ "$opacity" == 'solid' ]]; then
+    sassc $SASSC_OPT "$SRC_DIR/gtk/4.0/gtk$theme$color$size.scss"               "$THEME_DIR/gtk-4.0/gtk.css"
+    [[ "$color" != '-dark' ]] && \
+    sassc $SASSC_OPT "$SRC_DIR/gtk/4.0/gtk$theme-dark$size.scss"                "$THEME_DIR/gtk-4.0/gtk-dark.css"
+  else
+    cp -r "$SRC_DIR/gtk/4.0/gtk$theme$color$size.css"                           "$THEME_DIR/gtk-4.0/gtk.css"
+    [[ "$color" != '-dark' ]] && \
+    cp -r "$SRC_DIR/gtk/4.0/gtk$theme-dark$size.css"                            "$THEME_DIR/gtk-4.0/gtk-dark.css"
+  fi
 
   if [[ "$theme" == '' && "$size" == '' ]]; then
     if [[ "$color" != '' ]]; then
@@ -175,12 +189,12 @@ while [[ "$#" -gt 0 ]]; do
       _name="$2"
       shift 2
       ;;
-    -p|--panel)
+    --tweaks)
       shift
-      for panel in "$@"; do
-        case "$panel" in
-          float)
-            panel="float"
+      for tweaks in "$@"; do
+        case "$tweaks" in
+          solid)
+            opacity="solid"
             shift
             ;;
           compact)
@@ -342,10 +356,21 @@ install_compact_panel() {
   echo -e "Install compact panel version ..."
 }
 
-restore_panel() {
+install_solid() {
   cd ${SRC_DIR}/gnome-shell/sass
-  [[ -f _tweaks.scss.bak ]] && rm -rf _tweaks.scss
-  mv _tweaks.scss.bak _tweaks.scss
+  cp -an _tweaks.scss _tweaks.scss.bak
+  sed -i "/\$opacity:/s/default/solid/" _tweaks.scss
+  cd ${SRC_DIR}/_sass
+  cp -an _tweaks.scss _tweaks.scss.bak
+  sed -i "/\$opacity:/s/default/solid/" _tweaks.scss
+  echo -e "Install solid version ..."
+}
+
+restore_tweaks() {
+  cd ${SRC_DIR}/gnome-shell/sass
+  [[ -f _tweaks.scss.bak ]] && rm -rf _tweaks.scss && mv _tweaks.scss.bak _tweaks.scss
+  cd ${SRC_DIR}/_sass
+  [[ -f _tweaks.scss.bak ]] && rm -rf _tweaks.scss && mv _tweaks.scss.bak _tweaks.scss
   echo -e "Restore _tweaks.scss file ..."
 }
 
@@ -372,10 +397,14 @@ if [[ "${#sizes[@]}" -eq 0 ]] ; then
 fi
 
 if [[ "$panel" = "compact" ]] ; then
-  install_package && install_compact_panel && install_theme && restore_panel
-else
-  install_theme
+  install_package && install_compact_panel
 fi
+
+if [[ "$opacity" = "solid" ]] ; then
+  install_package && install_solid
+fi
+
+install_theme && restore_tweaks
 
 echo
 echo "Done."

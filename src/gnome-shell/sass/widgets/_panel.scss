@@ -4,10 +4,15 @@
 $panel_transition_duration: 250ms; // same as the overview transition duration
 
 #panel {
-  background-color: $panel_bg_color;
   font-weight: normal;
   font-feature-settings: "tnum";
   transition-duration: $panel_transition_duration;
+
+  @if $opacity == 'solid' {
+    background-color: $panel_bg;
+  } @else {
+    background-color: $panel_bg_color;
+  }
 
   @if $panel_style == 'compact' {
     margin: 0;
@@ -83,12 +88,26 @@ $panel_transition_duration: 250ms; // same as the overview transition duration
 
     &:hover {
       color: $panel_fg_color;
-      background-color: rgba(black, 0.15);
     }
 
     &:active, &:checked, &:focus {
-      background-color: rgba(black, 0.3);
       color: $inverse_fg_color;
+    }
+
+    @if $opacity == 'solid' {
+      &:hover {
+        background-color: rgba(white, 0.06);
+      }
+      &:active, &:checked, &:focus {
+        background-color: rgba(white, 0.12);
+      }
+    } @else {
+      &:hover {
+        background-color: rgba(black, 0.15);
+      }
+      &:active, &:checked, &:focus {
+        background-color: rgba(black, 0.3);
+      }
     }
 
     &:hover, &:active, &:overview, &:focus, &:checked {

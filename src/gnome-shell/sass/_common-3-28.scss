@@ -1143,9 +1143,14 @@ $size_suffix: if($laptop == 'true', '-small', '');
 }
 
 #panel {
-  background-color: $panel_bg_color;
   transition-duration: 250ms; // transition from solid to transparent
   font-weight: bold;
+
+  @if $opacity == 'solid' {
+    background-color: $panel_bg;
+  } @else {
+    background-color: $panel_bg_color;
+  }
 
   @if $panel_style == 'compact' {
     margin: 0;

@@ -33,7 +33,7 @@ Run the following commands in the terminal:
 -t, --theme VARIANT...  Specify theme color variant(s) [default|purple|pink|red|orange|yellow|green|grey|all] (Default: blue)
 -c, --color VARIANT...  Specify color variant(s) [standard|light|dark] (Default: All variants)
 -s, --size VARIANT      Specify size variant [standard|compact] (Default: All variants)
--p, --panel VARIANT     Specify panel variant [float|compact] (Default: float variant)
+--tweaks                Specify versions for tweaks [solid|compact] (solid: no transparency variant, compact: no floating panel)
 -h, --help              Show help
 ```
 
@@ -44,7 +44,9 @@ Run the following commands in the terminal:
 ```
 ./install.sh -t purple # install purple accent color version
 
-./install.sh -p compact # install normal compact gnome-shell panel version (not floating)
+./install.sh --tweaks compact # install normal compact gnome-shell panel version (not floating)
+
+./install.sh --tweaks solid # install solid version (not transparency)
 ```
 
 ### Wallpaper

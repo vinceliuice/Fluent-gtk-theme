@@ -7,15 +7,29 @@
     background-color: rgba($base-alt, 0.95);
     border-radius: 0 0 $window-radius $window-radius;
 
+    @if $opacity == 'solid' {
+      background-color: rgba($base-alt, 1);
+    } @else {
+      background-color: rgba($base-alt, 0.95);
+    }
+
     &.unified { // >= 40.0
       background: none;
 
-      headerbar.titlebar {
-        background-color: rgba($titlebar, 0.95);
-      }
-
-      placessidebar.sidebar {
-        background-color: rgba($base-alt, 0.95);
+      @if $opacity == 'solid' {
+        headerbar.titlebar {
+          background-color: rgba($titlebar, 1);
+        }
+        placessidebar.sidebar {
+          background-color: rgba($base-alt, 1);
+        }
+      } @else {
+        headerbar.titlebar {
+          background-color: rgba($titlebar, 0.95);
+        }
+        placessidebar.sidebar {
+          background-color: rgba($base-alt, 0.95);
+        }
       }
     }
 

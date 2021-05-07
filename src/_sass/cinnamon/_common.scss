@@ -437,8 +437,13 @@ $menu_item_radius: $corner-radius;
     color: on($panel);
     font-size: 1em;
     padding: 0px;
-    background-color: $panel;
     box-shadow: 0 0 5px rgba(#000, 0.5), 0 0 16px rgba(#000, 0.24);
+
+    @if $opacity == 'solid' {
+      background-color: $panel-solid;
+    } @else {
+      background-color: $panel;
+    }
 
     .panel-button,
     .panel-status-button {
