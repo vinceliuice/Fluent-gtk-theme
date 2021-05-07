@@ -2366,7 +2366,7 @@ Gjs_ui_panel_AggregateMenu.panel-button {
   font-size: 1em;
   color: rgba(255, 255, 255, 0.85);
   background-color: rgba(255, 255, 255, 0.13);
-  padding: 2px;
+  padding: 0 2px;
   margin: 0 2px;
   border: none;
   border-radius: 3px;
@@ -2393,7 +2393,7 @@ Gjs_ui_panel_AggregateMenu.panel-button {
 }
 
 .dash-item-container > StWidget {
-  padding: 3px 6px;
+  padding: 4px 2px;
 }
 
 .dash-label {
@@ -2520,7 +2520,7 @@ StWidget.focused .app-well-app-running-dot {
 .grid-search-result .overview-icon {
   color: rgba(255, 255, 255, 0.85);
   border-radius: 3px;
-  padding: 6px;
+  padding: 4px;
   border: none;
   transition-duration: 150ms;
   text-align: center;
@@ -3848,7 +3848,7 @@ StWidget.focused .app-well-app-running-dot {
 }
 
 #dashtodockContainer #dash, #dashtodockContainer:overview #dash, #dashtodockContainer.extended #dash, #dashtodockContainer.extended:overview #dash {
-  padding: 0;
+  padding: 0 2px;
   border: none;
   margin: 0;
 }
@@ -3899,7 +3899,7 @@ StWidget.focused .app-well-app-running-dot {
 }
 
 #dashtodockContainer:overview #dash {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(255, 255, 255, 0.15);
 }
 
 #dashtodockContainer.opaque:overview #dash, #dashtodockContainer.transparent:overview #dash {
@@ -3913,7 +3913,7 @@ StWidget.focused .app-well-app-running-dot {
 
 #dashtodockContainer .app-well-app .overview-icon,
 #dashtodockContainer .show-apps .overview-icon {
-  padding: 9px;
+  padding: 4px;
   background-size: contain;
 }
 

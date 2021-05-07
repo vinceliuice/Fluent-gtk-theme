@@ -2,8 +2,6 @@
 // Dash to Dock
 //
 
-$icon_padding: 9px;
-
 #dashtodockContainer {
   background: transparent;
 
@@ -11,7 +9,7 @@ $icon_padding: 9px;
   &:overview #dash,
   &.extended #dash,
   &.extended:overview #dash {
-    padding: 0;
+    padding: 0 $container_padding / 2;
     border: none;
     margin: 0;
   }
@@ -41,7 +39,7 @@ $icon_padding: 9px;
   }
 
   &:overview #dash { // overview-mode #1
-    background-color: $panel_bg_color;
+    background-color: $inverse_divider_color;
   }
 
   &.opaque:overview,
@@ -63,7 +61,7 @@ $icon_padding: 9px;
   .app-well-app,
   .show-apps {
     .overview-icon {
-      padding: $icon_padding;
+      padding: $container_padding;
       background-size: contain;
     }
   }

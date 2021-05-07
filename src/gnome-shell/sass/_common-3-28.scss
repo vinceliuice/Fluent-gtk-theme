@@ -2030,7 +2030,7 @@ $size_suffix: if($laptop == 'true', '-small', '');
   font-size: 1em;
   color: $inverse_fg_color;
   background-color: $inverse_bg_color;
-  padding: $container_padding / 2;
+  padding: 0 $container_padding / 2;
   margin: 0 $container_padding / 2;
   border: none;
   border-radius: $buttons_radius;
@@ -2059,7 +2059,7 @@ $size_suffix: if($laptop == 'true', '-small', '');
 }
 
 .dash-item-container > StWidget {
-  padding: 3px 6px;
+  padding: $container_padding $container_padding / 2;
 }
 
 .dash-label { //osd tooltip
@@ -2180,7 +2180,7 @@ StWidget.focused .app-well-app-running-dot {
 %icon_tile {
   color: $inverse_fg_color;
   border-radius: $buttons_radius;
-  padding: 6px;
+  padding: $container_padding;
   border: none;
   transition-duration: $longer_duration;
   text-align: center;
