@@ -158,8 +158,7 @@
 
   @if $t == flat-normal {
     transition: $transition,
-                box-shadow $ripple-fade-out-duration $ease-out,
-                border-image $ripple-fade-in-duration $ease-out;
+                box-shadow $ripple-fade-out-duration $ease-out;
     outline: none;
     box-shadow: inset 0 0 0 9999px transparent;
     background-color: transparent;
@@ -180,8 +179,7 @@
   @if $t == flat-active {
     animation: none;
     transition: $transition,
-                box-shadow $ripple-fade-out-duration $ease-out,
-                border-image $ripple-fade-in-duration $ease-out;
+                box-shadow $ripple-fade-out-duration $ease-out;
     box-shadow: inset 0 0 0 9999px $overlay-active;
     color: $text;
   }

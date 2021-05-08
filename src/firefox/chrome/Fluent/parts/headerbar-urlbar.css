@@ -66,11 +66,55 @@ toolbarspring {
 }
 
 /* URL bar and Search bar's icons */
+
+.urlbar-icon,
+.identity-box-button,
+#tracking-protection-icon-container {
+	width: 32px !important;
+	border-radius: 3px !important;
+	padding: 5px 8px !important;
+	opacity: 0.75 !important;
+}
+
+.urlbar-icon {
+	margin: 1px !important;
+}
+
+.identity-box-button,
+#tracking-protection-icon-container {
+	margin-top: 1px !important;
+	margin-bottom: 1px !important;
+}
+
+#tracking-protection-icon-container {
+	margin-left: 1px !important;
+}
+
+.identity-box-button {
+	margin-right: 2px !important;
+}
+
 .urlbar-icon:hover,
-.urlbar-icon-wrapper:hover,
+.identity-box-button:hover,
+#tracking-protection-icon-container:hover {
+	background-color: var(--gnome-button-hover-background) !important;
+	border-color: transparent !important;
+	border-image: none !important;
+}
+
 .urlbar-icon[open],
-.urlbar-icon-wrapper[open],
 .urlbar-icon:hover:active,
+.identity-box-button[open],
+.identity-box-button:hover:active,
+#tracking-protection-icon-container[open],
+#tracking-protection-icon-container:hover:active {
+	background-color: var(--gnome-button-active-background) !important;
+	border-color: transparent !important;
+	border-image: none !important;
+}
+
+.urlbar-icon-wrapper:hover,
+.urlbar-icon-wrapper[open],
 .urlbar-icon-wrapper:hover:active,
 .searchbar-search-button:hover .searchbar-search-icon,
 .searchbar-search-button[open] .searchbar-search-icon,

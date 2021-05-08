@@ -25,7 +25,7 @@
         }
       } @else {
         headerbar.titlebar {
-          background-color: rgba($titlebar, 0.95);
+          background-color: rgba($titlebar, 0.98);
         }
         placessidebar.sidebar {
           background-color: rgba($base-alt, 0.95);
@@ -455,8 +455,7 @@ frame.gedit-map-frame > border {
 
 // the sidebar
 .tweak-categories {
-  // padding: 4px 0;
-  // background-color: shade(@theme_bg_color, 0.99);
+  padding: $container_padding / 2 0;
   background-image: image($base-alt);
 
   separator { @extend %hide_separators; }
@@ -593,11 +592,23 @@ window.background.csd {
         background-color: transparent;
 
         list { // left-pane
+          padding: $container_padding / 2 0;
           background-color: transparent;
 
           row.activatable:not(:hover):not(:active):not(:selected) {
             background-color: transparent;
           }
+
+          row.activatable {
+            &:selected {
+              background-image: image($primary);
+              background-position: $container-padding - 2px center;
+              background-repeat: no-repeat;
+              background-size: 2px 32px;
+            }
+          }
+
+          > separator { margin: $container_padding / 2 0; }
         }
       }
     }

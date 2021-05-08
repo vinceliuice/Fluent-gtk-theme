@@ -1773,10 +1773,10 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 /* Top Bar */
 #panel {
-  background-color: rgba(0, 0, 0, 0.5);
   font-weight: normal;
   font-feature-settings: "tnum";
   transition-duration: 250ms;
+  background-color: rgba(0, 0, 0, 0.5);
   border-radius: 5px;
   margin: 3px;
   height: 38px;
@@ -1841,12 +1841,18 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 #panel .panel-button:hover {
   color: #dedede;
+}
+
+#panel .panel-button:active, #panel .panel-button:checked, #panel .panel-button:focus {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+#panel .panel-button:hover {
   background-color: rgba(0, 0, 0, 0.15);
 }
 
 #panel .panel-button:active, #panel .panel-button:checked, #panel .panel-button:focus {
   background-color: rgba(0, 0, 0, 0.3);
-  color: rgba(255, 255, 255, 0.85);
 }
 
 #panel .panel-button:hover, #panel .panel-button:active, #panel .panel-button:overview, #panel .panel-button:focus, #panel .panel-button:checked {
@@ -3305,7 +3311,7 @@ StWidget.focused .app-well-app-running-dot {
 }
 
 #dashtodockContainer.opaque #dash .dash-background {
-  background-color: #000000;
+  background-color: #222222;
 }
 
 #dashtodockContainer.transparent #dash .dash-background {

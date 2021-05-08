@@ -1931,9 +1931,7 @@ popover.background {
 $tab-radius: 2px;
 
 %tabs_tab {
-  transition: $transition,
-              background-size 0ms,
-              background-image 0ms;
+  transition: $transition;
   min-height: $small-size;
   min-width: $small-size;
   padding: ($container-padding / 2) 12px;
@@ -3020,32 +3018,28 @@ list {
 
 row {
   @at-root %row_activatable, &.activatable {
-    transition: $transition,
-                background-size $ripple-fade-out-duration $ease-out,
-                background-image $ripple-fade-out-opacity-duration $ease-out;
     outline: none;
-    box-shadow: inset 0 0 0 9999px transparent;
-    background-image: radial-gradient(circle, transparent 10%, transparent 0%);
+    background-image: image(rgba($primary, 0));
+    background-position: $container-padding / 2 center;
     background-repeat: no-repeat;
-    background-position: center;
-    background-size: 1000% 1000%;
+    background-size: 2px 22px;
+    box-shadow: inset 0 0 0 9999px transparent;
 
     &:focus {
-      box-shadow: inset 0 0 0 2px $overlay-focus;
+      // box-shadow: inset 0 0 0 2px $overlay-focus;
     }
 
     &:hover {
-      transition: $transition,
-                  box-shadow 0ms,
-                  background-size $ripple-fade-out-duration $ease-out,
-                  background-image $ripple-fade-out-opacity-duration $ease-out;
+      transition: box-shadow $duration $ease-out,
+                  background-image 0;
       box-shadow: inset 0 0 0 9999px $overlay-hover;
     }
 
     &.has-open-popup, // this is for indicathing which row generated a popover see https://bugzilla.gnome.org/show_bug.cgi?id=754411
     &:active {
-      transition: $transition;
-      box-shadow: inset 0 0 0 9999px $overlay-hover;
+      transition: background-image $ripple-fade-out-opacity-duration $ease-out,
+                  box-shadow $ripple-fade-out-opacity-duration $ease-out;
+      box-shadow: inset 0 0 0 9999px $overlay-active;
     }
 
     button.circular {
@@ -3056,6 +3050,9 @@ row {
   &:selected {
     @extend %selected_items;
     color: inherit; // for overlays
+    background-image: image($primary);
+    transition: box-shadow $ripple-fade-out-opacity-duration $ease-out,
+                background-image $ripple-fade-out-opacity-duration $ease-out;
 
     image,
     label { color: $text; }
@@ -3362,7 +3359,6 @@ placessidebar.sidebar {
     margin: 0 $container-padding; // Remove unwanted hard-coded vertical margins with -1px
     padding: 0;
     border-radius: $corner-radius;
-    transition: background-image 0, box-shadow 0;
 
     // Using margins/padding directly in the SidebarRow
     // will make the animation of the new bookmark row jump
@@ -3378,7 +3374,6 @@ placessidebar.sidebar {
       background-position: ($container-padding / 2) center;
       background-repeat: no-repeat;
       background-size: 3px 20px;
-      transition: background-image 0, box-shadow 0;
     }
 
     &:disabled { color: $text-disabled; }
@@ -3409,10 +3404,6 @@ placessidebar.sidebar {
     }
 
     &:drop(active) {
-      transition: $transition,
-                  box-shadow 0ms,
-                  background-size $ripple-fade-out-duration $ease-out,
-                  background-image $ripple-fade-out-opacity-duration $ease-out;
       box-shadow: inset 0 0 0 9999px $overlay-hover;
     }
   }
@@ -3667,11 +3658,6 @@ colorswatch {
   &.light { color: on(light); }
 
   overlay {
-    // transition: $transition-shadow;
-
-    // &:hover { }
-    //
-    // &:drop(active) { }
   }
 
   &#add-color-button {

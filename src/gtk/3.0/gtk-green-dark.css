@@ -577,7 +577,7 @@ radio, scrollbar button, notebook > header > tabs > arrow, spinbutton.vertical b
 window#GearyMainWindow.background.csd stack#conversation_viewer .geary-expanded > .geary-composer-embed headerbar button, layouttabbar button, filechooser #pathbarbox > stack > box > button, messagedialog.csd .dialog-action-box button, .app-notification button, popover.background.menu button,
 popover.background button.model, .caja-pathbar button,
 .path-bar.linked:not(.vertical) > button, .nemo-window .primary-toolbar button:not(.text-button), .titlebar button:not(.suggested-action):not(.destructive-action), toolbar button, combobox > .linked:not(.vertical) > button:not(:only-child), .raven-mpris button.image-button, .budgie-panel button.budgie-menu-launcher, .budgie-panel button, infobar.error > revealer > box button, infobar.error:backdrop > revealer > box button, infobar.warning > revealer > box button, infobar.warning:backdrop > revealer > box button, infobar.action > revealer > box button, infobar.action:backdrop > revealer > box button, infobar.question > revealer > box button, infobar.question:backdrop > revealer > box button, .selection-mode .titlebar button.titlebutton, button.flat {
-  transition: all 75ms cubic-bezier(0, 0, 0.2, 1), box-shadow 300ms cubic-bezier(0, 0, 0.2, 1), border-image 225ms cubic-bezier(0, 0, 0.2, 1);
+  transition: all 75ms cubic-bezier(0, 0, 0.2, 1), box-shadow 300ms cubic-bezier(0, 0, 0.2, 1);
   outline: none;
   box-shadow: inset 0 0 0 9999px transparent;
   background-color: transparent;
@@ -612,7 +612,7 @@ window#GearyMainWindow.background.csd stack#conversation_viewer .geary-expanded 
 popover.background button.model:active, .caja-pathbar button:active,
 .path-bar.linked:not(.vertical) > button:active, .nemo-window .primary-toolbar button:active:not(.text-button), .titlebar button:active:not(.suggested-action):not(.destructive-action), toolbar button:active, combobox > .linked:not(.vertical) > button:active:not(:only-child), .raven-mpris button.image-button:active, .budgie-panel button:active, infobar.error > revealer > box button:active, infobar.warning > revealer > box button:active, infobar.action > revealer > box button:active, infobar.question > revealer > box button:active, .selection-mode .titlebar button.titlebutton:active, button.flat:active {
   animation: none;
-  transition: all 75ms cubic-bezier(0, 0, 0.2, 1), box-shadow 300ms cubic-bezier(0, 0, 0.2, 1), border-image 225ms cubic-bezier(0, 0, 0.2, 1);
+  transition: all 75ms cubic-bezier(0, 0, 0.2, 1), box-shadow 300ms cubic-bezier(0, 0, 0.2, 1);
   box-shadow: inset 0 0 0 9999px alpha(currentColor, 0.16);
   color: white;
 }
@@ -1544,8 +1544,8 @@ searchbar > revealer > box {
   transition: background-color 75ms cubic-bezier(0, 0, 0.2, 1), color 75ms cubic-bezier(0, 0, 0.2, 1);
   border-radius: 3px 3px 0 0;
   box-shadow: inset 0 -1px rgba(255, 255, 255, 0.12);
-  background-color: rgba(32, 32, 32, 0.98);
   color: white;
+  background-color: rgba(32, 32, 32, 0.98);
 }
 
 .titlebar:disabled {
@@ -2279,7 +2279,7 @@ popover.background list separator {
  * Notebooks *
  *************/
 tabbox > tab, notebook > header tab {
-  transition: all 75ms cubic-bezier(0, 0, 0.2, 1), background-size 0ms, background-image 0ms;
+  transition: all 75ms cubic-bezier(0, 0, 0.2, 1);
   min-height: 22px;
   min-width: 22px;
   padding: 3px 12px;
@@ -3491,31 +3491,28 @@ list row {
 }
 
 .budgie-popover.budgie-menu button.flat:not(.image-button):not(.indicator-item), treeview.view header button, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(.progressbar):not(.trough) header button, filechooser stack.view scrolledwindow treeview.view header button, row.activatable {
-  transition: all 75ms cubic-bezier(0, 0, 0.2, 1), background-size 300ms cubic-bezier(0, 0, 0.2, 1), background-image 1200ms cubic-bezier(0, 0, 0.2, 1);
   outline: none;
-  box-shadow: inset 0 0 0 9999px transparent;
-  background-image: radial-gradient(circle, transparent 10%, transparent 0%);
+  background-image: image(rgba(76, 175, 80, 0));
+  background-position: 3px center;
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: 1000% 1000%;
-}
-
-.budgie-popover.budgie-menu button.flat:focus:not(.image-button):not(.indicator-item), treeview.view header button:focus, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(.progressbar):not(.trough) header button:focus, filechooser stack.view scrolledwindow treeview.view header button:focus, row.activatable:focus {
-  box-shadow: inset 0 0 0 2px alpha(currentColor, 0.08);
+  background-size: 2px 22px;
+  box-shadow: inset 0 0 0 9999px transparent;
 }
 
 .budgie-popover.budgie-menu button.flat:hover:not(.image-button):not(.indicator-item), treeview.view header button:hover, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(.progressbar):not(.trough) header button:hover, filechooser stack.view scrolledwindow treeview.view header button:hover, row.activatable:hover {
-  transition: all 75ms cubic-bezier(0, 0, 0.2, 1), box-shadow 0ms, background-size 300ms cubic-bezier(0, 0, 0.2, 1), background-image 1200ms cubic-bezier(0, 0, 0.2, 1);
+  transition: box-shadow 75ms cubic-bezier(0, 0, 0.2, 1), background-image 0;
   box-shadow: inset 0 0 0 9999px alpha(currentColor, 0.08);
 }
 
 .budgie-popover.budgie-menu button.has-open-popup.flat:not(.image-button):not(.indicator-item), treeview.view header button.has-open-popup, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(.progressbar):not(.trough) header button.has-open-popup, filechooser stack.view scrolledwindow treeview.view header button.has-open-popup, .budgie-popover.budgie-menu button.flat:active:not(.image-button):not(.indicator-item), treeview.view header button:active, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(.progressbar):not(.trough) header button:active, filechooser stack.view scrolledwindow treeview.view header button:active, row.activatable.has-open-popup, row.activatable:active {
-  transition: all 75ms cubic-bezier(0, 0, 0.2, 1);
-  box-shadow: inset 0 0 0 9999px alpha(currentColor, 0.08);
+  transition: background-image 1200ms cubic-bezier(0, 0, 0.2, 1), box-shadow 1200ms cubic-bezier(0, 0, 0.2, 1);
+  box-shadow: inset 0 0 0 9999px alpha(currentColor, 0.16);
 }
 
 row:selected {
   color: inherit;
+  background-image: image(#4CAF50);
+  transition: box-shadow 1200ms cubic-bezier(0, 0, 0.2, 1), background-image 1200ms cubic-bezier(0, 0, 0.2, 1);
 }
 
 row:selected image,
@@ -3788,7 +3785,6 @@ placessidebar.sidebar row {
   margin: 0 6px;
   padding: 0;
   border-radius: 2px;
-  transition: background-image 0, box-shadow 0;
 }
 
 placessidebar.sidebar row > revealer {
@@ -3807,7 +3803,6 @@ placessidebar.sidebar row:selected {
   background-position: 3px center;
   background-repeat: no-repeat;
   background-size: 3px 20px;
-  transition: background-image 0, box-shadow 0;
 }
 
 placessidebar.sidebar row:disabled {
@@ -3847,7 +3842,6 @@ placessidebar.sidebar row.sidebar-new-bookmark-row image.sidebar-icon {
 }
 
 placessidebar.sidebar row:drop(active) {
-  transition: all 75ms cubic-bezier(0, 0, 0.2, 1), box-shadow 0ms, background-size 300ms cubic-bezier(0, 0, 0.2, 1), background-image 1200ms cubic-bezier(0, 0, 0.2, 1);
   box-shadow: inset 0 0 0 9999px alpha(currentColor, 0.08);
 }
 
@@ -4339,6 +4333,7 @@ popover.emoji-completion .emoji:hover {
 .nautilus-window.background.csd {
   background-color: rgba(48, 48, 48, 0.95);
   border-radius: 0 0 3px 3px;
+  background-color: rgba(48, 48, 48, 0.95);
 }
 
 .nautilus-window.background.csd.unified {
@@ -4346,7 +4341,7 @@ popover.emoji-completion .emoji:hover {
 }
 
 .nautilus-window.background.csd.unified headerbar.titlebar {
-  background-color: rgba(32, 32, 32, 0.95);
+  background-color: rgba(32, 32, 32, 0.98);
 }
 
 .nautilus-window.background.csd.unified placessidebar.sidebar {
@@ -4739,6 +4734,7 @@ window.background.csd > box.vertical > overlay > stack > box.vertical > box.hori
 }
 
 .tweak-categories {
+  padding: 3px 0;
   background-image: image(#303030);
 }
 
@@ -4860,6 +4856,7 @@ window.background.csd > box.horizontal > box.vertical > scrolledwindow.view > vi
 window.background.csd > leaflet > box.vertical > scrolledwindow.view > viewport.frame > stack list,
 window.background.csd > hdyleaflet > box.vertical > scrolledwindow.view > viewport.frame > stack list,
 window.background.csd > box.horizontal > box.vertical > scrolledwindow.view > viewport.frame > stack list {
+  padding: 3px 0;
   background-color: transparent;
 }
 
@@ -4867,6 +4864,21 @@ window.background.csd > leaflet > box.vertical > scrolledwindow.view > viewport.
 window.background.csd > hdyleaflet > box.vertical > scrolledwindow.view > viewport.frame > stack list row.activatable:not(:hover):not(:active):not(:selected),
 window.background.csd > box.horizontal > box.vertical > scrolledwindow.view > viewport.frame > stack list row.activatable:not(:hover):not(:active):not(:selected) {
   background-color: transparent;
+}
+
+window.background.csd > leaflet > box.vertical > scrolledwindow.view > viewport.frame > stack list row.activatable:selected,
+window.background.csd > hdyleaflet > box.vertical > scrolledwindow.view > viewport.frame > stack list row.activatable:selected,
+window.background.csd > box.horizontal > box.vertical > scrolledwindow.view > viewport.frame > stack list row.activatable:selected {
+  background-image: image(#4CAF50);
+  background-position: 4px center;
+  background-repeat: no-repeat;
+  background-size: 2px 32px;
+}
+
+window.background.csd > leaflet > box.vertical > scrolledwindow.view > viewport.frame > stack list > separator,
+window.background.csd > hdyleaflet > box.vertical > scrolledwindow.view > viewport.frame > stack list > separator,
+window.background.csd > box.horizontal > box.vertical > scrolledwindow.view > viewport.frame > stack list > separator {
+  margin: 3px 0;
 }
 
 dialog.background.csd > box.vertical.dialog-vbox > notebook > stack > box.horizontal > notebook > stack {
