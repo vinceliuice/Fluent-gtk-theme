@@ -99,8 +99,11 @@
   // &:hover, &:selected { border-radius: $corner-radius; }
 
   &:selected {
-    @extend %selected_items;
+    background-color: mix($text, $base, 20%);
+    color: $text;
   }
+
+  .background.csd &:selected { @extend %selected_items; }
 }
 
 widget.view {
