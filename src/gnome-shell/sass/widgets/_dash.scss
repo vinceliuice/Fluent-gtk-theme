@@ -32,7 +32,7 @@ $dash_border_radius: $buttons_radius * 1.5;
 .dash-background {
   background-color: $dash_background_color;
   margin-bottom: $dash_bottom_margin;
-  padding: $dash_padding $dash_padding / 2;
+  padding: $dash_padding ($dash_padding + $dash_spacing);
   border-radius: $dash_border_radius;
 }
 

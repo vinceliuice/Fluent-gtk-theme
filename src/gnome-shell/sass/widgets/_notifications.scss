@@ -29,6 +29,7 @@ $notification_banner_width: 34em;
     color: $secondary_fg_color;
     font-weight: 500;
     border-width: 0;
+    border-top: 1px solid $border_color;
 
     &:first-child { border-radius: 0 0 0 $buttons_radius; }
 

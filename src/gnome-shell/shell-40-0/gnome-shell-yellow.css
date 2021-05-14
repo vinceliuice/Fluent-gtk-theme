@@ -1194,6 +1194,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   color: rgba(0, 0, 0, 0.54);
   font-weight: 500;
   border-width: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
 }
 
 .notification-banner .notification-button:first-child {
@@ -2163,7 +2164,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .dash-background {
   background-color: rgba(255, 255, 255, 0.2);
   margin-bottom: 16px;
-  padding: 6px 3px;
+  padding: 6px 9px;
   border-radius: 4.5px;
 }
 

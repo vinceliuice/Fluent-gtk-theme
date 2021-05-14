@@ -88,15 +88,15 @@
 
   // close button
   .message-close-button {
-  color: $secondary_fg_color;
-  padding: 0;
-  height: 24px;
-  width: 24px;
-  border-radius: 100px;
+    color: $secondary_fg_color;
+    padding: 0;
+    height: 24px;
+    width: 24px;
+    border-radius: 100px;
 
-  &:hover, &:focus { color: $fg_color; background-color: $divider_color; }
-  &:active { color: $fg_color; background-color: $track_color; }
-  &:insensitive { color: $disabled_secondary_fg_color; }
+    &:hover, &:focus { color: $fg_color; background-color: $divider_color; }
+    &:active { color: $fg_color; background-color: $track_color; }
+    &:insensitive { color: $disabled_secondary_fg_color; }
   }
 
   // body
