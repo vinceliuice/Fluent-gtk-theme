@@ -92,6 +92,14 @@ toolbarbutton.bookmark-item:not(.subviewbutton)[open="true"] {
 	transition: background 200ms cubic-bezier(0.0, 0.0, 0.2, 1);
 }
 
+/*Notification bar*/
+notification {
+	min-height: 40px !important;
+	padding: 4px 10px 3px !important;
+	padding-inline-start: 20px !important;
+	font-size: 1em !important;
+}
+
 /* Overrides: Remove border below the menu bar / above the header bar */
 #TabsToolbar:not([collapsed="true"]) + #nav-bar {
 	border-top-width: 0 !important;

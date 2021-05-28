@@ -66,7 +66,6 @@
 #appMenu-zoomReset-button:not(#appMenu-fxa-label):not(#hack),
 #tracking-protection-preferences-button:not(#hack),
 .findbar-container toolbarbutton.findbar-button,
-.notification-button,
 .protections-popup-footer-button,
 #PanelUI-panic-view-button,
 .tracking-protection-button,
@@ -74,6 +73,11 @@
 	padding: 2px 10px !important;
 	text-align: center !important;
 	transition: all 200ms cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+
+.notification-button {
+	padding: 0 10px !important;
+	font-size: 0.9em !important;
 }
 
 .subviewbutton.panel-subview-footer label {
@@ -209,10 +213,10 @@ menulist[open] .menulist-label-box,
 	border: none !important;
 	border-radius: 100px !important;
 	padding: 0 0 !important;
-	height: 28px !important;
-	width: 28px !important;
-	min-height: 28px !important;
-	min-width: 28px !important;
+	height: 30px !important;
+	width: 30px !important;
+	min-height: 30px !important;
+	min-width: 30px !important;
 	transition: all 200ms cubic-bezier(0.0, 0.0, 0.2, 1);
 }
 

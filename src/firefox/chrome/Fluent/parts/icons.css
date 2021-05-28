@@ -400,6 +400,29 @@ menuitem[type="radio"][disabled="true"] .menu-iconic-icon {
 	list-style-image: url("../icons/geo.svg") !important;
 }
 
+.blocked-permission-icon.popup-icon {
+	list-style-image: url("../icons/blocked-permission-symbolic.svg") !important;
+}
+
+#webrtc-sharing-icon[sharing="screen"],
+.screen-icon {
+	list-style-image: url("../icons/screen-symbolic.svg") !important;
+}
+
+.screen-icon.blocked-permission-icon {
+	list-style-image: url("../icons/screen-blocked-symbolic.svg") !important;
+}
+
+#webrtc-sharing-icon[sharing="microphone"],
+.microphone-icon {
+	list-style-image: url("../icons/microphone-symbolic.svg") !important;
+}
+
+#webrtc-sharing-icon[sharing]:not([paused]) {
+	-moz-context-properties: fill !important;
+	fill: rgb(224, 41, 29) !important;
+}
+
 .bookmark-item[container] {
 	list-style-image: url("../icons/folder-symbolic.svg") !important;
 }
