@@ -985,12 +985,12 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   color: rgba(255, 255, 255, 0.85);
 }
 
-.popup-menu .popup-menu-item.selected:checked {
+.popup-menu .popup-menu-item:checked.selected {
   background-color: #6e6e6e;
   color: rgba(255, 255, 255, 0.85);
 }
 
-.popup-menu .popup-menu-item:checked:active, .popup-menu .popup-menu-item.selected:checked:active {
+.popup-menu .popup-menu-item:checked:active, .popup-menu .popup-menu-item:checked.selected:active {
   background-color: #545454;
   color: rgba(255, 255, 255, 0.85);
 }
@@ -2737,7 +2737,6 @@ StWidget.focused .app-well-app-running-dot {
 }
 
 .all-apps,
-.search-display > StBoxLayout,
 .frequent-apps > StBoxLayout {
   padding: 0px 88px 10px 88px;
 }

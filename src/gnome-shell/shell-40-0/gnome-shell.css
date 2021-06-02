@@ -324,20 +324,20 @@ StScrollBar {
 }
 
 StScrollView StScrollBar {
-  min-width: 14px;
-  min-height: 14px;
+  min-width: 16px;
+  min-height: 6px;
 }
 
 StScrollBar StBin#trough {
   margin: 6px;
-  border-radius: 100px;
+  border-radius: 9999px;
   background-color: rgba(0, 0, 0, 0.12);
 }
 
 StScrollBar StButton#vhandle, StScrollBar StButton#hhandle {
-  border-radius: 100px;
+  border-radius: 9999px;
   background-color: rgba(0, 0, 0, 0.38);
-  margin: 3px;
+  margin: 6px;
 }
 
 StScrollBar StButton#vhandle:hover, StScrollBar StButton#hhandle:hover {
@@ -410,12 +410,12 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   color: rgba(255, 255, 255, 0.85);
 }
 
-.popup-menu-item.selected:checked {
+.popup-menu-item:checked.selected {
   background-color: #3181ea;
   color: rgba(255, 255, 255, 0.85);
 }
 
-.popup-menu-item:checked:active, .popup-menu-item.selected:checked:active {
+.popup-menu-item:checked:active, .popup-menu-item:checked.selected:active {
   background-color: #1567d3;
   color: rgba(255, 255, 255, 0.85);
 }
@@ -1861,19 +1861,19 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   box-shadow: none;
 }
 
-#panel .panel-button.clock-display:hover, #panel .panel-button.clock-display:active, #panel .panel-button.clock-display:overview, #panel .panel-button.clock-display:focus, #panel .panel-button.clock-display:checked {
+#panel .panel-button:hover.clock-display, #panel .panel-button:active.clock-display, #panel .panel-button:overview.clock-display, #panel .panel-button:focus.clock-display, #panel .panel-button:checked.clock-display {
   box-shadow: none;
 }
 
-#panel .panel-button.clock-display:hover .clock, #panel .panel-button.clock-display:active .clock, #panel .panel-button.clock-display:overview .clock, #panel .panel-button.clock-display:focus .clock, #panel .panel-button.clock-display:checked .clock {
+#panel .panel-button:hover.clock-display .clock, #panel .panel-button:active.clock-display .clock, #panel .panel-button:overview.clock-display .clock, #panel .panel-button:focus.clock-display .clock, #panel .panel-button:checked.clock-display .clock {
   box-shadow: none;
   background: none;
 }
 
 #panel .panel-button .system-status-icon {
   icon-size: 16px;
-  padding: 3px;
-  margin: 0 2px;
+  padding: 6px;
+  margin: 0 4px;
 }
 
 #panel .panel-button .panel-status-menu-box .system-status-icon {
@@ -1890,7 +1890,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   -st-icon-style: symbolic;
 }
 
-#panel #panelActivities.panel-button {
+#panel .panel-button#panelActivities {
   background-image: url("assets/activities.svg");
   background-position: center center;
   background-repeat: no-repeat;
@@ -1899,16 +1899,22 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   box-shadow: none;
 }
 
-#panel #panelActivities.panel-button > * {
+#panel .panel-button#panelActivities > * {
   width: 36px;
 }
 
-#panel #panelActivities.panel-button:overview {
+#panel .panel-button#panelActivities:overview {
   background-color: transparent;
   box-shadow: none;
 }
 
+#panel Gjs_ui_panel_AggregateMenu.panel-button .system-status-icon {
+  margin: 0 0 !important;
+  padding: 6px !important;
+}
+
 #panel Gjs_ArcMenu_ApplicationsButton.panel-button,
+#panel Gjs_arcmenu_arcmenu_com_menuButton_Arc_Menu_MenuButton.panel-button,
 #panel Gjs_arc-menu_linuxgem33_com_menuButton_ArcMenu_MenuButton.panel-button,
 #panel Gjs_ui_panel_ActivitiesButton.panel-button {
   border-radius: 5px 0 0 5px !important;
@@ -1920,18 +1926,22 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 #panel:overview Gjs_ArcMenu_ApplicationsButton.panel-button,
+#panel:overview Gjs_arcmenu_arcmenu_com_menuButton_Arc_Menu_MenuButton.panel-button,
 #panel:overview Gjs_arc-menu_linuxgem33_com_menuButton_ArcMenu_MenuButton.panel-button,
 #panel:overview Gjs_ui_panel_ActivitiesButton.panel-button,
 #panel:overview Gjs_AggregateMenu.panel-button,
 #panel:overview Gjs_ui_panel_AggregateMenu.panel-button, #panel.unlock-screen Gjs_ArcMenu_ApplicationsButton.panel-button,
+#panel.unlock-screen Gjs_arcmenu_arcmenu_com_menuButton_Arc_Menu_MenuButton.panel-button,
 #panel.unlock-screen Gjs_arc-menu_linuxgem33_com_menuButton_ArcMenu_MenuButton.panel-button,
 #panel.unlock-screen Gjs_ui_panel_ActivitiesButton.panel-button,
 #panel.unlock-screen Gjs_AggregateMenu.panel-button,
 #panel.unlock-screen Gjs_ui_panel_AggregateMenu.panel-button, #panel.login-screen Gjs_ArcMenu_ApplicationsButton.panel-button,
+#panel.login-screen Gjs_arcmenu_arcmenu_com_menuButton_Arc_Menu_MenuButton.panel-button,
 #panel.login-screen Gjs_arc-menu_linuxgem33_com_menuButton_ArcMenu_MenuButton.panel-button,
 #panel.login-screen Gjs_ui_panel_ActivitiesButton.panel-button,
 #panel.login-screen Gjs_AggregateMenu.panel-button,
 #panel.login-screen Gjs_ui_panel_AggregateMenu.panel-button, #panel.lock-screen Gjs_ArcMenu_ApplicationsButton.panel-button,
+#panel.lock-screen Gjs_arcmenu_arcmenu_com_menuButton_Arc_Menu_MenuButton.panel-button,
 #panel.lock-screen Gjs_arc-menu_linuxgem33_com_menuButton_ArcMenu_MenuButton.panel-button,
 #panel.lock-screen Gjs_ui_panel_ActivitiesButton.panel-button,
 #panel.lock-screen Gjs_AggregateMenu.panel-button,
@@ -3334,4 +3344,73 @@ StWidget.focused .app-well-app-running-dot {
 
 #dashtodockContainer.opaque.extended:overview #dash .dash-background, #dashtodockContainer.transparent.extended:overview #dash .dash-background {
   background-color: rgba(255, 255, 255, 0.2);
+}
+
+.openweather-button, .openweather-button-action, .openweather-menu-button-container, .openweather-button-box {
+  border: 1px solid transparent !important;
+}
+
+.openweather-provider {
+  padding: 0 16px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.54);
+  background-color: transparent;
+  border-color: transparent;
+  box-shadow: 0 0 transparent;
+  text-shadow: none;
+  icon-shadow: none;
+}
+
+.openweather-provider:hover {
+  color: rgba(0, 0, 0, 0.87);
+  background-color: rgba(0, 0, 0, 0.12);
+  border-color: transparent;
+  box-shadow: 0 0 transparent;
+  text-shadow: none;
+  icon-shadow: none;
+}
+
+.openweather-provider:focus {
+  color: rgba(0, 0, 0, 0.87);
+  text-shadow: none;
+  icon-shadow: none;
+  box-shadow: 0 0 transparent;
+}
+
+.openweather-provider:active {
+  color: rgba(0, 0, 0, 0.87);
+  background-color: rgba(0, 0, 0, 0.2);
+  border-color: transparent;
+  box-shadow: 0 0 transparent;
+  text-shadow: none;
+  icon-shadow: none;
+}
+
+.openweather-current-icon, .openweather-current-summary, .openweather-current-summarybox {
+  background: none;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.openweather-current-databox-values {
+  background: none;
+  color: rgba(0, 0, 0, 0.38);
+}
+
+.openweather-current-databox-captions {
+  background: none;
+  color: rgba(0, 0, 0, 0.38);
+}
+
+.openweather-forecast-icon, .openweather-forecast-summary {
+  background: none;
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.openweather-forecast-day, .openweather-forecast-temperature {
+  background: none;
+  color: rgba(0, 0, 0, 0.38);
+}
+
+.openweather-sunrise-icon, .openweather-sunset-icon, .openweather-build-icon {
+  color: rgba(0, 0, 0, 0.54);
 }

@@ -3,7 +3,7 @@
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
 #urlbar {
-	--urlbar-height: 30.00px;
+	--urlbar-height: 30.00px !important;
 	--urlbar-toolbar-height: 30.00px !important;
 }
 
@@ -72,18 +72,20 @@ toolbarspring {
 #tracking-protection-icon-container {
 	width: 32px !important;
 	border-radius: 3px !important;
-	padding: 5px 8px !important;
-	opacity: 0.75 !important;
 }
 
 .urlbar-icon {
 	margin: 1px !important;
+	margin-inline: 1px !important;
+	padding: 5px 8px !important;
+	opacity: 0.75 !important;
 }
 
 .identity-box-button,
 #tracking-protection-icon-container {
 	margin-top: 1px !important;
 	margin-bottom: 1px !important;
+	padding: 0 8px !important;
 }
 
 #tracking-protection-icon-container {
