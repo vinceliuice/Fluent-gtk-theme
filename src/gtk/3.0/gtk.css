@@ -1895,6 +1895,10 @@ treeview.view:selected, window#gnome-system-monitor.background.csd > box.vertica
   color: rgba(0, 0, 0, 0.87);
 }
 
+.background:not(.csd) treeview.view:selected, .background:not(.csd) window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:selected:not(.progressbar):not(.trough), window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow .background:not(.csd) treeview.view:selected:not(.progressbar):not(.trough), .background:not(.csd) filechooser stack.view scrolledwindow treeview.view:selected, filechooser stack.view scrolledwindow .background:not(.csd) treeview.view:selected {
+  background-image: image(rgba(235, 235, 235, 0.987));
+}
+
 treeview.view:hover, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:hover:not(.progressbar):not(.trough), filechooser stack.view scrolledwindow treeview.view:hover, treeview.view:selected, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:selected:not(.progressbar):not(.trough), filechooser stack.view scrolledwindow treeview.view:selected {
   border-radius: 0;
 }
@@ -7553,6 +7557,11 @@ window.background.csd.thunar > grid.horizontal > paned.horizontal > scrolledwind
 
 window.background.csd.thunar > grid.horizontal > paned.horizontal > scrolledwindow.frame.sidebar.shortcuts-pane treeview.view:not(:hover):not(:selected), filechooser stack.view window.background.csd.thunar > grid.horizontal > paned.horizontal > scrolledwindow.frame.sidebar.shortcuts-pane treeview.view:not(:hover):not(:selected), window.background.csd.thunar > grid.horizontal > paned.horizontal > scrolledwindow.frame.sidebar.shortcuts-pane window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(:hover):not(:selected):not(.progressbar):not(.trough), window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow window.background.csd.thunar > grid.horizontal > paned.horizontal > scrolledwindow.frame.sidebar.shortcuts-pane treeview.view:not(:hover):not(:selected):not(.progressbar):not(.trough) {
   background-color: transparent;
+}
+
+.xfsm-logout-dialog {
+  border: 2px solid #d9d9d9;
+  box-shadow: none;
 }
 
 /************************

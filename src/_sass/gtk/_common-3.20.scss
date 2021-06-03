@@ -1635,6 +1635,10 @@ treeview.view {
     color: $text;
   }
 
+  .background:not(.csd) &:selected { // Fix for xfce4 setting
+    background-image: image(mix($text, $base, 10%));
+  }
+
   &:hover, &:selected { border-radius: 0; }
 
   rubberband { @extend rubberband; } // to avoid borders being overridden by the previously set props

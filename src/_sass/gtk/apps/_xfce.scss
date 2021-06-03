@@ -141,3 +141,9 @@ window.background.csd.thunar {
     }
   }
 }
+
+// Xfce4 logout dialog
+.xfsm-logout-dialog {
+  border: 2px solid $solid-border;
+  box-shadow: none;
+}
