@@ -7515,6 +7515,16 @@ XfdesktopIconView.view .rubberband {
 /**********
  * Thunar *
  **********/
+.thunar toolbar {
+  background-color: #F7F7F7;
+  color: rgba(0, 0, 0, 0.87);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.thunar toolbar:backdrop {
+  background-color: #F2F2F2;
+}
+
 .thunar #location-toolbar {
   border-bottom: 1px solid rgba(0, 0, 0, 0.12);
 }
