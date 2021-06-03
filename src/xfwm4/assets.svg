@@ -1,25 +1,31 @@
 <svg width="600" height="200" version="1.1" viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg" xmlns:osb="http://www.openswatchbook.org/uri/2009/osb" xmlns:xlink="http://www.w3.org/1999/xlink">
  <g transform="translate(5 -564.36)">
   <g id="title-1-active" transform="matrix(.17857 0 0 1 381.11 61)">
+   <rect x="5" y="554.36" width="34" height="34" fill="#202020"/>
+  </g>
+  <g id="title-1-inactive" transform="matrix(.17857 0 0 1 381.11 61)">
    <rect x="5" y="554.36" width="34" height="34" fill="#2c2c2c"/>
   </g>
   <use id="title-2-active" transform="translate(7)" width="100%" height="100%" xlink:href="#title-1-active"/>
   <use id="title-3-active" transform="translate(14)" width="100%" height="100%" xlink:href="#title-1-active"/>
   <use id="title-4-active" transform="translate(21)" width="100%" height="100%" xlink:href="#title-1-active"/>
   <use id="title-5-active" transform="translate(28)" width="100%" height="100%" xlink:href="#title-1-active"/>
-  <use id="title-1-inactive" transform="translate(35)" width="100%" height="100%" xlink:href="#title-1-active"/>
-  <use id="title-2-inactive" transform="translate(42)" width="100%" height="100%" xlink:href="#title-1-active"/>
-  <use id="title-3-inactive" transform="translate(49)" width="100%" height="100%" xlink:href="#title-1-active"/>
-  <use id="title-4-inactive" transform="translate(56)" width="100%" height="100%" xlink:href="#title-1-active"/>
-  <use id="title-5-inactive" transform="translate(63)" width="100%" height="100%" xlink:href="#title-1-active"/>
+  <use id="title-1-inactive" transform="translate(35)" width="100%" height="100%" xlink:href="#title-1-inactive"/>
+  <use id="title-2-inactive" transform="translate(42)" width="100%" height="100%" xlink:href="#title-1-inactive"/>
+  <use id="title-3-inactive" transform="translate(49)" width="100%" height="100%" xlink:href="#title-1-inactive"/>
+  <use id="title-4-inactive" transform="translate(56)" width="100%" height="100%" xlink:href="#title-1-inactive"/>
+  <use id="title-5-inactive" transform="translate(63)" width="100%" height="100%" xlink:href="#title-1-inactive"/>
   <g id="top-left-active" transform="translate(377 -73)">
+   <path d="m5 731.36-2e-7 29h8l1e-6 -34-7-4e-5 -2e-7 1-1-1e-5z" fill="#202020"/>
+  </g>
+  <g id="top-left-inactive" transform="translate(377 -73)">
    <path d="m5 731.36-2e-7 29h8l1e-6 -34-7-4e-5 -2e-7 1-1-1e-5z" fill="#2c2c2c"/>
   </g>
-  <use id="top-left-inactive" transform="translate(10)" width="100%" height="100%" xlink:href="#top-left-active"/>
+  <use id="top-left-inactive" transform="translate(10)" width="100%" height="100%" xlink:href="#top-left-inactive"/>
   <use id="top-right-active" transform="matrix(-1 0 0 1 792 1.0209e-6)" width="100%" height="100%" xlink:href="#top-left-active"/>
-  <use id="top-right-inactive" transform="matrix(-1 0 0 1 802 1.0209e-6)" width="100%" height="100%" xlink:href="#top-left-active"/>
+  <use id="top-right-inactive" transform="matrix(-1 0 0 1 802 1.0209e-6)" width="100%" height="100%" xlink:href="#top-left-inactive"/>
   <g id="left-active" transform="translate(384 -69)">
-   <rect transform="scale(-1,1)" x="-48" y="734.36" width="2" height="16" fill="#2c2c2c"/>
+   <rect transform="scale(-1,1)" x="-48" y="734.36" width="2" height="16" fill="#202020"/>
   </g>
   <g id="left-inactive" transform="translate(389 -69)">
    <rect transform="scale(-1,1)" x="-48" y="734.36" width="2" height="16" fill="#2c2c2c"/>
@@ -28,10 +34,10 @@
    <rect transform="scale(-1,1)" x="-48" y="734.36" width="2" height="16" fill="#2c2c2c"/>
   </g>
   <g id="right-active" transform="matrix(-1 0 0 1 488 -69)">
-   <rect transform="scale(-1,1)" x="-48" y="734.36" width="2" height="16" fill="#2c2c2c"/>
+   <rect transform="scale(-1,1)" x="-48" y="734.36" width="2" height="16" fill="#202020"/>
   </g>
   <g id="bottom-left-active" transform="translate(361 -71)">
-   <path d="m98 730.36h-2v9.0001h1v1l9-1.2e-4v-2l-8 1.2e-4z" fill="#2c2c2c"/>
+   <path d="m98 730.36h-2v9.0001h1v1l9-1.2e-4v-2l-8 1.2e-4z" fill="#202020"/>
   </g>
   <g id="bottom-left-inactive" transform="translate(361 -59)">
    <path d="m98 730.36h-2v9.0001h1v1l9-1.2e-4v-2l-8 1.2e-4z" fill="#2c2c2c"/>
@@ -40,24 +46,24 @@
    <path d="m98 730.36h-2v9.0001h1v1l9-1.2e-4v-2l-8 1.2e-4z" fill="#2c2c2c"/>
   </g>
   <g id="bottom-right-active" transform="matrix(-1 0 0 1 593 -71)">
-   <path d="m98 730.36h-2v9.0001h1v1l9-1.2e-4v-2l-8 1.2e-4z" fill="#2c2c2c"/>
+   <path d="m98 730.36h-2v9.0001h1v1l9-1.2e-4v-2l-8 1.2e-4z" fill="#202020"/>
   </g>
   <g id="bottom-active" transform="matrix(0 -1 -1 0 1219.4 715.36)">
-   <rect transform="scale(-1,1)" x="-48" y="734.36" width="2" height="16" fill="#2c2c2c"/>
+   <rect transform="scale(-1,1)" x="-48" y="734.36" width="2" height="16" fill="#202020"/>
   </g>
   <g id="bottom-inactive" transform="matrix(0 -1 -1 0 1219.4 727.36)">
    <rect transform="scale(-1,1)" x="-48" y="734.36" width="2" height="16" fill="#2c2c2c"/>
   </g>
   <g id="hide-prelight" transform="translate(29 36)">
    <g transform="translate(33 33)">
-    <rect x="5" y="554.36" width="34" height="34" fill="#2c2c2c"/>
+    <rect x="5" y="554.36" width="34" height="34" fill="#202020"/>
    </g>
    <path d="m55 616.36c6.6273 0 12-5.3726 12-12 0-6.6274-5.3726-12-12-12-6.6275 0-12 5.3726-12 12 0 6.6274 5.3726 12 12 12" fill="#ffffff" fill-rule="evenodd" opacity=".15"/>
    <path d="m51 605.36h8v2h-8z" fill="#ffffff" opacity=".75"/>
   </g>
   <g id="maximize-prelight" transform="translate(29 41)">
    <g transform="translate(33 66)">
-    <rect x="5" y="554.36" width="34" height="34" fill="#2c2c2c"/>
+    <rect x="5" y="554.36" width="34" height="34" fill="#202020"/>
    </g>
    <g transform="translate(40 625.36)" enable-background="new">
     <g transform="translate(0 -1028.4)">
@@ -74,7 +80,7 @@
   </g>
   <g id="maximize-toggled-prelight" transform="translate(29 47)">
    <g transform="translate(33 99)">
-    <rect x="5" y="554.36" width="34" height="34" fill="#2c2c2c"/>
+    <rect x="5" y="554.36" width="34" height="34" fill="#202020"/>
    </g>
    <g transform="translate(40 658.36)" enable-background="new">
     <g transform="translate(0 -1028.4)">
@@ -91,7 +97,7 @@
   </g>
   <g id="hide-pressed" transform="translate(44 36)">
    <g transform="translate(66 33)">
-    <rect x="5" y="554.36" width="34" height="34" fill="#2c2c2c"/>
+    <rect x="5" y="554.36" width="34" height="34" fill="#202020"/>
    </g>
    <g transform="translate(73 592.36)" enable-background="new">
     <g transform="translate(0 -1028.4)">
@@ -109,7 +115,7 @@
   </g>
   <g id="maximize-pressed" transform="translate(44 41)">
    <g transform="translate(66 66)">
-    <rect x="5" y="554.36" width="34" height="34" fill="#2c2c2c"/>
+    <rect x="5" y="554.36" width="34" height="34" fill="#202020"/>
    </g>
    <g transform="translate(73 625.36)" enable-background="new">
     <g transform="translate(0 -1028.4)">
@@ -127,7 +133,7 @@
   </g>
   <g id="maximize-toggled-pressed" transform="translate(44 47)">
    <g transform="translate(66 99)">
-    <rect x="5" y="554.36" width="34" height="34" fill="#2c2c2c"/>
+    <rect x="5" y="554.36" width="34" height="34" fill="#202020"/>
    </g>
    <g transform="translate(73 658.36)" enable-background="new">
     <g transform="translate(0 -1028.4)">
@@ -146,7 +152,7 @@
   <g id="menu-prelight" transform="translate(-3,18)">
    <g transform="translate(250 -33)">
     <g transform="translate(0 33)">
-     <rect x="5" y="554.36" width="34" height="34" fill="#2c2c2c"/>
+     <rect x="5" y="554.36" width="34" height="34" fill="#202020"/>
     </g>
     <g transform="translate(7 592.36)" enable-background="new">
      <g transform="translate(0 -1028.4)">
@@ -167,7 +173,7 @@
   <g id="shade-prelight" transform="translate(-3 23)">
    <g transform="translate(250 2.0001)">
     <g transform="translate(0 33)">
-     <rect x="5" y="554.36" width="34" height="34" fill="#2c2c2c"/>
+     <rect x="5" y="554.36" width="34" height="34" fill="#202020"/>
     </g>
     <g transform="translate(7 592.36)" enable-background="new">
      <g transform="translate(0 -1028.4)">
@@ -188,7 +194,7 @@
   <g id="shade-toggled-prelight" transform="translate(-3 24)">
    <g transform="translate(250 37)">
     <g transform="translate(0 33)">
-     <rect x="5" y="554.36" width="34" height="34" fill="#2c2c2c"/>
+     <rect x="5" y="554.36" width="34" height="34" fill="#202020"/>
     </g>
     <g transform="translate(7 592.36)" enable-background="new">
      <g transform="translate(0 -1028.4)">
@@ -209,7 +215,7 @@
   <g id="stick-prelight" transform="translate(-3 27.59)">
    <g transform="translate(250 71.41)">
     <g transform="translate(0 33)">
-     <rect x="5" y="554.36" width="34" height="34" fill="#2c2c2c"/>
+     <rect x="5" y="554.36" width="34" height="34" fill="#202020"/>
     </g>
     <g transform="translate(7 592.36)" enable-background="new">
      <g transform="translate(0 -1028.4)">
@@ -230,7 +236,7 @@
   <g id="stick-toggled-prelight" transform="translate(-3 28)">
    <g transform="translate(250 109)">
     <g transform="translate(0 33)">
-     <rect x="5" y="554.36" width="34" height="34" fill="#2c2c2c"/>
+     <rect x="5" y="554.36" width="34" height="34" fill="#202020"/>
     </g>
     <g transform="translate(7 592.36)" enable-background="new">
      <g transform="translate(0 -1028.4)">
@@ -252,7 +258,7 @@
   <g id="menu-pressed" transform="translate(38,18)">
    <g transform="translate(250 -33)">
     <g transform="translate(0 33)">
-     <rect x="5" y="554.36" width="34" height="34" fill="#2c2c2c"/>
+     <rect x="5" y="554.36" width="34" height="34" fill="#202020"/>
     </g>
     <g transform="translate(7 592.36)" enable-background="new">
      <g transform="translate(0 -1028.4)">
@@ -273,7 +279,7 @@
   <g id="shade-pressed" transform="translate(38 23)">
    <g transform="translate(250 2.0001)">
     <g transform="translate(0 33)">
-     <rect x="5" y="554.36" width="34" height="34" fill="#2c2c2c"/>
+     <rect x="5" y="554.36" width="34" height="34" fill="#202020"/>
     </g>
     <g transform="translate(7 592.36)" enable-background="new">
      <g transform="translate(0 -1028.4)">
@@ -294,7 +300,7 @@
   <g id="shade-toggled-pressed" transform="translate(38 24)">
    <g transform="translate(250 37)">
     <g transform="translate(0 33)">
-     <rect x="5" y="554.36" width="34" height="34" fill="#2c2c2c"/>
+     <rect x="5" y="554.36" width="34" height="34" fill="#202020"/>
     </g>
     <g transform="translate(7 592.36)" enable-background="new">
      <g transform="translate(0 -1028.4)">
@@ -315,7 +321,7 @@
   <g id="stick-pressed" transform="translate(38 27.59)">
    <g transform="translate(250 71.41)">
     <g transform="translate(0 33)">
-     <rect x="5" y="554.36" width="34" height="34" fill="#2c2c2c"/>
+     <rect x="5" y="554.36" width="34" height="34" fill="#202020"/>
     </g>
     <g transform="translate(7 592.36)" enable-background="new">
      <g transform="translate(0 -1028.4)">
@@ -336,7 +342,7 @@
   <g id="stick-toggled-pressed" transform="translate(38 28)">
    <g transform="translate(250 109)">
     <g transform="translate(0 33)">
-     <rect x="5" y="554.36" width="34" height="34" fill="#2c2c2c"/>
+     <rect x="5" y="554.36" width="34" height="34" fill="#202020"/>
     </g>
     <g transform="translate(7 592.36)" enable-background="new">
      <g transform="translate(0 -1028.4)">
@@ -357,14 +363,14 @@
   </g>
   <g id="close-prelight" transform="translate(29 31)">
    <g transform="translate(33 -2.2617e-5)">
-    <rect x="5" y="554.36" width="34" height="34" fill="#2c2c2c"/>
+    <rect x="5" y="554.36" width="34" height="34" fill="#202020"/>
    </g>
    <path d="m55 583.36c6.6273 0 12-5.3726 12-12 0-6.6274-5.3726-12-12-12-6.6275 0-12 5.3726-12 12 0 6.6274 5.3726 12 12 12" fill="#ffffff" fill-rule="evenodd" opacity=".15"/>
    <path d="m51.41 566.36-1.41 1.41 3.59 3.59-3.59 3.59 1.41 1.41 3.59-3.59 3.59 3.59 1.41-1.41-3.59-3.59 3.59-3.59-1.41-1.41-3.59 3.59z" fill="#ffffff" opacity=".75"/>
   </g>
   <g id="close-pressed" transform="translate(44 31)">
    <g transform="translate(66 -2.2617e-5)">
-    <rect x="5" y="554.36" width="34" height="34" fill="#2c2c2c"/>
+    <rect x="5" y="554.36" width="34" height="34" fill="#202020"/>
    </g>
    <g transform="translate(73 559.36)" enable-background="new">
     <g transform="translate(0 -1028.4)">
@@ -386,13 +392,13 @@
   </g>
   <g id="hide-active" transform="translate(-18 36)">
    <g transform="translate(33 33)">
-    <rect x="5" y="554.36" width="34" height="34" fill="#2c2c2c"/>
+    <rect x="5" y="554.36" width="34" height="34" fill="#202020"/>
    </g>
    <path d="m51 605.36h8v2h-8z" fill="#ffffff" opacity=".75"/>
   </g>
   <g id="maximize-active" transform="translate(-18 41)">
    <g transform="translate(33 66)">
-    <rect x="5" y="554.36" width="34" height="34" fill="#2c2c2c"/>
+    <rect x="5" y="554.36" width="34" height="34" fill="#202020"/>
    </g>
    <g transform="translate(40 625.36)" enable-background="new">
     <g transform="translate(0 -1028.4)">
@@ -408,7 +414,7 @@
   </g>
   <g id="maximize-toggled-active" transform="translate(-18 47)">
    <g transform="translate(33 99)">
-    <rect x="5" y="554.36" width="34" height="34" fill="#2c2c2c"/>
+    <rect x="5" y="554.36" width="34" height="34" fill="#202020"/>
    </g>
    <g transform="translate(40 658.36)" enable-background="new">
     <g transform="translate(0 -1028.4)">
@@ -424,7 +430,7 @@
   </g>
   <g id="close-active" transform="translate(-18 31)">
    <g transform="translate(33 -2.2617e-5)">
-    <rect x="5" y="554.36" width="34" height="34" fill="#2c2c2c"/>
+    <rect x="5" y="554.36" width="34" height="34" fill="#202020"/>
    </g>
    <path d="m51.41 566.36-1.41 1.41 3.59 3.59-3.59 3.59 1.41 1.41 3.59-3.59 3.59 3.59 1.41-1.41-3.59-3.59 3.59-3.59-1.41-1.41-3.59 3.59z" fill="#ffffff" opacity=".75"/>
   </g>
@@ -475,7 +481,7 @@
   <g id="menu-active" transform="translate(-45,18)">
    <g transform="translate(250 -33)">
     <g transform="translate(0 33)">
-     <rect x="5" y="554.36" width="34" height="34" fill="#2c2c2c"/>
+     <rect x="5" y="554.36" width="34" height="34" fill="#202020"/>
     </g>
     <g transform="translate(7 592.36)" enable-background="new">
      <g transform="translate(0 -1028.4)">
@@ -493,7 +499,7 @@
   <g id="shade-active" transform="translate(-45 23)">
    <g transform="translate(250 2.0001)">
     <g transform="translate(0 33)">
-     <rect x="5" y="554.36" width="34" height="34" fill="#2c2c2c"/>
+     <rect x="5" y="554.36" width="34" height="34" fill="#202020"/>
     </g>
     <g transform="translate(7 592.36)" enable-background="new">
      <g transform="translate(0 -1028.4)">
@@ -511,7 +517,7 @@
   <g id="shade-toggled-active" transform="translate(-45 24)">
    <g transform="translate(250 37)">
     <g transform="translate(0 33)">
-     <rect x="5" y="554.36" width="34" height="34" fill="#2c2c2c"/>
+     <rect x="5" y="554.36" width="34" height="34" fill="#202020"/>
     </g>
     <g transform="translate(7 592.36)" enable-background="new">
      <g transform="translate(0 -1028.4)">
@@ -529,7 +535,7 @@
   <g id="stick-active" transform="translate(-45 27.59)">
    <g transform="translate(250 71.41)">
     <g transform="translate(0 33)">
-     <rect x="5" y="554.36" width="34" height="34" fill="#2c2c2c"/>
+     <rect x="5" y="554.36" width="34" height="34" fill="#202020"/>
     </g>
     <g transform="translate(7 592.36)" enable-background="new">
      <g transform="translate(0 -1028.4)">
@@ -547,7 +553,7 @@
   <g id="stick-toggled-active" transform="translate(-45 28)">
    <g transform="translate(250 109)">
     <g transform="translate(0 33)">
-     <rect x="5" y="554.36" width="34" height="34" fill="#2c2c2c"/>
+     <rect x="5" y="554.36" width="34" height="34" fill="#202020"/>
     </g>
     <g transform="translate(7 592.36)" enable-background="new">
      <g transform="translate(0 -1028.4)">
