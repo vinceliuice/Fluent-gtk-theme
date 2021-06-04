@@ -4,7 +4,11 @@
 
 #urlbar {
 	--urlbar-height: 30.00px !important;
+	--urlbar-min-height: 30.00px !important;
+	--urlbar-container-height: 30.00px !important;
 	--urlbar-toolbar-height: 30.00px !important;
+	--urlbar-icon-padding: 6px !important;
+	--urlbar-container-padding: 0px !important;
 }
 
 /* Center the URL bar */
@@ -34,14 +38,14 @@ toolbarspring {
 #searchbar:focus-within {
 	background: var(--gnome-focused-urlbar-background) !important;
 	outline: 2px solid var(--gnome-focused-urlbar-border-color) !important;
-	outline-offset: -1px;
+	outline-offset: -2px;
 	-moz-outline-radius: 5px;
 	transition: all 100ms;
 }
 
 #urlbar-background {
 	box-shadow: none !important;
-	border: 0 !important;
+	border: none !important;
 	background: transparent !important;
 	border-radius: 5px !important;
 }
@@ -59,10 +63,11 @@ toolbarspring {
 	max-height: unset !important;
 }
 
-#urlbar[breakout][breakout-extend] #urlbar-input-container {
+#urlbar-input-container {
 	height: 30px !important;
 	max-height: 30px !important;
-	padding: 0 0 !important;
+	padding: 2px !important;
+	border: none !important;
 }
 
 /* URL bar and Search bar's icons */
@@ -70,21 +75,13 @@ toolbarspring {
 .urlbar-icon,
 .identity-box-button,
 #tracking-protection-icon-container {
-	width: 32px !important;
 	border-radius: 3px !important;
-}
-
-.urlbar-icon {
-	margin: 1px !important;
-	margin-inline: 1px !important;
-	padding: 5px 8px !important;
-	opacity: 0.75 !important;
+	padding: 5px 6px !important;
+	opacity: 0.7 !important;
 }
 
 .identity-box-button,
 #tracking-protection-icon-container {
-	margin-top: 1px !important;
-	margin-bottom: 1px !important;
 	padding: 0 8px !important;
 }
 
@@ -129,7 +126,7 @@ toolbarspring {
 .urlbarView {
 	background: transparent !important;
 	color: var(--gnome-toolbar-color) !important;
-	margin: -2px 0 0 0 !important;
+	margin: 0 !important;
 	width: 100% !important;
 }
 
@@ -154,8 +151,6 @@ toolbarspring {
 }
 
 .search-one-offs {
-	margin-top: 2px !important;
-	margin-bottom: 2px !important;
 	padding: 6px 6px !important;
 	border-color: var(--gnome-popover-separator-color) !important;
 }

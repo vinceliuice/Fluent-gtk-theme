@@ -158,12 +158,12 @@ tab[selected]:-moz-window-inactive {
 	-moz-appearance: none !important;
 	border: none !important;
 	box-sizing: content-box; /* Avoid deformation on flexbox */
-	border-radius: 2px;
+	border-radius: 2px !important;
 	list-style-image: url("../icons/window-close-symbolic.svg") !important;
-	height: 16px;
+	height: 16px !important;
 	opacity: 0.75;
-	padding: 0;
-	width: 16px;
+	padding: 0 !important;
+	width: 16px !important;
 	transition: all 200ms cubic-bezier(0.0, 0.0, 0.2, 1) !important;
 }
 
@@ -210,6 +210,9 @@ tab[selected]:-moz-window-inactive {
 
 .tab-background {
 	background-color: var(--gnome-tabbar-tab-background) !important;
+	box-shadow: none !important;
+	margin: 0 !important;
+	padding: 0 !important;
 	transition: all 200ms cubic-bezier(0.0, 0.0, 0.2, 1),
 	            background-color 0,
 	            box-shadow 0 !important; 
