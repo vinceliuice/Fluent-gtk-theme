@@ -113,6 +113,20 @@ XfdesktopIconView.view {
     border-bottom: 1px solid $divider;
 
     &:backdrop { background-color: $titlebar-backdrop; }
+
+    button { @extend %titlebar-button; }
+
+    entry { @extend %titlebar-entry; }
+
+    @if $topbar == 'dark' and $variant = 'light' {
+      .path-bar.linked:not(.vertical) > button {
+        color: $titlebar-text-secondary;
+
+        &:hover, &:active, &:checked { color: $titlebar-text; }
+
+        &:disabled, &:backdrop { color: $titlebar-text-disabled; }
+      }
+    }
   }
 
   #location-toolbar { border-bottom: 1px solid $divider; }

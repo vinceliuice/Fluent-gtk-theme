@@ -569,7 +569,7 @@ radio, scrollbar button, notebook > header > tabs > arrow, spinbutton.vertical b
 .menuitem.button.flat, .nemo-window .toolbar button, #buttonbox_frame button, .xfce4-panel.background button, .raven stackswitcher.linked > button, .lock-dialog button, .mate-panel-menu-bar button, window.background.csd.geary-main-window stack#conversation_viewer .geary-expanded > .geary-composer-embed headerbar button,
 window#GearyMainWindow.background.csd stack#conversation_viewer .geary-expanded > .geary-composer-embed headerbar button, layouttabbar button, filechooser #pathbarbox > stack > box > button, messagedialog.csd .dialog-action-box button, .app-notification button, popover.background.menu button,
 popover.background button.model, .caja-pathbar button,
-.path-bar.linked:not(.vertical) > button, .nemo-window .primary-toolbar button:not(.text-button), .titlebar button:not(.suggested-action):not(.destructive-action), toolbar button, combobox > .linked:not(.vertical) > button:not(:only-child), .raven-mpris button.image-button, .budgie-panel button.budgie-menu-launcher, .budgie-panel button, infobar.error > revealer > box button, infobar.error:backdrop > revealer > box button, infobar.warning > revealer > box button, infobar.warning:backdrop > revealer > box button, infobar.action > revealer > box button, infobar.action:backdrop > revealer > box button, infobar.question > revealer > box button, infobar.question:backdrop > revealer > box button, .selection-mode .titlebar button.titlebutton, button.flat {
+.path-bar.linked:not(.vertical) > button, .nemo-window .primary-toolbar button:not(.text-button), .thunar toolbar button, .titlebar button:not(.suggested-action):not(.destructive-action), toolbar button, combobox > .linked:not(.vertical) > button:not(:only-child), .raven-mpris button.image-button, .budgie-panel button.budgie-menu-launcher, .budgie-panel button, infobar.error > revealer > box button, infobar.error:backdrop > revealer > box button, infobar.warning > revealer > box button, infobar.warning:backdrop > revealer > box button, infobar.action > revealer > box button, infobar.action:backdrop > revealer > box button, infobar.question > revealer > box button, infobar.question:backdrop > revealer > box button, .selection-mode .titlebar button.titlebutton, button.flat {
   transition: all 75ms cubic-bezier(0, 0, 0.2, 1), box-shadow 300ms cubic-bezier(0, 0, 0.2, 1);
   outline: none;
   box-shadow: inset 0 0 0 9999px transparent;
@@ -1454,53 +1454,53 @@ searchbar > revealer > box {
 /***************
  * Header bars *
  ***************/
-.nemo-window .primary-toolbar button:not(.text-button), .titlebar button:not(.suggested-action):not(.destructive-action) {
+.nemo-window .primary-toolbar button:not(.text-button), .thunar toolbar button, .titlebar button:not(.suggested-action):not(.destructive-action) {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.nemo-window .primary-toolbar button:not(.titlebutton):not(.text-button), .titlebar button:not(.titlebutton):not(.suggested-action):not(.destructive-action) {
+.nemo-window .primary-toolbar button:not(.titlebutton):not(.text-button), .thunar toolbar button:not(.titlebutton), .titlebar button:not(.titlebutton):not(.suggested-action):not(.destructive-action) {
   border-radius: 2px;
   padding: 3px 8px;
 }
 
-.nemo-window .primary-toolbar .linked:not(.vertical) > button:not(.text-button), .titlebar .linked:not(.vertical) > button:not(.suggested-action):not(.destructive-action) {
+.nemo-window .primary-toolbar .linked:not(.vertical) > button:not(.text-button), .thunar toolbar .linked:not(.vertical) > button, .titlebar .linked:not(.vertical) > button:not(.suggested-action):not(.destructive-action) {
   border-radius: 2px;
 }
 
-.nemo-window .primary-toolbar button:focus:not(.text-button), .titlebar button:focus:not(.suggested-action):not(.destructive-action), .nemo-window .primary-toolbar button:hover:not(.text-button), .titlebar button:hover:not(.suggested-action):not(.destructive-action), .nemo-window .primary-toolbar button:active:not(.text-button), .titlebar button:active:not(.suggested-action):not(.destructive-action), .nemo-window .primary-toolbar button:checked:not(.text-button), .titlebar button:checked:not(.suggested-action):not(.destructive-action) {
+.nemo-window .primary-toolbar button:focus:not(.text-button), .thunar toolbar button:focus, .titlebar button:focus:not(.suggested-action):not(.destructive-action), .nemo-window .primary-toolbar button:hover:not(.text-button), .thunar toolbar button:hover, .titlebar button:hover:not(.suggested-action):not(.destructive-action), .nemo-window .primary-toolbar button:active:not(.text-button), .thunar toolbar button:active, .titlebar button:active:not(.suggested-action):not(.destructive-action), .nemo-window .primary-toolbar button:checked:not(.text-button), .thunar toolbar button:checked, .titlebar button:checked:not(.suggested-action):not(.destructive-action) {
   color: white;
 }
 
-.nemo-window .primary-toolbar button:disabled:not(.text-button), .titlebar button:disabled:not(.suggested-action):not(.destructive-action) {
+.nemo-window .primary-toolbar button:disabled:not(.text-button), .thunar toolbar button:disabled, .titlebar button:disabled:not(.suggested-action):not(.destructive-action) {
   color: rgba(255, 255, 255, 0.3);
 }
 
-.nemo-window .primary-toolbar button:checked:disabled:not(.text-button), .titlebar button:checked:disabled:not(.suggested-action):not(.destructive-action) {
+.nemo-window .primary-toolbar button:checked:disabled:not(.text-button), .thunar toolbar button:checked:disabled, .titlebar button:checked:disabled:not(.suggested-action):not(.destructive-action) {
   background-color: transparent;
   color: rgba(255, 255, 255, 0.5);
 }
 
-.nemo-window .primary-toolbar button:backdrop:not(.text-button), .titlebar button:backdrop:not(.suggested-action):not(.destructive-action) {
+.nemo-window .primary-toolbar button:backdrop:not(.text-button), .thunar toolbar button:backdrop, .titlebar button:backdrop:not(.suggested-action):not(.destructive-action) {
   color: rgba(255, 255, 255, 0.5);
 }
 
-.nemo-window .primary-toolbar button:backdrop:focus:not(.text-button), .titlebar button:backdrop:focus:not(.suggested-action):not(.destructive-action), .nemo-window .primary-toolbar button:backdrop:hover:not(.text-button), .titlebar button:backdrop:hover:not(.suggested-action):not(.destructive-action), .nemo-window .primary-toolbar button:backdrop:active:not(.text-button), .titlebar button:backdrop:active:not(.suggested-action):not(.destructive-action) {
+.nemo-window .primary-toolbar button:backdrop:focus:not(.text-button), .thunar toolbar button:backdrop:focus, .titlebar button:backdrop:focus:not(.suggested-action):not(.destructive-action), .nemo-window .primary-toolbar button:backdrop:hover:not(.text-button), .thunar toolbar button:backdrop:hover, .titlebar button:backdrop:hover:not(.suggested-action):not(.destructive-action), .nemo-window .primary-toolbar button:backdrop:active:not(.text-button), .thunar toolbar button:backdrop:active, .titlebar button:backdrop:active:not(.suggested-action):not(.destructive-action) {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.nemo-window .primary-toolbar button:backdrop:disabled:not(.text-button), .titlebar button:backdrop:disabled:not(.suggested-action):not(.destructive-action) {
+.nemo-window .primary-toolbar button:backdrop:disabled:not(.text-button), .thunar toolbar button:backdrop:disabled, .titlebar button:backdrop:disabled:not(.suggested-action):not(.destructive-action) {
   color: rgba(255, 255, 255, 0.3);
 }
 
-.nemo-window .primary-toolbar button:backdrop:checked:not(.text-button), .titlebar button:backdrop:checked:not(.suggested-action):not(.destructive-action) {
+.nemo-window .primary-toolbar button:backdrop:checked:not(.text-button), .thunar toolbar button:backdrop:checked, .titlebar button:backdrop:checked:not(.suggested-action):not(.destructive-action) {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.nemo-window .primary-toolbar button:backdrop:checked:disabled:not(.text-button), .titlebar button:backdrop:checked:disabled:not(.suggested-action):not(.destructive-action) {
+.nemo-window .primary-toolbar button:backdrop:checked:disabled:not(.text-button), .thunar toolbar button:backdrop:checked:disabled, .titlebar button:backdrop:checked:disabled:not(.suggested-action):not(.destructive-action) {
   color: rgba(255, 255, 255, 0.3);
 }
 
-.nemo-window .primary-toolbar entry, .titlebar entry {
+.nemo-window .primary-toolbar entry, .thunar toolbar entry, .titlebar entry {
   background-color: rgba(255, 255, 255, 0.12);
   color: white;
   border: none;
@@ -1508,28 +1508,28 @@ searchbar > revealer > box {
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.06);
 }
 
-.nemo-window .primary-toolbar entry:hover, .titlebar entry:hover {
+.nemo-window .primary-toolbar entry:hover, .thunar toolbar entry:hover, .titlebar entry:hover {
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.08), inset 0 0 0 1px rgba(255, 255, 255, 0.12);
 }
 
-.nemo-window .primary-toolbar entry:focus, .titlebar entry:focus {
+.nemo-window .primary-toolbar entry:focus, .thunar toolbar entry:focus, .titlebar entry:focus {
   box-shadow: inset 0 0 0 2px #f8b4cb;
 }
 
-.nemo-window .primary-toolbar entry:disabled, .titlebar entry:disabled {
+.nemo-window .primary-toolbar entry:disabled, .thunar toolbar entry:disabled, .titlebar entry:disabled {
   background-color: rgba(255, 255, 255, 0.04);
   color: rgba(255, 255, 255, 0.5);
 }
 
-.nemo-window .primary-toolbar entry image, .titlebar entry image {
+.nemo-window .primary-toolbar entry image, .thunar toolbar entry image, .titlebar entry image {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.nemo-window .primary-toolbar entry image:hover, .titlebar entry image:hover, .nemo-window .primary-toolbar entry image:active, .titlebar entry image:active {
+.nemo-window .primary-toolbar entry image:hover, .thunar toolbar entry image:hover, .titlebar entry image:hover, .nemo-window .primary-toolbar entry image:active, .thunar toolbar entry image:active, .titlebar entry image:active {
   color: white;
 }
 
-.nemo-window .primary-toolbar entry image:disabled, .titlebar entry image:disabled {
+.nemo-window .primary-toolbar entry image:disabled, .thunar toolbar entry image:disabled, .titlebar entry image:disabled {
   color: rgba(255, 255, 255, 0.5);
 }
 
@@ -7527,6 +7527,18 @@ XfdesktopIconView.view .rubberband {
 
 .thunar toolbar:backdrop {
   background-color: #2C2C2C;
+}
+
+.thunar toolbar .path-bar.linked:not(.vertical) > button {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.thunar toolbar .path-bar.linked:not(.vertical) > button:hover, .thunar toolbar .path-bar.linked:not(.vertical) > button:active, .thunar toolbar .path-bar.linked:not(.vertical) > button:checked {
+  color: white;
+}
+
+.thunar toolbar .path-bar.linked:not(.vertical) > button:disabled, .thunar toolbar .path-bar.linked:not(.vertical) > button:backdrop {
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .thunar #location-toolbar {
