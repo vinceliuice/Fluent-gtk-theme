@@ -1,1194 +1,278 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg
-   width="600"
-   height="200"
-   version="1.1"
-   viewBox="0 0 600 200"
-   id="svg776"
-   sodipodi:docname="assets-dark.svg"
-   inkscape:version="1.1 (c4e8f9ed74, 2021-05-24)"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg">
-  <defs
-     id="defs780" />
-  <sodipodi:namedview
-     id="namedview778"
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1.0"
-     inkscape:pageshadow="2"
-     inkscape:pageopacity="0.0"
-     inkscape:pagecheckerboard="0"
-     showgrid="false"
-     inkscape:zoom="1.5980613"
-     inkscape:cx="268.76315"
-     inkscape:cy="79.158414"
-     inkscape:window-width="1465"
-     inkscape:window-height="913"
-     inkscape:window-x="379"
-     inkscape:window-y="53"
-     inkscape:window-maximized="0"
-     inkscape:current-layer="svg776" />
-  <g
-     id="title-1-active"
-     transform="matrix(0.17857,0,0,1,386.11,-503.36)">
-    <rect
-       x="5"
-       y="554.35999"
-       width="34"
-       height="34"
-       fill="#202020"
-       id="rect2" />
+<svg width="600" height="200" version="1.1" viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <g id="title-1-active" transform="matrix(.17857 0 0 1 386.11 -503.36)">
+  <rect x="5" y="554.36" width="34" height="34" fill="#202020"/>
+ </g>
+ <use id="title-2-active" transform="translate(7)" width="100%" height="100%" xlink:href="#title-1-active"/>
+ <use id="title-3-active" transform="translate(14)" width="100%" height="100%" xlink:href="#title-1-active"/>
+ <use id="title-4-active" transform="translate(21)" width="100%" height="100%" xlink:href="#title-1-active"/>
+ <use id="title-5-active" transform="translate(28)" width="100%" height="100%" xlink:href="#title-1-active"/>
+ <g id="title-1-inactive" transform="matrix(.17857 0 0 1 421.11 -503.36)">
+  <rect x="5" y="554.36" width="34" height="34" fill="#2c2c2c"/>
+ </g>
+ <g id="title-2-inactive" transform="matrix(.17857 0 0 1 428.11 -503.36)">
+  <rect x="5" y="554.36" width="34" height="34" fill="#2c2c2c"/>
+ </g>
+ <g id="title-3-inactive" transform="matrix(.17857 0 0 1 435.11 -503.36)">
+  <rect x="5" y="554.36" width="34" height="34" fill="#2c2c2c"/>
+ </g>
+ <g id="title-4-inactive" transform="matrix(.17857 0 0 1 442.11 -503.36)">
+  <rect x="5" y="554.36" width="34" height="34" fill="#2c2c2c"/>
+ </g>
+ <g id="title-5-inactive" transform="matrix(.17857 0 0 1 449.11 -503.36)">
+  <rect x="5" y="554.36" width="34" height="34" fill="#2c2c2c"/>
+ </g>
+ <g id="top-left-active" transform="translate(382,-637.36)">
+  <path d="m5 731.36-2e-7 29h8l1e-6 -34-7-4e-5 -2e-7 1-1-1e-5z" fill="#202020"/>
+ </g>
+ <g id="top-left-inactive" transform="translate(392,-637.36)">
+  <path d="m5 731.36-2e-7 29h8l1e-6 -34-7-4e-5 -2e-7 1-1-1e-5z" fill="#2c2c2c"/>
+ </g>
+ <use id="top-right-active" transform="matrix(-1,0,0,1,802,0)" width="100%" height="100%" xlink:href="#top-left-active"/>
+ <g id="top-right-inactive" transform="matrix(-1,0,0,1,430,-637.36)">
+  <path d="m5 731.36-2e-7 29h8l1e-6 -34-7-4e-5 -2e-7 1-1-1e-5z" fill="#2c2c2c"/>
+ </g>
+ <g id="left-active" transform="translate(389,-633.36)">
+  <rect transform="scale(-1,1)" x="-48" y="734.36" width="2" height="16" fill="#202020"/>
+ </g>
+ <g id="left-inactive" transform="translate(394,-633.36)">
+  <rect transform="scale(-1,1)" x="-48" y="734.36" width="2" height="16" fill="#2c2c2c"/>
+ </g>
+ <g id="right-inactive" transform="matrix(-1,0,0,1,498,-633.36)">
+  <rect transform="scale(-1,1)" x="-48" y="734.36" width="2" height="16" fill="#2c2c2c"/>
+ </g>
+ <g id="right-active" transform="matrix(-1,0,0,1,493,-633.36)">
+  <rect transform="scale(-1,1)" x="-48" y="734.36" width="2" height="16" fill="#202020"/>
+ </g>
+ <g id="bottom-left-active" transform="translate(366,-635.36)">
+  <path d="m98 730.36h-2v9.0001h1v1l9-1.2e-4v-2l-8 1.2e-4z" fill="#202020"/>
+ </g>
+ <g id="bottom-left-inactive" transform="translate(366,-623.36)">
+  <path d="m98 730.36h-2v9.0001h1v1l9-1.2e-4v-2l-8 1.2e-4z" fill="#2c2c2c"/>
+ </g>
+ <g id="bottom-right-inactive" transform="matrix(-1,0,0,1,598,-623.36)">
+  <path d="m98 730.36h-2v9.0001h1v1l9-1.2e-4v-2l-8 1.2e-4z" fill="#2c2c2c"/>
+ </g>
+ <g id="bottom-right-active" transform="matrix(-1,0,0,1,598,-635.36)">
+  <path d="m98 730.36h-2v9.0001h1v1l9-1.2e-4v-2l-8 1.2e-4z" fill="#202020"/>
+ </g>
+ <g id="bottom-active" transform="matrix(0,-1,-1,0,1224.4,151)">
+  <rect transform="scale(-1,1)" x="-48" y="734.36" width="2" height="16" fill="#202020"/>
+ </g>
+ <g id="bottom-inactive" transform="matrix(0,-1,-1,0,1224.4,163)">
+  <rect transform="scale(-1,1)" x="-48" y="734.36" width="2" height="16" fill="#2c2c2c"/>
+ </g>
+ <g id="menu-prelight" transform="translate(0,-2)">
+  <rect x="257" y="8" width="34" height="34" fill="#202020"/>
+  <path d="m274 37.04c6.6273 0 12-5.3727 12-12s-5.3726-12-12-12c-6.6275 0-12 5.3727-12 12 0 6.6274 5.3726 12 12 12" fill="#ffffff" fill-rule="evenodd" opacity=".15"/>
+  <circle cx="274" cy="25" r="2" fill="#ffffff" opacity=".75"/>
+ </g>
+ <g id="menu-pressed" transform="translate(0,-2)">
+  <rect x="298" y="8" width="34" height="34" fill="#202020"/>
+  <path d="m315 37.04c6.6273 0 12-5.3727 12-12s-5.3726-12-12-12c-6.6275 0-12 5.3727-12 12 0 6.6274 5.3726 12 12 12" fill="#ffffff" fill-rule="evenodd" opacity=".3"/>
+  <circle cx="315" cy="25" r="2" fill="#ffffff" opacity=".75"/>
+ </g>
+ <g id="menu-active" transform="translate(0,-2)">
+  <rect x="215" y="8" width="34" height="34" fill="#202020"/>
+  <circle cx="232" cy="25" r="2" fill="#ffffff" opacity=".75"/>
+ </g>
+ <g id="menu-inactive" transform="translate(0,-2)">
+  <rect x="340" y="8" width="34" height="34" fill="#2c2c2c"/>
+  <circle cx="357" cy="25" r="2" fill="#ffffff" opacity=".35"/>
+ </g>
+ <g id="stick-active">
+  <rect x="215" y="122" width="34" height="34" fill="#202020"/>
+  <path d="m232 133a6 6 0 0 0-6 6 6 6 0 0 0 6 6 6 6 0 0 0 6-6 6 6 0 0 0-6-6zm0 1a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5z" fill="#ffffff" opacity=".75"/>
+ </g>
+ <g id="close-active">
+  <rect x="25" y="21" width="34" height="34" fill="#202020"/>
+  <g transform="translate(30,26)" fill="#ffffff" opacity=".75">
+   <path d="m16.243 7.0503-4.2426 4.2426-4.2426-4.2426-0.70711 0.70711 4.2426 4.2426-4.2426 4.2426 0.70711 0.70711 4.2426-4.2426 4.2426 4.2426 0.70711-0.70711-4.2426-4.2426 4.2426-4.2426z" fill="#ffffff" opacity="1" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="2" stroke-width="2"/>
   </g>
-  <use
-     id="title-2-active"
-     transform="translate(7)"
-     width="100%"
-     height="100%"
-     xlink:href="#title-1-active"
-     x="0"
-     y="0" />
-  <use
-     id="title-3-active"
-     transform="translate(14)"
-     width="100%"
-     height="100%"
-     xlink:href="#title-1-active"
-     x="0"
-     y="0" />
-  <use
-     id="title-4-active"
-     transform="translate(21)"
-     width="100%"
-     height="100%"
-     xlink:href="#title-1-active"
-     x="0"
-     y="0" />
-  <use
-     id="title-5-active"
-     transform="translate(28)"
-     width="100%"
-     height="100%"
-     xlink:href="#title-1-active"
-     x="0"
-     y="0" />
-  <g
-     id="title-1-inactive"
-     transform="matrix(0.17857,0,0,1,421.11,-503.36)">
-    <rect
-       x="5"
-       y="554.35999"
-       width="34"
-       height="34"
-       fill="#202020"
-       id="rect1045"
-       style="fill:#2c2c2c;fill-opacity:1" />
+ </g>
+ <g id="close-prelight">
+  <rect x="72" y="21" width="34" height="34" fill="#202020"/>
+  <path d="m89 50c6.6273 0 12-5.3726 12-12s-5.3726-12-12-12c-6.6275 0-12 5.3726-12 12s5.3726 12 12 12" fill="#e57373" fill-rule="evenodd"/>
+  <g transform="translate(77,26)" fill="#ffffff">
+   <path d="m16.243 7.0503-4.2426 4.2426-4.2426-4.2426-0.70711 0.70711 4.2426 4.2426-4.2426 4.2426 0.70711 0.70711 4.2426-4.2426 4.2426 4.2426 0.70711-0.70711-4.2426-4.2426 4.2426-4.2426z" fill="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="2" stroke-width="2"/>
   </g>
-  <g
-     id="title-2-inactive"
-     transform="matrix(0.17857,0,0,1,428.11,-503.36)">
-    <rect
-       x="5"
-       y="554.35999"
-       width="34"
-       height="34"
-       fill="#202020"
-       id="rect1041"
-       style="fill:#2c2c2c;fill-opacity:1" />
+ </g>
+ <g id="close-pressed">
+  <rect x="120" y="21" width="34" height="34" fill="#202020"/>
+  <path d="m137 50c6.6273 0 12-5.3726 12-12s-5.3726-12-12-12c-6.6275 0-12 5.3726-12 12s5.3726 12 12 12" fill="#e53935" fill-rule="evenodd"/>
+  <g transform="translate(125,26)" fill="#ffffff">
+   <path d="m16.243 7.0503-4.2426 4.2426-4.2426-4.2426-0.70711 0.70711 4.2426 4.2426-4.2426 4.2426 0.70711 0.70711 4.2426-4.2426 4.2426 4.2426 0.70711-0.70711-4.2426-4.2426 4.2426-4.2426z" fill="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="2" stroke-width="2"/>
   </g>
-  <g
-     id="title-3-inactive"
-     transform="matrix(0.17857,0,0,1,435.11,-503.36)">
-    <rect
-       x="5"
-       y="554.35999"
-       width="34"
-       height="34"
-       fill="#202020"
-       id="rect1037"
-       style="fill:#2c2c2c;fill-opacity:1" />
+ </g>
+ <g id="close-inactive">
+  <rect x="168" y="21" width="34" height="34" fill="#2c2c2c"/>
+  <g transform="translate(173,26)" fill="#ffffff" opacity=".3">
+   <path d="m16.243 7.0503-4.2426 4.2426-4.2426-4.2426-0.70711 0.70711 4.2426 4.2426-4.2426 4.2426 0.70711 0.70711 4.2426-4.2426 4.2426 4.2426 0.70711-0.70711-4.2426-4.2426 4.2426-4.2426z" fill="#ffffff" opacity="1" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="2" stroke-width="2"/>
   </g>
-  <g
-     id="title-4-inactive"
-     transform="matrix(0.17857,0,0,1,442.11,-503.36)">
-    <rect
-       x="5"
-       y="554.35999"
-       width="34"
-       height="34"
-       fill="#202020"
-       id="rect1033"
-       style="fill:#2c2c2c;fill-opacity:1" />
+ </g>
+ <g id="hide-active">
+  <rect x="25" y="59" width="34" height="34" fill="#202020"/>
+  <g transform="translate(30,68)" fill="#ffffff" opacity=".75">
+   <path d="m7 12v1h10v-1h-10" fill="#ffffff" fill-rule="evenodd" opacity="1"/>
   </g>
-  <g
-     id="title-5-inactive"
-     transform="matrix(0.17857,0,0,1,449.11,-503.36)">
-    <rect
-       x="5"
-       y="554.35999"
-       width="34"
-       height="34"
-       fill="#202020"
-       id="rect1029"
-       style="fill:#2c2c2c;fill-opacity:1" />
+ </g>
+ <g id="maximize-active">
+  <rect x="25" y="97" width="34" height="34" fill="#202020"/>
+  <g transform="translate(30,102)" fill="#ffffff" opacity=".75">
+   <path d="m7 7v10h10v-10h-10m1 1h8v8h-8v-8" fill="#ffffff" fill-rule="evenodd" opacity="1"/>
   </g>
-  <g
-     id="top-left-active"
-     transform="translate(382,-637.36)">
-    <path
-       d="m 5,731.36 -2e-7,29 H 13 l 10e-7,-34 -7.0000002,-4e-5 -2e-7,1 -1,-10e-6 z"
-       fill="#202020"
-       id="path14" />
+ </g>
+ <g id="hide-prelight">
+  <rect x="72" y="59" width="34" height="34" fill="#202020"/>
+  <path d="m89 88c6.6273 0 12-5.3726 12-12s-5.3726-12-12-12c-6.6275 0-12 5.3726-12 12s5.3726 12 12 12" fill="#ffffff" fill-rule="evenodd" opacity=".15"/>
+  <g transform="translate(77,68)" fill="#ffffff" opacity=".75">
+   <path d="m7 12v1h10v-1h-10" fill="#ffffff" fill-rule="evenodd" opacity="1"/>
   </g>
-  <g
-     id="top-left-inactive"
-     transform="translate(392,-637.36)">
-    <path
-       d="m 5,731.36 -2e-7,29 H 13 l 10e-7,-34 -7.0000002,-4e-5 -2e-7,1 -1,-10e-6 z"
-       fill="#202020"
-       id="path1071"
-       style="fill:#2c2c2c;fill-opacity:1" />
+ </g>
+ <g id="hide-pressed">
+  <rect x="120" y="59" width="34" height="34" fill="#202020"/>
+  <path d="m137 88c6.6273 0 12-5.3726 12-12s-5.3726-12-12-12c-6.6275 0-12 5.3726-12 12s5.3726 12 12 12" fill="#ffffff" fill-rule="evenodd" opacity=".3"/>
+  <g transform="translate(125,68)" fill="#ffffff" opacity=".75">
+   <path d="m7 12v1h10v-1h-10" fill="#ffffff" fill-rule="evenodd" opacity="1"/>
   </g>
-  <use
-     id="top-right-active"
-     transform="matrix(-1,0,0,1,802,0)"
-     width="100%"
-     height="100%"
-     xlink:href="#top-left-active"
-     x="0"
-     y="0" />
-  <g
-     id="top-right-inactive"
-     transform="matrix(-1,0,0,1,430,-637.36)">
-    <path
-       d="m 5,731.36 -2e-7,29 H 13 l 10e-7,-34 -7.0000002,-4e-5 -2e-7,1 -1,-10e-6 z"
-       fill="#202020"
-       id="path1067"
-       style="fill:#2c2c2c;fill-opacity:1" />
+ </g>
+ <g id="maximize-prelight">
+  <rect x="72" y="97" width="34" height="34" fill="#202020"/>
+  <path d="m89 126c6.6273 0 12-5.3726 12-12s-5.3726-12-12-12c-6.6275 0-12 5.3726-12 12s5.3726 12 12 12" fill="#ffffff" fill-rule="evenodd" opacity=".15"/>
+  <g transform="translate(77,102)" fill="#ffffff" opacity=".75">
+   <path d="m7 7v10h10v-10h-10m1 1h8v8h-8v-8" fill="#ffffff" fill-rule="evenodd" opacity="1"/>
   </g>
-  <g
-     id="left-active"
-     transform="translate(389,-633.36)">
-    <rect
-       transform="scale(-1,1)"
-       x="-48"
-       y="734.35999"
-       width="2"
-       height="16"
-       fill="#202020"
-       id="rect20" />
+ </g>
+ <g id="maximize-pressed">
+  <rect x="120" y="97" width="34" height="34" fill="#202020"/>
+  <path d="m137 126c6.6273 0 12-5.3726 12-12s-5.3726-12-12-12c-6.6275 0-12 5.3726-12 12s5.3726 12 12 12" fill="#ffffff" fill-rule="evenodd" opacity=".3"/>
+  <g transform="translate(125,102)" fill="#ffffff" opacity=".75">
+   <path d="m7 7v10h10v-10h-10m1 1h8v8h-8v-8" fill="#ffffff" fill-rule="evenodd" opacity="1"/>
   </g>
-  <g
-     id="left-inactive"
-     transform="translate(394,-633.36)">
-    <rect
-       transform="scale(-1,1)"
-       x="-48"
-       y="734.35999"
-       width="2"
-       height="16"
-       fill="#202020"
-       id="rect23"
-       style="fill:#2c2c2c;fill-opacity:1" />
+ </g>
+ <g id="hide-inactive">
+  <rect x="168" y="59" width="34" height="34" fill="#2c2c2c"/>
+  <g transform="translate(173,68)" fill="#ffffff" opacity=".75">
+   <path d="m7 12v1h10v-1h-10" fill="#ffffff" fill-rule="evenodd" opacity=".3"/>
   </g>
-  <g
-     id="right-inactive"
-     transform="matrix(-1,0,0,1,498,-633.36)">
-    <rect
-       transform="scale(-1,1)"
-       x="-48"
-       y="734.35999"
-       width="2"
-       height="16"
-       fill="#202020"
-       id="rect26"
-       style="fill:#2c2c2c;fill-opacity:1" />
+ </g>
+ <g id="maximize-inactive">
+  <rect x="168" y="97" width="34" height="34" fill="#2c2c2c"/>
+  <g transform="translate(173,102)" fill="#ffffff" opacity=".88">
+   <path d="m7 7v10h10v-10h-10m1 1h8v8h-8v-8" fill="#ffffff" fill-rule="evenodd" opacity=".3"/>
   </g>
-  <g
-     id="right-active"
-     transform="matrix(-1,0,0,1,493,-633.36)">
-    <rect
-       transform="scale(-1,1)"
-       x="-48"
-       y="734.35999"
-       width="2"
-       height="16"
-       fill="#202020"
-       id="rect29" />
+ </g>
+ <g id="maximize-toggled-active">
+  <rect x="25" y="136" width="34" height="34" fill="#202020"/>
+  <g transform="translate(30,141)" fill="#ffffff" opacity=".75">
+   <path d="m9 7v2h-2v8h8v-2h2v-8zm1 1h6v6h-1v-5h-5zm-2 2h6v6h-6z" fill="#ffffff" opacity="1"/>
   </g>
-  <g
-     id="bottom-left-active"
-     transform="translate(366,-635.36)">
-    <path
-       d="m 98,730.36 h -2 v 9.0001 h 1 v 1 l 9,-1.2e-4 v -2 l -8,1.2e-4 z"
-       fill="#202020"
-       id="path32" />
+ </g>
+ <g id="maximize-toggled-prelight">
+  <rect x="72" y="136" width="34" height="34" fill="#202020"/>
+  <path d="m89 165c6.6273 0 12-5.3726 12-12s-5.3726-12-12-12c-6.6275 0-12 5.3726-12 12s5.3726 12 12 12" fill="#ffffff" fill-rule="evenodd" opacity=".15"/>
+  <g transform="translate(77,141)" fill="#ffffff" opacity=".75">
+   <path d="m9 7v2h-2v8h8v-2h2v-8zm1 1h6v6h-1v-5h-5zm-2 2h6v6h-6z" fill="#ffffff" opacity="1"/>
   </g>
-  <g
-     id="bottom-left-inactive"
-     transform="translate(366,-623.36)">
-    <path
-       d="m 98,730.36 h -2 v 9.0001 h 1 v 1 l 9,-1.2e-4 v -2 l -8,1.2e-4 z"
-       fill="#202020"
-       id="path35"
-       style="fill:#2c2c2c;fill-opacity:1" />
+ </g>
+ <g id="maximize-toggled-pressed">
+  <rect x="120" y="136" width="34" height="34" fill="#202020"/>
+  <path d="m137 165c6.6273 0 12-5.3726 12-12s-5.3726-12-12-12c-6.6275 0-12 5.3726-12 12s5.3726 12 12 12" fill="#ffffff" fill-rule="evenodd" opacity=".3"/>
+  <g transform="translate(125,141)" fill="#ffffff" opacity=".75">
+   <path d="m9 7v2h-2v8h8v-2h2v-8zm1 1h6v6h-1v-5h-5zm-2 2h6v6h-6z" fill="#ffffff" opacity="1"/>
   </g>
-  <g
-     id="bottom-right-inactive"
-     transform="matrix(-1,0,0,1,598,-623.36)">
-    <path
-       d="m 98,730.36 h -2 v 9.0001 h 1 v 1 l 9,-1.2e-4 v -2 l -8,1.2e-4 z"
-       fill="#202020"
-       id="path38"
-       style="fill:#2c2c2c;fill-opacity:1" />
+ </g>
+ <g id="maximize-toggled-inactive">
+  <rect x="168" y="136" width="34" height="34" fill="#2c2c2c"/>
+  <g transform="translate(173,141)" fill="#ffffff" opacity=".3">
+   <path d="m9 7v2h-2v8h8v-2h2v-8zm1 1h6v6h-1v-5h-5zm-2 2h6v6h-6z" fill="#ffffff"/>
   </g>
-  <g
-     id="bottom-right-active"
-     transform="matrix(-1,0,0,1,598,-635.36)">
-    <path
-       d="m 98,730.36 h -2 v 9.0001 h 1 v 1 l 9,-1.2e-4 v -2 l -8,1.2e-4 z"
-       fill="#202020"
-       id="path41" />
+ </g>
+ <g id="shade-active" transform="translate(0,-2)">
+  <rect x="215" y="48" width="34" height="34" fill="#202020"/>
+  <g transform="translate(220,53.465)" fill="#ffffff" opacity=".75">
+   <path d="m12 8-6.3633 6.3633 0.70703 0.70703 5.6562-5.6562 5.6562 5.6562 0.70703-0.70703-5.6562-5.6562z" fill="#ffffff" opacity="1" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="2" stroke-width="2"/>
   </g>
-  <g
-     id="bottom-active"
-     transform="matrix(0,-1,-1,0,1224.4,151)">
-    <rect
-       transform="scale(-1,1)"
-       x="-48"
-       y="734.35999"
-       width="2"
-       height="16"
-       fill="#202020"
-       id="rect44" />
+ </g>
+ <g id="shade-prelight" transform="translate(0,-2)">
+  <rect x="257" y="48" width="34" height="34" fill="#202020"/>
+  <path d="m274 77.04c6.6273 0 12-5.3726 12-12 0-6.6275-5.3726-12-12-12-6.6275 0-12 5.3725-12 12 0 6.6274 5.3726 12 12 12" fill="#ffffff" fill-rule="evenodd" opacity=".15"/>
+  <g transform="translate(262,53.465)" fill="#ffffff" opacity=".75">
+   <path d="m12 8-6.3633 6.3633 0.70703 0.70703 5.6562-5.6562 5.6562 5.6562 0.70703-0.70703-5.6562-5.6562z" fill="#ffffff" opacity="1" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="2" stroke-width="2"/>
   </g>
-  <g
-     id="bottom-inactive"
-     transform="matrix(0,-1,-1,0,1224.4,163)">
-    <rect
-       transform="scale(-1,1)"
-       x="-48"
-       y="734.35999"
-       width="2"
-       height="16"
-       fill="#202020"
-       id="rect47"
-       style="fill:#2c2c2c;fill-opacity:1" />
+ </g>
+ <g id="shade-pressed" transform="translate(0,-2)">
+  <rect x="298" y="48" width="34" height="34" fill="#202020"/>
+  <path d="m315 77.04c6.6273 0 12-5.3726 12-12 0-6.6275-5.3726-12-12-12-6.6275 0-12 5.3725-12 12 0 6.6274 5.3726 12 12 12" fill="#ffffff" fill-rule="evenodd" opacity=".3"/>
+  <g transform="translate(303,53.465)" fill="#ffffff" opacity=".75">
+   <path d="m12 8-6.3633 6.3633 0.70703 0.70703 5.6562-5.6562 5.6562 5.6562 0.70703-0.70703-5.6562-5.6562z" fill="#ffffff" opacity="1" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="2" stroke-width="2"/>
   </g>
-  <g
-     id="menu-prelight"
-     transform="translate(0,-2)">
-    <rect
-       x="257"
-       y="8"
-       width="34"
-       height="34"
-       fill="#202020"
-       id="rect50" />
-    <path
-       d="m 274,37.04 c 6.6273,0 12,-5.3727 12,-12 0,-6.6273 -5.3726,-12 -12,-12 -6.6275,0 -12,5.3727 -12,12 0,6.6274 5.3726,12 12,12"
-       fill="#ffffff"
-       fill-rule="evenodd"
-       opacity="0.15"
-       id="path52" />
-    <circle
-       cx="274"
-       cy="25"
-       r="2"
-       fill="#ffffff"
-       opacity="0.75"
-       id="circle54" />
+ </g>
+ <g id="shade-inactive" transform="translate(0,-2)">
+  <rect x="340" y="48" width="34" height="34" fill="#2c2c2c"/>
+  <g transform="translate(345,53.465)" fill="#ffffff" opacity=".3">
+   <path d="m12 8-6.3633 6.3633 0.70703 0.70703 5.6562-5.6562 5.6562 5.6562 0.70703-0.70703-5.6562-5.6562z" fill="#ffffff" opacity="1" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="2" stroke-width="2"/>
   </g>
-  <g
-     id="menu-pressed"
-     transform="translate(0,-2)">
-    <rect
-       x="298"
-       y="8"
-       width="34"
-       height="34"
-       fill="#202020"
-       id="rect56" />
-    <path
-       d="m 315,37.04 c 6.6273,0 12,-5.3727 12,-12 0,-6.6273 -5.3726,-12 -12,-12 -6.6275,0 -12,5.3727 -12,12 0,6.6274 5.3726,12 12,12"
-       fill="#ffffff"
-       fill-rule="evenodd"
-       opacity="0.3"
-       id="path58" />
-    <circle
-       cx="315"
-       cy="25"
-       r="2"
-       fill="#ffffff"
-       opacity="0.75"
-       id="circle60" />
+ </g>
+ <g id="shade-toggled-active">
+  <rect x="215" y="84" width="34" height="34" fill="#202020"/>
+  <g transform="matrix(1,0,0,-1,220,112.54)" fill="#ffffff" opacity=".75">
+   <path d="m12 8-6.3633 6.3633 0.70703 0.70703 5.6562-5.6562 5.6562 5.6562 0.70703-0.70703-5.6562-5.6562z" fill="#ffffff" opacity="1" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="2" stroke-width="2"/>
   </g>
-  <g
-     transform="translate(126,29.83)"
-     fill="#ffffff"
-     id="g62" />
-  <g
-     id="menu-active"
-     transform="translate(0,-2)">
-    <rect
-       x="215"
-       y="8"
-       width="34"
-       height="34"
-       fill="#202020"
-       id="rect66" />
-    <circle
-       cx="232"
-       cy="25"
-       r="2"
-       fill="#ffffff"
-       opacity="0.75"
-       id="circle68" />
+ </g>
+ <g id="shade-toggled-prelight">
+  <rect x="257" y="84" width="34" height="34" fill="#202020"/>
+  <path d="m274 113.04c6.6273 0 12-5.3726 12-12 0-6.6275-5.3726-12-12-12-6.6275 0-12 5.3725-12 12 0 6.6274 5.3726 12 12 12" fill="#ffffff" fill-rule="evenodd" opacity=".15"/>
+  <g transform="matrix(1,0,0,-1,262,112.54)" fill="#ffffff" opacity=".75">
+   <path d="m12 8-6.3633 6.3633 0.70703 0.70703 5.6562-5.6562 5.6562 5.6562 0.70703-0.70703-5.6562-5.6562z" fill="#ffffff" opacity="1" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="2" stroke-width="2"/>
   </g>
-  <g
-     id="menu-inactive"
-     transform="translate(0,-2)">
-    <rect
-       x="340"
-       y="8"
-       width="34"
-       height="34"
-       fill="#202020"
-       id="rect70"
-       style="fill:#2c2c2c;fill-opacity:1" />
-    <circle
-       cx="357"
-       cy="25"
-       r="2"
-       fill="#ffffff"
-       opacity="0.35"
-       id="circle72" />
+ </g>
+ <g id="shade-toggled-pressed">
+  <rect x="298" y="84" width="34" height="34" fill="#202020"/>
+  <path d="m315 113.04c6.6273 0 12-5.3726 12-12 0-6.6275-5.3726-12-12-12-6.6275 0-12 5.3725-12 12 0 6.6274 5.3726 12 12 12" fill="#ffffff" fill-rule="evenodd" opacity=".3"/>
+  <g transform="matrix(1,0,0,-1,303,112.54)" fill="#ffffff" opacity=".75">
+   <path d="m12 8-6.3633 6.3633 0.70703 0.70703 5.6562-5.6562 5.6562 5.6562 0.70703-0.70703-5.6562-5.6562z" fill="#ffffff" opacity="1" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="2" stroke-width="2"/>
   </g>
-  <g
-     id="stick-active">
-    <rect
-       x="215"
-       y="122"
-       width="34"
-       height="34"
-       fill="#202020"
-       id="rect74" />
-    <path
-       d="m 232,133 a 6,6 0 0 0 -6,6 6,6 0 0 0 6,6 6,6 0 0 0 6,-6 6,6 0 0 0 -6,-6 z m 0,1 a 5,5 0 0 1 5,5 5,5 0 0 1 -5,5 5,5 0 0 1 -5,-5 5,5 0 0 1 5,-5 z"
-       fill="#ffffff"
-       opacity="0.75"
-       id="path76" />
+ </g>
+ <g id="shade-toggled-inactive">
+  <rect x="340" y="84" width="34" height="34" fill="#2c2c2c"/>
+  <g transform="matrix(1,0,0,-1,345,112.54)" fill="#ffffff" opacity=".3">
+   <path d="m12 8-6.3633 6.3633 0.70703 0.70703 5.6562-5.6562 5.6562 5.6562 0.70703-0.70703-5.6562-5.6562z" fill="#ffffff" opacity="1" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="2" stroke-width="2"/>
   </g>
-  <g
-     id="close-active">
-    <rect
-       x="25"
-       y="21"
-       width="34"
-       height="34"
-       fill="#202020"
-       id="rect78"
-       style="fill:#202020;fill-opacity:1" />
-    <g
-       transform="translate(30,26)"
-       fill="#ffffff"
-       opacity="0.75"
-       id="g82">
-      <path
-         d="m 16.243,7.0503 -4.2426,4.2426 -4.2426,-4.2426 -0.70711,0.70711 4.2426,4.2426 -4.2426,4.2426 0.70711,0.70711 4.2426,-4.2426 4.2426,4.2426 0.70711,-0.70711 -4.2426,-4.2426 4.2426,-4.2426 z"
-         fill="#ffffff"
-         opacity="1"
-         stroke-linecap="round"
-         stroke-linejoin="round"
-         stroke-miterlimit="2"
-         stroke-width="2"
-         id="path80"
-         style="opacity:1" />
-    </g>
-  </g>
-  <g
-     id="close-prelight">
-    <rect
-       x="72"
-       y="21"
-       width="34"
-       height="34"
-       fill="#202020"
-       id="rect84" />
-    <path
-       d="m 89,50 c 6.6273,0 12,-5.3726 12,-12 0,-6.6274 -5.3726,-12 -12,-12 -6.6275,0 -12,5.3726 -12,12 0,6.6274 5.3726,12 12,12"
-       fill="#e57373"
-       fill-rule="evenodd"
-       id="path86" />
-    <g
-       transform="translate(77,26)"
-       fill="#ffffff"
-       opacity=".75"
-       id="g90"
-       style="opacity:1">
-      <path
-         d="m 16.243,7.0503 -4.2426,4.2426 -4.2426,-4.2426 -0.70711,0.70711 4.2426,4.2426 -4.2426,4.2426 0.70711,0.70711 4.2426,-4.2426 4.2426,4.2426 0.70711,-0.70711 -4.2426,-4.2426 4.2426,-4.2426 z"
-         fill="#ffffff"
-         opacity="1"
-         stroke-linecap="round"
-         stroke-linejoin="round"
-         stroke-miterlimit="2"
-         stroke-width="2"
-         id="path88" />
-    </g>
-  </g>
-  <g
-     id="close-pressed">
-    <rect
-       x="120"
-       y="21"
-       width="34"
-       height="34"
-       fill="#202020"
-       id="rect92" />
-    <path
-       d="m 137,50 c 6.6273,0 12,-5.3726 12,-12 0,-6.6274 -5.3726,-12 -12,-12 -6.6275,0 -12,5.3726 -12,12 0,6.6274 5.3726,12 12,12"
-       fill="#e53935"
-       fill-rule="evenodd"
-       id="path96" />
-    <g
-       transform="translate(125,26)"
-       fill="#ffffff"
-       opacity=".75"
-       id="g100"
-       style="opacity:1">
-      <path
-         d="m 16.243,7.0503 -4.2426,4.2426 -4.2426,-4.2426 -0.70711,0.70711 4.2426,4.2426 -4.2426,4.2426 0.70711,0.70711 4.2426,-4.2426 4.2426,4.2426 0.70711,-0.70711 -4.2426,-4.2426 4.2426,-4.2426 z"
-         fill="#ffffff"
-         opacity="1"
-         stroke-linecap="round"
-         stroke-linejoin="round"
-         stroke-miterlimit="2"
-         stroke-width="2"
-         id="path98" />
-    </g>
-  </g>
-  <g
-     id="close-inactive">
-    <rect
-       x="168"
-       y="21"
-       width="34"
-       height="34"
-       fill="#202020"
-       id="rect102"
-       style="fill:#2c2c2c;fill-opacity:1" />
-    <g
-       transform="translate(173,26)"
-       fill="#ffffff"
-       opacity="0.3"
-       id="g106">
-      <path
-         d="m 16.243,7.0503 -4.2426,4.2426 -4.2426,-4.2426 -0.70711,0.70711 4.2426,4.2426 -4.2426,4.2426 0.70711,0.70711 4.2426,-4.2426 4.2426,4.2426 0.70711,-0.70711 -4.2426,-4.2426 4.2426,-4.2426 z"
-         fill="#ffffff"
-         opacity="1"
-         stroke-linecap="round"
-         stroke-linejoin="round"
-         stroke-miterlimit="2"
-         stroke-width="2"
-         id="path104" />
-    </g>
-  </g>
-  <g
-     id="hide-active">
-    <rect
-       x="25"
-       y="59"
-       width="34"
-       height="34"
-       fill="#202020"
-       id="rect108" />
-    <g
-       transform="translate(30,68)"
-       fill="#ffffff"
-       opacity="0.75"
-       id="g112">
-      <path
-         d="m 7,12 v 1 H 17 V 12 H 7"
-         fill="#ffffff"
-         fill-rule="evenodd"
-         opacity="0.75"
-         id="path110"
-         style="opacity:1" />
-    </g>
-  </g>
-  <g
-     id="maximize-active">
-    <rect
-       x="25"
-       y="97"
-       width="34"
-       height="34"
-       fill="#202020"
-       id="rect64" />
-    <g
-       transform="translate(30,102)"
-       fill="#ffffff"
-       opacity="0.75"
-       id="g116">
-      <path
-         d="M 7,7 V 17 H 17 V 7 H 7 m 1,1 h 8 v 8 H 8 V 8"
-         fill="#ffffff"
-         fill-rule="evenodd"
-         opacity="0.75"
-         id="path114"
-         style="opacity:1" />
-    </g>
-  </g>
-  <g
-     id="hide-prelight">
-    <rect
-       x="72"
-       y="59"
-       width="34"
-       height="34"
-       fill="#202020"
-       id="rect118" />
-    <path
-       d="m 89,88 c 6.6273,0 12,-5.3726 12,-12 0,-6.6274 -5.3726,-12 -12,-12 -6.6275,0 -12,5.3726 -12,12 0,6.6274 5.3726,12 12,12"
-       fill="#ffffff"
-       fill-rule="evenodd"
-       opacity="0.15"
-       id="path120" />
-    <g
-       transform="translate(77,68)"
-       fill="#ffffff"
-       opacity="0.75"
-       id="g124">
-      <path
-         d="m 7,12 v 1 H 17 V 12 H 7"
-         fill="#ffffff"
-         fill-rule="evenodd"
-         opacity="0.75"
-         id="path122"
-         style="opacity:1" />
-    </g>
-  </g>
-  <g
-     id="hide-pressed">
-    <rect
-       x="120"
-       y="59"
-       width="34"
-       height="34"
-       fill="#202020"
-       id="rect126" />
-    <path
-       d="m 137,88 c 6.6273,0 12,-5.3726 12,-12 0,-6.6274 -5.3726,-12 -12,-12 -6.6275,0 -12,5.3726 -12,12 0,6.6274 5.3726,12 12,12"
-       fill="#ffffff"
-       fill-rule="evenodd"
-       opacity="0.3"
-       id="path130" />
-    <g
-       transform="translate(125,68)"
-       fill="#ffffff"
-       opacity="0.75"
-       id="g134">
-      <path
-         d="m 7,12 v 1 H 17 V 12 H 7"
-         fill="#ffffff"
-         fill-rule="evenodd"
-         opacity="0.75"
-         id="path132"
-         style="opacity:1" />
-    </g>
-  </g>
-  <g
-     id="maximize-prelight">
-    <rect
-       x="72"
-       y="97"
-       width="34"
-       height="34"
-       fill="#202020"
-       id="rect136" />
-    <path
-       d="m 89,126 c 6.6273,0 12,-5.3726 12,-12 0,-6.6274 -5.3726,-12 -12,-12 -6.6275,0 -12,5.3726 -12,12 0,6.6274 5.3726,12 12,12"
-       fill="#ffffff"
-       fill-rule="evenodd"
-       opacity="0.15"
-       id="path138" />
-    <g
-       transform="translate(77,102)"
-       fill="#ffffff"
-       opacity="0.75"
-       id="g142">
-      <path
-         d="M 7,7 V 17 H 17 V 7 H 7 m 1,1 h 8 v 8 H 8 V 8"
-         fill="#ffffff"
-         fill-rule="evenodd"
-         opacity="0.75"
-         id="path140"
-         style="opacity:1" />
-    </g>
-  </g>
-  <g
-     id="maximize-pressed">
-    <rect
-       x="120"
-       y="97"
-       width="34"
-       height="34"
-       fill="#202020"
-       id="rect144" />
-    <path
-       d="m 137,126 c 6.6273,0 12,-5.3726 12,-12 0,-6.6274 -5.3726,-12 -12,-12 -6.6275,0 -12,5.3726 -12,12 0,6.6274 5.3726,12 12,12"
-       fill="#ffffff"
-       fill-rule="evenodd"
-       opacity="0.3"
-       id="path146" />
-    <g
-       transform="translate(125,102)"
-       fill="#ffffff"
-       opacity="0.75"
-       id="g150">
-      <path
-         d="M 7,7 V 17 H 17 V 7 H 7 m 1,1 h 8 v 8 H 8 V 8"
-         fill="#ffffff"
-         fill-rule="evenodd"
-         opacity="0.75"
-         id="path148"
-         style="opacity:1" />
-    </g>
-  </g>
-  <g
-     id="hide-inactive">
-    <rect
-       x="168"
-       y="59"
-       width="34"
-       height="34"
-       fill="#202020"
-       id="rect152"
-       style="fill:#2c2c2c;fill-opacity:1" />
-    <g
-       transform="translate(173,68)"
-       fill="#ffffff"
-       opacity="0.75"
-       id="g156">
-      <path
-         d="m 7,12 v 1 H 17 V 12 H 7"
-         fill="#ffffff"
-         fill-rule="evenodd"
-         opacity="0.3"
-         id="path154" />
-    </g>
-  </g>
-  <g
-     id="maximize-inactive">
-    <rect
-       x="168"
-       y="97"
-       width="34"
-       height="34"
-       fill="#202020"
-       id="rect158"
-       style="fill:#2c2c2c;fill-opacity:1" />
-    <g
-       transform="translate(173,102)"
-       fill="#ffffff"
-       opacity="0.88"
-       id="g162">
-      <path
-         d="M 7,7 V 17 H 17 V 7 H 7 m 1,1 h 8 v 8 H 8 V 8"
-         fill="#ffffff"
-         fill-rule="evenodd"
-         opacity="0.3"
-         id="path160" />
-    </g>
-  </g>
-  <g
-     id="maximize-toggled-active">
-    <rect
-       x="25"
-       y="136"
-       width="34"
-       height="34"
-       fill="#202020"
-       id="rect164" />
-    <g
-       transform="translate(30,141)"
-       fill="#ffffff"
-       opacity="0.75"
-       id="g168">
-      <path
-         d="M 9,7 V 9 H 7 v 8 h 8 v -2 h 2 V 7 Z m 1,1 h 6 v 6 H 15 V 9 h -5 z m -2,2 h 6 v 6 H 8 Z"
-         fill="#ffffff"
-         id="path166"
-         style="opacity:1" />
-    </g>
-  </g>
-  <g
-     id="maximize-toggled-prelight">
-    <rect
-       x="72"
-       y="136"
-       width="34"
-       height="34"
-       fill="#202020"
-       id="rect170" />
-    <path
-       d="m 89,165 c 6.6273,0 12,-5.3726 12,-12 0,-6.6274 -5.3726,-12 -12,-12 -6.6275,0 -12,5.3726 -12,12 0,6.6274 5.3726,12 12,12"
-       fill="#ffffff"
-       fill-rule="evenodd"
-       opacity="0.15"
-       id="path172" />
-    <g
-       transform="translate(77,141)"
-       fill="#ffffff"
-       opacity="0.75"
-       id="g176">
-      <path
-         d="M 9,7 V 9 H 7 v 8 h 8 v -2 h 2 V 7 Z m 1,1 h 6 v 6 H 15 V 9 h -5 z m -2,2 h 6 v 6 H 8 Z"
-         fill="#ffffff"
-         id="path174"
-         style="opacity:1" />
-    </g>
-  </g>
-  <g
-     id="maximize-toggled-pressed">
-    <rect
-       x="120"
-       y="136"
-       width="34"
-       height="34"
-       fill="#202020"
-       id="rect178" />
-    <path
-       d="m 137,165 c 6.6273,0 12,-5.3726 12,-12 0,-6.6274 -5.3726,-12 -12,-12 -6.6275,0 -12,5.3726 -12,12 0,6.6274 5.3726,12 12,12"
-       fill="#ffffff"
-       fill-rule="evenodd"
-       opacity="0.3"
-       id="path180" />
-    <g
-       transform="translate(125,141)"
-       fill="#ffffff"
-       opacity="0.75"
-       id="g184">
-      <path
-         d="M 9,7 V 9 H 7 v 8 h 8 v -2 h 2 V 7 Z m 1,1 h 6 v 6 H 15 V 9 h -5 z m -2,2 h 6 v 6 H 8 Z"
-         fill="#ffffff"
-         id="path182"
-         style="opacity:1" />
-    </g>
-  </g>
-  <g
-     id="maximize-toggled-inactive">
-    <rect
-       x="168"
-       y="136"
-       width="34"
-       height="34"
-       fill="#202020"
-       id="rect186"
-       style="fill:#2c2c2c;fill-opacity:1" />
-    <g
-       transform="translate(173,141)"
-       fill="#ffffff"
-       opacity="0.3"
-       id="g190">
-      <path
-         d="M 9,7 V 9 H 7 v 8 h 8 v -2 h 2 V 7 Z m 1,1 h 6 v 6 H 15 V 9 h -5 z m -2,2 h 6 v 6 H 8 Z"
-         fill="#ffffff"
-         id="path188" />
-    </g>
-  </g>
-  <g
-     id="shade-active"
-     transform="translate(0,-2)">
-    <rect
-       x="215"
-       y="48"
-       width="34"
-       height="34"
-       fill="#202020"
-       id="rect192" />
-    <g
-       transform="translate(220,53.465)"
-       fill="#ffffff"
-       opacity="0.75"
-       id="g196">
-      <path
-         d="m 12,8 -6.3633,6.3633 0.70703,0.70703 5.6562,-5.6562 5.6562,5.6562 0.70703,-0.70703 -5.6562,-5.6562 z"
-         fill="#ffffff"
-         opacity="1"
-         stroke-linecap="round"
-         stroke-linejoin="round"
-         stroke-miterlimit="2"
-         stroke-width="2"
-         id="path194" />
-    </g>
-  </g>
-  <g
-     id="shade-prelight"
-     transform="translate(0,-2)">
-    <rect
-       x="257"
-       y="48"
-       width="34"
-       height="34"
-       fill="#202020"
-       id="rect198" />
-    <path
-       d="m 274,77.04 c 6.6273,0 12,-5.3726 12,-12 0,-6.6275 -5.3726,-12 -12,-12 -6.6275,0 -12,5.3725 -12,12 0,6.6274 5.3726,12 12,12"
-       fill="#ffffff"
-       fill-rule="evenodd"
-       opacity="0.15"
-       id="path200" />
-    <g
-       transform="translate(262,53.465)"
-       fill="#ffffff"
-       opacity="0.75"
-       id="g204">
-      <path
-         d="m 12,8 -6.3633,6.3633 0.70703,0.70703 5.6562,-5.6562 5.6562,5.6562 0.70703,-0.70703 -5.6562,-5.6562 z"
-         fill="#ffffff"
-         opacity="1"
-         stroke-linecap="round"
-         stroke-linejoin="round"
-         stroke-miterlimit="2"
-         stroke-width="2"
-         id="path202" />
-    </g>
-  </g>
-  <g
-     id="shade-pressed"
-     transform="translate(0,-2)">
-    <rect
-       x="298"
-       y="48"
-       width="34"
-       height="34"
-       fill="#202020"
-       id="rect206" />
-    <path
-       d="m 315,77.04 c 6.6273,0 12,-5.3726 12,-12 0,-6.6275 -5.3726,-12 -12,-12 -6.6275,0 -12,5.3725 -12,12 0,6.6274 5.3726,12 12,12"
-       fill="#ffffff"
-       fill-rule="evenodd"
-       opacity="0.3"
-       id="path208" />
-    <g
-       transform="translate(303,53.465)"
-       fill="#ffffff"
-       opacity="0.75"
-       id="g212">
-      <path
-         d="m 12,8 -6.3633,6.3633 0.70703,0.70703 5.6562,-5.6562 5.6562,5.6562 0.70703,-0.70703 -5.6562,-5.6562 z"
-         fill="#ffffff"
-         opacity="1"
-         stroke-linecap="round"
-         stroke-linejoin="round"
-         stroke-miterlimit="2"
-         stroke-width="2"
-         id="path210" />
-    </g>
-  </g>
-  <g
-     id="shade-inactive"
-     transform="translate(0,-2)">
-    <rect
-       x="340"
-       y="48"
-       width="34"
-       height="34"
-       fill="#202020"
-       id="rect214"
-       style="fill:#2c2c2c;fill-opacity:1" />
-    <g
-       transform="translate(345,53.465)"
-       fill="#ffffff"
-       opacity="0.3"
-       id="g218">
-      <path
-         d="m 12,8 -6.3633,6.3633 0.70703,0.70703 5.6562,-5.6562 5.6562,5.6562 0.70703,-0.70703 -5.6562,-5.6562 z"
-         fill="#ffffff"
-         opacity="1"
-         stroke-linecap="round"
-         stroke-linejoin="round"
-         stroke-miterlimit="2"
-         stroke-width="2"
-         id="path216" />
-    </g>
-  </g>
-  <g
-     id="shade-toggled-active">
-    <rect
-       x="215"
-       y="84"
-       width="34"
-       height="34"
-       fill="#202020"
-       id="rect220" />
-    <g
-       transform="matrix(1,0,0,-1,220,112.54)"
-       fill="#ffffff"
-       opacity="0.75"
-       id="g224">
-      <path
-         d="m 12,8 -6.3633,6.3633 0.70703,0.70703 5.6562,-5.6562 5.6562,5.6562 0.70703,-0.70703 -5.6562,-5.6562 z"
-         fill="#ffffff"
-         opacity="1"
-         stroke-linecap="round"
-         stroke-linejoin="round"
-         stroke-miterlimit="2"
-         stroke-width="2"
-         id="path222" />
-    </g>
-  </g>
-  <g
-     id="shade-toggled-prelight">
-    <rect
-       x="257"
-       y="84"
-       width="34"
-       height="34"
-       fill="#202020"
-       id="rect226" />
-    <path
-       d="m 274,113.04 c 6.6273,0 12,-5.3726 12,-12 0,-6.6275 -5.3726,-12 -12,-12 -6.6275,0 -12,5.3725 -12,12 0,6.6274 5.3726,12 12,12"
-       fill="#ffffff"
-       fill-rule="evenodd"
-       opacity="0.15"
-       id="path228" />
-    <g
-       transform="matrix(1,0,0,-1,262,112.54)"
-       fill="#ffffff"
-       opacity="0.75"
-       id="g232">
-      <path
-         d="m 12,8 -6.3633,6.3633 0.70703,0.70703 5.6562,-5.6562 5.6562,5.6562 0.70703,-0.70703 -5.6562,-5.6562 z"
-         fill="#ffffff"
-         opacity="1"
-         stroke-linecap="round"
-         stroke-linejoin="round"
-         stroke-miterlimit="2"
-         stroke-width="2"
-         id="path230" />
-    </g>
-  </g>
-  <g
-     id="shade-toggled-pressed">
-    <rect
-       x="298"
-       y="84"
-       width="34"
-       height="34"
-       fill="#202020"
-       id="rect234" />
-    <path
-       d="m 315,113.04 c 6.6273,0 12,-5.3726 12,-12 0,-6.6275 -5.3726,-12 -12,-12 -6.6275,0 -12,5.3725 -12,12 0,6.6274 5.3726,12 12,12"
-       fill="#ffffff"
-       fill-rule="evenodd"
-       opacity="0.3"
-       id="path236" />
-    <g
-       transform="matrix(1,0,0,-1,303,112.54)"
-       fill="#ffffff"
-       opacity="0.75"
-       id="g240">
-      <path
-         d="m 12,8 -6.3633,6.3633 0.70703,0.70703 5.6562,-5.6562 5.6562,5.6562 0.70703,-0.70703 -5.6562,-5.6562 z"
-         fill="#ffffff"
-         opacity="1"
-         stroke-linecap="round"
-         stroke-linejoin="round"
-         stroke-miterlimit="2"
-         stroke-width="2"
-         id="path238" />
-    </g>
-  </g>
-  <g
-     id="shade-toggled-inactive">
-    <rect
-       x="340"
-       y="84"
-       width="34"
-       height="34"
-       fill="#202020"
-       id="rect242"
-       style="fill:#2c2c2c;fill-opacity:1" />
-    <g
-       transform="matrix(1,0,0,-1,345,112.54)"
-       fill="#ffffff"
-       opacity="0.3"
-       id="g246">
-      <path
-         d="m 12,8 -6.3633,6.3633 0.70703,0.70703 5.6562,-5.6562 5.6562,5.6562 0.70703,-0.70703 -5.6562,-5.6562 z"
-         fill="#ffffff"
-         opacity="1"
-         stroke-linecap="round"
-         stroke-linejoin="round"
-         stroke-miterlimit="2"
-         stroke-width="2"
-         id="path244" />
-    </g>
-  </g>
-  <g
-     id="stick-toggled-active">
-    <rect
-       x="215"
-       y="160"
-       width="34"
-       height="34"
-       fill="#202020"
-       id="rect248" />
-    <circle
-       cx="232"
-       cy="177"
-       r="2"
-       fill="#ffffff"
-       opacity="0.75"
-       stroke-width="0.99999"
-       id="circle250" />
-    <path
-       d="m 232,171 a 6,6 0 0 0 -6,6 6,6 0 0 0 6,6 6,6 0 0 0 6,-6 6,6 0 0 0 -6,-6 z m 0,1 a 5,5 0 0 1 5,5 5,5 0 0 1 -5,5 5,5 0 0 1 -5,-5 5,5 0 0 1 5,-5 z"
-       fill="#ffffff"
-       opacity="0.75"
-       id="path252" />
-  </g>
-  <g
-     id="stick-prelight">
-    <rect
-       x="257"
-       y="122"
-       width="34"
-       height="34"
-       fill="#202020"
-       id="rect254" />
-    <path
-       d="m 274,151.04 c 6.6273,0 12,-5.3726 12,-12 0,-6.6275 -5.3726,-12 -12,-12 -6.6275,0 -12,5.3725 -12,12 0,6.6274 5.3726,12 12,12"
-       fill="#ffffff"
-       fill-rule="evenodd"
-       opacity="0.15"
-       id="path256" />
-    <path
-       d="m 274,133 a 6,6 0 0 0 -6,6 6,6 0 0 0 6,6 6,6 0 0 0 6,-6 6,6 0 0 0 -6,-6 z m 0,1 a 5,5 0 0 1 5,5 5,5 0 0 1 -5,5 5,5 0 0 1 -5,-5 5,5 0 0 1 5,-5 z"
-       fill="#ffffff"
-       opacity="0.75"
-       id="path258" />
-  </g>
-  <g
-     id="stick-pressed">
-    <rect
-       x="298"
-       y="122"
-       width="34"
-       height="34"
-       fill="#202020"
-       id="rect260" />
-    <path
-       d="m 315,151.04 c 6.6273,0 12,-5.3725 12,-12 0,-6.6274 -5.3726,-12 -12,-12 -6.6275,0 -12,5.3725 -12,12 0,6.6275 5.3726,12 12,12"
-       fill="#ffffff"
-       fill-rule="evenodd"
-       opacity="0.3"
-       id="path262" />
-    <path
-       d="m 315,133 a 6,6 0 0 0 -6,6 6,6 0 0 0 6,6 6,6 0 0 0 6,-6 6,6 0 0 0 -6,-6 z m 0,1 a 5,5 0 0 1 5,5 5,5 0 0 1 -5,5 5,5 0 0 1 -5,-5 5,5 0 0 1 5,-5 z"
-       fill="#ffffff"
-       opacity="0.75"
-       id="path264" />
-  </g>
-  <g
-     id="stick-inactive">
-    <rect
-       x="340"
-       y="122"
-       width="34"
-       height="34"
-       fill="#202020"
-       id="rect266"
-       style="fill:#2c2c2c;fill-opacity:1" />
-    <path
-       d="m 357,133 a 6,6 0 0 0 -6,6 6,6 0 0 0 6,6 6,6 0 0 0 6,-6 6,6 0 0 0 -6,-6 z m 0,1 a 5,5 0 0 1 5,5 5,5 0 0 1 -5,5 5,5 0 0 1 -5,-5 5,5 0 0 1 5,-5 z"
-       fill="#ffffff"
-       opacity="0.3"
-       id="path268" />
-  </g>
-  <g
-     id="stick-toggled-prelight">
-    <rect
-       x="257"
-       y="160"
-       width="34"
-       height="34"
-       fill="#202020"
-       id="rect270" />
-    <path
-       d="m 274,189.04 c 6.6273,0 12,-5.3727 12,-12 0,-6.6273 -5.3726,-12 -12,-12 -6.6275,0 -12,5.3727 -12,12 0,6.6274 5.3726,12 12,12"
-       fill="#ffffff"
-       fill-rule="evenodd"
-       opacity="0.15"
-       id="path272" />
-    <circle
-       cx="274"
-       cy="177"
-       r="2"
-       fill="#ffffff"
-       opacity="0.75"
-       id="circle274" />
-    <path
-       d="m 274,171 a 6,6 0 0 0 -6,6 6,6 0 0 0 6,6 6,6 0 0 0 6,-6 6,6 0 0 0 -6,-6 z m 0,1 a 5,5 0 0 1 5,5 5,5 0 0 1 -5,5 5,5 0 0 1 -5,-5 5,5 0 0 1 5,-5 z"
-       fill="#ffffff"
-       opacity="0.75"
-       id="path276" />
-  </g>
-  <g
-     id="stick-toggled-pressed">
-    <rect
-       x="298"
-       y="160"
-       width="34"
-       height="34"
-       fill="#202020"
-       id="rect278" />
-    <path
-       d="m 315,189.04 c 6.6273,0 12,-5.3727 12,-12 0,-6.6273 -5.3726,-12 -12,-12 -6.6275,0 -12,5.3727 -12,12 0,6.6274 5.3726,12 12,12"
-       fill="#ffffff"
-       fill-rule="evenodd"
-       opacity="0.3"
-       id="path280" />
-    <circle
-       cx="315"
-       cy="177"
-       r="2"
-       fill="#ffffff"
-       opacity="0.75"
-       id="circle282" />
-    <path
-       d="m 315,171 a 6,6 0 0 0 -6,6 6,6 0 0 0 6,6 6,6 0 0 0 6,-6 6,6 0 0 0 -6,-6 z m 0,1 a 5,5 0 0 1 5,5 5,5 0 0 1 -5,5 5,5 0 0 1 -5,-5 5,5 0 0 1 5,-5 z"
-       fill="#ffffff"
-       opacity="0.75"
-       id="path284" />
-  </g>
-  <g
-     id="stick-toggled-inactive">
-    <rect
-       x="340"
-       y="160"
-       width="34"
-       height="34"
-       fill="#202020"
-       id="rect286"
-       style="fill:#2c2c2c;fill-opacity:1" />
-    <circle
-       cx="357"
-       cy="177"
-       r="2"
-       fill="#ffffff"
-       opacity="0.35"
-       id="circle288" />
-    <path
-       d="m 357,171 a 6,6 0 0 0 -6,6 6,6 0 0 0 6,6 6,6 0 0 0 6,-6 6,6 0 0 0 -6,-6 z m 0,1 a 5,5 0 0 1 5,5 5,5 0 0 1 -5,5 5,5 0 0 1 -5,-5 5,5 0 0 1 5,-5 z"
-       fill="#ffffff"
-       opacity="0.3"
-       id="path290" />
-  </g>
+ </g>
+ <g id="stick-toggled-active">
+  <rect x="215" y="160" width="34" height="34" fill="#202020"/>
+  <circle cx="232" cy="177" r="2" fill="#ffffff" opacity=".75" stroke-width=".99999"/>
+  <path d="m232 171a6 6 0 0 0-6 6 6 6 0 0 0 6 6 6 6 0 0 0 6-6 6 6 0 0 0-6-6zm0 1a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5z" fill="#ffffff" opacity=".75"/>
+ </g>
+ <g id="stick-prelight">
+  <rect x="257" y="122" width="34" height="34" fill="#202020"/>
+  <path d="m274 151.04c6.6273 0 12-5.3726 12-12 0-6.6275-5.3726-12-12-12-6.6275 0-12 5.3725-12 12 0 6.6274 5.3726 12 12 12" fill="#ffffff" fill-rule="evenodd" opacity=".15"/>
+  <path d="m274 133a6 6 0 0 0-6 6 6 6 0 0 0 6 6 6 6 0 0 0 6-6 6 6 0 0 0-6-6zm0 1a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5z" fill="#ffffff" opacity=".75"/>
+ </g>
+ <g id="stick-pressed">
+  <rect x="298" y="122" width="34" height="34" fill="#202020"/>
+  <path d="m315 151.04c6.6273 0 12-5.3725 12-12 0-6.6274-5.3726-12-12-12-6.6275 0-12 5.3725-12 12s5.3726 12 12 12" fill="#ffffff" fill-rule="evenodd" opacity=".3"/>
+  <path d="m315 133a6 6 0 0 0-6 6 6 6 0 0 0 6 6 6 6 0 0 0 6-6 6 6 0 0 0-6-6zm0 1a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5z" fill="#ffffff" opacity=".75"/>
+ </g>
+ <g id="stick-inactive">
+  <rect x="340" y="122" width="34" height="34" fill="#2c2c2c"/>
+  <path d="m357 133a6 6 0 0 0-6 6 6 6 0 0 0 6 6 6 6 0 0 0 6-6 6 6 0 0 0-6-6zm0 1a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5z" fill="#ffffff" opacity=".3"/>
+ </g>
+ <g id="stick-toggled-prelight">
+  <rect x="257" y="160" width="34" height="34" fill="#202020"/>
+  <path d="m274 189.04c6.6273 0 12-5.3727 12-12s-5.3726-12-12-12c-6.6275 0-12 5.3727-12 12 0 6.6274 5.3726 12 12 12" fill="#ffffff" fill-rule="evenodd" opacity=".15"/>
+  <circle cx="274" cy="177" r="2" fill="#ffffff" opacity=".75"/>
+  <path d="m274 171a6 6 0 0 0-6 6 6 6 0 0 0 6 6 6 6 0 0 0 6-6 6 6 0 0 0-6-6zm0 1a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5z" fill="#ffffff" opacity=".75"/>
+ </g>
+ <g id="stick-toggled-pressed">
+  <rect x="298" y="160" width="34" height="34" fill="#202020"/>
+  <path d="m315 189.04c6.6273 0 12-5.3727 12-12s-5.3726-12-12-12c-6.6275 0-12 5.3727-12 12 0 6.6274 5.3726 12 12 12" fill="#ffffff" fill-rule="evenodd" opacity=".3"/>
+  <circle cx="315" cy="177" r="2" fill="#ffffff" opacity=".75"/>
+  <path d="m315 171a6 6 0 0 0-6 6 6 6 0 0 0 6 6 6 6 0 0 0 6-6 6 6 0 0 0-6-6zm0 1a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5z" fill="#ffffff" opacity=".75"/>
+ </g>
+ <g id="stick-toggled-inactive">
+  <rect x="340" y="160" width="34" height="34" fill="#2c2c2c"/>
+  <circle cx="357" cy="177" r="2" fill="#ffffff" opacity=".35"/>
+  <path d="m357 171a6 6 0 0 0-6 6 6 6 0 0 0 6 6 6 6 0 0 0 6-6 6 6 0 0 0-6-6zm0 1a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5z" fill="#ffffff" opacity=".3"/>
+ </g>
 </svg>
