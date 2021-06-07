@@ -1201,15 +1201,6 @@ searchbar > revealer > box {
   @extend %button-flat;
   color: $titlebar-text-secondary;
 
-  &:not(.titlebutton) {
-    border-radius: $corner-radius;
-    padding: ($medium-size - 26px) / 2 ($medium-size - 16px) / 2;
-  }
-
-  .linked:not(.vertical) > & {
-    border-radius: $corner-radius;
-  }
-
   &:focus, &:hover, &:active, &:checked { color: $titlebar-text; }
 
   &:disabled { color: $titlebar-text-secondary-disabled; }
@@ -1325,7 +1316,18 @@ searchbar > revealer > box {
   }
 
   // Titlebar Buttons
-  button:not(.suggested-action):not(.destructive-action) { @extend %titlebar-button; }
+  button:not(.suggested-action):not(.destructive-action) {
+    @extend %titlebar-button;
+
+    &:not(.titlebutton) {
+      border-radius: $corner-radius;
+      padding: ($medium-size - 26px) / 2 ($medium-size - 16px) / 2;
+    }
+
+    .linked:not(.vertical) > & {
+      border-radius: $corner-radius;
+    }
+  }
 
   button.suggested-action, button.destructive-action {
     border: none;
@@ -1633,6 +1635,10 @@ treeview.view {
     background-image: image($overlay-checked);
     box-shadow: none;
     color: $text;
+  }
+
+  .background:not(.csd) &:selected { // Fix for xfce4 setting
+    background-image: image(mix($text, $base, 10%));
   }
 
   &:hover, &:selected { border-radius: 0; }

@@ -19,9 +19,7 @@
   font-weight: 500;
 
   button {
-    @extend %button-flat;
-    @extend %button-on-dark;
-
+    @extend %titlebar-button;
     min-height: 16px;
     min-width: 16px;
     padding: 0;
@@ -29,16 +27,15 @@
   }
 
   .tasklist button {
+    border-radius: 0;
     border-image: image(transparent) 0 0 2 / 0 0 2px;
 
-    &:checked { border-image: image(currentColor) 0 0 2 / 0 0 2px; }
+    &:checked { border-image: image($primary) 0 0 2 / 0 0 2px; }
 
     image { padding: 4px; }
   }
 
-  // &.horizontal .tasklist button { margin: 0 1px; }
-
-  // &.vertical .tasklist button { margin: 1px 0; }
+  frame > border { border: none; }
 }
 
 // Workspace switcher provided by libwnck
@@ -107,6 +104,28 @@ XfdesktopIconView.view {
  * Thunar *
  **********/
 .thunar {
+  toolbar {
+    background-color: $titlebar;
+    color: $titlebar-text;
+    border-bottom: 1px solid $divider;
+
+    &:backdrop { background-color: $titlebar-backdrop; }
+
+    button { @extend %titlebar-button; }
+
+    entry { @extend %titlebar-entry; }
+
+    @if $topbar == 'dark' and $variant = 'light' {
+      .path-bar.linked:not(.vertical) > button {
+        color: $titlebar-text-secondary;
+
+        &:hover, &:active, &:checked { color: $titlebar-text; }
+
+        &:disabled, &:backdrop { color: $titlebar-text-disabled; }
+      }
+    }
+  }
+
   #location-toolbar { border-bottom: 1px solid $divider; }
 
   .standard-view.frame { border-style: none; }
@@ -132,4 +151,10 @@ window.background.csd.thunar {
       background-color: transparent;
     }
   }
+}
+
+// Xfce4 logout dialog
+.xfsm-logout-dialog {
+  border: 2px solid $solid-border;
+  box-shadow: none;
 }

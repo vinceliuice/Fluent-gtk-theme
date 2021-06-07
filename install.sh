@@ -148,11 +148,9 @@ install() {
   fi
 
   if [[ "$theme" == '' && "$size" == '' ]]; then
-    if [[ "$color" != '' ]]; then
-      mkdir -p                                                                  "$THEME_DIR/xfwm4"
-      cp -r "$SRC_DIR/xfwm4/assets${ELSE_LIGHT:-}/"*.png                        "$THEME_DIR/xfwm4"
-      cp -r "$SRC_DIR/xfwm4/themerc${ELSE_LIGHT:-}"                             "$THEME_DIR/xfwm4/themerc"
-    fi
+    mkdir -p                                                                    "$THEME_DIR/xfwm4"
+    cp -r "$SRC_DIR/xfwm4/assets$color/"*.png                                   "$THEME_DIR/xfwm4"
+    cp -r "$SRC_DIR/xfwm4/themerc${ELSE_LIGHT:-}"                               "$THEME_DIR/xfwm4/themerc"
 
     if [[ "$color" != '-light' ]]; then
       mkdir -p                                                                  "$THEME_DIR/cinnamon"
