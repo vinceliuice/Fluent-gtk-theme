@@ -19,9 +19,7 @@
   font-weight: 500;
 
   button {
-    @extend %button-flat;
-    @extend %button-on-dark;
-
+    @extend %titlebar-button;
     min-height: 16px;
     min-width: 16px;
     padding: 0;
@@ -29,16 +27,15 @@
   }
 
   .tasklist button {
+    border-radius: 0;
     border-image: image(transparent) 0 0 2 / 0 0 2px;
 
-    &:checked { border-image: image(currentColor) 0 0 2 / 0 0 2px; }
+    &:checked { border-image: image($primary) 0 0 2 / 0 0 2px; }
 
     image { padding: 4px; }
   }
 
-  // &.horizontal .tasklist button { margin: 0 1px; }
-
-  // &.vertical .tasklist button { margin: 1px 0; }
+  frame > border { border: none; }
 }
 
 // Workspace switcher provided by libwnck
