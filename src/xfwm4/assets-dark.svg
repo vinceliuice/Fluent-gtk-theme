@@ -61,24 +61,6 @@
  <g id="bottom-inactive" transform="matrix(0,-1,-1,0,1224.4,163)">
   <rect transform="scale(-1,1)" x="-48" y="734.36" width="2" height="16" fill="#2c2c2c"/>
  </g>
- <g id="menu-prelight" transform="translate(0,-2)">
-  <rect x="257" y="8" width="34" height="34" fill="#202020"/>
-  <path d="m274 37.04c6.6273 0 12-5.3727 12-12s-5.3726-12-12-12c-6.6275 0-12 5.3727-12 12 0 6.6274 5.3726 12 12 12" fill="#ffffff" fill-rule="evenodd" opacity=".15"/>
-  <circle cx="274" cy="25" r="2" fill="#ffffff" opacity=".75"/>
- </g>
- <g id="menu-pressed" transform="translate(0,-2)">
-  <rect x="298" y="8" width="34" height="34" fill="#202020"/>
-  <path d="m315 37.04c6.6273 0 12-5.3727 12-12s-5.3726-12-12-12c-6.6275 0-12 5.3727-12 12 0 6.6274 5.3726 12 12 12" fill="#ffffff" fill-rule="evenodd" opacity=".3"/>
-  <circle cx="315" cy="25" r="2" fill="#ffffff" opacity=".75"/>
- </g>
- <g id="menu-active" transform="translate(0,-2)">
-  <rect x="215" y="8" width="34" height="34" fill="#202020"/>
-  <circle cx="232" cy="25" r="2" fill="#ffffff" opacity=".75"/>
- </g>
- <g id="menu-inactive" transform="translate(0,-2)">
-  <rect x="340" y="8" width="34" height="34" fill="#2c2c2c"/>
-  <circle cx="357" cy="25" r="2" fill="#ffffff" opacity=".35"/>
- </g>
  <g id="stick-active">
   <rect x="215" y="122" width="34" height="34" fill="#202020"/>
   <path d="m232 133a6 6 0 0 0-6 6 6 6 0 0 0 6 6 6 6 0 0 0 6-6 6 6 0 0 0-6-6zm0 1a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5z" fill="#ffffff" opacity=".75"/>
@@ -274,5 +256,31 @@
   <rect x="340" y="160" width="34" height="34" fill="#2c2c2c"/>
   <circle cx="357" cy="177" r="2" fill="#ffffff" opacity=".35"/>
   <path d="m357 171a6 6 0 0 0-6 6 6 6 0 0 0 6 6 6 6 0 0 0 6-6 6 6 0 0 0-6-6zm0 1a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5z" fill="#ffffff" opacity=".3"/>
+ </g>
+ <g id="menu-prelight" transform="translate(0,-2)">
+  <rect x="257" y="8" width="34" height="34" fill="#202020"/>
+  <path d="m274 37.04c6.6273 0 12-5.3727 12-12s-5.3726-12-12-12c-6.6275 0-12 5.3727-12 12 0 6.6274 5.3726 12 12 12" fill="#ffffff" fill-rule="evenodd" opacity=".15"/>
+  <circle cx="274" cy="25" r="1" fill="#ffffff" opacity=".56" stroke-width=".5"/>
+  <circle cx="269" cy="25" r="1" fill="#ffffff" opacity=".56" stroke-width=".5"/>
+  <circle cx="279" cy="25" r="1" fill="#ffffff" opacity=".56" stroke-width=".5"/>
+ </g>
+ <g id="menu-pressed" transform="translate(0,-2)">
+  <rect x="298" y="8" width="34" height="34" fill="#202020"/>
+  <path d="m315 37.04c6.6273 0 12-5.3727 12-12s-5.3726-12-12-12c-6.6275 0-12 5.3727-12 12 0 6.6274 5.3726 12 12 12" fill="#ffffff" fill-rule="evenodd" opacity=".3"/>
+  <circle cx="315" cy="25" r="1" fill="#ffffff" opacity=".56" stroke-width=".5"/>
+  <circle cx="310" cy="25" r="1" fill="#ffffff" opacity=".56" stroke-width=".5"/>
+  <circle cx="320" cy="25" r="1" fill="#ffffff" opacity=".56" stroke-width=".5"/>
+ </g>
+ <g id="menu-active" transform="translate(0,-2)">
+  <rect x="215" y="8" width="34" height="34" fill="#202020"/>
+  <circle cx="232" cy="25" r="1" fill="#ffffff" opacity=".56" stroke-width=".5"/>
+  <circle cx="227" cy="25" r="1" fill="#ffffff" opacity=".56" stroke-width=".5"/>
+  <circle cx="237" cy="25" r="1" fill="#ffffff" opacity=".56" stroke-width=".5"/>
+ </g>
+ <g id="menu-inactive" transform="translate(0,-2)">
+  <rect x="340" y="8" width="34" height="34" fill="#2c2c2c"/>
+  <circle cx="357" cy="25" r="1" fill="#ffffff" opacity=".35" stroke-width=".5"/>
+  <circle cx="352" cy="25" r="1" fill="#ffffff" opacity=".35" stroke-width=".5"/>
+  <circle cx="362" cy="25" r="1" fill="#ffffff" opacity=".35" stroke-width=".5"/>
  </g>
 </svg>
