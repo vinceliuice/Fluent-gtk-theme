@@ -124,7 +124,7 @@ install() {
   cp -r "$SRC_DIR/cinnamon/thumbnail$color.png"                                 "$THEME_DIR/cinnamon/thumbnail.png"
 
   mkdir -p                                                                      "$THEME_DIR/xfwm4"
-  cp -r "$SRC_DIR/xfwm4/assets${ELSE_LIGHT:-}/"*.png                            "$THEME_DIR/xfwm4"
+  cp -r "$SRC_DIR/xfwm4/assets$color/"*.png                                     "$THEME_DIR/xfwm4"
   cp -r "$SRC_DIR/xfwm4/themerc${ELSE_LIGHT:-}"                                 "$THEME_DIR/xfwm4/themerc"
 
   mkdir -p                                                                      "$THEME_DIR/metacity-1"
