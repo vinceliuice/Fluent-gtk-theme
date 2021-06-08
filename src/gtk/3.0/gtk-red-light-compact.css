@@ -7569,6 +7569,19 @@ window.background.csd.thunar > grid.horizontal > paned.horizontal > scrolledwind
   box-shadow: none;
 }
 
+.exoiconview label {
+  text-decoration-line: none;
+  text-decoration-color: rgba(0, 0, 0, 0.26);
+}
+
+.exoiconview widget.view {
+  border-radius: 2px;
+}
+
+.exoiconview widget.view, .exoiconview widget.view:checked, .exoiconview widget.view:active, .exoiconview widget.view:selected, .exoiconview widget.view:focus {
+  color: rgba(0, 0, 0, 0.87);
+}
+
 /************************
  * LightDM GTK+ Greeter *
  ************************/
