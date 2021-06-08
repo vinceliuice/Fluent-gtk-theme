@@ -7581,6 +7581,19 @@ window.background.csd.thunar > grid.horizontal > paned.horizontal > scrolledwind
   box-shadow: none;
 }
 
+.exoiconview label {
+  text-decoration-line: none;
+  text-decoration-color: rgba(255, 255, 255, 0.3);
+}
+
+.exoiconview widget.view {
+  border-radius: 2px;
+}
+
+.exoiconview widget.view, .exoiconview widget.view:checked, .exoiconview widget.view:active, .exoiconview widget.view:selected, .exoiconview widget.view:focus {
+  color: white;
+}
+
 /************************
  * LightDM GTK+ Greeter *
  ************************/
@@ -7658,6 +7671,8 @@ window.background.csd.thunar > grid.horizontal > paned.horizontal > scrolledwind
 
 .nemo-window .primary-toolbar button:not(.text-button) {
   margin: 4px 2px;
+  border-radius: 2px;
+  padding: 1px 6px;
 }
 
 .nemo-window .primary-toolbar button.text-button {

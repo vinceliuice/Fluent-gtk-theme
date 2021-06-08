@@ -158,3 +158,22 @@ window.background.csd.thunar {
   border: 2px solid $solid-border;
   box-shadow: none;
 }
+
+//
+// Xfce4 setting dialog
+//
+
+.exoiconview {
+  label {
+    text-decoration-line: none;
+    text-decoration-color: $text-secondary-disabled;
+  }
+
+  widget.view {
+    border-radius: $corner-radius;
+
+    &, &:checked, &:active, &:selected, &:focus {
+      color: $text;
+    }
+  }
+}

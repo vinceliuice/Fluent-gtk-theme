@@ -23,6 +23,8 @@
     button:not(.text-button) {
       @extend %titlebar-button;
       margin: $container-padding 2px;
+      border-radius: $corner-radius;
+      padding: ($medium-size - 26px) / 2 ($medium-size - 16px) / 2;
     }
 
     // instead of .path-bar button
