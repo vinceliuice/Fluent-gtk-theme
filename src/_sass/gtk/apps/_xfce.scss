@@ -104,6 +104,9 @@ XfdesktopIconView.view {
  * Thunar *
  **********/
 .thunar {
+  paned > scrolledwindow treeview.view:selected {
+    border-left:2px solid #0078D4;
+  }
   toolbar {
     background-color: $titlebar;
     color: $titlebar-text;
@@ -122,6 +125,16 @@ XfdesktopIconView.view {
         &:hover, &:active, &:checked { color: $titlebar-text; }
 
         &:disabled, &:backdrop { color: $titlebar-text-disabled; }
+      }
+    }
+    > toolitem > widget > widget.linked.path-bar > button.path-bar-button{
+      background: none;
+      outline: none;
+      border: none;
+      box-shadow: none;
+      &:checked{
+        background: $titlebar-fill;
+        &:backdrop{background: $titlebar-divider;}
       }
     }
   }
