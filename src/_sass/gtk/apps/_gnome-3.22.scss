@@ -57,7 +57,7 @@
 
       > stack {
         background-color: $base;
-        border-radius: 0 0 $window-radius $window-radius;
+        border-radius: 0 0 $window-radius 0;
       }
 
       scrolledwindow > .view:not(:selected):not(:hover):not(:checked) {

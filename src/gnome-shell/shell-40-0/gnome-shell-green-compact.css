@@ -128,7 +128,7 @@ stage {
 StEntry {
   min-height: 32px;
   padding: 0 8px;
-  border-radius: 0;
+  border-radius: 3px;
   border-width: 0;
   selection-background-color: #4CAF50;
   selected-color: #FFFFFF !important;
@@ -137,7 +137,6 @@ StEntry {
   caret-color: rgba(0, 0, 0, 0.54);
   color: rgba(0, 0, 0, 0.54);
   background-color: #ffffff;
-  border-radius: 2px;
   margin: 2px 6px 6px;
   border: 2px solid transparent;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.24), 0 5px 8px rgba(0, 0, 0, 0.05);
@@ -2038,10 +2037,10 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   width: 320px;
   padding: 0 8px;
   border: none;
+  border-radius: 5px;
   caret-color: rgba(0, 0, 0, 0.75);
   color: rgba(0, 0, 0, 0.75);
   background-color: rgba(255, 255, 255, 0.75);
-  border-radius: 4px;
   border-color: transparent;
   box-shadow: none;
   selection-background-color: #4CAF50;
@@ -2175,7 +2174,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   background-color: rgba(255, 255, 255, 0.2);
   margin-bottom: 8px;
   padding: 4px 6px;
-  border-radius: 4.5px;
+  border-radius: 7.5px;
 }
 
 .dash-item-container .app-well-app, .show-apps {
@@ -2885,7 +2884,6 @@ StWidget.focused .app-well-app-running-dot {
   caret-color: rgba(0, 0, 0, 0.54);
   color: rgba(0, 0, 0, 0.54);
   background-color: #ffffff;
-  border-radius: 2px;
   margin: 2px 6px 6px;
   border: 2px solid transparent;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.24), 0 5px 8px rgba(0, 0, 0, 0.05);

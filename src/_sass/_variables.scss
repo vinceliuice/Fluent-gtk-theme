@@ -14,16 +14,16 @@ $small-size: if($compact == 'false', 22px, 20px);
 $medium-size: if($compact == 'false', 32px, 28px);
 $large-size: if($compact == 'false', 42px, 36px);
 
-$bar-size: 3px;
+$bar-size: if($window == 'round', 6px, 3px);
 $menuitem-size: 28px;
 
 //
 // Radius
 //
 
-$window-radius: 3px;
-$corner-radius: 2px;
-$menu-radius: 3px;
+$window-radius: if($window == 'round', 8px, 3px);
+$corner-radius: if($window == 'round', 4px, 2px);
+$menu-radius: if($window == 'round', 6px, 3px);
 $circular-radius: 9999px;
 
 //

@@ -7,7 +7,7 @@
   color: $text;
 
   &.csd { // Set csd windows botttom border radius
-    border-radius: 0 0 $window-radius $window-radius;
+    border-radius: $window-radius;
   }
 
   &.maximized, &.tiled, &.fullscreen, &.solid-csd { // No radius when windows maximized
@@ -1945,7 +1945,7 @@ magnifier {
  * Notebooks *
  *************/
 
-$tab-radius: 2px;
+$tab-radius: $corner-radius;
 
 %tabs_tab {
   transition: $transition,
@@ -2228,10 +2228,10 @@ scrollbar {
   // slider
   > range > trough > slider {
     transition: background-color $duration $ease-out;
-    min-width: $container-padding + 4px;
-    min-height: $container-padding + 4px;
+    min-width: if($window == 'round', $container-padding, ($container-padding + 4px));
+    min-height: if($window == 'round', $container-padding, ($container-padding + 4px));
     border: none;
-    border-radius: 0;
+    border-radius: if($window == 'round', $circular_radius, 0);
     background-clip: padding-box;
     background-color: $track;
 
@@ -2269,7 +2269,7 @@ scrollbar {
       > range > trough > slider {
         min-width: 4px;
         min-height: 4px;
-        margin: 3px;
+        margin: if($window == 'round', 0, $container-padding / 2);
         border: 1px solid rgba($base, 0.3);
       }
 
@@ -3871,11 +3871,7 @@ window {
     transition: $transition-shadow;
     border-radius: $window-radius;
     box-shadow: $shadow-z16, 0 16px (24px * .6) 2px transparent, 0 6px (30px * .6) 5px transparent;
-
-    // FIXME rationalize shadows
-
-    // this is used for the resize cursor area
-    margin: 8px;
+    margin: 0;
 
     &:backdrop {
       // the transparent shadow here is to enforce that the shadow extents don't

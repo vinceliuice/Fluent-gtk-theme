@@ -1937,7 +1937,7 @@ popover.background {
  * Notebooks *
  *************/
 
-$tab-radius: 2px;
+$tab-radius: $corner-radius;
 
 %tabs_tab {
   transition: $transition;
@@ -2224,10 +2224,10 @@ scrollbar {
   // slider
   slider {
     transition: background-color $duration $ease-out;
-    min-width: $container-padding + 4px;
-    min-height: $container-padding + 4px;
+    min-width: if($window == 'round', $container-padding, ($container-padding + 4px));
+    min-height: if($window == 'round', $container-padding, ($container-padding + 4px));
     border: none;
-    border-radius: 0;
+    border-radius: if($window == 'round', $circular_radius, 0);
     background-clip: padding-box;
     background-color: $track;
 
@@ -2265,7 +2265,7 @@ scrollbar {
       slider {
         min-width: 4px;
         min-height: 4px;
-        margin: 4px - 1px;
+        margin: if($window == 'round', 0, $container-padding / 2);
         border: 1px solid rgba($base, 0.3);
       }
 

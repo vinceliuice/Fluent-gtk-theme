@@ -33,16 +33,16 @@ if [[ "$(command -v gnome-shell)" ]]; then
 fi
 
 usage() {
-  cat << EOF
+cat << EOF
 Usage: $0 [OPTION]...
 
 OPTIONS:
   -d, --dest DIR          Specify destination directory (Default: $DEST_DIR)
   -n, --name NAME         Specify theme name (Default: $THEME_NAME)
   -t, --theme VARIANT     Specify theme color variant(s) [default|purple|pink|red|orange|yellow|green|grey|all] (Default: blue)
-  -c, --color VARIANT...  Specify color variant(s) [standard|light|dark] (Default: All variants)s)
+  -c, --color VARIANT     Specify color variant(s) [standard|light|dark] (Default: All variants)s)
   -s, --size VARIANT      Specify size variant [standard|compact] (Default: All variants)
-  --tweaks                Specify versions for tweaks [solid|compact] (solid: no transparency variant, compact: no floating panel)
+  --tweaks                Specify versions for tweaks [solid|compact|round] (solid: no transparency variant, compact: no floating panel, round: rounded windows)
   -h, --help              Show help
 
 INSTALLATION EXAMPLES:
@@ -90,7 +90,7 @@ install() {
   mkdir -p                                                                      "$THEME_DIR/gnome-shell"
   cp -r "$SRC_DIR/gnome-shell/pad-osd.css"                                      "$THEME_DIR/gnome-shell"
 
-  if [[ "$panel" == 'compact' || "$opacity" == 'solid' ]]; then
+  if [[ "$panel" == 'compact' || "$opacity" == 'solid' || "$window" == 'round' ]]; then
     if [[ "${GS_VERSION:-}" == 'new' ]]; then
       sassc $SASSC_OPT "$SRC_DIR/gnome-shell/shell-40-0/gnome-shell$theme${ELSE_DARK:-}$size.scss" "$THEME_DIR/gnome-shell/gnome-shell.css"
     else
@@ -123,7 +123,7 @@ install() {
   cp -r "$SRC_DIR/gtk/scalable"                                                 "$THEME_DIR/gtk-3.0/assets"
   cp -r "$SRC_DIR/gtk/thumbnail$theme${ELSE_DARK:-}.png"                        "$THEME_DIR/gtk-3.0/thumbnail.png"
 
-  if [[ "$opacity" == 'solid' ]]; then
+  if [[ "$opacity" == 'solid' || "$window" == 'round' ]]; then
     sassc $SASSC_OPT "$SRC_DIR/gtk/3.0/gtk$theme$color$size.scss"               "$THEME_DIR/gtk-3.0/gtk.css"
     [[ "$color" != '-dark' ]] && \
     sassc $SASSC_OPT "$SRC_DIR/gtk/3.0/gtk$theme-dark$size.scss"                "$THEME_DIR/gtk-3.0/gtk-dark.css"
@@ -137,7 +137,7 @@ install() {
   cp -r "$SRC_DIR/gtk/assets$theme"                                             "$THEME_DIR/gtk-4.0/assets"
   cp -r "$SRC_DIR/gtk/scalable"                                                 "$THEME_DIR/gtk-4.0/assets"
 
-  if [[ "$opacity" == 'solid' ]]; then
+  if [[ "$opacity" == 'solid' || "$window" == 'round' ]]; then
     sassc $SASSC_OPT "$SRC_DIR/gtk/4.0/gtk$theme$color$size.scss"               "$THEME_DIR/gtk-4.0/gtk.css"
     [[ "$color" != '-dark' ]] && \
     sassc $SASSC_OPT "$SRC_DIR/gtk/4.0/gtk$theme-dark$size.scss"                "$THEME_DIR/gtk-4.0/gtk-dark.css"
@@ -197,6 +197,10 @@ while [[ "$#" -gt 0 ]]; do
             ;;
           compact)
             panel="compact"
+            shift
+            ;;
+          round)
+            window="round"
             shift
             ;;
           -*)
@@ -364,6 +368,16 @@ install_solid() {
   echo -e "Install solid version ..."
 }
 
+install_round() {
+  cd ${SRC_DIR}/gnome-shell/sass
+  cp -an _tweaks.scss _tweaks.scss.bak
+  sed -i "/\$window:/s/default/round/" _tweaks.scss
+  cd ${SRC_DIR}/_sass
+  cp -an _tweaks.scss _tweaks.scss.bak
+  sed -i "/\$window:/s/default/round/" _tweaks.scss
+  echo -e "Install rounded windows version ..."
+}
+
 restore_tweaks() {
   cd ${SRC_DIR}/gnome-shell/sass
   [[ -f _tweaks.scss.bak ]] && rm -rf _tweaks.scss && mv _tweaks.scss.bak _tweaks.scss
@@ -402,7 +416,15 @@ if [[ "$opacity" = "solid" ]] ; then
   install_package && install_solid
 fi
 
-install_theme && restore_tweaks
+if [[ "$window" = "round" ]] ; then
+  install_package && install_round
+fi
+
+install_theme
+
+if [[ -f ${SRC_DIR}/gnome-shell/sass/_tweaks.scss.bak ]] || [[ -f ${SRC_DIR}/_sass/_tweaks.scss.bak ]] ; then
+  restore_tweaks
+fi
 
 echo
 echo "Done."

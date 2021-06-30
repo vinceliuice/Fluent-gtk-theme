@@ -57,7 +57,7 @@ GPasteSearchEntry,
 StEntry {
   min-height: $medium_size;
   padding: 0 8px;
-  border-radius: 0;
+  border-radius: $buttons_radius;
   border-width: 0;
   selection-background-color: $primary_color;
   selected-color: $light_fg_color !important;
@@ -861,7 +861,7 @@ $slider_color: if($variant == 'light', $accent_color, $accent_color);
   .popup-menu-content {
     margin: 0 2px 0 10px;
     background-color: $menu_bg_color;
-    border-radius: $buttons_radius;
+    border-radius: $menu_radius;
     box-shadow: $shadow_3;
   }
 }
@@ -1949,6 +1949,7 @@ $size_suffix: if($laptop == 'true', '-small', '');
   width: 320px - 8px * 2;
   padding: 0 8px;
   border: none;
+  border-radius: $buttons_radius + 2px;
   @include search_entry(normal);
   selection-background-color: $primary_color;
   selected-color: $light_fg_color !important;
@@ -2714,7 +2715,7 @@ $keyboard_active_bg_color: if($variant == 'light', darken($keyboard_bg_color, 20
 
 .candidate-popup-content {
   background-color: $menu_bg_color;
-  border-radius: $buttons_radius;
+  border-radius: $menu_radius;
   box-shadow: $shadow_3;
   margin: ($container_padding / 2) 10px;
   padding: $container_padding;

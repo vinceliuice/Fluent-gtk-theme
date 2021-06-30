@@ -4373,7 +4373,7 @@ popover.emoji-completion .emoji:hover {
 
 .nautilus-window.background.csd notebook > stack {
   background-color: #FFFFFF;
-  border-radius: 0 0 3px 3px;
+  border-radius: 0 0 3px 0;
 }
 
 .nautilus-window.background.csd notebook scrolledwindow > .view:not(:selected):not(:hover):not(:checked), .nautilus-window.background.csd notebook window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow > treeview.view:not(:selected):not(:hover):not(:checked):not(.progressbar):not(.trough), .nautilus-window.background.csd notebook filechooser stack.view scrolledwindow > treeview.view:not(:selected):not(:hover):not(:checked), filechooser stack.view .nautilus-window.background.csd notebook scrolledwindow > treeview.view:not(:selected):not(:hover):not(:checked) {

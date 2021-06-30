@@ -2606,7 +2606,7 @@ scrollbar.overlay-indicator:not(.dragging):not(.hovering) {
 scrollbar.overlay-indicator:not(.dragging):not(.hovering) slider {
   min-width: 4px;
   min-height: 4px;
-  margin: 3px;
+  margin: 2px;
   border: 1px solid rgba(43, 43, 43, 0.3);
 }
 
@@ -4373,7 +4373,7 @@ popover.emoji-completion .emoji:hover {
 
 .nautilus-window.background.csd notebook > stack {
   background-color: #2B2B2B;
-  border-radius: 0 0 3px 3px;
+  border-radius: 0 0 3px 0;
 }
 
 .nautilus-window.background.csd notebook scrolledwindow > .view:not(:selected):not(:hover):not(:checked), .nautilus-window.background.csd notebook window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow > treeview.view:not(:selected):not(:hover):not(:checked):not(.progressbar):not(.trough), .nautilus-window.background.csd notebook filechooser stack.view scrolledwindow > treeview.view:not(:selected):not(:hover):not(:checked), filechooser stack.view .nautilus-window.background.csd notebook scrolledwindow > treeview.view:not(:selected):not(:hover):not(:checked) {

@@ -32,12 +32,13 @@ $container_padding: if($laptop == 'false', 6px, 4px);
 $container_margin: if($laptop == 'false', 4px, 2px);
 $minimum_hpadding: if($laptop == 'false', 4px, 2px);
 
-$bar_size: 4px;
+$bar_size: if($window == 'round', 8px, 4px);
 $menuitem_size: if($laptop == 'false', 32px, 28px);
 
 // radiuses
-$material_radius: 5px;
-$buttons_radius: 3px;
+$material_radius: if($window == 'round', 10px, 5px);
+$menu_radius: if($window == 'round', 8px, 3px);
+$buttons_radius: if($window == 'round', 5px, 3px);
 $circular_radius: 9999px;
 
 // durations
