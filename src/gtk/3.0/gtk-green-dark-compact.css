@@ -3256,6 +3256,20 @@ progressbar progress {
   background-color: #4CAF50;
 }
 
+progressbar.osd {
+  min-width: 3px;
+  min-height: 3px;
+  background-color: transparent;
+}
+
+progressbar.osd trough {
+  background-color: transparent;
+}
+
+progressbar.osd progress {
+  background-color: #4CAF50;
+}
+
 progressbar trough.empty progress {
   all: unset;
 }
