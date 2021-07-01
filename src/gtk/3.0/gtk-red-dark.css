@@ -7538,6 +7538,10 @@ XfdesktopIconView.view .rubberband {
 /**********
  * Thunar *
  **********/
+.thunar paned > scrolledwindow treeview.view:selected, .thunar filechooser stack.view paned > scrolledwindow treeview.view:selected, filechooser stack.view .thunar paned > scrolledwindow treeview.view:selected, .thunar paned > scrolledwindow window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:selected:not(.progressbar):not(.trough), window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow .thunar paned > scrolledwindow treeview.view:selected:not(.progressbar):not(.trough) {
+  border-left: 2px solid #0078D4;
+}
+
 .thunar toolbar {
   background-color: #202020;
   color: white;
@@ -7558,6 +7562,21 @@ XfdesktopIconView.view .rubberband {
 
 .thunar toolbar .path-bar.linked:not(.vertical) > button:disabled, .thunar toolbar .path-bar.linked:not(.vertical) > button:backdrop {
   color: rgba(255, 255, 255, 0.5);
+}
+
+.thunar toolbar > toolitem > widget > widget.linked.path-bar > button.path-bar-button {
+  background: none;
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+
+.thunar toolbar > toolitem > widget > widget.linked.path-bar > button.path-bar-button:checked {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.thunar toolbar > toolitem > widget > widget.linked.path-bar > button.path-bar-button:checked:backdrop {
+  background: rgba(255, 255, 255, 0.12);
 }
 
 .thunar #location-toolbar {
