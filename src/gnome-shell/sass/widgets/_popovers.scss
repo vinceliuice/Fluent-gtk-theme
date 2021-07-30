@@ -31,10 +31,11 @@ $popover_arrow_height: 12px;
 
 .popup-menu-content {
   padding: $container_padding 0;
-  margin: 0 2px 0 10px;
+  border: none !important;
+  margin: 0 8px 11px 8px !important;
   background-color: $menu_bg_color;
   border-radius: $menu_radius;
-  box-shadow: $shadow_3;
+  box-shadow: 0 3px 8px -2px rgba(black, 0.25) !important;
 }
 
 // menu items

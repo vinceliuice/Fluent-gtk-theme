@@ -7,8 +7,8 @@
 .candidate-popup-content {
   background-color: $menu_bg_color;
   border-radius: $menu_radius;
-  box-shadow: $shadow_3;
-  margin: ($container_padding / 2) 10px;
+  box-shadow: 0 3px 8px -2px rgba(black, 0.25) !important;
+  margin: ($container_padding / 2) 8px 11px;
   padding: $container_padding;
   spacing: $container_padding;
 }

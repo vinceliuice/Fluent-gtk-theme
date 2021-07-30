@@ -7,6 +7,7 @@
   padding: 0 $container_padding * 2;
   color: $secondary_fg_color;
   text-shadow: none;
+  box-shadow: none;
 
   .message-list-placeholder { spacing: 12px; }
 }
@@ -36,6 +37,8 @@
   border-radius: $buttons_radius;
   color: $secondary_fg_color;
   text-shadow: none;
+
+  .popup-menu & { box-shadow: none; }
 
   &:hover, &:focus { background-color: $divider_color; }
   &:active { background-color: $track_color; }

@@ -9,7 +9,8 @@ $mdborder_color: if($variant == 'light', transparent, rgba($white, 0.15));
   color: $fg_color;
   background-color: $base_color;
   border: 0 solid $mdborder_color;
-  box-shadow: 3px 5px 12px -3px rgba(black, 0.5);
+  box-shadow: 3px 3px 8px -3px rgba(black, 0.35) !important;
+  margin: 15px !important;
 
   .modal-dialog-content-box {
     margin: 32px 40px;
@@ -183,9 +184,7 @@ $mdborder_color: if($variant == 'light', transparent, rgba($white, 0.15));
   color: $warning_color;
 }
 
-
 /* Polkit Dialog */
-
 .polkit-dialog-user-layout {
   text-align: center;
   spacing: 8px;

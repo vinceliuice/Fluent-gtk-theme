@@ -55,7 +55,7 @@ $dash_border_radius: $material_radius * 1.5;
   color: $inverse_fg_color;
   background-color: rgba(black, 0.75);
   border: none;
-  box-shadow: $shadow_2;
+  box-shadow: none;
   text-align: center;
   -y-offset: $container_margin * 5; // distance from the dash edge
 }
