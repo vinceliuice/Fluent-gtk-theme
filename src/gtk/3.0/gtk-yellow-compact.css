@@ -1872,6 +1872,12 @@ headerbar.windowhandle > button.popup label, headerbar.windowhandle > button.pop
   min-width: 0;
 }
 
+.caja-pathbar button.text-button.image-button label, .caja-pathbar button.toggle label,
+.path-bar.linked:not(.vertical) > button.text-button.image-button label,
+.path-bar.linked:not(.vertical) > button.toggle label {
+  margin-left: 3px;
+}
+
 .caja-pathbar button.slider-button,
 .path-bar.linked:not(.vertical) > button.slider-button {
   padding-left: 4px;

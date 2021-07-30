@@ -1607,6 +1607,10 @@ headerbar {
     min-width: 0;
   }
 
+  &.text-button.image-button, &.toggle {
+    label { margin-left: $container-padding / 2 + 1px; }
+  }
+
   &.slider-button {
     padding-left: (24px - 16px) / 2;
     padding-right: (24px - 16px) / 2;
