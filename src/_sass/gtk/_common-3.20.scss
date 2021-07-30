@@ -1607,7 +1607,7 @@ headerbar {
     min-width: 0;
   }
 
-  &.text-button.image-button, &.toggle {
+  &.text-button.image-button, &.toggle:not(.text-button) {
     label { margin-left: $container-padding / 2 + 1px; }
   }
 
