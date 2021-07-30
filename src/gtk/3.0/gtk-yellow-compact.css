@@ -1792,33 +1792,41 @@ headerbar .entry-tag {
   margin-bottom: 5px;
 }
 
-headerbar.windowhandle viewswitcher > box > button:not(.titlebutton):not(.suggested-action):not(.destructive-action) {
+headerbar.windowhandle viewswitcher button:not(.titlebutton):not(.suggested-action):not(.destructive-action) {
   border-radius: 0;
   margin-top: 0;
   margin-bottom: 0;
-  padding-top: 0;
-  padding-bottom: 0;
+  padding: 0;
   min-height: 0;
+  min-width: 120px;
   transition: none;
 }
 
-headerbar.windowhandle viewswitcher > box > button:not(.titlebutton):not(.suggested-action):not(.destructive-action):focus {
+headerbar.windowhandle viewswitcher button:not(.titlebutton):not(.suggested-action):not(.destructive-action) image {
+  margin-left: 8px;
+}
+
+headerbar.windowhandle viewswitcher button:not(.titlebutton):not(.suggested-action):not(.destructive-action) label {
+  margin-right: 8px;
+}
+
+headerbar.windowhandle viewswitcher button:not(.titlebutton):not(.suggested-action):not(.destructive-action):focus {
   box-shadow: none;
 }
 
-headerbar.windowhandle viewswitcher > box > button:not(.titlebutton):not(.suggested-action):not(.destructive-action):hover {
+headerbar.windowhandle viewswitcher button:not(.titlebutton):not(.suggested-action):not(.destructive-action):hover {
   transition: background-color 300ms cubic-bezier(0, 0, 0.2, 1), box-shadow 0;
   box-shadow: none;
   background-color: alpha(currentColor, 0.08);
 }
 
-headerbar.windowhandle viewswitcher > box > button:not(.titlebutton):not(.suggested-action):not(.destructive-action):active, headerbar.windowhandle viewswitcher > box > button:not(.titlebutton):not(.suggested-action):not(.destructive-action):active:hover {
+headerbar.windowhandle viewswitcher button:not(.titlebutton):not(.suggested-action):not(.destructive-action):active, headerbar.windowhandle viewswitcher button:not(.titlebutton):not(.suggested-action):not(.destructive-action):active:hover {
   transition: box-shadow 300ms cubic-bezier(0, 0, 0.2, 1), background-color 300ms cubic-bezier(0, 0, 0.2, 1);
   background-color: alpha(currentColor, 0.16);
   box-shadow: inset 0 -2px #FBC02D;
 }
 
-headerbar.windowhandle viewswitcher > box > button:not(.titlebutton):not(.suggested-action):not(.destructive-action):checked {
+headerbar.windowhandle viewswitcher button:not(.titlebutton):not(.suggested-action):not(.destructive-action):checked {
   transition: box-shadow 300ms cubic-bezier(0, 0, 0.2, 1), background-color 300ms cubic-bezier(0, 0, 0.2, 1);
   box-shadow: inset 0 -2px #FBC02D;
 }
