@@ -2,7 +2,7 @@
 
 Fluent is a Fluent design theme for GNOME/GTK based desktop environments.
 
-![1](screenshot01.png?raw=true)
+![screenshot01](screenshot01.png?raw=true)
 
 ## Requirements
 
@@ -37,6 +37,8 @@ Run the following commands in the terminal:
 -h, --help              Show help
 ```
 
+![Fluent-view](Fluent-view.png?raw=true)
+
 > For more information, run: `./install.sh --help`
 
 > Install different accent color version, run: `./install.sh -t [color name]`
@@ -53,20 +55,20 @@ Run the following commands in the terminal:
 [Install Wallpapers](src/wallpaper)
 
 #### Preview
-![01](src/wallpaper/wallpaper-1080p/wallpaper-default-flat.png?raw=true)
+![wallpaper](src/wallpaper/wallpaper-1080p/wallpaper-default-flat.png?raw=true)
 
 ### Firefox theme
 [Install Firefox theme](src/firefox)
 
 #### Preview
-![01](src/firefox/preview01.png?raw=true)
-![02](src/firefox/preview02.png?raw=true)
+![preview01](src/firefox/preview01.png?raw=true)
+![preview02](src/firefox/preview02.png?raw=true)
 
 ### Dash to dock theme
 [Install dash-to-dock theme](src/dash-to-dock)
 
 #### Screenshot
-![01](src/dash-to-dock/screenshot.png?raw=true)
+![screenshot](src/dash-to-dock/screenshot.png?raw=true)
 
 ### Fix for Dash to panel
 Go to `src/gnome-shell/extensions/dash-to-panel` [dash-to-panel](src/gnome-shell/extensions/dash-to-panel) run the following commands in the terminal:
@@ -76,4 +78,4 @@ Go to `src/gnome-shell/extensions/dash-to-panel` [dash-to-panel](src/gnome-shell
 ```
 
 ## Gtk theme widgets
-![2](screenshot02.png?raw=true)
+![screenshot02](screenshot02.png?raw=true)
