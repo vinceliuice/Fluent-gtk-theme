@@ -2,7 +2,13 @@
 
 Fluent is a Fluent design theme for GNOME/GTK based desktop environments. See also [Fluent Icon theme](https://github.com/vinceliuice/Fluent-icon-theme).
 
-![screenshot01](screenshot01.png?raw=true)
+### Normal version
+![screenshot01](screenshot01.jpg?raw=true)
+
+### Blur version (Only for Gnome-Shell desktop)
+![screenshot-blur](screenshot-blur.jpg?raw=true)
+
+Blur version requirement [Blur Me](https://extensions.gnome.org/extension/4236/blur-me/)
 
 ## Requirements
 
@@ -33,7 +39,11 @@ Run the following commands in the terminal:
 -t, --theme VARIANT...  Specify theme color variant(s) [default|purple|pink|red|orange|yellow|green|grey|all] (Default: blue)
 -c, --color VARIANT...  Specify color variant(s) [standard|light|dark] (Default: All variants)
 -s, --size VARIANT      Specify size variant [standard|compact] (Default: All variants)
---tweaks                Specify versions for tweaks [solid|compact|round] (solid: no transparency variant, compact: no floating panel, round: rounded windows)
+--tweaks                Specify versions for tweaks [solid|compact|round|blur]
+                        solid:   no transparency variant
+                        compact: no floating panel
+                        round:   rounded windows
+                        blur:    blur version for 'Blur-Me'
 -h, --help              Show help
 ```
 
@@ -85,4 +95,4 @@ Just install the compact version
 ```
 
 ## Gtk theme widgets
-![screenshot02](screenshot02.png?raw=true)
+![screenshot02](screenshot02.jpg?raw=true)

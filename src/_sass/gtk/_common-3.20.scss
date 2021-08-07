@@ -40,7 +40,7 @@
  * Base States *
  ***************/
 .background {
-  background-color: rgba($background, 0.999);
+  background-color: $background;
   color: $text;
 
   &.csd { // Set csd windows botttom border radius
@@ -1260,8 +1260,8 @@ searchbar > revealer > box {
   box-shadow: inset 0 -1px $divider;
   color: $titlebar-text;
 
-  @if $opacity == 'solid' {
-    background-color: rgba($titlebar, 1);
+  @if $opacity == 'solid' or $blur == 'true' {
+    background-color: $titlebar;
   } @else {
     background-color: rgba($titlebar, 0.98);
   }
@@ -1785,7 +1785,7 @@ menu,
   margin: 3px 0; // See https://bugzilla.gnome.org/show_bug.cgi?id=591258
   padding: 3px 0;
   // box-shadow: inset 0 1px highlight($surface);
-  background-color: $surface;
+  background-color: $menu;
   background-clip: border-box;
   border: 1px solid $divider; // adds borders in a non composited env
 
@@ -1889,7 +1889,7 @@ popover.background {
   transition: $transition-shadow;
   padding: 2px;
   box-shadow: $shadow-z4; // TODO: this should really have a highlight
-  background-color: $surface;
+  background-color: $menu;
 
   &:backdrop { box-shadow: $shadow-z2; }
 

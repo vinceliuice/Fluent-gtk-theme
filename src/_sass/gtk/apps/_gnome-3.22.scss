@@ -7,8 +7,8 @@
     background-color: rgba($base-alt, 0.95);
     border-radius: 0 0 $window-radius $window-radius;
 
-    @if $opacity == 'solid' {
-      background-color: rgba($base-alt, 1);
+    @if $opacity == 'solid' or $blur == 'true' {
+      background-color: $base-alt;
     } @else {
       background-color: rgba($base-alt, 0.95);
     }
@@ -16,12 +16,12 @@
     &.unified { // >= 40.0
       background: none;
 
-      @if $opacity == 'solid' {
+      @if $opacity == 'solid' or $blur == 'true' {
         headerbar.titlebar {
-          background-color: rgba($titlebar, 1);
+          background-color: $titlebar;
         }
         placessidebar.sidebar {
-          background-color: rgba($base-alt, 1);
+          background-color: $base-alt;
         }
       } @else {
         headerbar.titlebar {

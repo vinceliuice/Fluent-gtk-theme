@@ -90,17 +90,17 @@ install() {
   mkdir -p                                                                      "$THEME_DIR/gnome-shell"
   cp -r "$SRC_DIR/gnome-shell/pad-osd.css"                                      "$THEME_DIR/gnome-shell"
 
-  if [[ "$panel" == 'compact' || "$opacity" == 'solid' || "$window" == 'round' ]]; then
+  if [[ "$panel" == 'compact' || "$opacity" == 'solid' || "$window" == 'round' || "$accent" == 'true' || "$blur" == 'true' ]]; then
     if [[ "${GS_VERSION:-}" == 'new' ]]; then
-      sassc $SASSC_OPT "$SRC_DIR/gnome-shell/shell-40-0/gnome-shell$theme${ELSE_DARK:-}$size.scss" "$THEME_DIR/gnome-shell/gnome-shell.css"
+      sassc $SASSC_OPT "$SRC_DIR/gnome-shell/shell-40-0/gnome-shell${ELSE_DARK:-}$size.scss" "$THEME_DIR/gnome-shell/gnome-shell.css"
     else
-      sassc $SASSC_OPT "$SRC_DIR/gnome-shell/shell-3-28/gnome-shell$theme${ELSE_DARK:-}$size.scss" "$THEME_DIR/gnome-shell/gnome-shell.css"
+      sassc $SASSC_OPT "$SRC_DIR/gnome-shell/shell-3-28/gnome-shell${ELSE_DARK:-}$size.scss" "$THEME_DIR/gnome-shell/gnome-shell.css"
     fi
   else
     if [[ "${GS_VERSION:-}" == 'new' ]]; then
-      cp -r "$SRC_DIR/gnome-shell/shell-40-0/gnome-shell$theme${ELSE_DARK:-}$size.css"      "$THEME_DIR/gnome-shell/gnome-shell.css"
+      cp -r "$SRC_DIR/gnome-shell/shell-40-0/gnome-shell${ELSE_DARK:-}$size.css" "$THEME_DIR/gnome-shell/gnome-shell.css"
     else
-      cp -r "$SRC_DIR/gnome-shell/shell-3-28/gnome-shell$theme${ELSE_DARK:-}$size.css"      "$THEME_DIR/gnome-shell/gnome-shell.css"
+      cp -r "$SRC_DIR/gnome-shell/shell-3-28/gnome-shell${ELSE_DARK:-}$size.css" "$THEME_DIR/gnome-shell/gnome-shell.css"
     fi
   fi
 
@@ -123,10 +123,10 @@ install() {
   cp -r "$SRC_DIR/gtk/scalable"                                                 "$THEME_DIR/gtk-3.0/assets"
   cp -r "$SRC_DIR/gtk/thumbnail$theme${ELSE_DARK:-}.png"                        "$THEME_DIR/gtk-3.0/thumbnail.png"
 
-  if [[ "$opacity" == 'solid' || "$window" == 'round' ]]; then
-    sassc $SASSC_OPT "$SRC_DIR/gtk/3.0/gtk$theme$color$size.scss"               "$THEME_DIR/gtk-3.0/gtk.css"
+  if [[ "$opacity" == 'solid' || "$window" == 'round' || "$accent" == 'true' || "$blur" == 'true' ]]; then
+    sassc $SASSC_OPT "$SRC_DIR/gtk/3.0/gtk$color$size.scss"                     "$THEME_DIR/gtk-3.0/gtk.css"
     [[ "$color" != '-dark' ]] && \
-    sassc $SASSC_OPT "$SRC_DIR/gtk/3.0/gtk$theme-dark$size.scss"                "$THEME_DIR/gtk-3.0/gtk-dark.css"
+    sassc $SASSC_OPT "$SRC_DIR/gtk/3.0/gtk-dark$size.scss"                      "$THEME_DIR/gtk-3.0/gtk-dark.css"
   else
     cp -r "$SRC_DIR/gtk/3.0/gtk$theme$color$size.css"                           "$THEME_DIR/gtk-3.0/gtk.css"
     [[ "$color" != '-dark' ]] && \
@@ -137,14 +137,14 @@ install() {
   cp -r "$SRC_DIR/gtk/assets$theme"                                             "$THEME_DIR/gtk-4.0/assets"
   cp -r "$SRC_DIR/gtk/scalable"                                                 "$THEME_DIR/gtk-4.0/assets"
 
-  if [[ "$opacity" == 'solid' || "$window" == 'round' ]]; then
-    sassc $SASSC_OPT "$SRC_DIR/gtk/4.0/gtk$theme$color$size.scss"               "$THEME_DIR/gtk-4.0/gtk.css"
+  if [[ "$opacity" == 'solid' || "$window" == 'round' || "$accent" == 'true' || "$blur" == 'true' ]]; then
+    sassc $SASSC_OPT "$SRC_DIR/gtk/4.0/gtk$color$size.scss"                     "$THEME_DIR/gtk-4.0/gtk.css"
     [[ "$color" != '-dark' ]] && \
-    sassc $SASSC_OPT "$SRC_DIR/gtk/4.0/gtk$theme-dark$size.scss"                "$THEME_DIR/gtk-4.0/gtk-dark.css"
+    sassc $SASSC_OPT "$SRC_DIR/gtk/4.0/gtk-dark$size.scss"                      "$THEME_DIR/gtk-4.0/gtk-dark.css"
   else
-    cp -r "$SRC_DIR/gtk/4.0/gtk$theme$color$size.css"                           "$THEME_DIR/gtk-4.0/gtk.css"
+    cp -r "$SRC_DIR/gtk/4.0/gtk$color$size.css"                                 "$THEME_DIR/gtk-4.0/gtk.css"
     [[ "$color" != '-dark' ]] && \
-    cp -r "$SRC_DIR/gtk/4.0/gtk$theme-dark$size.css"                            "$THEME_DIR/gtk-4.0/gtk-dark.css"
+    cp -r "$SRC_DIR/gtk/4.0/gtk-dark$size.css"                                  "$THEME_DIR/gtk-4.0/gtk-dark.css"
   fi
 
   if [[ "$theme" == '' && "$size" == '' ]]; then
@@ -203,6 +203,11 @@ while [[ "$#" -gt 0 ]]; do
             window="round"
             shift
             ;;
+          blur)
+            blur="true"
+            panel="compact"
+            shift
+            ;;
           -*)
             break
             ;;
@@ -221,45 +226,49 @@ while [[ "$#" -gt 0 ]]; do
         case "$variant" in
           default)
             themes+=("${THEME_VARIANTS[0]}")
+            theme_color='default'
             shift
             ;;
           purple)
             themes+=("${THEME_VARIANTS[1]}")
+            theme_color='purple'
             shift
             ;;
           pink)
             themes+=("${THEME_VARIANTS[2]}")
+            theme_color='pink'
             shift
             ;;
           red)
             themes+=("${THEME_VARIANTS[3]}")
+            theme_color='red'
             shift
             ;;
           orange)
             themes+=("${THEME_VARIANTS[4]}")
+            theme_color='orange'
             shift
             ;;
           yellow)
             themes+=("${THEME_VARIANTS[5]}")
+            theme_color='yellow'
             shift
             ;;
           green)
             themes+=("${THEME_VARIANTS[6]}")
+            theme_color='green'
             shift
             ;;
           grey)
             themes+=("${THEME_VARIANTS[7]}")
-            shift
-            ;;
-          all)
-            themes+=("${THEME_VARIANTS[@]}")
+            theme_color='grey'
             shift
             ;;
           -*)
             break
             ;;
           *)
-            echo "ERROR: Unrecognized color variant '$1'."
+            echo "ERROR: Unrecognized theme variant '$1'."
             echo "Try '$0 --help' for more information."
             exit 1
             ;;
@@ -328,6 +337,18 @@ while [[ "$#" -gt 0 ]]; do
   esac
 done
 
+if [[ "${#themes[@]}" -eq 0 ]] ; then
+  themes=("${THEME_VARIANTS[0]}")
+fi
+
+if [[ "${#colors[@]}" -eq 0 ]] ; then
+  colors=("${COLOR_VARIANTS[@]}")
+fi
+
+if [[ "${#sizes[@]}" -eq 0 ]] ; then
+  sizes=("${SIZE_VARIANTS[@]}")
+fi
+
 #  Check command avalibility
 function has_command() {
   command -v $1 > /dev/null
@@ -351,39 +372,39 @@ install_package() {
   fi
 }
 
+tweaks_temp() {
+  cp -rf ${SRC_DIR}/_sass/_tweaks.scss ${SRC_DIR}/_sass/_tweaks-temp.scss
+  cp -rf ${SRC_DIR}/gnome-shell/sass/_tweaks.scss ${SRC_DIR}/gnome-shell/sass/_tweaks-temp.scss
+}
+
 install_compact_panel() {
-  cd ${SRC_DIR}/gnome-shell/sass
-  cp -an _tweaks.scss _tweaks.scss.bak
-  sed -i "/\$panel_style:/s/float/compact/" _tweaks.scss
+  sed -i "/\$panel_style:/s/float/compact/" ${SRC_DIR}/gnome-shell/sass/_tweaks-temp.scss
+  sed -i "/\$panel_style:/s/float/compact/" ${SRC_DIR}/_sass/_tweaks-temp.scss
   echo -e "Install compact panel version ..."
 }
 
 install_solid() {
-  cd ${SRC_DIR}/gnome-shell/sass
-  cp -an _tweaks.scss _tweaks.scss.bak
-  sed -i "/\$opacity:/s/default/solid/" _tweaks.scss
-  cd ${SRC_DIR}/_sass
-  cp -an _tweaks.scss _tweaks.scss.bak
-  sed -i "/\$opacity:/s/default/solid/" _tweaks.scss
+  sed -i "/\$opacity:/s/default/solid/" ${SRC_DIR}/gnome-shell/sass/_tweaks-temp.scss
+  sed -i "/\$opacity:/s/default/solid/" ${SRC_DIR}/_sass/_tweaks-temp.scss
   echo -e "Install solid version ..."
 }
 
 install_round() {
-  cd ${SRC_DIR}/gnome-shell/sass
-  cp -an _tweaks.scss _tweaks.scss.bak
-  sed -i "/\$window:/s/default/round/" _tweaks.scss
-  cd ${SRC_DIR}/_sass
-  cp -an _tweaks.scss _tweaks.scss.bak
-  sed -i "/\$window:/s/default/round/" _tweaks.scss
+  sed -i "/\$window:/s/default/round/" ${SRC_DIR}/gnome-shell/sass/_tweaks-temp.scss
+  sed -i "/\$window:/s/default/round/" ${SRC_DIR}/_sass/_tweaks-temp.scss
   echo -e "Install rounded windows version ..."
 }
 
-restore_tweaks() {
-  cd ${SRC_DIR}/gnome-shell/sass
-  [[ -f _tweaks.scss.bak ]] && rm -rf _tweaks.scss && mv _tweaks.scss.bak _tweaks.scss
-  cd ${SRC_DIR}/_sass
-  [[ -f _tweaks.scss.bak ]] && rm -rf _tweaks.scss && mv _tweaks.scss.bak _tweaks.scss
-  echo -e "Restore _tweaks.scss file ..."
+install_blur() {
+  sed -i "/\$blur:/s/false/true/" ${SRC_DIR}/gnome-shell/sass/_tweaks-temp.scss
+  sed -i "/\$blur:/s/false/true/" ${SRC_DIR}/_sass/_tweaks-temp.scss
+  echo -e "Install Blur version ..."
+}
+
+install_theme_color() {
+  sed -i "/\$theme:/s/default/${theme_color}/" ${SRC_DIR}/gnome-shell/sass/_tweaks-temp.scss
+  sed -i "/\$theme:/s/default/${theme_color}/" ${SRC_DIR}/_sass/_tweaks-temp.scss
+  echo -e "Install ${theme_color} color version ..."
 }
 
 install_theme() {
@@ -396,35 +417,29 @@ install_theme() {
   done
 }
 
-if [[ "${#themes[@]}" -eq 0 ]] ; then
-  themes=("${THEME_VARIANTS[0]}")
-fi
-
-if [[ "${#colors[@]}" -eq 0 ]] ; then
-  colors=("${COLOR_VARIANTS[@]}")
-fi
-
-if [[ "${#sizes[@]}" -eq 0 ]] ; then
-  sizes=("${SIZE_VARIANTS[@]}")
-fi
+install_package; tweaks_temp
 
 if [[ "$panel" = "compact" ]] ; then
-  install_package && install_compact_panel
+  install_compact_panel
 fi
 
 if [[ "$opacity" = "solid" ]] ; then
-  install_package && install_solid
+  install_solid
 fi
 
 if [[ "$window" = "round" ]] ; then
-  install_package && install_round
+  install_round
+fi
+
+if [[ "$blur" = "true" ]] ; then
+  install_blur
+fi
+
+if [[ "$accent" == 'true' && "$theme_color" != 'default' ]] ; then
+  install_theme_color
 fi
 
 install_theme
-
-if [[ -f ${SRC_DIR}/gnome-shell/sass/_tweaks.scss.bak ]] || [[ -f ${SRC_DIR}/_sass/_tweaks.scss.bak ]] ; then
-  restore_tweaks
-fi
 
 echo
 echo "Done."
