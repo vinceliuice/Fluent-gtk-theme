@@ -8,7 +8,7 @@ Fluent is a Fluent design theme for GNOME/GTK based desktop environments. See al
 ### Blur version (Only for Gnome-Shell desktop)
 ![screenshot-blur](screenshot-blur.jpg?raw=true)
 
-Blur version requirement [Blur Me](https://extensions.gnome.org/extension/4236/blur-me/)
+- Blur version requirement [Blur Me](https://extensions.gnome.org/extension/4236/blur-me/)
 
 ## Requirements
 
@@ -79,9 +79,6 @@ Automatically install your host GTK+ theme as a Flatpak.
 #### Preview
 ![preview01](src/firefox/preview01.png?raw=true)
 ![preview02](src/firefox/preview02.png?raw=true)
-
-### Dash to dock theme
-[Install dash-to-dock theme](src/dash-to-dock)
 
 #### Screenshot
 ![screenshot](src/dash-to-dock/screenshot.png?raw=true)

@@ -42,7 +42,11 @@ OPTIONS:
   -t, --theme VARIANT     Specify theme color variant(s) [default|purple|pink|red|orange|yellow|green|grey|all] (Default: blue)
   -c, --color VARIANT     Specify color variant(s) [standard|light|dark] (Default: All variants)s)
   -s, --size VARIANT      Specify size variant [standard|compact] (Default: All variants)
-  --tweaks                Specify versions for tweaks [solid|compact|round] (solid: no transparency variant, compact: no floating panel, round: rounded windows)
+  --tweaks                Specify versions for tweaks [solid|compact|round|blur]
+                          solid:   no transparency variant
+                          compact: no floating panel
+                          round:   rounded windows
+                          blur:    blur version for 'Blur-Me'
   -h, --help              Show help
 
 INSTALLATION EXAMPLES:
