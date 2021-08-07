@@ -45,7 +45,7 @@
  * Base States *
  ***************/
 .background {
-  background-color: rgba(242, 242, 242, 0.999);
+  background-color: #F2F2F2;
   color: rgba(0, 0, 0, 0.87);
 }
 
@@ -2079,7 +2079,7 @@ menu,
 .context-menu {
   margin: 3px 0;
   padding: 3px 0;
-  background-color: #FFFFFF;
+  background-color: rgba(255, 255, 255, 0.98);
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.12);
 }
@@ -2213,7 +2213,7 @@ popover.background {
   transition: box-shadow 75ms cubic-bezier(0, 0, 0.2, 1);
   padding: 2px;
   box-shadow: 0 2px 2.4px -1px rgba(0, 0, 0, 0.2), 0 4px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 6px 0 rgba(0, 0, 0, 0.12);
-  background-color: #FFFFFF;
+  background-color: rgba(255, 255, 255, 0.98);
 }
 
 popover.background:backdrop {
