@@ -2037,7 +2037,8 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .workspace-background {
   border-radius: 30px;
   background-color: #222222;
-  box-shadow: 0 4px 16px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 16px 4px rgba(0, 0, 0, 0.3);
+  border: none;
 }
 
 #overview .search-entry {
@@ -2479,7 +2480,7 @@ StWidget.focused .app-well-app-running-dot {
 
 .workspace-thumbnail-indicator {
   border: 3px solid #FFD600;
-  border-radius: 3px;
+  border-radius: 6px;
   padding: 0px;
 }
 

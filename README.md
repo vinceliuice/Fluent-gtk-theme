@@ -51,6 +51,12 @@ Run the following commands in the terminal:
 ./install.sh --tweaks solid # install solid version (not transparency)
 ```
 
+### Flatpak Installation
+
+Automatically install your host GTK+ theme as a Flatpak.
+
+- [pakitheme](https://github.com/refi64/pakitheme)
+
 ### Wallpaper
 [Install Wallpapers](src/wallpaper)
 
@@ -71,10 +77,11 @@ Run the following commands in the terminal:
 ![screenshot](src/dash-to-dock/screenshot.png?raw=true)
 
 ### Fix for Dash to panel
-Go to `src/gnome-shell/extensions/dash-to-panel` [dash-to-panel](src/gnome-shell/extensions/dash-to-panel) run the following commands in the terminal:
+
+Just install the compact version
 
 ```sh
-./install.sh
+./install.sh --tweaks compact
 ```
 
 ## Gtk theme widgets
