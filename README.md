@@ -80,9 +80,6 @@ Automatically install your host GTK+ theme as a Flatpak.
 ![preview01](src/firefox/preview01.png?raw=true)
 ![preview02](src/firefox/preview02.png?raw=true)
 
-#### Screenshot
-![screenshot](src/dash-to-dock/screenshot.png?raw=true)
-
 ### Fix for Dash to panel
 
 Just install the compact version
