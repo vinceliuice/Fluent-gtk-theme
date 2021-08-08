@@ -267,21 +267,8 @@
   background-color: $panel;
   color: on($panel, secondary);
   font-weight: 500;
-  // padding-left: 10px;
-  // padding-right: 10px;
 
   &.transparent { background-color: $scrim; }
-
-  // @each $pos, $bpos, $p_radius in (top, bottom,  $window-radius),
-  //                                 (bottom, top,  $window-radius),
-  //                                 (left, right,  $window-radius),
-  //                                 (right, left,  $window-radius) {
-  //   .#{$pos} &.transparent, .#{$pos} &:not(.dock-mode) {
-  //     border-radius: $p_radius;
-  //     margin: 2px 2px;
-  //     margin-#{$bpos}: 0;
-  //   }
-  // }
 
   button {
     @extend %button-on-dark;
@@ -457,9 +444,12 @@ $pos_list: ((top, bottom), (bottom, top), (left, right), (right, left));
 // Raven
 .raven {
   background-color: $surface;
-  margin: 8px 6px 6px;
-  border-radius: $corner-radius;
   box-shadow: $shadow-z16;
+
+  @if $panel_style == 'float' {
+    margin: 8px 6px 6px;
+    border-radius: $corner-radius;
+  }
 
   > box { margin-bottom: -10px; } // remove extra space between box and .raven-header.bottom
 

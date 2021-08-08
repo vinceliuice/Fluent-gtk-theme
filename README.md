@@ -52,21 +52,6 @@ Run the following commands in the terminal:
 
 > For more information, run: `./install.sh --help`
 
-> Install different accent color version, run: `./install.sh -t [color name]`
-
-install purple accent color version
-```
-./install.sh -t purple
-```
-install normal compact gnome-shell panel version (not floating)
-```
-./install.sh --tweaks compact
-```
-install solid version (not transparency)
-```
-./install.sh --tweaks solid
-```
-
 ### Flatpak Installation
 
 Automatically install your host GTK+ theme as a Flatpak.

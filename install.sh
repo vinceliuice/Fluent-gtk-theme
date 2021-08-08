@@ -50,14 +50,6 @@ OPTIONS:
                           blur:    blur version for 'Blur-Me'
                           outline: windows with outline
   -h, --help              Show help
-
-INSTALLATION EXAMPLES:
-Install all theme variants into ~/.themes
-  $0 --dest ~/.themes
-Install standard theme variant only
-  $0 --color standard
-Install specific theme variants with different name into ~/.themes
-  $0 --dest ~/.themes --name MyTheme --color dark
 EOF
 }
 
@@ -98,7 +90,7 @@ install() {
   mkdir -p                                                                      "$THEME_DIR/gnome-shell"
   cp -r "$SRC_DIR/gnome-shell/pad-osd.css"                                      "$THEME_DIR/gnome-shell"
 
-  if [[ "$panel" == 'compact' || "$tweaks" == 'true' ]]; then
+  if [[ "$tweaks" == 'true' ]]; then
     if [[ "${GS_VERSION:-}" == 'new' ]]; then
       sassc $SASSC_OPT "$SRC_DIR/gnome-shell/shell-40-0/gnome-shell${ELSE_DARK:-}$size.scss" "$THEME_DIR/gnome-shell/gnome-shell.css"
     else
@@ -448,7 +440,7 @@ install_theme_color() {
 theme_tweaks() {
   install_package; tweaks_temp
 
-  if [[ "$opacity" == 'solid' || "$window" == 'round' || "$accent" == 'true' || "$blur" == 'true' || "$outline" == 'true' ]]; then
+  if [[ "$panel" = "compact" || "$opacity" == 'solid' || "$window" == 'round' || "$accent" == 'true' || "$blur" == 'true' || "$outline" == 'true' ]]; then
     tweaks='true'
   fi
 
