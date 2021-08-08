@@ -3,7 +3,7 @@
  * Base States *
  ***************/
 .background {
-  background-color: rgba($background, 1);
+  background-color: $background;
   color: $text;
 
   &.csd { // Set csd windows botttom border radius
@@ -1275,8 +1275,8 @@ searchbar > revealer > box {
   box-shadow: inset 0 -1px $divider;
   color: $titlebar-text;
 
-  @if $opacity == 'solid' {
-    background-color: rgba($titlebar, 1);
+  @if $opacity == 'solid' or $blur == 'true' {
+    background-color: $titlebar;
   } @else {
     background-color: rgba($titlebar, 0.98);
   }
@@ -1791,9 +1791,9 @@ popover.menu {
 
   & > arrow,
   &.background > contents {
-    padding: $container-padding;
+    padding: $container-padding * 1.5;
     box-shadow: inset 0 1px highlight($surface), $shadow-z6;
-    background-color: $surface;
+    background-color: $menu;
     background-clip: border-box;
     border: none; // axes borders in a composited env
     border-radius: $menu-radius;
@@ -1835,12 +1835,6 @@ popover.menu {
   }
 }
 
-menuitem {
-  accelerator { color: $text-secondary; }
-
-  &:disabled accelerator { color: $text-secondary-disabled; }
-}
-
 
 /************
  * Popovers *
@@ -1855,9 +1849,9 @@ popover.background {
   > arrow,
   > contents {
     transition: $transition-shadow;
-    padding: 2px;
+    padding: $container-padding * 1.5;
     box-shadow: $shadow-z6; // TODO: this should really have a highlight
-    background-color: $surface;
+    background-color: $menu;
     border-style: solid;
     border-width: 0;
     border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.0) rgba(0, 0, 0, 0.0);
