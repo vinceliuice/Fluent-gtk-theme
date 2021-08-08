@@ -1670,12 +1670,17 @@ preferencesgroup, .geary-accounts-editor-pane {
 
 .geary-main-window {
   > deck > overlay > .geary-main-layout {
-    background-color: $base;
+    background-color: transparent;
+
+    @if $blur == 'true' {
+      > leaflet > headerbar,
+      > leaflet > leaflet > headerbar { background-color: rgba($titlebar, $blur_opacity/3); }
+    }
 
     > leaflet > separator.sidebar, // centry
     > leaflet > leaflet > separator.sidebar { // left
       // border-right: none;
-      background-color: $titlebar;
+      background-color: if($blur == 'true', rgba($titlebar, $blur_opacity/3), $titlebar);
       box-shadow: inset 0 -1px $divider;
       transition: background-color $duration $ease-out,
                   color $duration $ease-out,
@@ -1688,10 +1693,44 @@ preferencesgroup, .geary-accounts-editor-pane {
       background-color: $divider;
     }
 
+    .geary-folder-frame {
+      treeview.sidebar.view:not(:hover):not(:selected) {
+        background-color: transparent;
+        background-image: none;
+      }
+    }
+
     > leaflet > leaflet > box.vertical > .geary-conversation-frame {
       > scrolledwindow {
         margin: -1px 0; // hide .view top border
         // > treeview.view {}
+      }
+    }
+  }
+
+  geary-conversation-viewer#conversation_viewer { // right side
+    list.background.conversation-listbox.content {
+      > row.activatable {
+        border: 1px solid $divider;
+        border-bottom-width: 0;
+        background-color: $base;
+
+        &:first-child {
+          border-top-left-radius: 8px;
+          border-top-right-radius: 8px;
+        }
+      }
+
+      .geary-attachment-pane {
+        border-radius: 0 0 8px 8px;
+
+        actionbar.background {
+          background-color: transparent;
+
+          > revealer > box {
+            border-radius: 0 0 6px 6px;
+          }
+        }
       }
     }
   }

@@ -5790,7 +5790,7 @@ window#GearyMainWindow.background.csd stack#conversation_viewer .geary-composer-
 }
 
 .geary-main-window > deck > overlay > .geary-main-layout {
-  background-color: #FFFFFF;
+  background-color: transparent;
 }
 
 .geary-main-window > deck > overlay > .geary-main-layout > leaflet > separator.sidebar,
@@ -5809,8 +5809,36 @@ window#GearyMainWindow.background.csd stack#conversation_viewer .geary-composer-
   background-color: rgba(0, 0, 0, 0.12);
 }
 
+.geary-main-window > deck > overlay > .geary-main-layout .geary-folder-frame treeview.sidebar.view:not(:hover):not(:selected), .geary-main-window > deck > overlay > .geary-main-layout .geary-folder-frame filechooser stack.view scrolledwindow treeview.sidebar.view:not(:hover):not(:selected), filechooser stack.view scrolledwindow .geary-main-window > deck > overlay > .geary-main-layout .geary-folder-frame treeview.sidebar.view:not(:hover):not(:selected), .geary-main-window > deck > overlay > .geary-main-layout .geary-folder-frame window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.sidebar.view:not(:hover):not(:selected):not(.progressbar):not(.trough), window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow .geary-main-window > deck > overlay > .geary-main-layout .geary-folder-frame treeview.sidebar.view:not(:hover):not(:selected):not(.progressbar):not(.trough) {
+  background-color: transparent;
+  background-image: none;
+}
+
 .geary-main-window > deck > overlay > .geary-main-layout > leaflet > leaflet > box.vertical > .geary-conversation-frame > scrolledwindow {
   margin: -1px 0;
+}
+
+.geary-main-window geary-conversation-viewer#conversation_viewer list.background.conversation-listbox.content > row.activatable {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-bottom-width: 0;
+  background-color: #FFFFFF;
+}
+
+.geary-main-window geary-conversation-viewer#conversation_viewer list.background.conversation-listbox.content > row.activatable:first-child {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.geary-main-window geary-conversation-viewer#conversation_viewer list.background.conversation-listbox.content .geary-attachment-pane {
+  border-radius: 0 0 8px 8px;
+}
+
+.geary-main-window geary-conversation-viewer#conversation_viewer list.background.conversation-listbox.content .geary-attachment-pane actionbar.background {
+  background-color: transparent;
+}
+
+.geary-main-window geary-conversation-viewer#conversation_viewer list.background.conversation-listbox.content .geary-attachment-pane actionbar.background > revealer > box {
+  border-radius: 0 0 6px 6px;
 }
 
 /**************

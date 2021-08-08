@@ -55,8 +55,10 @@
 }
 
 @function titlebar($state: 'normal') {
-  @if ($variant == 'light' and $topbar == 'light' and $state=='normal') { @return #F7F7F7; }
-  @if ($variant == 'light' and $topbar == 'light' and $state=='backdrop') { @return #F2F2F2; }
+  @if ($variant == 'light' and $topbar == 'light' and $state=='normal' and $blur == 'false') { @return #F7F7F7; }
+  @if ($variant == 'light' and $topbar == 'light' and $state=='backdrop' and $blur == 'false') { @return #F2F2F2; }
+  @if ($variant == 'light' and $topbar == 'light' and $state=='normal' and $blur == 'true') { @return #FFFFFF; }
+  @if ($variant == 'light' and $topbar == 'light' and $state=='backdrop' and $blur == 'true') { @return #FCFCFC; }
   @if ($variant == 'light' and $topbar == 'dark' and $state=='normal') { @return #2C2C2C; }
   @if ($variant == 'light' and $topbar == 'dark' and $state=='backdrop') { @return #3c3c3c; }
   @if ($variant == 'dark' and $state=='normal') { @return #202020; }
@@ -89,7 +91,7 @@ $panel-solid:                           if($topbar == 'light', #F7F7F7, #1F1F1F)
 $blur_opacity:                          if($variant == 'light', 0.85, 0.5);
 
 @if $blur == 'true' {
-  $background:                          if($variant == 'light', rgba(#F2F2F2, $blur_opacity), rgba(#333333, $blur_opacity));
+  $background:                          if($variant == 'light', rgba(#FFFFFF, $blur_opacity), rgba(#333333, $blur_opacity));
   $surface:                             if($variant == 'light', rgba(#FFFFFF, $blur_opacity), rgba(#3C3C3C, $blur_opacity));
   $base:                                if($variant == 'light', rgba(#FFFFFF, $blur_opacity), rgba(#2B2B2B, $blur_opacity)); // semi-surface with 1dp elevation
   $base-alt:                            if($variant == 'light', rgba(#FAFAFA, $blur_opacity), rgba(#303030, $blur_opacity));
