@@ -54,12 +54,17 @@ Run the following commands in the terminal:
 
 > Install different accent color version, run: `./install.sh -t [color name]`
 
+install purple accent color version
 ```
-./install.sh -t purple # install purple accent color version
-
-./install.sh --tweaks compact # install normal compact gnome-shell panel version (not floating)
-
-./install.sh --tweaks solid # install solid version (not transparency)
+./install.sh -t purple
+```
+install normal compact gnome-shell panel version (not floating)
+```
+./install.sh --tweaks compact
+```
+install solid version (not transparency)
+```
+./install.sh --tweaks solid
 ```
 
 ### Flatpak Installation
