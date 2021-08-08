@@ -1668,19 +1668,23 @@ preferencesgroup, .geary-accounts-editor-pane {
   scrolledwindow.frame { border: none; }
 }
 
+$geary-topbar: if($variant == 'light' and $topbar == 'dark', rgba($titlebar, $blur_opacity + 0.1), rgba($titlebar, $blur_opacity/3));
+
 .geary-main-window {
   > deck > overlay > .geary-main-layout {
     background-color: transparent;
 
     @if $blur == 'true' {
       > leaflet > headerbar,
-      > leaflet > leaflet > headerbar { background-color: rgba($titlebar, $blur_opacity/3); }
+      > leaflet > leaflet > headerbar {
+        background-color: $geary-topbar;
+      }
     }
 
     > leaflet > separator.sidebar, // centry
     > leaflet > leaflet > separator.sidebar { // left
       // border-right: none;
-      background-color: if($blur == 'true', rgba($titlebar, $blur_opacity/3), $titlebar);
+      background-color: if($blur == 'true', $geary-topbar, $titlebar);
       box-shadow: inset 0 -1px $divider;
       transition: background-color $duration $ease-out,
                   color $duration $ease-out,
