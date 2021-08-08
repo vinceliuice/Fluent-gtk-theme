@@ -1709,8 +1709,8 @@ searchbar > revealer > box {
   background-color: #202020;
   min-height: 20px;
   padding: 4px;
-  box-shadow: none;
   border-radius: 2px 2px 0 0;
+  box-shadow: none;
 }
 
 .titlebar.default-decoration:backdrop {

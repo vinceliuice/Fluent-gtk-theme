@@ -1434,8 +1434,11 @@ searchbar > revealer > box {
     background-color: $titlebar;
     min-height: $small-size;
     padding: $container-padding;
-    box-shadow: none;
     border-radius: $corner-radius $corner-radius 0 0;
+
+    @if $outline == 'true' and $topbar == 'dark' and $variant == 'light' {
+      box-shadow: inset 0 1px highlight($titlebar);
+    } @else { box-shadow: none; }
 
     &:backdrop {
       background-color: $titlebar-backdrop;
