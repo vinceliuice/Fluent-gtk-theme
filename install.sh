@@ -43,11 +43,12 @@ OPTIONS:
   -t, --theme VARIANT     Specify theme color variant(s) [default|purple|pink|red|orange|yellow|green|grey|all] (Default: blue)
   -c, --color VARIANT     Specify color variant(s) [standard|light|dark] (Default: All variants)s)
   -s, --size VARIANT      Specify size variant [standard|compact] (Default: All variants)
-  --tweaks                Specify versions for tweaks [solid|compact|round|blur]
+  --tweaks                Specify versions for tweaks [solid|compact|round|blur|outline]
                           solid:   no transparency variant
                           compact: no floating panel
                           round:   rounded windows
                           blur:    blur version for 'Blur-Me'
+                          outline: windows with outline
   -h, --help              Show help
 
 INSTALLATION EXAMPLES:
@@ -97,7 +98,7 @@ install() {
   mkdir -p                                                                      "$THEME_DIR/gnome-shell"
   cp -r "$SRC_DIR/gnome-shell/pad-osd.css"                                      "$THEME_DIR/gnome-shell"
 
-  if [[ "$panel" == 'compact' || "$opacity" == 'solid' || "$window" == 'round' || "$accent" == 'true' || "$blur" == 'true' ]]; then
+  if [[ "$panel" == 'compact' || "$tweaks" == 'true' ]]; then
     if [[ "${GS_VERSION:-}" == 'new' ]]; then
       sassc $SASSC_OPT "$SRC_DIR/gnome-shell/shell-40-0/gnome-shell${ELSE_DARK:-}$size.scss" "$THEME_DIR/gnome-shell/gnome-shell.css"
     else
@@ -130,7 +131,7 @@ install() {
   cp -r "$SRC_DIR/gtk/scalable"                                                 "$THEME_DIR/gtk-3.0/assets"
   cp -r "$SRC_DIR/gtk/thumbnail$theme${ELSE_DARK:-}.png"                        "$THEME_DIR/gtk-3.0/thumbnail.png"
 
-  if [[ "$opacity" == 'solid' || "$window" == 'round' || "$accent" == 'true' || "$blur" == 'true' ]]; then
+  if [[ "$tweaks" == 'true' ]]; then
     sassc $SASSC_OPT "$SRC_DIR/gtk/3.0/gtk$color$size.scss"                     "$THEME_DIR/gtk-3.0/gtk.css"
     [[ "$color" != '-dark' ]] && \
     sassc $SASSC_OPT "$SRC_DIR/gtk/3.0/gtk-dark$size.scss"                      "$THEME_DIR/gtk-3.0/gtk-dark.css"
@@ -144,7 +145,7 @@ install() {
   cp -r "$SRC_DIR/gtk/assets$theme"                                             "$THEME_DIR/gtk-4.0/assets"
   cp -r "$SRC_DIR/gtk/scalable"                                                 "$THEME_DIR/gtk-4.0/assets"
 
-  if [[ "$opacity" == 'solid' || "$window" == 'round' || "$accent" == 'true' || "$blur" == 'true' ]]; then
+  if [[ "$tweaks" == 'true' ]]; then
     sassc $SASSC_OPT "$SRC_DIR/gtk/4.0/gtk$color$size.scss"                     "$THEME_DIR/gtk-4.0/gtk.css"
     [[ "$color" != '-dark' ]] && \
     sassc $SASSC_OPT "$SRC_DIR/gtk/4.0/gtk-dark$size.scss"                      "$THEME_DIR/gtk-4.0/gtk-dark.css"
@@ -213,6 +214,10 @@ while [[ "$#" -gt 0 ]]; do
           blur)
             blur="true"
             panel="compact"
+            shift
+            ;;
+          outline)
+            outline="true"
             shift
             ;;
           -*)
@@ -404,6 +409,12 @@ install_blur() {
   echo -e "Install Blur version ..."
 }
 
+install_outline() {
+  sed -i "/\$outline:/s/false/true/" ${SRC_DIR}/gnome-shell/sass/_tweaks-temp.scss
+  sed -i "/\$outline:/s/false/true/" ${SRC_DIR}/_sass/_tweaks-temp.scss
+  echo -e "Install Windows with outline version ..."
+}
+
 install_theme_color() {
   if [[ "$theme" != '' ]]; then
     case "$theme" in
@@ -437,6 +448,10 @@ install_theme_color() {
 theme_tweaks() {
   install_package; tweaks_temp
 
+  if [[ "$opacity" == 'solid' || "$window" == 'round' || "$accent" == 'true' || "$blur" == 'true' || "$outline" == 'true' ]]; then
+    tweaks='true'
+  fi
+
   if [[ "$panel" = "compact" ]] ; then
     install_compact_panel
   fi
@@ -451,6 +466,10 @@ theme_tweaks() {
 
   if [[ "$blur" = "true" ]] ; then
     install_blur
+  fi
+
+  if [[ "$outline" = "true" ]] ; then
+    install_outline
   fi
 }
 

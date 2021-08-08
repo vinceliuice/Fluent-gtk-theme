@@ -1852,3 +1852,49 @@ dialog.background.csd {
     }
   }
 }
+
+//
+// unified window
+//
+
+window.background.csd.unified {
+  // Remove the sheen on headerbar...
+  headerbar {
+    box-shadow: inset 0 -1px $divider;
+
+    &.selection-mode {
+      box-shadow: none;
+    }
+  }
+
+  // ...and add it on the window itself
+  @if $outline == 'true' and $topbar == 'dark' and $variant == 'light' {
+    > decoration-overlay {
+      box-shadow: inset 0 1px highlight($titlebar);
+    }
+  }
+
+  &,
+  > decoration,
+  > decoration-overlay {
+    border-radius: $window-radius;
+  }
+
+  &.tiled,
+  &.tiled-top,
+  &.tiled-right,
+  &.tiled-bottom,
+  &.tiled-left,
+  &.maximized,
+  &.fullscreen {
+    > decoration-overlay {
+      box-shadow: none;
+    }
+
+    &,
+    > decoration,
+    > decoration-overlay {
+      border-radius: 0;
+    }
+  }
+}

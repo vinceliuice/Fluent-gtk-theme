@@ -69,7 +69,7 @@
 // Basic colors
 //
 $primary:                               theme(color);
-$highlight:                             lighten($primary, 25%);
+$entry-highlight:                       lighten($primary, 25%);
 $drop_target_color:                     #FF7043;
 
 $background:                            if($variant == 'light', #F2F2F2, #333333);

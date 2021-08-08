@@ -2187,11 +2187,11 @@ popover.menu box.circular-buttons button.circular.image-button.model:focus {
 
 popover.menu > arrow, popover.menu.background > contents {
   padding: 6px;
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.1), 0 3px 3px -1px rgba(0, 0, 0, 0.2), 0 6px 6px 0 rgba(0, 0, 0, 0.14), 0 1px 10.8px 0 rgba(0, 0, 0, 0.12);
   background-color: rgba(60, 60, 60, 0.98);
   background-clip: border-box;
   border: none;
   border-radius: 3px;
+  box-shadow: 0 3px 3px -1px rgba(0, 0, 0, 0.2), 0 6px 6px 0 rgba(0, 0, 0, 0.14), 0 1px 10.8px 0 rgba(0, 0, 0, 0.12);
 }
 
 popover.menu.background separator {
@@ -4358,8 +4358,8 @@ colorchooser .popover.osd:backdrop {
 window.csd {
   transition: box-shadow 75ms cubic-bezier(0, 0, 0.2, 1);
   border-radius: 3px;
-  box-shadow: 0 8px 6px -5px rgba(0, 0, 0, 0.2), 0 16px 14.4px 2px rgba(0, 0, 0, 0.14), 0 6px 18px 5px rgba(0, 0, 0, 0.12), 0 16px 14.4px 2px transparent, 0 6px 18px 5px transparent;
   margin: 0;
+  box-shadow: 0 8px 6px -5px rgba(0, 0, 0, 0.2), 0 16px 14.4px 2px rgba(0, 0, 0, 0.14), 0 6px 18px 5px rgba(0, 0, 0, 0.12), 0 16px 14.4px 2px transparent, 0 6px 18px 5px transparent;
 }
 
 window.csd:backdrop {

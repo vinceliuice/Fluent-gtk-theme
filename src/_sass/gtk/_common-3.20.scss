@@ -1237,7 +1237,7 @@ searchbar > revealer > box {
   &:hover { box-shadow: 0 2px 3px rgba(black, 0.08), inset 0 0 0 1px $titlebar-divider; }
 
   &:focus {
-    box-shadow: inset 0 0 0 2px $highlight;
+    box-shadow: inset 0 0 0 2px $entry-highlight;
   }
 
   &:disabled {
@@ -1257,8 +1257,12 @@ searchbar > revealer > box {
 .titlebar {
   transition: background-color $duration $ease-out, color $duration $ease-out;
   border-radius: $window-radius $window-radius 0 0;
-  box-shadow: inset 0 -1px $divider;
   color: $titlebar-text;
+  box-shadow: inset 0 -1px $divider;
+
+  @if $outline == 'true' and $topbar == 'dark' and $variant == 'light' {
+    box-shadow: inset 0 -1px $divider, inset 0 1px highlight($titlebar);
+  }
 
   @if $opacity == 'solid' or $blur == 'true' {
     background-color: $titlebar;
@@ -1790,8 +1794,8 @@ menu,
   border: 1px solid $divider; // adds borders in a non composited env
 
   .csd & {
-    border: none; // axes borders in a composited env
     border-radius: $menu-radius;
+    border: none; // axes borders in a composited env
 
     menuitem {
       border-radius: $corner-radius;
@@ -3745,7 +3749,12 @@ colorchooser .popover.osd {
 decoration {
   transition: $transition-shadow;
   border-radius: $window-radius;
-  box-shadow: $shadow-z16, 0 16px (24px * .6) 2px transparent, 0 6px (30px * .6) 5px transparent;
+
+  @if $outline == 'false' {
+    box-shadow: $shadow-z16, 0 16px (24px * .6) 2px transparent, 0 6px (30px * .6) 5px transparent;
+  } @else {
+    box-shadow: $shadow-z16, 0 16px (24px * .6) 2px transparent, 0 6px (30px * .6) 5px transparent, 0 0 0 1px $divider;
+  }
 
   // FIXME rationalize shadows
 
@@ -3757,7 +3766,12 @@ decoration {
     // change when we go to backdrop, to prevent jumping windows.
     // The biggest shadow should be in the same order then in the active state
     // or the jumping will happen during the transition.
-    box-shadow: $shadow-z4, 0 16px (24px * .6) 2px transparent, 0 6px (30px * .6) 5px transparent;
+
+    @if $outline == 'false' {
+      box-shadow: $shadow-z4, 0 16px (24px * .6) 2px transparent, 0 6px (30px * .6) 5px transparent;
+    } @else {
+      box-shadow: $shadow-z4, 0 16px (24px * .6) 2px transparent, 0 6px (30px * .6) 5px transparent, 0 0 0 1px $divider;
+    }
   }
 
   .maximized &,
@@ -3774,29 +3788,35 @@ decoration {
   .ssd & { box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16); } // just doing borders, wm draws actual shadows
 
   .csd.popup & {
-    border-radius: $corner-radius;
-    box-shadow: $shadow-z4;
+    border-radius: $menu-radius;
+
+    @if $outline == 'false' {
+      box-shadow: $shadow-z4;
+    } @else {
+      box-shadow: $shadow-z4, 0 0 0 1px if($variant == 'light', rgba(black, 0.06), rgba(white, 0.2));
+    }
   }
 
   tooltip.csd & {
-    border-radius: $corner-radius;
+    border-radius: $menu-radius;
     box-shadow: none;
   }
 
   messagedialog.csd & {
     border-radius: $window-radius;
-    // box-shadow: $shadow-z24, 0 24px (38px * .6) 3px transparent, 0 9px (46px * .6) 8px transparent;
-
-    // &:backdrop { box-shadow: $shadow-z4, 0 24px (38px * .6) 3px transparent, 0 9px (46px * .6) 8px transparent; }
   }
 
   .solid-csd & {
     margin: 0;
     padding: 2px;
     border-radius: 0;
-    box-shadow: none;
-    // box-shadow: inset 0 1px highlight($titlebar);
     background-color: $titlebar;
+
+    @if $outline == 'false' {
+      box-shadow: none;
+    } @else {
+      box-shadow: inset 0 1px highlight($titlebar), 0 0 0 1px $solid-border;
+    }
 
     &:backdrop { background-color: $titlebar-backdrop; }
   }
