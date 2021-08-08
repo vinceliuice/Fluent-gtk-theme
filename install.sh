@@ -17,6 +17,7 @@ SASSC_OPT="-M -t expanded"
 
 THEME_NAME=Fluent
 THEME_VARIANTS=('' '-purple' '-pink' '-red' '-orange' '-yellow' '-green' '-grey')
+THEME_COLOR_VARIANTS=('default' 'purple' 'pink' 'red' 'orange' 'yellow' 'green' 'grey')
 COLOR_VARIANTS=('' '-light' '-dark')
 SIZE_VARIANTS=('' '-compact')
 
@@ -72,6 +73,8 @@ install() {
   local THEME_DIR="$dest/$name$theme$color$size"
 
   [[ -d "$THEME_DIR" ]] && rm -rf "${THEME_DIR:?}"
+
+  theme_tweaks && install_theme_color
 
   echo "Installing '$THEME_DIR'..."
 
@@ -230,42 +233,38 @@ while [[ "$#" -gt 0 ]]; do
         case "$variant" in
           default)
             themes+=("${THEME_VARIANTS[0]}")
-            theme_color='default'
             shift
             ;;
           purple)
             themes+=("${THEME_VARIANTS[1]}")
-            theme_color='purple'
             shift
             ;;
           pink)
             themes+=("${THEME_VARIANTS[2]}")
-            theme_color='pink'
             shift
             ;;
           red)
             themes+=("${THEME_VARIANTS[3]}")
-            theme_color='red'
             shift
             ;;
           orange)
             themes+=("${THEME_VARIANTS[4]}")
-            theme_color='orange'
             shift
             ;;
           yellow)
             themes+=("${THEME_VARIANTS[5]}")
-            theme_color='yellow'
             shift
             ;;
           green)
             themes+=("${THEME_VARIANTS[6]}")
-            theme_color='green'
             shift
             ;;
           grey)
             themes+=("${THEME_VARIANTS[7]}")
-            theme_color='grey'
+            shift
+            ;;
+          all)
+            themes+=("${THEME_VARIANTS[@]}")
             shift
             ;;
           -*)
@@ -406,9 +405,53 @@ install_blur() {
 }
 
 install_theme_color() {
-  sed -i "/\$theme:/s/default/${theme_color}/" ${SRC_DIR}/gnome-shell/sass/_tweaks-temp.scss
-  sed -i "/\$theme:/s/default/${theme_color}/" ${SRC_DIR}/_sass/_tweaks-temp.scss
-  echo -e "Install ${theme_color} color version ..."
+  if [[ "$theme" != '' ]]; then
+    case "$theme" in
+      -purple)
+        theme_color='purple'
+        ;;
+      -pink)
+        theme_color='pink'
+        ;;
+      -red)
+        theme_color='red'
+        ;;
+      -orange)
+        theme_color='orange'
+        ;;
+      -yellow)
+        theme_color='yellow'
+        ;;
+      -green)
+        theme_color='green'
+        ;;
+      -grey)
+        theme_color='grey'
+        ;;
+    esac
+    sed -i "/\$theme:/s/default/${theme_color}/" ${SRC_DIR}/gnome-shell/sass/_tweaks-temp.scss
+    sed -i "/\$theme:/s/default/${theme_color}/" ${SRC_DIR}/_sass/_tweaks-temp.scss
+  fi
+}
+
+theme_tweaks() {
+  install_package; tweaks_temp
+
+  if [[ "$panel" = "compact" ]] ; then
+    install_compact_panel
+  fi
+
+  if [[ "$opacity" = "solid" ]] ; then
+    install_solid
+  fi
+
+  if [[ "$window" = "round" ]] ; then
+    install_round
+  fi
+
+  if [[ "$blur" = "true" ]] ; then
+    install_blur
+  fi
 }
 
 install_theme() {
@@ -420,28 +463,6 @@ install_theme() {
     done
   done
 }
-
-install_package; tweaks_temp
-
-if [[ "$panel" = "compact" ]] ; then
-  install_compact_panel
-fi
-
-if [[ "$opacity" = "solid" ]] ; then
-  install_solid
-fi
-
-if [[ "$window" = "round" ]] ; then
-  install_round
-fi
-
-if [[ "$blur" = "true" ]] ; then
-  install_blur
-fi
-
-if [[ "$accent" == 'true' && "$theme_color" != 'default' ]] ; then
-  install_theme_color
-fi
 
 install_theme
 
