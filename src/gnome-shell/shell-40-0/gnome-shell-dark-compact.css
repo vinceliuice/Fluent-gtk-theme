@@ -285,7 +285,7 @@ StEntry StLabel.hint-text {
 
 /* Slider */
 .slider {
-  height: 15px;
+  height: 12px;
   -barlevel-height: 2px;
   -barlevel-background-color: rgba(255, 255, 255, 0.1);
   -barlevel-border-width: 0;
@@ -295,18 +295,18 @@ StEntry StLabel.hint-text {
   -barlevel-overdrive-color: #FF5252;
   -barlevel-overdrive-border-color: #ff5c5c;
   -barlevel-overdrive-separator-width: 2px;
-  -slider-handle-radius: 7.5px;
-  -slider-handle-border-width: 0;
-  -slider-handle-border-color: rgba(255, 255, 255, 0.9);
-  color: white;
+  -slider-handle-radius: 6px;
+  -slider-handle-border-width: 4px;
+  -slider-handle-border-color: white;
+  color: #408aeb;
 }
 
 .slider:hover {
-  color: white;
+  color: #5798ee;
 }
 
 .slider:active {
-  color: #f2f2f2;
+  color: #297be9;
 }
 
 /* Scrollbars */

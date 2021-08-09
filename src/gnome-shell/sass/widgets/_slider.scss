@@ -1,7 +1,7 @@
 /* Slider */
 
-$slider_size: 15px;
-$slider_color: if($variant == 'light', $accent_color, white);
+$slider_size: 12px;
+$slider_color: if($variant == 'light', white, $accent_color);
 
 .slider {
   height: $slider_size;
@@ -19,8 +19,8 @@ $slider_color: if($variant == 'light', $accent_color, white);
   -barlevel-overdrive-separator-width: 2px;
   // slider handler
   -slider-handle-radius: $slider_size * 0.5; // half the size of the size
-  -slider-handle-border-width: 0;
-  -slider-handle-border-color: if($variant == 'light', $border_color, $fg_color);
+  -slider-handle-border-width: 4px;
+  -slider-handle-border-color: if($variant == 'light', $accent_color, white);
 
   color: $slider_color;
   &:hover { color: lighten($slider_color, 5%); }
