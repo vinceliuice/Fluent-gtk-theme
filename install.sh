@@ -438,10 +438,9 @@ install_theme_color() {
 }
 
 theme_tweaks() {
-  install_package; tweaks_temp
-
   if [[ "$panel" = "compact" || "$opacity" == 'solid' || "$window" == 'round' || "$accent" == 'true' || "$blur" == 'true' || "$outline" == 'true' ]]; then
     tweaks='true'
+    install_package; tweaks_temp
   fi
 
   if [[ "$panel" = "compact" ]] ; then
