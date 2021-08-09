@@ -2673,33 +2673,23 @@ scale {
     &:disabled { background-color: transparent; }
   }
 
-  > trough > slider {
-    transition: background-color $duration $ease-out;
+  slider {
+    transition: background-image $duration $ease-out;
     border-radius: 50%;
     color: $primary;
     background-repeat: no-repeat;
-    background-size: 24px 24px;
+    background-size: 25px 25px;
     background-position: center center;
 
     @each $s, $as in ('', ''),
+                     (':hover', '-hover'),
+                     (':active', '-active'),
                      (':disabled', '-disabled') {
       &#{$s} {
         $_url: 'assets/scale-slider#{$as}#{$asset-suffix}';
 
-        background-image: -gtk-scaled(url('#{$_url}.png'), url('#{$_url}@2.png')),
-                          radial-gradient(circle, transparent 10%, transparent 0%);
+        background-image: -gtk-scaled(url('#{$_url}.png'), url('#{$_url}@2.png'));
       }
-    }
-
-    &:hover { background-color: $overlay-hover; }
-
-    &:focus:hover { background-color: $overlay-focus-hover; }
-
-    &:active {
-      $_url: 'assets/scale-slider#{$asset-suffix}';
-
-      transition: background-color $duration $ease-out;
-      background-color: $overlay-hover;
     }
   }
 

@@ -3069,7 +3069,7 @@ scale fill:disabled {
 }
 
 scale slider {
-  transition: background-color 75ms cubic-bezier(0, 0, 0.2, 1);
+  transition: background-image 75ms cubic-bezier(0, 0, 0.2, 1);
   border-radius: 50%;
   color: #0078D4;
   background-repeat: no-repeat;
@@ -3091,10 +3091,6 @@ scale slider:active {
 
 scale slider:disabled {
   background-image: -gtk-scaled(url("assets/scale-slider-disabled.png"), url("assets/scale-slider-disabled@2.png"));
-}
-
-scale slider:active {
-  transition: background-image 75ms cubic-bezier(0, 0, 0.2, 1);
 }
 
 scale marks,

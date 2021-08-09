@@ -2691,7 +2691,7 @@ scale {
   }
 
   slider {
-    transition: background-color $duration $ease-out;
+    transition: background-image $duration $ease-out;
     border-radius: 50%;
     color: $primary;
     background-repeat: no-repeat;
@@ -2707,17 +2707,6 @@ scale {
 
         background-image: -gtk-scaled(url('#{$_url}.png'), url('#{$_url}@2.png'));
       }
-    }
-
-    // &:focus { background-color: $overlay-focus; }
-
-    // &:hover { background-color: $overlay-hover; }
-    //
-    // &:focus:hover { background-color: $overlay-focus-hover; }
-
-    &:active {
-      transition: background-image $duration $ease-out;
-      // background-color: $overlay-hover;
     }
   }
 

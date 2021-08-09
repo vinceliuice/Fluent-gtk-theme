@@ -3112,34 +3112,29 @@ scale > trough > fill:disabled {
   background-color: transparent;
 }
 
-scale > trough > slider {
-  transition: background-color 75ms cubic-bezier(0, 0, 0.2, 1);
+scale slider {
+  transition: background-image 75ms cubic-bezier(0, 0, 0.2, 1);
   border-radius: 50%;
   color: #0078D4;
   background-repeat: no-repeat;
-  background-size: 24px 24px;
+  background-size: 25px 25px;
   background-position: center center;
 }
 
-scale > trough > slider {
-  background-image: -gtk-scaled(url("assets/scale-slider-dark.png"), url("assets/scale-slider-dark@2.png")), radial-gradient(circle, transparent 10%, transparent 0%);
+scale slider {
+  background-image: -gtk-scaled(url("assets/scale-slider-dark.png"), url("assets/scale-slider-dark@2.png"));
 }
 
-scale > trough > slider:disabled {
-  background-image: -gtk-scaled(url("assets/scale-slider-disabled-dark.png"), url("assets/scale-slider-disabled-dark@2.png")), radial-gradient(circle, transparent 10%, transparent 0%);
+scale slider:hover {
+  background-image: -gtk-scaled(url("assets/scale-slider-hover-dark.png"), url("assets/scale-slider-hover-dark@2.png"));
 }
 
-scale > trough > slider:hover {
-  background-color: alpha(currentColor, 0.08);
+scale slider:active {
+  background-image: -gtk-scaled(url("assets/scale-slider-active-dark.png"), url("assets/scale-slider-active-dark@2.png"));
 }
 
-scale > trough > slider:focus:hover {
-  background-color: alpha(currentColor, 0.16);
-}
-
-scale > trough > slider:active {
-  transition: background-color 75ms cubic-bezier(0, 0, 0.2, 1);
-  background-color: alpha(currentColor, 0.08);
+scale slider:disabled {
+  background-image: -gtk-scaled(url("assets/scale-slider-disabled-dark.png"), url("assets/scale-slider-disabled-dark@2.png"));
 }
 
 scale > marks,
