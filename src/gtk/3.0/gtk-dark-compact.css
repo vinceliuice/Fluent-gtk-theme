@@ -1707,6 +1707,10 @@ headerbar button.titlebutton:not(.suggested-action):not(.destructive-action) {
   background-color: #0078D4;
 }
 
+.tiled .titlebar, .tiled-top .titlebar, .tiled-right .titlebar, .tiled-bottom .titlebar, .tiled-left .titlebar, .maximized .titlebar, .fullscreen .titlebar {
+  border-radius: 0;
+}
+
 headerbar {
   min-height: 38px;
   padding: 0 4px;

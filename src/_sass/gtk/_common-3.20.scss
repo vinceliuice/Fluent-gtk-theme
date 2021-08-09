@@ -1446,6 +1446,16 @@ searchbar > revealer > box {
     box-shadow: none; // Avoid double shadows
     background-color: $primary;
   }
+
+  .tiled &,
+  .tiled-top &,
+  .tiled-right &,
+  .tiled-bottom &,
+  .tiled-left &,
+  .maximized &,
+  .fullscreen & {
+    border-radius: 0;
+  }
 }
 
 headerbar {
