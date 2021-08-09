@@ -12,7 +12,7 @@ $container-padding: if($compact == 'false', 6px, 4px);
 
 $small-size: if($compact == 'false', 22px, 20px);
 $medium-size: if($compact == 'false', 32px, 28px);
-$large-size: if($compact == 'false', 42px, 36px);
+$large-size: if($compact == 'false', 42px, 38px);
 
 $bar-size: if($window == 'round', 6px, 3px);
 $menuitem-size: 28px;

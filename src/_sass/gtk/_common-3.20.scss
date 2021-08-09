@@ -503,7 +503,7 @@ button {
     image:not(:only-child) { margin: 0 (24px - 16px) / 2; }
   }
 
-  .linked > & {
+  .linked > &:not(:only-child) {
     &:focus {
       @include button(normal);
     }
@@ -1060,6 +1060,14 @@ combobox {
     border-radius: 0;
     border-left-width: 0;
     border-right-width: 0;
+
+    &:focus {
+      @include button(normal);
+    }
+
+    &:checked:focus {
+      @include button(checked);
+    }
   }
 
   &:first-child > box > button.combo {
@@ -1260,6 +1268,23 @@ searchbar > revealer > box {
   }
 }
 
+%circular_titlebutton {
+  min-height: $medium-size - 6px;
+  min-width: $medium-size - 6px;
+  padding: 0 0;
+  margin-left: 7px - $container-padding;
+  margin-right: 7px - $container-padding;
+  @extend %circular_button;
+}
+
+%square_titlebutton {
+  min-height: $large-size;
+  min-width: $large-size;
+  padding: 0 0;
+  margin: 0 -3px;
+  border-radius: 0;
+}
+
 .titlebar {
   transition: background-color $duration $ease-out, color $duration $ease-out;
   border-radius: $window-radius $window-radius 0 0;
@@ -1421,73 +1446,6 @@ searchbar > revealer > box {
     box-shadow: none; // Avoid double shadows
     background-color: $primary;
   }
-
-  // squared corners when the window is maximized, tiled, or fullscreen
-  .tiled &,
-  .tiled-top &,
-  .tiled-right &,
-  .tiled-bottom &,
-  .tiled-left &,
-  .maximized &,
-  .fullscreen & {
-    border-radius: 0;
-  }
-
-  // Window Close button
-  button.titlebutton {
-    min-height: $medium-size - 6px;
-    min-width: $medium-size - 6px;
-    padding: 0 0;
-    margin-left: 7px - $container-padding;
-    margin-right: 7px - $container-padding;
-    @extend %circular_button;
-
-    &.close {
-      &:hover { background-color: $red-300; color: on($red-300); }
-      &:active { background-color: $red-600; color: on($red-600); }
-    }
-
-    .selection-mode & { @extend %button-on-dark; }
-  }
-
-  &.default-decoration {
-    background-color: $titlebar;
-    min-height: $small-size;
-    padding: $container-padding;
-    border-radius: $corner-radius $corner-radius 0 0;
-
-    @if $outline == 'true' and $topbar == 'dark' and $variant == 'light' {
-      box-shadow: inset 0 1px highlight($titlebar);
-    } @else { box-shadow: none; }
-
-    &:backdrop {
-      background-color: $titlebar-backdrop;
-    }
-
-    .tiled &,
-    .maximized &,
-    .fullscreen & {
-      box-shadow: none;
-      border-radius: 0;
-    }
-
-    button.titlebutton {
-      min-height: $small-size;
-      min-width: $small-size;
-      margin: 0;
-      padding: 0;
-    }
-
-    // workaround for non-animatable buttons
-    .background:not(.csd) & button.titlebutton:active { background-size: 1000% 1000%; }
-  }
-
-  .solid-csd & {
-    &:dir(rtl), &:dir(ltr) { // specificity bump
-      border-radius: 0;
-      box-shadow: none; // just remove the highlight
-    }
-  }
 }
 
 headerbar {
@@ -1579,6 +1537,126 @@ headerbar {
 
     > button.popup {
       label, image { min-height: 0; }
+    }
+  }
+
+  // squared corners when the window is maximized, tiled, or fullscreen
+  .tiled &,
+  .tiled-top &,
+  .tiled-right &,
+  .tiled-bottom &,
+  .tiled-left &,
+  .maximized &,
+  .fullscreen & {
+    border-radius: 0;
+
+    @if $titlebutton == "square" {
+      > box.right {
+        button.titlebutton.close { border-top-right-radius: 0; }
+      }
+
+      > box.left {
+        button.titlebutton.close { border-top-left-radius: 0; }
+      }
+    }
+  }
+
+  @if $titlebutton == "square" {
+    > box.right {
+      margin-right: -$container-padding + 3px;
+
+      button.titlebutton.close { border-top-right-radius: $window-radius; }
+    }
+
+    > box.left {
+      margin-left: -$container-padding + 3px;
+
+      button.titlebutton.close { border-top-left-radius: $window-radius; }
+    }
+  }
+
+  // Windows button
+  button.titlebutton:not(.suggested-action):not(.destructive-action) {
+    @if $titlebutton == "circular" {
+      @extend %circular_titlebutton;
+    } @else {
+      @extend %square_titlebutton;
+    }
+
+    &.close {
+      &:hover, &:backdrop:hover {
+        background-color: $red-300;
+        color: on($red-300);
+      }
+      &:active {
+        background-color: $red-600;
+        color: on($red-600);
+      }
+    }
+
+    .selection-mode & { @extend %button-on-dark; }
+  }
+
+  &.default-decoration {
+    background-color: $titlebar;
+    border-radius: $window-radius $window-radius 0 0;
+
+    @if $titlebutton == "circular" {
+      min-height: $small-size;
+      padding: $container-padding;
+    } @else {
+      min-height: $medium-size;
+      padding: 0 $container-padding / 2;
+    }
+
+    @if $outline == 'true' and $topbar == 'dark' and $variant == 'light' {
+      box-shadow: inset 0 1px highlight($titlebar);
+    } @else {
+      box-shadow: none;
+    }
+
+    .csd & {
+      @if $titlebutton == "square" {
+        padding: 0 if($compact == 'true', 3px, 6px);
+      }
+
+      @if $outline == 'true' and $topbar == 'dark' and $variant == 'light' {
+        box-shadow: inset 0 1px highlight($titlebar), inset 0 -1px $divider;
+      } @else {
+        box-shadow: inset 0 -1px $divider;
+      }
+    }
+
+    &:backdrop {
+      background-color: $titlebar-backdrop;
+    }
+
+    .tiled &,
+    .maximized &,
+    .fullscreen & {
+      box-shadow: none;
+      border-radius: 0;
+    }
+
+    button.titlebutton:not(.suggested-action):not(.destructive-action) {
+      @if $titlebutton == "circular" {
+        min-height: $small-size;
+        min-width: $small-size;
+        margin: 0 $container-padding / 2;
+        padding: 0;
+      } @else {
+        min-height: $medium-size;
+        min-width: $medium-size;
+        margin: 0 -$container-padding / 2;
+        padding: 0 $container-padding;
+      }
+    }
+  }
+
+  .solid-csd & {
+    &:dir(rtl), &:dir(ltr) { // specificity bump
+      border-radius: 0;
+      box-shadow: none; // just remove the highlight
     }
   }
 }
@@ -1814,7 +1892,7 @@ menu,
 
   menuitem {
     transition: none;
-    min-height: 8px + $container-padding * 2;
+    min-height: 20px;
     min-width: 40px;
     padding: ($container-padding - 2px) ($container-padding + 2px);
     color: $text;

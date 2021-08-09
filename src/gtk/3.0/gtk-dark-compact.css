@@ -483,19 +483,19 @@ treeview entry.flat, treeview entry.flat:focus, treeview entry, treeview entry:f
   }
 }
 
-.raven-mpris button.image-button, .budgie-panel button.budgie-menu-launcher, .budgie-panel button, .mate-panel-menu-bar button, infobar.error > revealer > box button, infobar.error:backdrop > revealer > box button, infobar.warning > revealer > box button, infobar.warning:backdrop > revealer > box button, infobar.action > revealer > box button, infobar.action:backdrop > revealer > box button, infobar.question > revealer > box button, infobar.question:backdrop > revealer > box button, .selection-mode .titlebar button.titlebutton {
+.raven-mpris button.image-button, .budgie-panel button.budgie-menu-launcher, .budgie-panel button, .mate-panel-menu-bar button, infobar.error > revealer > box button, infobar.error:backdrop > revealer > box button, infobar.warning > revealer > box button, infobar.warning:backdrop > revealer > box button, infobar.action > revealer > box button, infobar.action:backdrop > revealer > box button, infobar.question > revealer > box button, infobar.question:backdrop > revealer > box button, .selection-mode headerbar button.titlebutton:not(.suggested-action):not(.destructive-action) {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.raven-mpris button.image-button:focus, .budgie-panel button:focus, .mate-panel-menu-bar button:focus, infobar.error > revealer > box button:focus, infobar.warning > revealer > box button:focus, infobar.action > revealer > box button:focus, infobar.question > revealer > box button:focus, .selection-mode .titlebar button.titlebutton:focus, .raven-mpris button.image-button:hover, .budgie-panel button:hover, .mate-panel-menu-bar button:hover, infobar.error > revealer > box button:hover, infobar.warning > revealer > box button:hover, infobar.action > revealer > box button:hover, infobar.question > revealer > box button:hover, .selection-mode .titlebar button.titlebutton:hover, .raven-mpris button.image-button:active, .budgie-panel button:active, .mate-panel-menu-bar button:active, infobar.error > revealer > box button:active, infobar.warning > revealer > box button:active, infobar.action > revealer > box button:active, infobar.question > revealer > box button:active, .selection-mode .titlebar button.titlebutton:active, .raven-mpris button.image-button:checked, .budgie-panel button:checked, .mate-panel-menu-bar button:checked, infobar.error > revealer > box button:checked, infobar.warning > revealer > box button:checked, infobar.action > revealer > box button:checked, infobar.question > revealer > box button:checked, .selection-mode .titlebar button.titlebutton:checked {
+.raven-mpris button.image-button:focus, .budgie-panel button:focus, .mate-panel-menu-bar button:focus, infobar.error > revealer > box button:focus, infobar.warning > revealer > box button:focus, infobar.action > revealer > box button:focus, infobar.question > revealer > box button:focus, .selection-mode headerbar button.titlebutton:focus:not(.suggested-action):not(.destructive-action), .raven-mpris button.image-button:hover, .budgie-panel button:hover, .mate-panel-menu-bar button:hover, infobar.error > revealer > box button:hover, infobar.warning > revealer > box button:hover, infobar.action > revealer > box button:hover, infobar.question > revealer > box button:hover, .selection-mode headerbar button.titlebutton:hover:not(.suggested-action):not(.destructive-action), .raven-mpris button.image-button:active, .budgie-panel button:active, .mate-panel-menu-bar button:active, infobar.error > revealer > box button:active, infobar.warning > revealer > box button:active, infobar.action > revealer > box button:active, infobar.question > revealer > box button:active, .selection-mode headerbar button.titlebutton:active:not(.suggested-action):not(.destructive-action), .raven-mpris button.image-button:checked, .budgie-panel button:checked, .mate-panel-menu-bar button:checked, infobar.error > revealer > box button:checked, infobar.warning > revealer > box button:checked, infobar.action > revealer > box button:checked, infobar.question > revealer > box button:checked, .selection-mode headerbar button.titlebutton:checked:not(.suggested-action):not(.destructive-action) {
   color: white;
 }
 
-.raven-mpris button.image-button:disabled, .budgie-panel button:disabled, .mate-panel-menu-bar button:disabled, infobar.error > revealer > box button:disabled, infobar.warning > revealer > box button:disabled, infobar.action > revealer > box button:disabled, infobar.question > revealer > box button:disabled, .selection-mode .titlebar button.titlebutton:disabled {
+.raven-mpris button.image-button:disabled, .budgie-panel button:disabled, .mate-panel-menu-bar button:disabled, infobar.error > revealer > box button:disabled, infobar.warning > revealer > box button:disabled, infobar.action > revealer > box button:disabled, infobar.question > revealer > box button:disabled, .selection-mode headerbar button.titlebutton:disabled:not(.suggested-action):not(.destructive-action) {
   color: rgba(255, 255, 255, 0.3);
 }
 
-.raven-mpris button.image-button:checked:disabled, .budgie-panel button:checked:disabled, .mate-panel-menu-bar button:checked:disabled, infobar.error > revealer > box button:checked:disabled, infobar.warning > revealer > box button:checked:disabled, infobar.action > revealer > box button:checked:disabled, infobar.question > revealer > box button:checked:disabled, .selection-mode .titlebar button.titlebutton:checked:disabled {
+.raven-mpris button.image-button:checked:disabled, .budgie-panel button:checked:disabled, .mate-panel-menu-bar button:checked:disabled, infobar.error > revealer > box button:checked:disabled, infobar.warning > revealer > box button:checked:disabled, infobar.action > revealer > box button:checked:disabled, infobar.question > revealer > box button:checked:disabled, .selection-mode headerbar button.titlebutton:checked:disabled:not(.suggested-action):not(.destructive-action) {
   color: rgba(255, 255, 255, 0.5);
 }
 
@@ -572,7 +572,7 @@ radio, scrollbar button, notebook > header > tabs > arrow, spinbutton.vertical b
 .menuitem.button.flat, .nemo-window .toolbar button, #buttonbox_frame button, .raven stackswitcher.linked > button, .lock-dialog button, .mate-panel-menu-bar button, window.background.csd.geary-main-window stack#conversation_viewer .geary-expanded > .geary-composer-embed headerbar button,
 window#GearyMainWindow.background.csd stack#conversation_viewer .geary-expanded > .geary-composer-embed headerbar button, layouttabbar button, filechooser #pathbarbox > stack > box > button, messagedialog.csd .dialog-action-box button, .app-notification button, popover.background.menu button,
 popover.background button.model, .caja-pathbar button,
-.path-bar.linked:not(.vertical) > button, .nemo-window .primary-toolbar button:not(.text-button), .thunar toolbar button, .xfce4-panel.background button, .titlebar button:not(.suggested-action):not(.destructive-action), toolbar button, .raven-mpris button.image-button, .budgie-panel button.budgie-menu-launcher, .budgie-panel button, infobar.error > revealer > box button, infobar.error:backdrop > revealer > box button, infobar.warning > revealer > box button, infobar.warning:backdrop > revealer > box button, infobar.action > revealer > box button, infobar.action:backdrop > revealer > box button, infobar.question > revealer > box button, infobar.question:backdrop > revealer > box button, .selection-mode .titlebar button.titlebutton, button.flat {
+.path-bar.linked:not(.vertical) > button, .nemo-window .primary-toolbar button:not(.text-button), .thunar toolbar button, .xfce4-panel.background button, .titlebar button:not(.suggested-action):not(.destructive-action), toolbar button, .raven-mpris button.image-button, .budgie-panel button.budgie-menu-launcher, .budgie-panel button, infobar.error > revealer > box button, infobar.error:backdrop > revealer > box button, infobar.warning > revealer > box button, infobar.warning:backdrop > revealer > box button, infobar.action > revealer > box button, infobar.action:backdrop > revealer > box button, infobar.question > revealer > box button, infobar.question:backdrop > revealer > box button, .selection-mode headerbar button.titlebutton:not(.suggested-action):not(.destructive-action), button.flat {
   transition: all 75ms cubic-bezier(0, 0, 0.2, 1), box-shadow 300ms cubic-bezier(0, 0, 0.2, 1);
   outline: none;
   box-shadow: inset 0 0 0 9999px transparent;
@@ -586,7 +586,7 @@ radio:focus, scrollbar button:focus, notebook > header > tabs > arrow:focus, spi
 .menuitem.button.flat:focus, .nemo-window .toolbar button:focus, #buttonbox_frame button:focus, .raven stackswitcher.linked > button:focus, .lock-dialog button:focus, .mate-panel-menu-bar button:focus, window.background.csd.geary-main-window stack#conversation_viewer .geary-expanded > .geary-composer-embed headerbar button:focus,
 window#GearyMainWindow.background.csd stack#conversation_viewer .geary-expanded > .geary-composer-embed headerbar button:focus, layouttabbar button:focus, filechooser #pathbarbox > stack > box > button:focus, messagedialog.csd .dialog-action-box button:focus, .app-notification button:focus, popover.background.menu button:focus,
 popover.background button.model:focus, .caja-pathbar button:focus,
-.path-bar.linked:not(.vertical) > button:focus, .nemo-window .primary-toolbar button:focus:not(.text-button), .xfce4-panel.background button:focus, .titlebar button:focus:not(.suggested-action):not(.destructive-action), toolbar button:focus, .raven-mpris button.image-button:focus, .budgie-panel button:focus, infobar.error > revealer > box button:focus, infobar.warning > revealer > box button:focus, infobar.action > revealer > box button:focus, infobar.question > revealer > box button:focus, .selection-mode .titlebar button.titlebutton:focus, button.flat:focus, button.flat:checked:focus {
+.path-bar.linked:not(.vertical) > button:focus, .nemo-window .primary-toolbar button:focus:not(.text-button), .xfce4-panel.background button:focus, .titlebar button:focus:not(.suggested-action):not(.destructive-action), toolbar button:focus, .raven-mpris button.image-button:focus, .budgie-panel button:focus, infobar.error > revealer > box button:focus, infobar.warning > revealer > box button:focus, infobar.action > revealer > box button:focus, infobar.question > revealer > box button:focus, .selection-mode headerbar button.titlebutton:focus:not(.suggested-action):not(.destructive-action), button.flat:focus, button.flat:checked:focus {
   box-shadow: inset 0 0 0 2px alpha(currentColor, 0.08);
   color: white;
 }
@@ -596,7 +596,7 @@ radio:hover, scrollbar button:hover, notebook > header > tabs > arrow:hover, spi
 .menuitem.button.flat:hover, .nemo-window .toolbar button:hover, #buttonbox_frame button:hover, .raven stackswitcher.linked > button:hover, .lock-dialog button:hover, .mate-panel-menu-bar button:hover, window.background.csd.geary-main-window stack#conversation_viewer .geary-expanded > .geary-composer-embed headerbar button:hover,
 window#GearyMainWindow.background.csd stack#conversation_viewer .geary-expanded > .geary-composer-embed headerbar button:hover, layouttabbar button:hover, filechooser #pathbarbox > stack > box > button:hover, messagedialog.csd .dialog-action-box button:hover, .app-notification button:hover, popover.background.menu button:hover,
 popover.background button.model:hover, .caja-pathbar button:hover,
-.path-bar.linked:not(.vertical) > button:hover, .nemo-window .primary-toolbar button:hover:not(.text-button), .xfce4-panel.background button:hover, .titlebar button:hover:not(.suggested-action):not(.destructive-action), toolbar button:hover, .raven-mpris button.image-button:hover, .budgie-panel button:hover, infobar.error > revealer > box button:hover, infobar.warning > revealer > box button:hover, infobar.action > revealer > box button:hover, infobar.question > revealer > box button:hover, .selection-mode .titlebar button.titlebutton:hover, button.flat:hover {
+.path-bar.linked:not(.vertical) > button:hover, .nemo-window .primary-toolbar button:hover:not(.text-button), .xfce4-panel.background button:hover, .titlebar button:hover:not(.suggested-action):not(.destructive-action), toolbar button:hover, .raven-mpris button.image-button:hover, .budgie-panel button:hover, infobar.error > revealer > box button:hover, infobar.warning > revealer > box button:hover, infobar.action > revealer > box button:hover, infobar.question > revealer > box button:hover, .selection-mode headerbar button.titlebutton:hover:not(.suggested-action):not(.destructive-action), button.flat:hover {
   box-shadow: inset 0 0 0 9999px alpha(currentColor, 0.08);
   color: white;
 }
@@ -606,7 +606,7 @@ radio:active, scrollbar button:active, notebook > header > tabs > arrow:active, 
 .menuitem.button.flat:active, .nemo-window .toolbar button:active, #buttonbox_frame button:active, .raven stackswitcher.linked > button:active, .lock-dialog button:active, .mate-panel-menu-bar button:active, window.background.csd.geary-main-window stack#conversation_viewer .geary-expanded > .geary-composer-embed headerbar button:active,
 window#GearyMainWindow.background.csd stack#conversation_viewer .geary-expanded > .geary-composer-embed headerbar button:active, layouttabbar button:active, filechooser #pathbarbox > stack > box > button:active, messagedialog.csd .dialog-action-box button:active, .app-notification button:active, popover.background.menu button:active,
 popover.background button.model:active, .caja-pathbar button:active,
-.path-bar.linked:not(.vertical) > button:active, .nemo-window .primary-toolbar button:active:not(.text-button), .xfce4-panel.background button:active, .titlebar button:active:not(.suggested-action):not(.destructive-action), toolbar button:active, .raven-mpris button.image-button:active, .budgie-panel button:active, infobar.error > revealer > box button:active, infobar.warning > revealer > box button:active, infobar.action > revealer > box button:active, infobar.question > revealer > box button:active, .selection-mode .titlebar button.titlebutton:active, button.flat:active {
+.path-bar.linked:not(.vertical) > button:active, .nemo-window .primary-toolbar button:active:not(.text-button), .xfce4-panel.background button:active, .titlebar button:active:not(.suggested-action):not(.destructive-action), toolbar button:active, .raven-mpris button.image-button:active, .budgie-panel button:active, infobar.error > revealer > box button:active, infobar.warning > revealer > box button:active, infobar.action > revealer > box button:active, infobar.question > revealer > box button:active, .selection-mode headerbar button.titlebutton:active:not(.suggested-action):not(.destructive-action), button.flat:active {
   animation: none;
   transition: all 75ms cubic-bezier(0, 0, 0.2, 1), box-shadow 300ms cubic-bezier(0, 0, 0.2, 1);
   box-shadow: inset 0 0 0 9999px alpha(currentColor, 0.16);
@@ -618,7 +618,7 @@ radio:disabled, scrollbar button:disabled, notebook > header > tabs > arrow:disa
 .menuitem.button.flat:disabled, .nemo-window .toolbar button:disabled, #buttonbox_frame button:disabled, .raven stackswitcher.linked > button:disabled, .lock-dialog button:disabled, .mate-panel-menu-bar button:disabled, window.background.csd.geary-main-window stack#conversation_viewer .geary-expanded > .geary-composer-embed headerbar button:disabled,
 window#GearyMainWindow.background.csd stack#conversation_viewer .geary-expanded > .geary-composer-embed headerbar button:disabled, layouttabbar button:disabled, filechooser #pathbarbox > stack > box > button:disabled, messagedialog.csd .dialog-action-box button:disabled, .app-notification button:disabled, popover.background.menu button:disabled,
 popover.background button.model:disabled, .caja-pathbar button:disabled,
-.path-bar.linked:not(.vertical) > button:disabled, .nemo-window .primary-toolbar button:disabled:not(.text-button), .xfce4-panel.background button:disabled, .titlebar button:disabled:not(.suggested-action):not(.destructive-action), toolbar button:disabled, .raven-mpris button.image-button:disabled, .budgie-panel button:disabled, infobar.error > revealer > box button:disabled, infobar.warning > revealer > box button:disabled, infobar.action > revealer > box button:disabled, infobar.question > revealer > box button:disabled, .selection-mode .titlebar button.titlebutton:disabled, button.flat:disabled {
+.path-bar.linked:not(.vertical) > button:disabled, .nemo-window .primary-toolbar button:disabled:not(.text-button), .xfce4-panel.background button:disabled, .titlebar button:disabled:not(.suggested-action):not(.destructive-action), toolbar button:disabled, .raven-mpris button.image-button:disabled, .budgie-panel button:disabled, infobar.error > revealer > box button:disabled, infobar.warning > revealer > box button:disabled, infobar.action > revealer > box button:disabled, infobar.question > revealer > box button:disabled, .selection-mode headerbar button.titlebutton:disabled:not(.suggested-action):not(.destructive-action), button.flat:disabled {
   box-shadow: none;
   background-color: transparent;
   color: rgba(255, 255, 255, 0.3);
@@ -627,7 +627,7 @@ popover.background button.model:disabled, .caja-pathbar button:disabled,
 .nemo-window .toolbar button:checked, #buttonbox_frame button:checked, .raven stackswitcher.linked > button:checked, .lock-dialog button:checked, .mate-panel-menu-bar button:checked, window.background.csd.geary-main-window stack#conversation_viewer .geary-expanded > .geary-composer-embed headerbar button:checked,
 window#GearyMainWindow.background.csd stack#conversation_viewer .geary-expanded > .geary-composer-embed headerbar button:checked, layouttabbar button:checked, filechooser #pathbarbox > stack > box > button:checked, messagedialog.csd .dialog-action-box button:checked, .app-notification button:checked, popover.background.menu button:checked,
 popover.background button.model:checked, .caja-pathbar button:checked,
-.path-bar.linked:not(.vertical) > button:checked, .nemo-window .primary-toolbar button:checked:not(.text-button), .xfce4-panel.background button:checked, .titlebar button:checked:not(.suggested-action):not(.destructive-action), toolbar button:checked, .raven-mpris button.image-button:checked, .budgie-panel button:checked, infobar.error > revealer > box button:checked, infobar.warning > revealer > box button:checked, infobar.action > revealer > box button:checked, infobar.question > revealer > box button:checked, .selection-mode .titlebar button.titlebutton:checked, button.flat:checked, button.flat:checked:hover {
+.path-bar.linked:not(.vertical) > button:checked, .nemo-window .primary-toolbar button:checked:not(.text-button), .xfce4-panel.background button:checked, .titlebar button:checked:not(.suggested-action):not(.destructive-action), toolbar button:checked, .raven-mpris button.image-button:checked, .budgie-panel button:checked, infobar.error > revealer > box button:checked, infobar.warning > revealer > box button:checked, infobar.action > revealer > box button:checked, infobar.question > revealer > box button:checked, .selection-mode headerbar button.titlebutton:checked:not(.suggested-action):not(.destructive-action), button.flat:checked, button.flat:checked:hover {
   background-color: alpha(currentColor, 0.1);
   color: white;
 }
@@ -635,7 +635,7 @@ popover.background button.model:checked, .caja-pathbar button:checked,
 .nemo-window .toolbar button:checked:disabled, #buttonbox_frame button:checked:disabled, .raven stackswitcher.linked > button:checked:disabled, .lock-dialog button:checked:disabled, .mate-panel-menu-bar button:checked:disabled, window.background.csd.geary-main-window stack#conversation_viewer .geary-expanded > .geary-composer-embed headerbar button:checked:disabled,
 window#GearyMainWindow.background.csd stack#conversation_viewer .geary-expanded > .geary-composer-embed headerbar button:checked:disabled, layouttabbar button:checked:disabled, filechooser #pathbarbox > stack > box > button:checked:disabled, messagedialog.csd .dialog-action-box button:checked:disabled, .app-notification button:checked:disabled, popover.background.menu button:checked:disabled,
 popover.background button.model:checked:disabled, .caja-pathbar button:checked:disabled,
-.path-bar.linked:not(.vertical) > button:checked:disabled, .nemo-window .primary-toolbar button:checked:disabled:not(.text-button), .xfce4-panel.background button:checked:disabled, .titlebar button:checked:disabled:not(.suggested-action):not(.destructive-action), toolbar button:checked:disabled, .raven-mpris button.image-button:checked:disabled, .budgie-panel button:checked:disabled, infobar.error > revealer > box button:checked:disabled, infobar.warning > revealer > box button:checked:disabled, infobar.action > revealer > box button:checked:disabled, infobar.question > revealer > box button:checked:disabled, .selection-mode .titlebar button.titlebutton:checked:disabled, button.flat:checked:disabled {
+.path-bar.linked:not(.vertical) > button:checked:disabled, .nemo-window .primary-toolbar button:checked:disabled:not(.text-button), .xfce4-panel.background button:checked:disabled, .titlebar button:checked:disabled:not(.suggested-action):not(.destructive-action), toolbar button:checked:disabled, .raven-mpris button.image-button:checked:disabled, .budgie-panel button:checked:disabled, infobar.error > revealer > box button:checked:disabled, infobar.warning > revealer > box button:checked:disabled, infobar.action > revealer > box button:checked:disabled, infobar.question > revealer > box button:checked:disabled, .selection-mode headerbar button.titlebutton:checked:disabled:not(.suggested-action):not(.destructive-action), button.flat:checked:disabled {
   background-color: alpha(currentColor, 0.1);
   color: rgba(255, 255, 255, 0.5);
 }
@@ -683,7 +683,7 @@ button.text-button.image-button image:not(:only-child) {
   margin: 0 4px;
 }
 
-.linked > button:focus {
+.linked > button:not(:only-child):focus {
   transition: all 75ms cubic-bezier(0, 0, 0.2, 1), border 300ms cubic-bezier(0, 0, 0.2, 1), box-shadow 300ms cubic-bezier(0, 0, 0.2, 1);
   outline: none;
   box-shadow: inset 0 0 0 1px transparent, 0 0 0 2px transparent;
@@ -693,7 +693,7 @@ button.text-button.image-button image:not(:only-child) {
   border-top-color: rgba(255, 255, 255, 0.12);
 }
 
-.linked > button:checked:focus {
+.linked > button:not(:only-child):checked:focus {
   box-shadow: inset 0 0 0 1px transparent, 0 0 0 2px transparent;
   background-clip: border-box;
   background-color: #0078D4;
@@ -716,11 +716,11 @@ button.text-button.image-button image:not(:only-child) {
 }
 
 button.osd {
-  padding: 6px 10px;
+  padding: 7px 11px;
 }
 
 button.osd.image-button {
-  padding: 6px;
+  padding: 7px;
 }
 
 button.osd:disabled {
@@ -847,7 +847,7 @@ button.destructive-action.flat:checked {
 window.background > box.vertical > toolbar.primary-toolbar > toolitem > .linked > button:not(.toggle):not(.raised):not(.flat), window.background > box.vertical > toolbar.primary-toolbar > toolitem button.flat.scale, window.background > box.vertical > toolbar.primary-toolbar > toolitem > .linked > button.image-button.raised, window.csd > box.vertical > box.vertical > toolbar.horizontal > toolitem > .linked > button,
 window.csd > box.vertical > box.vertical > toolbar.horizontal > toolitem > box.horizontal > button,
 window.solid-csd > box.vertical > box.vertical > toolbar.horizontal > toolitem > .linked > button,
-window.solid-csd > box.vertical > box.vertical > toolbar.horizontal > toolitem > box.horizontal > button, .nautilus-window headerbar revealer > button, filechooser #pathbarbox > stack > box > button, .titlebar button.titlebutton, button.close, button.circular {
+window.solid-csd > box.vertical > box.vertical > toolbar.horizontal > toolitem > box.horizontal > button, .nautilus-window headerbar revealer > button, filechooser #pathbarbox > stack > box > button, headerbar button.titlebutton:not(.suggested-action):not(.destructive-action), button.close, button.circular {
   border-radius: 9999px;
 }
 
@@ -1311,6 +1311,26 @@ combobox > .linked:not(.vertical) > entry:not(:only-child) {
   border-right-width: 0;
 }
 
+.linked:not(.vertical) > combobox > box > button.combo:focus {
+  transition: all 75ms cubic-bezier(0, 0, 0.2, 1), border 300ms cubic-bezier(0, 0, 0.2, 1), box-shadow 300ms cubic-bezier(0, 0, 0.2, 1);
+  outline: none;
+  box-shadow: inset 0 0 0 1px transparent, 0 0 0 2px transparent;
+  background-color: #2B2B2B;
+  color: white;
+  border-color: rgba(255, 255, 255, 0.08);
+  border-top-color: rgba(255, 255, 255, 0.12);
+}
+
+.linked:not(.vertical) > combobox > box > button.combo:checked:focus {
+  box-shadow: inset 0 0 0 1px transparent, 0 0 0 2px transparent;
+  background-clip: border-box;
+  background-color: #0078D4;
+  color: white;
+  border-color: #0086ee;
+  border-bottom-color: #006abb;
+  transition: all 75ms cubic-bezier(0, 0, 0.2, 1), background-color 300ms cubic-bezier(0, 0, 0.2, 1);
+}
+
 .linked:not(.vertical) > combobox:first-child > box > button.combo {
   border-top-left-radius: 2px;
   border-bottom-left-radius: 2px;
@@ -1520,6 +1540,14 @@ searchbar > revealer > box {
   color: rgba(255, 255, 255, 0.5);
 }
 
+headerbar button.titlebutton:not(.suggested-action):not(.destructive-action) {
+  min-height: 22px;
+  min-width: 22px;
+  padding: 0 0;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
 .titlebar {
   transition: background-color 75ms cubic-bezier(0, 0, 0.2, 1), color 75ms cubic-bezier(0, 0, 0.2, 1);
   border-radius: 3px 3px 0 0;
@@ -1679,63 +1707,8 @@ searchbar > revealer > box {
   background-color: #0078D4;
 }
 
-.tiled .titlebar, .tiled-top .titlebar, .tiled-right .titlebar, .tiled-bottom .titlebar, .tiled-left .titlebar, .maximized .titlebar, .fullscreen .titlebar {
-  border-radius: 0;
-}
-
-.titlebar button.titlebutton {
-  min-height: 22px;
-  min-width: 22px;
-  padding: 0 0;
-  margin-left: 3px;
-  margin-right: 3px;
-}
-
-.titlebar button.titlebutton.close:hover {
-  background-color: #E57373;
-  color: white;
-}
-
-.titlebar button.titlebutton.close:active {
-  background-color: #E53935;
-  color: white;
-}
-
-.titlebar.default-decoration {
-  background-color: #202020;
-  min-height: 20px;
-  padding: 4px;
-  border-radius: 2px 2px 0 0;
-  box-shadow: none;
-}
-
-.titlebar.default-decoration:backdrop {
-  background-color: #2C2C2C;
-}
-
-.tiled .titlebar.default-decoration, .maximized .titlebar.default-decoration, .fullscreen .titlebar.default-decoration {
-  box-shadow: none;
-  border-radius: 0;
-}
-
-.titlebar.default-decoration button.titlebutton {
-  min-height: 20px;
-  min-width: 20px;
-  margin: 0;
-  padding: 0;
-}
-
-.background:not(.csd) .titlebar.default-decoration button.titlebutton:active {
-  background-size: 1000% 1000%;
-}
-
-.solid-csd .titlebar:dir(rtl), .solid-csd .titlebar:dir(ltr) {
-  border-radius: 0;
-  box-shadow: none;
-}
-
 headerbar {
-  min-height: 36px;
+  min-height: 38px;
   padding: 0 4px;
 }
 
@@ -1755,14 +1728,14 @@ headerbar button {
 }
 
 headerbar separator.titlebutton {
-  margin-top: 9px;
-  margin-bottom: 9px;
+  margin-top: 9.5px;
+  margin-bottom: 9.5px;
   background-color: rgba(255, 255, 255, 0.12);
 }
 
 headerbar switch {
-  margin-top: 6px;
-  margin-bottom: 6px;
+  margin-top: 7px;
+  margin-bottom: 7px;
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3);
 }
 
@@ -1829,6 +1802,53 @@ headerbar.windowhandle viewswitcher button:not(.titlebutton):not(.suggested-acti
 
 headerbar.windowhandle > button.popup label, headerbar.windowhandle > button.popup image {
   min-height: 0;
+}
+
+.tiled headerbar, .tiled-top headerbar, .tiled-right headerbar, .tiled-bottom headerbar, .tiled-left headerbar, .maximized headerbar, .fullscreen headerbar {
+  border-radius: 0;
+}
+
+headerbar button.titlebutton:not(.suggested-action):not(.destructive-action).close:hover, headerbar button.titlebutton:not(.suggested-action):not(.destructive-action).close:backdrop:hover {
+  background-color: #E57373;
+  color: white;
+}
+
+headerbar button.titlebutton:not(.suggested-action):not(.destructive-action).close:active {
+  background-color: #E53935;
+  color: white;
+}
+
+headerbar.default-decoration {
+  background-color: #202020;
+  border-radius: 3px 3px 0 0;
+  min-height: 20px;
+  padding: 4px;
+  box-shadow: none;
+}
+
+.csd headerbar.default-decoration {
+  box-shadow: inset 0 -1px rgba(255, 255, 255, 0.12);
+}
+
+headerbar.default-decoration:backdrop {
+  background-color: #2C2C2C;
+}
+
+.tiled headerbar.default-decoration, .maximized headerbar.default-decoration, .fullscreen headerbar.default-decoration {
+  box-shadow: none;
+  border-radius: 0;
+}
+
+headerbar.default-decoration button.titlebutton:not(.suggested-action):not(.destructive-action) {
+  min-height: 20px;
+  min-width: 20px;
+  margin: 0 2px;
+  padding: 0;
+}
+
+.solid-csd headerbar:dir(rtl), .solid-csd headerbar:dir(ltr) {
+  border-radius: 0;
+  box-shadow: none;
 }
 
 /************
@@ -2094,7 +2114,7 @@ menu menuitem,
 .menu menuitem,
 .context-menu menuitem {
   transition: none;
-  min-height: 16px;
+  min-height: 20px;
   min-width: 40px;
   padding: 2px 6px;
   color: white;
@@ -5592,12 +5612,20 @@ window.background.csd > box.vertical > paned.horizontal > scrolledwindow treevie
 /************
  * Terminal *
  ************/
+terminal-window.background.csd, terminal-window.background.csd.maximized {
+  border-radius: 0 0 0 0;
+}
+
+terminal-window decoration {
+  border-radius: 3px 3px 0 0;
+}
+
 terminal-window notebook > header > box {
-  margin: -2px -2px -3px;
+  padding: 0;
 }
 
 terminal-window notebook > header > box button {
-  border-radius: 0;
+  border: none;
 }
 
 window.background > box.vertical > box.horizontal > frame > border {
@@ -6637,7 +6665,7 @@ na-tray-applet {
 }
 
 .brisk-menu .session-button {
-  padding: 6px;
+  padding: 7px;
 }
 
 .brisk-menu .frame {
@@ -7367,7 +7395,7 @@ frame.raven-frame > border {
 
 .raven .powerstrip button {
   margin: 2px 0 1px;
-  padding: 6px;
+  padding: 7px;
 }
 
 .raven .option-subtitle {
@@ -7422,7 +7450,7 @@ calendar.raven-calendar:selected {
 }
 
 .raven-mpris button.image-button {
-  padding: 6px;
+  padding: 7px;
 }
 
 .budgie-notification-window, .budgie-switcher-window, .budgie-osd-window {

@@ -1309,7 +1309,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .modal-dialog {
-  border-radius: 5px;
+  border-radius: 6px;
   color: rgba(0, 0, 0, 0.87);
   background-color: #ffffff;
   border: 0 solid transparent;
@@ -1970,7 +1970,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .window-caption {
   color: rgba(255, 255, 255, 0.85);
   background-color: rgba(32, 32, 32, 0.9);
-  border-radius: 5px;
+  border-radius: 6px;
   padding: 4px 8px;
 }
 
@@ -2068,7 +2068,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .search-section-content {
   background-color: rgba(255, 255, 255, 0.15);
-  border-radius: 5px;
+  border-radius: 6px;
   border: none;
   box-shadow: none;
   text-shadow: none;
@@ -2078,7 +2078,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .list-search-result, .search-provider-icon {
-  border-radius: 5px;
+  border-radius: 6px;
 }
 
 .list-search-result:focus, .search-provider-icon:focus, .list-search-result:hover, .search-provider-icon:hover, .list-search-result:selected, .search-provider-icon:selected {
@@ -2146,7 +2146,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   background-color: rgba(255, 255, 255, 0.2);
   margin-bottom: 8px;
   padding: 4px 6px;
-  border-radius: 7.5px;
+  border-radius: 9px;
 }
 
 .dash-item-container .app-well-app, .show-apps {

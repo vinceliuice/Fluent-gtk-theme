@@ -385,7 +385,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .modal-dialog {
-  border-radius: 5px;
+  border-radius: 6px;
   color: rgba(255, 255, 255, 0.9);
   background-color: #202020;
   border: none;
@@ -2191,7 +2191,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .window-clone-border {
   border: 4px solid rgba(255, 255, 255, 0.3);
-  border-radius: 5px;
+  border-radius: 6px;
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3);
 }
 
@@ -2688,7 +2688,7 @@ StWidget.focused .app-well-app-running-dot {
   visible-width: 32px;
   spacing: 12px;
   padding: 16px;
-  border-radius: 5px;
+  border-radius: 6px;
   margin: 6px;
 }
 

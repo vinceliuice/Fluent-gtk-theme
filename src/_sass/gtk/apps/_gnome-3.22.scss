@@ -1471,13 +1471,21 @@ window.background.csd {
 /************
  * Terminal *
  ************/
-terminal-window notebook > header > box {
-  // Remove hard-coded margin around button(s)
-  margin: -2px -2px -3px;
+terminal-window {
+  &.background.csd, &.background.csd.maximized {
+    border-radius: 0 0 0 0;
+  }
 
-  button {
-    // margin-bottom: -1px;
-    border-radius: 0;
+  decoration {
+    border-radius: $window-radius $window-radius 0 0;
+  }
+
+  notebook > header > box {
+    padding: 0;
+
+    button {
+      border: none;
+    }
   }
 }
 

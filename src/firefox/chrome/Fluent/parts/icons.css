@@ -298,8 +298,27 @@ menuitem[type="radio"][disabled="true"] .menu-iconic-icon {
 	animation: none !important;
 }
 
-#identity-icon {
+#identity-box[pageproxystate="valid"].verifiedDomain #identity-icon,
+#identity-box[pageproxystate="valid"].mixedActiveBlocked #identity-icon {
 	list-style-image: url("../icons/folder-locked-symbolic.svg") !important;
+}
+
+#identity-box[pageproxystate="valid"].weakCipher #identity-icon,
+#identity-box[pageproxystate="valid"].mixedDisplayContent #identity-icon,
+#identity-box[pageproxystate="valid"].mixedDisplayContentLoadedActiveBlocked #identity-icon,
+#identity-box[pageproxystate="valid"].certUserOverridden #identity-icon,
+#identity-box[pageproxystate="valid"].certErrorPage #identity-icon {
+	list-style-image: url("../icons/security-warning-symbolic.svg") !important;
+}
+
+#identity-box[pageproxystate="valid"].notSecure #identity-icon,
+#identity-box[pageproxystate="valid"].mixedActiveContent #identity-icon,
+#identity-box[pageproxystate="valid"].httpsOnlyErrorPage #identity-icon {
+	list-style-image: url("../icons/security-broken-symbolic.svg") !important;
+}
+
+#identity-box[pageproxystate="valid"].localResource #identity-icon {
+	list-style-image: url("../icons/page-symbolic.svg") !important;
 }
 
 #pageActionButton, .share-more-button {
@@ -348,7 +367,7 @@ menuitem[type="radio"][disabled="true"] .menu-iconic-icon {
 	list-style-image: url("../icons/drm-symbolic.svg") !important;
 }
 
-#reader-mode-button {
+#reader-mode-button > .urlbar-icon {
 	list-style-image: url("../icons/reader-mode.svg") !important;
 }
 
@@ -390,6 +409,10 @@ menuitem[type="radio"][disabled="true"] .menu-iconic-icon {
 
 #characterencoding-button {
 	list-style-image: url("../icons/character-symbolic.svg") !important;
+}
+
+#screenshot-button {
+	list-style-image: url("../icons/screenshot-symbolic.svg") !important;
 }
 
 .popup-notification-icon[popupid="web-notifications"], .desktop-notification-icon {
@@ -524,8 +547,27 @@ menuitem[type="radio"][disabled="true"] .menu-iconic-icon {
 	#reader-mode-button,
 	#star-button:not([starred]),
 	#geo-sharing-icon[sharing], .geo-icon,
+	.blocked-permission-icon.popup-icon,
+	#webrtc-sharing-icon[sharing="screen"],
+	.screen-icon,
+	.screen-icon.blocked-permission-icon,
+	#webrtc-sharing-icon[sharing="microphone"],
+	.microphone-icon,
 	.plugin-icon, .autoplay-media-icon,
-	.popup-notification-icon[popupid="drmContentPlaying"], .drm-icon {
+	.popup-notification-icon[popupid="drmContentPlaying"], .drm-icon,
+	#identity-box[pageproxystate="valid"].verifiedDomain #identity-icon,
+	#identity-box[pageproxystate="valid"].mixedActiveBlocked #identity-icon,
+	#identity-box[pageproxystate="valid"].weakCipher #identity-icon,
+	#identity-box[pageproxystate="valid"].mixedDisplayContent #identity-icon,
+	#identity-box[pageproxystate="valid"].mixedDisplayContentLoadedActiveBlocked #identity-icon,
+	#identity-box[pageproxystate="valid"].certUserOverridden #identity-icon,
+	#identity-box[pageproxystate="valid"].certErrorPage #identity-icon,
+	#identity-box[pageproxystate="valid"].notSecure #identity-icon,
+	#identity-box[pageproxystate="valid"].mixedActiveContent #identity-icon,
+	#identity-box[pageproxystate="valid"].httpsOnlyErrorPage #identity-icon,
+	#identity-box[pageproxystate="valid"].localResource #identity-icon,
+	.bookmark-item[container] .toolbarbutton-icon,
+	.menu-iconic.bookmark-item[container] .menu-iconic-icon {
 		filter: invert(60%) brightness(150%);
 	}
 

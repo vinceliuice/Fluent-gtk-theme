@@ -43,12 +43,13 @@ OPTIONS:
   -t, --theme VARIANT     Specify theme color variant(s) [default|purple|pink|red|orange|yellow|green|grey|all] (Default: blue)
   -c, --color VARIANT     Specify color variant(s) [standard|light|dark] (Default: All variants)s)
   -s, --size VARIANT      Specify size variant [standard|compact] (Default: All variants)
-  --tweaks                Specify versions for tweaks [solid|float|round|blur|noborder]
-                          solid:   no transparency variant
-                          float:   floating panel
-                          round:   rounded windows
-                          blur:    blur version for 'Blur-Me'
+  --tweaks                Specify versions for tweaks [solid|float|round|blur|noborder|square]
+                          solid:    no transparency version
+                          float:    floating panel
+                          round:    rounded windows
+                          blur:     blur version for 'Blur-Me'
                           noborder: windows and menu with no border
+                          square:   square windows button
   -h, --help              Show help
 EOF
 }
@@ -210,6 +211,10 @@ while [[ "$#" -gt 0 ]]; do
             ;;
           noborder)
             outline="false"
+            shift
+            ;;
+          square)
+            titlebutton="square"
             shift
             ;;
           -*)
@@ -398,13 +403,18 @@ install_round() {
 install_blur() {
   sed -i "/\$blur:/s/false/true/" ${SRC_DIR}/gnome-shell/sass/_tweaks-temp.scss
   sed -i "/\$blur:/s/false/true/" ${SRC_DIR}/_sass/_tweaks-temp.scss
-  echo -e "Install Blur version ..."
+  echo -e "Install blur version ..."
 }
 
 install_noborder() {
   sed -i "/\$outline:/s/true/false/" ${SRC_DIR}/gnome-shell/sass/_tweaks-temp.scss
   sed -i "/\$outline:/s/true/false/" ${SRC_DIR}/_sass/_tweaks-temp.scss
-  echo -e "Install Windows without outline version ..."
+  echo -e "Install windows without outline version ..."
+}
+
+install_square() {
+  sed -i "/\$titlebutton:/s/circular/square/" ${SRC_DIR}/_sass/_tweaks-temp.scss
+  echo -e "Install square windows button version ..."
 }
 
 install_theme_color() {
@@ -438,7 +448,7 @@ install_theme_color() {
 }
 
 theme_tweaks() {
-  if [[ "$panel" = "float" || "$opacity" == 'solid' || "$window" == 'round' || "$accent" == 'true' || "$blur" == 'true' || "$outline" == 'false' ]]; then
+  if [[ "$panel" = "float" || "$opacity" == 'solid' || "$window" == 'round' || "$accent" == 'true' || "$blur" == 'true' || "$outline" == 'false' || "$titlebutton" == 'square' ]]; then
     tweaks='true'
     install_package; tweaks_temp
   fi
@@ -461,6 +471,10 @@ theme_tweaks() {
 
   if [[ "$outline" = "false" ]] ; then
     install_noborder
+  fi
+
+  if [[ "$titlebutton" = "square" ]] ; then
+    install_square
   fi
 }
 
