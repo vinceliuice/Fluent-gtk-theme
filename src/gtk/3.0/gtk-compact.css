@@ -1525,6 +1525,7 @@ searchbar > revealer > box {
   border-radius: 3px 3px 0 0;
   color: white;
   box-shadow: inset 0 -1px rgba(0, 0, 0, 0.12);
+  box-shadow: inset 0 -1px rgba(0, 0, 0, 0.12), inset 0 1px rgba(255, 255, 255, 0.1);
   background-color: rgba(44, 44, 44, 0.98);
 }
 
@@ -1706,7 +1707,7 @@ searchbar > revealer > box {
   min-height: 20px;
   padding: 4px;
   border-radius: 2px 2px 0 0;
-  box-shadow: none;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
 }
 
 .titlebar.default-decoration:backdrop {
@@ -4119,12 +4120,12 @@ colorchooser .popover.osd:backdrop {
 decoration {
   transition: box-shadow 75ms cubic-bezier(0, 0, 0.2, 1);
   border-radius: 3px;
-  box-shadow: 0 8px 6px -5px rgba(0, 0, 0, 0.2), 0 16px 14.4px 2px rgba(0, 0, 0, 0.14), 0 6px 18px 5px rgba(0, 0, 0, 0.12), 0 16px 14.4px 2px transparent, 0 6px 18px 5px transparent;
+  box-shadow: 0 8px 6px -5px rgba(0, 0, 0, 0.2), 0 16px 14.4px 2px rgba(0, 0, 0, 0.14), 0 6px 18px 5px rgba(0, 0, 0, 0.12), 0 16px 14.4px 2px transparent, 0 6px 18px 5px transparent, 0 0 0 1px rgba(0, 0, 0, 0.12);
   margin: 8px;
 }
 
 decoration:backdrop {
-  box-shadow: 0 2px 2.4px -1px rgba(0, 0, 0, 0.2), 0 4px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 6px 0 rgba(0, 0, 0, 0.12), 0 16px 14.4px 2px transparent, 0 6px 18px 5px transparent;
+  box-shadow: 0 2px 2.4px -1px rgba(0, 0, 0, 0.2), 0 4px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 6px 0 rgba(0, 0, 0, 0.12), 0 16px 14.4px 2px transparent, 0 6px 18px 5px transparent, 0 0 0 1px rgba(0, 0, 0, 0.12);
 }
 
 .maximized decoration, .fullscreen decoration, .tiled decoration, .tiled-top decoration, .tiled-right decoration, .tiled-bottom decoration, .tiled-left decoration {
@@ -4141,7 +4142,7 @@ decoration:backdrop {
 
 .csd.popup decoration {
   border-radius: 3px;
-  box-shadow: 0 2px 2.4px -1px rgba(0, 0, 0, 0.2), 0 4px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 6px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 2.4px -1px rgba(0, 0, 0, 0.2), 0 4px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 6px 0 rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(0, 0, 0, 0.06);
 }
 
 tooltip.csd decoration {
@@ -4158,7 +4159,7 @@ messagedialog.csd decoration {
   padding: 2px;
   border-radius: 0;
   background-color: #2C2C2C;
-  box-shadow: none;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.1), 0 0 0 1px #d9d9d9;
 }
 
 .solid-csd decoration:backdrop {
@@ -5922,6 +5923,10 @@ window.background.csd.unified headerbar.selection-mode {
   box-shadow: none;
 }
 
+window.background.csd.unified > decoration-overlay {
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
+}
+
 window.background.csd.unified,
 window.background.csd.unified > decoration,
 window.background.csd.unified > decoration-overlay {
@@ -7308,8 +7313,6 @@ frame.raven-frame > border {
 .raven {
   background-color: #FFFFFF;
   box-shadow: 0 8px 6px -5px rgba(0, 0, 0, 0.2), 0 16px 14.4px 2px rgba(0, 0, 0, 0.14), 0 6px 18px 5px rgba(0, 0, 0, 0.12);
-  margin: 8px 6px 6px;
-  border-radius: 2px;
 }
 
 .raven > box {

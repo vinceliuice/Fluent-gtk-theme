@@ -43,12 +43,12 @@ OPTIONS:
   -t, --theme VARIANT     Specify theme color variant(s) [default|purple|pink|red|orange|yellow|green|grey|all] (Default: blue)
   -c, --color VARIANT     Specify color variant(s) [standard|light|dark] (Default: All variants)s)
   -s, --size VARIANT      Specify size variant [standard|compact] (Default: All variants)
-  --tweaks                Specify versions for tweaks [solid|compact|round|blur|outline]
+  --tweaks                Specify versions for tweaks [solid|float|round|blur|noborder]
                           solid:   no transparency variant
-                          compact: no floating panel
+                          float:   floating panel
                           round:   rounded windows
                           blur:    blur version for 'Blur-Me'
-                          outline: windows with outline
+                          noborder: windows and menu with no border
   -h, --help              Show help
 EOF
 }
@@ -195,8 +195,8 @@ while [[ "$#" -gt 0 ]]; do
             opacity="solid"
             shift
             ;;
-          compact)
-            panel="compact"
+          float)
+            panel="float"
             shift
             ;;
           round)
@@ -208,8 +208,8 @@ while [[ "$#" -gt 0 ]]; do
             panel="compact"
             shift
             ;;
-          outline)
-            outline="true"
+          noborder)
+            outline="false"
             shift
             ;;
           -*)
@@ -377,10 +377,10 @@ tweaks_temp() {
   cp -rf ${SRC_DIR}/gnome-shell/sass/_tweaks.scss ${SRC_DIR}/gnome-shell/sass/_tweaks-temp.scss
 }
 
-install_compact_panel() {
-  sed -i "/\$panel_style:/s/float/compact/" ${SRC_DIR}/gnome-shell/sass/_tweaks-temp.scss
-  sed -i "/\$panel_style:/s/float/compact/" ${SRC_DIR}/_sass/_tweaks-temp.scss
-  echo -e "Install compact panel version ..."
+install_float_panel() {
+  sed -i "/\$panel_style:/s/compact/float/" ${SRC_DIR}/gnome-shell/sass/_tweaks-temp.scss
+  sed -i "/\$panel_style:/s/compact/float/" ${SRC_DIR}/_sass/_tweaks-temp.scss
+  echo -e "Install floating panel version ..."
 }
 
 install_solid() {
@@ -401,10 +401,10 @@ install_blur() {
   echo -e "Install Blur version ..."
 }
 
-install_outline() {
-  sed -i "/\$outline:/s/false/true/" ${SRC_DIR}/gnome-shell/sass/_tweaks-temp.scss
-  sed -i "/\$outline:/s/false/true/" ${SRC_DIR}/_sass/_tweaks-temp.scss
-  echo -e "Install Windows with outline version ..."
+install_noborder() {
+  sed -i "/\$outline:/s/true/false/" ${SRC_DIR}/gnome-shell/sass/_tweaks-temp.scss
+  sed -i "/\$outline:/s/true/false/" ${SRC_DIR}/_sass/_tweaks-temp.scss
+  echo -e "Install Windows without outline version ..."
 }
 
 install_theme_color() {
@@ -438,13 +438,13 @@ install_theme_color() {
 }
 
 theme_tweaks() {
-  if [[ "$panel" = "compact" || "$opacity" == 'solid' || "$window" == 'round' || "$accent" == 'true' || "$blur" == 'true' || "$outline" == 'true' ]]; then
+  if [[ "$panel" = "float" || "$opacity" == 'solid' || "$window" == 'round' || "$accent" == 'true' || "$blur" == 'true' || "$outline" == 'false' ]]; then
     tweaks='true'
     install_package; tweaks_temp
   fi
 
-  if [[ "$panel" = "compact" ]] ; then
-    install_compact_panel
+  if [[ "$panel" = "float" ]] ; then
+    install_float_panel
   fi
 
   if [[ "$opacity" = "solid" ]] ; then
@@ -459,8 +459,8 @@ theme_tweaks() {
     install_blur
   fi
 
-  if [[ "$outline" = "true" ]] ; then
-    install_outline
+  if [[ "$outline" = "false" ]] ; then
+    install_noborder
   fi
 }
 

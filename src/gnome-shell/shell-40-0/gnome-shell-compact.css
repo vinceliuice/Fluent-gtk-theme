@@ -1784,9 +1784,9 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   font-feature-settings: "tnum";
   transition-duration: 250ms;
   background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 5px;
-  margin: 2px;
-  height: 34px;
+  margin: 0;
+  border-radius: 0;
+  height: 30px;
 }
 
 #panel.unlock-screen, #panel.login-screen, #panel.lock-screen, #panel:overview {
@@ -1917,42 +1917,6 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 #panel Gjs_ui_panel_AggregateMenu.panel-button .system-status-icon {
   margin: 0 0 !important;
   padding: 4px !important;
-}
-
-#panel Gjs_ArcMenu_ApplicationsButton.panel-button,
-#panel Gjs_arcmenu_arcmenu_com_menuButton_Arc_Menu_MenuButton.panel-button,
-#panel Gjs_arc-menu_linuxgem33_com_menuButton_ArcMenu_MenuButton.panel-button,
-#panel Gjs_ui_panel_ActivitiesButton.panel-button {
-  border-radius: 5px 0 0 5px !important;
-}
-
-#panel Gjs_AggregateMenu.panel-button,
-#panel Gjs_ui_panel_AggregateMenu.panel-button {
-  border-radius: 0 5px 5px 0 !important;
-}
-
-#panel:overview Gjs_ArcMenu_ApplicationsButton.panel-button,
-#panel:overview Gjs_arcmenu_arcmenu_com_menuButton_Arc_Menu_MenuButton.panel-button,
-#panel:overview Gjs_arc-menu_linuxgem33_com_menuButton_ArcMenu_MenuButton.panel-button,
-#panel:overview Gjs_ui_panel_ActivitiesButton.panel-button,
-#panel:overview Gjs_AggregateMenu.panel-button,
-#panel:overview Gjs_ui_panel_AggregateMenu.panel-button, #panel.unlock-screen Gjs_ArcMenu_ApplicationsButton.panel-button,
-#panel.unlock-screen Gjs_arcmenu_arcmenu_com_menuButton_Arc_Menu_MenuButton.panel-button,
-#panel.unlock-screen Gjs_arc-menu_linuxgem33_com_menuButton_ArcMenu_MenuButton.panel-button,
-#panel.unlock-screen Gjs_ui_panel_ActivitiesButton.panel-button,
-#panel.unlock-screen Gjs_AggregateMenu.panel-button,
-#panel.unlock-screen Gjs_ui_panel_AggregateMenu.panel-button, #panel.login-screen Gjs_ArcMenu_ApplicationsButton.panel-button,
-#panel.login-screen Gjs_arcmenu_arcmenu_com_menuButton_Arc_Menu_MenuButton.panel-button,
-#panel.login-screen Gjs_arc-menu_linuxgem33_com_menuButton_ArcMenu_MenuButton.panel-button,
-#panel.login-screen Gjs_ui_panel_ActivitiesButton.panel-button,
-#panel.login-screen Gjs_AggregateMenu.panel-button,
-#panel.login-screen Gjs_ui_panel_AggregateMenu.panel-button, #panel.lock-screen Gjs_ArcMenu_ApplicationsButton.panel-button,
-#panel.lock-screen Gjs_arcmenu_arcmenu_com_menuButton_Arc_Menu_MenuButton.panel-button,
-#panel.lock-screen Gjs_arc-menu_linuxgem33_com_menuButton_ArcMenu_MenuButton.panel-button,
-#panel.lock-screen Gjs_ui_panel_ActivitiesButton.panel-button,
-#panel.lock-screen Gjs_AggregateMenu.panel-button,
-#panel.lock-screen Gjs_ui_panel_AggregateMenu.panel-button {
-  border-radius: 3px !important;
 }
 
 #panel .screencast-indicator,

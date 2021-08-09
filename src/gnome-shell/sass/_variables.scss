@@ -36,7 +36,7 @@ $bar_size: if($window == 'round', 8px, 4px);
 $menuitem_size: if($laptop == 'false', 32px, 28px);
 
 // radiuses
-$material_radius: if($window == 'round', 10px, 5px);
+$material_radius: if($window == 'round', 12px, 6px);
 $menu_radius: if($window == 'round', 8px, 3px);
 $buttons_radius: if($window == 'round', 5px, 3px);
 $circular_radius: 9999px;
