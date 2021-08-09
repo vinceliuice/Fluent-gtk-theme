@@ -12,11 +12,15 @@ for theme in '' '-purple' '-pink' '-red' '-orange' '-yellow' '-green' '-grey'; d
 ASSETS_DIR="assets${theme}"
 SRC_FILE="assets${theme}.svg"
 
-[[ -d $ASSETS_DIR ]] && rm -rf $ASSETS_DIR
+#[[ -d $ASSETS_DIR ]] && rm -rf $ASSETS_DIR
 mkdir -p $ASSETS_DIR
 
 for i in `cat $INDEX`; do
 echo "Rendering '$ASSETS_DIR/$i.png'"
+
+if [[ -f "$ASSETS_DIR/$i.png" ]]; then
+  echo "$ASSETS_DIR/$i.png" exists.
+else
 if [[ -n "${RENDER_SVG}" ]]; then
   "$RENDER_SVG" --export-id "$i" \
                 "$SRC_FILE" "$ASSETS_DIR/$i.png"
@@ -28,10 +32,14 @@ fi
 if [[ -n "${OPTIPNG}" ]]; then
   "$OPTIPNG" -o7 --quiet "$ASSETS_DIR/$i.png"
 fi
+fi
 
 echo "Rendering '$ASSETS_DIR/$i@2.png'"
+
+if [[ -f "$ASSETS_DIR/$i@2.png" ]]; then
+  echo "$ASSETS_DIR/$i@2.png" exists.
+else
 if [[ -n "${RENDER_SVG}" ]]; then
-  # @TODO: remove --zoom when it will be fixed/implemented in resvg
   "$RENDER_SVG" --export-id "$i" \
                 --dpi 192 \
                 --zoom 2 \
@@ -45,6 +53,8 @@ fi
 if [[ -n "${OPTIPNG}" ]]; then
   "$OPTIPNG" -o7 --quiet "$ASSETS_DIR/$i@2.png"
 fi
+fi
+
 done
 
 done

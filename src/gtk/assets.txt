@@ -1,6 +1,8 @@
 selectionmode-checkbox-unchecked
 selectionmode-checkbox-checked
 scale-slider
+scale-slider-hover
+scale-slider-active
 scale-slider-disabled
 scale-horz-marks-before-slider
 scale-horz-marks-before-slider-disabled
@@ -14,6 +16,8 @@ selected-line
 selectionmode-checkbox-unchecked-dark
 selectionmode-checkbox-checked-dark
 scale-slider-dark
+scale-slider-hover-dark
+scale-slider-active-dark
 scale-slider-disabled-dark
 scale-horz-marks-before-slider-dark
 scale-horz-marks-before-slider-disabled-dark

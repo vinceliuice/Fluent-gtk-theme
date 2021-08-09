@@ -420,11 +420,16 @@ treeview entry {
   &:checked:disabled { color: on(dark, disabled); }
 }
 
-%button-basic {
-  border: 1px solid $divider;
+button {
+  min-height: 24px;
+  min-width: 16px;
+  padding: ($medium-size - 26px) / 2 ($medium-size - 18px) / 2;
+  border-radius: $corner-radius;
+  font-weight: 500;
+  border: 1px solid $border;
   @include button(normal);
 
-  &:focus { @include button(focus); }
+  &:focus, &:checked:focus { @include button(focus); }
 
   &:hover { @include button(hover); }
 
@@ -437,15 +442,6 @@ treeview entry {
   &:checked:hover { @include button(checked-hover); }
 
   &:checked:disabled { @include button(checked-disabled); }
-}
-
-button {
-  min-height: 24px;
-  min-width: 16px;
-  padding: ($medium-size - 26px) / 2 ($medium-size - 18px) / 2;
-  border-radius: $corner-radius;
-  font-weight: 500;
-  @extend %button-basic;
 
   &:drop(active) { @include button(hover); }
 
@@ -453,7 +449,7 @@ button {
     @at-root %button-flat-simple, & {
       @include button(flat-normal);
 
-      &:focus { @include button(flat-focus); }
+      &:focus, &:checked:focus { @include button(flat-focus); }
 
       &:hover { @include button(flat-hover); }
 
@@ -505,6 +501,16 @@ button {
     }
 
     image:not(:only-child) { margin: 0 (24px - 16px) / 2; }
+  }
+
+  .linked > & {
+    &:focus {
+      @include button(normal);
+    }
+
+    &:checked:focus {
+      @include button(checked);
+    }
   }
 
   .linked:not(.vertical) > & {
@@ -981,10 +987,10 @@ combobox {
 
   decoration { transition: none; } // workaround for menuitem selection
 
-  button.combo cellview {
-    &:dir(ltr) { margin-left: 8px - ($medium-size - 16px) / 2; }
-    &:dir(rtl) { margin-right: 8px - ($medium-size - 16px) / 2; }
-  }
+  // button.combo cellview {
+  //   &:dir(ltr) { margin-left: 8px - ($medium-size - 16px) / 2; }
+  //   &:dir(rtl) { margin-right: 8px - ($medium-size - 16px) / 2; }
+  // }
 
   menu {
     padding: 2px 0;
@@ -1019,30 +1025,30 @@ combobox {
   }
 
   > .linked:not(.vertical) > entry:not(:only-child) {
-    border-radius: $corner-radius;
+    // border-radius: $corner-radius;
     border-right-width: 1px;
 
-    &:first-child {
-      margin-right: -$medium-size;
-      padding-right: $medium-size;
-    }
-
-    &:last-child {
-      margin-left: -$medium-size;
-      padding-left: $medium-size;
-    }
+    // &:first-child {
+    //   margin-right: -$medium-size;
+    //   padding-right: $medium-size;
+    // }
+    //
+    // &:last-child {
+    //   margin-left: -$medium-size;
+    //   padding-left: $medium-size;
+    // }
   }
 
-  > .linked:not(.vertical) > button:not(:only-child) {
-    @extend %button-flat;
-    // @extend %small_button;
-
-    min-height: 16px;
-    min-width: 16px;
-    margin: ($medium-size - $small-size) / 2;
-    padding: ($small-size - 16px) / 2;
-    border-radius: $corner-radius;
-  }
+  // > .linked:not(.vertical) > button:not(:only-child) {
+  //   @extend %button-flat;
+  //   // @extend %small_button;
+  //
+  //   min-height: 16px;
+  //   min-width: 16px;
+  //   margin: ($medium-size - $small-size) / 2;
+  //   padding: ($small-size - 16px) / 2;
+  //   border-radius: $corner-radius;
+  // }
 }
 
 // the combo is a composite widget so the way we do button linking doesn't
@@ -2689,30 +2695,29 @@ scale {
     border-radius: 50%;
     color: $primary;
     background-repeat: no-repeat;
-    background-size: 24px 24px;
+    background-size: 25px 25px;
     background-position: center center;
 
     @each $s, $as in ('', ''),
+                     (':hover', '-hover'),
+                     (':active', '-active'),
                      (':disabled', '-disabled') {
       &#{$s} {
         $_url: 'assets/scale-slider#{$as}#{$asset-suffix}';
 
-        background-image: -gtk-scaled(url('#{$_url}.png'), url('#{$_url}@2.png')),
-                          radial-gradient(circle, transparent 10%, transparent 0%);
+        background-image: -gtk-scaled(url('#{$_url}.png'), url('#{$_url}@2.png'));
       }
     }
 
     // &:focus { background-color: $overlay-focus; }
 
-    &:hover { background-color: $overlay-hover; }
-
-    &:focus:hover { background-color: $overlay-focus-hover; }
+    // &:hover { background-color: $overlay-hover; }
+    //
+    // &:focus:hover { background-color: $overlay-focus-hover; }
 
     &:active {
-      $_url: 'assets/scale-slider#{$asset-suffix}';
-
-      transition: background-color $duration $ease-out;
-      background-color: $overlay-hover;
+      transition: background-image $duration $ease-out;
+      // background-color: $overlay-hover;
     }
   }
 
@@ -3045,7 +3050,7 @@ row {
     background-image: image(rgba($primary, 0));
     background-position: $container-padding / 2 center;
     background-repeat: no-repeat;
-    background-size: 2px 22px;
+    background-size: 2px 16px;
     box-shadow: inset 0 0 0 9999px transparent;
 
     &:focus {
@@ -3333,8 +3338,6 @@ stacksidebar.sidebar {
     border-radius: $bar-size;
 
     &:selected {
-      background-color: $overlay-checked;
-      color: $primary;
       font-weight: 500;
     }
 
@@ -3353,10 +3356,10 @@ stacksidebar.sidebar {
 separator.sidebar {
   background-color: $divider;
 
-  &.selection-mode,
-  .selection-mode & {
-    // background-color: $divider;
-  }
+  // &.selection-mode,
+  // .selection-mode & {
+  //   background-color: $divider;
+  // }
 }
 
 
@@ -3396,7 +3399,7 @@ placessidebar.sidebar {
       background-image: url("assets/selected-line.png"), url("assets/selected-line@2.png");
       background-position: ($container-padding / 2) center;
       background-repeat: no-repeat;
-      background-size: 3px 20px;
+      background-size: 3px 16px;
     }
 
     &:disabled { color: $text-disabled; }
@@ -3788,7 +3791,7 @@ decoration {
   .popup & { box-shadow: none; }
 
   // server-side decorations as used by mutter
-  .ssd & { box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16); } // just doing borders, wm draws actual shadows
+  .ssd & { box-shadow: none; } // just doing borders, wm draws actual shadows
 
   .csd.popup & {
     border-radius: $menu-radius;

@@ -115,8 +115,10 @@ $suggested:                             $primary;
 $destructive:                           $error;
 
 $frame:                                 if($variant == 'light', rgba(black, 0.08), rgba(black, 0.16)); // instead of shadows
+$border:                                if($variant == 'light', rgba(black, 0.08), rgba(white, 0.12)); // Buttons and Entries
 $solid-border:                          if($variant == 'light', darken($background, 10%), lighten($background, 10%));
 $border-alt:                            rgba(black, 0.16); // darker border color for Chrome and Firefox
+$border-bottom:                         if($variant == 'light', rgba(black, 0.18), rgba(white, 0.08)); // Buttons and Entries
 $titlebar-indicator:                    if($topbar == 'dark', currentColor, $primary);
 
 //
