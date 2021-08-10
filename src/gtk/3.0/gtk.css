@@ -5607,6 +5607,13 @@ window.background.csd evview.view.content-view {
   background-color: transparent;
 }
 
+/************
+ * Software *
+ ************/
+button.feature-tile {
+  background-color: #FAFAFA;
+}
+
 /**************
  * Gnome Disk *
  **************/

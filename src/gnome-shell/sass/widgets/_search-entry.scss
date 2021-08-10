@@ -4,7 +4,6 @@ $search_entry_width: 320px;
 
 %search_entry {
   width: $search_entry_width;
-  padding: 0 8px;
   border: none;
   border-radius: $buttons_radius + 2px;
   @include search_entry(normal);
@@ -19,7 +18,6 @@ $search_entry_width: 320px;
 
   &:focus {
     @include search_entry(focus);
-    padding: 0 8px;
     selection-background-color: $primary_color;
     selected-color: $light_fg_color !important;
   }

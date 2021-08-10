@@ -41,16 +41,16 @@ $hint_fg_color:               if($variant == 'light', rgba($black, 0.38), rgba($
 $disabled_fg_color:           if($variant == 'light', rgba($black, 0.38), rgba($white, 0.5));
 $disabled_secondary_fg_color: if($variant == 'light', rgba($black, 0.26), rgba($white, 0.3));
 $track_color:                 if($variant == 'light', rgba($black, 0.2), rgba($white, 0.1));
-$visit_color:                 if($variant == 'light', rgba($black, 0.16), rgba($white, 0.08));
-$divider_color:               if($variant == 'light', rgba($black, 0.12), rgba($white, 0.06));
+$visit_color:                 if($variant == 'light', rgba($black, 0.15), rgba($white, 0.08));
+$divider_color:               if($variant == 'light', rgba($black, 0.08), rgba($white, 0.06));
 
-$titlebar_fg_color:                    if($panel == 'light', rgba($black, 0.87), $white);
-$titlebar_secondary_fg_color:          if($panel == 'light', rgba($black, 0.54), rgba($white, 0.7));
-$titlebar_hint_fg_color:               if($panel == 'light', rgba($black, 0.38), rgba($white, 0.5));
-$titlebar_disabled_fg_color:           if($panel == 'light', rgba($black, 0.38), rgba($white, 0.5));
-$titlebar_disabled_secondary_fg_color: if($panel == 'light', rgba($black, 0.26), rgba($white, 0.3));
-$titlebar_track_color:                 if($panel == 'light', rgba($black, 0.26), rgba($white, 0.1));
-$titlebar_divider_color:               if($panel == 'light', rgba($black, 0.12), rgba($white, 0.06));
+$panel_fg_color:                    if($panel == 'light', rgba($black, 0.88), $white);
+$panel_secondary_fg_color:          if($panel == 'light', rgba($black, 0.75), rgba($white, 0.75));
+$panel_hint_fg_color:               if($panel == 'light', rgba($black, 0.55), rgba($white, 0.55));
+$panel_disabled_fg_color:           if($panel == 'light', rgba($black, 0.35), rgba($white, 0.45));
+$panel_disabled_secondary_fg_color: if($panel == 'light', rgba($black, 0.26), rgba($white, 0.3));
+$panel_track_color:                 if($panel == 'light', rgba($white, 0.5), rgba($white, 0.15));
+$panel_divider_color:               if($panel == 'light', rgba($white, 0.35), rgba($white, 0.1));
 
 $inverse_fg_color:                    rgba($white, 0.85);
 $inverse_secondary_fg_color:          rgba($white, 0.7);
@@ -67,19 +67,21 @@ $alt_base_color: if($variant =='dark', lighten($base_color, 25%), darken($base_c
 $dark_bg_color:         rgba(#202020, 0.9);
 $alt_dark_bg_color:     rgba(#202020, 0.75);
 $inverse_bg_color: rgba($inverse_fg_color, 0.13);
-$button_bg_color:  if($variant == 'light', rgba(black, 0.1), rgba(white, 0.1));
+$button_bg_color:  if($variant == 'light', rgba(white, 1), rgba(white, 0.1));
 $keyboard_bg_color:  if($variant == 'light', $grey_50, fade($grey_700)); // for gnome-shell keyboard
 $alt_keyboard_bg_color:  if($variant == 'light', $grey_300, fade($grey_900)); // for gnome-shell keyboard
 
-// Misc colors
+$popover_button_bg: if($variant == 'light', rgba(white, 0.35), rgba(white, 0.03));
+$popover_button_hover: if($variant == 'light', rgba(white, 0.85), rgba(white, 0.08));
+$popover_button_active: if($variant == 'light', rgba(white, 1), rgba(white, 0.12));
 
+// Misc colors
 $primary_color: theme(color);
 $alt_primary_color: darken($primary_color, 3%);
 $accent_color: lighten($primary_color, 3%);
 
-$panel_bg: if($variant == 'light', #222222, #222222);
-$panel_bg_color: if($opacity == 'default', rgba(black, 0.5), $panel_bg);
-$panel_fg_color: if($panel == 'dark', #dedede, #dedede);
+$panel_bg: if($panel == 'light', #f3f3f3, #202020);
+$panel_bg_color: if($opacity == 'default', if($panel == 'light', rgba(white, 0.75), rgba(black, 0.5)), $panel_bg);
 $menu_bg_color: if($opacity == 'default', rgba($base_color, 0.95), $base_color);
 $system_bg_color: #222222;
 
@@ -98,6 +100,12 @@ $question_bg_color: $blue_400;
 $warning_bg_color:  $orange_400;
 $error_bg_color:    $red_400;
 
-$border_color:        if($variant == 'light', rgba($black, 0.12), rgba($white, 0.12));
-$highlight_color:     if($variant == 'light', rgba($white, 0.4),  rgba($white, 0.1));
-$alt_highlight_color: rgba($white, 0.2);
+$border_color:        if($variant == 'light', rgba($black, 0.12), rgba($white, 0.1));
+$md_border_color:     if($variant == 'light', transparent, $divider_color);
+$icon_border_color:   rgba($black, 0.12);
+$panel_border_color:  if($variant == 'light', rgba($black, 0.05), rgba($black, 0.12));
+$popover_button_border: if($variant == 'light', rgba(black, 0.1), rgba(white, 0.05));
+
+$highlight_color:     if($variant == 'light', rgba($white, 0.35),  rgba($white, 0.1));
+$icon_highlight_color: rgba($white, 0.1);
+$panel_highlight_color: if($panel == 'light', rgba($white, 0.35),  rgba($white, 0.1));

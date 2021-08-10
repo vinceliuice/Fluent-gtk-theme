@@ -93,21 +93,35 @@ install() {
 
   if [[ "$tweaks" == 'true' ]]; then
     if [[ "${GS_VERSION:-}" == 'new' ]]; then
-      sassc $SASSC_OPT "$SRC_DIR/gnome-shell/shell-40-0/gnome-shell${ELSE_DARK:-}$size.scss" "$THEME_DIR/gnome-shell/gnome-shell.css"
+      sassc $SASSC_OPT "$SRC_DIR/gnome-shell/shell-40-0/gnome-shell$color$size.scss" "$THEME_DIR/gnome-shell/gnome-shell.css"
     else
-      sassc $SASSC_OPT "$SRC_DIR/gnome-shell/shell-3-28/gnome-shell${ELSE_DARK:-}$size.scss" "$THEME_DIR/gnome-shell/gnome-shell.css"
+      sassc $SASSC_OPT "$SRC_DIR/gnome-shell/shell-3-28/gnome-shell$color$size.scss" "$THEME_DIR/gnome-shell/gnome-shell.css"
     fi
   else
     if [[ "${GS_VERSION:-}" == 'new' ]]; then
-      cp -r "$SRC_DIR/gnome-shell/shell-40-0/gnome-shell${ELSE_DARK:-}$size.css" "$THEME_DIR/gnome-shell/gnome-shell.css"
+      cp -r "$SRC_DIR/gnome-shell/shell-40-0/gnome-shell$color$size.css"        "$THEME_DIR/gnome-shell/gnome-shell.css"
     else
-      cp -r "$SRC_DIR/gnome-shell/shell-3-28/gnome-shell${ELSE_DARK:-}$size.css" "$THEME_DIR/gnome-shell/gnome-shell.css"
+      cp -r "$SRC_DIR/gnome-shell/shell-3-28/gnome-shell$color$size.css"        "$THEME_DIR/gnome-shell/gnome-shell.css"
     fi
   fi
 
   cp -r "${SRC_DIR}/gnome-shell/common-assets"                                  "$THEME_DIR/gnome-shell/assets"
   cp -r "${SRC_DIR}/gnome-shell/assets${ELSE_DARK:-}/"*.svg                     "$THEME_DIR/gnome-shell/assets"
   cp -r "${SRC_DIR}/gnome-shell/theme$theme/"*.svg                              "$THEME_DIR/gnome-shell/assets"
+
+  if [[ "$opacity" = "solid" ]] ; then
+    if [[ "$window" = "round" ]] ; then
+      cp -r "${SRC_DIR}/gnome-shell/assets${ELSE_DARK:-}/solid-round/"*.svg     "$THEME_DIR/gnome-shell/assets"
+    else
+      cp -r "${SRC_DIR}/gnome-shell/assets${ELSE_DARK:-}/solid/"*.svg           "$THEME_DIR/gnome-shell/assets"
+    fi
+  else
+    if [[ "$window" = "round" ]] ; then
+      cp -r "${SRC_DIR}/gnome-shell/assets${ELSE_DARK:-}/default-round/"*.svg   "$THEME_DIR/gnome-shell/assets"
+    else
+      cp -r "${SRC_DIR}/gnome-shell/assets${ELSE_DARK:-}/default/"*.svg         "$THEME_DIR/gnome-shell/assets"
+    fi
+  fi
 
   cd "$THEME_DIR/gnome-shell"
   ln -s assets/no-events.svg no-events.svg
@@ -153,13 +167,11 @@ install() {
     cp -r "$SRC_DIR/xfwm4/assets$color/"*.png                                   "$THEME_DIR/xfwm4"
     cp -r "$SRC_DIR/xfwm4/themerc${ELSE_LIGHT:-}"                               "$THEME_DIR/xfwm4/themerc"
 
-    if [[ "$color" != '-light' ]]; then
       mkdir -p                                                                  "$THEME_DIR/cinnamon"
       cp -r "$SRC_DIR/cinnamon/common-assets"                                   "$THEME_DIR/cinnamon/assets"
       cp -r "$SRC_DIR/cinnamon/assets${ELSE_DARK:-}/"*.svg                      "$THEME_DIR/cinnamon/assets"
-      cp -r "$SRC_DIR/cinnamon/cinnamon${ELSE_DARK:-}.css"                      "$THEME_DIR/cinnamon/cinnamon.css"
-      cp -r "$SRC_DIR/cinnamon/thumbnail${ELSE_DARK:-}.png"                     "$THEME_DIR/cinnamon/thumbnail.png"
-    fi
+      cp -r "$SRC_DIR/cinnamon/cinnamon$color.css"                              "$THEME_DIR/cinnamon/cinnamon.css"
+      cp -r "$SRC_DIR/cinnamon/thumbnail$color.png"                             "$THEME_DIR/cinnamon/thumbnail.png"
 
     mkdir -p                                                                    "$THEME_DIR/metacity-1"
     cp -r "$SRC_DIR/metacity-1/metacity-theme-2${color}.xml"                    "$THEME_DIR/metacity-1/metacity-theme-2.xml"

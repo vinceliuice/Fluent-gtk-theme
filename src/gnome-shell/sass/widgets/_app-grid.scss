@@ -2,9 +2,10 @@
 
 %icon_tile {
   color: $inverse_fg_color;
-  border-radius: $buttons_radius;
+  border-radius: $menu_radius;
   padding: 6px;
-  border: none;
+  border: 1px solid transparent;
+  box-shadow: inset 0 1px transparent;
   transition-duration: $longer_duration;
   text-align: center;
 }
@@ -12,14 +13,14 @@
 
 // app icons
 .icon-grid {
-  row-spacing: $container_padding * 2;
-  column-spacing: $container_padding * 2;
-  max-row-spacing: $container_padding * 12;
-  max-column-spacing: $container_padding * 12;
-  page-padding-top: $container_padding * 4;
-  page-padding-bottom: $container_padding * 4;
-  page-padding-left: $container_padding * 2;
-  page-padding-right: $container_padding * 2;
+  row-spacing: 12px;
+  column-spacing: 12px;
+  max-row-spacing: 72px;
+  max-column-spacing: 72px;
+  page-padding-top: 24px;
+  page-padding-bottom: 24px;
+  page-padding-left: 12px;
+  page-padding-right: 12px;
 }
 
 /* App Icons */
@@ -37,14 +38,17 @@
   &:selected .overview-icon {
     background-color: $inverse_divider_color;
     transition-duration: 0ms;
+    border: 1px solid $icon_border_color;
+    box-shadow: inset 0 1px $icon_highlight_color;
     border-image: none;
     background-image: none;
   }
 
   &:active .overview-icon,
   &:checked .overview-icon {
-    background-color: $inverse_track_color;
-    box-shadow: none;
+    background-color: $inverse_divider_color;
+    border: 1px solid $icon_border_color;
+    box-shadow: inset 0 1px $icon_highlight_color;
     transition-duration: $longer_duration;
   }
 
@@ -54,6 +58,21 @@
     > StBoxLayout {
       spacing: $container_padding;
     }
+  }
+}
+
+// Running app indicator (also shown in dash)
+.app-well-app-running-dot {
+  width: 6px; height: 3px;
+  border-radius: 2px;
+  background-color: $inverse_hint_fg_color;
+  margin-bottom: 1px;
+}
+
+StWidget.focused {
+  .app-well-app-running-dot {
+    width: 18px;
+    background-color: $primary_color;
   }
 }
 
@@ -79,7 +98,8 @@
 // expanded folder
 .app-folder-dialog { //style like the dash
   border-radius: $buttons_radius * 4;
-  border: 0 solid rgba(white, 0.15);
+  border: 1px solid $icon_border_color;
+  box-shadow: inset 0 1px $icon_highlight_color;
   background-color: rgba(#222, 0.95);
 
   & .folder-name-container {
@@ -154,19 +174,6 @@
   padding: 12px;
   width: 620px;
   height: 620px;
-}
-
-// Running app indicator (also shown in dash)
-.app-well-app-running-dot {
-  width: 8px; height: 2px;
-  border-radius: 0;
-  background-color: $inverse_fg_color;
-  margin-bottom: 0;
-}
-
-StWidget.focused .app-well-app-running-dot {
-  width: 16px;
-  background-color: $primary_color;
 }
 
 // Rename popup for app folders

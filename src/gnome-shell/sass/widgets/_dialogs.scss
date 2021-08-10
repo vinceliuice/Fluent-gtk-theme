@@ -1,16 +1,19 @@
 /* Modal Dialogs */
 
-$mdborder_color: if($variant == 'light', transparent, rgba($white, 0.15));
-
 .headline { @include font(title); }
 
 .modal-dialog {
-  border-radius: $material_radius;
   color: $fg_color;
-  background-color: $base_color;
-  border: 0 solid $mdborder_color;
-  box-shadow: 3px 3px 8px -3px rgba(black, 0.35) !important;
-  margin: 15px !important;
+  background-color: transparent;
+  border: 1px solid $md_border_color;
+  padding: 6px 10px 10px !important;
+  margin: 0 !important;
+
+  @if $opacity == 'default' {
+    border-image: url("assets/modal.svg") 24 162 28 28;
+  } @else {
+    border-image: url("assets/modal.svg") 24 162 28 28;
+  }
 
   .modal-dialog-content-box {
     margin: 32px 40px;
@@ -19,8 +22,10 @@ $mdborder_color: if($variant == 'light', transparent, rgba($white, 0.15));
   }
 
   .modal-dialog-linked-button {
-    min-height: 40px;
-    padding: 0 16px;
+    border: 1px solid !important;
+    background-clip: padding-box;
+    min-height: 20px;
+    padding: 6px 18px !important;
     @extend %bubble_button;
   }
 }
@@ -28,20 +33,34 @@ $mdborder_color: if($variant == 'light', transparent, rgba($white, 0.15));
 /* End Session Dialog */
 .end-session-dialog {
   width: 30em;
-  // border: 2px solid $mdborder_color;
+
+  @if $opacity == 'default' {
+    border-image: url("assets/modal-session.svg") 24 162 28 28;
+  } @else {
+    border-image: url("assets/modal-session-solid.svg") 24 162 28 28;
+  }
 
   .modal-dialog-linked-button:last-child {
     color: white;
     background-color: $destructive_color;
+    border-color: if($variant == 'light', darken($destructive_color, 8%), rgba(white, 0.08));
 
     &:hover {
       color: white;
-      background-color: lighten($destructive_color, 9%);
+      background-color: lighten($destructive_color, 8%);
+      border-color: if($variant == 'light', $destructive_color, rgba(white, 0.15));
     }
 
     &:active {
       color: white;
       background-color: darken($destructive_color, 5%);
+      border-color: if($variant == 'light', darken($destructive_color, 15%), rgba(white, 0.15));
+    }
+
+    &:insensitive {
+      color: rgba($destructive_color, 0.5);
+      background-color: rgba($destructive_color, 0.15);
+      border-color: transparent;
     }
   }
 
@@ -112,39 +131,10 @@ $mdborder_color: if($variant == 'light', transparent, rgba($white, 0.15));
 .prompt-dialog {
   width: 28em;
 
-  .modal-dialog-linked-button:first-child {
-    color: $destructive_color;
-    background-color: rgba($destructive_color, 0.15);
-
-    &:hover {
-      color: $destructive_color;
-      background-color: rgba($destructive_color, 0.25);
-    }
-
-    &:active {
-      color: white;
-      background-color: $destructive_color;
-    }
-  }
-
-  .modal-dialog-linked-button:last-child {
-    color: white;
-    background-color: $suggested_color;
-
-    &:hover {
-      color: white;
-      background-color: lighten($suggested_color, 9%);
-    }
-
-    &:active {
-      color: white;
-      background-color: darken($suggested_color, 5%);
-    }
-
-    &:insensitive {
-      color: rgba($suggested_color, 0.5);
-      background-color: rgba($suggested_color, 0.15);
-    }
+  @if $opacity == 'default' {
+    border-image: url("assets/modal-prompt.svg") 24 192 28 28;
+  } @else {
+    border-image: url("assets/modal-prompt-solid.svg") 24 192 28 28;
   }
 
   .modal-dialog-content-box {

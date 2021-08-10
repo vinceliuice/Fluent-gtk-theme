@@ -111,7 +111,7 @@
   }
 
   @if $t == hover {
-    box-shadow: 0 3px 3px rgba(black, 0.20), 0 5px 8px rgba(black, 0.12);
+    border: 2px solid $track_color;
   }
 
   @if $t == insensitive {
@@ -164,17 +164,13 @@
   @if $t == normal {
     color: if($tc == $fg_color, $button_fg_color, $tc);
     background-color: $c;
-    border-color: transparent;
+    border-color: if($variant == 'light', darken($c, 15%), rgba(white, 0.08));
     box-shadow: none;
-    text-shadow: none;
-    icon-shadow: none;
   }
 
   @if $t == focus {
     color: $primary_color;
-    text-shadow: none;
-    icon-shadow: none;
-    // box-shadow: inset 0px 0px 0px 2px $primary_color;
+    box-shadow: none;
     &:active {
       color: white;
     }
@@ -182,20 +178,16 @@
 
   @if $t == hover {
     color: $tc;
-    background-color: rgba($c, 0.15);
-    border-color: transparent;
+    background-color: $c;
+    border-color: if($variant == 'light', darken($c, 20%), rgba(white, 0.15));
     box-shadow: none;
-    text-shadow: none;
-    icon-shadow: none;
   }
 
   @if $t == active {
-    color: white;
-    background-color: $primary_color;
-    border-color: transparent;
+    color: $tc;
+    background-color: darken($c, 5%);
+    border-color: if($variant == 'light', darken($c, 20%), rgba(white, 0.15));
     box-shadow: none;
-    text-shadow: none;
-    icon-shadow: none;
   }
 
   @if $t == insensitive {
@@ -203,51 +195,34 @@
     background-color: if($c == $base_color, $divider_color, $c);
     border-color: transparent;
     box-shadow: none;
-    text-shadow: none;
-    icon-shadow: none;
   }
 
   @if $t == flat-normal {
     color: if($tc != $inverse_fg_color, $secondary_fg_color, $inverse_secondary_fg_color);
     background-color: transparent;
-    border-color: transparent;
-    box-shadow: $shadow_0;
-    text-shadow: none;
-    icon-shadow: none;
+    box-shadow: none;
   }
 
   @if $t == flat-focus {
     color: if($tc != $inverse_fg_color, $fg_color, $inverse_fg_color);
-    text-shadow: none;
-    icon-shadow: none;
-    box-shadow: $shadow_0;
-    // box-shadow: inset 0px 0px 0px 2px $divider_color;
+    box-shadow: none;
   }
 
   @if $t == flat-hover {
     color: if($tc != $inverse_fg_color, $fg_color, $inverse_fg_color);
     background-color: if($tc != $inverse_fg_color, $divider_color, $inverse_divider_color);
-    border-color: transparent;
-    box-shadow: $shadow_0;
-    text-shadow: none;
-    icon-shadow: none;
+    box-shadow: none;
   }
 
   @if $t == flat-active {
     color: if($tc != $inverse_fg_color, $fg_color, $inverse_fg_color);
     background-color: if($tc != $inverse_fg_color, $track_color, $inverse_track_color);
-    border-color: transparent;
     box-shadow: $shadow_0;
-    text-shadow: none;
-    icon-shadow: none;
   }
 
   @if $t == flat-insensitive {
     color: if($tc != $inverse_fg_color, $disabled_secondary_fg_color, $inverse_disabled_secondary_fg_color);
     background-color: transparent;
-    border-color: transparent;
-    box-shadow: $shadow_0;
-    text-shadow: none;
-    icon-shadow: none;
+    box-shadow: none;
   }
 }

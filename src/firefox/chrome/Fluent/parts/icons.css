@@ -565,9 +565,7 @@ menuitem[type="radio"][disabled="true"] .menu-iconic-icon {
 	#identity-box[pageproxystate="valid"].notSecure #identity-icon,
 	#identity-box[pageproxystate="valid"].mixedActiveContent #identity-icon,
 	#identity-box[pageproxystate="valid"].httpsOnlyErrorPage #identity-icon,
-	#identity-box[pageproxystate="valid"].localResource #identity-icon,
-	.bookmark-item[container] .toolbarbutton-icon,
-	.menu-iconic.bookmark-item[container] .menu-iconic-icon {
+	#identity-box[pageproxystate="valid"].localResource #identity-icon {
 		filter: invert(60%) brightness(150%);
 	}
 

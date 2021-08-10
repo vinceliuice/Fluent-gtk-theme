@@ -2,15 +2,15 @@
 
 $dash_background_color: rgba(white, 0.2);
 $dash_placeholder_size: 32px;
-$dash_padding: $container_padding;
+$dash_padding: $container_padding * 1.5;
 $dash_spacing: $container_padding / 2;
 $dash_bottom_margin: ($container_padding - 2px) * 4;
-$dash_border_radius: $buttons_radius + $container_padding * 1.5;
+$dash_border_radius: $menu_radius + $container_padding * 1.5;
 
 #dash {
   font-size: 1em;
-  margin-top: $container_padding * 2;
-  padding: 0;
+  margin-top: $container_padding * 3;
+  padding: 0 $dash_padding;
 
   .placeholder {
     // background-image: url("resource:///org/gnome/shell/theme/dash-placeholder.svg");
@@ -25,14 +25,14 @@ $dash_border_radius: $buttons_radius + $container_padding * 1.5;
   }
 
   .overview-icon {
-    padding: $container_padding;
+    padding: $dash_padding / 2;
   }
 }
 
 .dash-background {
   background-color: $dash_background_color;
   margin-bottom: $dash_bottom_margin;
-  padding: $dash_padding ($dash_padding + $dash_spacing);
+  padding: $dash_padding;
   border-radius: $dash_border_radius;
 }
 

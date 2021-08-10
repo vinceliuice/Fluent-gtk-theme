@@ -1,8 +1,8 @@
 /* Entries */
 
 StEntry {
-  min-height: $medium_size;
-  padding: 0 8px;
+  min-height: 24px;
+  padding: $container_padding / 2 $container_padding * 1.5;
   border-radius: $buttons_radius;
   border-width: 0;
   selection-background-color: $primary_color;

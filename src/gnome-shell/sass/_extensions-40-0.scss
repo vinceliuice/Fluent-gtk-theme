@@ -1,3 +1,4 @@
+
 //
 // Dash to Dock
 //
@@ -36,12 +37,57 @@
 
   #dash .dash-background {
     background-color: $panel_bg_color;
+    background-clip: padding-box;
+    box-shadow: 0 3px 3px rgba(black, 0.1);
+    margin: 0 6px $dash_bottom_margin 6px !important;
+    padding: $dash_padding 9px !important;
   }
 
   .dash-separator {
     width: 0 !important;
     margin: 0 0 !important;
     background: none;
+  }
+
+  .show-apps,
+  .app-well-app {
+    .overview-icon {
+      color: $panel_secondary_fg_color !important;
+    }
+
+    &:hover .overview-icon,
+    &:focus .overview-icon,
+    &:selected .overview-icon {
+      background-color: $panel_divider_color !important;
+      color: $panel_fg_color !important;
+      border: 1px solid $panel_border_color;
+    }
+
+    &:active .overview-icon,
+    &:checked .overview-icon {
+      background-color: $panel_divider_color !important;
+      color: $panel_fg_color !important;
+    }
+  }
+
+  .app-well-app-running-dot {
+    background-color: $panel_hint_fg_color !important;
+  }
+
+  StWidget.focused {
+    .overview-icon {
+      background-color: $panel_divider_color !important;
+      border: 1px solid $panel_border_color;
+      box-shadow: inset 0 1px $panel_highlight_color;
+    }
+
+    &:hover .overview-icon {
+      background-color: $panel_track_color !important;
+    }
+
+    .app-well-app-running-dot {
+      background-color: $primary_color !important;
+    }
   }
 
   &.opaque #dash .dash-background { // solid-mode
@@ -52,8 +98,60 @@
     background-color: $panel_bg_color; // does not work
   }
 
-  &:overview #dash .dash-background { // overview-mode #1
-    background-color: rgba(white, 0.2);
+  &:overview #dash {
+    .dash-background { // overview-mode #1
+      background-color: rgba(white, 0.2);
+    }
+
+    .show-apps,
+    .app-well-app {
+      .overview-icon {
+        color: $inverse_secondary_fg_color !important;
+      }
+
+      &:hover .overview-icon,
+      &:focus .overview-icon,
+      &:selected .overview-icon {
+        background-color: $panel_divider_color !important;
+        color: $inverse_fg_color !important;
+      }
+
+      &:active .overview-icon,
+      &:checked .overview-icon {
+        background-color: $panel_divider_color !important;
+        color: $inverse_fg_color !important;
+      }
+    }
+
+    .app-well-app-running-dot {
+      background-color: $panel_hint_fg_color !important;
+    }
+
+    StWidget.focused {
+      .overview-icon {
+        background-color: $inverse_divider_color !important;
+        border: 1px solid $icon_border_color;
+        box-shadow: inset 0 1px $icon_highlight_color;
+      }
+
+      &:hover .overview-icon {
+        background-color: $inverse_track_color !important;
+      }
+
+      .app-well-app-running-dot {
+        background-color: $primary_color !important;
+      }
+    }
+
+    .app-well-app-running-dot {
+      background-color: $inverse_hint_fg_color !important;
+    }
+
+    StWidget.focused {
+      .app-well-app-running-dot {
+        background-color: $primary_color !important;
+      }
+    }
   }
 
   &.opaque:overview,
@@ -72,6 +170,36 @@
       background-color: rgba(white, 0.2);
     }
   }
+}
+
+//
+// Dash to Panel
+//
+
+.dashtopanelMainPanel {
+  .show-apps,
+  .app-well-app {
+    .overview-icon {
+      color: $panel_secondary_fg_color !important;
+    }
+
+    &:hover .overview-icon,
+    &:focus .overview-icon,
+    &:selected .overview-icon {
+      background-color: $panel_divider_color !important;
+      color: $panel_fg_color !important;
+      box-shadow: none !important;
+    }
+
+    &:active .overview-icon,
+    &:checked .overview-icon {
+      background-color: $panel_track_color !important;
+      color: $panel_fg_color !important;
+      box-shadow: none !important;
+    }
+  }
+
+  .panel-button { color: $panel_secondary_fg_color !important; }
 }
 
 //

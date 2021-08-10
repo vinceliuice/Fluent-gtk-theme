@@ -223,20 +223,21 @@
 .events-button {
   padding: $container_padding 8px;
   border-radius: $buttons_radius;
-  border: none;
+  border: 1px solid $popover_button_border;
   box-shadow: none;
   text-shadow: none;
   color: $secondary_fg_color;
-  background-color: if($variant == 'light', rgba(black, 0.04), rgba(white, 0.03));
+  background-color: $popover_button_bg !important;
 
   &:hover, &:focus {
     color: $fg_color;
-    background-color: $divider_color;
+    background-color: $popover_button_hover !important;
+    border-color: if($variant == 'light', rgba(black, 0.15), rgba(white, 0.06));
   }
 
   &:active {
     color: $fg_color;
-    background-color: $track_color;
+    background-color: $popover_button_active !important;
   }
 }
 
@@ -267,11 +268,11 @@
 // Events button
 .events-button {
   .events-box {
-    spacing: 6px;
+    spacing: $container-padding;
   }
 
   .events-list {
-    spacing: 12px;
+    spacing: $container-padding * 2;
     text-shadow: none;
   }
 
@@ -309,11 +310,11 @@
 // Weather button
 .weather-button {
   .weather-box {
-    spacing: 12px;
+    spacing: $container-padding ;
   }
 
   .weather-header-box {
-    spacing: 8px;
+    spacing: $container-padding;
   }
 
   .weather-header.location {
@@ -322,7 +323,7 @@
   }
 
   .weather-forecast-icon {
-    icon-size: 32px;
+    icon-size: if($laptop == 'true', 24px, 32px);
     color: $hint_fg_color;
   }
 

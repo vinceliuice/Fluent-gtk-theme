@@ -11,21 +11,28 @@
   margin: ($container_padding / 2) 8px 11px;
   padding: $container_padding;
   spacing: $container_padding;
+  border: 1px solid $md_border_color;
 }
 
 .candidate-index {
   padding: 0 0.5em 0 0;
   color: $hint_fg_color;
-  .candidate-box:selected & { color: $inverse_hint_fg_color; }
+  // .candidate-box:selected & {
+  //   color: $hint_fg_color;
+  // }
 }
 
 .candidate-box {
   padding: 0.3em 0.5em 0.3em 0.5em;
   margin-right: $container_padding / 2;
   border-radius: $buttons_radius;
+  color: $secondary_fg_color;
   &:hover { background-color: $divider_color; color: $fg_color; }
   &:active { background-color: $track_color; color: $fg_color; }
-  &:selected { background-color: $primary_color; color: $inverse_fg_color; }
+  &:selected {
+    background-color: $divider_color;
+    color: $fg_color;
+  }
   &:last-child { margin-right: 0; }
 }
 

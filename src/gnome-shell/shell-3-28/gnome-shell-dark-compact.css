@@ -39,44 +39,30 @@ stage {
   font-weight: 500;
   color: rgba(255, 255, 255, 0.7);
   background-color: transparent;
-  border-color: transparent;
-  box-shadow: 0 0 transparent;
-  text-shadow: none;
-  icon-shadow: none;
+  box-shadow: none;
 }
 
 .button:hover {
   color: rgba(255, 255, 255, 0.9);
   background-color: rgba(255, 255, 255, 0.06);
-  border-color: transparent;
-  box-shadow: 0 0 transparent;
-  text-shadow: none;
-  icon-shadow: none;
+  box-shadow: none;
 }
 
 .button:active {
   color: rgba(255, 255, 255, 0.9);
   background-color: rgba(255, 255, 255, 0.1);
-  border-color: transparent;
   box-shadow: 0 0 transparent;
-  text-shadow: none;
-  icon-shadow: none;
 }
 
 .button:insensitive {
   color: rgba(255, 255, 255, 0.3);
   background-color: transparent;
-  border-color: transparent;
-  box-shadow: 0 0 transparent;
-  text-shadow: none;
-  icon-shadow: none;
+  box-shadow: none;
 }
 
 .button:focus {
   color: rgba(255, 255, 255, 0.9);
-  text-shadow: none;
-  icon-shadow: none;
-  box-shadow: 0 0 transparent;
+  box-shadow: none;
 }
 
 /* Entries */
@@ -100,7 +86,7 @@ StEntry {
 
 GPasteSearchEntry:hover,
 StEntry:hover {
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2), 0 5px 8px rgba(0, 0, 0, 0.12);
+  border: 2px solid rgba(255, 255, 255, 0.1);
 }
 
 GPasteSearchEntry:focus,
@@ -200,7 +186,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   -slider-border-width: 0;
   -slider-handle-radius: 7px;
   -slider-handle-border-width: 0;
-  -slider-handle-border-color: rgba(255, 255, 255, 0.12);
+  -slider-handle-border-color: rgba(255, 255, 255, 0.1);
   -barlevel-height: 2px;
   -barlevel-background-color: rgba(255, 255, 255, 0.1);
   -barlevel-border-color: transparent;
@@ -430,28 +416,21 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   font-weight: 500;
   color: rgba(255, 255, 255, 0.8);
   background-color: rgba(255, 255, 255, 0.1);
-  border-color: transparent;
+  border-color: rgba(255, 255, 255, 0.08);
   box-shadow: none;
-  text-shadow: none;
-  icon-shadow: none;
 }
 
 .modal-dialog-linked-button:hover {
   color: rgba(255, 255, 255, 0.9);
-  background-color: rgba(255, 255, 255, 0.15);
-  border-color: transparent;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.15);
   box-shadow: none;
-  text-shadow: none;
-  icon-shadow: none;
 }
 
 .modal-dialog-linked-button:active {
   color: rgba(255, 255, 255, 0.9);
   background-color: rgba(255, 255, 255, 0.1);
-  border-color: transparent;
   box-shadow: 0 0 transparent;
-  text-shadow: none;
-  icon-shadow: none;
 }
 
 .modal-dialog-linked-button:insensitive {
@@ -459,14 +438,11 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   background-color: rgba(255, 255, 255, 0.1);
   border-color: transparent;
   box-shadow: none;
-  text-shadow: none;
-  icon-shadow: none;
 }
 
 .modal-dialog-linked-button:focus {
   color: #3281ea;
-  text-shadow: none;
-  icon-shadow: none;
+  box-shadow: none;
 }
 
 .modal-dialog-linked-button:focus:active {
@@ -815,7 +791,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .audio-selection-device {
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 3px;
 }
 
@@ -1234,7 +1210,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .switcher-list .separator {
   width: 1px;
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .switcher-arrow {
@@ -1371,7 +1347,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   -natural-hpadding: 4px;
   -minimum-hpadding: 2px;
   font-weight: bold;
-  color: #dedede;
+  color: #FFFFFF;
   text-shadow: none;
   border-radius: 0;
   margin: 0;
@@ -1400,7 +1376,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 #panel .panel-button:hover {
-  color: #dedede;
+  color: #FFFFFF;
   background-color: rgba(0, 0, 0, 0.15);
   text-shadow: none;
   box-shadow: none;
@@ -1504,7 +1480,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .datemenu-calendar-column {
   spacing: 4px;
-  border: 0 solid rgba(255, 255, 255, 0.12);
+  border: 0 solid rgba(255, 255, 255, 0.1);
   padding: 0 8px;
   color: rgba(255, 255, 255, 0.7);
 }
@@ -2761,7 +2737,7 @@ StWidget.focused .app-well-app-running-dot {
 .notification-banner .notification-actions {
   background-color: transparent;
   padding-top: 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   spacing: 1px;
 }
 
@@ -2871,10 +2847,8 @@ StWidget.focused .app-well-app-running-dot {
 .hotplug-notification-item {
   color: rgba(255, 255, 255, 0.8);
   background-color: rgba(255, 255, 255, 0.1);
-  border-color: transparent;
+  border-color: rgba(255, 255, 255, 0.08);
   box-shadow: none;
-  text-shadow: none;
-  icon-shadow: none;
   padding: 8px;
   border-style: solid;
   border-width: 0;
@@ -2887,23 +2861,18 @@ StWidget.focused .app-well-app-running-dot {
   background-color: rgba(255, 255, 255, 0.1);
   border-color: transparent;
   box-shadow: none;
-  text-shadow: none;
-  icon-shadow: none;
 }
 
 .hotplug-notification-item:hover {
   color: rgba(255, 255, 255, 0.9);
-  background-color: rgba(255, 255, 255, 0.15);
-  border-color: transparent;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.15);
   box-shadow: none;
-  text-shadow: none;
-  icon-shadow: none;
 }
 
 .hotplug-notification-item:focus {
   color: #3281ea;
-  text-shadow: none;
-  icon-shadow: none;
+  box-shadow: none;
 }
 
 .hotplug-notification-item:focus:active {
@@ -2911,12 +2880,10 @@ StWidget.focused .app-well-app-running-dot {
 }
 
 .hotplug-notification-item:active {
-  color: white;
-  background-color: #3281ea;
-  border-color: transparent;
+  color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(242, 242, 242, 0.1);
+  border-color: rgba(255, 255, 255, 0.15);
   box-shadow: none;
-  text-shadow: none;
-  icon-shadow: none;
 }
 
 .hotplug-notification-item:first-child {
@@ -3249,10 +3216,7 @@ StWidget.focused .app-well-app-running-dot {
   padding: 0 16px;
   color: rgba(255, 255, 255, 0.7);
   background-color: transparent;
-  border-color: transparent;
-  box-shadow: 0 0 transparent;
-  text-shadow: none;
-  icon-shadow: none;
+  box-shadow: none;
 }
 
 .login-dialog .modal-dialog-button:hover, .login-dialog .modal-dialog-button:focus,
@@ -3260,61 +3224,46 @@ StWidget.focused .app-well-app-running-dot {
 .unlock-dialog .modal-dialog-button:focus {
   color: rgba(255, 255, 255, 0.85);
   background-color: rgba(255, 255, 255, 0.15);
-  border-color: transparent;
-  box-shadow: 0 0 transparent;
-  text-shadow: none;
-  icon-shadow: none;
+  box-shadow: none;
 }
 
 .login-dialog .modal-dialog-button:active,
 .unlock-dialog .modal-dialog-button:active {
   color: rgba(255, 255, 255, 0.85);
   background-color: rgba(255, 255, 255, 0.3);
-  border-color: transparent;
   box-shadow: 0 0 transparent;
-  text-shadow: none;
-  icon-shadow: none;
 }
 
 .login-dialog .modal-dialog-button:insensitive,
 .unlock-dialog .modal-dialog-button:insensitive {
   color: rgba(255, 255, 255, 0.3);
   background-color: transparent;
-  border-color: transparent;
-  box-shadow: 0 0 transparent;
-  text-shadow: none;
-  icon-shadow: none;
+  box-shadow: none;
 }
 
 .login-dialog .modal-dialog-button:default,
 .unlock-dialog .modal-dialog-button:default {
   color: rgba(255, 255, 255, 0.85);
   background-color: #408aeb;
-  border-color: transparent;
+  border-color: rgba(255, 255, 255, 0.08);
   box-shadow: none;
-  text-shadow: none;
-  icon-shadow: none;
 }
 
 .login-dialog .modal-dialog-button:default:hover, .login-dialog .modal-dialog-button:default:focus,
 .unlock-dialog .modal-dialog-button:default:hover,
 .unlock-dialog .modal-dialog-button:default:focus {
   color: rgba(255, 255, 255, 0.85);
-  background-color: rgba(64, 138, 235, 0.15);
-  border-color: transparent;
+  background-color: #408aeb;
+  border-color: rgba(255, 255, 255, 0.15);
   box-shadow: none;
-  text-shadow: none;
-  icon-shadow: none;
 }
 
 .login-dialog .modal-dialog-button:default:active,
 .unlock-dialog .modal-dialog-button:default:active {
-  color: white;
-  background-color: #3281ea;
-  border-color: transparent;
+  color: rgba(255, 255, 255, 0.85);
+  background-color: #297be9;
+  border-color: rgba(255, 255, 255, 0.15);
   box-shadow: none;
-  text-shadow: none;
-  icon-shadow: none;
 }
 
 .login-dialog .modal-dialog-button:default:insensitive,
@@ -3323,8 +3272,6 @@ StWidget.focused .app-well-app-running-dot {
   background-color: rgba(255, 255, 255, 0.15);
   border-color: transparent;
   box-shadow: none;
-  text-shadow: none;
-  icon-shadow: none;
 }
 
 .login-dialog-logo-bin {
@@ -3645,7 +3592,7 @@ StWidget.focused .app-well-app-running-dot {
   border: none;
   border-radius: 0;
   background-color: rgba(32, 32, 32, 0.01);
-  box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.12);
+  box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.1);
 }
 
 #LookingGlassDialog .labels {
@@ -3717,44 +3664,30 @@ StWidget.focused .app-well-app-running-dot {
   font-weight: 500;
   color: rgba(255, 255, 255, 0.7);
   background-color: transparent;
-  border-color: transparent;
-  box-shadow: 0 0 transparent;
-  text-shadow: none;
-  icon-shadow: none;
+  box-shadow: none;
 }
 
 .lg-obj-inspector-button:hover {
   color: rgba(255, 255, 255, 0.9);
   background-color: rgba(255, 255, 255, 0.06);
-  border-color: transparent;
-  box-shadow: 0 0 transparent;
-  text-shadow: none;
-  icon-shadow: none;
+  box-shadow: none;
 }
 
 .lg-obj-inspector-button:active {
   color: rgba(255, 255, 255, 0.9);
   background-color: rgba(255, 255, 255, 0.1);
-  border-color: transparent;
   box-shadow: 0 0 transparent;
-  text-shadow: none;
-  icon-shadow: none;
 }
 
 .lg-obj-inspector-button:insensitive {
   color: rgba(255, 255, 255, 0.3);
   background-color: transparent;
-  border-color: transparent;
-  box-shadow: 0 0 transparent;
-  text-shadow: none;
-  icon-shadow: none;
+  box-shadow: none;
 }
 
 .lg-obj-inspector-button:focus {
   color: rgba(255, 255, 255, 0.9);
-  text-shadow: none;
-  icon-shadow: none;
-  box-shadow: 0 0 transparent;
+  box-shadow: none;
 }
 
 .lg-obj-inspector-button:hover {
@@ -3842,7 +3775,7 @@ StWidget.focused .app-well-app-running-dot {
 }
 
 #dashtodockContainer.opaque #dash {
-  background-color: #222222;
+  background-color: #202020;
 }
 
 #dashtodockContainer.transparent #dash {
@@ -3881,35 +3814,24 @@ StWidget.focused .app-well-app-running-dot {
   font-weight: 500;
   color: rgba(255, 255, 255, 0.7);
   background-color: transparent;
-  border-color: transparent;
-  box-shadow: 0 0 transparent;
-  text-shadow: none;
-  icon-shadow: none;
+  box-shadow: none;
 }
 
 .openweather-provider:hover {
   color: rgba(255, 255, 255, 0.9);
   background-color: rgba(255, 255, 255, 0.06);
-  border-color: transparent;
-  box-shadow: 0 0 transparent;
-  text-shadow: none;
-  icon-shadow: none;
+  box-shadow: none;
 }
 
 .openweather-provider:focus {
   color: rgba(255, 255, 255, 0.9);
-  text-shadow: none;
-  icon-shadow: none;
-  box-shadow: 0 0 transparent;
+  box-shadow: none;
 }
 
 .openweather-provider:active {
   color: rgba(255, 255, 255, 0.9);
   background-color: rgba(255, 255, 255, 0.1);
-  border-color: transparent;
   box-shadow: 0 0 transparent;
-  text-shadow: none;
-  icon-shadow: none;
 }
 
 .openweather-current-icon, .openweather-current-summary, .openweather-current-summarybox {
