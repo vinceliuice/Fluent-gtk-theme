@@ -3,10 +3,10 @@
 Fluent is a Fluent design theme for GNOME/GTK based desktop environments. See also [Fluent Icon theme](https://github.com/vinceliuice/Fluent-icon-theme).
 
 ### Normal version
-![screenshot01](screenshot01.png?raw=true)
+![screenshot01](https://github.com/vinceliuice/Fluent-gtk-theme/blob/Images/screenshot01.png?raw=true)
 
 ### Blur version (Only for Gnome-Shell desktop)
-![screenshot-blur](screenshot-blur.jpg?raw=true)
+![screenshot-blur](https://github.com/vinceliuice/Fluent-gtk-theme/blob/Images/screenshot-blur.jpg?raw=true)
 
 - Blur version requirement [Blur Me](https://extensions.gnome.org/extension/4236/blur-me/)
 
@@ -49,7 +49,7 @@ Run the following commands in the terminal:
 -h, --help              Show help
 ```
 
-![Fluent-view](Fluent-view.png?raw=true)
+![Fluent-view](https://github.com/vinceliuice/Fluent-gtk-theme/blob/Images/Fluent-view.png?raw=true)
 
 > For more information, run: `./install.sh --help`
 
@@ -60,17 +60,17 @@ Automatically install your host GTK+ theme as a Flatpak.
 - [pakitheme](https://github.com/refi64/pakitheme)
 
 ### Wallpaper
-[Install Wallpapers](src/wallpaper)
+[Install Wallpapers](https://github.com/vinceliuice/Fluent-gtk-theme/blob/Wallpaper)
 
 #### Preview
-![wallpaper](src/wallpaper/wallpaper-1080p/wallpaper-default-flat.png?raw=true)
+![wallpaper](https://github.com/vinceliuice/Fluent-gtk-theme/blob/Wallpaper/wallpaper-1080p/wallpaper-default-flat.png?raw=true)
 
 ### Firefox theme
 [Install Firefox theme](src/firefox)
 
 #### Preview
-![preview01](src/firefox/preview01.png?raw=true)
-![preview02](src/firefox/preview02.png?raw=true)
+![preview01](https://github.com/vinceliuice/Fluent-gtk-theme/blob/Images/firefox-preview01.jpg?raw=true)
+![preview02](https://github.com/vinceliuice/Fluent-gtk-theme/blob/Images/firefox-preview02.jpg?raw=true)
 
 ### Fix for Dash to panel
 
@@ -81,4 +81,4 @@ Just install the compact version
 ```
 
 ## Gtk theme widgets
-![screenshot02](screenshot02.png?raw=true)
+![screenshot02](https://github.com/vinceliuice/Fluent-gtk-theme/blob/Images/screenshot02.png?raw=true)
