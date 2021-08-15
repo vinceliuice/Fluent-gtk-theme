@@ -6,6 +6,14 @@ SRC_DIR="$REPO_DIR/src"
 ROOT_UID=0
 DEST_DIR=
 
+# For tweaks
+opacity=
+panel=
+window=
+blur=
+outline=
+titlebutton=
+
 # Destination directory
 if [ "$UID" -eq "$ROOT_UID" ]; then
   DEST_DIR="/usr/share/themes"
@@ -64,7 +72,13 @@ install() {
   [[ "$color" == '-dark' ]] && local ELSE_DARK="$color"
   [[ "$color" == '-light' ]] && local ELSE_LIGHT="$color"
 
-  local THEME_DIR="$dest/$name$theme$color$size"
+  if [[ "$window" == 'round' ]]; then
+    round='-round'
+  else
+    round=$window
+  fi
+
+  local THEME_DIR="$dest/$name$round$theme$color$size"
 
   [[ -d "$THEME_DIR" ]] && rm -rf "${THEME_DIR:?}"
 
@@ -77,13 +91,13 @@ install() {
 
   echo "[Desktop Entry]" >>                                                     "$THEME_DIR/index.theme"
   echo "Type=X-GNOME-Metatheme" >>                                              "$THEME_DIR/index.theme"
-  echo "Name=$name$theme$color$size" >>                                         "$THEME_DIR/index.theme"
+  echo "Name=$name$round$theme$color$size" >>                                   "$THEME_DIR/index.theme"
   echo "Comment=An Materia Gtk+ theme based on Elegant Design" >>               "$THEME_DIR/index.theme"
   echo "Encoding=UTF-8" >>                                                      "$THEME_DIR/index.theme"
   echo "" >>                                                                    "$THEME_DIR/index.theme"
   echo "[X-GNOME-Metatheme]" >>                                                 "$THEME_DIR/index.theme"
-  echo "GtkTheme=$name$theme$color$size" >>                                     "$THEME_DIR/index.theme"
-  echo "MetacityTheme=$name$theme$color$size" >>                                "$THEME_DIR/index.theme"
+  echo "GtkTheme=$name$round$theme$color$size" >>                               "$THEME_DIR/index.theme"
+  echo "MetacityTheme=$name$round$theme$color$size" >>                          "$THEME_DIR/index.theme"
   echo "IconTheme=$name${ELSE_DARK:-}" >>                                       "$THEME_DIR/index.theme"
   echo "CursorTheme=$name${ELSE_DARK:-}" >>                                     "$THEME_DIR/index.theme"
   echo "ButtonLayout=close,minimize,maximize:menu" >>                           "$THEME_DIR/index.theme"
