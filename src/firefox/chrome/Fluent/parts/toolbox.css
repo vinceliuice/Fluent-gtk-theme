@@ -19,10 +19,14 @@
 	background: var(--gnome-toolbar-background) !important;
 }
 
+:root[tabsintitlebar] #PersonalToolbar:-moz-window-inactive {
+	background: var(--gnome-inactive-headerbar-background) !important;
+}
+
 #TabsToolbar, #toolbar-menubar {
 	border: 0 !important;
 	background: var(--gnome-tabstoolbar-background) !important;
-	border-radius: 2px 2px 0 0;
+	border-radius: 3px 3px 0 0;
 	color: var(--gnome-toolbar-color) !important;
 	fill: var(--gnome-toolbar-color) !important;
 }

@@ -24,8 +24,8 @@ fi
 SASSC_OPT="-M -t expanded"
 
 THEME_NAME=Fluent
-THEME_VARIANTS=('' '-purple' '-pink' '-red' '-orange' '-yellow' '-green' '-grey')
-THEME_COLOR_VARIANTS=('default' 'purple' 'pink' 'red' 'orange' 'yellow' 'green' 'grey')
+THEME_VARIANTS=('' '-purple' '-pink' '-red' '-orange' '-yellow' '-green' '-teal' '-grey')
+THEME_COLOR_VARIANTS=('default' 'purple' 'pink' 'red' 'orange' 'yellow' 'green' 'teal' 'grey')
 COLOR_VARIANTS=('' '-light' '-dark')
 SIZE_VARIANTS=('' '-compact')
 
@@ -48,7 +48,7 @@ Usage: $0 [OPTION]...
 OPTIONS:
   -d, --dest DIR          Specify destination directory (Default: $DEST_DIR)
   -n, --name NAME         Specify theme name (Default: $THEME_NAME)
-  -t, --theme VARIANT     Specify theme color variant(s) [default|purple|pink|red|orange|yellow|green|grey|all] (Default: blue)
+  -t, --theme VARIANT     Specify theme color variant(s) [default|purple|pink|red|orange|yellow|green|teal|grey|all] (Default: blue)
   -c, --color VARIANT     Specify color variant(s) [standard|light|dark] (Default: All variants)s)
   -s, --size VARIANT      Specify size variant [standard|compact] (Default: All variants)
   --tweaks                Specify versions for tweaks [solid|float|round|blur|noborder|square]
@@ -287,8 +287,12 @@ while [[ "$#" -gt 0 ]]; do
             themes+=("${THEME_VARIANTS[6]}")
             shift
             ;;
-          grey)
+          teal)
             themes+=("${THEME_VARIANTS[7]}")
+            shift
+            ;;
+          grey)
+            themes+=("${THEME_VARIANTS[8]}")
             shift
             ;;
           all)
@@ -463,6 +467,9 @@ install_theme_color() {
         ;;
       -green)
         theme_color='green'
+        ;;
+      -teal)
+        theme_color='teal'
         ;;
       -grey)
         theme_color='grey'
