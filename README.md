@@ -60,7 +60,7 @@ Automatically install your host GTK+ theme as a Flatpak.
 - [pakitheme](https://github.com/refi64/pakitheme)
 
 ### Wallpaper
-[Install Wallpapers](https://github.com/vinceliuice/Fluent-gtk-theme/blob/Wallpaper)
+[Install Wallpapers](https://github.com/vinceliuice/Fluent-gtk-theme/tree/Wallpaper)
 
 #### Preview
 ![wallpaper](https://github.com/vinceliuice/Fluent-gtk-theme/blob/Wallpaper/wallpaper-1080p/wallpaper-default-flat.png?raw=true)
