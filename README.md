@@ -1,8 +1,25 @@
 # Fluent wallpapers
 
-### Install wallpapers for gnome
+### Install on Gnome
 
-`Will change the background according to time`
+run the following commands in the terminal:
+
+```sh
+./install-wallpapers.sh
+```
+
+```sh
+OPTIONS:
+  -t, --theme VARIANT     Specify theme variant(s) [building|mountain|flat|gradient] (Default: building variant)
+  -c, --color VARIANT     Specify color variant(s) [night|light|dark] (Default: All variant)s)
+  -s, --screen VARIANT    Specify screen variant [1080p|2k|4k] (Default: 1080p)
+  -u, --uninstall         Uninstall wallpappers
+  -h, --help              Show help
+```
+
+### Install timed backgrounds for Gnome-shell
+
+- Will change the background according to time
 
 run the following commands in the terminal:
 
