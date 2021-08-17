@@ -299,6 +299,15 @@ window.background:not(.csd) {
  ***********/
 box.vertical > widget > widget:selected { @extend %selected_items; }
 
+
+/***************
+ * MultiWriter *
+ ***************/
+window.background.csd > stack.view {
+  border-radius: 0 0 $window-radius $window-radius;
+}
+
+
 /*********
  * Pamac *
  *********/
@@ -337,5 +346,13 @@ window.background.csd {
     > viewport.frame > box.vertical > stack > scrolledwindow {
       border-top: 1px solid $divider;
     }
+  }
+}
+
+entry.search > window.background {
+  border-radius: $window-radius;
+
+  > frame {
+    > border { border: none; }
   }
 }

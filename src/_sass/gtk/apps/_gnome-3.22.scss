@@ -222,7 +222,7 @@
   // .icon-background { background-color: black; }
 
   .icon-item-background {
-    padding: 4px;
+    padding: $container-padding;
     border-radius: $bar-size;
   }
 
@@ -601,10 +601,10 @@ window.background.csd {
 
           row.activatable {
             &:selected {
-              background-image: image($primary);
-              background-position: $container-padding - 2px center;
+              background-image: url("assets/selected-line.png"), url("assets/selected-line@2.png");
+              background-position: ($container-padding - 2px) center;
               background-repeat: no-repeat;
-              background-size: 2px 24px;
+              background-size: 3px 24px;
             }
           }
 

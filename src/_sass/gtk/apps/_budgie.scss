@@ -27,6 +27,8 @@
 
   .container { padding: 0; }
 
+  separator { margin: $container-padding / 2 0; }
+
   border { border: none; }
 
   list { background-color: transparent; }
@@ -35,6 +37,10 @@
     padding: 0;
 
     &:hover { box-shadow: none; }
+
+    button {
+      @extend %button-flat-simple;
+    }
   }
 
   button.flat:not(.image-button) {
@@ -87,6 +93,10 @@
     &:hover { background-color: $divider; }
   }
 
+  scrolledwindow.sidebar.categories { // AppMenu
+    background-color: $fill;
+  }
+
   scrolledwindow.sidebar:not(.categories) { //AppMenu (Elementary)
     // min-height: 36px;
     background: none;
@@ -123,9 +133,7 @@
   }
 
   &.user-menu {
-    .container { padding: 8px; }
-
-    separator { margin: 4px 0; }
+    .container { padding: $container-padding; }
 
     list,
     row { // reset styling
@@ -136,7 +144,7 @@
 
     // top-row (user-name and avatar)
     > frame.container > box.vertical row.activatable:first-child {
-      margin-bottom: 4px;
+      margin-bottom: $container-padding / 2;
       outline-width: 0;
       border-radius: $corner-radius;
 
@@ -148,20 +156,19 @@
   }
 
   &.sound-popover {
-    separator { margin: 3px 0; }
   }
 
   &.night-light-indicator {
-    .container { padding: 8px; }
+    .container { padding: $container-padding / 2; }
+    .view-header { margin: 0 $container-padding; }
+  }
+
+  &.caffeine-popover {
+    .container { padding: $container-padding; }
   }
 
   &.places-menu {
-    .container { padding: 8px; }
-
-    // FIXME: untested
-    // .message-bar {
-    //   margin-bottom: 4px;
-    // }
+    .container { padding: $container-padding / 2; }
 
     .name-button {
       image {
@@ -183,13 +190,6 @@
       border-top: 1px solid $divider;
     }
 
-    // FIXME: untested
-    // .unlock-area {
-    //   entry { }
-    //
-    //   button { }
-    // }
-
     // use such sizes for consistency with other hard-coded dim-label sizes
     .alternative-label {
       padding: 3px;
@@ -198,9 +198,7 @@
   }
 
   &.workspace-popover {
-    .container { padding: 8px; }
-
-    separator { margin: 4px 0; }
+    .container { padding: $container-padding; }
 
     flowboxchild { padding: 0; }
   }
@@ -264,29 +262,37 @@
 // Panel
 .budgie-panel {
   transition: background-color $duration $ease-out;
-  background-color: $panel;
+  background-color: rgba($titlebar, 1);
   color: on($panel, secondary);
   font-weight: 500;
 
-  &.transparent { background-color: $scrim; }
+  &.transparent { background-color: rgba($panel, 0.8); }
 
-  button {
-    @extend %button-on-dark;
+  button, button.flat, button.image-button {
     color: on($panel, secondary);
-
+    background: none;
     min-height: 24px;
     min-width: 24px;
     padding: 0;
     border-radius: 0;
+    box-shadow: none;
+    border: none;
 
     &:hover, &:active, &:checked, &:checked:hover, &:focus { color: on($panel); }
 
     &:disabled { color: on($panel, disabled); }
 
+    &:hover {
+      background-color: $overlay-hover;
+    }
+
+    &:active {
+      background-color: $overlay-active;
+    }
+
     // Menu Button
     &.budgie-menu-launcher {
       // padding: 0 2px;
-      @extend %button-on-dark;
       color: on($panel, secondary);
       border-radius: 0;
 

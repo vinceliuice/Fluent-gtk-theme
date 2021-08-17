@@ -142,8 +142,15 @@ flowbox {
   rubberband { @extend rubberband; }
 
   flowboxchild {
-    padding: 4px;
+    padding: $container-padding;
     border-radius: $corner-radius;
+
+    &:focus {
+      background-image: url("assets/selected-line.png"), url("assets/selected-line@2.png");
+      background-position: ($container-padding - 2px) center;
+      background-repeat: no-repeat;
+      background-size: 3px 32px;
+    }
 
     &:selected { @extend %selected_items_color; }
   }
@@ -1847,7 +1854,7 @@ menubar,
 .menubar {
   -GtkWidget-window-dragging: true;
   padding: 0;
-  // box-shadow: inset 0 -1px $divider;
+  box-shadow: inset 0 -1px $divider;
   background-color: $titlebar;
   color: $titlebar-text;
 
@@ -3118,16 +3125,24 @@ list {
   border-color: $divider;
   background-color: $base;
 
-  row { padding: 2px; }
+  row { padding: $container-padding / 2; }
+
+  &.content:not(.conversation-listbox) {
+    @extend %circular_list;
+
+    > row {
+      @extend %circular_row;
+    }
+  }
 }
 
 row {
   @at-root %row_activatable, &.activatable {
     outline: none;
     background-image: image(rgba($primary, 0));
-    background-position: $container-padding / 2 center;
+    background-position: ($container-padding / 2) center;
     background-repeat: no-repeat;
-    background-size: 2px 16px;
+    background-size: 3px 16px;
     box-shadow: inset 0 0 0 9999px transparent;
 
     &:focus {
@@ -3155,7 +3170,7 @@ row {
   &:selected {
     @extend %selected_items;
     color: inherit; // for overlays
-    background-image: image($primary);
+    background-image: url("assets/selected-line.png"), url("assets/selected-line@2.png");
     transition: box-shadow $ripple-fade-out-opacity-duration $ease-out,
                 background-image $ripple-fade-out-opacity-duration $ease-out;
 
