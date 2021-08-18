@@ -73,7 +73,7 @@ Automatically install your host GTK+ theme as a Flatpak.
 [Install Wallpapers](https://github.com/vinceliuice/Fluent-gtk-theme/tree/Wallpaper)
 
 #### Preview
-![wallpaper](https://github.com/vinceliuice/Fluent-gtk-theme/blob/Wallpaper/wallpaper-1080p/wallpaper-default-flat.png?raw=true)
+![wallpaper](https://github.com/vinceliuice/Fluent-gtk-theme/blob/Images/wallpaper-view.png?raw=true)
 
 ### Firefox theme
 [Install Firefox theme](src/firefox)
