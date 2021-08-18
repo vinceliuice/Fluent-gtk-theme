@@ -123,8 +123,7 @@ $panel_transition_duration: 250ms; // same as the overview transition duration
     }
 
     &#panelActivities {
-      $size_suffix: if($laptop == 'true', '-small', '');
-      background-image: url("assets/activities#{$size_suffix}.svg");
+      background-image: url("assets/activities.svg");
       background-position: center center;
       background-repeat: no-repeat;
       background-size: auto;
@@ -136,6 +135,10 @@ $panel_transition_duration: 250ms; // same as the overview transition duration
       &:overview {
         background-color: transparent;
         box-shadow: none;
+
+        @if $variant == 'light' and $panel == 'light' {
+          background-image: url("assets/activities-white.svg") !important;
+        }
       }
     }
   }

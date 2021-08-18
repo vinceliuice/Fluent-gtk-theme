@@ -1846,6 +1846,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 #panel .panel-button#panelActivities:overview {
   background-color: transparent;
   box-shadow: none;
+  background-image: url("assets/activities-white.svg") !important;
 }
 
 #panel.unlock-screen, #panel.login-screen, #panel.lock-screen, #panel:overview {

@@ -20,7 +20,7 @@
       margin: ($container-padding - 2px) 2px;
     }
 
-    button:not(.text-button) {
+    button:not(.text-button):not(.suggested-action):not(.destructive-action) {
       @extend %titlebar-button;
       margin: $container-padding 2px;
       border-radius: $corner-radius;

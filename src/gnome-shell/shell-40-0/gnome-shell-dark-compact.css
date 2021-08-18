@@ -1831,7 +1831,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 #panel .panel-button#panelActivities {
-  background-image: url("assets/activities-small.svg");
+  background-image: url("assets/activities.svg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: auto;

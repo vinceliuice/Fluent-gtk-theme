@@ -13,6 +13,7 @@ window=
 blur=
 outline=
 titlebutton=
+icon='-default'
 
 # Destination directory
 if [ "$UID" -eq "$ROOT_UID" ]; then
@@ -51,6 +52,7 @@ OPTIONS:
   -t, --theme VARIANT     Specify theme color variant(s) [default|purple|pink|red|orange|yellow|green|teal|grey|all] (Default: blue)
   -c, --color VARIANT     Specify color variant(s) [standard|light|dark] (Default: All variants)s)
   -s, --size VARIANT      Specify size variant [standard|compact] (Default: All variants)
+  -i, --icon VARIANT      Specify icon variant(s) for shell panel [default|apple|simple|gnome|ubuntu|arch|manjaro|fedora|debian|void|opensuse|popos|mxlinux|zorin] (Default: Windows)
   --tweaks                Specify versions for tweaks [solid|float|round|blur|noborder|square]
                           solid:    no transparency version
                           float:    floating panel
@@ -68,6 +70,7 @@ install() {
   local theme="$3"
   local color="$4"
   local size="$5"
+  local icon="$6"
 
   [[ "$color" == '-dark' ]] && local ELSE_DARK="$color"
   [[ "$color" == '-light' ]] && local ELSE_LIGHT="$color"
@@ -122,6 +125,11 @@ install() {
   cp -r "${SRC_DIR}/gnome-shell/common-assets"                                  "$THEME_DIR/gnome-shell/assets"
   cp -r "${SRC_DIR}/gnome-shell/assets${ELSE_DARK:-}/"*.svg                     "$THEME_DIR/gnome-shell/assets"
   cp -r "${SRC_DIR}/gnome-shell/theme$theme/"*.svg                              "$THEME_DIR/gnome-shell/assets"
+  cp -r "${SRC_DIR}/gnome-shell/assets${ELSE_DARK:-}/activities/activities${icon}.svg" "$THEME_DIR/gnome-shell/assets/activities.svg"
+
+  if [[ "$color" = "-light" ]] ; then
+    cp -r "${SRC_DIR}/gnome-shell/assets-dark/activities/activities${icon}.svg" "$THEME_DIR/gnome-shell/assets/activities-white.svg"
+  fi
 
   if [[ "$opacity" = "solid" ]] ; then
     if [[ "$window" = "round" ]] ; then
@@ -297,6 +305,77 @@ while [[ "$#" -gt 0 ]]; do
             ;;
           all)
             themes+=("${THEME_VARIANTS[@]}")
+            shift
+            ;;
+          -*)
+            break
+            ;;
+          *)
+            echo "ERROR: Unrecognized theme variant '$1'."
+            echo "Try '$0 --help' for more information."
+            exit 1
+            ;;
+        esac
+      done
+      ;;
+    -i|--icon)
+      shift
+      for variant in "$@"; do
+        case "$variant" in
+          default)
+            icon='-default'
+            shift
+            ;;
+          apple)
+            icon='-apple'
+            shift
+            ;;
+          simple)
+            icon='-simple'
+            shift
+            ;;
+          gnome)
+            icon='-gnome'
+            shift
+            ;;
+          ubuntu)
+            icon='-ubuntu'
+            shift
+            ;;
+          arch)
+            icon='-arch'
+            shift
+            ;;
+          manjaro)
+            icon='-manjaro'
+            shift
+            ;;
+          fedora)
+            icon='-fedora'
+            shift
+            ;;
+          debian)
+            icon='-debian'
+            shift
+            ;;
+          void)
+            icon='-void'
+            shift
+            ;;
+          opensuse)
+            icon='-opensuse'
+            shift
+            ;;
+          popos)
+            icon='-popos'
+            shift
+            ;;
+          mxlinux)
+            icon='-mxlinux'
+            shift
+            ;;
+          zorin)
+            icon='-zorin'
             shift
             ;;
           -*)
@@ -515,7 +594,7 @@ install_theme() {
   for theme in "${themes[@]}"; do
     for color in "${colors[@]}"; do
       for size in "${sizes[@]}"; do
-        install "${dest:-$DEST_DIR}" "${_name:-$THEME_NAME}" "$theme" "$color" "$size"
+        install "${dest:-$DEST_DIR}" "${_name:-$THEME_NAME}" "$theme" "$color" "$size" "$icon"
       done
     done
   done
