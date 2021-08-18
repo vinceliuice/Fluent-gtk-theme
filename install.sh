@@ -48,11 +48,19 @@ Usage: $0 [OPTION]...
 
 OPTIONS:
   -d, --dest DIR          Specify destination directory (Default: $DEST_DIR)
+
   -n, --name NAME         Specify theme name (Default: $THEME_NAME)
+
   -t, --theme VARIANT     Specify theme color variant(s) [default|purple|pink|red|orange|yellow|green|teal|grey|all] (Default: blue)
+
   -c, --color VARIANT     Specify color variant(s) [standard|light|dark] (Default: All variants)s)
+
   -s, --size VARIANT      Specify size variant [standard|compact] (Default: All variants)
-  -i, --icon VARIANT      Specify icon variant(s) for shell panel [default|apple|simple|gnome|ubuntu|arch|manjaro|fedora|debian|void|opensuse|popos|mxlinux|zorin] (Default: Windows)
+
+  -i, --icon VARIANT      Specify icon variant(s) for shell panel
+                          [default|apple|simple|gnome|ubuntu|arch|manjaro|fedora|debian|void|opensuse|popos|mxlinux|zorin]
+                          (Default: Windows)
+
   --tweaks                Specify versions for tweaks [solid|float|round|blur|noborder|square]
                           solid:    no transparency version
                           float:    floating panel
@@ -60,6 +68,7 @@ OPTIONS:
                           blur:     blur version for 'Blur-Me'
                           noborder: windows and menu with no border
                           square:   square windows button
+
   -h, --help              Show help
 EOF
 }
