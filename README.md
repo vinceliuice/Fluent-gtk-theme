@@ -59,7 +59,7 @@ Run the following commands in the terminal:
 -h, --help              Show help
 ```
 
-![Fluent-view](https://github.com/vinceliuice/Fluent-gtk-theme/blob/Images/Fluent-view.png?raw=true)
+![theme-view](https://github.com/vinceliuice/Fluent-gtk-theme/blob/Images/theme-view.png?raw=true)
 
 > For more information, run: `./install.sh --help`
 
@@ -79,8 +79,7 @@ Automatically install your host GTK+ theme as a Flatpak.
 [Install Firefox theme](src/firefox)
 
 #### Preview
-![preview01](https://github.com/vinceliuice/Fluent-gtk-theme/blob/Images/firefox-preview01.jpg?raw=true)
-![preview02](https://github.com/vinceliuice/Fluent-gtk-theme/blob/Images/firefox-preview02.jpg?raw=true)
+![firefox-view](https://github.com/vinceliuice/Fluent-gtk-theme/blob/Images/firefox-view.png?raw=true)
 
 ### Fix for Dash to panel
 
