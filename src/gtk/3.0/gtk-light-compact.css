@@ -726,8 +726,12 @@ button.osd {
   padding: 7px 11px;
 }
 
-button.osd.image-button {
+button.osd.image-button, button.osd.circular {
   padding: 7px;
+}
+
+button.osd.circular {
+  margin: 2px;
 }
 
 button.osd:disabled {
@@ -856,6 +860,14 @@ window.csd > box.vertical > box.vertical > toolbar.horizontal > toolitem > box.h
 window.solid-csd > box.vertical > box.vertical > toolbar.horizontal > toolitem > .linked > button,
 window.solid-csd > box.vertical > box.vertical > toolbar.horizontal > toolitem > box.horizontal > button, .nautilus-window headerbar revealer > button, filechooser #pathbarbox > stack > box > button, headerbar button.titlebutton:not(.suggested-action):not(.destructive-action), button.close, button.circular {
   border-radius: 9999px;
+}
+
+.raven .expander-button:not(:hover):not(:focus):not(:active):not(:checked), window.background > box.vertical > toolbar.primary-toolbar > toolitem > box.horizontal:not(.linked) > button.toggle:not(:hover):not(:focus):not(:active):not(:checked),
+window.background > box.vertical > toolbar.primary-toolbar > toolitem > .linked > button:not(:hover):not(:focus):not(:active):not(:checked):not(.toggle):not(.raised):not(.flat), window.background > box.vertical > toolbar.primary-toolbar > toolitem button.flat.scale:not(:hover):not(:focus):not(:active):not(:checked), window.background > box.vertical > toolbar.primary-toolbar > toolitem > .linked > button.image-button.raised:not(:hover):not(:focus):not(:active):not(:checked), window.csd > box.vertical > box.vertical > toolbar.horizontal > toolitem > .linked > button:not(:hover):not(:focus):not(:active):not(:checked),
+window.csd > box.vertical > box.vertical > toolbar.horizontal > toolitem > box.horizontal > button:not(:hover):not(:focus):not(:active):not(:checked),
+window.solid-csd > box.vertical > box.vertical > toolbar.horizontal > toolitem > .linked > button:not(:hover):not(:focus):not(:active):not(:checked),
+window.solid-csd > box.vertical > box.vertical > toolbar.horizontal > toolitem > box.horizontal > button:not(:hover):not(:focus):not(:active):not(:checked), .nautilus-window headerbar revealer > button:not(:hover):not(:focus):not(:active):not(:checked), filechooser #pathbarbox > stack > box > button:not(:hover):not(:focus):not(:active):not(:checked), headerbar button.titlebutton:not(:hover):not(:focus):not(:active):not(:checked):not(.suggested-action):not(.destructive-action), button.close:not(:hover):not(:focus):not(:active):not(:checked), button.circular:not(:hover):not(:focus):not(:active):not(:checked) {
+  border-bottom-color: rgba(0, 0, 0, 0.08);
 }
 
 .pluma-window paned.horizontal box.vertical box.horizontal button.flat, .gedit-document-panel row button.flat, .nautilus-window .floating-bar button, placessidebar.sidebar row button.sidebar-button, spinbutton.vertical button, spinbutton:not(.vertical) button {
@@ -5006,6 +5018,11 @@ window.background.csd.unified headerbar.titlebar.windowhandle viewswitchertitle 
   margin: 0;
   padding: 0;
   border-radius: 0;
+}
+
+frame#hourly-forecast-frame > border,
+frame#daily-forecast-frame > border {
+  border: 1px solid rgba(0, 0, 0, 0.15);
 }
 
 /***************

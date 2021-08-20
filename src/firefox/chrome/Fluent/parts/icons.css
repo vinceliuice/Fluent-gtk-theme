@@ -249,7 +249,7 @@ menuitem[type="radio"][disabled="true"] .menu-iconic-icon {
 	list-style-image: url("../icons/edit-find-symbolic.svg") !important;
 }
 /* New window button */
-#nav-bar #new-window-button {
+#new-window-button {
 	list-style-image: url("../icons/window-new-symbolic.svg") !important;
 }
 /* Bookmarks menu button */
@@ -395,7 +395,7 @@ menuitem[type="radio"][disabled="true"] .menu-iconic-icon {
 	list-style-image: url("../icons/forget-history-symbolic.svg") !important;
 }
 
-#nav-bar #sync-button {
+#sync-button {
 	list-style-image: url("../icons/tab-sync-symbolic.svg") !important;
 }
 
@@ -537,8 +537,9 @@ menuitem[type="radio"][disabled="true"] .menu-iconic-icon {
 	#reload-button .toolbarbutton-icon,
 	#stop-button .toolbarbutton-icon,
 	#downloads-button .toolbarbutton-icon,
-	#nav-bar #sync-button .toolbarbutton-icon,
-	#nav-bar #new-window-button .toolbarbutton-icon,
+	#sync-button .toolbarbutton-icon,
+	#new-window-button .toolbarbutton-icon,
+	#screenshot-button .toolbarbutton-icon,
 	#tracking-protection-icon,
 	#identity-icon,
 	#pageActionButton,

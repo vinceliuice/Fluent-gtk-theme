@@ -746,6 +746,11 @@ window.background.csd.unified {
   }
 }
 
+frame#hourly-forecast-frame,
+frame#daily-forecast-frame {
+  > border { border: 1px solid if($variant == 'light', rgba(black, 0.15), rgba(white, 0.15)); }
+}
+
 
 /***************
  * Gnome Music *

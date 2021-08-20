@@ -543,7 +543,9 @@ button {
   &.osd {
     padding: ($large-size - 24px) / 2 ($large-size - 16px) / 2;
 
-    &.image-button { padding: ($large-size - 24px) / 2; }
+    &.image-button, &.circular { padding: ($large-size - 24px) / 2; }
+
+    &.circular { margin: 2px; }
 
     &:disabled { opacity: 0; }
   }
@@ -649,6 +651,14 @@ button {
   &.close,
   &.circular { // The Bloody Circul Button
     border-radius: $circular-radius;
+
+    &:not(:hover):not(:focus):not(:active):not(:checked) {
+      @if $variant == "light" {
+        border-bottom-color: $border;
+      } @else {
+        border-color: $border;
+      }
+    }
 
     // label { padding: 0; }
   }

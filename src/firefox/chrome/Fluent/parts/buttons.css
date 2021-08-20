@@ -59,12 +59,17 @@ button.close,
 	padding: 0 0 !important;
 }
 
-/* Buttons with margins */
+/* Buttons with margins on nav-bar*/
 #nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton) {
 	margin: 0 2px !important;
 	background: transparent !important;
 	border: none !important;
 	--toolbarbutton-inner-padding: 0 !important;
+}
+
+/* animatable stop/flash button */
+.toolbarbutton-animatable-box {
+	margin: 0 0 2px 9px !important;
 }
 
 .notification-button,
