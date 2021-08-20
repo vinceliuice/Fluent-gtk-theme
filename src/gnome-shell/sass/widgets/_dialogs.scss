@@ -12,7 +12,7 @@
   @if $opacity == 'default' {
     border-image: url("assets/modal.svg") 24 162 28 28;
   } @else {
-    border-image: url("assets/modal.svg") 24 162 28 28;
+    border-image: url("assets/modal-solid.svg") 24 162 28 28;
   }
 
   .modal-dialog-content-box {
