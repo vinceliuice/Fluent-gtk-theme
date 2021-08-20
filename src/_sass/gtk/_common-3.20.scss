@@ -547,6 +547,27 @@ button {
 
     &.circular { margin: 2px; }
 
+    &.remove-button {
+      min-width: 25px;
+      padding-top: 0;
+      padding-bottom: 0;
+      margin: $container-padding / 2;
+      box-shadow: none;
+      border: none;
+      background-color: $red-a200;
+      color: white;
+
+      &:hover {
+        background-color: $red-a100;
+        color: white;
+      }
+
+      &:active {
+        background-color: $red-800;
+        color: white;
+      }
+    }
+
     &:disabled { opacity: 0; }
   }
 

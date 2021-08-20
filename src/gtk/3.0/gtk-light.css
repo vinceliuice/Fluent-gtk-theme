@@ -734,6 +734,27 @@ button.osd.circular {
   margin: 2px;
 }
 
+button.osd.remove-button {
+  min-width: 25px;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin: 3px;
+  box-shadow: none;
+  border: none;
+  background-color: #FF5252;
+  color: white;
+}
+
+button.osd.remove-button:hover {
+  background-color: #FF8A80;
+  color: white;
+}
+
+button.osd.remove-button:active {
+  background-color: #C62828;
+  color: white;
+}
+
 button.osd:disabled {
   opacity: 0;
 }
