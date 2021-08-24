@@ -3,75 +3,113 @@
 // Dash to Dock
 //
 
+// Scrollview style
+.bottom #dashtodockDashScrollview,
+.top #dashtodockDashScrollview {
+  -st-hfade-offset: 24px;
+}
+
+.left #dashtodockDashScrollview,
+.right #dashtodockDashScrollview {
+  -st-vfade-offset: 24px;
+}
+
 #dashtodockContainer {
-  background: transparent;
+  background-color: transparent;
+  box-shadow: none;
 
-  #dash,
-  &:overview #dash {
-    background: transparent;
+  .number-overlay {
+    color: $light_fg_color;
+    background-color: rgba(black, 0.75);
+    text-align: center;
   }
 
-  &.extended {
+  .notification-badge {
+    color: $inverse_fg_color;
+    background-color: $primary_color;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.25);
+    border-radius: $circular_radius;
+    margin: 2px 3px 5px;
+    padding: 0.2em 0.6em;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  @each $_pos, $b_pos, $_shadow in (top, bottom, 0 -1px),
+                                   (bottom, top, 0 1px),
+                                   (left, right, -1px 0),
+                                   (right, left, 1px 0) {
+    &.#{$_pos}.shrink #dash,
+    &.#{$_pos}.shrink:overview #dash,
+    &.#{$_pos}.straight-corner #dash,
+    &.#{$_pos}.shrink.straight-corner #dash,
+    &.#{$_pos}.extended #dash,
+    &.#{$_pos}.extended:overview #dash {
+      margin: 0 !important;
+      padding: 0 !important;
+
+      .dash-background {
+        border-radius: 0;
+        box-shadow: inset #{$_shadow} rgba(white, 0.05);
+      }
+    }
+  }
+
+  &.left,
+  &.right {
     #dash {
-      padding: 0;
-      margin: 0;
-      background-color: $panel_bg_color;
+      margin-top: 0 !important;
+      padding: $dash_padding !important;
 
       .dash-background {
-        background: none;
-        padding: 0;
-        margin: 0;
+        margin-bottom: 0 !important;
+        padding: $dash_padding / 2 $dash_padding !important;
       }
-    }
 
-    &:overview #dash {
-      background-color: rgba(white, 0.2);
-      margin-bottom: 0;
-
-      .dash-background {
-        background: none;
-        margin-bottom: 0;
+      .dash-item-container .app-well-app, .show-apps {
+        padding: $dash_spacing $container-padding !important;
       }
     }
   }
 
-  #dash .dash-background {
-    background-color: $panel_bg_color;
-    background-clip: padding-box;
-    box-shadow: 0 3px 3px rgba(black, 0.1);
-    margin: 0 6px $dash_bottom_margin 6px !important;
-    padding: $dash_padding 9px !important;
-  }
-
-  .dash-separator {
-    width: 0 !important;
-    margin: 0 0 !important;
+  #dash { // default-mode
     background: none;
-  }
+    box-shadow: none;
 
-  .show-apps,
-  .app-well-app {
-    .overview-icon {
-      color: $panel_secondary_fg_color !important;
+    .dash-background {
+      background-color: $panel_bg_color;
+      background-clip: padding-box;
+      padding: $dash_padding $dash_padding / 2 !important;
     }
 
-    &:hover .overview-icon,
-    &:focus .overview-icon,
-    &:selected .overview-icon {
-      background-color: $panel_divider_color !important;
-      color: $panel_fg_color !important;
-      border: 1px solid $panel_border_color;
+    .app-well-app-running-dot {
+      background-color: $panel_hint_fg_color !important;
     }
 
-    &:active .overview-icon,
-    &:checked .overview-icon {
-      background-color: $panel_divider_color !important;
-      color: $panel_fg_color !important;
+    StWidget.focused .app-well-app-running-dot {
+      background-color: $primary_color;
     }
-  }
 
-  .app-well-app-running-dot {
-    background-color: $panel_hint_fg_color !important;
+    .show-apps,
+    .app-well-app {
+      .overview-icon {
+        color: $panel_secondary_fg_color !important;
+      }
+
+      &:hover .overview-icon,
+      &:focus .overview-icon,
+      &:selected .overview-icon {
+        background-color: $panel_divider_color !important;
+        color: $panel_fg_color !important;
+        border: 1px solid $panel_border_color;
+      }
+
+      &:active .overview-icon,
+      &:checked .overview-icon {
+        background-color: $panel_divider_color !important;
+        color: $panel_fg_color !important;
+      }
+    }
   }
 
   StWidget.focused {
@@ -164,12 +202,59 @@
     }
   }
 
+  &.extended:overview, // overview-mode #3
   &.opaque.extended:overview,
   &.transparent.extended:overview {
-    #dash .dash-background {
-      background-color: rgba(white, 0.2);
+    #dash {
+      background: none;
+    }
+
+    .dash-background {
+      background-color: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
     }
   }
+
+  &.running-dots,
+  &.dashtodock {
+    .dash-item-container > StButton {
+      transition-duration: 250ms;
+      background-size: contain;
+    }
+  }
+
+  &.shrink,
+  &.dashtodock {
+    .dash-item-container > StButton {
+       padding: 1px 2px;
+    }
+  }
+
+  &.extended,
+  &.extended:overview {
+    .app-well-app,
+    .show-apps {
+      .overview-icon {
+        border-radius: $buttons_radius;
+      }
+    }
+  }
+
+  .metro .overview-icon {
+    border-radius: 0;
+  }
+}
+
+.dashtodock-app-well-preview-menu-item {
+  padding: 1em 1em 0.5em 1em;
+}
+
+#dashtodockPreviewSeparator.popup-separator-menu-item-horizontal {
+  width: 1px;
+  height: auto;
+  border-right-width: 1px;
+  margin: 32px 0;
 }
 
 //

@@ -135,6 +135,7 @@ $panel_transition_duration: 250ms; // same as the overview transition duration
       &:overview {
         background-color: transparent;
         box-shadow: none;
+        border: none;
 
         @if $variant == 'light' and $panel == 'light' {
           background-image: url("assets/activities-white.svg") !important;
