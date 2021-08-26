@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <metacity_theme>
 <info>
-  <name>Orchis</name>
+  <name>Fluent</name>
   <author>vinceliucie</author>
   <copyright>GPL</copyright>
   <date>2020</date>
-  <description>Orchis Metacity theme</description>
+  <description>Fluent Metacity theme</description>
 </info>
 
 <!-- meaningful constants -->
@@ -16,13 +16,15 @@
 <constant name="C_highlight_unfocused" value="gtk:custom(wm_highlight,gtk:base[NORMAL])"/>
 <constant name="C_title_focused" value="gtk:custom(wm_title,gtk:fg[NORMAL])"/>
 <constant name="C_title_unfocused" value="gtk:custom(wm_unfocused_title,gtk:fg[INSENSITIVE])"/>
+<constant name="C_button_close_bg_prelight" value="gtk:custom(wm_button_close_hover_bg,#E57373)" />
+<constant name="C_button_close_bg_pressed" value="gtk:custom(wm_button_close_active_bg,#E53935)" />
 
 <!-- geometries -->
 
-<frame_geometry name="normal" title_scale="medium" rounded_top_left="1" rounded_top_right="1">
-  <distance name="left_width" value="2"/>
-  <distance name="right_width" value="2"/>
-  <distance name="bottom_height" value="2"/>
+<frame_geometry name="normal" title_scale="medium" rounded_top_left="3" rounded_top_right="3">
+  <distance name="left_width" value="0"/>
+  <distance name="right_width" value="0"/>
+  <distance name="bottom_height" value="0"/>
   <distance name="left_titlebar_edge" value="0"/>
   <distance name="right_titlebar_edge" value="0"/>
   <distance name="title_vertical_pad" value="13"/>
@@ -56,9 +58,9 @@
 </frame_geometry>
 
 <frame_geometry name="border" has_title="false" rounded_top_left="false" rounded_top_right="false" parent="normal">
-  <distance name="left_width" value="2"/>
-  <distance name="right_width" value="2"/>
-  <distance name="bottom_height" value="2"/>
+  <distance name="left_width" value="0"/>
+  <distance name="right_width" value="0"/>
+  <distance name="bottom_height" value="0"/>
   <distance name="title_vertical_pad" value="2"/>
   <border name="title_border" left="10" right="10" top="0" bottom="0"/>
   <border name="button_border" left="0" right="0" top="0" bottom="0"/>
@@ -73,7 +75,7 @@
   <border name="title_border" left="0" right="0" top="0" bottom="0"/>
 </frame_geometry>
 
-<frame_geometry name="attached" hide_buttons="true" rounded_bottom_left="1" rounded_bottom_right="1" parent="normal">
+<frame_geometry name="attached" hide_buttons="true" rounded_bottom_left="3" rounded_bottom_right="3" parent="normal">
   <distance name="title_vertical_pad" value="4"/>
 </frame_geometry>
 
@@ -129,12 +131,12 @@
 
 <draw_ops name="titlebar_focused">
   <include name="entire_background_focused"/>
-  <include name="highlight_focused"/>
+  <!-- <include name="highlight_focused"/> -->
 </draw_ops>
 
 <draw_ops name="titlebar_unfocused">
   <include name="entire_background_unfocused"/>
-  <include name="highlight_unfocused"/>
+  <!-- <include name="highlight_unfocused"/> -->
 </draw_ops>
 
 <!-- button icons -->
@@ -146,11 +148,13 @@
 </draw_ops>
 
 <draw_ops name="close_focused_prelight">
-  <include name="close_focused"/>
+  <image filename="assets/button.svg" x="(width - object_width) / 2" y="(height - object_height) / 2" width="object_width" height="object_height" alpha="1" colorize="C_button_close_bg_prelight"/>
+  <image filename="assets/close.svg" x="(width - object_width) / 2" y="(height - object_height) / 2" width="object_width" height="object_height" alpha="1" colorize="#FFFFFF"/>
 </draw_ops>
 
 <draw_ops name="close_focused_pressed">
-  <include name="close_focused"/>
+  <image filename="assets/button.svg" x="(width - object_width) / 2" y="(height - object_height) / 2" width="object_width" height="object_height" alpha="1" colorize="C_button_close_bg_pressed"/>
+  <image filename="assets/close.svg" x="(width - object_width) / 2" y="(height - object_height) / 2" width="object_width" height="object_height" alpha="1" colorize="#FFFFFF"/>
 </draw_ops>
 
 <draw_ops name="close_unfocused">

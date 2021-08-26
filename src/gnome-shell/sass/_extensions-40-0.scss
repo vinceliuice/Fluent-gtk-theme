@@ -35,12 +35,10 @@
     text-align: center;
   }
 
-  @each $_pos, $b_pos, $_shadow in (top, bottom, 0 -1px),
-                                   (bottom, top, 0 1px),
-                                   (left, right, -1px 0),
-                                   (right, left, 1px 0) {
-    &.#{$_pos}.shrink #dash,
-    &.#{$_pos}.shrink:overview #dash,
+  @each $_pos, $b_pos in (top, bottom),
+                         (bottom, top),
+                         (left, right),
+                         (right, left) {
     &.#{$_pos}.straight-corner #dash,
     &.#{$_pos}.shrink.straight-corner #dash,
     &.#{$_pos}.extended #dash,
@@ -49,25 +47,89 @@
       padding: 0 !important;
 
       .dash-background {
-        border-radius: 0;
-        box-shadow: inset #{$_shadow} rgba(white, 0.05);
+        margin: 0 !important;
+        margin-bottom: 0 !important;
       }
+
+      .dash-item-container .app-well-app, .show-apps {
+        margin: 0 !important;
+      }
+    }
+  }
+
+  &.extended #dash,
+  &.straight-corner #dash {
+    .dash-background {
+      border-radius: 0;
+    }
+  }
+
+  &.shrink #dash {
+    .dash-background {
+      padding: 0 0 !important;
+      border-radius: $menu_radius;
+    }
+
+    .dash-item-container .app-well-app, .show-apps {
+      margin: 0 !important;
+      padding: 0 0 0 !important;
     }
   }
 
   &.left,
   &.right {
     #dash {
-      margin-top: 0 !important;
-      padding: $dash_padding !important;
+      .dash-item-container .app-well-app {
+        padding: $dash_spacing $container-padding !important;
+      }
 
+      .show-apps {
+        padding-bottom: $container-padding !important;
+      }
+    }
+
+    &.shrink #dash {
+      .dash-item-container .app-well-app, .show-apps {
+        margin: 0 !important;
+        padding: 0 0 0 !important;
+      }
+    }
+
+    &.extended #dash,
+    &.straight-corner #dash {
+      .dash-item-container .app-well-app, .show-apps {
+        padding: $dash_spacing $dash_padding !important;
+      }
+    }
+  }
+
+  &.top,
+  &.bottom {
+    #dash {
       .dash-background {
-        margin-bottom: 0 !important;
-        padding: $dash_padding / 2 $dash_padding !important;
+        padding: $dash_padding $dash_padding / 2 !important;
+      }
+    }
+
+    &.shrink #dash {
+      .dash-background {
+        padding: 0 0 !important;
       }
 
       .dash-item-container .app-well-app, .show-apps {
-        padding: $dash_spacing $container-padding !important;
+        margin: 0 !important;
+        padding: 0 0 $dash_bottom_margin !important;
+      }
+    }
+
+    &.extended #dash,
+    &.straight-corner #dash {
+      .dash-separator {
+        margin: 0 ($dash_spacing + ($dash_padding / 2)) !important;
+      }
+
+      .dash-item-container .app-well-app, .show-apps {
+        padding: $dash_padding $dash_spacing !important;
       }
     }
   }
@@ -79,7 +141,6 @@
     .dash-background {
       background-color: $panel_bg_color;
       background-clip: padding-box;
-      padding: $dash_padding $dash_padding / 2 !important;
     }
 
     .app-well-app-running-dot {
@@ -110,6 +171,10 @@
         color: $panel_fg_color !important;
       }
     }
+  }
+
+  .dash-separator {
+    background-color: rgba($panel_fg_color, 0.15) !important;
   }
 
   StWidget.focused {

@@ -206,8 +206,15 @@ install() {
 
     mkdir -p                                                                    "$THEME_DIR/metacity-1"
     cp -r "$SRC_DIR/metacity-1/metacity-theme-2${color}.xml"                    "$THEME_DIR/metacity-1/metacity-theme-2.xml"
-    cp -r "$SRC_DIR/metacity-1/metacity-theme-3.xml"                            "$THEME_DIR/metacity-1"
-    cp -r "$SRC_DIR/metacity-1/assets"                                          "$THEME_DIR/metacity-1"
+
+    if [[ "$window" = "round" ]] ; then
+      cp -r "$SRC_DIR/metacity-1/metacity-theme-3-round.xml"                    "$THEME_DIR/metacity-1/metacity-theme-3.xml"
+      cp -r "$SRC_DIR/metacity-1/assets-round"                                  "$THEME_DIR/metacity-1/assets"
+    else
+      cp -r "$SRC_DIR/metacity-1/metacity-theme-3.xml"                          "$THEME_DIR/metacity-1"
+      cp -r "$SRC_DIR/metacity-1/assets"                                        "$THEME_DIR/metacity-1"
+    fi
+
     cp -r "$SRC_DIR/metacity-1/thumbnail${ELSE_DARK:-}.png"                     "$THEME_DIR/metacity-1/thumbnail.png"
     cd "$THEME_DIR/metacity-1" && ln -s metacity-theme-2.xml metacity-theme-1.xml
   fi
@@ -264,7 +271,7 @@ while [[ "$#" -gt 0 ]]; do
             break
             ;;
           *)
-            echo "ERROR: Unrecognized panel variant '$1'."
+            echo "ERROR: Unrecognized tweaks variant '$1'."
             echo "Try '$0 --help' for more information."
             exit 1
             ;;

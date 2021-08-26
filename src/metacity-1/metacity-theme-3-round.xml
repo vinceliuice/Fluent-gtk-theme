@@ -1,28 +1,30 @@
 <?xml version="1.0"?>
 <metacity_theme>
 <info>
-  <name>Fluent</name>
+  <name>Fluent-round</name>
   <author>vinceliucie</author>
   <copyright>GPL</copyright>
   <date>2020</date>
-  <description>Fluent Metacity theme</description>
+  <description>Fluent-round Metacity theme</description>
 </info>
 
 <!-- meaningful constants -->
 
-<constant name="C_titlebar_focused" value="#e0e0e0"/>
-<constant name="C_titlebar_unfocused" value="#d6d6d6"/>
-<constant name="C_highlight_focused" value="blend/#e0e0e0/#ffffff/0.4"/>
-<constant name="C_highlight_unfocused" value="blend/#d6d6d6/#ffffff/0.4"/>
-<constant name="C_title_focused" value="blend/#e0e0e0/#000000/0.87"/>
-<constant name="C_title_unfocused" value="blend/#d6d6d6/#000000/0.6"/>
+<constant name="C_titlebar_focused" value="gtk:custom(wm_bg,gtk:bg[NORMAL])"/>
+<constant name="C_titlebar_unfocused" value="gtk:custom(wm_unfocused_bg,gtk:bg[NORMAL])"/>
+<constant name="C_highlight_focused" value="gtk:custom(wm_highlight,gtk:base[NORMAL])"/>
+<constant name="C_highlight_unfocused" value="gtk:custom(wm_highlight,gtk:base[NORMAL])"/>
+<constant name="C_title_focused" value="gtk:custom(wm_title,gtk:fg[NORMAL])"/>
+<constant name="C_title_unfocused" value="gtk:custom(wm_unfocused_title,gtk:fg[INSENSITIVE])"/>
+<constant name="C_button_close_bg_prelight" value="gtk:custom(wm_button_close_hover_bg,#E57373)" />
+<constant name="C_button_close_bg_pressed" value="gtk:custom(wm_button_close_active_bg,#E53935)" />
 
 <!-- geometries -->
 
-<frame_geometry name="normal" title_scale="medium" rounded_top_left="4" rounded_top_right="4">
-  <distance name="left_width" value="2"/>
-  <distance name="right_width" value="2"/>
-  <distance name="bottom_height" value="2"/>
+<frame_geometry name="normal" title_scale="medium" rounded_top_left="8" rounded_top_right="8">
+  <distance name="left_width" value="0"/>
+  <distance name="right_width" value="0"/>
+  <distance name="bottom_height" value="0"/>
   <distance name="left_titlebar_edge" value="0"/>
   <distance name="right_titlebar_edge" value="0"/>
   <distance name="title_vertical_pad" value="13"/>
@@ -56,9 +58,9 @@
 </frame_geometry>
 
 <frame_geometry name="border" has_title="false" rounded_top_left="false" rounded_top_right="false" parent="normal">
-  <distance name="left_width" value="2"/>
-  <distance name="right_width" value="2"/>
-  <distance name="bottom_height" value="2"/>
+  <distance name="left_width" value="0"/>
+  <distance name="right_width" value="0"/>
+  <distance name="bottom_height" value="0"/>
   <distance name="title_vertical_pad" value="2"/>
   <border name="title_border" left="10" right="10" top="0" bottom="0"/>
   <border name="button_border" left="0" right="0" top="0" bottom="0"/>
@@ -73,7 +75,7 @@
   <border name="title_border" left="0" right="0" top="0" bottom="0"/>
 </frame_geometry>
 
-<frame_geometry name="attached" hide_buttons="true" rounded_bottom_left="4" rounded_bottom_right="4" parent="normal">
+<frame_geometry name="attached" hide_buttons="true" rounded_bottom_left="3" rounded_bottom_right="3" parent="normal">
   <distance name="title_vertical_pad" value="4"/>
 </frame_geometry>
 
@@ -82,16 +84,26 @@
 <!-- title -->
 
 <draw_ops name="title_focused">
-  <title
+  <title version="< 3.1"
     x="(0 `max` ((width - title_width) / 2))"
     y="(0 `max` ((height - title_height) / 2))"
+    color="C_title_focused"/>
+  <title version=">= 3.1"
+    x="(0 `max` ((frame_x_center - title_width / 2) `min` (width - title_width)))"
+    y="(0 `max` ((height - title_height) / 2))"
+    ellipsize_width="width"
     color="C_title_focused"/>
 </draw_ops>
 
 <draw_ops name="title_unfocused">
-  <title
+  <title version="< 3.1"
     x="(0 `max` ((width - title_width) / 2))"
     y="(0 `max` ((height - title_height) / 2))"
+    color="C_title_unfocused"/>
+  <title version=">= 3.1"
+    x="(0 `max` ((frame_x_center - title_width / 2) `min` (width - title_width)))"
+    y="(0 `max` ((height - title_height) / 2))"
+    ellipsize_width="width"
     color="C_title_unfocused"/>
 </draw_ops>
 
@@ -119,12 +131,12 @@
 
 <draw_ops name="titlebar_focused">
   <include name="entire_background_focused"/>
-  <include name="highlight_focused"/>
+  <!-- <include name="highlight_focused"/> -->
 </draw_ops>
 
 <draw_ops name="titlebar_unfocused">
   <include name="entire_background_unfocused"/>
-  <include name="highlight_unfocused"/>
+  <!-- <include name="highlight_unfocused"/> -->
 </draw_ops>
 
 <!-- button icons -->
@@ -136,11 +148,13 @@
 </draw_ops>
 
 <draw_ops name="close_focused_prelight">
-  <include name="close_focused"/>
+  <image filename="assets/button.svg" x="(width - object_width) / 2" y="(height - object_height) / 2" width="object_width" height="object_height" alpha="1" colorize="C_button_close_bg_prelight"/>
+  <image filename="assets/close.svg" x="(width - object_width) / 2" y="(height - object_height) / 2" width="object_width" height="object_height" alpha="1" colorize="#FFFFFF"/>
 </draw_ops>
 
 <draw_ops name="close_focused_pressed">
-  <include name="close_focused"/>
+  <image filename="assets/button.svg" x="(width - object_width) / 2" y="(height - object_height) / 2" width="object_width" height="object_height" alpha="1" colorize="C_button_close_bg_pressed"/>
+  <image filename="assets/close.svg" x="(width - object_width) / 2" y="(height - object_height) / 2" width="object_width" height="object_height" alpha="1" colorize="#FFFFFF"/>
 </draw_ops>
 
 <draw_ops name="close_unfocused">
@@ -386,6 +400,9 @@
   <button function="menu" state="normal" draw_ops="menu_focused"/>
   <button function="menu" state="prelight" draw_ops="menu_focused_prelight"/>
   <button function="menu" state="pressed" draw_ops="menu_focused_pressed"/>
+  <button version=">= 3.5" function="appmenu" state="normal" draw_ops="appmenu_focused"/>
+  <button version=">= 3.5" function="appmenu" state="prelight" draw_ops="appmenu_focused_prelight"/>
+  <button version=">= 3.5" function="appmenu" state="pressed" draw_ops="appmenu_focused_pressed"/>
   <button function="shade" state="normal" draw_ops="shade_focused"/>
   <button function="shade" state="prelight" draw_ops="shade_focused_prelight"/>
   <button function="shade" state="pressed" draw_ops="shade_focused_pressed"/>
@@ -426,6 +443,9 @@
   <button function="menu" state="normal" draw_ops="menu_unfocused"/>
   <button function="menu" state="prelight" draw_ops="menu_unfocused_prelight"/>
   <button function="menu" state="pressed" draw_ops="menu_unfocused_pressed"/>
+  <button version=">= 3.5" function="appmenu" state="normal" draw_ops="appmenu_unfocused"/>
+  <button version=">= 3.5" function="appmenu" state="prelight" draw_ops="appmenu_unfocused_prelight"/>
+  <button version=">= 3.5" function="appmenu" state="pressed" draw_ops="appmenu_unfocused_pressed"/>
   <button function="shade" state="normal" draw_ops="shade_unfocused"/>
   <button function="shade" state="prelight" draw_ops="shade_unfocused_prelight"/>
   <button function="shade" state="pressed" draw_ops="shade_unfocused_pressed"/>
@@ -480,10 +500,10 @@
   <piece position="titlebar" draw_ops="entire_background_unfocused"/>
 </frame_style>
 
-<frame_style name="dialog_focused" geometry="nobuttons" parent="normal_focused">
+<frame_style name="dialog_focused" geometry="modal" parent="normal_focused">
 </frame_style>
 
-<frame_style name="dialog_unfocused" geometry="nobuttons" parent="normal_unfocused">
+<frame_style name="dialog_unfocused" geometry="modal" parent="normal_unfocused">
 </frame_style>
 
 <frame_style name="modal_dialog_focused" geometry="modal" parent="normal_focused">
@@ -527,6 +547,8 @@
   <button function="minimize" state="pressed"><draw_ops></draw_ops></button>
   <button function="menu" state="normal"><draw_ops></draw_ops></button>
   <button function="menu" state="pressed"><draw_ops></draw_ops></button>
+  <button version=">= 3.5" function="appmenu" state="normal"><draw_ops></draw_ops></button>
+  <button version=">= 3.5" function="appmenu" state="pressed"><draw_ops></draw_ops></button>
   <button function="shade" state="normal"><draw_ops></draw_ops></button>
   <button function="shade" state="pressed"><draw_ops></draw_ops></button>
   <button function="unshade" state="normal"><draw_ops></draw_ops></button>
@@ -552,6 +574,14 @@
   <frame focus="no" state="shaded" style="normal_unfocused"/>
   <frame focus="yes" state="maximized_and_shaded" style="normal_max_focused"/>
   <frame focus="no" state="maximized_and_shaded" style="normal_max_unfocused"/>
+  <frame version=">= 3.3" focus="yes" state="tiled_left" style="tiled_left_focused"/>
+  <frame version=">= 3.3" focus="no" state="tiled_left" style="tiled_left_unfocused"/>
+  <frame version=">= 3.3" focus="yes" state="tiled_right" style="tiled_right_focused"/>
+  <frame version=">= 3.3" focus="no" state="tiled_right" style="tiled_right_unfocused"/>
+  <frame version=">= 3.3" focus="yes" state="tiled_left_and_shaded" style="tiled_left_focused"/>
+  <frame version=">= 3.3" focus="no" state="tiled_left_and_shaded" style="tiled_left_unfocused"/>
+  <frame version=">= 3.3" focus="yes" state="tiled_right_and_shaded" style="tiled_right_focused"/>
+  <frame version=">= 3.3" focus="no" state="tiled_right_and_shaded" style="tiled_right_unfocused"/>
 </frame_style_set>
 
 <frame_style_set name="dialog_style_set">
@@ -617,5 +647,6 @@
 <window type="menu" style_set="utility_style_set"/>
 <window type="utility" style_set="utility_style_set"/>
 <window type="border" style_set="border_style_set"/>
+<window version=">= 3.2" type="attached" style_set="attached_style_set"/>
 
 </metacity_theme>

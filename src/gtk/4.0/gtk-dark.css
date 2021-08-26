@@ -4716,6 +4716,9 @@ read if you used those and something break with a version upgrade you're on your
 @define-color wm_highlight rgba(255, 255, 255, 0.1);
 @define-color wm_bg #202020;
 @define-color wm_unfocused_bg #2C2C2C;
+@define-color wm_unfocused_bg #2C2C2C;
+@define-color wm_button_close_hover_bg #E57373;
+@define-color wm_button_close_active_bg #E53935;
 /*
 FIXME this is really an API */
 @define-color content_view_bg #2B2B2B;
