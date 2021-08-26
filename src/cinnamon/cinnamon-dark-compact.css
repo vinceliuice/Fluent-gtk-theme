@@ -1860,7 +1860,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   height: 80px;
   padding: 8px 12px;
   spacing: 4px;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(0, 0, 0, 0.5);
   border: none;
   border-radius: 0 0 2px 2px;
   color: white;
