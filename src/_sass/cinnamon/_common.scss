@@ -272,7 +272,7 @@ $menu_item_radius: $corner-radius;
 .menu,
 .popup-menu,
 %menu {
-  padding: 0;
+  padding: $container-padding / 2;
   color: $text;
   background-color: $menu_bg;
   border-radius: $window-radius;
@@ -339,7 +339,7 @@ $menu_item_radius: $corner-radius;
 
 .popup-combo-menu {
   @extend %menu;
-  padding: $container-padding*2;
+  padding: $container-padding * 2;
 }
 
 // .popup-image-menu-item {}
@@ -1150,6 +1150,7 @@ $menu_item_radius: $corner-radius;
 .menu {
   &-favorites-box {
     margin: auto;
+    margin-bottom: $container-padding;
     padding: $container-padding;
     transition-duration: 300;
     background-color: rgba($text, 0.05);
@@ -1171,7 +1172,7 @@ $menu_item_radius: $corner-radius;
   &-places {
     &-box {
       margin: auto;
-      padding: $container-padding*1.5;
+      padding: $container-padding * 1.5;
       border: 1px solid rgba(0,0,0,0);
     }
 

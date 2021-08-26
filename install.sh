@@ -193,19 +193,25 @@ install() {
     cp -r "$SRC_DIR/gtk/4.0/gtk-dark$size.css"                                  "$THEME_DIR/gtk-4.0/gtk-dark.css"
   fi
 
-  if [[ "$theme" == '' && "$size" == '' ]]; then
+  if [[ "$size" == '' ]]; then
     mkdir -p                                                                    "$THEME_DIR/xfwm4"
     cp -r "$SRC_DIR/xfwm4/assets$color/"*.png                                   "$THEME_DIR/xfwm4"
     cp -r "$SRC_DIR/xfwm4/themerc${ELSE_LIGHT:-}"                               "$THEME_DIR/xfwm4/themerc"
 
-      mkdir -p                                                                  "$THEME_DIR/cinnamon"
-      cp -r "$SRC_DIR/cinnamon/common-assets"                                   "$THEME_DIR/cinnamon/assets"
-      cp -r "$SRC_DIR/cinnamon/assets${ELSE_DARK:-}/"*.svg                      "$THEME_DIR/cinnamon/assets"
+    mkdir -p                                                                    "$THEME_DIR/cinnamon"
+    cp -r "$SRC_DIR/cinnamon/common-assets"                                     "$THEME_DIR/cinnamon/assets"
+    cp -r "$SRC_DIR/cinnamon/assets${ELSE_DARK:-}/"*.svg                        "$THEME_DIR/cinnamon/assets"
+
+    if [[ "$accent" == 'true' || "$opacity" == 'solid' ]]; then
+      sassc $SASSC_OPT "$SRC_DIR/cinnamon/cinnamon$color.scss"                  "$THEME_DIR/cinnamon/cinnamon.css"
+    else
       cp -r "$SRC_DIR/cinnamon/cinnamon$color.css"                              "$THEME_DIR/cinnamon/cinnamon.css"
-      cp -r "$SRC_DIR/cinnamon/thumbnail$color.png"                             "$THEME_DIR/cinnamon/thumbnail.png"
+    fi
+
+    cp -r "$SRC_DIR/cinnamon/thumbnail$theme$color.png"                         "$THEME_DIR/cinnamon/thumbnail.png"
 
     mkdir -p                                                                    "$THEME_DIR/metacity-1"
-    cp -r "$SRC_DIR/metacity-1/metacity-theme-2${color}.xml"                    "$THEME_DIR/metacity-1/metacity-theme-2.xml"
+    cp -r "$SRC_DIR/metacity-1/metacity-theme-2$color.xml"                      "$THEME_DIR/metacity-1/metacity-theme-2.xml"
 
     if [[ "$window" = "round" ]] ; then
       cp -r "$SRC_DIR/metacity-1/metacity-theme-3-round.xml"                    "$THEME_DIR/metacity-1/metacity-theme-3.xml"

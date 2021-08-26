@@ -290,7 +290,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .menu,
 .popup-menu,
 .popup-combo-menu {
-  padding: 0;
+  padding: 3px;
   color: white;
   background-color: rgba(51, 51, 51, 0.95);
   border-radius: 3px;
@@ -1265,6 +1265,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .menu-favorites-box {
   margin: auto;
+  margin-bottom: 6px;
   padding: 6px;
   transition-duration: 300;
   background-color: rgba(255, 255, 255, 0.05);
