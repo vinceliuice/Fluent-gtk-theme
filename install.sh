@@ -58,7 +58,7 @@ OPTIONS:
   -s, --size VARIANT      Specify size variant [standard|compact] (Default: All variants)
 
   -i, --icon VARIANT      Specify icon variant(s) for shell panel
-                          [default|apple|simple|gnome|ubuntu|arch|manjaro|fedora|debian|void|opensuse|popos|mxlinux|zorin]
+                          [default|apple|simple|gnome|ubuntu|arch|manjaro|fedora|debian|void|opensuse|popos|mxlinux|zorin|endeavouros]
                           (Default: Windows)
 
   --tweaks                Specify versions for tweaks [solid|float|round|blur|noborder|square]
@@ -398,6 +398,10 @@ while [[ "$#" -gt 0 ]]; do
             ;;
           zorin)
             icon='-zorin'
+            shift
+            ;;
+          endeavouros)
+            icon='-endeavouros'
             shift
             ;;
           -*)
