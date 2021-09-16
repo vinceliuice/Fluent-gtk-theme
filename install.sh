@@ -26,7 +26,6 @@ SASSC_OPT="-M -t expanded"
 
 THEME_NAME=Fluent
 THEME_VARIANTS=('' '-purple' '-pink' '-red' '-orange' '-yellow' '-green' '-teal' '-grey')
-THEME_COLOR_VARIANTS=('default' 'purple' 'pink' 'red' 'orange' 'yellow' 'green' 'teal' 'grey')
 COLOR_VARIANTS=('' '-light' '-dark')
 SIZE_VARIANTS=('' '-compact')
 
