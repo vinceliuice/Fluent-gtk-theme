@@ -1121,24 +1121,26 @@ $slider_color: if($variant == 'light', $accent_color, $accent_color);
 //
 
 // Activities button
-$size_suffix: if($laptop == 'true', '-small', '');
 
 // Gjs_ui_panel_ActivitiesButton.panel-button,
 #panelActivities.panel-button {
-  background-image: url("assets/activities#{$size_suffix}.svg");
+  background-image: url("assets/activities.svg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: auto;
-  box-shadow: none;
   color: transparent !important;
+  box-shadow: none;
 
-  > * {
-    width: $medium_size;
-  }
+  > * { width: $medium_size; }
 
   &:overview {
     background-color: transparent;
     box-shadow: none;
+    border: none;
+
+    @if $variant == 'light' and $panel == 'light' {
+      background-image: url("assets/activities-white.svg") !important;
+    }
   }
 }
 

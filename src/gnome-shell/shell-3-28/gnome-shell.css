@@ -1296,8 +1296,8 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: auto;
-  box-shadow: none;
   color: transparent !important;
+  box-shadow: none;
 }
 
 #panelActivities.panel-button > * {
@@ -1307,6 +1307,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 #panelActivities.panel-button:overview {
   background-color: transparent;
   box-shadow: none;
+  border: none;
 }
 
 #panel {
