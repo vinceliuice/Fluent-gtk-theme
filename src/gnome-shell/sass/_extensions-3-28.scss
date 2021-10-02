@@ -2,6 +2,8 @@
 // Dash to Dock
 //
 
+$dash_border_radius: $menu_radius + $container_padding;
+
 #dashtodockContainer {
   background: transparent;
 
@@ -14,15 +16,15 @@
     margin: 0;
   }
 
-  @each $_dock, $_radius in (top, 16px 16px 16px 16px),
-                            (bottom, 16px 16px 16px 16px),
-                            (left, 16px 16px 16px 16px),
-                            (right, 16px 16px 16px 16px) {
+  @each $_dock, $_radius in (top, $dash_border_radius),
+                            (bottom, $dash_border_radius),
+                            (left, $dash_border_radius),
+                            (right, $dash_border_radius) {
     &.#{$_dock} #dash,
     &.#{$_dock}:overview #dash { border-radius: #{$_radius}; }
 
     &.#{$_dock}.extended #dash,
-    &.#{$_dock}.extended:overview #dash { border-radius: #{$_radius}; }
+    &.#{$_dock}.extended:overview #dash { border-radius: 0; }
   }
 
   #dash { // default-mode
