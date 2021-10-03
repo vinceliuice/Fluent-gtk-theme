@@ -113,10 +113,10 @@
 	/* TitleButtons */
 	--gnome-titlebutton-min-hover-background: rgba(255, 255, 255, 0.15);
 	--gnome-titlebutton-max-hover-background: rgba(255, 255, 255, 0.15);
-	--gnome-titlebutton-close-hover-background: rgba(255, 255, 255, 0.15);
+	--gnome-titlebutton-close-hover-background: rgba(229, 115, 115, 1);
 	--gnome-titlebutton-min-active-background: rgba(255, 255, 255, 0.25);
 	--gnome-titlebutton-max-active-background: rgba(255, 255, 255, 0.25);
-	--gnome-titlebutton-close-active-background: rgba(255, 255, 255, 0.25);
+	--gnome-titlebutton-close-active-background: rgba(229, 57, 53, 1);
 
 	/* Switch */
 	--gnome-switch-background: rgba(255, 255, 255, 0.65);

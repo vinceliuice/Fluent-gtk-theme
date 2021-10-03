@@ -168,6 +168,13 @@
 	background: var(--gnome-titlebutton-close-active-background) !important;
 }
 
+:root[tabsintitlebar] #titlebar .titlebar-close:hover .toolbarbutton-icon,
+:root[tabsintitlebar] #titlebar #titlebar-close:hover .toolbarbutton-icon,
+:root[tabsintitlebar] #titlebar .titlebar-close:active .toolbarbutton-icon,
+:root[tabsintitlebar] #titlebar #titlebar-close:active .toolbarbutton-icon {
+	filter: invert(100%) brightness(200%) !important;
+}
+
 :root[tabsintitlebar] #titlebar:-moz-window-inactive .titlebar-button {
 	opacity: .4 !important;
 }

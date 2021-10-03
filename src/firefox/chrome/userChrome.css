@@ -9,6 +9,9 @@
  * the beginning of the line. To disable it, put the "/*" back.
  */
 
+/* Square title buttons (headerbar window controls) (GNOMISH) */
+/*@import "Fluent/square-window-buttons.css"; /**/
+
 /* Hide the tab bar when only one tab is open (GNOMISH)
  * You should move the new tab button somewhere else for this to work, because by
  * default it is on the tab bar too. */
@@ -17,9 +20,6 @@
 /* Limit the URL bar's autocompletion popup's width to the URL bar's width (GNOMISH) 
  * This feature is included by default for Firefox 70+ */
 /*@import "Fluent/matching-autocomplete-width.css"; /**/
-
-/* Rounded title buttons (headerbar window controls) (GNOMISH) */
-/*@import "Fluent/rounded-title-buttons.css"; /**/
 
 /* Active tab high contrast */
 /*@import "Fluent/active-tab-contrast.css"; /**/

@@ -14,6 +14,14 @@ menupopup {
 	box-shadow: none !important;
 }
 
+#PlacesToolbar menupopup {
+	background: none !important;
+	padding: 3px 6px 8px !important;
+	margin-top: 0 !important;
+	border: none !important;
+	box-shadow: none !important;
+}
+
 menupopup menupopup {
 	margin: -5px 0 0 -4px;
 }

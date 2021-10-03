@@ -71,8 +71,10 @@ toolbarspring {
 }
 
 /* URL bar and Search bar's icons */
+.urlbar-icon{
+	padding: 0 1px !important;
+}
 
-.urlbar-icon,
 .identity-box-button,
 #tracking-protection-icon-container {
 	border-radius: 3px !important;
@@ -93,7 +95,6 @@ toolbarspring {
 	margin-right: 2px !important;
 }
 
-.urlbar-icon:hover,
 .identity-box-button:hover,
 #tracking-protection-icon-container:hover {
 	background-color: var(--gnome-button-hover-background) !important;
@@ -101,7 +102,6 @@ toolbarspring {
 	border-image: none !important;
 }
 
-.urlbar-icon[open],
 .urlbar-icon:hover:active,
 .identity-box-button[open],
 .identity-box-button:hover:active,
