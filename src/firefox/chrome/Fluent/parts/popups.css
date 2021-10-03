@@ -39,7 +39,7 @@ menuitem, menupopup menu {
 	-moz-appearance: none !important;
 	padding: 4px 8px !important;
 	border-radius: 3px !important;
-	background: var(--gnome-menu-background) !important;
+	background: none !important;
 	color: var(--gnome-button-color) !important;
 }
 
