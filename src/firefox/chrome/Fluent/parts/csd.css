@@ -112,7 +112,7 @@
 }
 
 :root[tabsintitlebar] .titlebar-buttonbox {
-	margin: 0 3px;
+	margin: 0 2px;
 }
 
 /* Window buttons style */
@@ -133,7 +133,7 @@
 :root[tabsintitlebar] #titlebar .titlebar-button {
 	height: 24px !important;
 	width: 24px;
-	margin: 7px 3px !important;
+	margin: 6px !important;
 }
 
 :root[tabsintitlebar] #titlebar .titlebar-min:hover,

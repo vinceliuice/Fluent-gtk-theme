@@ -73,6 +73,7 @@ toolbarspring {
 /* URL bar and Search bar's icons */
 .urlbar-icon{
 	padding: 0 1px !important;
+	opacity: 0.7 !important;
 }
 
 .identity-box-button,
@@ -102,7 +103,6 @@ toolbarspring {
 	border-image: none !important;
 }
 
-.urlbar-icon:hover:active,
 .identity-box-button[open],
 .identity-box-button:hover:active,
 #tracking-protection-icon-container[open],
