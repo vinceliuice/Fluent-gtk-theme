@@ -9,7 +9,7 @@
  * the beginning of the line. To disable it, put the "/*" back.
  */
 
-/* Square title buttons (headerbar window controls) (GNOMISH) */
+/* Square title buttons (headerbar window controls) */
 /*@import "Fluent/square-window-buttons.css"; /**/
 
 /* Hide the tab bar when only one tab is open (GNOMISH)
@@ -17,7 +17,7 @@
  * default it is on the tab bar too. */
 /*@import "Fluent/hide-single-tab.css"; /**/
 
-/* Limit the URL bar's autocompletion popup's width to the URL bar's width (GNOMISH) 
+/* Limit the URL bar's autocompletion popup's width to the URL bar's width
  * This feature is included by default for Firefox 70+ */
 /*@import "Fluent/matching-autocomplete-width.css"; /**/
 

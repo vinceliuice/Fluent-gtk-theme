@@ -29,6 +29,12 @@ This is a bunch of CSS code to make Firefox look closer to Chrome theme.
 ## Enabling optional features
 Open `userChrome.css` with a text editor and follow instructions to enable extra features. Keep in mind this file might change in future versions and your configuration will be lost. You can copy the @imports you want to enable to a new file named `customChrome` directly in your `chrome` directory if you want it to survive updates. Remember all @imports must be at the top of the file, before other statements.
 
+### Enable square window button style
+1. Open `userChrome.css` with a text editor
+2. change `/*@import "Fluent/square-window-buttons.css"; /**/`
+   to `@import "Fluent/square-window-buttons.css"; /**/`
+3. save it
+
 ## Known bugs
 
 ### CSD have sharp corners
