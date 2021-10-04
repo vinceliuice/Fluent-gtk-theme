@@ -1,5 +1,11 @@
 # Fluent wallpapers
 
+### Clone wallpaper
+
+```sh
+git clone -b Wallpaper https://github.com/vinceliuice/Fluent-gtk-theme.git
+```
+
 ### Install on Gnome
 
 run the following commands in the terminal:
