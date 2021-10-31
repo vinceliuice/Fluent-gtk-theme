@@ -8,7 +8,7 @@
 
 ## Description
 
-This is a bunch of CSS code to make Firefox look closer to Chrome theme.
+This is a bunch of CSS code to make Firefox look closer to edge browser.
 
 ## Installation
 
