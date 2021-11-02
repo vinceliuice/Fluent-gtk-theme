@@ -894,9 +894,10 @@ spinbutton {
     border-spacing: 0;
 
     > text {
+      min-width: $large-size - 8px * 2;
       // reset all the other props since the spinbutton node is styled here
       margin: 0;
-      padding: 0 $container-padding 0 $container-padding*2;
+      padding-left: $container-padding * 2;
       border: none;
       border-image: none;
       border-radius: 0;
@@ -956,9 +957,9 @@ spinbutton {
         color: $text-secondary;
       }
 
-      &.up { margin: 0 $container-padding/2; }
+      &.up { margin: 0 $container-padding / 2; }
 
-      &.down { margin: 0 $container-padding/2; }
+      &.down { margin: 0 $container-padding / 2; }
     }
   }
 

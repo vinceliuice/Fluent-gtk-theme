@@ -1228,8 +1228,9 @@ spinbutton:not(.vertical) {
 }
 
 spinbutton:not(.vertical) > text {
+  min-width: 22px;
   margin: 0;
-  padding: 0 4px 0 8px;
+  padding-left: 8px;
   border: none;
   border-image: none;
   border-radius: 0;
