@@ -2031,16 +2031,20 @@ menuitem {
 /************
  * Popovers *
  ************/
+popover,
 popover.background {
   transition: $transition-shadow;
   padding: 2px;
   background-color: $menu;
   box-shadow: $shadow-z4;
+  background-clip: if($variant == 'light', padding-box, border-box);
 
   &:backdrop { box-shadow: $shadow-z2; }
 
   &, .csd & {
-    @if $outline == 'true' { border: 1px solid $solid-border; }
+    @if $outline == 'true' {
+      border: 1px solid if($variant == 'light', rgba(black, 0.2), rgba(white, 0.12));
+    }
     border-radius: $menu-radius;
   }
 

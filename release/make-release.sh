@@ -6,7 +6,7 @@ THEME_NAME=Fluent
 
 _COLOR_VARIANTS=('' '-light' '-dark')
 _COMPA_VARIANTS=('' '-compact')
-_THEME_VARIANTS=('' '-purple' '-pink' '-red' '-orange' '-yellow' '-green' '-grey')
+_THEME_VARIANTS=('' '-purple' '-pink' '-red' '-orange' '-yellow' '-green' '-grey' '-teal')
 
 if [ ! -z "${COMPA_VARIANTS:-}" ]; then
   IFS=', ' read -r -a _COMPA_VARIANTS <<< "${COMPA_VARIANTS:-}"
