@@ -141,13 +141,13 @@ install() {
 
   if [[ "$opacity" = "solid" ]] ; then
     if [[ "$window" = "round" ]] ; then
-      if [[ "$outline" = "true" ]] ; then
+      if [[ "$outline" = "" ]] ; then
         cp -r "${SRC_DIR}/gnome-shell/assets${ELSE_DARK:-}/solid-round/"*.svg    "$THEME_DIR/gnome-shell/assets"
       else
         cp -r "${SRC_DIR}/gnome-shell/assets${ELSE_DARK:-}/solid-round-borderless/"*.svg "$THEME_DIR/gnome-shell/assets"
       fi
     else
-      if [[ "$outline" = "true" ]] ; then
+      if [[ "$outline" = "" ]] ; then
         cp -r "${SRC_DIR}/gnome-shell/assets${ELSE_DARK:-}/solid/"*.svg           "$THEME_DIR/gnome-shell/assets"
       else
         cp -r "${SRC_DIR}/gnome-shell/assets${ELSE_DARK:-}/solid-borderless/"*.svg "$THEME_DIR/gnome-shell/assets"
@@ -155,13 +155,13 @@ install() {
     fi
   else
     if [[ "$window" = "round" ]] ; then
-      if [[ "$outline" = "true" ]] ; then
+      if [[ "$outline" = "" ]] ; then
         cp -r "${SRC_DIR}/gnome-shell/assets${ELSE_DARK:-}/default-round/"*.svg   "$THEME_DIR/gnome-shell/assets"
       else
         cp -r "${SRC_DIR}/gnome-shell/assets${ELSE_DARK:-}/default-round-borderless/"*.svg "$THEME_DIR/gnome-shell/assets"
       fi
     else
-      if [[ "$outline" = "true" ]] ; then
+      if [[ "$outline" = "" ]] ; then
         cp -r "${SRC_DIR}/gnome-shell/assets${ELSE_DARK:-}/default/"*.svg         "$THEME_DIR/gnome-shell/assets"
       else
         cp -r "${SRC_DIR}/gnome-shell/assets${ELSE_DARK:-}/default-borderless/"*.svg "$THEME_DIR/gnome-shell/assets"
