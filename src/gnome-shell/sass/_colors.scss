@@ -77,6 +77,12 @@ $popover_button_bg: if($variant == 'light', rgba(white, 0.35), rgba(white, 0.03)
 $popover_button_hover: if($variant == 'light', rgba(white, 0.85), rgba(white, 0.08));
 $popover_button_active: if($variant == 'light', rgba(white, 1), rgba(white, 0.12));
 
+@if $outline == 'false' {
+  $popover_button_bg: if($variant == 'light', rgba(black, 0.06), rgba(white, 0.05));
+  $popover_button_hover: if($variant == 'light', rgba(black, 0.1), rgba(white, 0.12));
+  $popover_button_active: if($variant == 'light', rgba(black, 0.16), rgba(white, 0.15));
+}
+
 // Misc colors
 $primary_color: theme(color);
 $alt_primary_color: darken($primary_color, 3%);

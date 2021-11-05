@@ -162,7 +162,10 @@
       &:selected .overview-icon {
         background-color: $panel_divider_color !important;
         color: $panel_fg_color !important;
-        border: 1px solid $panel_border_color;
+
+        @if $window == 'round' {
+          border: 1px solid $panel_border_color;
+        }
       }
 
       &:active .overview-icon,
@@ -180,8 +183,11 @@
   StWidget.focused {
     .overview-icon {
       background-color: $panel_divider_color !important;
-      border: 1px solid $panel_border_color;
-      box-shadow: inset 0 1px $panel_highlight_color;
+
+      @if $window == 'round' {
+        border: 1px solid $panel_border_color;
+        box-shadow: inset 0 1px $panel_highlight_color;
+      }
     }
 
     &:hover .overview-icon {
@@ -233,8 +239,11 @@
     StWidget.focused {
       .overview-icon {
         background-color: $inverse_divider_color !important;
-        border: 1px solid $icon_border_color;
-        box-shadow: inset 0 1px $icon_highlight_color;
+
+        @if $window == 'round' {
+          border: 1px solid $icon_border_color;
+          box-shadow: inset 0 1px $icon_highlight_color;
+        }
       }
 
       &:hover .overview-icon {

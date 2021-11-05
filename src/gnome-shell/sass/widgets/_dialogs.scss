@@ -22,11 +22,16 @@
   }
 
   .modal-dialog-linked-button {
-    border: 1px solid !important;
     background-clip: padding-box;
     min-height: 20px;
     padding: 6px 18px !important;
     @extend %bubble_button;
+
+    @if $outline == 'false' {
+      border: 0 none transparent !important;
+    } @else {
+      border: 1px solid !important;
+    }
   }
 }
 

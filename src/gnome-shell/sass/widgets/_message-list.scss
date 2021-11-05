@@ -33,12 +33,17 @@
 // message bubbles
 .message {
   background-color: $popover_button_bg;
-  border: 1px solid $popover_button_border;
   border-radius: $menu_radius;
   color: $secondary_fg_color;
   text-shadow: none;
   box-shadow: 0 3px 8px -2px rgba(black, 0.15);
   margin: 0 8px 11px 8px;
+
+  @if $outline == 'false' {
+    border: none;
+  } @else {
+    border: 1px solid $popover_button_border;
+  }
 
   .popup-menu & {
     box-shadow: none;
@@ -53,20 +58,20 @@
 
   // icon container
   .message-icon-bin {
-  padding: $container_padding*2  0px $container_padding*2 $container_padding*2;
+    padding: $container_padding * 2  0 $container_padding * 2 $container_padding * 2;
 
-  &:rtl { padding: $container_padding*2 $container_padding*2 $container_padding*2 0px; }
+    &:rtl { padding: $container_padding * 2 $container_padding * 2 $container_padding * 2 0; }
 
     // icon size and color
     > StIcon {
-      icon-size: 32px; // 32px
-      -st-icon-style: symbolic;
+      icon-size: 48px; // 32px
+      // -st-icon-style: symbolic;
     }
 
     // fallback
     > .fallback-app-icon {
-      width: 16px;
-      height: 16px;
+      width: 32px;
+      height: 32px;
     }
   }
 
@@ -103,7 +108,7 @@
     padding: 0;
     height: 24px;
     width: 24px;
-    border-radius: 100px;
+    border-radius: $circular_radius;
 
     &:hover, &:focus { color: $fg_color; background-color: $divider_color; }
     &:active { color: $fg_color; background-color: $track_color; }
@@ -123,10 +128,11 @@
 
 /* Media Controls */
 .message-media-control {
-  margin: 16px 4px;
+  margin: 20px 4px;
   padding: 8px;
-  border-radius: 100px;
+  border-radius: $circular_radius;
   color: $secondary_fg_color;
+
   &:hover,&:focus { color: $fg_color; background-color: $divider_color; }
   &:active { color: $fg_color; background-color: $track_color; }
   &:insensitive { color: $disabled_secondary_fg_color; }
@@ -137,15 +143,17 @@
 
 // album-art
 .media-message-cover-icon {
-  icon-size: 32px !important; // 48px
+  icon-size: 48px !important; // 48px
   border-radius: $buttons_radius;
+  border: none;
 
   // when there is no artwork
   &.fallback {
     color: $hint_fg_color;
     background-color: $divider_color;
-    border: 1px solid transparent;
+    border: none;
     border-radius: $buttons_radius;
     icon-size: 32px !important;
+    padding: 8px;
   }
 }

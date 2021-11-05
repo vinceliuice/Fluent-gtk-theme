@@ -223,11 +223,16 @@
 .events-button {
   padding: $container_padding 8px;
   border-radius: $buttons_radius;
-  border: 1px solid $popover_button_border;
   box-shadow: none;
   text-shadow: none;
   color: $secondary_fg_color;
   background-color: $popover_button_bg !important;
+
+  @if $outline == 'false' {
+    border: none;
+  } @else {
+    border: 1px solid $popover_button_border;
+  }
 
   &:hover, &:focus {
     color: $fg_color;
