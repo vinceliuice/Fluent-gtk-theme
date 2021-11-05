@@ -3563,3 +3563,18 @@ StWidget.focused .app-well-app-running-dot {
 .openweather-sunrise-icon, .openweather-sunset-icon, .openweather-build-icon {
   color: rgba(255, 255, 255, 0.7);
 }
+
+.gsconnect-device-menu .popup-menu-item {
+  height: 20px !important;
+  padding: 2px 0;
+}
+
+.gsconnect-device-menu .popup-menu-item > :last-child:ltr {
+  padding-right: 4px !important;
+  margin-right: 8px !important;
+}
+
+.gsconnect-device-menu .popup-menu-item > :last-child:rtl {
+  padding-left: 4px !important;
+  padding-left: 8px !important;
+}
