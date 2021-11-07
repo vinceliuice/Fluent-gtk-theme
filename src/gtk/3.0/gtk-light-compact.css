@@ -285,8 +285,9 @@ entry {
   border-bottom-color: rgba(0, 0, 0, 0.18);
 }
 
-spinbutton.vertical:hover, spinbutton:hover:not(.vertical),
-entry:hover {
+spinbutton.vertical:hover, spinbutton:hover:not(.vertical), spinbutton.vertical:drop(active), spinbutton:drop(active):not(.vertical),
+entry:hover,
+entry:drop(active) {
   background-color: #FFFFFF;
   box-shadow: inset 0 0 0 1px transparent;
   border-color: rgba(0, 0, 0, 0.38);
@@ -299,18 +300,12 @@ entry:focus {
   border-color: rgba(0, 0, 0, 0.38);
 }
 
-spinbutton.vertical:drop(active), spinbutton:drop(active):not(.vertical),
-entry:drop(active) {
-  background-color: #FFFFFF;
-  box-shadow: inset 0 0 0 1px transparent;
-  border-color: rgba(0, 0, 0, 0.38);
-}
-
 spinbutton.vertical:disabled, spinbutton:disabled:not(.vertical),
 entry:disabled {
   box-shadow: inset 0 0 0 1px transparent;
   background-color: #FAFAFA;
   color: rgba(0, 0, 0, 0.38);
+  border-color: rgba(0, 0, 0, 0.04);
 }
 
 spinbutton.flat.vertical, spinbutton.flat:not(.vertical),
@@ -385,18 +380,12 @@ entry.error {
   border-bottom-color: rgba(0, 0, 0, 0.18);
 }
 
-spinbutton.error.vertical:focus, spinbutton.error:focus:not(.vertical),
-entry.error:focus {
-  background-color: #FFFFFF;
-  box-shadow: inset 0 0 0 1px #D93025;
-  border-color: #D93025;
-}
-
 spinbutton.error.vertical:disabled, spinbutton.error:disabled:not(.vertical),
 entry.error:disabled {
   box-shadow: inset 0 0 0 1px transparent;
   background-color: #FAFAFA;
   color: rgba(0, 0, 0, 0.38);
+  border-color: rgba(0, 0, 0, 0.04);
 }
 
 spinbutton.warning.vertical, spinbutton.warning:not(.vertical),
@@ -409,18 +398,12 @@ entry.warning {
   border-bottom-color: rgba(0, 0, 0, 0.18);
 }
 
-spinbutton.warning.vertical:focus, spinbutton.warning:focus:not(.vertical),
-entry.warning:focus {
-  background-color: #FFFFFF;
-  box-shadow: inset 0 0 0 1px #F4B400;
-  border-color: #F4B400;
-}
-
 spinbutton.warning.vertical:disabled, spinbutton.warning:disabled:not(.vertical),
 entry.warning:disabled {
   box-shadow: inset 0 0 0 1px transparent;
   background-color: #FAFAFA;
   color: rgba(0, 0, 0, 0.38);
+  border-color: rgba(0, 0, 0, 0.04);
 }
 
 spinbutton.vertical progress, spinbutton:not(.vertical) progress,
@@ -544,6 +527,7 @@ button:disabled {
   box-shadow: none;
   background-color: #FAFAFA;
   color: rgba(0, 0, 0, 0.38);
+  border-color: rgba(0, 0, 0, 0.04);
 }
 
 button:checked {
@@ -773,6 +757,7 @@ button.suggested-action:disabled {
   box-shadow: none;
   background-color: #FAFAFA;
   color: rgba(0, 0, 0, 0.38);
+  border-color: rgba(0, 0, 0, 0.04);
   border-color: transparent;
 }
 
@@ -821,6 +806,7 @@ button.destructive-action:disabled {
   box-shadow: none;
   background-color: #FAFAFA;
   color: rgba(0, 0, 0, 0.38);
+  border-color: rgba(0, 0, 0, 0.04);
   border-color: transparent;
 }
 
@@ -932,27 +918,6 @@ stacksidebar.sidebar row.needs-attention > label:dir(rtl), .stack-switcher > but
 .linked:not(.vertical) > spinbutton.vertical:only-child, .linked:not(.vertical) > spinbutton:only-child:not(.vertical), .linked:not(.vertical) > entry:only-child {
   border-radius: 2px;
   border-right-width: 1px;
-}
-
-.linked.vertical > spinbutton.vertical, .linked.vertical > spinbutton:not(.vertical), .linked.vertical > entry {
-  border-radius: 0;
-  border-bottom-width: 0;
-}
-
-.linked.vertical > spinbutton.vertical:first-child, .linked.vertical > spinbutton:first-child:not(.vertical), .linked.vertical > entry:first-child {
-  border-top-left-radius: 2px;
-  border-top-right-radius: 2px;
-}
-
-.linked.vertical > spinbutton.vertical:last-child, .linked.vertical > spinbutton:last-child:not(.vertical), .linked.vertical > entry:last-child {
-  border-bottom-left-radius: 2px;
-  border-bottom-right-radius: 2px;
-  border-bottom-width: 1px;
-}
-
-.linked.vertical > spinbutton.vertical:only-child, .linked.vertical > spinbutton:only-child:not(.vertical), .linked.vertical > entry:only-child {
-  border-radius: 2px;
-  border-bottom-width: 1px;
 }
 
 viewswitcher button:not(.suggested-action):not(.destructive-action), .linked:not(.vertical) > button {
@@ -1555,6 +1520,7 @@ searchbar > revealer > box {
   border: none;
   border-radius: 4px;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.06);
+  border-image: none;
 }
 
 .nemo-window .primary-toolbar entry:hover, .thunar toolbar entry:hover, .titlebar entry:hover {
@@ -1563,11 +1529,13 @@ searchbar > revealer > box {
 
 .nemo-window .primary-toolbar entry:focus, .thunar toolbar entry:focus, .titlebar entry:focus {
   box-shadow: inset 0 0 0 2px #8ebaf4;
+  border-image: none;
 }
 
 .nemo-window .primary-toolbar entry:disabled, .thunar toolbar entry:disabled, .titlebar entry:disabled {
   background-color: rgba(0, 0, 0, 0.04);
   color: rgba(0, 0, 0, 0.38);
+  border-image: none;
 }
 
 .nemo-window .primary-toolbar entry image, .thunar toolbar entry image, .titlebar entry image {

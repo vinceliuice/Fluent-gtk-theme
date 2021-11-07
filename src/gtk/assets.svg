@@ -4,16 +4,16 @@
    height="120"
    version="1.1"
    viewBox="0 0 400 120"
-   id="svg187"
+   id="svg316"
    sodipodi:docname="assets.svg"
-   inkscape:version="1.1 (c4e8f9ed74, 2021-05-24)"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
   <sodipodi:namedview
-     id="namedview189"
+     id="namedview318"
      pagecolor="#ffffff"
      bordercolor="#666666"
      borderopacity="1.0"
@@ -21,43 +21,41 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      showgrid="false"
-     inkscape:zoom="2.404163"
-     inkscape:cx="63.015694"
-     inkscape:cy="8.7348487"
+     inkscape:zoom="1.6425"
+     inkscape:cx="175.34246"
+     inkscape:cy="407.30593"
      inkscape:window-width="1920"
-     inkscape:window-height="1014"
+     inkscape:window-height="1012"
      inkscape:window-x="0"
-     inkscape:window-y="32"
+     inkscape:window-y="34"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg187"
-     inkscape:snap-bbox="true"
-     inkscape:bbox-nodes="true"
-     inkscape:snap-bbox-edge-midpoints="false"
-     inkscape:snap-nodes="false">
+     inkscape:current-layer="svg316"
+     showguides="true"
+     inkscape:guide-bbox="true">
     <inkscape:grid
        type="xygrid"
-       id="grid1105" />
+       id="grid1036" />
   </sodipodi:namedview>
   <defs
-     id="defs83">
+     id="defs105">
     <linearGradient
-       id="linearGradient2691"
+       id="border-dark"
        x1="41"
-       y1="6"
        x2="41"
+       y1="6"
        y2="26"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(-48)">
+       gradientTransform="translate(-48)"
+       gradientUnits="userSpaceOnUse">
       <stop
-         offset="0.500208"
-         stop-opacity="0.0578"
-         id="stop2687"
-         style="stop-color:#fbfbfb;stop-opacity:0.122" />
+         stop-color="#fbfbfb"
+         stop-opacity=".122"
+         offset=".50021"
+         id="stop2" />
       <stop
-         offset="0.954545"
-         stop-opacity="0.1622"
-         id="stop2689"
-         style="stop-color:#ffffff;stop-opacity:0.078" />
+         stop-color="#ffffff"
+         stop-opacity=".078"
+         offset=".95454"
+         id="stop4" />
     </linearGradient>
     <linearGradient
        id="color-on-primary-dark"
@@ -70,7 +68,7 @@
       <stop
          stop-color="#FFFFFF"
          offset="1"
-         id="stop2" />
+         id="stop7" />
     </linearGradient>
     <linearGradient
        id="color-on-primary-light"
@@ -84,7 +82,7 @@
          stop-color="#000000"
          stop-opacity=".87"
          offset="1"
-         id="stop5" />
+         id="stop10" />
     </linearGradient>
     <linearGradient
        id="color-text-secondary-disabled">
@@ -92,7 +90,7 @@
          stop-color="#000000"
          stop-opacity=".26"
          offset="1"
-         id="stop8" />
+         id="stop13" />
     </linearGradient>
     <linearGradient
        id="color-text-secondary-disabled-dark">
@@ -100,35 +98,35 @@
          stop-color="#FFFFFF"
          stop-opacity=".3"
          offset="1"
-         id="stop11" />
+         id="stop16" />
     </linearGradient>
     <linearGradient
        id="color-primary-dark">
       <stop
          stop-color="#1A73E8"
          offset="1"
-         id="stop14" />
+         id="stop19" />
     </linearGradient>
     <linearGradient
        id="color-primary-light">
       <stop
          stop-color="#3281ea"
          offset="1"
-         id="stop17" />
+         id="stop22" />
     </linearGradient>
     <linearGradient
        id="color-background">
       <stop
          stop-color="#F2F2F2"
          offset="1"
-         id="stop20" />
+         id="stop25" />
     </linearGradient>
     <linearGradient
        id="color-background-dark">
       <stop
          stop-color="#212121"
          offset="1"
-         id="stop23" />
+         id="stop28" />
     </linearGradient>
     <linearGradient
        id="color-surface"
@@ -137,7 +135,7 @@
       <stop
          stop-color="#FFFFFF"
          offset="1"
-         id="stop26" />
+         id="stop31" />
     </linearGradient>
     <linearGradient
        id="color-surface-dark"
@@ -146,7 +144,7 @@
       <stop
          stop-color="#3C3C3C"
          offset="1"
-         id="stop29" />
+         id="stop34" />
     </linearGradient>
     <g
        id="base-scale-horz-marks-before-slider">
@@ -212,7 +210,7 @@
     <linearGradient
        id="linearGradient976"
        x2="200"
-       gradientTransform="scale(1 .6)"
+       gradientTransform="matrix(1,0,0,2.867027,0,-93.405399)"
        gradientUnits="userSpaceOnUse"
        xlink:href="#color-background" />
     <linearGradient
@@ -280,7 +278,7 @@
     <linearGradient
        id="linearGradient1041"
        x2="200"
-       gradientTransform="matrix(1 0 0 .6 200 0)"
+       gradientTransform="matrix(1,0,0,2.8670268,200,-93.405396)"
        gradientUnits="userSpaceOnUse"
        xlink:href="#color-background-dark" />
     <linearGradient
@@ -346,209 +344,215 @@
        gradientUnits="userSpaceOnUse"
        xlink:href="#color-primary-light" />
     <linearGradient
-       inkscape:collect="always"
-       xlink:href="#color-primary-dark"
        id="linearGradient1478"
        x1="115"
-       y1="90"
        x2="118"
+       y1="90"
        y2="90"
-       gradientUnits="userSpaceOnUse" />
+       gradientUnits="userSpaceOnUse"
+       xlink:href="#color-primary-dark" />
     <linearGradient
-       inkscape:collect="always"
-       xlink:href="#color-primary-light"
        id="linearGradient1486"
        x1="115"
-       y1="90"
        x2="118"
+       y1="90"
        y2="90"
-       gradientUnits="userSpaceOnUse" />
+       gradientUnits="userSpaceOnUse"
+       xlink:href="#color-primary-light" />
     <linearGradient
        id="border"
        x1="41"
-       y1="6"
        x2="41"
+       y1="6"
        y2="26"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(-48)">
+       gradientTransform="translate(-48)"
+       gradientUnits="userSpaceOnUse">
       <stop
-         offset="0.500208"
-         stop-opacity="0.0578"
-         id="stop1882" />
+         stop-opacity=".0578"
+         offset=".50021"
+         id="stop83" />
       <stop
-         offset="0.954545"
-         stop-opacity="0.1622"
-         id="stop1884" />
+         stop-opacity=".1622"
+         offset=".95454"
+         id="stop85" />
     </linearGradient>
     <linearGradient
-       inkscape:collect="always"
-       xlink:href="#color-primary-dark"
        id="linearGradient1911"
        x1="-13"
-       y1="16"
        x2="-1"
+       y1="16"
        y2="16"
-       gradientUnits="userSpaceOnUse" />
+       gradientUnits="userSpaceOnUse"
+       xlink:href="#color-primary-dark" />
     <linearGradient
-       inkscape:collect="always"
-       xlink:href="#border"
        id="linearGradient2283"
        x1="-6.5"
-       y1="6.5"
        x2="-6.5"
+       y1="6.5"
        y2="25.5"
+       gradientUnits="userSpaceOnUse"
+       xlink:href="#border" />
+    <linearGradient
+       id="linearGradient2628"
+       x1="-6.5"
+       x2="-6.5"
+       y1="6.5"
+       y2="25.5"
+       gradientUnits="userSpaceOnUse"
+       xlink:href="#border-dark" />
+    <linearGradient
+       id="linearGradient2630"
+       x1="-13"
+       x2="-1"
+       y1="16"
+       y2="16"
+       gradientUnits="userSpaceOnUse"
+       xlink:href="#color-primary-light" />
+    <linearGradient
+       id="linearGradient1291"
+       x1="-13"
+       x2="-1"
+       y1="16"
+       y2="16"
+       gradientTransform="matrix(1.1667 0 0 1.1667 1.1667 -2.6667)"
+       gradientUnits="userSpaceOnUse"
+       xlink:href="#color-primary-light" />
+    <linearGradient
+       id="linearGradient1295"
+       x1="-13"
+       x2="-1"
+       y1="16"
+       y2="16"
+       gradientTransform="matrix(1.1667 0 0 1.1667 1.1667 -2.6667)"
+       gradientUnits="userSpaceOnUse"
+       xlink:href="#color-primary-dark" />
+    <linearGradient
+       id="linearGradient1323"
+       x1="-13"
+       x2="-1"
+       y1="16"
+       y2="16"
+       gradientTransform="matrix(.83333 0 0 .83333 -1.1667 2.6667)"
+       gradientUnits="userSpaceOnUse"
+       xlink:href="#color-primary-light" />
+    <linearGradient
+       id="linearGradient1327"
+       x1="-13"
+       x2="-1"
+       y1="16"
+       y2="16"
+       gradientTransform="matrix(.83333 0 0 .83333 -1.1667 2.6667)"
+       gradientUnits="userSpaceOnUse"
+       xlink:href="#color-primary-dark" />
+    <linearGradient
+       id="linearGradient1355"
+       x1="-13"
+       x2="-1"
+       y1="16"
+       y2="16"
+       gradientUnits="userSpaceOnUse"
+       xlink:href="#color-text-secondary-disabled-dark" />
+    <linearGradient
+       id="linearGradient1359"
+       x1="-13"
+       x2="-1"
+       y1="16"
+       y2="16"
+       gradientUnits="userSpaceOnUse"
+       xlink:href="#color-text-secondary-disabled" />
+    <linearGradient
+       id="linearGradient12722"
+       x1="14.551"
+       x2="173.45"
+       y1="236"
+       y2="236"
+       gradientUnits="userSpaceOnUse"
+       xlink:href="#color-primary-dark" />
+    <linearGradient
+       id="linearGradient12730"
+       x1="14.551"
+       x2="173.45"
+       y1="236"
+       y2="236"
+       gradientUnits="userSpaceOnUse"
+       xlink:href="#color-primary-light" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#color-primary-dark"
+       id="linearGradient1034"
+       gradientUnits="userSpaceOnUse"
+       x1="14.551"
+       y1="236"
+       x2="173.45"
+       y2="236"
+       gradientTransform="translate(0,195)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#color-primary-dark"
+       id="linearGradient1491"
+       x1="14.550781"
+       y1="431"
+       x2="64"
+       y2="431"
        gradientUnits="userSpaceOnUse" />
     <linearGradient
        inkscape:collect="always"
-       xlink:href="#linearGradient2691"
-       id="linearGradient2628"
+       xlink:href="#color-primary-light"
+       id="linearGradient1622"
        gradientUnits="userSpaceOnUse"
-       x1="-6.5"
-       y1="6.5"
-       x2="-6.5"
-       y2="25.5" />
+       x1="14.550781"
+       y1="431"
+       x2="64"
+       y2="431" />
     <linearGradient
        inkscape:collect="always"
        xlink:href="#color-primary-light"
-       id="linearGradient2630"
+       id="linearGradient1624"
        gradientUnits="userSpaceOnUse"
-       x1="-13"
-       y1="16"
-       x2="-1"
-       y2="16" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient2691"
-       id="linearGradient1289"
-       gradientUnits="userSpaceOnUse"
-       x1="-6.5"
-       y1="6.5"
-       x2="-6.5"
-       y2="25.5" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#color-primary-light"
-       id="linearGradient1291"
-       gradientUnits="userSpaceOnUse"
-       x1="-13"
-       y1="16"
-       x2="-1"
-       y2="16"
-       gradientTransform="matrix(1.1666667,0,0,1.1666667,1.1666667,-2.6666667)" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#border"
-       id="linearGradient1293"
-       gradientUnits="userSpaceOnUse"
-       x1="-6.5"
-       y1="6.5"
-       x2="-6.5"
-       y2="25.5" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#color-primary-dark"
-       id="linearGradient1295"
-       gradientUnits="userSpaceOnUse"
-       x1="-13"
-       y1="16"
-       x2="-1"
-       y2="16"
-       gradientTransform="matrix(1.1666666,0,0,1.1666666,1.1666666,-2.6666666)" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient2691"
-       id="linearGradient1321"
-       gradientUnits="userSpaceOnUse"
-       x1="-6.5"
-       y1="6.5"
-       x2="-6.5"
-       y2="25.5" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#color-primary-light"
-       id="linearGradient1323"
-       gradientUnits="userSpaceOnUse"
-       x1="-13"
-       y1="16"
-       x2="-1"
-       y2="16"
-       gradientTransform="matrix(0.83333333,0,0,0.83333333,-1.1666667,2.6666667)" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#border"
-       id="linearGradient1325"
-       gradientUnits="userSpaceOnUse"
-       x1="-6.5"
-       y1="6.5"
-       x2="-6.5"
-       y2="25.5" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#color-primary-dark"
-       id="linearGradient1327"
-       gradientUnits="userSpaceOnUse"
-       x1="-13"
-       y1="16"
-       x2="-1"
-       y2="16"
-       gradientTransform="matrix(0.83333333,0,0,0.83333333,-1.1666667,2.6666667)" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient2691"
-       id="linearGradient1353"
-       gradientUnits="userSpaceOnUse"
-       x1="-6.5"
-       y1="6.5"
-       x2="-6.5"
-       y2="25.5" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#color-text-secondary-disabled-dark"
-       id="linearGradient1355"
-       gradientUnits="userSpaceOnUse"
-       x1="-13"
-       y1="16"
-       x2="-1"
-       y2="16" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#border"
-       id="linearGradient1357"
-       gradientUnits="userSpaceOnUse"
-       x1="-6.5"
-       y1="6.5"
-       x2="-6.5"
-       y2="25.5" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#color-text-secondary-disabled"
-       id="linearGradient1359"
-       gradientUnits="userSpaceOnUse"
-       x1="-13"
-       y1="16"
-       x2="-1"
-       y2="16" />
+       gradientTransform="translate(0,195)"
+       x1="14.551"
+       y1="236"
+       x2="173.45"
+       y2="236" />
   </defs>
   <rect
      width="200"
-     height="120"
+     height="573.4054"
      fill="url(#linearGradient976)"
-     stroke-width=".7746"
-     id="rect85" />
+     stroke-width="1.69323"
+     id="rect109"
+     style="fill:url(#linearGradient976)"
+     x="0"
+     y="-93.405396" />
+  <rect
+     x="200"
+     width="200"
+     height="573.4054"
+     fill="url(#linearGradient1041)"
+     stroke-width="1.69318"
+     id="rect107"
+     style="fill:url(#linearGradient1041)"
+     y="-93.405396" />
+  <g
+     id="linked-entry-firstchild-disabled">
+    <path
+       id="path1149"
+       style="paint-order:stroke fill markers;fill:#000000;opacity:0.04"
+       d="M 18 320 C 15.784 320 14 321.784 14 324 L 14 348 C 14 350.216 15.784 352 18 352 L 64 352 L 64 351 L 18 351 C 16.338 351 15 349.662 15 348 L 15 324 C 15 322.338 16.338 321 18 321 L 64 321 L 64 320 L 18 320 z " />
+  </g>
   <g
      id="selected-line">
     <rect
+       x="115"
+       y="82"
        width="3"
        height="16"
        rx="1.5"
        ry="1.5"
-       fill="#1a73e8"
+       fill="url(#linearGradient1478)"
        stroke-linecap="round"
        stroke-linejoin="round"
-       id="rect2"
-       x="115"
-       y="82"
-       style="fill-opacity:1.0;fill:url(#linearGradient1478)" />
+       id="rect111" />
   </g>
   <g
      id="scale-horz-marks-before-slider"
@@ -558,7 +562,7 @@
        height="100%"
        fill="url(#linearGradient978)"
        xlink:href="#base-scale-horz-marks-before-slider"
-       id="use95" />
+       id="use114" />
   </g>
   <g
      id="scale-horz-marks-before-slider-disabled"
@@ -568,13 +572,13 @@
        height="100%"
        fill="url(#linearGradient980)"
        xlink:href="#base-scale-horz-marks-before-slider"
-       id="use98" />
+       id="use117" />
     <use
        width="100%"
        height="100%"
        fill="url(#linearGradient982)"
        xlink:href="#base-scale-horz-marks-before-slider"
-       id="use100" />
+       id="use119" />
   </g>
   <g
      id="scale-horz-marks-after-slider"
@@ -584,7 +588,7 @@
        height="100%"
        fill="url(#linearGradient990)"
        xlink:href="#base-scale-horz-marks-after-slider"
-       id="use103" />
+       id="use122" />
   </g>
   <g
      id="scale-horz-marks-after-slider-disabled"
@@ -594,13 +598,13 @@
        height="100%"
        fill="url(#linearGradient992)"
        xlink:href="#base-scale-horz-marks-after-slider"
-       id="use106" />
+       id="use125" />
     <use
        width="100%"
        height="100%"
        fill="url(#linearGradient994)"
        xlink:href="#base-scale-horz-marks-after-slider"
-       id="use108" />
+       id="use127" />
   </g>
   <g
      id="scale-vert-marks-before-slider"
@@ -610,7 +614,7 @@
        height="100%"
        fill="url(#linearGradient996)"
        xlink:href="#base-scale-vert-marks-before-slider"
-       id="use111" />
+       id="use130" />
   </g>
   <g
      id="scale-vert-marks-before-slider-disabled"
@@ -620,13 +624,13 @@
        height="100%"
        fill="url(#linearGradient998)"
        xlink:href="#base-scale-vert-marks-before-slider"
-       id="use114" />
+       id="use133" />
     <use
        width="100%"
        height="100%"
        fill="url(#linearGradient1000)"
        xlink:href="#base-scale-vert-marks-before-slider"
-       id="use116" />
+       id="use135" />
   </g>
   <g
      id="scale-vert-marks-after-slider"
@@ -636,7 +640,7 @@
        height="100%"
        fill="url(#linearGradient978)"
        xlink:href="#base-scale-vert-marks-after-slider"
-       id="use119" />
+       id="use138" />
   </g>
   <g
      id="scale-vert-marks-after-slider-disabled"
@@ -646,13 +650,13 @@
        height="100%"
        fill="url(#linearGradient980)"
        xlink:href="#base-scale-vert-marks-after-slider"
-       id="use122" />
+       id="use141" />
     <use
        width="100%"
        height="100%"
        fill="url(#linearGradient982)"
        xlink:href="#base-scale-vert-marks-after-slider"
-       id="use124" />
+       id="use143" />
   </g>
   <g
      id="selectionmode-checkbox-unchecked"
@@ -662,7 +666,7 @@
        height="100%"
        fill="url(#color-surface)"
        xlink:href="#base-selectionmode-checkbox"
-       id="use127" />
+       id="use146" />
   </g>
   <g
      id="selectionmode-checkbox-checked"
@@ -672,21 +676,14 @@
        height="100%"
        fill="url(#linearGradient1008)"
        xlink:href="#base-selectionmode-checkbox"
-       id="use130" />
+       id="use149" />
     <use
        width="100%"
        height="100%"
        fill="url(#color-on-primary-dark)"
        xlink:href="#base-selectionmode-checkmark"
-       id="use132" />
+       id="use151" />
   </g>
-  <rect
-     x="200"
-     width="200"
-     height="120"
-     fill="url(#linearGradient1041)"
-     stroke-width=".7746"
-     id="rect135" />
   <g
      id="scale-horz-marks-before-slider-dark"
      transform="translate(240,8)">
@@ -695,7 +692,7 @@
        height="100%"
        fill="url(#linearGradient1043)"
        xlink:href="#base-scale-horz-marks-before-slider"
-       id="use145" />
+       id="use154" />
   </g>
   <g
      id="scale-horz-marks-before-slider-disabled-dark"
@@ -705,13 +702,13 @@
        height="100%"
        fill="url(#linearGradient1045)"
        xlink:href="#base-scale-horz-marks-before-slider"
-       id="use148" />
+       id="use157" />
     <use
        width="100%"
        height="100%"
        fill="url(#linearGradient1047)"
        xlink:href="#base-scale-horz-marks-before-slider"
-       id="use150" />
+       id="use159" />
   </g>
   <g
      id="scale-horz-marks-after-slider-dark"
@@ -721,7 +718,7 @@
        height="100%"
        fill="url(#linearGradient1055)"
        xlink:href="#base-scale-horz-marks-after-slider"
-       id="use153" />
+       id="use162" />
   </g>
   <g
      id="scale-horz-marks-after-slider-disabled-dark"
@@ -731,13 +728,13 @@
        height="100%"
        fill="url(#linearGradient1057)"
        xlink:href="#base-scale-horz-marks-after-slider"
-       id="use156" />
+       id="use165" />
     <use
        width="100%"
        height="100%"
        fill="url(#linearGradient1059)"
        xlink:href="#base-scale-horz-marks-after-slider"
-       id="use158" />
+       id="use167" />
   </g>
   <g
      id="scale-vert-marks-before-slider-dark"
@@ -747,7 +744,7 @@
        height="100%"
        fill="url(#linearGradient1061)"
        xlink:href="#base-scale-vert-marks-before-slider"
-       id="use161" />
+       id="use170" />
   </g>
   <g
      id="scale-vert-marks-before-slider-disabled-dark"
@@ -757,13 +754,13 @@
        height="100%"
        fill="url(#linearGradient1063)"
        xlink:href="#base-scale-vert-marks-before-slider"
-       id="use164" />
+       id="use173" />
     <use
        width="100%"
        height="100%"
        fill="url(#linearGradient1065)"
        xlink:href="#base-scale-vert-marks-before-slider"
-       id="use166" />
+       id="use175" />
   </g>
   <g
      id="scale-vert-marks-after-slider-dark"
@@ -773,7 +770,7 @@
        height="100%"
        fill="url(#linearGradient1043)"
        xlink:href="#base-scale-vert-marks-after-slider"
-       id="use169" />
+       id="use178" />
   </g>
   <g
      id="scale-vert-marks-after-slider-disabled-dark"
@@ -783,13 +780,13 @@
        height="100%"
        fill="url(#linearGradient1045)"
        xlink:href="#base-scale-vert-marks-after-slider"
-       id="use172" />
+       id="use181" />
     <use
        width="100%"
        height="100%"
        fill="url(#linearGradient1047)"
        xlink:href="#base-scale-vert-marks-after-slider"
-       id="use174" />
+       id="use183" />
   </g>
   <g
      id="selectionmode-checkbox-unchecked-dark"
@@ -799,7 +796,7 @@
        height="100%"
        fill="url(#color-surface-dark)"
        xlink:href="#base-selectionmode-checkbox"
-       id="use177" />
+       id="use186" />
   </g>
   <g
      id="selectionmode-checkbox-checked-dark"
@@ -809,300 +806,581 @@
        height="100%"
        fill="url(#linearGradient1073)"
        xlink:href="#base-selectionmode-checkbox"
-       id="use180" />
+       id="use189" />
     <use
        width="100%"
        height="100%"
        fill="url(#color-on-primary-light)"
        xlink:href="#base-selectionmode-checkmark"
-       id="use182" />
+       id="use191" />
   </g>
   <g
-     id="g1384"
-     transform="translate(202)">
+     transform="translate(202)"
+     id="selected-line-dark">
     <rect
+       x="115"
+       y="82"
        width="3"
        height="16"
        rx="1.5"
        ry="1.5"
-       fill="#1a73e8"
+       fill="url(#linearGradient1486)"
        stroke-linecap="round"
        stroke-linejoin="round"
-       id="rect1382"
-       x="115"
-       y="82"
-       style="fill-opacity:1.0;fill:url(#linearGradient1486)" />
+       id="rect194" />
   </g>
   <g
      id="scale-slider"
      transform="translate(32,2)">
     <rect
-       style="fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.997099"
-       id="rect1935"
-       width="25"
-       height="25"
        x="-25"
        y="5"
+       width="25"
+       height="25"
        rx="0"
-       ry="0" />
+       ry="0"
+       fill="none"
+       stroke-linecap="round"
+       stroke-linejoin="round"
+       stroke-opacity=".9971"
+       stroke-width="2"
+       id="rect198" />
     <g
-       id="g1903"
-       transform="translate(-5.5,1.5)">
+       transform="translate(-5.5,1.5)"
+       id="g206">
       <path
-         d="m -7,5.5 c -5.799,0 -10.5,4.701 -10.5,10.5 0,5.799 4.701,10.5 10.5,10.5 C -1.201,26.5 3.5,21.799 3.5,16 3.5,10.201 -1.201,5.5 -7,5.5 Z"
+         d="m-7 5.5c-5.799 0-10.5 4.701-10.5 10.5s4.701 10.5 10.5 10.5 10.5-4.701 10.5-10.5-4.701-10.5-10.5-10.5z"
+         fill="#ffffff"
+         stroke="url(#linearGradient2283)"
+         stroke-width="2"
+         id="path200" />
+      <path
+         d="m-7 5.5c-5.799 0-10.5 4.701-10.5 10.5s4.701 10.5 10.5 10.5 10.5-4.701 10.5-10.5-4.701-10.5-10.5-10.5z"
          fill="#ffffff"
          stroke="url(#paint0_linear)"
-         id="path2257"
-         style="fill:#ffffff;fill-opacity:1;stroke:url(#linearGradient2283);stroke-opacity:1;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none" />
+         id="path202" />
       <path
-         d="m -7,5.5 c -5.799,0 -10.5,4.701 -10.5,10.5 0,5.799 4.701,10.5 10.5,10.5 C -1.201,26.5 3.5,21.799 3.5,16 3.5,10.201 -1.201,5.5 -7,5.5 Z"
-         fill="#ffffff"
-         stroke="url(#paint0_linear)"
-         id="path1878"
-         style="fill:#ffffff;fill-opacity:1;stroke:none" />
-      <path
-         d="m -13,16 c 0,-3.3137 2.6863,-6 6,-6 3.3137,0 6,2.6863 6,6 0,3.3137 -2.6863,6 -6,6 -3.3137,0 -6,-2.6863 -6,-6 z"
-         fill="#005fb8"
-         id="path1880"
-         style="fill:url(#linearGradient1911);fill-opacity:1" />
+         d="m-13 16c0-3.3137 2.6863-6 6-6s6 2.6863 6 6-2.6863 6-6 6-6-2.6863-6-6z"
+         fill="url(#linearGradient1911)"
+         id="path204" />
     </g>
   </g>
   <g
      id="scale-slider-dark"
      transform="translate(233.5,2)">
     <rect
-       style="fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.997099"
-       id="rect2616"
-       width="25"
-       height="25"
        x="-25"
        y="5"
+       width="25"
+       height="25"
        rx="0"
-       ry="0" />
+       ry="0"
+       fill="none"
+       stroke-linecap="round"
+       stroke-linejoin="round"
+       stroke-opacity=".9971"
+       stroke-width="2"
+       id="rect209" />
     <g
-       id="g2624"
-       transform="translate(-5.5,1.5)">
+       transform="translate(-5.5,1.5)"
+       id="g217">
       <path
-         d="m -7,5.5 c -5.799,0 -10.5,4.701 -10.5,10.5 0,5.799 4.701,10.5 10.5,10.5 C -1.201,26.5 3.5,21.799 3.5,16 3.5,10.201 -1.201,5.5 -7,5.5 Z"
-         fill="#ffffff"
+         d="m-7 5.5c-5.799 0-10.5 4.701-10.5 10.5s4.701 10.5 10.5 10.5 10.5-4.701 10.5-10.5-4.701-10.5-10.5-10.5z"
+         fill="#3c3c3c"
+         stroke="url(#linearGradient2628)"
+         stroke-width="2"
+         id="path211" />
+      <path
+         d="m-7 5.5c-5.799 0-10.5 4.701-10.5 10.5s4.701 10.5 10.5 10.5 10.5-4.701 10.5-10.5-4.701-10.5-10.5-10.5z"
+         fill="#3c3c3c"
          stroke="url(#paint0_linear)"
-         id="path2618"
-         style="fill:#3c3c3c;fill-opacity:1;stroke:url(#linearGradient2628);stroke-opacity:1;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none" />
+         id="path213" />
       <path
-         d="m -7,5.5 c -5.799,0 -10.5,4.701 -10.5,10.5 0,5.799 4.701,10.5 10.5,10.5 C -1.201,26.5 3.5,21.799 3.5,16 3.5,10.201 -1.201,5.5 -7,5.5 Z"
-         fill="#ffffff"
-         stroke="url(#paint0_linear)"
-         id="path2620"
-         style="fill:#3c3c3c;fill-opacity:1;stroke:none;opacity:1" />
-      <path
-         d="m -13,16 c 0,-3.3137 2.6863,-6 6,-6 3.3137,0 6,2.6863 6,6 0,3.3137 -2.6863,6 -6,6 -3.3137,0 -6,-2.6863 -6,-6 z"
-         fill="#005fb8"
-         id="path2622"
-         style="fill:url(#linearGradient2630);fill-opacity:1.0" />
+         d="m-13 16c0-3.3137 2.6863-6 6-6s6 2.6863 6 6-2.6863 6-6 6-6-2.6863-6-6z"
+         fill="url(#linearGradient2630)"
+         id="path215" />
     </g>
   </g>
   <g
      id="scale-slider-hover"
      transform="translate(32,-41)">
     <rect
-       style="fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.997099"
-       id="rect1265"
-       width="25"
-       height="25"
        x="-25"
        y="5"
+       width="25"
+       height="25"
        rx="0"
-       ry="0" />
+       ry="0"
+       fill="none"
+       stroke-linecap="round"
+       stroke-linejoin="round"
+       stroke-opacity=".9971"
+       stroke-width="2"
+       id="rect220" />
     <g
-       id="g1273"
-       transform="translate(-5.5,1.5)">
+       transform="translate(-5.5,1.5)"
+       id="g228">
       <path
-         d="m -7,5.5 c -5.799,0 -10.5,4.701 -10.5,10.5 0,5.799 4.701,10.5 10.5,10.5 C -1.201,26.5 3.5,21.799 3.5,16 3.5,10.201 -1.201,5.5 -7,5.5 Z"
+         d="m-7 5.5c-5.799 0-10.5 4.701-10.5 10.5s4.701 10.5 10.5 10.5 10.5-4.701 10.5-10.5-4.701-10.5-10.5-10.5z"
+         fill="#ffffff"
+         stroke="url(#linearGradient2283)"
+         stroke-width="2"
+         id="path222" />
+      <path
+         d="m-7 5.5c-5.799 0-10.5 4.701-10.5 10.5s4.701 10.5 10.5 10.5 10.5-4.701 10.5-10.5-4.701-10.5-10.5-10.5z"
          fill="#ffffff"
          stroke="url(#paint0_linear)"
-         id="path1267"
-         style="fill:#ffffff;fill-opacity:1;stroke:url(#linearGradient1293);stroke-opacity:1;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none" />
+         id="path224" />
       <path
-         d="m -7,5.5 c -5.799,0 -10.5,4.701 -10.5,10.5 0,5.799 4.701,10.5 10.5,10.5 C -1.201,26.5 3.5,21.799 3.5,16 3.5,10.201 -1.201,5.5 -7,5.5 Z"
-         fill="#ffffff"
-         stroke="url(#paint0_linear)"
-         id="path1269"
-         style="fill:#ffffff;fill-opacity:1;stroke:none" />
-      <path
-         d="m -14,16 c 0,-3.865984 3.134016,-7 7,-7 3.8659834,0 7,3.134016 7,7 0,3.865984 -3.1340166,7 -7,7 -3.865984,0 -7,-3.134016 -7,-7 z"
-         fill="#005fb8"
-         id="path1271"
-         style="fill:url(#linearGradient1295);fill-opacity:1;stroke-width:1.16666" />
+         d="m-14 16c0-3.866 3.134-7 7-7 3.866 0 7 3.134 7 7s-3.134 7-7 7c-3.866 0-7-3.134-7-7z"
+         fill="url(#linearGradient1295)"
+         stroke-width="1.1667"
+         id="path226" />
     </g>
   </g>
   <g
      id="scale-slider-hover-dark"
      transform="translate(233.5,-41)">
     <rect
-       style="fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.997099"
-       id="rect1277"
-       width="25"
-       height="25"
        x="-25"
        y="5"
+       width="25"
+       height="25"
        rx="0"
-       ry="0" />
+       ry="0"
+       fill="none"
+       stroke-linecap="round"
+       stroke-linejoin="round"
+       stroke-opacity=".9971"
+       stroke-width="2"
+       id="rect231" />
     <g
-       id="g1285"
-       transform="translate(-5.5,1.5)">
+       transform="translate(-5.5,1.5)"
+       id="g239">
       <path
-         d="m -7,5.5 c -5.799,0 -10.5,4.701 -10.5,10.5 0,5.799 4.701,10.5 10.5,10.5 C -1.201,26.5 3.5,21.799 3.5,16 3.5,10.201 -1.201,5.5 -7,5.5 Z"
-         fill="#ffffff"
+         d="m-7 5.5c-5.799 0-10.5 4.701-10.5 10.5s4.701 10.5 10.5 10.5 10.5-4.701 10.5-10.5-4.701-10.5-10.5-10.5z"
+         fill="#3c3c3c"
+         stroke="url(#linearGradient2628)"
+         stroke-width="2"
+         id="path233" />
+      <path
+         d="m-7 5.5c-5.799 0-10.5 4.701-10.5 10.5s4.701 10.5 10.5 10.5 10.5-4.701 10.5-10.5-4.701-10.5-10.5-10.5z"
+         fill="#3c3c3c"
          stroke="url(#paint0_linear)"
-         id="path1279"
-         style="fill:#3c3c3c;fill-opacity:1;stroke:url(#linearGradient1289);stroke-opacity:1;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none" />
+         id="path235" />
       <path
-         d="m -7,5.5 c -5.799,0 -10.5,4.701 -10.5,10.5 0,5.799 4.701,10.5 10.5,10.5 C -1.201,26.5 3.5,21.799 3.5,16 3.5,10.201 -1.201,5.5 -7,5.5 Z"
-         fill="#ffffff"
-         stroke="url(#paint0_linear)"
-         id="path1281"
-         style="opacity:1;fill:#3c3c3c;fill-opacity:1;stroke:none" />
-      <path
-         d="m -14,16 c 0,-3.865983 3.134017,-7 7,-7 3.8659833,0 7,3.134017 7,7 0,3.865983 -3.1340167,7 -7,7 -3.865983,0 -7,-3.134017 -7,-7 z"
-         fill="#005fb8"
-         id="path1283"
-         style="fill:url(#linearGradient1291);fill-opacity:1;stroke-width:1.16667" />
+         d="m-14 16c0-3.866 3.134-7 7-7 3.866 0 7 3.134 7 7s-3.134 7-7 7c-3.866 0-7-3.134-7-7z"
+         fill="url(#linearGradient1291)"
+         stroke-width="1.1667"
+         id="path237" />
     </g>
   </g>
   <g
      id="scale-slider-active"
      transform="translate(32,-84)">
     <rect
-       style="fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.997099"
-       id="rect1297"
-       width="25"
-       height="25"
        x="-25"
        y="5"
+       width="25"
+       height="25"
        rx="0"
-       ry="0" />
+       ry="0"
+       fill="none"
+       stroke-linecap="round"
+       stroke-linejoin="round"
+       stroke-opacity=".9971"
+       stroke-width="2"
+       id="rect242" />
     <g
-       id="g1305"
-       transform="translate(-5.5,1.5)">
+       transform="translate(-5.5,1.5)"
+       id="g250">
       <path
-         d="m -7,5.5 c -5.799,0 -10.5,4.701 -10.5,10.5 0,5.799 4.701,10.5 10.5,10.5 C -1.201,26.5 3.5,21.799 3.5,16 3.5,10.201 -1.201,5.5 -7,5.5 Z"
+         d="m-7 5.5c-5.799 0-10.5 4.701-10.5 10.5s4.701 10.5 10.5 10.5 10.5-4.701 10.5-10.5-4.701-10.5-10.5-10.5z"
+         fill="#ffffff"
+         stroke="url(#linearGradient2283)"
+         stroke-width="2"
+         id="path244" />
+      <path
+         d="m-7 5.5c-5.799 0-10.5 4.701-10.5 10.5s4.701 10.5 10.5 10.5 10.5-4.701 10.5-10.5-4.701-10.5-10.5-10.5z"
          fill="#ffffff"
          stroke="url(#paint0_linear)"
-         id="path1299"
-         style="fill:#ffffff;fill-opacity:1;stroke:url(#linearGradient1325);stroke-opacity:1;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none" />
+         id="path246" />
       <path
-         d="m -7,5.5 c -5.799,0 -10.5,4.701 -10.5,10.5 0,5.799 4.701,10.5 10.5,10.5 C -1.201,26.5 3.5,21.799 3.5,16 3.5,10.201 -1.201,5.5 -7,5.5 Z"
-         fill="#ffffff"
-         stroke="url(#paint0_linear)"
-         id="path1301"
-         style="fill:#ffffff;fill-opacity:1;stroke:none" />
-      <path
-         d="m -12,16 c 0,-2.761417 2.238583,-5 5,-5 2.7614167,0 5,2.238583 5,5 0,2.761417 -2.2385833,5 -5,5 -2.761417,0 -5,-2.238583 -5,-5 z"
-         fill="#005fb8"
-         id="path1303"
-         style="fill:url(#linearGradient1327);fill-opacity:1;stroke-width:0.833333" />
+         d="m-12 16c0-2.7614 2.2386-5 5-5 2.7614 0 5 2.2386 5 5s-2.2386 5-5 5c-2.7614 0-5-2.2386-5-5z"
+         fill="url(#linearGradient1327)"
+         stroke-width=".83333"
+         id="path248" />
     </g>
   </g>
   <g
      id="scale-slider-active-dark"
      transform="translate(233.5,-84)">
     <rect
-       style="fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.997099"
-       id="rect1309"
-       width="25"
-       height="25"
        x="-25"
        y="5"
+       width="25"
+       height="25"
        rx="0"
-       ry="0" />
+       ry="0"
+       fill="none"
+       stroke-linecap="round"
+       stroke-linejoin="round"
+       stroke-opacity=".9971"
+       stroke-width="2"
+       id="rect253" />
     <g
-       id="g1317"
-       transform="translate(-5.5,1.5)">
+       transform="translate(-5.5,1.5)"
+       id="g261">
       <path
-         d="m -7,5.5 c -5.799,0 -10.5,4.701 -10.5,10.5 0,5.799 4.701,10.5 10.5,10.5 C -1.201,26.5 3.5,21.799 3.5,16 3.5,10.201 -1.201,5.5 -7,5.5 Z"
-         fill="#ffffff"
+         d="m-7 5.5c-5.799 0-10.5 4.701-10.5 10.5s4.701 10.5 10.5 10.5 10.5-4.701 10.5-10.5-4.701-10.5-10.5-10.5z"
+         fill="#3c3c3c"
+         stroke="url(#linearGradient2628)"
+         stroke-width="2"
+         id="path255" />
+      <path
+         d="m-7 5.5c-5.799 0-10.5 4.701-10.5 10.5s4.701 10.5 10.5 10.5 10.5-4.701 10.5-10.5-4.701-10.5-10.5-10.5z"
+         fill="#3c3c3c"
          stroke="url(#paint0_linear)"
-         id="path1311"
-         style="fill:#3c3c3c;fill-opacity:1;stroke:url(#linearGradient1321);stroke-opacity:1;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none" />
+         id="path257" />
       <path
-         d="m -7,5.5 c -5.799,0 -10.5,4.701 -10.5,10.5 0,5.799 4.701,10.5 10.5,10.5 C -1.201,26.5 3.5,21.799 3.5,16 3.5,10.201 -1.201,5.5 -7,5.5 Z"
-         fill="#ffffff"
-         stroke="url(#paint0_linear)"
-         id="path1313"
-         style="opacity:1;fill:#3c3c3c;fill-opacity:1;stroke:none" />
-      <path
-         d="m -12,16 c 0,-2.761417 2.238583,-5 5,-5 2.7614167,0 5,2.238583 5,5 0,2.761417 -2.2385833,5 -5,5 -2.761417,0 -5,-2.238583 -5,-5 z"
-         fill="#005fb8"
-         id="path1315"
-         style="fill:url(#linearGradient1323);fill-opacity:1;stroke-width:0.833333" />
+         d="m-12 16c0-2.7614 2.2386-5 5-5 2.7614 0 5 2.2386 5 5s-2.2386 5-5 5c-2.7614 0-5-2.2386-5-5z"
+         fill="url(#linearGradient1323)"
+         stroke-width=".83333"
+         id="path259" />
     </g>
   </g>
   <g
      id="scale-slider-disabled"
      transform="translate(32,33)">
     <rect
-       style="fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.997099"
-       id="rect1329"
-       width="25"
-       height="25"
        x="-25"
        y="5"
+       width="25"
+       height="25"
        rx="0"
-       ry="0" />
+       ry="0"
+       fill="none"
+       stroke-linecap="round"
+       stroke-linejoin="round"
+       stroke-opacity=".9971"
+       stroke-width="2"
+       id="rect264" />
     <g
-       id="g1337"
-       transform="translate(-5.5,1.5)">
+       transform="translate(-5.5,1.5)"
+       id="g272">
       <path
-         d="m -7,5.5 c -5.799,0 -10.5,4.701 -10.5,10.5 0,5.799 4.701,10.5 10.5,10.5 C -1.201,26.5 3.5,21.799 3.5,16 3.5,10.201 -1.201,5.5 -7,5.5 Z"
+         d="m-7 5.5c-5.799 0-10.5 4.701-10.5 10.5s4.701 10.5 10.5 10.5 10.5-4.701 10.5-10.5-4.701-10.5-10.5-10.5z"
+         fill="#ffffff"
+         stroke="url(#linearGradient2283)"
+         stroke-width="2"
+         id="path266" />
+      <path
+         d="m-7 5.5c-5.799 0-10.5 4.701-10.5 10.5s4.701 10.5 10.5 10.5 10.5-4.701 10.5-10.5-4.701-10.5-10.5-10.5z"
          fill="#ffffff"
          stroke="url(#paint0_linear)"
-         id="path1331"
-         style="fill:#ffffff;fill-opacity:1;stroke:url(#linearGradient1357);stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         id="path268" />
       <path
-         d="m -7,5.5 c -5.799,0 -10.5,4.701 -10.5,10.5 0,5.799 4.701,10.5 10.5,10.5 C -1.201,26.5 3.5,21.799 3.5,16 3.5,10.201 -1.201,5.5 -7,5.5 Z"
-         fill="#ffffff"
-         stroke="url(#paint0_linear)"
-         id="path1333"
-         style="fill:#ffffff;fill-opacity:1;stroke:none" />
-      <path
-         d="m -13,16 c 0,-3.3137 2.6863,-6 6,-6 3.3137,0 6,2.6863 6,6 0,3.3137 -2.6863,6 -6,6 -3.3137,0 -6,-2.6863 -6,-6 z"
-         fill="#005fb8"
-         id="path1335"
-         style="fill:url(#linearGradient1359);fill-opacity:1" />
+         d="m-13 16c0-3.3137 2.6863-6 6-6s6 2.6863 6 6-2.6863 6-6 6-6-2.6863-6-6z"
+         fill="url(#linearGradient1359)"
+         id="path270" />
     </g>
   </g>
   <g
      id="scale-slider-disabled-dark"
      transform="translate(233.5,33)">
     <rect
-       style="fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.997099"
-       id="rect1341"
-       width="25"
-       height="25"
        x="-25"
        y="5"
+       width="25"
+       height="25"
        rx="0"
-       ry="0" />
+       ry="0"
+       fill="none"
+       stroke-linecap="round"
+       stroke-linejoin="round"
+       stroke-opacity=".9971"
+       stroke-width="2"
+       id="rect275" />
     <g
-       id="g1349"
-       transform="translate(-5.5,1.5)">
+       transform="translate(-5.5,1.5)"
+       id="g283">
       <path
-         d="m -7,5.5 c -5.799,0 -10.5,4.701 -10.5,10.5 0,5.799 4.701,10.5 10.5,10.5 C -1.201,26.5 3.5,21.799 3.5,16 3.5,10.201 -1.201,5.5 -7,5.5 Z"
-         fill="#ffffff"
+         d="m-7 5.5c-5.799 0-10.5 4.701-10.5 10.5s4.701 10.5 10.5 10.5 10.5-4.701 10.5-10.5-4.701-10.5-10.5-10.5z"
+         fill="#3c3c3c"
+         stroke="url(#linearGradient2628)"
+         stroke-width="2"
+         id="path277" />
+      <path
+         d="m-7 5.5c-5.799 0-10.5 4.701-10.5 10.5s4.701 10.5 10.5 10.5 10.5-4.701 10.5-10.5-4.701-10.5-10.5-10.5z"
+         fill="#3c3c3c"
          stroke="url(#paint0_linear)"
-         id="path1343"
-         style="fill:#3c3c3c;fill-opacity:1;stroke:url(#linearGradient1353);stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         id="path279" />
       <path
-         d="m -7,5.5 c -5.799,0 -10.5,4.701 -10.5,10.5 0,5.799 4.701,10.5 10.5,10.5 C -1.201,26.5 3.5,21.799 3.5,16 3.5,10.201 -1.201,5.5 -7,5.5 Z"
-         fill="#ffffff"
-         stroke="url(#paint0_linear)"
-         id="path1345"
-         style="opacity:1;fill:#3c3c3c;fill-opacity:1;stroke:none" />
-      <path
-         d="m -13,16 c 0,-3.3137 2.6863,-6 6,-6 3.3137,0 6,2.6863 6,6 0,3.3137 -2.6863,6 -6,6 -3.3137,0 -6,-2.6863 -6,-6 z"
-         fill="#005fb8"
-         id="path1347"
-         style="fill:url(#linearGradient1355);fill-opacity:1.0" />
+         d="m-13 16c0-3.3137 2.6863-6 6-6s6 2.6863 6 6-2.6863 6-6 6-6-2.6863-6-6z"
+         fill="url(#linearGradient1355)"
+         id="path281" />
     </g>
   </g>
+  <mask
+     x="478"
+     y="-2"
+     width="164"
+     height="34"
+     style="mask-type:alpha"
+     maskUnits="userSpaceOnUse"
+     id="mask288">
+    <rect
+       x="479"
+       y="-1"
+       width="162"
+       height="32"
+       stroke="url(#paint0_linear_238:0)"
+       stroke-width="2"
+       id="rect286" />
+  </mask>
+  <g
+     id="entry-normal"
+     transform="translate(0,29)">
+    <path
+       d="m18 151c-2.216 0-4 1.784-4 4v24c0 1.2043 0.53816 2.2679 1.375 3h2.625c-1.662 0-3-1.338-3-3v-24c0-1.662 1.338-3 3-3h152c1.662 0 3 1.338 3 3v24c0 1.662-1.338 3-3 3h2.625c0.83684-0.73212 1.375-1.7957 1.375-3v-24c0-2.216-1.784-4-4-4z"
+       opacity=".08"
+       id="path290"
+       style="fill:#000000" />
+    <path
+       d="m15.375 182c0.70295 0.61498 1.6133 1 2.625 1h152c1.0117 0 1.922-0.38502 2.625-1h-154.62z"
+       opacity=".45"
+       id="path292"
+       style="fill:#000000;opacity:0.35" />
+  </g>
+  <g
+     id="entry-focus"
+     transform="translate(0,15)">
+    <path
+       d="m18 205c-2.216 0-4 1.784-4 4v24c0 0.73303 0.2093 1.4104 0.55078 2h1.2246c-0.47718-0.53088-0.77539-1.2267-0.77539-2v-24c0-1.662 1.338-3 3-3h152c1.662 0 3 1.338 3 3v24c0 0.7733-0.29821 1.4691-0.77539 2h1.2246c0.34148-0.58955 0.55078-1.267 0.55078-2v-24c0-2.216-1.784-4-4-4z"
+       fill="#000000"
+       opacity=".08"
+       stroke-width="0"
+       style="paint-order:stroke fill markers"
+       id="path295" />
+    <path
+       d="m14.551 235c0.69084 1.1927 1.9662 2 3.4492 2h152c1.483 0 2.7584-0.80729 3.4492-2z"
+       fill="url(#linearGradient12722)"
+       id="path297"
+       style="fill-opacity:1.0" />
+  </g>
+  <g
+     id="entry-disabled"
+     transform="translate(0,15)">
+    <path
+       d="m18 125c-2.216 0-4 1.784-4 4v24c0 2.216 1.784 4 4 4h152c2.216 0 4-1.784 4-4v-24c0-2.216-1.784-4-4-4zm0 1h152c1.662 0 3 1.338 3 3v24c0 1.662-1.338 3-3 3h-152c-1.662 0-3-1.338-3-3v-24c0-1.662 1.338-3 3-3z"
+       fill="#000000"
+       opacity=".04"
+       stroke-width="0"
+       style="paint-order:stroke fill markers"
+       id="path300" />
+  </g>
+  <g
+     id="entry-normal-dark"
+     transform="translate(207,29)">
+    <path
+       d="m18 151c-2.216 0-4 1.784-4 4v24c0 1.2043 0.53816 2.2679 1.375 3h2.625c-1.662 0-3-1.338-3-3v-24c0-1.662 1.338-3 3-3h152c1.662 0 3 1.338 3 3v24c0 1.662-1.338 3-3 3h2.625c0.83684-0.73212 1.375-1.7957 1.375-3v-24c0-2.216-1.784-4-4-4z"
+       opacity=".12"
+       style="paint-order:stroke fill markers;fill:#ffffff"
+       id="path303" />
+    <path
+       d="m15.375 182c0.70295 0.61498 1.6133 1 2.625 1h152c1.0117 0 1.922-0.38502 2.625-1h-154.62z"
+       opacity=".5"
+       id="path305"
+       style="fill:#ffffff;opacity:0.35" />
+  </g>
+  <g
+     id="entry-focus-dark"
+     transform="translate(207,15)">
+    <path
+       d="m18 205c-2.216 0-4 1.784-4 4v24c0 0.73303 0.2093 1.4104 0.55078 2h1.2246c-0.47718-0.53088-0.77539-1.2267-0.77539-2v-24c0-1.662 1.338-3 3-3h152c1.662 0 3 1.338 3 3v24c0 0.7733-0.29821 1.4691-0.77539 2h1.2246c0.34148-0.58955 0.55078-1.267 0.55078-2v-24c0-2.216-1.784-4-4-4z"
+       fill="#ffffff"
+       opacity=".12"
+       stroke-width="0"
+       style="paint-order:stroke fill markers"
+       id="path308" />
+    <path
+       d="m14.551 235c0.69084 1.1927 1.9662 2 3.4492 2h152c1.483 0 2.7584-0.80729 3.4492-2z"
+       fill="url(#linearGradient12730)"
+       id="path310"
+       style="fill-opacity:1.0" />
+  </g>
+  <g
+     id="entry-disabled-dark"
+     transform="translate(207,15)">
+    <path
+       d="m18 125c-2.216 0-4 1.784-4 4v24c0 2.216 1.784 4 4 4h152c2.216 0 4-1.784 4-4v-24c0-2.216-1.784-4-4-4zm0 1h152c1.662 0 3 1.338 3 3v24c0 1.662-1.338 3-3 3h-152c-1.662 0-3-1.338-3-3v-24c0-1.662 1.338-3 3-3z"
+       fill="#ffffff"
+       opacity=".05"
+       stroke-width="0"
+       style="paint-order:stroke fill markers"
+       id="path313" />
+  </g>
+  <g
+     id="linked-entry-normal">
+    <path
+       id="path1018"
+       style="fill:#000000;opacity:0.08"
+       d="M 64 360 L 64 361 L 124 361 L 124 360 L 64 360 z " />
+    <path
+       id="path1020"
+       style="opacity:0.35;fill:#000000"
+       d="M 64 391 L 64 392 L 124 392 L 124 391 L 64 391 z " />
+  </g>
+  <g
+     id="linked-entry-focus">
+    <path
+       id="path1024"
+       style="paint-order:stroke fill markers;fill:#000000;opacity:0.08"
+       d="M 64 400 L 64 401 L 124 401 L 124 400 L 64 400 z " />
+    <path
+       id="path1026"
+       style="fill:url(#linearGradient1034);fill-opacity:1.0"
+       d="M 64 430 L 64 432 L 124 432 L 124 430 L 64 430 z " />
+  </g>
+  <g
+     id="linked-entry-disabled">
+    <path
+       id="path1030"
+       style="paint-order:stroke fill markers;fill:#000000;opacity:0.04"
+       d="M 64 320 L 64 321 L 124 321 L 124 320 L 64 320 z M 64 351 L 64 352 L 124 352 L 124 351 L 64 351 z " />
+  </g>
+  <g
+     id="linked-entry-firstchild-normal">
+    <path
+       id="rect1257"
+       style="opacity:0.35;fill:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
+       d="M 15.375 391 C 16.07795 391.61498 16.9883 392 18 392 L 64 392 L 64 391 L 18.005859 391 L 15.375 391 z " />
+    <path
+       id="path1345"
+       style="fill:#000000;opacity:0.08"
+       d="M 18 360 C 15.784 360 14 361.784 14 364 L 14 388 C 14 389.2043 14.53816 390.2679 15.375 391 L 18 391 C 16.338 391 15 389.662 15 388 L 15 364 C 15 362.338 16.338 361 18 361 L 64 361 L 64 360 L 18 360 z " />
+  </g>
+  <g
+     id="linked-entry-firstchild-focus">
+    <path
+       id="rect1341"
+       style="opacity:1;fill:url(#linearGradient1491);stroke-width:0;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;fill-opacity:1.0"
+       d="M 14.550781 430 C 15.241621 431.1927 16.517 432 18 432 L 64 432 L 64 430 L 14.550781 430 z " />
+    <path
+       id="path1455"
+       style="paint-order:stroke fill markers;fill:#000000;opacity:0.08"
+       d="M 18 400 C 15.784 400 14 401.784 14 404 L 14 428 C 14 428.73303 14.209301 429.4104 14.550781 430 L 15.775391 430 C 15.298211 429.46912 15 428.7733 15 428 L 15 404 C 15 402.338 16.338 401 18 401 L 64 401 L 64 400 L 18 400 z " />
+  </g>
+  <use
+     x="0"
+     y="0"
+     xlink:href="#linked-entry-firstchild-disabled"
+     id="linked-entry-lastchild-disabled"
+     transform="matrix(-1,0,0,1,188,0)"
+     width="100%"
+     height="100%" />
+  <use
+     x="0"
+     y="0"
+     xlink:href="#linked-entry-firstchild-normal"
+     id="linked-entry-lastchild-normal"
+     transform="matrix(-1,0,0,1,188,0)"
+     width="100%"
+     height="100%" />
+  <use
+     x="0"
+     y="0"
+     xlink:href="#linked-entry-firstchild-focus"
+     id="linked-entry-lastchild-focus"
+     transform="matrix(-1,0,0,1,188,0)"
+     width="100%"
+     height="100%" />
+  <g
+     id="linked-entry-firstchild-disabled-dark"
+     transform="translate(207)">
+    <path
+       id="path1590"
+       style="opacity:0.05;fill:#ffffff;paint-order:stroke fill markers"
+       d="m 18,320 c -2.216,0 -4,1.784 -4,4 v 24 c 0,2.216 1.784,4 4,4 h 46 v -1 H 18 c -1.662,0 -3,-1.338 -3,-3 v -24 c 0,-1.662 1.338,-3 3,-3 h 46 v -1 z" />
+  </g>
+  <g
+     id="linked-entry-normal-dark"
+     transform="translate(207)">
+    <path
+       id="path1594"
+       style="opacity:0.12;fill:#ffffff"
+       d="m 64,360 v 1 h 60 v -1 z" />
+    <path
+       id="path1596"
+       style="opacity:0.35;fill:#ffffff"
+       d="m 64,391 v 1 h 60 v -1 z" />
+  </g>
+  <g
+     id="linked-entry-focus-dark"
+     transform="translate(207)">
+    <path
+       id="path1600"
+       style="opacity:0.12;fill:#ffffff;paint-order:stroke fill markers"
+       d="m 64,400 v 1 h 60 v -1 z" />
+    <path
+       id="path1602"
+       style="fill:url(#linearGradient1624);fill-opacity:1.0"
+       d="m 64,430 v 2 h 60 v -2 z" />
+  </g>
+  <g
+     id="linked-entry-disabled-dark"
+     transform="translate(207)">
+    <path
+       id="path1606"
+       style="opacity:0.05;fill:#ffffff;paint-order:stroke fill markers"
+       d="m 64,320 v 1 h 60 v -1 z m 0,31 v 1 h 60 v -1 z" />
+  </g>
+  <g
+     id="linked-entry-firstchild-normal-dark"
+     transform="translate(207)">
+    <path
+       id="path1610"
+       style="opacity:0.35;fill:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
+       d="m 15.375,391 c 0.70295,0.61498 1.6133,1 2.625,1 h 46 v -1 H 18.005859 Z" />
+    <path
+       id="path1612"
+       style="opacity:0.12;fill:#ffffff"
+       d="m 18,360 c -2.216,0 -4,1.784 -4,4 v 24 c 0,1.2043 0.53816,2.2679 1.375,3 H 18 c -1.662,0 -3,-1.338 -3,-3 v -24 c 0,-1.662 1.338,-3 3,-3 h 46 v -1 z" />
+  </g>
+  <g
+     id="linked-entry-firstchild-focus-dark"
+     transform="translate(207)">
+    <path
+       id="path1616"
+       style="opacity:1;fill:url(#linearGradient1622);fill-opacity:1.0;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
+       d="m 14.550781,430 c 0.69084,1.1927 1.966219,2 3.449219,2 h 46 v -2 z" />
+    <path
+       id="path1618"
+       style="opacity:0.12;fill:#ffffff;paint-order:stroke fill markers"
+       d="m 18,400 c -2.216,0 -4,1.784 -4,4 v 24 c 0,0.73303 0.209301,1.4104 0.550781,2 h 1.22461 C 15.298211,429.46912 15,428.7733 15,428 v -24 c 0,-1.662 1.338,-3 3,-3 h 46 v -1 z" />
+  </g>
+  <use
+     x="0"
+     y="0"
+     xlink:href="#linked-entry-firstchild-disabled-dark"
+     id="linked-entry-lastchild-disabled-dark"
+     transform="matrix(-1,0,0,1,602,0)"
+     width="100%"
+     height="100%" />
+  <use
+     x="0"
+     y="0"
+     xlink:href="#linked-entry-firstchild-normal-dark"
+     id="linked-entry-lastchild-normal-dark"
+     transform="matrix(-1,0,0,1,602,0)"
+     width="100%"
+     height="100%" />
+  <use
+     x="0"
+     y="0"
+     xlink:href="#linked-entry-firstchild-focus-dark"
+     id="linked-entry-lastchild-focus-dark"
+     transform="matrix(-1,0,0,1,602,0)"
+     width="100%"
+     height="100%" />
 </svg>

@@ -236,73 +236,115 @@ spinner {
 /****************
  * Text Entries *
  ****************/
+
+%linked_round_entry {
+  &:not(:only-child) {
+    border-image-width: 4px 4px 4px 4px;
+    border-image-slice: 4 4 4 4;
+    border-image-repeat: stretch;
+    border-image-source: -gtk-scaled(url("assets/linked-entry-normal#{$asset-suffix}.png"),url("assets/linked-entry-normal#{$asset-suffix}@2.png"));
+
+    &:focus {
+      border-image-source: -gtk-scaled(url("assets/linked-entry-focus#{$asset-suffix}.png"),url("assets/linked-entry-focus#{$asset-suffix}@2.png"));
+    }
+
+    &:disabled {
+      border-image-source: -gtk-scaled(url("assets/linked-entry-disabled#{$asset-suffix}.png"),url("assets/linked-entry-disabled#{$asset-suffix}@2.png"));
+    }
+  }
+
+  &:first-child {
+    border-image-source: -gtk-scaled(url("assets/linked-entry-firstchild-normal#{$asset-suffix}.png"),url("assets/linked-entry-firstchild-normal#{$asset-suffix}@2.png"));
+
+    &:focus {
+      border-image-source: -gtk-scaled(url("assets/linked-entry-firstchild-focus#{$asset-suffix}.png"),url("assets/linked-entry-firstchild-focus#{$asset-suffix}@2.png"));
+    }
+
+    &:disabled {
+      border-image-source: -gtk-scaled(url("assets/linked-entry-firstchild-disabled#{$asset-suffix}.png"),url("assets/linked-entry-firstchild-disabled#{$asset-suffix}@2.png"));
+    }
+  }
+
+  &:last-child {
+    border-image-source: -gtk-scaled(url("assets/linked-entry-lastchild-normal#{$asset-suffix}.png"),url("assets/linked-entry-lastchild-normal#{$asset-suffix}@2.png"));
+
+    &:focus {
+      border-image-source: -gtk-scaled(url("assets/linked-entry-lastchild-focus#{$asset-suffix}.png"),url("assets/linked-entry-lastchild-focus#{$asset-suffix}@2.png"));
+    }
+
+    &:disabled {
+      border-image-source: -gtk-scaled(url("assets/linked-entry-lastchild-disabled#{$asset-suffix}.png"),url("assets/linked-entry-lastchild-disabled#{$asset-suffix}@2.png"));
+    }
+  }
+}
+
 %entry,
 entry {
-  %entry_basic, & {
-    min-height: $medium-size - 4px;
-    padding: 0 8px;
-    border-radius: $corner-radius;
-    caret-color: currentColor; // this shouldn't be needed.
-    border: 1px solid $divider;
+  min-height: $medium-size - 4px;
+  padding: 0 8px;
+  border-radius: $corner-radius;
+  caret-color: currentColor; // this shouldn't be needed.
+  border: 1px solid $divider;
 
+  @if $window == 'round' {
+    @include entry(round-normal);
+    &:hover, &:drop(active) { @include entry(round-hover); }
+    &:focus { @include entry(round-focus); }
+    &:disabled { @include entry(round-disabled); }
+  } @else {
     @include entry(normal);
-
-    &:hover { @include entry(hover); }
-
-    &:focus { @include entry(checked); }
-
-    &:drop(active) { @include entry(hover); }
-
+    &:hover, &:drop(active) { @include entry(hover); }
+    &:focus { @include entry(focus); }
     &:disabled { @include entry(disabled); }
+  }
 
-    &.flat {
-      min-height: 0;
-      padding: 2px;
-      border-radius: 0;
-      background-color: transparent;
+  &.flat {
+    min-height: 0;
+    padding: 2px;
+    border-radius: 0;
+    background-color: transparent;
+  }
+
+  image { // icons inside the entry
+    color: $text-secondary;
+
+    &:hover, &:active { color: $text; }
+
+    &:disabled { color: $text-disabled; }
+
+    &.left {
+      margin-left: ($medium-size - 16px) / 2 - 8px;
+      margin-right: 6px;
     }
 
-    image { // icons inside the entry
-      color: $text-secondary;
-
-      &:hover, &:active { color: $text; }
-
-      &:disabled { color: $text-disabled; }
-
-      &.left {
-        margin-left: ($medium-size - 16px) / 2 - 8px;
-        margin-right: 6px;
-      }
-
-      &.right {
-        margin-left: 6px;
-        margin-right: ($medium-size - 16px) / 2 - 8px;
-      }
+    &.right {
+      margin-left: 6px;
+      margin-right: ($medium-size - 16px) / 2 - 8px;
     }
+  }
 
-    undershoot {
-      &.left { @include undershoot(left); }
+  undershoot {
+    &.left { @include undershoot(left); }
 
-      &.right { @include undershoot(right); }
+    &.right { @include undershoot(right); }
+  }
+
+  selection { @extend %selected_items_primary; }
+
+  // entry error and warning style
+  @each $e_type, $e_color in (error, $error),
+                             (warning, $warning) {
+    &.#{$e_type} {
+      @include entry(normal, $e_color);
+
+      &:focus { @include entry(checked, $e_color); }
+
+      &:disabled { @include entry(disabled, $e_color); }
     }
-
-    selection { @extend %selected_items_primary; }
-
-    // entry error and warning style
-    @each $e_type, $e_color in (error, $error),
-                               (warning, $warning) {
-      &.#{$e_type} {
-        @include entry(normal, $e_color);
-
-        &:focus { @include entry(checked, $e_color); }
-
-        &:disabled { @include entry(disabled, $e_color); }
-      }
-    }
+  }
 
     // .osd & {
     // }
-  }
 
   progress {
     margin: 2px -8px;
@@ -311,42 +353,16 @@ entry {
   }
 
    // linked entries
-  .linked:not(.vertical) > & { @extend %linked-solid; }
+  .linked:not(.vertical) > & {
+    @extend %linked-solid;
 
-  // Vertically linked entries
-  .linked.vertical > & { @extend %linked-solid-vertical; }
-}
-
-%entry_flat {
-  border: none;
-
-  @include entry(flat-normal);
-
-  &:focus { @include entry(flat-focus); }
-
-  &:drop(active) { @include entry(flat-hover); }
-
-  &:disabled { @include entry(flat-disabled); }
-
-  // entry error and warning style
-  @each $e_type, $e_color in (error, $error),
-                             (warning, $warning) {
-    &.#{$e_type} {
-      @include entry(flat-normal, $e_color);
-
-      &:focus { @include entry(flat-focus, $e_color); }
-
-      &:disabled { @include entry(flat-disabled, $e_color); }
-
-      image {
-        color: on($e_color, secondary);
-
-        &:hover, &:active { color: on($e_color); }
-
-        &:disabled { color: on($e_color, disabled); }
-      }
+    @if $window == 'round' {
+      @extend %linked_round_entry;
     }
   }
+
+  // Vertically linked entries
+  // .linked.vertical > & { @extend %linked-solid-vertical; }
 }
 
 treeview entry {
@@ -1025,10 +1041,10 @@ combobox {
 
   decoration { transition: none; } // workaround for menuitem selection
 
-  // button.combo cellview {
-  //   &:dir(ltr) { margin-left: 8px - ($medium-size - 16px) / 2; }
-  //   &:dir(rtl) { margin-right: 8px - ($medium-size - 16px) / 2; }
-  // }
+  button.combo cellview {
+    &:dir(ltr) { margin-left: 8px - ($medium-size - 16px) / 2; }
+    &:dir(rtl) { margin-right: 8px - ($medium-size - 16px) / 2; }
+  }
 
   menu {
     padding: 2px 0;
@@ -1063,30 +1079,37 @@ combobox {
   }
 
   > .linked:not(.vertical) > entry:not(:only-child) {
-    // border-radius: $corner-radius;
-    border-right-width: 1px;
+    border-radius: $corner-radius;
 
-    // &:first-child {
-    //   margin-right: -$medium-size;
-    //   padding-right: $medium-size;
-    // }
-    //
-    // &:last-child {
-    //   margin-left: -$medium-size;
-    //   padding-left: $medium-size;
-    // }
+    @if $window == 'round' { // reset
+      &, &:first-child, &:last-child {
+        @include entry(round-normal);
+        &:focus { @include entry(round-focus); }
+        &:disabled { @include entry(round-disabled); }
+      }
+    }
+
+    &:first-child {
+      margin-right: -$medium-size;
+      padding-right: $medium-size;
+    }
+
+    &:last-child {
+      margin-left: -$medium-size;
+      padding-left: $medium-size;
+    }
   }
 
-  // > .linked:not(.vertical) > button:not(:only-child) {
-  //   @extend %button-flat;
-  //   // @extend %small_button;
-  //
-  //   min-height: 16px;
-  //   min-width: 16px;
-  //   margin: ($medium-size - $small-size) / 2;
-  //   padding: ($small-size - 16px) / 2;
-  //   border-radius: $corner-radius;
-  // }
+  > .linked:not(.vertical) > button:not(:only-child) {
+    @extend %button-flat;
+    // @extend %small_button;
+
+    min-height: 16px;
+    min-width: 16px;
+    margin: ($medium-size - $small-size) / 2;
+    padding: ($small-size - 16px) / 2;
+    border-radius: $corner-radius;
+  }
 }
 
 // the combo is a composite widget so the way we do button linking doesn't
@@ -1285,16 +1308,19 @@ searchbar > revealer > box {
   border: none;
   border-radius: 4px;
   box-shadow: 0 2px 3px rgba(black, 0.06);
+  border-image: none;
 
   &:hover { box-shadow: 0 2px 3px rgba(black, 0.08), inset 0 0 0 1px $titlebar-divider; }
 
   &:focus {
     box-shadow: inset 0 0 0 2px $entry-highlight;
+    border-image: none;
   }
 
   &:disabled {
     background-color: $titlebar-fill;
     color: $titlebar-text-disabled;
+    border-image: none;
   }
 
   image {
@@ -1386,6 +1412,14 @@ searchbar > revealer > box {
 
   .linked:not(.vertical) > entry:not(:only-child) {
     border-radius: 4px;
+
+    @if $window == 'round' {
+      &, &:first-child, &:last-child {
+        &, &:focus, &:disabled {
+          border-image: none;
+        }
+      }
+    }
   }
 
   // Titlebar Buttons
@@ -2597,7 +2631,7 @@ radio {
   &:checked, &:indeterminate {
     color: $primary;
     background-image: image(on($primary));
-    background-size: 14px 14px;
+    background-size: 12px 12px;
     background-position: center center;
     background-repeat: no-repeat;
     animation: none;

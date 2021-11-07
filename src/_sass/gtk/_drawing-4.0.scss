@@ -32,15 +32,6 @@
   }
 
   @if $t == focus {
-    transition: $transition,
-                border $ripple-fade-out-duration $ease-out,
-                box-shadow $ripple-fade-out-duration $ease-out;
-    background-color: $base;
-    box-shadow: inset 0 0 0 1px if($fc == $primary, $text-disabled, $fc);
-    border-color: if($fc == $primary, $text-disabled, $fc);
-  }
-
-  @if $t == checked {
     background-color: $base;
     box-shadow: inset 0 0 0 1px if($fc == $primary, $text-disabled, $fc);
     border-color: if($fc == $primary, $text-disabled, $fc);
@@ -50,27 +41,30 @@
     box-shadow: inset 0 0 0 1px transparent;
     background-color: $base-alt;
     color: $text-disabled;
+    border-color: $fill;
   }
 
-  @if $t == flat-normal {
-    transition: $transition, box-shadow $ripple-fade-out-duration $ease-out;
-    border-image: none;
-    box-shadow: inset 0 0 0 2px transparent;
+  @if $t == round-normal {
+    transition: $transition,
+                border-image $ripple-fade-out-duration $ease-out;
     background-color: if($fc == $primary, $base, $fc);
     color: if($fc == $primary, $text, on($fc));
+    border-image-width: 4px 4px 4px 4px;
+    border-image-slice: 4 4 4 4;
+    border-image-repeat: stretch;
+    border-image-source: -gtk-scaled(url("assets/entry-normal#{$asset-suffix}.png"),url("assets/entry-normal#{$asset-suffix}@2.png"));
   }
 
-  @if $t == flat-hover {
-    box-shadow: inset 0 0 0 1px $divider;
+  @if $t == round-hover {
+    border-image-source: -gtk-scaled(url("assets/entry-normal#{$asset-suffix}.png"),url("assets/entry-normal#{$asset-suffix}@2.png"));
   }
 
-  @if $t == flat-focus {
-    border-image: none;
-    box-shadow: inset 0 0 0 2px if($fc == $primary, $base, $fc);
+  @if $t == round-focus {
+    border-image-source: -gtk-scaled(url("assets/entry-focus#{$asset-suffix}.png"),url("assets/entry-focus#{$asset-suffix}@2.png"));
   }
 
-  @if $t == flat-disabled {
-    box-shadow: inset 0 0 0 2px transparent;
+  @if $t == round-disabled {
+    border-image-source: -gtk-scaled(url("assets/entry-disabled#{$asset-suffix}.png"),url("assets/entry-disabled#{$asset-suffix}@2.png"));
     background-color: $base-alt;
     color: $text-disabled;
   }
@@ -126,6 +120,7 @@
     box-shadow: none;
     background-color: $base-alt;
     color: $text-disabled;
+    border-color: $fill;
   }
 
   @if $t == checked {

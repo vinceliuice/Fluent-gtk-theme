@@ -117,6 +117,29 @@
   @if $t == insensitive {
     color: $inverse_secondary_fg_color;
   }
+
+  @if $t == round {
+    caret-color: $secondary_fg_color;
+    color: $secondary_fg_color;
+    background-color: if($variant == 'light', $base_color, $inverse_divider_color);
+    margin: 2px 6px 6px;
+    border: 2px solid transparent;
+    box-shadow: 0 3px 3px rgba(black, 0.24), 0 5px 8px rgba(black, 0.05);
+  }
+
+  @if $t == round-focus {
+    color: $fg_color;
+    box-shadow: 0 3px 3px rgba(black, 0.20), 0 5px 8px rgba(black, 0.08);
+    border: 2px solid $primary_color;
+  }
+
+  @if $t == round-hover {
+    border: 2px solid $track_color;
+  }
+
+  @if $t == round-insensitive {
+    color: $inverse_secondary_fg_color;
+  }
 }
 
 @mixin search_entry($t, $fc: $primary_color) {
