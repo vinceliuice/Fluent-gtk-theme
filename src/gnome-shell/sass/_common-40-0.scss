@@ -15,54 +15,51 @@ stage {
 }
 
 %bubble_button {
-  margin-bottom: 6px;
-  border-radius: $buttons_radius;
   @include font(button);
-  @include button(normal);
-
-  &:hover { @include button(hover); }
-  &:active { @include button(active); }
-  &:insensitive { @include button(insensitive); }
-  &:focus { @include button(focus); }
+  margin: 0;
+  border-radius: 0;
+  background: none;
+  border: none;
+  box-shadow: none;
+  transition: border-image 200ms;
 
   &:first-child {
-    margin-left: 6px;
-    margin-right: 3px;
     color: $secondary_fg_color;
+    border-image: url("assets/modal-button-left.svg") 16 16 16 16;
+
+    &:hover {
+      border-image: url("assets/modal-button-left-hover.svg") 16 16 16 16;
+    }
+
+    &:active {
+      border-image: url("assets/modal-button-left-active.svg") 16 16 16 16;
+    }
 
     &:hover, &:active {
       color: $fg_color;
     }
+
+    &:insensitive {
+      color: $disabled_secondary_fg_color;
+    }
   }
 
   &:last-child {
-    margin-left: 3px;
-    margin-right: 6px;
     color: white;
-    background-color: $primary_color;
-    border-color: if($variant == 'light', darken($primary_color, 8%), rgba(white, 0.08));
+    border-image: url("assets/modal-button-right.svg") 16 16 16 16;
 
     &:hover {
       color: white;
-      background-color: lighten($primary_color, 8%);
-      border-color: if($variant == 'light', $primary_color, rgba(white, 0.15));
+      border-image: url("assets/modal-button-right-hover.svg") 16 16 16 16;
     }
 
     &:active {
       color: white;
-      background-color: darken($primary_color, 5%);
-      border-color: if($variant == 'light', darken($primary_color, 15%), rgba(white, 0.15));
+      border-image: url("assets/modal-button-right-active.svg") 16 16 16 16;
     }
 
     &:insensitive {
-      color: rgba($primary_color, 0.5);
-      background-color: rgba($primary_color, 0.15);
-      border-color: transparent;
+      color: rgba(white, 0.45);
     }
-  }
-
-  &:first-child:last-child {
-    margin: 0 6px 6px 6px;
-    border-radius: $buttons_radius;
   }
 }

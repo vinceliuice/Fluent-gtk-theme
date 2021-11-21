@@ -1053,6 +1053,7 @@ combobox {
 
   > .linked:not(.vertical) > entry:not(:only-child) {
     border-radius: $corner-radius;
+    border-right-width: 1px;
 
     @if $window == 'round' { // reset
       &, &:first-child, &:last-child {

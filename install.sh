@@ -135,6 +135,12 @@ install() {
   cp -r "${SRC_DIR}/gnome-shell/theme$theme/"*.svg                              "$THEME_DIR/gnome-shell/assets"
   cp -r "${SRC_DIR}/gnome-shell/assets${ELSE_DARK:-}/activities/activities${icon}.svg" "$THEME_DIR/gnome-shell/assets/activities.svg"
 
+  if [[ "$window" = "round" ]] ; then
+    cp -r "${SRC_DIR}/gnome-shell/assets${ELSE_DARK:-}/buttons-round/"*.svg     "$THEME_DIR/gnome-shell/assets"
+  else
+    cp -r "${SRC_DIR}/gnome-shell/assets${ELSE_DARK:-}/buttons/"*.svg           "$THEME_DIR/gnome-shell/assets"
+  fi
+
   if [[ "$color" = "-light" ]] ; then
     cp -r "${SRC_DIR}/gnome-shell/assets-dark/activities/activities${icon}.svg" "$THEME_DIR/gnome-shell/assets/activities-white.svg"
   fi

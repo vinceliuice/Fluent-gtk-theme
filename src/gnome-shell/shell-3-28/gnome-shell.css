@@ -2741,85 +2741,53 @@ StWidget.focused .app-well-app-running-dot {
 }
 
 .hotplug-notification-item, .modal-dialog .modal-dialog-linked-button {
-  margin-bottom: 6px;
-  border-radius: 3px;
   font-size: 10.5pt;
   font-weight: 500;
-  color: rgba(0, 0, 0, 0.62);
-  background-color: white;
-  border-color: #d9d9d9;
+  margin: 0;
+  border-radius: 0;
+  background: none;
+  border: none;
   box-shadow: none;
-}
-
-.hotplug-notification-item:hover, .modal-dialog .modal-dialog-linked-button:hover {
-  color: rgba(0, 0, 0, 0.87);
-  background-color: white;
-  border-color: #cccccc;
-  box-shadow: none;
-}
-
-.hotplug-notification-item:active, .modal-dialog .modal-dialog-linked-button:active {
-  color: rgba(0, 0, 0, 0.87);
-  background-color: #f2f2f2;
-  border-color: #cccccc;
-  box-shadow: none;
-}
-
-.hotplug-notification-item:insensitive, .modal-dialog .modal-dialog-linked-button:insensitive {
-  color: rgba(0, 0, 0, 0.26);
-  background-color: rgba(0, 0, 0, 0.08);
-  border-color: transparent;
-  box-shadow: none;
-}
-
-.hotplug-notification-item:focus, .modal-dialog .modal-dialog-linked-button:focus {
-  color: #1A73E8;
-  box-shadow: none;
-}
-
-.hotplug-notification-item:focus:active, .modal-dialog .modal-dialog-linked-button:focus:active {
-  color: white;
 }
 
 .hotplug-notification-item:first-child, .modal-dialog .modal-dialog-linked-button:first-child {
-  margin-left: 6px;
-  margin-right: 3px;
   color: rgba(0, 0, 0, 0.54);
+  border-image: url("assets/modal-button-left.svg") 16 16 16 16;
+}
+
+.hotplug-notification-item:first-child:hover, .modal-dialog .modal-dialog-linked-button:first-child:hover {
+  border-image: url("assets/modal-button-left-hover.svg") 16 16 16 16;
+}
+
+.hotplug-notification-item:first-child:active, .modal-dialog .modal-dialog-linked-button:first-child:active {
+  border-image: url("assets/modal-button-left-active.svg") 16 16 16 16;
 }
 
 .hotplug-notification-item:first-child:hover, .modal-dialog .modal-dialog-linked-button:first-child:hover, .hotplug-notification-item:first-child:active, .modal-dialog .modal-dialog-linked-button:first-child:active {
   color: rgba(0, 0, 0, 0.87);
 }
 
+.hotplug-notification-item:first-child:insensitive, .modal-dialog .modal-dialog-linked-button:first-child:insensitive {
+  color: rgba(0, 0, 0, 0.26);
+}
+
 .hotplug-notification-item:last-child, .modal-dialog .modal-dialog-linked-button:last-child {
-  margin-left: 3px;
-  margin-right: 6px;
   color: white;
-  background-color: #1A73E8;
-  border-color: #1461c5;
+  border-image: url("assets/modal-button-right.svg") 16 16 16 16;
 }
 
 .hotplug-notification-item:last-child:hover, .modal-dialog .modal-dialog-linked-button:last-child:hover {
   color: white;
-  background-color: #3f8aec;
-  border-color: #1A73E8;
+  border-image: url("assets/modal-button-right-hover.svg") 16 16 16 16;
 }
 
 .hotplug-notification-item:last-child:active, .modal-dialog .modal-dialog-linked-button:last-child:active {
   color: white;
-  background-color: #1567d3;
-  border-color: #1151a5;
+  border-image: url("assets/modal-button-right-active.svg") 16 16 16 16;
 }
 
 .hotplug-notification-item:last-child:insensitive, .modal-dialog .modal-dialog-linked-button:last-child:insensitive {
-  color: rgba(26, 115, 232, 0.5);
-  background-color: rgba(26, 115, 232, 0.15);
-  border-color: transparent;
-}
-
-.hotplug-notification-item:first-child:last-child, .modal-dialog .modal-dialog-linked-button:first-child:last-child {
-  margin: 0 6px 6px 6px;
-  border-radius: 3px;
+  color: rgba(255, 255, 255, 0.45);
 }
 
 .hotplug-transient-box {

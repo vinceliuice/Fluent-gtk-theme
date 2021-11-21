@@ -12,85 +12,53 @@ stage {
 }
 
 .modal-dialog .modal-dialog-linked-button, .hotplug-notification-item {
-  margin-bottom: 6px;
-  border-radius: 3px;
   font-size: 9.75pt;
   font-weight: 500;
-  color: rgba(0, 0, 0, 0.62);
-  background-color: white;
-  border-color: #d9d9d9;
+  margin: 0;
+  border-radius: 0;
+  background: none;
+  border: none;
   box-shadow: none;
-}
-
-.modal-dialog .modal-dialog-linked-button:hover, .hotplug-notification-item:hover {
-  color: rgba(0, 0, 0, 0.87);
-  background-color: white;
-  border-color: #cccccc;
-  box-shadow: none;
-}
-
-.modal-dialog .modal-dialog-linked-button:active, .hotplug-notification-item:active {
-  color: rgba(0, 0, 0, 0.87);
-  background-color: #f2f2f2;
-  border-color: #cccccc;
-  box-shadow: none;
-}
-
-.modal-dialog .modal-dialog-linked-button:insensitive, .hotplug-notification-item:insensitive {
-  color: rgba(0, 0, 0, 0.26);
-  background-color: rgba(0, 0, 0, 0.08);
-  border-color: transparent;
-  box-shadow: none;
-}
-
-.modal-dialog .modal-dialog-linked-button:focus, .hotplug-notification-item:focus {
-  color: #1A73E8;
-  box-shadow: none;
-}
-
-.modal-dialog .modal-dialog-linked-button:focus:active, .hotplug-notification-item:focus:active {
-  color: white;
 }
 
 .modal-dialog .modal-dialog-linked-button:first-child, .hotplug-notification-item:first-child {
-  margin-left: 6px;
-  margin-right: 3px;
   color: rgba(0, 0, 0, 0.54);
+  border-image: url("assets/modal-button-left.svg") 16 16 16 16;
+}
+
+.modal-dialog .modal-dialog-linked-button:first-child:hover, .hotplug-notification-item:first-child:hover {
+  border-image: url("assets/modal-button-left-hover.svg") 16 16 16 16;
+}
+
+.modal-dialog .modal-dialog-linked-button:first-child:active, .hotplug-notification-item:first-child:active {
+  border-image: url("assets/modal-button-left-active.svg") 16 16 16 16;
 }
 
 .modal-dialog .modal-dialog-linked-button:first-child:hover, .hotplug-notification-item:first-child:hover, .modal-dialog .modal-dialog-linked-button:first-child:active, .hotplug-notification-item:first-child:active {
   color: rgba(0, 0, 0, 0.87);
 }
 
+.modal-dialog .modal-dialog-linked-button:first-child:insensitive, .hotplug-notification-item:first-child:insensitive {
+  color: rgba(0, 0, 0, 0.26);
+}
+
 .modal-dialog .modal-dialog-linked-button:last-child, .hotplug-notification-item:last-child {
-  margin-left: 3px;
-  margin-right: 6px;
   color: white;
-  background-color: #1A73E8;
-  border-color: #1461c5;
+  border-image: url("assets/modal-button-right.svg") 16 16 16 16;
 }
 
 .modal-dialog .modal-dialog-linked-button:last-child:hover, .hotplug-notification-item:last-child:hover {
   color: white;
-  background-color: #3f8aec;
-  border-color: #1A73E8;
+  border-image: url("assets/modal-button-right-hover.svg") 16 16 16 16;
 }
 
 .modal-dialog .modal-dialog-linked-button:last-child:active, .hotplug-notification-item:last-child:active {
   color: white;
-  background-color: #1567d3;
-  border-color: #1151a5;
+  border-image: url("assets/modal-button-right-active.svg") 16 16 16 16;
 }
 
 .modal-dialog .modal-dialog-linked-button:last-child:insensitive, .hotplug-notification-item:last-child:insensitive {
-  color: rgba(26, 115, 232, 0.5);
-  background-color: rgba(26, 115, 232, 0.15);
-  border-color: transparent;
-}
-
-.modal-dialog .modal-dialog-linked-button:first-child:last-child, .hotplug-notification-item:first-child:last-child {
-  margin: 0 6px 6px 6px;
-  border-radius: 3px;
+  color: rgba(255, 255, 255, 0.45);
 }
 
 /* WIDGETS */
@@ -1293,10 +1261,10 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .modal-dialog {
   color: rgba(0, 0, 0, 0.87);
   background-color: transparent;
-  border: 1px solid transparent;
-  padding: 6px 10px 10px !important;
+  border: none;
+  padding: 4px 6px 8px !important;
   margin: 0 !important;
-  border-image: url("assets/modal.svg") 24 162 28 28;
+  border-image: url("assets/menu.svg") 24 32 28 28;
 }
 
 .modal-dialog .modal-dialog-content-box {
@@ -1306,40 +1274,12 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .modal-dialog .modal-dialog-linked-button {
-  background-clip: padding-box;
-  min-height: 20px;
-  padding: 6px 18px !important;
-  border: 1px solid !important;
+  min-height: 32px;
 }
 
 /* End Session Dialog */
 .end-session-dialog {
   width: 30em;
-  border-image: url("assets/modal-session.svg") 24 162 28 28;
-}
-
-.end-session-dialog .modal-dialog-linked-button:last-child {
-  color: white;
-  background-color: #FF5252;
-  border-color: #ff2929;
-}
-
-.end-session-dialog .modal-dialog-linked-button:last-child:hover {
-  color: white;
-  background-color: #ff7b7b;
-  border-color: #FF5252;
-}
-
-.end-session-dialog .modal-dialog-linked-button:last-child:active {
-  color: white;
-  background-color: #ff3939;
-  border-color: #ff0606;
-}
-
-.end-session-dialog .modal-dialog-linked-button:last-child:insensitive {
-  color: rgba(255, 82, 82, 0.5);
-  background-color: rgba(255, 82, 82, 0.15);
-  border-color: transparent;
 }
 
 .end-session-dialog .end-session-dialog-battery-warning,
@@ -1419,11 +1359,22 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 /* Password or Authentication Dialog */
 .prompt-dialog {
   width: 28em;
-  border-image: url("assets/modal-prompt.svg") 24 192 28 28;
 }
 
 .prompt-dialog .modal-dialog-content-box {
   margin-bottom: 24px;
+}
+
+.prompt-dialog .modal-dialog-linked-button:last-child {
+  border-image: url("assets/prompt-modal-button-right.svg") 16 16 16 16;
+}
+
+.prompt-dialog .modal-dialog-linked-button:last-child:hover {
+  border-image: url("assets/prompt-modal-button-right-hover.svg") 16 16 16 16;
+}
+
+.prompt-dialog .modal-dialog-linked-button:last-child:active {
+  border-image: url("assets/prompt-modal-button-right-active.svg") 16 16 16 16;
 }
 
 .prompt-dialog-password-grid {
