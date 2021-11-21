@@ -251,29 +251,29 @@ spinner {
     &:disabled {
       border-image-source: -gtk-scaled(url("assets/linked-entry-disabled#{$asset-suffix}.png"),url("assets/linked-entry-disabled#{$asset-suffix}@2.png"));
     }
-  }
 
-  &:first-child {
-    border-image-source: -gtk-scaled(url("assets/linked-entry-firstchild-normal#{$asset-suffix}.png"),url("assets/linked-entry-firstchild-normal#{$asset-suffix}@2.png"));
+    &:first-child {
+      border-image-source: -gtk-scaled(url("assets/linked-entry-firstchild-normal#{$asset-suffix}.png"),url("assets/linked-entry-firstchild-normal#{$asset-suffix}@2.png"));
 
-    &:focus {
-      border-image-source: -gtk-scaled(url("assets/linked-entry-firstchild-focus#{$asset-suffix}.png"),url("assets/linked-entry-firstchild-focus#{$asset-suffix}@2.png"));
+      &:focus {
+        border-image-source: -gtk-scaled(url("assets/linked-entry-firstchild-focus#{$asset-suffix}.png"),url("assets/linked-entry-firstchild-focus#{$asset-suffix}@2.png"));
+      }
+
+      &:disabled {
+        border-image-source: -gtk-scaled(url("assets/linked-entry-firstchild-disabled#{$asset-suffix}.png"),url("assets/linked-entry-firstchild-disabled#{$asset-suffix}@2.png"));
+      }
     }
 
-    &:disabled {
-      border-image-source: -gtk-scaled(url("assets/linked-entry-firstchild-disabled#{$asset-suffix}.png"),url("assets/linked-entry-firstchild-disabled#{$asset-suffix}@2.png"));
-    }
-  }
+    &:last-child {
+      border-image-source: -gtk-scaled(url("assets/linked-entry-lastchild-normal#{$asset-suffix}.png"),url("assets/linked-entry-lastchild-normal#{$asset-suffix}@2.png"));
 
-  &:last-child {
-    border-image-source: -gtk-scaled(url("assets/linked-entry-lastchild-normal#{$asset-suffix}.png"),url("assets/linked-entry-lastchild-normal#{$asset-suffix}@2.png"));
+      &:focus {
+        border-image-source: -gtk-scaled(url("assets/linked-entry-lastchild-focus#{$asset-suffix}.png"),url("assets/linked-entry-lastchild-focus#{$asset-suffix}@2.png"));
+      }
 
-    &:focus {
-      border-image-source: -gtk-scaled(url("assets/linked-entry-lastchild-focus#{$asset-suffix}.png"),url("assets/linked-entry-lastchild-focus#{$asset-suffix}@2.png"));
-    }
-
-    &:disabled {
-      border-image-source: -gtk-scaled(url("assets/linked-entry-lastchild-disabled#{$asset-suffix}.png"),url("assets/linked-entry-lastchild-disabled#{$asset-suffix}@2.png"));
+      &:disabled {
+        border-image-source: -gtk-scaled(url("assets/linked-entry-lastchild-disabled#{$asset-suffix}.png"),url("assets/linked-entry-lastchild-disabled#{$asset-suffix}@2.png"));
+      }
     }
   }
 }
@@ -858,17 +858,19 @@ button {
 }
 
 // Apply the rules defined above
-.linked:not(.vertical) {
-  &:not(.path-bar):not(.nautilus-path-bar) { @include linking_rules($entry_rules:'true'); }
+@if $window == 'default' {
+  .linked:not(.vertical) {
+    &:not(.path-bar):not(.nautilus-path-bar) { @include linking_rules($entry_rules:'true'); }
 
-  headerbar, .titlebar & {
-    &:not(.path-bar):not(.nautilus-path-bar):not(.stack-switcher) {
-      @include linking_rules($entry_rules:'false');
+    headerbar, .titlebar & {
+      &:not(.path-bar):not(.nautilus-path-bar):not(.stack-switcher) {
+        @include linking_rules($entry_rules:'false');
+      }
     }
   }
-}
 
-.linked.vertical { @include linking_rules($vert:'true'); }
+  .linked.vertical { @include linking_rules($vert:'true'); }
+}
 
 // menu buttons
 modelbutton.flat,
@@ -3145,26 +3147,26 @@ scrolledwindow {
 
   // This is used when content is touch-dragged past boundaries.
   // draws a box on top of the content, the size changes programmatically.
-  @at-root overshoot {
-    &.top { @include overshoot(top); }
+//  @at-root overshoot {
+//    &.top { @include overshoot(top); }
 
-    &.bottom { @include overshoot(bottom); }
+//    &.bottom { @include overshoot(bottom); }
 
-    &.left { @include overshoot(left); }
+//    &.left { @include overshoot(left); }
 
-    &.right { @include overshoot(right); }
-  }
+//    &.right { @include overshoot(right); }
+//  }
 
   // Overflow indication, works similarly to the overshoot, the size if fixed tho.
-  @at-root undershoot {
-    &.top { @include undershoot(top); }
+//  @at-root undershoot {
+//    &.top { @include undershoot(top); }
 
-    &.bottom { @include undershoot(bottom); }
+//    &.bottom { @include undershoot(bottom); }
 
-    &.left { @include undershoot(left); }
+//    &.left { @include undershoot(left); }
 
-    &.right { @include undershoot(right); }
-  }
+//    &.right { @include undershoot(right); }
+//  }
 
   @at-root junction { // the small square between two scrollbars
     border-style: solid none none solid;

@@ -532,13 +532,13 @@ button:drop(active) {
   border-color: rgba(255, 255, 255, 0.3);
 }
 
-placessidebar .navigation-sidebar > row button.sidebar-button, calendar > header > button, columnview.view > header > button button.circular,
-treeview.view > header > button button.circular,
-filechooser stack.view scrolledwindow treeview.view > header > button button.circular, row.activatable button.circular, check,
-radio, scrollbar button, notebook > header > tabs > arrow, spinbutton.vertical > button, spinbutton:not(.vertical) > button, modelbutton.flat, filechooser #pathbarbox > stack > box > button, window.dialog.message.csd .dialog-action-area > button, .app-notification button, popover.background.menu button,
+placessidebar .navigation-sidebar > row button.sidebar-button, calendar > header > button, check,
+radio, scrollbar button, notebook > header > tabs > arrow, spinbutton.vertical > button, spinbutton:not(.vertical) > button,
+list > row button.image-button:not(.flat), modelbutton.flat, filechooser #pathbarbox > stack > box > button, window.dialog.message.csd .dialog-action-area > button, .app-notification button, popover.background.menu button,
 popover.background button.model,
 pathbar > button, .titlebar button:not(.suggested-action):not(.destructive-action), .toolbar button,
-toolbar button, infobar.error > revealer > box button, infobar.error:backdrop > revealer > box button, infobar.warning > revealer > box button, infobar.warning:backdrop > revealer > box button, infobar.action > revealer > box button, infobar.action:backdrop > revealer > box button, infobar.question > revealer > box button, infobar.question:backdrop > revealer > box button, popover.background.touch-selection button, popover.background.magnifier button, .selection-mode .titlebar windowcontrols > button:not(.suggested-action):not(.destructive-action), .titlebar.selection-mode button:not(.suggested-action):not(.destructive-action), button.flat {
+toolbar button, dropdown > .linked:not(.vertical) > button:not(:only-child),
+combobox > .linked:not(.vertical) > button:not(:only-child), infobar.error > revealer > box button, infobar.error:backdrop > revealer > box button, infobar.warning > revealer > box button, infobar.warning:backdrop > revealer > box button, infobar.action > revealer > box button, infobar.action:backdrop > revealer > box button, infobar.question > revealer > box button, infobar.question:backdrop > revealer > box button, popover.background.touch-selection button, popover.background.magnifier button, .selection-mode .titlebar windowcontrols > button:not(.suggested-action):not(.destructive-action), .titlebar.selection-mode button:not(.suggested-action):not(.destructive-action), button.flat {
   transition: all 75ms cubic-bezier(0, 0, 0.2, 1), box-shadow 300ms cubic-bezier(0, 0, 0.2, 1);
   outline: none;
   box-shadow: inset 0 0 0 9999px transparent;
@@ -547,48 +547,48 @@ toolbar button, infobar.error > revealer > box button, infobar.error:backdrop > 
   color: rgba(255, 255, 255, 0.7);
 }
 
-placessidebar .navigation-sidebar > row button.sidebar-button:focus, calendar > header > button:focus, columnview.view > header > button button.circular:focus,
-treeview.view > header > button button.circular:focus,
-filechooser stack.view scrolledwindow treeview.view > header > button button.circular:focus, row.activatable button.circular:focus, check:focus,
-radio:focus, scrollbar button:focus, notebook > header > tabs > arrow:focus, spinbutton.vertical > button:focus, spinbutton:not(.vertical) > button:focus, modelbutton.flat:focus, filechooser #pathbarbox > stack > box > button:focus, window.dialog.message.csd .dialog-action-area > button:focus, .app-notification button:focus, popover.background.menu button:focus,
+placessidebar .navigation-sidebar > row button.sidebar-button:focus, calendar > header > button:focus, check:focus,
+radio:focus, scrollbar button:focus, notebook > header > tabs > arrow:focus, spinbutton.vertical > button:focus, spinbutton:not(.vertical) > button:focus,
+list > row button.image-button:focus:not(.flat), modelbutton.flat:focus, filechooser #pathbarbox > stack > box > button:focus, window.dialog.message.csd .dialog-action-area > button:focus, .app-notification button:focus, popover.background.menu button:focus,
 popover.background button.model:focus,
 pathbar > button:focus, .titlebar button:focus:not(.suggested-action):not(.destructive-action), .toolbar button:focus,
-toolbar button:focus, infobar.error > revealer > box button:focus, infobar.warning > revealer > box button:focus, infobar.action > revealer > box button:focus, infobar.question > revealer > box button:focus, popover.background.touch-selection button:focus, popover.background.magnifier button:focus, .selection-mode .titlebar windowcontrols > button:focus:not(.suggested-action):not(.destructive-action), button.flat:focus, button.flat:checked:focus {
+toolbar button:focus, dropdown > .linked:not(.vertical) > button:focus:not(:only-child),
+combobox > .linked:not(.vertical) > button:focus:not(:only-child), infobar.error > revealer > box button:focus, infobar.warning > revealer > box button:focus, infobar.action > revealer > box button:focus, infobar.question > revealer > box button:focus, popover.background.touch-selection button:focus, popover.background.magnifier button:focus, .selection-mode .titlebar windowcontrols > button:focus:not(.suggested-action):not(.destructive-action), button.flat:focus, button.flat:checked:focus {
   box-shadow: inset 0 0 0 2px alpha(currentColor, 0.08);
   color: white;
 }
 
-placessidebar .navigation-sidebar > row button.sidebar-button:hover, calendar > header > button:hover, columnview.view > header > button button.circular:hover,
-treeview.view > header > button button.circular:hover,
-filechooser stack.view scrolledwindow treeview.view > header > button button.circular:hover, row.activatable button.circular:hover, check:hover,
-radio:hover, scrollbar button:hover, notebook > header > tabs > arrow:hover, spinbutton.vertical > button:hover, spinbutton:not(.vertical) > button:hover, modelbutton.flat:hover, filechooser #pathbarbox > stack > box > button:hover, window.dialog.message.csd .dialog-action-area > button:hover, .app-notification button:hover, popover.background.menu button:hover,
+placessidebar .navigation-sidebar > row button.sidebar-button:hover, calendar > header > button:hover, check:hover,
+radio:hover, scrollbar button:hover, notebook > header > tabs > arrow:hover, spinbutton.vertical > button:hover, spinbutton:not(.vertical) > button:hover,
+list > row button.image-button:hover:not(.flat), modelbutton.flat:hover, filechooser #pathbarbox > stack > box > button:hover, window.dialog.message.csd .dialog-action-area > button:hover, .app-notification button:hover, popover.background.menu button:hover,
 popover.background button.model:hover,
 pathbar > button:hover, .titlebar button:hover:not(.suggested-action):not(.destructive-action), .toolbar button:hover,
-toolbar button:hover, infobar.error > revealer > box button:hover, infobar.warning > revealer > box button:hover, infobar.action > revealer > box button:hover, infobar.question > revealer > box button:hover, popover.background.touch-selection button:hover, popover.background.magnifier button:hover, .selection-mode .titlebar windowcontrols > button:hover:not(.suggested-action):not(.destructive-action), button.flat:hover {
+toolbar button:hover, dropdown > .linked:not(.vertical) > button:hover:not(:only-child),
+combobox > .linked:not(.vertical) > button:hover:not(:only-child), infobar.error > revealer > box button:hover, infobar.warning > revealer > box button:hover, infobar.action > revealer > box button:hover, infobar.question > revealer > box button:hover, popover.background.touch-selection button:hover, popover.background.magnifier button:hover, .selection-mode .titlebar windowcontrols > button:hover:not(.suggested-action):not(.destructive-action), button.flat:hover {
   box-shadow: inset 0 0 0 9999px alpha(currentColor, 0.08);
   color: white;
 }
 
-placessidebar .navigation-sidebar > row button.sidebar-button:active, calendar > header > button:active, columnview.view > header > button button.circular:active,
-treeview.view > header > button button.circular:active,
-filechooser stack.view scrolledwindow treeview.view > header > button button.circular:active, row.activatable button.circular:active, check:active,
-radio:active, scrollbar button:active, notebook > header > tabs > arrow:active, spinbutton.vertical > button:active, spinbutton:not(.vertical) > button:active, modelbutton.flat:active, filechooser #pathbarbox > stack > box > button:active, window.dialog.message.csd .dialog-action-area > button:active, .app-notification button:active, popover.background.menu button:active,
+placessidebar .navigation-sidebar > row button.sidebar-button:active, calendar > header > button:active, check:active,
+radio:active, scrollbar button:active, notebook > header > tabs > arrow:active, spinbutton.vertical > button:active, spinbutton:not(.vertical) > button:active,
+list > row button.image-button:active:not(.flat), modelbutton.flat:active, filechooser #pathbarbox > stack > box > button:active, window.dialog.message.csd .dialog-action-area > button:active, .app-notification button:active, popover.background.menu button:active,
 popover.background button.model:active,
 pathbar > button:active, .titlebar button:active:not(.suggested-action):not(.destructive-action), .toolbar button:active,
-toolbar button:active, infobar.error > revealer > box button:active, infobar.warning > revealer > box button:active, infobar.action > revealer > box button:active, infobar.question > revealer > box button:active, popover.background.touch-selection button:active, popover.background.magnifier button:active, .selection-mode .titlebar windowcontrols > button:active:not(.suggested-action):not(.destructive-action), button.flat:active {
+toolbar button:active, dropdown > .linked:not(.vertical) > button:active:not(:only-child),
+combobox > .linked:not(.vertical) > button:active:not(:only-child), infobar.error > revealer > box button:active, infobar.warning > revealer > box button:active, infobar.action > revealer > box button:active, infobar.question > revealer > box button:active, popover.background.touch-selection button:active, popover.background.magnifier button:active, .selection-mode .titlebar windowcontrols > button:active:not(.suggested-action):not(.destructive-action), button.flat:active {
   animation: none;
   transition: all 75ms cubic-bezier(0, 0, 0.2, 1), box-shadow 300ms cubic-bezier(0, 0, 0.2, 1);
   box-shadow: inset 0 0 0 9999px alpha(currentColor, 0.16);
   color: white;
 }
 
-placessidebar .navigation-sidebar > row button.sidebar-button:disabled, calendar > header > button:disabled, columnview.view > header > button button.circular:disabled,
-treeview.view > header > button button.circular:disabled,
-filechooser stack.view scrolledwindow treeview.view > header > button button.circular:disabled, row.activatable button.circular:disabled, check:disabled,
-radio:disabled, scrollbar button:disabled, notebook > header > tabs > arrow:disabled, spinbutton.vertical > button:disabled, spinbutton:not(.vertical) > button:disabled, modelbutton.flat:disabled, filechooser #pathbarbox > stack > box > button:disabled, window.dialog.message.csd .dialog-action-area > button:disabled, .app-notification button:disabled, popover.background.menu button:disabled,
+placessidebar .navigation-sidebar > row button.sidebar-button:disabled, calendar > header > button:disabled, check:disabled,
+radio:disabled, scrollbar button:disabled, notebook > header > tabs > arrow:disabled, spinbutton.vertical > button:disabled, spinbutton:not(.vertical) > button:disabled,
+list > row button.image-button:disabled:not(.flat), modelbutton.flat:disabled, filechooser #pathbarbox > stack > box > button:disabled, window.dialog.message.csd .dialog-action-area > button:disabled, .app-notification button:disabled, popover.background.menu button:disabled,
 popover.background button.model:disabled,
 pathbar > button:disabled, .titlebar button:disabled:not(.suggested-action):not(.destructive-action), .toolbar button:disabled,
-toolbar button:disabled, infobar.error > revealer > box button:disabled, infobar.warning > revealer > box button:disabled, infobar.action > revealer > box button:disabled, infobar.question > revealer > box button:disabled, popover.background.touch-selection button:disabled, popover.background.magnifier button:disabled, .selection-mode .titlebar windowcontrols > button:disabled:not(.suggested-action):not(.destructive-action), button.flat:disabled {
+toolbar button:disabled, dropdown > .linked:not(.vertical) > button:disabled:not(:only-child),
+combobox > .linked:not(.vertical) > button:disabled:not(:only-child), infobar.error > revealer > box button:disabled, infobar.warning > revealer > box button:disabled, infobar.action > revealer > box button:disabled, infobar.question > revealer > box button:disabled, popover.background.touch-selection button:disabled, popover.background.magnifier button:disabled, .selection-mode .titlebar windowcontrols > button:disabled:not(.suggested-action):not(.destructive-action), button.flat:disabled {
   box-shadow: none;
   background-color: transparent;
   color: rgba(255, 255, 255, 0.3);
@@ -597,7 +597,8 @@ toolbar button:disabled, infobar.error > revealer > box button:disabled, infobar
 filechooser #pathbarbox > stack > box > button:checked, window.dialog.message.csd .dialog-action-area > button:checked, .app-notification button:checked, popover.background.menu button:checked,
 popover.background button.model:checked,
 pathbar > button:checked, .titlebar button:checked:not(.suggested-action):not(.destructive-action), .toolbar button:checked,
-toolbar button:checked, infobar.error > revealer > box button:checked, infobar.warning > revealer > box button:checked, infobar.action > revealer > box button:checked, infobar.question > revealer > box button:checked, popover.background.touch-selection button:checked, popover.background.magnifier button:checked, .selection-mode .titlebar windowcontrols > button:checked:not(.suggested-action):not(.destructive-action), button.flat:checked, button.flat:checked:hover {
+toolbar button:checked, dropdown > .linked:not(.vertical) > button:checked:not(:only-child),
+combobox > .linked:not(.vertical) > button:checked:not(:only-child), infobar.error > revealer > box button:checked, infobar.warning > revealer > box button:checked, infobar.action > revealer > box button:checked, infobar.question > revealer > box button:checked, popover.background.touch-selection button:checked, popover.background.magnifier button:checked, .selection-mode .titlebar windowcontrols > button:checked:not(.suggested-action):not(.destructive-action), button.flat:checked, button.flat:checked:hover {
   background-color: alpha(currentColor, 0.1);
   color: white;
 }
@@ -605,7 +606,8 @@ toolbar button:checked, infobar.error > revealer > box button:checked, infobar.w
 filechooser #pathbarbox > stack > box > button:checked:disabled, window.dialog.message.csd .dialog-action-area > button:checked:disabled, .app-notification button:checked:disabled, popover.background.menu button:checked:disabled,
 popover.background button.model:checked:disabled,
 pathbar > button:checked:disabled, .titlebar button:checked:disabled:not(.suggested-action):not(.destructive-action), .toolbar button:checked:disabled,
-toolbar button:checked:disabled, infobar.error > revealer > box button:checked:disabled, infobar.warning > revealer > box button:checked:disabled, infobar.action > revealer > box button:checked:disabled, infobar.question > revealer > box button:checked:disabled, popover.background.touch-selection button:checked:disabled, popover.background.magnifier button:checked:disabled, button.flat:checked:disabled {
+toolbar button:checked:disabled, dropdown > .linked:not(.vertical) > button:checked:disabled:not(:only-child),
+combobox > .linked:not(.vertical) > button:checked:disabled:not(:only-child), infobar.error > revealer > box button:checked:disabled, infobar.warning > revealer > box button:checked:disabled, infobar.action > revealer > box button:checked:disabled, infobar.question > revealer > box button:checked:disabled, popover.background.touch-selection button:checked:disabled, popover.background.magnifier button:checked:disabled, button.flat:checked:disabled {
   background-color: alpha(currentColor, 0.1);
   color: rgba(255, 255, 255, 0.5);
 }
@@ -1128,28 +1130,6 @@ button.color {
 }
 
 
-list > row button.image-button:not(.flat) {
-  background-color: transparent;
-  box-shadow: none;
-  border: none;
-}
-
-
-list > row button.image-button:not(.flat):hover {
-  box-shadow: inset 0 0 0 1px transparent, 0 0 0 2px transparent;
-  background-color: #2B2B2B;
-  border-color: rgba(255, 255, 255, 0.3);
-}
-
-
-list > row button.image-button:not(.flat):active,
-list > row button.image-button:not(.flat):checked {
-  animation: none;
-  transition: all 75ms cubic-bezier(0, 0, 0.2, 1), border 300ms cubic-bezier(0, 0, 0.2, 1), box-shadow 300ms cubic-bezier(0, 0, 0.2, 1);
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3), 0 0 0 2px transparent;
-}
-
-
 list > row button.image-button:not(.flat).suggested-action {
   background-color: #3281ea;
   color: white;
@@ -1318,6 +1298,16 @@ combobox popover .dropdown-searchbar {
   padding: 4px;
 }
 
+dropdown button.combo cellview:dir(ltr),
+combobox button.combo cellview:dir(ltr) {
+  margin-left: 2px;
+}
+
+dropdown button.combo cellview:dir(rtl),
+combobox button.combo cellview:dir(rtl) {
+  margin-right: 2px;
+}
+
 dropdown.linked button:nth-child(2):dir(ltr),
 combobox.linked button:nth-child(2):dir(ltr) {
   border-top-left-radius: 0;
@@ -1332,7 +1322,28 @@ combobox.linked button:nth-child(2):dir(rtl) {
 
 dropdown > .linked:not(.vertical) > entry:not(:only-child),
 combobox > .linked:not(.vertical) > entry:not(:only-child) {
-  border-right-width: 1px;
+  border-radius: 2px;
+}
+
+dropdown > .linked:not(.vertical) > entry:not(:only-child):first-child,
+combobox > .linked:not(.vertical) > entry:not(:only-child):first-child {
+  margin-right: -28px;
+  padding-right: 28px;
+}
+
+dropdown > .linked:not(.vertical) > entry:not(:only-child):last-child,
+combobox > .linked:not(.vertical) > entry:not(:only-child):last-child {
+  margin-left: -28px;
+  padding-left: 28px;
+}
+
+dropdown > .linked:not(.vertical) > button:not(:only-child),
+combobox > .linked:not(.vertical) > button:not(:only-child) {
+  min-height: 16px;
+  min-width: 16px;
+  margin: 4px;
+  padding: 2px;
+  border-radius: 2px;
 }
 
 .linked:not(.vertical) > combobox > box > button.combo {
@@ -2831,7 +2842,7 @@ radio:checked,
 radio:indeterminate {
   color: #3281ea;
   background-image: image(white);
-  background-size: 14px 14px;
+  background-size: 12px 12px;
   background-position: center center;
   background-repeat: no-repeat;
   animation: none;
@@ -3431,92 +3442,6 @@ stack scrolledwindow.frame viewport.frame list {
   border: none;
 }
 
-overshoot.top {
-  background-image: radial-gradient(farthest-side at top, rgba(255, 255, 255, 0.12) 85%, rgba(255, 255, 255, 0)), radial-gradient(farthest-side at top, #3281ea, rgba(50, 129, 234, 0));
-  background-size: 100% 3%, 100% 50%;
-  background-repeat: no-repeat;
-  background-position: top;
-  background-color: transparent;
-  border: none;
-  box-shadow: none;
-}
-
-overshoot.bottom {
-  background-image: radial-gradient(farthest-side at bottom, rgba(255, 255, 255, 0.12) 85%, rgba(255, 255, 255, 0)), radial-gradient(farthest-side at bottom, #3281ea, rgba(50, 129, 234, 0));
-  background-size: 100% 3%, 100% 50%;
-  background-repeat: no-repeat;
-  background-position: bottom;
-  background-color: transparent;
-  border: none;
-  box-shadow: none;
-}
-
-overshoot.left {
-  background-image: radial-gradient(farthest-side at left, rgba(255, 255, 255, 0.12) 85%, rgba(255, 255, 255, 0)), radial-gradient(farthest-side at left, #3281ea, rgba(50, 129, 234, 0));
-  background-size: 3% 100%, 50% 100%;
-  background-repeat: no-repeat;
-  background-position: left;
-  background-color: transparent;
-  border: none;
-  box-shadow: none;
-}
-
-overshoot.right {
-  background-image: radial-gradient(farthest-side at right, rgba(255, 255, 255, 0.12) 85%, rgba(255, 255, 255, 0)), radial-gradient(farthest-side at right, #3281ea, rgba(50, 129, 234, 0));
-  background-size: 3% 100%, 50% 100%;
-  background-repeat: no-repeat;
-  background-position: right;
-  background-color: transparent;
-  border: none;
-  box-shadow: none;
-}
-
-undershoot.top {
-  background-color: transparent;
-  background-image: linear-gradient(to left, transparent 50%, rgba(255, 255, 255, 0.3) 50%);
-  padding-top: 1px;
-  background-size: 12px 1px;
-  background-repeat: repeat-x;
-  background-origin: content-box;
-  background-position: left top;
-  margin: 0 4px;
-}
-
-undershoot.bottom {
-  background-color: transparent;
-  background-image: linear-gradient(to left, transparent 50%, rgba(255, 255, 255, 0.3) 50%);
-  padding-bottom: 1px;
-  background-size: 12px 1px;
-  background-repeat: repeat-x;
-  background-origin: content-box;
-  background-position: left bottom;
-  margin: 0 4px;
-}
-
-undershoot.left {
-  background-color: transparent;
-  background-image: linear-gradient(to top, transparent 50%, rgba(255, 255, 255, 0.3) 50%);
-  padding-left: 1px;
-  background-size: 1px 12px;
-  background-repeat: repeat-y;
-  background-origin: content-box;
-  background-position: left top;
-  margin: 0 4px;
-  margin: 4px 0;
-}
-
-undershoot.right {
-  background-color: transparent;
-  background-image: linear-gradient(to top, transparent 50%, rgba(255, 255, 255, 0.3) 50%);
-  padding-right: 1px;
-  background-size: 1px 12px;
-  background-repeat: repeat-y;
-  background-origin: content-box;
-  background-position: right top;
-  margin: 0 4px;
-  margin: 4px 0;
-}
-
 junction {
   border-style: solid none none solid;
   border-width: 1px;
@@ -3894,7 +3819,7 @@ paned .sidebar.left, paned .sidebar.right, paned .sidebar.left:dir(rtl), paned .
 }
 
 stacksidebar list {
-  padding: 4px;
+  padding: 0;
   background-color: #303030;
 }
 
@@ -3928,14 +3853,15 @@ separator.sidebar {
  * Navigation Sidebar *
  **********************/
 .navigation-sidebar {
-  padding: 4px;
+  padding: 4px 0;
   border-right: none;
 }
 
 .navigation-sidebar > row {
   min-height: 20px;
   padding: 4px 6px;
-  border-radius: 1px;
+  border-radius: 2px;
+  margin: 0 4px;
 }
 
 .navigation-sidebar > row:hover, .navigation-sidebar > row:focus-visible:focus-within {
@@ -4558,60 +4484,9 @@ statusbar {
   padding: 4px 8px;
 }
 
-window.background.csd stack stack stack frame > list,
-window.background.csd > stack > stack > box > frame > list,
-window.background.csd > stack > stack > box > box > frame > list,
-window.background.csd > stack > box > stack > box > frame > list,
-window.background.csd > stack > box > stack > scrolledwindow > viewport frame > list,
-window.background.csd > stack > box > stack > box > scrolledwindow > viewport > frame > list,
-window.background.csd > stack > grid > scrolledwindow > viewport > box > frame > list, window.background.csd > stack > list,
-window.background.csd > stack > scrolledwindow > viewport > box > list,
-window.background.csd > box > stack > scrolledwindow > viewport > box > list {
-  border-radius: 3px;
-  box-shadow: none;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-}
-
-window.background.csd stack stack stack frame > list row.activatable:first-child, window.background.csd > stack > list row.activatable:first-child {
-  border-top-left-radius: 2px;
-  border-top-right-radius: 2px;
-}
-
-window.background.csd stack stack stack frame > list row.activatable:last-child, window.background.csd > stack > list row.activatable:last-child {
-  border-bottom-left-radius: 2px;
-  border-bottom-right-radius: 2px;
-}
-
-window.background.csd stack stack stack frame > list row.activatable:only-child, window.background.csd > stack > list row.activatable:only-child {
-  border-radius: 2px;
-}
-
-window.background.csd stack stack stack frame > list row.activatable:focus, window.background.csd > stack > list row.activatable:focus {
-  box-shadow: inset 0 0 0 2px alpha(currentColor, 0.08);
-}
-
 /**************
  * Extensions *
  **************/
-window.background.csd stack stack stack frame > border,
-window.background.csd > stack > stack > box > frame > border,
-window.background.csd > stack > stack > box > box > frame > border,
-window.background.csd > stack > box > stack > box > frame > border,
-window.background.csd > stack > box > stack > scrolledwindow > viewport frame > border,
-window.background.csd > stack > box > stack > box > scrolledwindow > viewport > frame > border,
-window.background.csd > stack > grid > scrolledwindow > viewport > box > frame > border {
-  border: none;
-}
-
-window.background.csd > stack > box > box > list,
-window.background.csd > stack > box > stack > scrolledwindow > viewport > list {
-  border-bottom-left-radius: 3px;
-}
-
-window.background.csd > stack > box > .sidebar > scrolledwindow > viewport > list {
-  padding: 0 0;
-}
-
 /* GTK NAMED COLORS
    ----------------
    use responsibly! */

@@ -857,12 +857,7 @@ button.color {
 
 %list_button,
 list > row button.image-button:not(.flat) {
-  background-color: transparent;
-  box-shadow: none;
-  border: none;
-  &:hover { @include button(hover); }
-  &:active,
-  &:checked { @include button(active); }
+  @extend %button-flat-simple;
 
   @each $b_type, $b_color in (suggested-action, $suggested),
                              (destructive-action, $destructive) {
@@ -3019,26 +3014,26 @@ scrolledwindow {
 
   // This is used when content is touch-dragged past boundaries.
   // draws a box on top of the content, the size changes programmatically.
-  @at-root overshoot {
-    &.top { @include overshoot(top); }
+//  @at-root overshoot {
+//    &.top { @include overshoot(top); }
 
-    &.bottom { @include overshoot(bottom); }
+//    &.bottom { @include overshoot(bottom); }
 
-    &.left { @include overshoot(left); }
+//    &.left { @include overshoot(left); }
 
-    &.right { @include overshoot(right); }
-  }
+//    &.right { @include overshoot(right); }
+//  }
 
   // Overflow indication, works similarly to the overshoot, the size if fixed tho.
-  @at-root undershoot {
-    &.top { @include undershoot(top); }
+//  @at-root undershoot {
+//    &.top { @include undershoot(top); }
 
-    &.bottom { @include undershoot(bottom); }
+//    &.bottom { @include undershoot(bottom); }
 
-    &.left { @include undershoot(left); }
+//    &.left { @include undershoot(left); }
 
-    &.right { @include undershoot(right); }
-  }
+//    &.right { @include undershoot(right); }
+//  }
 
   @at-root junction { // the small square between two scrollbars
     border-style: solid none none solid;
@@ -3069,8 +3064,9 @@ separator {
 /*********
  * Lists *
  *********/
- listview,
- list {
+
+listview,
+list {
   border-color: $divider;
   background-color: $base;
 
@@ -3100,10 +3096,6 @@ row {
     &:active {
       transition: $transition;
       box-shadow: inset 0 0 0 9999px $overlay-active;
-    }
-
-    button.circular {
-      @extend %button-flat-simple;
     }
   }
 
@@ -3428,7 +3420,7 @@ stacksidebar {
   separator.horizontal { @extend %hide_separators; }
 
   list {
-    padding: 4px;
+    padding: 0;
     background-color: $base-alt; // This should not be necessary, but the parent stacksidebar ignores background-color.
   }
 
@@ -3469,13 +3461,14 @@ separator.sidebar {
  **********************/
 
 .navigation-sidebar {
-  padding: $container-padding; //only vertical padding. horizontal row size would clip
+  padding: $container-padding 0; //only vertical padding. horizontal row size would clip
   border-right: none;
 
   > row {
     min-height: $small-size;
     padding: $container-padding $container-padding * 1.5;
-    border-radius: $corner-radius / 2;
+    border-radius: $corner-radius;
+    margin: 0 $container-padding;
 
     &:hover,
     &:focus-visible:focus-within {
