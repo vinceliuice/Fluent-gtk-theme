@@ -1318,6 +1318,7 @@ combobox.linked button:nth-child(2):dir(rtl) {
 
 combobox > .linked:not(.vertical) > entry:not(:only-child) {
   border-radius: 2px;
+  border-right-width: 1px;
 }
 
 combobox > .linked:not(.vertical) > entry:not(:only-child):first-child {
