@@ -8,12 +8,7 @@
   border: 1px solid $md_border_color;
   padding: 6px 10px 10px !important;
   margin: 0 !important;
-
-  @if $opacity == 'default' {
-    border-image: url("assets/modal.svg") 24 162 28 28;
-  } @else {
-    border-image: url("assets/modal-solid.svg") 24 162 28 28;
-  }
+  border-image: url("assets/modal.svg") 24 162 28 28;
 
   .modal-dialog-content-box {
     margin: 32px 40px;
@@ -38,12 +33,7 @@
 /* End Session Dialog */
 .end-session-dialog {
   width: 30em;
-
-  @if $opacity == 'default' {
-    border-image: url("assets/modal-session.svg") 24 162 28 28;
-  } @else {
-    border-image: url("assets/modal-session-solid.svg") 24 162 28 28;
-  }
+  border-image: url("assets/modal-session.svg") 24 162 28 28;
 
   .modal-dialog-linked-button:last-child {
     color: white;
@@ -135,12 +125,7 @@
 
 .prompt-dialog {
   width: 28em;
-
-  @if $opacity == 'default' {
-    border-image: url("assets/modal-prompt.svg") 24 192 28 28;
-  } @else {
-    border-image: url("assets/modal-prompt-solid.svg") 24 192 28 28;
-  }
+  border-image: url("assets/modal-prompt.svg") 24 192 28 28;
 
   .modal-dialog-content-box {
     margin-bottom: 24px;
