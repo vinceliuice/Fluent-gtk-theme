@@ -513,7 +513,6 @@ button:focus, button:checked:focus {
 
 button:hover {
   box-shadow: inset 0 0 0 1px transparent, 0 0 0 2px transparent;
-  background-color: #2B2B2B;
   border-color: rgba(255, 255, 255, 0.3);
 }
 
@@ -554,7 +553,6 @@ button:checked:disabled {
 
 button:drop(active) {
   box-shadow: inset 0 0 0 1px transparent, 0 0 0 2px transparent;
-  background-color: #2B2B2B;
   border-color: rgba(255, 255, 255, 0.3);
 }
 
@@ -581,6 +579,7 @@ window#GearyMainWindow.background.csd stack#conversation_viewer .geary-expanded 
 popover button.model:focus, .caja-pathbar button:focus,
 .path-bar.linked:not(.vertical) > button:focus, .nemo-window .primary-toolbar button:focus:not(.text-button):not(.suggested-action):not(.destructive-action), .xfce4-panel.background button:focus, .titlebar button:focus:not(.suggested-action):not(.destructive-action), toolbar button:focus, combobox > .linked:not(.vertical) > button:focus:not(:only-child), .raven-mpris button.image-button:focus, infobar.error > revealer > box button:focus, infobar.warning > revealer > box button:focus, infobar.action > revealer > box button:focus, infobar.question > revealer > box button:focus, .selection-mode headerbar button.titlebutton:focus:not(.suggested-action):not(.destructive-action), button.flat:focus, button.flat:checked:focus {
   box-shadow: inset 0 0 0 2px alpha(currentColor, 0.08);
+  background-color: transparent;
   color: white;
 }
 
@@ -591,6 +590,7 @@ window#GearyMainWindow.background.csd stack#conversation_viewer .geary-expanded 
 popover button.model:hover, .caja-pathbar button:hover,
 .path-bar.linked:not(.vertical) > button:hover, .nemo-window .primary-toolbar button:hover:not(.text-button):not(.suggested-action):not(.destructive-action), .xfce4-panel.background button:hover, .titlebar button:hover:not(.suggested-action):not(.destructive-action), toolbar button:hover, combobox > .linked:not(.vertical) > button:hover:not(:only-child), .raven-mpris button.image-button:hover, infobar.error > revealer > box button:hover, infobar.warning > revealer > box button:hover, infobar.action > revealer > box button:hover, infobar.question > revealer > box button:hover, .selection-mode headerbar button.titlebutton:hover:not(.suggested-action):not(.destructive-action), button.flat:hover {
   box-shadow: inset 0 0 0 9999px alpha(currentColor, 0.08);
+  background-color: transparent;
   color: white;
 }
 
@@ -603,6 +603,7 @@ popover button.model:active, .caja-pathbar button:active,
   animation: none;
   transition: all 75ms cubic-bezier(0, 0, 0.2, 1), box-shadow 300ms cubic-bezier(0, 0, 0.2, 1);
   box-shadow: inset 0 0 0 9999px alpha(currentColor, 0.16);
+  background-color: transparent;
   color: white;
 }
 

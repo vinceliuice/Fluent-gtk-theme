@@ -487,7 +487,6 @@ button:focus, button:checked:focus {
 
 button:hover {
   box-shadow: inset 0 0 0 1px transparent, 0 0 0 2px transparent;
-  background-color: #FFFFFF;
   border-color: rgba(0, 0, 0, 0.26);
 }
 
@@ -528,7 +527,6 @@ button:checked:disabled {
 
 button:drop(active) {
   box-shadow: inset 0 0 0 1px transparent, 0 0 0 2px transparent;
-  background-color: #FFFFFF;
   border-color: rgba(0, 0, 0, 0.26);
 }
 
@@ -556,6 +554,7 @@ toolbar button:focus, dropdown > .linked:not(.vertical) > button:focus:not(:only
 combobox > .linked:not(.vertical) > button:focus:not(:only-child), infobar.error > revealer > box button:focus, infobar.warning > revealer > box button:focus, infobar.action > revealer > box button:focus, infobar.question > revealer > box button:focus, popover.background.touch-selection button:focus, popover.background.magnifier button:focus, .selection-mode .titlebar windowcontrols > button:focus:not(.suggested-action):not(.destructive-action), button.flat:focus, button.flat:checked:focus {
   box-shadow: inset 0 0 0 2px alpha(currentColor, 0.08);
   color: rgba(0, 0, 0, 0.87);
+  border-color: transparent;
 }
 
 placessidebar .navigation-sidebar > row button.sidebar-button:hover, calendar > header > button:hover, check:hover,
@@ -567,6 +566,7 @@ toolbar button:hover, dropdown > .linked:not(.vertical) > button:hover:not(:only
 combobox > .linked:not(.vertical) > button:hover:not(:only-child), infobar.error > revealer > box button:hover, infobar.warning > revealer > box button:hover, infobar.action > revealer > box button:hover, infobar.question > revealer > box button:hover, popover.background.touch-selection button:hover, popover.background.magnifier button:hover, .selection-mode .titlebar windowcontrols > button:hover:not(.suggested-action):not(.destructive-action), button.flat:hover {
   box-shadow: inset 0 0 0 9999px alpha(currentColor, 0.08);
   color: rgba(0, 0, 0, 0.87);
+  border-color: transparent;
 }
 
 placessidebar .navigation-sidebar > row button.sidebar-button:active, calendar > header > button:active, check:active,
@@ -580,6 +580,7 @@ combobox > .linked:not(.vertical) > button:active:not(:only-child), infobar.erro
   transition: all 75ms cubic-bezier(0, 0, 0.2, 1), box-shadow 300ms cubic-bezier(0, 0, 0.2, 1);
   box-shadow: inset 0 0 0 9999px alpha(currentColor, 0.16);
   color: rgba(0, 0, 0, 0.87);
+  border-color: transparent;
 }
 
 placessidebar .navigation-sidebar > row button.sidebar-button:disabled, calendar > header > button:disabled, check:disabled,
