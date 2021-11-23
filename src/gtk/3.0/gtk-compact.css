@@ -7915,6 +7915,7 @@ window.background.csd.thunar > grid.horizontal > paned.horizontal > scrolledwind
 .nemo-window .primary-toolbar {
   background-color: #2C2C2C;
   border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  padding: 4px 2px;
 }
 
 .nemo-window .primary-toolbar:backdrop {
@@ -7922,11 +7923,11 @@ window.background.csd.thunar > grid.horizontal > paned.horizontal > scrolledwind
 }
 
 .nemo-window .primary-toolbar entry {
-  margin: 2px 2px;
+  margin: 0 2px;
 }
 
 .nemo-window .primary-toolbar button:not(.text-button):not(.suggested-action):not(.destructive-action) {
-  margin: 4px 2px;
+  margin: 0 2px;
   border-radius: 2px;
   padding: 1px 6px;
 }
@@ -7935,7 +7936,7 @@ window.background.csd.thunar > grid.horizontal > paned.horizontal > scrolledwind
   padding-left: 8px;
   padding-right: 8px;
   color: rgba(255, 255, 255, 0.7);
-  margin: 4px 0;
+  margin: 0 0;
 }
 
 .nemo-window .primary-toolbar button.text-button:hover, .nemo-window .primary-toolbar button.text-button:active, .nemo-window .primary-toolbar button.text-button:checked {
@@ -7970,7 +7971,7 @@ window.background.csd.thunar > grid.horizontal > paned.horizontal > scrolledwind
 
 .nemo-window .toolbar button {
   border-radius: 2px;
-  margin: 2px 0;
+  margin: 0 0;
   padding: 0 4px;
 }
 

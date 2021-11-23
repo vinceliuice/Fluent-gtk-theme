@@ -11,18 +11,19 @@
   .primary-toolbar {
     background-color: $titlebar;
     border-bottom: 1px solid $divider;
+    padding: $container-padding ($container-padding - 2px);
 
     &:backdrop { background-color: $titlebar-backdrop; }
 
     // FIXME: workaround for wrong size allocation of Nemo
     entry {
       @extend %titlebar-entry;
-      margin: ($container-padding - 2px) 2px;
+      margin: 0 2px;
     }
 
     button:not(.text-button):not(.suggested-action):not(.destructive-action) {
       @extend %titlebar-button;
-      margin: $container-padding 2px;
+      margin: 0 2px;
       border-radius: $corner-radius;
       padding: ($medium-size - 26px) / 2 ($medium-size - 16px) / 2;
     }
@@ -32,7 +33,7 @@
       padding-left: 8px;
       padding-right: 8px;
       color: $titlebar-text-secondary;
-      margin: $container-padding 0;
+      margin: 0 0;
 
       &:hover, &:active, &:checked { color: $titlebar-text; }
 
@@ -76,7 +77,7 @@
   .toolbar button {
     @extend %button-flat;
     border-radius: $corner-radius;
-    margin: ($container-padding / 2) 0;
+    margin: 0 0;
     padding: 0 $container-padding;
   }
 }
