@@ -717,11 +717,7 @@ $slider_color: if($variant == 'light', $accent_color, $accent_color);
 }
 
 .popup-menu-content {
-  @if $opacity == 'default' {
-    border-image: url("assets/menu.svg") 24 32 28 28;
-  } @else {
-    border-image: url("assets/menu-solid.svg") 24 32 28 28;
-  }
+  border-image: url("assets/menu.svg") 24 32 28 28;
 
   @if $laptop == 'false' {
     padding: 10px 6px 14px !important;
