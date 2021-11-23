@@ -373,10 +373,10 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .modal-dialog {
   color: rgba(0, 0, 0, 0.87);
   background-color: transparent;
-  border: 1px solid transparent;
-  padding: 6px 10px 10px !important;
+  border: none;
+  padding: 4px 6px 8px !important;
   margin: 0 !important;
-  border-image: url("assets/modal.svg") 24 162 28 28;
+  border-image: url("assets/menu.svg") 24 32 28 28;
 }
 
 .modal-dialog .modal-dialog-content-box {
@@ -386,10 +386,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .modal-dialog .modal-dialog-linked-button {
-  border: 1px solid !important;
-  background-clip: padding-box;
-  min-height: 20px;
-  padding: 6px 18px !important;
+  min-height: 32px;
 }
 
 .show-processes-dialog-subject,
@@ -575,6 +572,18 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .prompt-dialog .modal-dialog-content-box {
   margin-bottom: 24px;
+}
+
+.prompt-dialog .modal-dialog-linked-button:last-child {
+  border-image: url("assets/prompt-modal-button-right.svg") 16 16 16 16;
+}
+
+.prompt-dialog .modal-dialog-linked-button:last-child:hover {
+  border-image: url("assets/prompt-modal-button-right-hover.svg") 16 16 16 16;
+}
+
+.prompt-dialog .modal-dialog-linked-button:last-child:active {
+  border-image: url("assets/prompt-modal-button-right-active.svg") 16 16 16 16;
 }
 
 .prompt-dialog .message-dialog-main-layout {
@@ -2447,7 +2456,6 @@ StWidget.focused .app-well-app-running-dot {
 
 .app-folder-dialog {
   border-radius: 12px;
-  border: 2px solid rgba(255, 255, 255, 0.15);
   padding: 12px;
   background-color: rgba(34, 34, 34, 0.95);
 }
@@ -2472,6 +2480,7 @@ StWidget.focused .app-well-app-running-dot {
 }
 
 .app-folder-dialog .folder-name-container .folder-name-entry:focus {
+  color: #FFFFFF;
   background-color: rgba(255, 255, 255, 0.25);
 }
 

@@ -19,6 +19,7 @@ stage {
   background: none;
   border: none;
   box-shadow: none;
+  transition: border-image 200ms;
 }
 
 .modal-dialog .modal-dialog-linked-button:first-child, .hotplug-notification-item:first-child {

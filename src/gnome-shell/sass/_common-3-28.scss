@@ -304,15 +304,10 @@ $slider_color: if($variant == 'light', $accent_color, $accent_color);
 .modal-dialog {
   color: $fg_color;
   background-color: transparent;
-  border: 1px solid $md_border_color;
-  padding: 6px 10px 10px !important;
+  border: none;
+  padding: 4px 6px 8px !important;
   margin: 0 !important;
-
-  @if $opacity == 'default' {
-    border-image: url("assets/modal.svg") 24 162 28 28;
-  } @else {
-    border-image: url("assets/modal-solid.svg") 24 162 28 28;
-  }
+  border-image: url("assets/menu.svg") 24 32 28 28;
 
   .modal-dialog-content-box {
     margin: 32px 40px;
@@ -321,10 +316,7 @@ $slider_color: if($variant == 'light', $accent_color, $accent_color);
   }
 
   .modal-dialog-linked-button {
-    border: 1px solid !important;
-    background-clip: padding-box;
-    min-height: 20px;
-    padding: 6px 18px !important;
+    min-height: 32px;
     @extend %bubble_button;
   }
 }
@@ -487,6 +479,20 @@ $slider_color: if($variant == 'light', $accent_color, $accent_color);
 
   .modal-dialog-content-box {
     margin-bottom: 24px;
+  }
+
+  .modal-dialog-linked-button {
+    &:last-child {
+      border-image: url("assets/prompt-modal-button-right.svg") 16 16 16 16;
+
+      &:hover {
+        border-image: url("assets/prompt-modal-button-right-hover.svg") 16 16 16 16;
+      }
+
+      &:active {
+        border-image: url("assets/prompt-modal-button-right-active.svg") 16 16 16 16;
+      }
+    }
   }
 
   .message-dialog-main-layout { spacing: 24px; padding: 10px; }
@@ -1134,7 +1140,7 @@ $panel_transition_duration: 250ms; // same as the overview transition duration
       border: 1px solid transparent;
       border-radius: $buttons_radius;
       box-shadow: inset 0 1px transparent;
-      margin: $container-padding / 2 0;
+      margin: 2px 0;
     } @else {
       border: none;
       border-radius: 0;
@@ -2304,9 +2310,13 @@ StWidget.focused .app-well-app-running-dot {
 // expanded folder
 .app-folder-dialog {
   border-radius: $buttons_radius * 4;
-  border: 2px solid rgba(white, 0.15);
   padding: 12px;
   background-color: rgba(#222, 0.95);
+
+  @if $window == 'round' {
+    border: 1px solid $icon_border_color;
+    box-shadow: inset 0 1px $icon_highlight_color;
+  }
 
   & .folder-name-container {
     padding: 24px 36px 0;
@@ -2326,6 +2336,7 @@ StWidget.focused .app-well-app-running-dot {
       width: 300px;
 
       &:focus {
+        color: $light_fg_color;
         background-color: rgba(white, 0.25);
       }
 
