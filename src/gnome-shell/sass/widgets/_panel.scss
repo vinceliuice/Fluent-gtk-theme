@@ -128,6 +128,7 @@ $panel_transition_duration: 250ms; // same as the overview transition duration
       background-repeat: no-repeat;
       background-size: auto;
       color: transparent !important;
+      font-size: 0;
       box-shadow: none;
 
       > * { width: $medium_size; }
