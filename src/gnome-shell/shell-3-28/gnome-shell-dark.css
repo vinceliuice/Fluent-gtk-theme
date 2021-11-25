@@ -2759,6 +2759,15 @@ StWidget.focused .app-well-app-running-dot {
   border: none;
   box-shadow: none;
   border-image: url("assets/modal-button.svg") 16 16 16 16;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.modal-dialog .modal-dialog-linked-button:hover, .modal-dialog .modal-dialog-linked-button:active {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.modal-dialog .modal-dialog-linked-button:insensitive {
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .modal-dialog .modal-dialog-linked-button:hover {
@@ -2770,7 +2779,6 @@ StWidget.focused .app-well-app-running-dot {
 }
 
 .modal-dialog .modal-dialog-linked-button:first-child {
-  color: rgba(255, 255, 255, 0.7);
   border-image: url("assets/modal-button-left.svg") 16 16 16 16;
 }
 
@@ -2780,14 +2788,6 @@ StWidget.focused .app-well-app-running-dot {
 
 .modal-dialog .modal-dialog-linked-button:first-child:active {
   border-image: url("assets/modal-button-left-active.svg") 16 16 16 16;
-}
-
-.modal-dialog .modal-dialog-linked-button:first-child:hover, .modal-dialog .modal-dialog-linked-button:first-child:active {
-  color: rgba(255, 255, 255, 0.9);
-}
-
-.modal-dialog .modal-dialog-linked-button:first-child:insensitive {
-  color: rgba(255, 255, 255, 0.3);
 }
 
 .modal-dialog .modal-dialog-linked-button:last-child {
