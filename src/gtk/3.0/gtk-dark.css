@@ -4171,7 +4171,7 @@ messagedialog.csd decoration {
   background-color: #2C2C2C;
 }
 
-XfdesktopIconView.view:active, calendar.raven-calendar:selected, .budgie-popover.budgie-menu button.flat:not(.image-button):not(.indicator-item):checked, box.vertical > widget > widget:selected, .background.csd .view:selected, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:selected:not(.progressbar):not(.trough), modelbutton.flat:selected,
+XfdesktopIconView.view:active, calendar.raven-calendar:selected, .budgie-popover.budgie-menu button.flat:not(.image-button):not(.indicator-item):checked, box.vertical > widget > widget:selected, .background.csd .view:selected, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:selected:not(.progressbar):not(.trough), textview text selection:focus, textview text selection, modelbutton.flat:selected,
 .menuitem.button.flat:selected, row:selected, calendar:selected, .background.csd filechooser stack.view scrolledwindow treeview.view:selected, filechooser stack.view scrolledwindow .background.csd treeview.view:selected {
   background-color: alpha(currentColor, 0.06);
 }
@@ -4181,7 +4181,7 @@ XfdesktopIconView.view:active, calendar.raven-calendar:selected, .budgie-popover
   background-color: rgba(50, 129, 234, 0.2);
 }
 
-.nemo-window .nemo-window-pane widget.entry:selected, window.background.csd evview.view.content-view:selected, window.background.csd evview.view.content-view:selected:backdrop, widget.view:selected, textview text selection:focus, textview text selection, label selection,
+.nemo-window .nemo-window-pane widget.entry:selected, window.background.chromium > textview.view selection, window.background.chromium textview selection, window.background.chromium treeview.view.cell:selected:focus, window.background.chromium filechooser stack.view scrolledwindow treeview.cell.view:selected:focus, filechooser stack.view scrolledwindow window.background.chromium treeview.cell.view:selected:focus, window.background.chromium window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.cell.view:selected:focus:not(.progressbar):not(.trough), window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow window.background.chromium treeview.cell.view:selected:focus:not(.progressbar):not(.trough), window.background.csd evview.view.content-view:selected, window.background.csd evview.view.content-view:selected:backdrop, widget.view:selected, label selection,
 entry selection, spinbutton:not(.vertical) selection, spinbutton.vertical selection {
   color: white;
   background-color: #3281ea;
@@ -6126,14 +6126,21 @@ window.background.chromium textview.view {
   background-color: transparent;
 }
 
-window.background.chromium treeview.view.cell:selected:focus, window.background.chromium filechooser stack.view scrolledwindow treeview.cell.view:selected:focus, filechooser stack.view scrolledwindow window.background.chromium treeview.cell.view:selected:focus, window.background.chromium window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.cell.view:selected:focus:not(.progressbar):not(.trough), window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow window.background.chromium treeview.cell.view:selected:focus:not(.progressbar):not(.trough) {
-  background-color: #3281ea;
+window.background.chromium treeview.view button, window.background.chromium filechooser stack.view scrolledwindow treeview.view button, filechooser stack.view scrolledwindow window.background.chromium treeview.view button, window.background.chromium window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(.progressbar):not(.trough) button, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow window.background.chromium treeview.view:not(.progressbar):not(.trough) button {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+window.background.chromium entry.chromium {
+  background-color: rgba(255, 255, 255, 0.04);
+}
+
+window.background.chromium entry.chromium, window.background.chromium entry.chromium:focus {
   color: white;
 }
 
-window.background.chromium treeview.view button, window.background.chromium filechooser stack.view scrolledwindow treeview.view button, filechooser stack.view scrolledwindow window.background.chromium treeview.view button, window.background.chromium window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(.progressbar):not(.trough) button, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow window.background.chromium treeview.view:not(.progressbar):not(.trough) button {
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  background-color: #2B2B2B;
+window.background.chromium > textview.view, window.background.chromium textview {
+  background-color: rgba(255, 255, 255, 0.04);
+  color: white;
 }
 
 tooltip.background.chromium {

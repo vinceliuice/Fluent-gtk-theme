@@ -93,19 +93,36 @@ window.background.chromium {
   spinner { color: $primary; }
 
   // For text field
-  textview.view { background-color: transparent; }
+  textview.view {
+    background-color: transparent;
+  }
 
   // For prominent button, starred icon, etc.
   treeview.view.cell:selected:focus {
-    background-color: $primary;
-    color: on($primary);
+    @extend %selected_items_primary;
   }
 
   // For table header
   treeview.view button {
     border: 1px solid $track;
-    background-color: $base; // FIXME: This should not be necessary
+    // background-color: $base; // FIXME: This should not be necessary
     // color: $text-secondary;
+  }
+
+  entry.chromium {
+    &, &:focus { // overrides standard borders
+      color: $text;
+    }
+
+    background-color: $fill;
+  }
+
+  // internal region of toolbar's entry widget
+  > textview.view, textview {
+    background-color: $fill;
+    color: $text;
+
+    selection { @extend %selected_items_primary; }
   }
 }
 

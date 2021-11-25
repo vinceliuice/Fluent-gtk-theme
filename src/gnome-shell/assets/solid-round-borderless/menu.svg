@@ -7,8 +7,8 @@
    viewBox="0 0 30.691666 30.691668"
    version="1.1"
    id="svg5"
-   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
-   sodipodi:docname="menu-solid.svg"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20, custom)"
+   sodipodi:docname="menu.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -22,17 +22,17 @@
      inkscape:pageopacity="0"
      inkscape:pagecheckerboard="0"
      inkscape:document-units="mm"
-     showgrid="true"
+     showgrid="false"
      units="px"
      width="120px"
-     inkscape:zoom="5.7751815"
-     inkscape:cx="35.669875"
-     inkscape:cy="68.222964"
-     inkscape:window-width="1920"
-     inkscape:window-height="1018"
-     inkscape:window-x="0"
-     inkscape:window-y="28"
-     inkscape:window-maximized="1"
+     inkscape:zoom="8.16734"
+     inkscape:cx="66.484314"
+     inkscape:cy="30.181185"
+     inkscape:window-width="1476"
+     inkscape:window-height="881"
+     inkscape:window-x="562"
+     inkscape:window-y="129"
+     inkscape:window-maximized="0"
      inkscape:current-layer="layer1">
     <inkscape:grid
        type="xygrid"
@@ -40,14 +40,6 @@
   </sodipodi:namedview>
   <defs
      id="defs2">
-    <clipPath
-       clipPathUnits="userSpaceOnUse"
-       id="clipPath1633">
-      <path
-         id="path1635"
-         style="opacity:0.95;fill:#ffffff;stroke-width:0.973839;stroke-linecap:round;stroke-linejoin:round"
-         d="m 0.23047689,-3.96875 c -2.03320019,0 -3.67006019,1.63686 -3.67006019,3.67006023 V 16.173689 c 0,2.033201 1.63686,3.670061 3.67006019,3.670061 H 16.702856 c 2.033201,0 3.67006,-1.63686 3.67006,-3.670061 V -0.29868977 C 20.372916,-2.33189 18.736057,-3.96875 16.702856,-3.96875 Z M 3.707784,1.0583333 h 9.517765 c 1.174738,0 2.120284,0.9455461 2.120284,2.1202841 v 9.5177646 c 0,1.174738 -0.945546,2.120284 -2.120284,2.120284 H 3.707784 C 2.5330461,14.816666 1.5875,13.87112 1.5875,12.696382 V 3.1786174 c 0,-1.174738 0.9455461,-2.1202841 2.120284,-2.1202841 z" />
-    </clipPath>
     <filter
        inkscape:collect="always"
        style="color-interpolation-filters:sRGB"
@@ -76,7 +68,7 @@
        rx="2.1166661"
        ry="2.1166661" />
     <rect
-       style="opacity:1;fill:#ffffff"
+       style="opacity:1;fill:#ffffff;stroke:none;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.15;paint-order:stroke fill markers;fill-opacity:1"
        id="rect846"
        width="27.516666"
        height="27.516666"
@@ -84,5 +76,10 @@
        y="1.0583333"
        rx="2.1166661"
        ry="2.1166661" />
+    <path
+       id="path2276"
+       style="color:#000000;fill:#ffffff;fill-opacity:0.988395;stroke-width:3.77953;stroke-linecap:round;stroke-linejoin:round;-inkscape-stroke:none;paint-order:stroke markers fill"
+       d="M 14.003906 4.0019531 C 9.5892094 4.0019531 6.0019531 7.5892091 6.0019531 12.003906 L 6.0019531 100.00195 C 6.0019531 104.41665 9.5892094 107.99609 14.003906 107.99609 L 102.00391 107.99609 C 106.4186 107.99609 109.99805 104.41665 109.99805 100.00195 L 109.99805 12.003906 C 109.99805 7.5892091 106.4186 4.0019531 102.00391 4.0019531 L 14.003906 4.0019531 z M 14 5 L 102 5 C 105.878 5 109 8.1220018 109 12 L 109 100 C 109 103.878 105.878 107 102 107 L 14 107 C 10.122002 107 7 103.878 7 100 L 7 12 C 7 8.1220018 10.122002 5 14 5 z "
+       transform="scale(0.26458333)" />
   </g>
 </svg>
