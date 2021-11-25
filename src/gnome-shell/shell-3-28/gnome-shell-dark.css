@@ -820,6 +820,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   color: rgba(255, 255, 255, 0.9);
   padding: 0;
   margin: 0;
+  border: none;
 }
 
 .popup-menu.panel-menu {
@@ -2749,7 +2750,7 @@ StWidget.focused .app-well-app-running-dot {
   padding-right: 4px;
 }
 
-.hotplug-notification-item, .modal-dialog .modal-dialog-linked-button {
+.modal-dialog .modal-dialog-linked-button {
   font-size: 10.5pt;
   font-weight: 500;
   margin: 0;
@@ -2759,43 +2760,43 @@ StWidget.focused .app-well-app-running-dot {
   box-shadow: none;
 }
 
-.hotplug-notification-item:first-child, .modal-dialog .modal-dialog-linked-button:first-child {
+.modal-dialog .modal-dialog-linked-button:first-child {
   color: rgba(255, 255, 255, 0.7);
   border-image: url("assets/modal-button-left.svg") 16 16 16 16;
 }
 
-.hotplug-notification-item:first-child:hover, .modal-dialog .modal-dialog-linked-button:first-child:hover {
+.modal-dialog .modal-dialog-linked-button:first-child:hover {
   border-image: url("assets/modal-button-left-hover.svg") 16 16 16 16;
 }
 
-.hotplug-notification-item:first-child:active, .modal-dialog .modal-dialog-linked-button:first-child:active {
+.modal-dialog .modal-dialog-linked-button:first-child:active {
   border-image: url("assets/modal-button-left-active.svg") 16 16 16 16;
 }
 
-.hotplug-notification-item:first-child:hover, .modal-dialog .modal-dialog-linked-button:first-child:hover, .hotplug-notification-item:first-child:active, .modal-dialog .modal-dialog-linked-button:first-child:active {
+.modal-dialog .modal-dialog-linked-button:first-child:hover, .modal-dialog .modal-dialog-linked-button:first-child:active {
   color: rgba(255, 255, 255, 0.9);
 }
 
-.hotplug-notification-item:first-child:insensitive, .modal-dialog .modal-dialog-linked-button:first-child:insensitive {
+.modal-dialog .modal-dialog-linked-button:first-child:insensitive {
   color: rgba(255, 255, 255, 0.3);
 }
 
-.hotplug-notification-item:last-child, .modal-dialog .modal-dialog-linked-button:last-child {
+.modal-dialog .modal-dialog-linked-button:last-child {
   color: white;
   border-image: url("assets/modal-button-right.svg") 16 16 16 16;
 }
 
-.hotplug-notification-item:last-child:hover, .modal-dialog .modal-dialog-linked-button:last-child:hover {
+.modal-dialog .modal-dialog-linked-button:last-child:hover {
   color: white;
   border-image: url("assets/modal-button-right-hover.svg") 16 16 16 16;
 }
 
-.hotplug-notification-item:last-child:active, .modal-dialog .modal-dialog-linked-button:last-child:active {
+.modal-dialog .modal-dialog-linked-button:last-child:active {
   color: white;
   border-image: url("assets/modal-button-right-active.svg") 16 16 16 16;
 }
 
-.hotplug-notification-item:last-child:insensitive, .modal-dialog .modal-dialog-linked-button:last-child:insensitive {
+.modal-dialog .modal-dialog-linked-button:last-child:insensitive {
   color: rgba(255, 255, 255, 0.45);
 }
 
@@ -2806,10 +2807,48 @@ StWidget.focused .app-well-app-running-dot {
 
 .hotplug-notification-item {
   padding: 2px 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-shadow: none;
+  font-size: 10.5pt;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7);
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.hotplug-notification-item:hover {
+  color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.06);
+  box-shadow: none;
+}
+
+.hotplug-notification-item:active {
+  color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 transparent;
+}
+
+.hotplug-notification-item:insensitive {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: transparent;
+  box-shadow: none;
 }
 
 .hotplug-notification-item:focus {
-  padding: 1px 71px 1px 11px;
+  color: rgba(255, 255, 255, 0.9);
+  box-shadow: none;
+}
+
+.hotplug-notification-item:first-child {
+  border-radius: 0 0 0 3px;
+}
+
+.hotplug-notification-item:last-child {
+  border-radius: 0 0 3px 0;
+}
+
+.hotplug-notification-item:first-child:last-child {
+  border-radius: 0 0 3px 3px;
 }
 
 .hotplug-notification-item-icon {

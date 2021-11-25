@@ -708,6 +708,7 @@ $slider_color: if($variant == 'light', $accent_color, $accent_color);
   color: $fg_color;
   padding: 0;
   margin: 0;
+  border: none;
 
   //.popup-status-menu-item { font-weight: normal;  color: pink; } //dunno what that is
   &.panel-menu {
@@ -912,6 +913,7 @@ $slider_color: if($variant == 'light', $accent_color, $accent_color);
     border: none;
     padding: ($large_size - 20px) / 2;
   }
+
   &:active { background-color: $primary_color; color: white; }
 
   & > StIcon { icon-size: 16px; }
@@ -2607,8 +2609,27 @@ StWidget.focused .app-well-app-running-dot {
 
 .hotplug-notification-item {
   padding: 2px 10px;
-  @extend %bubble_button;
-  &:focus { padding: 1px 71px 1px 11px; }
+  border-top: 1px solid $border_color;
+  text-shadow: none;
+  @include font(button);
+  @include button(flat-normal);
+
+  &:hover { @include button(flat-hover); }
+  &:active { @include button(flat-active); }
+  &:insensitive { @include button(flat-insensitive); }
+  &:focus { @include button(flat-focus); }
+
+  &:first-child {
+    border-radius: 0 0 0 $menu_radius;
+  }
+
+  &:last-child {
+    border-radius: 0 0 $menu_radius 0;
+  }
+
+  &:first-child:last-child {
+    border-radius: 0 0 $menu_radius $menu_radius;
+  }
 }
 
 .hotplug-notification-item-icon {
