@@ -22,6 +22,15 @@ stage {
   border: none;
   box-shadow: none;
   transition: border-image 200ms;
+  border-image: url("assets/modal-button.svg") 16 16 16 16;
+
+  &:hover {
+    border-image: url("assets/modal-button-hover.svg") 16 16 16 16;
+  }
+
+  &:active {
+    border-image: url("assets/modal-button-active.svg") 16 16 16 16;
+  }
 
   &:first-child {
     color: $secondary_fg_color;

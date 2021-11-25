@@ -2758,6 +2758,15 @@ StWidget.focused .app-well-app-running-dot {
   background: none;
   border: none;
   box-shadow: none;
+  border-image: url("assets/modal-button.svg") 16 16 16 16;
+}
+
+.modal-dialog .modal-dialog-linked-button:hover {
+  border-image: url("assets/modal-button-hover.svg") 16 16 16 16;
+}
+
+.modal-dialog .modal-dialog-linked-button:active {
+  border-image: url("assets/modal-button-active.svg") 16 16 16 16;
 }
 
 .modal-dialog .modal-dialog-linked-button:first-child {

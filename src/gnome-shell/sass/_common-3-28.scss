@@ -2559,6 +2559,15 @@ StWidget.focused .app-well-app-running-dot {
   background: none;
   border: none;
   box-shadow: none;
+  border-image: url("assets/modal-button.svg") 16 16 16 16;
+
+  &:hover {
+    border-image: url("assets/modal-button-hover.svg") 16 16 16 16;
+  }
+
+  &:active {
+    border-image: url("assets/modal-button-active.svg") 16 16 16 16;
+  }
 
   &:first-child {
     color: $secondary_fg_color;

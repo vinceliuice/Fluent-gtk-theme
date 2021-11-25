@@ -2,13 +2,13 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="148"
+   width="143"
    height="60"
-   viewBox="0 0 39.158333 15.875001"
+   viewBox="0 0 37.835416 15.875001"
    version="1.1"
    id="svg5"
    inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20, custom)"
-   sodipodi:docname="modal-button-left.svg"
+   sodipodi:docname="modal-button-active.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -22,17 +22,17 @@
      inkscape:pageopacity="0"
      inkscape:pagecheckerboard="0"
      inkscape:document-units="mm"
-     showgrid="true"
+     showgrid="false"
      units="px"
      width="120px"
-     inkscape:zoom="32"
-     inkscape:cx="135.3125"
-     inkscape:cy="18"
-     inkscape:window-width="1920"
-     inkscape:window-height="1012"
-     inkscape:window-x="0"
+     inkscape:zoom="7.9999999"
+     inkscape:cx="95.750001"
+     inkscape:cy="48.6875"
+     inkscape:window-width="1476"
+     inkscape:window-height="881"
+     inkscape:window-x="433"
      inkscape:window-y="34"
-     inkscape:window-maximized="1"
+     inkscape:window-maximized="0"
      inkscape:current-layer="g2413"
      inkscape:snap-bbox="true"
      inkscape:bbox-nodes="true"
@@ -56,34 +56,34 @@
       <path
          id="rect3629"
          style="opacity:0.06;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.05598;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.988395;paint-order:stroke markers fill"
-         d="m 40.745833,3.4395831 v 11.9062499 1.852083 2.116667 H 38.629166 36.5125 3.7041667 c -1.172633,0 -2.116667,-0.944034 -2.116667,-2.116667 V 3.4395831 Z" />
+         d="M 1.5874999,3.4395832 V 19.314583 H 39.422916 V 3.4395832 Z" />
       <rect
-         style="opacity:0.15;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.576355;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.988395;paint-order:stroke markers fill"
+         style="opacity:0.15;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.566536;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.988395;paint-order:stroke markers fill"
          id="rect2759"
-         width="39.158333"
+         width="37.835415"
          height="0.26458332"
-         x="1.5875"
+         x="1.5875006"
          y="3.4395833"
          rx="0"
          ry="0" />
       <rect
-         style="opacity:0.1;fill:#000000;stroke:none;stroke-width:0.478947;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
+         style="opacity:0.15;fill:#000000;stroke:none;stroke-width:0.478947;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
          id="rect1110"
          width="35.189583"
          height="10.583333"
-         x="4.2333331"
+         x="2.9104166"
          y="6.0854168"
-         rx="1.3229164"
-         ry="1.3229164" />
+         rx="0.79375005"
+         ry="0.79375005" />
       <rect
-         style="fill:#ffffff;stroke:none;stroke-width:0.460238;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
+         style="fill:#e6e6e6;stroke:none;stroke-width:0.460238;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;fill-opacity:1"
          id="rect2236"
          width="34.660416"
          height="10.054167"
-         x="4.4979177"
+         x="3.1750002"
          y="6.3499999"
-         rx="1.0583333"
-         ry="1.0583333" />
+         rx="0.52916646"
+         ry="0.52916646" />
     </g>
   </g>
 </svg>
