@@ -135,13 +135,19 @@ tooltip.background.chromium { background-color: rgba($tooltip, 1); }
 #MozillaGtkWidget {
   > widget {
     // For popover, entry in toolbar, etc.
-    text { background-color: $surface; }
+    text {
+      background-color: $base;
+
+      selection {
+        &, &:focus {
+          @extend %selected_items_primary;
+        }
+      }
+    }
 
     // For selection, active tab indicator, etc.
-    text:selected {
-      // Use traditional selection style as workaround
-      background-color: $primary;
-      color: on($primary);
+    text:selected { // Use traditional selection style as workaround
+      @extend %selected_items_primary;
     }
 
     // For separators in bookmark toolbar
@@ -371,5 +377,38 @@ entry.search > window.background {
 
   > frame {
     > border { border: none; }
+  }
+}
+
+/****************
+ * Libre-Office *
+ ****************/
+window.background:not(.solid-csd) {
+  // reserved area at the most-right side of GtkMenuBar
+  > grid.horizontal > grid.horizontal {
+    background-color: $titlebar;
+    box-shadow: inset 0 -1px $divider;
+
+    > button.flat.small-button {
+      // 'close' button
+      border: none;
+      border-radius: $circular-radius;
+    }
+
+    &:backdrop {
+      background-color: $titlebar-backdrop;
+    }
+  }
+
+  // for 'Notebookbar' toolbar
+  > notebook {
+    border: none; // unset borders
+    background-color: $base;
+    box-shadow: none;
+
+    > stack {
+      border: none;
+      box-shadow: none;
+    }
   }
 }

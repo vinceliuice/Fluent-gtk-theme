@@ -119,7 +119,20 @@ textview {
 
   text {
     background-color: $base;
-    selection { &:focus, & { @extend %selected_items; }}
+
+    selection {
+      &, &:focus {
+        @extend %selected_items_color;
+      }
+    }
+  }
+
+  .background.csd & text {
+    selection {
+      &, &:focus {
+        @extend %selected_items_primary;
+      }
+    }
   }
 
   border {

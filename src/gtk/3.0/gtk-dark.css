@@ -4171,17 +4171,17 @@ messagedialog.csd decoration {
   background-color: #2C2C2C;
 }
 
-XfdesktopIconView.view:active, calendar.raven-calendar:selected, .budgie-popover.budgie-menu button.flat:not(.image-button):not(.indicator-item):checked, box.vertical > widget > widget:selected, .background.csd .view:selected, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:selected:not(.progressbar):not(.trough), textview text selection:focus, textview text selection, modelbutton.flat:selected,
+XfdesktopIconView.view:active, calendar.raven-calendar:selected, .budgie-popover.budgie-menu button.flat:not(.image-button):not(.indicator-item):checked, box.vertical > widget > widget:selected, .background.csd .view:selected, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:selected:not(.progressbar):not(.trough), modelbutton.flat:selected,
 .menuitem.button.flat:selected, row:selected, calendar:selected, .background.csd filechooser stack.view scrolledwindow treeview.view:selected, filechooser stack.view scrolledwindow .background.csd treeview.view:selected {
   background-color: alpha(currentColor, 0.06);
 }
 
-.nemo-window .nemo-window-pane notebook .view:selected, .nemo-window .nemo-window-pane notebook filechooser stack.view scrolledwindow treeview.view:selected, filechooser stack.view scrolledwindow .nemo-window .nemo-window-pane notebook treeview.view:selected, .nemo-window .nemo-window-pane notebook window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:selected:not(.progressbar):not(.trough), window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow .nemo-window .nemo-window-pane notebook treeview.view:selected:not(.progressbar):not(.trough), .nautilus-window notebook .view:not(treeview) selection, .nautilus-window notebook window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(treeview):not(.progressbar):not(.trough) selection, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow .nautilus-window notebook treeview.view:not(treeview):not(.progressbar):not(.trough) selection, .nautilus-window notebook filechooser stack.view scrolledwindow treeview.view:not(treeview) selection, filechooser stack.view scrolledwindow .nautilus-window notebook treeview.view:not(treeview) selection, .nautilus-window notebook .view:not(treeview):selected, .nautilus-window notebook window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(treeview):selected:not(.progressbar):not(.trough), window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow .nautilus-window notebook treeview.view:not(treeview):selected:not(.progressbar):not(.trough), .nautilus-window notebook filechooser stack.view scrolledwindow treeview.view:not(treeview):selected, filechooser stack.view scrolledwindow .nautilus-window notebook treeview.view:not(treeview):selected, .nautilus-window flowboxchild:selected .icon-item-background, flowbox flowboxchild:selected {
+.nemo-window .nemo-window-pane notebook .view:selected, .nemo-window .nemo-window-pane notebook filechooser stack.view scrolledwindow treeview.view:selected, filechooser stack.view scrolledwindow .nemo-window .nemo-window-pane notebook treeview.view:selected, .nemo-window .nemo-window-pane notebook window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:selected:not(.progressbar):not(.trough), window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow .nemo-window .nemo-window-pane notebook treeview.view:selected:not(.progressbar):not(.trough), .nautilus-window notebook .view:not(treeview) selection, .nautilus-window notebook window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(treeview):not(.progressbar):not(.trough) selection, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow .nautilus-window notebook treeview.view:not(treeview):not(.progressbar):not(.trough) selection, .nautilus-window notebook filechooser stack.view scrolledwindow treeview.view:not(treeview) selection, filechooser stack.view scrolledwindow .nautilus-window notebook treeview.view:not(treeview) selection, .nautilus-window notebook .view:not(treeview):selected, .nautilus-window notebook window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(treeview):selected:not(.progressbar):not(.trough), window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow .nautilus-window notebook treeview.view:not(treeview):selected:not(.progressbar):not(.trough), .nautilus-window notebook filechooser stack.view scrolledwindow treeview.view:not(treeview):selected, filechooser stack.view scrolledwindow .nautilus-window notebook treeview.view:not(treeview):selected, .nautilus-window flowboxchild:selected .icon-item-background, textview text selection, textview text selection:focus, flowbox flowboxchild:selected {
   color: #3281ea;
   background-color: rgba(50, 129, 234, 0.2);
 }
 
-.nemo-window .nemo-window-pane widget.entry:selected, window.background.chromium > textview.view selection, window.background.chromium textview selection, window.background.chromium treeview.view.cell:selected:focus, window.background.chromium filechooser stack.view scrolledwindow treeview.cell.view:selected:focus, filechooser stack.view scrolledwindow window.background.chromium treeview.cell.view:selected:focus, window.background.chromium window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.cell.view:selected:focus:not(.progressbar):not(.trough), window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow window.background.chromium treeview.cell.view:selected:focus:not(.progressbar):not(.trough), window.background.csd evview.view.content-view:selected, window.background.csd evview.view.content-view:selected:backdrop, widget.view:selected, label selection,
+.nemo-window .nemo-window-pane widget.entry:selected, #MozillaGtkWidget > widget text:selected, #MozillaGtkWidget > widget text selection, #MozillaGtkWidget > widget text selection:focus, window.background.chromium > textview.view selection, window.background.chromium textview selection, window.background.chromium treeview.view.cell:selected:focus, window.background.chromium filechooser stack.view scrolledwindow treeview.cell.view:selected:focus, filechooser stack.view scrolledwindow window.background.chromium treeview.cell.view:selected:focus, window.background.chromium window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.cell.view:selected:focus:not(.progressbar):not(.trough), window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow window.background.chromium treeview.cell.view:selected:focus:not(.progressbar):not(.trough), window.background.csd evview.view.content-view:selected, window.background.csd evview.view.content-view:selected:backdrop, widget.view:selected, .background.csd textview text selection, .background.csd textview text selection:focus, label selection,
 entry selection, spinbutton:not(.vertical) selection, spinbutton.vertical selection {
   color: white;
   background-color: #3281ea;
@@ -6151,12 +6151,7 @@ tooltip.background.chromium {
  * Firefox *
  ***********/
 #MozillaGtkWidget > widget text {
-  background-color: #3C3C3C;
-}
-
-#MozillaGtkWidget > widget text:selected {
-  background-color: #3281ea;
-  color: white;
+  background-color: #2B2B2B;
 }
 
 #MozillaGtkWidget > widget > separator {
@@ -6375,6 +6370,34 @@ entry.search > window.background {
 
 entry.search > window.background > frame > border {
   border: none;
+}
+
+/****************
+ * Libre-Office *
+ ****************/
+window.background:not(.solid-csd) > grid.horizontal > grid.horizontal {
+  background-color: #202020;
+  box-shadow: inset 0 -1px rgba(255, 255, 255, 0.12);
+}
+
+window.background:not(.solid-csd) > grid.horizontal > grid.horizontal > button.flat.small-button {
+  border: none;
+  border-radius: 9999px;
+}
+
+window.background:not(.solid-csd) > grid.horizontal > grid.horizontal:backdrop {
+  background-color: #2C2C2C;
+}
+
+window.background:not(.solid-csd) > notebook {
+  border: none;
+  background-color: #2B2B2B;
+  box-shadow: none;
+}
+
+window.background:not(.solid-csd) > notebook > stack {
+  border: none;
+  box-shadow: none;
 }
 
 /*********
