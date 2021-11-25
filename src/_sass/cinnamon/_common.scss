@@ -1287,6 +1287,10 @@ $menu_item_radius: $corner-radius;
   caret-color: $text;
 
   @extend %entry;
+
+  &:focus {
+    box-shadow: inset 0 0 0 2px $entry-highlight;
+  }
 }
 
 .menu-search-entry-icon {

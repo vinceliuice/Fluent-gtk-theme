@@ -1436,6 +1436,10 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   caret-color: white;
 }
 
+#menu-search-entry:focus {
+  box-shadow: inset 0 0 0 2px #a6c8f6;
+}
+
 .menu-search-entry-icon {
   icon-size: 1em;
   color: white;
