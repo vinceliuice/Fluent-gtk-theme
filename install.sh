@@ -82,6 +82,7 @@ install() {
 
   [[ "$color" == '-dark' ]] && local ELSE_DARK="$color"
   [[ "$color" == '-light' ]] && local ELSE_LIGHT="$color"
+  [[ "$color" == '-dark' ]] || [[ "$color" == '' ]] && local ACTIVITIES_ASSETS_SUFFIX="-dark"
 
   if [[ "$window" == 'round' ]]; then
     round='-round'
@@ -133,7 +134,7 @@ install() {
   cp -r "${SRC_DIR}/gnome-shell/common-assets"                                  "$THEME_DIR/gnome-shell/assets"
   cp -r "${SRC_DIR}/gnome-shell/assets${ELSE_DARK:-}/"*.svg                     "$THEME_DIR/gnome-shell/assets"
   cp -r "${SRC_DIR}/gnome-shell/theme$theme/"*.svg                              "$THEME_DIR/gnome-shell/assets"
-  cp -r "${SRC_DIR}/gnome-shell/assets${ELSE_DARK:-}/activities/activities${icon}.svg" "$THEME_DIR/gnome-shell/assets/activities.svg"
+  cp -r "${SRC_DIR}/gnome-shell/assets${ACTIVITIES_ASSETS_SUFFIX:-}/activities/activities${icon}.svg" "$THEME_DIR/gnome-shell/assets/activities.svg"
 
   if [[ "$window" = "round" ]] ; then
     cp -r "${SRC_DIR}/gnome-shell/assets${ELSE_DARK:-}/buttons-round/"*.svg     "$THEME_DIR/gnome-shell/assets"
