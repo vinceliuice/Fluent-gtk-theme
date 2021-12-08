@@ -100,12 +100,8 @@ tab[selected]:-moz-window-inactive {
 
 /* Center all inside tab */
 .tab-content {
-	display: flex;
-	justify-content: center;
-	align-items: center;
 	min-width: 100% !important;
-	padding: 0 16px !important;
-	margin-top: 3px !important;
+	padding: 0 12px 0 16px !important;
 }
 
 /* Prevent tab icons size breaking */

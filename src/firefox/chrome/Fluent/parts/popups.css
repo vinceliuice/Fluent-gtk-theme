@@ -5,23 +5,17 @@
 
 /* Style menus */
 menupopup {
-	-moz-appearance: none !important;
-	background: var(--gnome-menu-background) !important;
-	border: 1px solid var(--gnome-menu-border-color) !important;
-	border-radius: 3px !important;
-	padding: 3px !important;
-	color: var(--gnome-button-color) !important;
-	box-shadow: none !important;
+	--panel-background: var(--gnome-menu-background) !important;
+	--panel-border-color: var(--gnome-menu-border-color) !important;
+	--arrowpanel-border-radius: 3px !important;
+	--arrowpanel-background: var(--gnome-menu-background) !important;
+	--arrowpanel-border-color: var(--gnome-menu-border-color) !important;
 }
 
-.menupopup-arrowscrollbox {
-	border: 0 !important;
-}
-
-#PlacesToolbar menupopup {
+#PlacesToolbar menupopup[placespopup="true"]::part(content), #PlacesToolbar menupopup[placespopup="true"]::part(arrowscrollbox), #PlacesToolbar menupopup {
 	background: none !important;
-	padding: 3px 6px 8px !important;
-	margin-top: 0 !important;
+	padding: 0 !important;
+	margin: 3px 0 0 -6px !important;
 	border: none !important;
 	box-shadow: none !important;
 }
@@ -33,6 +27,16 @@ menupopup menupopup {
 menubar > menu > menupopup {
 	border-top-left-radius: 0 !important;
 	border-top-right-radius: 0 !important;
+}
+
+menu,
+menuitem,
+menucaption {
+	margin: 0 3px !important;
+}
+
+#PlacesToolbar menupopup menuitem {
+	margin: 0 6px !important;
 }
 
 menuitem, menupopup menu {
@@ -63,11 +67,6 @@ menuitem[disabled="true"], menupopup menu[disabled="true"] {
 
 menuitem[disabled="true"]:hover, menupopup menu[disabled="true"]:hover {
 	background: transparent !important;
-}
-
-menupopup {
-	--panel-background: transparent !important;
-	--panel-border-color: transparent !important;
 }
 
 panel {
