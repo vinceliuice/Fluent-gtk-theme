@@ -165,6 +165,18 @@ XfdesktopIconView.view .content-view filechooser stack.view scrolledwindow treev
 filechooser stack.view scrolledwindow .content-view treeview.view rubberband,
 filechooser stack.view scrolledwindow .content-view treeview.view XfdesktopIconView.view .rubberband,
 XfdesktopIconView.view filechooser stack.view scrolledwindow .content-view treeview.view .rubberband,
+.content-view filechooser stack.view scrolledwindow treeview.view rubberband,
+.content-view filechooser stack.view scrolledwindow treeview.view XfdesktopIconView.view .rubberband,
+XfdesktopIconView.view .content-view filechooser stack.view scrolledwindow treeview.view .rubberband,
+filechooser stack.view scrolledwindow treeview.view .content-view rubberband,
+filechooser stack.view scrolledwindow treeview.view .content-view XfdesktopIconView.view .rubberband,
+XfdesktopIconView.view filechooser stack.view scrolledwindow treeview.view .content-view .rubberband,
+.content-view filechooser stack.view scrolledwindow treeview.view rubberband,
+.content-view filechooser stack.view scrolledwindow treeview.view XfdesktopIconView.view .rubberband,
+XfdesktopIconView.view .content-view filechooser stack.view scrolledwindow treeview.view .rubberband,
+filechooser stack.view scrolledwindow treeview.view .content-view rubberband,
+filechooser stack.view scrolledwindow treeview.view .content-view XfdesktopIconView.view .rubberband,
+XfdesktopIconView.view filechooser stack.view scrolledwindow treeview.view .content-view .rubberband,
 filechooser stack.view scrolledwindow treeview.view .content-view .rubberband,
 filechooser stack.view window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(.progressbar):not(.trough) .content-view .rubberband,
 .content-view filechooser stack.view scrolledwindow treeview.view .rubberband,
@@ -3700,7 +3712,7 @@ filechooser stack.view scrolledwindow list {
   background-color: transparent;
 }
 
-filechooser stack.view scrolledwindow treeview.view, filechooser stack.view window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(.progressbar):not(.trough) {
+filechooser stack.view scrolledwindow treeview.view, filechooser stack.view window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(.progressbar):not(.trough), filechooser stack.view scrolledwindow treeview.view {
   background-color: transparent;
 }
 
@@ -4176,7 +4188,7 @@ XfdesktopIconView.view:active, calendar.raven-calendar:selected, .budgie-popover
   background-color: alpha(currentColor, 0.06);
 }
 
-.nemo-window .nemo-window-pane notebook .view:selected, .nemo-window .nemo-window-pane notebook filechooser stack.view scrolledwindow treeview.view:selected, filechooser stack.view scrolledwindow .nemo-window .nemo-window-pane notebook treeview.view:selected, .nemo-window .nemo-window-pane notebook window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:selected:not(.progressbar):not(.trough), window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow .nemo-window .nemo-window-pane notebook treeview.view:selected:not(.progressbar):not(.trough), .nautilus-window notebook .view:not(treeview) selection, .nautilus-window notebook window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(treeview):not(.progressbar):not(.trough) selection, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow .nautilus-window notebook treeview.view:not(treeview):not(.progressbar):not(.trough) selection, .nautilus-window notebook filechooser stack.view scrolledwindow treeview.view:not(treeview) selection, filechooser stack.view scrolledwindow .nautilus-window notebook treeview.view:not(treeview) selection, .nautilus-window notebook .view:not(treeview):selected, .nautilus-window notebook window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(treeview):selected:not(.progressbar):not(.trough), window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow .nautilus-window notebook treeview.view:not(treeview):selected:not(.progressbar):not(.trough), .nautilus-window notebook filechooser stack.view scrolledwindow treeview.view:not(treeview):selected, filechooser stack.view scrolledwindow .nautilus-window notebook treeview.view:not(treeview):selected, .nautilus-window flowboxchild:selected .icon-item-background, textview text selection, textview text selection:focus, flowbox flowboxchild:selected {
+.nemo-window .nemo-window-pane notebook .view:selected, .nemo-window .nemo-window-pane notebook filechooser stack.view scrolledwindow treeview.view:selected, filechooser stack.view scrolledwindow .nemo-window .nemo-window-pane notebook treeview.view:selected, .nemo-window .nemo-window-pane notebook window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:selected:not(.progressbar):not(.trough), window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow .nemo-window .nemo-window-pane notebook treeview.view:selected:not(.progressbar):not(.trough), .nautilus-window notebook :not(treeview).view selection, .nautilus-window notebook window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(treeview):not(.progressbar):not(.trough) selection, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow .nautilus-window notebook treeview.view:not(treeview):not(.progressbar):not(.trough) selection, .nautilus-window notebook filechooser stack.view scrolledwindow treeview.view:not(treeview) selection, filechooser stack.view scrolledwindow .nautilus-window notebook treeview.view:not(treeview) selection, .nautilus-window notebook :not(treeview).view:selected, .nautilus-window notebook window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(treeview):selected:not(.progressbar):not(.trough), window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow .nautilus-window notebook treeview.view:not(treeview):selected:not(.progressbar):not(.trough), .nautilus-window notebook filechooser stack.view scrolledwindow treeview.view:not(treeview):selected, filechooser stack.view scrolledwindow .nautilus-window notebook treeview.view:not(treeview):selected, .nautilus-window flowboxchild:selected .icon-item-background, textview text selection, textview text selection:focus, flowbox flowboxchild:selected {
   color: #3281ea;
   background-color: rgba(50, 129, 234, 0.2);
 }
@@ -4430,29 +4442,29 @@ popover.emoji-completion .emoji:hover {
   border-top-right-radius: 3px;
 }
 
-.nautilus-window.background.csd notebook {
+.nautilus-window.background.csd:not(.unified) notebook {
   border-radius: 0 0 3px 3px;
 }
 
-.nautilus-window.background.csd notebook > stack {
+.nautilus-window.background.csd:not(.unified) notebook > stack {
   background-color: #2B2B2B;
-  border-radius: 0 0 3px 0;
+  border-radius: 0 0 3px 3px;
 }
 
-.nautilus-window.background.csd notebook scrolledwindow > .view:not(:selected):not(:hover):not(:checked), .nautilus-window.background.csd notebook window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow > treeview.view:not(:selected):not(:hover):not(:checked):not(.progressbar):not(.trough), .nautilus-window.background.csd notebook filechooser stack.view scrolledwindow > treeview.view:not(:selected):not(:hover):not(:checked), filechooser stack.view .nautilus-window.background.csd notebook scrolledwindow > treeview.view:not(:selected):not(:hover):not(:checked) {
+.nautilus-window.background.csd:not(.unified) notebook scrolledwindow > .view:not(:selected):not(:hover):not(:checked), .nautilus-window.background.csd:not(.unified) notebook window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow > treeview.view:not(:selected):not(:hover):not(:checked):not(.progressbar):not(.trough), .nautilus-window.background.csd:not(.unified) notebook filechooser stack.view scrolledwindow > treeview.view:not(:selected):not(:hover):not(:checked), filechooser stack.view .nautilus-window.background.csd:not(.unified) notebook scrolledwindow > treeview.view:not(:selected):not(:hover):not(:checked) {
   background-color: transparent;
 }
 
-.nautilus-window.background.csd notebook placesview > stack > frame > scrolledwindow > viewport > list {
+.nautilus-window.background.csd:not(.unified) notebook placesview > stack > frame > scrolledwindow > viewport > list {
   background-color: transparent;
 }
 
-.nautilus-window.background.csd notebook placesview > actionbar {
+.nautilus-window.background.csd:not(.unified) notebook placesview > actionbar {
   background-color: transparent;
   border-radius: 0 0 3px 3px;
 }
 
-.nautilus-window.background.csd notebook placesview > actionbar > revealer > box {
+.nautilus-window.background.csd:not(.unified) notebook placesview > actionbar > revealer > box {
   background-color: transparent;
 }
 

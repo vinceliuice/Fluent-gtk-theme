@@ -52,12 +52,12 @@
       }
     }
 
-    notebook {
+    &:not(.unified) notebook {
       border-radius: 0 0 $window-radius $window-radius;
 
       > stack {
         background-color: $base;
-        border-radius: 0 0 $window-radius 0;
+        border-radius: 0 0 $window-radius + 1px $window-radius + 1px;
       }
 
       scrolledwindow > .view:not(:selected):not(:hover):not(:checked) {

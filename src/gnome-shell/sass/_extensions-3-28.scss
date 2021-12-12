@@ -27,6 +27,8 @@ $dash_border_radius: $menu_radius + $container_padding;
     &.#{$_dock}.extended:overview #dash { border-radius: 0; }
   }
 
+  &.dashtodock #dash { background-color: $panel_bg_color; }
+
   #dash { // default-mode
     background-color: $panel_bg_color;
     box-shadow: none;

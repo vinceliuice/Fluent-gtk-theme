@@ -72,6 +72,10 @@ filechooser stack.view scrolledwindow .content-view treeview.view > rubberband,
 filechooser stack.view scrolledwindow treeview.view > rubberband,
 filechooser stack.view scrolledwindow .content-view treeview.view > rubberband,
 .content-view filechooser stack.view scrolledwindow treeview.view > rubberband,
+filechooser stack.view scrolledwindow .content-view treeview.view > rubberband,
+.content-view filechooser stack.view scrolledwindow treeview.view > rubberband,
+.content-view filechooser stack.view scrolledwindow treeview.view > rubberband,
+filechooser stack.view scrolledwindow .content-view treeview.view > rubberband,
 filechooser stack.view scrolledwindow .content-view treeview.view > .rubberband,
 .content-view filechooser stack.view scrolledwindow treeview.view > .rubberband, gridview > rubberband, flowbox > rubberband {
   border: 1px solid #1A73E8;
@@ -3760,7 +3764,7 @@ filechooser stack.view scrolledwindow list {
   background-color: transparent;
 }
 
-filechooser stack.view scrolledwindow treeview.view {
+filechooser stack.view scrolledwindow treeview.view, filechooser stack.view scrolledwindow treeview.view {
   background-color: transparent;
 }
 
