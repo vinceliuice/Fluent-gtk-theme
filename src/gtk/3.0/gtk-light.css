@@ -4448,7 +4448,7 @@ popover.emoji-completion .emoji:hover {
 
 .nautilus-window.background.csd:not(.unified) notebook > stack {
   background-color: #FFFFFF;
-  border-radius: 0 0 3px 3px;
+  border-radius: 0 0 4px 4px;
 }
 
 .nautilus-window.background.csd:not(.unified) notebook scrolledwindow > .view:not(:selected):not(:hover):not(:checked), .nautilus-window.background.csd:not(.unified) notebook window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow > treeview.view:not(:selected):not(:hover):not(:checked):not(.progressbar):not(.trough), .nautilus-window.background.csd:not(.unified) notebook filechooser stack.view scrolledwindow > treeview.view:not(:selected):not(:hover):not(:checked), filechooser stack.view .nautilus-window.background.csd:not(.unified) notebook scrolledwindow > treeview.view:not(:selected):not(:hover):not(:checked) {
@@ -4466,6 +4466,10 @@ popover.emoji-completion .emoji:hover {
 
 .nautilus-window.background.csd:not(.unified) notebook placesview > actionbar > revealer > box {
   background-color: transparent;
+}
+
+.nautilus-window.background.csd:not(.unified) box + separator + overlay > notebook > stack {
+  border-radius: 0 0 4px 0;
 }
 
 .nautilus-window.maximized, .nautilus-window.maximized placessidebar {

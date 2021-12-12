@@ -74,6 +74,10 @@
         }
       }
     }
+
+    &:not(.unified) box + separator + overlay > notebook > stack { // reset for siebar mode
+      border-radius: 0 0 $window-radius + 1px 0;
+    }
   }
 
   &.maximized { // No border radius when window maximized
