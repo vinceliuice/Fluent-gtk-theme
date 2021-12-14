@@ -658,9 +658,8 @@ window#gnome-system-monitor.background.csd {
 
     > box.vertical {
       > scrolledwindow {
-        treeview.view:not(.progressbar):not(.trough) {
+        treeview.view:not(.progressbar):not(.trough):not(:hover):not(:selected) {
           background: none;
-          @extend .view;
         }
       }
 

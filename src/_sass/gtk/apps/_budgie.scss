@@ -87,10 +87,13 @@
     background: none;
     border-right: none;
     color: $text;
+    padding: $container-padding / 2;
 
-    label { padding: $container-padding / 2 $container-padding * 1.5; }
+    // label { padding: $container-padding / 2 $container-padding * 1.5; }
 
-    &:hover { background-color: $divider; }
+    &:hover { background-color: $overlay-hover; }
+
+    &:selected { background-color: $overlay-active; }
   }
 
   scrolledwindow.sidebar.categories { // AppMenu

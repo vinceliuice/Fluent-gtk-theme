@@ -92,24 +92,24 @@
   color: white;
 }
 
-.view, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(.progressbar):not(.trough), filechooser stack.view scrolledwindow treeview.view {
+.view, filechooser stack.view scrolledwindow treeview.view {
   background-color: #FFFFFF;
   color: rgba(0, 0, 0, 0.87);
 }
 
-.view:hover, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:hover:not(.progressbar):not(.trough), filechooser stack.view scrolledwindow treeview.view:hover {
+.view:hover, filechooser stack.view scrolledwindow treeview.view:hover {
   box-shadow: inset 0 0 0 9999px alpha(currentColor, 0.08);
 }
 
-.view:selected:hover, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:selected:hover:not(.progressbar):not(.trough), filechooser stack.view scrolledwindow treeview.view:selected:hover {
+.view:selected:hover, filechooser stack.view scrolledwindow treeview.view:selected:hover {
   box-shadow: inset 0 0 0 9999px alpha(currentColor, 0.06);
 }
 
-.view:disabled, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:disabled:not(.progressbar):not(.trough), filechooser stack.view scrolledwindow treeview.view:disabled {
+.view:disabled, filechooser stack.view scrolledwindow treeview.view:disabled {
   color: rgba(0, 0, 0, 0.38);
 }
 
-.view:selected, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:selected:not(.progressbar):not(.trough), filechooser stack.view scrolledwindow treeview.view:selected {
+.view:selected, filechooser stack.view scrolledwindow treeview.view:selected {
   background-color: rgba(214, 214, 214, 0.974);
   color: rgba(0, 0, 0, 0.87);
 }
@@ -144,9 +144,6 @@ filechooser stack.view scrolledwindow treeview.view .content-view XfdesktopIconV
 XfdesktopIconView.view filechooser stack.view scrolledwindow treeview.view .content-view .rubberband,
 .content-view .rubberband,
 treeview.view rubberband,
-window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(.progressbar):not(.trough) rubberband,
-window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(.progressbar):not(.trough) XfdesktopIconView.view .rubberband,
-XfdesktopIconView.view window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(.progressbar):not(.trough) .rubberband,
 .content-view filechooser stack.view scrolledwindow treeview.view rubberband,
 .content-view filechooser stack.view scrolledwindow treeview.view XfdesktopIconView.view .rubberband,
 XfdesktopIconView.view .content-view filechooser stack.view scrolledwindow treeview.view .rubberband,
@@ -178,9 +175,7 @@ filechooser stack.view scrolledwindow treeview.view .content-view rubberband,
 filechooser stack.view scrolledwindow treeview.view .content-view XfdesktopIconView.view .rubberband,
 XfdesktopIconView.view filechooser stack.view scrolledwindow treeview.view .content-view .rubberband,
 filechooser stack.view scrolledwindow treeview.view .content-view .rubberband,
-filechooser stack.view window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(.progressbar):not(.trough) .content-view .rubberband,
 .content-view filechooser stack.view scrolledwindow treeview.view .rubberband,
-.content-view filechooser stack.view window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(.progressbar):not(.trough) .rubberband,
 flowbox rubberband,
 flowbox .content-view filechooser stack.view scrolledwindow treeview.view rubberband,
 flowbox .content-view filechooser stack.view scrolledwindow treeview.view XfdesktopIconView.view .rubberband,
@@ -568,7 +563,7 @@ button:drop(active) {
   border-color: rgba(0, 0, 0, 0.26);
 }
 
-.budgie-session-dialog .linked.horizontal > button, .drop-shadow button, .budgie-popover row button, .budgie-settings-window buttonbox.inline-toolbar button, #mate-menu button, #MatePanelPopupWindow button, popover.messagepopover .popover-action-area button, tabbox > tab button, placessidebar.sidebar row button.sidebar-button, calendar.button, .budgie-popover.budgie-menu button.flat:not(.image-button):not(.indicator-item) button.circular, treeview.view header button button.circular, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(.progressbar):not(.trough) header button button.circular, filechooser stack.view scrolledwindow treeview.view header button button.circular, row.activatable button.circular, check,
+.budgie-session-dialog .linked.horizontal > button, .drop-shadow button, .budgie-popover row button, .budgie-settings-window buttonbox.inline-toolbar button, #mate-menu button, #MatePanelPopupWindow button, popover.messagepopover .popover-action-area button, tabbox > tab button, placessidebar.sidebar row button.sidebar-button, calendar.button, .budgie-popover.budgie-menu button.flat:not(.image-button):not(.indicator-item) button.circular, treeview.view header button button.circular, filechooser stack.view scrolledwindow treeview.view header button button.circular, row.activatable button.circular, check,
 radio, scrollbar button, notebook > header > tabs > arrow, spinbutton.vertical button, spinbutton:not(.vertical) button, modelbutton.flat,
 .menuitem.button.flat, .nemo-window .toolbar button, #buttonbox_frame button, .thunar toolbar > toolitem > widget > widget.linked.path-bar > button.path-bar-button:not(.flat), .raven stackswitcher.linked > button, .lock-dialog button, .mate-panel-menu-bar button, window.background.csd.geary-main-window stack#conversation_viewer .geary-expanded > .geary-composer-embed headerbar button,
 window#GearyMainWindow.background.csd stack#conversation_viewer .geary-expanded > .geary-composer-embed headerbar button, layouttabbar button, filechooser #pathbarbox > stack > box > button, messagedialog.csd .dialog-action-box button, .app-notification button, popover.menu button,
@@ -584,7 +579,7 @@ popover.background button.model, .caja-pathbar button,
   color: rgba(0, 0, 0, 0.6);
 }
 
-.budgie-session-dialog .linked.horizontal > button:focus, .drop-shadow button:focus, .budgie-popover row button:focus, .budgie-settings-window buttonbox.inline-toolbar button:focus, #mate-menu button:focus, #MatePanelPopupWindow button:focus, popover.messagepopover .popover-action-area button:focus, tabbox > tab button:focus, placessidebar.sidebar row button.sidebar-button:focus, calendar.button:focus, .budgie-popover.budgie-menu button.flat:not(.image-button):not(.indicator-item) button.circular:focus, treeview.view header button button.circular:focus, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(.progressbar):not(.trough) header button button.circular:focus, filechooser stack.view scrolledwindow treeview.view header button button.circular:focus, row.activatable button.circular:focus, check:focus,
+.budgie-session-dialog .linked.horizontal > button:focus, .drop-shadow button:focus, .budgie-popover row button:focus, .budgie-settings-window buttonbox.inline-toolbar button:focus, #mate-menu button:focus, #MatePanelPopupWindow button:focus, popover.messagepopover .popover-action-area button:focus, tabbox > tab button:focus, placessidebar.sidebar row button.sidebar-button:focus, calendar.button:focus, .budgie-popover.budgie-menu button.flat:not(.image-button):not(.indicator-item) button.circular:focus, treeview.view header button button.circular:focus, filechooser stack.view scrolledwindow treeview.view header button button.circular:focus, row.activatable button.circular:focus, check:focus,
 radio:focus, scrollbar button:focus, notebook > header > tabs > arrow:focus, spinbutton.vertical button:focus, spinbutton:not(.vertical) button:focus, modelbutton.flat:focus,
 .menuitem.button.flat:focus, .nemo-window .toolbar button:focus, #buttonbox_frame button:focus, .thunar toolbar > toolitem > widget > widget.linked.path-bar > button.path-bar-button:focus:not(.flat), .raven stackswitcher.linked > button:focus, .lock-dialog button:focus, .mate-panel-menu-bar button:focus, window.background.csd.geary-main-window stack#conversation_viewer .geary-expanded > .geary-composer-embed headerbar button:focus,
 window#GearyMainWindow.background.csd stack#conversation_viewer .geary-expanded > .geary-composer-embed headerbar button:focus, layouttabbar button:focus, filechooser #pathbarbox > stack > box > button:focus, messagedialog.csd .dialog-action-box button:focus, .app-notification button:focus, popover.menu button:focus,
@@ -595,7 +590,7 @@ popover button.model:focus, .caja-pathbar button:focus,
   color: rgba(0, 0, 0, 0.87);
 }
 
-.budgie-session-dialog .linked.horizontal > button:hover, .drop-shadow button:hover, .budgie-popover row button:hover, .budgie-settings-window buttonbox.inline-toolbar button:hover, #mate-menu button:hover, #MatePanelPopupWindow button:hover, popover.messagepopover .popover-action-area button:hover, tabbox > tab button:hover, placessidebar.sidebar row button.sidebar-button:hover, calendar.button:hover, .budgie-popover.budgie-menu button.flat:not(.image-button):not(.indicator-item) button.circular:hover, treeview.view header button button.circular:hover, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(.progressbar):not(.trough) header button button.circular:hover, filechooser stack.view scrolledwindow treeview.view header button button.circular:hover, row.activatable button.circular:hover, check:hover,
+.budgie-session-dialog .linked.horizontal > button:hover, .drop-shadow button:hover, .budgie-popover row button:hover, .budgie-settings-window buttonbox.inline-toolbar button:hover, #mate-menu button:hover, #MatePanelPopupWindow button:hover, popover.messagepopover .popover-action-area button:hover, tabbox > tab button:hover, placessidebar.sidebar row button.sidebar-button:hover, calendar.button:hover, .budgie-popover.budgie-menu button.flat:not(.image-button):not(.indicator-item) button.circular:hover, treeview.view header button button.circular:hover, filechooser stack.view scrolledwindow treeview.view header button button.circular:hover, row.activatable button.circular:hover, check:hover,
 radio:hover, scrollbar button:hover, notebook > header > tabs > arrow:hover, spinbutton.vertical button:hover, spinbutton:not(.vertical) button:hover, modelbutton.flat:hover,
 .menuitem.button.flat:hover, .nemo-window .toolbar button:hover, #buttonbox_frame button:hover, .thunar toolbar > toolitem > widget > widget.linked.path-bar > button.path-bar-button:hover:not(.flat), .raven stackswitcher.linked > button:hover, .lock-dialog button:hover, .mate-panel-menu-bar button:hover, window.background.csd.geary-main-window stack#conversation_viewer .geary-expanded > .geary-composer-embed headerbar button:hover,
 window#GearyMainWindow.background.csd stack#conversation_viewer .geary-expanded > .geary-composer-embed headerbar button:hover, layouttabbar button:hover, filechooser #pathbarbox > stack > box > button:hover, messagedialog.csd .dialog-action-box button:hover, .app-notification button:hover, popover.menu button:hover,
@@ -606,7 +601,7 @@ popover button.model:hover, .caja-pathbar button:hover,
   color: rgba(0, 0, 0, 0.87);
 }
 
-.budgie-session-dialog .linked.horizontal > button:active, .drop-shadow button:active, .budgie-popover row button:active, .budgie-settings-window buttonbox.inline-toolbar button:active, #mate-menu button:active, #MatePanelPopupWindow button:active, popover.messagepopover .popover-action-area button:active, tabbox > tab button:active, placessidebar.sidebar row button.sidebar-button:active, calendar.button:active, .budgie-popover.budgie-menu button.flat:not(.image-button):not(.indicator-item) button.circular:active, treeview.view header button button.circular:active, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(.progressbar):not(.trough) header button button.circular:active, filechooser stack.view scrolledwindow treeview.view header button button.circular:active, row.activatable button.circular:active, check:active,
+.budgie-session-dialog .linked.horizontal > button:active, .drop-shadow button:active, .budgie-popover row button:active, .budgie-settings-window buttonbox.inline-toolbar button:active, #mate-menu button:active, #MatePanelPopupWindow button:active, popover.messagepopover .popover-action-area button:active, tabbox > tab button:active, placessidebar.sidebar row button.sidebar-button:active, calendar.button:active, .budgie-popover.budgie-menu button.flat:not(.image-button):not(.indicator-item) button.circular:active, treeview.view header button button.circular:active, filechooser stack.view scrolledwindow treeview.view header button button.circular:active, row.activatable button.circular:active, check:active,
 radio:active, scrollbar button:active, notebook > header > tabs > arrow:active, spinbutton.vertical button:active, spinbutton:not(.vertical) button:active, modelbutton.flat:active,
 .menuitem.button.flat:active, .nemo-window .toolbar button:active, #buttonbox_frame button:active, .thunar toolbar > toolitem > widget > widget.linked.path-bar > button.path-bar-button:active:not(.flat), .raven stackswitcher.linked > button:active, .lock-dialog button:active, .mate-panel-menu-bar button:active, window.background.csd.geary-main-window stack#conversation_viewer .geary-expanded > .geary-composer-embed headerbar button:active,
 window#GearyMainWindow.background.csd stack#conversation_viewer .geary-expanded > .geary-composer-embed headerbar button:active, layouttabbar button:active, filechooser #pathbarbox > stack > box > button:active, messagedialog.csd .dialog-action-box button:active, .app-notification button:active, popover.menu button:active,
@@ -619,7 +614,7 @@ popover button.model:active, .caja-pathbar button:active,
   color: rgba(0, 0, 0, 0.87);
 }
 
-.budgie-session-dialog .linked.horizontal > button:disabled, .drop-shadow button:disabled, .budgie-popover row button:disabled, .budgie-settings-window buttonbox.inline-toolbar button:disabled, #mate-menu button:disabled, #MatePanelPopupWindow button:disabled, popover.messagepopover .popover-action-area button:disabled, tabbox > tab button:disabled, placessidebar.sidebar row button.sidebar-button:disabled, calendar.button:disabled, .budgie-popover.budgie-menu button.flat:not(.image-button):not(.indicator-item) button.circular:disabled, treeview.view header button button.circular:disabled, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(.progressbar):not(.trough) header button button.circular:disabled, filechooser stack.view scrolledwindow treeview.view header button button.circular:disabled, row.activatable button.circular:disabled, check:disabled,
+.budgie-session-dialog .linked.horizontal > button:disabled, .drop-shadow button:disabled, .budgie-popover row button:disabled, .budgie-settings-window buttonbox.inline-toolbar button:disabled, #mate-menu button:disabled, #MatePanelPopupWindow button:disabled, popover.messagepopover .popover-action-area button:disabled, tabbox > tab button:disabled, placessidebar.sidebar row button.sidebar-button:disabled, calendar.button:disabled, .budgie-popover.budgie-menu button.flat:not(.image-button):not(.indicator-item) button.circular:disabled, treeview.view header button button.circular:disabled, filechooser stack.view scrolledwindow treeview.view header button button.circular:disabled, row.activatable button.circular:disabled, check:disabled,
 radio:disabled, scrollbar button:disabled, notebook > header > tabs > arrow:disabled, spinbutton.vertical button:disabled, spinbutton:not(.vertical) button:disabled, modelbutton.flat:disabled,
 .menuitem.button.flat:disabled, .nemo-window .toolbar button:disabled, #buttonbox_frame button:disabled, .thunar toolbar > toolitem > widget > widget.linked.path-bar > button.path-bar-button:disabled:not(.flat), .raven stackswitcher.linked > button:disabled, .lock-dialog button:disabled, .mate-panel-menu-bar button:disabled, window.background.csd.geary-main-window stack#conversation_viewer .geary-expanded > .geary-composer-embed headerbar button:disabled,
 window#GearyMainWindow.background.csd stack#conversation_viewer .geary-expanded > .geary-composer-embed headerbar button:disabled, layouttabbar button:disabled, filechooser #pathbarbox > stack > box > button:disabled, messagedialog.csd .dialog-action-box button:disabled, .app-notification button:disabled, popover.menu button:disabled,
@@ -1962,7 +1957,7 @@ headerbar.default-decoration button.titlebutton:not(.suggested-action):not(.dest
 /**************
  * Tree Views *
  **************/
-treeview.view, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(.progressbar):not(.trough), filechooser stack.view scrolledwindow treeview.view {
+treeview.view, filechooser stack.view scrolledwindow treeview.view {
   background-image: image(#FFFFFF);
   border-left-color: rgba(0, 0, 0, 0.26);
   border-top-color: rgba(0, 0, 0, 0.12);
@@ -1977,89 +1972,89 @@ treeview.view, window#gnome-system-monitor.background.csd > box.vertical > stack
   -GtkTreeView-expander-size: 16;
 }
 
-treeview.view:selected, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:selected:not(.progressbar):not(.trough), filechooser stack.view scrolledwindow treeview.view:selected {
+treeview.view:selected, filechooser stack.view scrolledwindow treeview.view:selected {
   background-color: transparent;
   background-image: image(alpha(currentColor, 0.1));
   box-shadow: none;
   color: rgba(0, 0, 0, 0.87);
 }
 
-.background:not(.csd) treeview.view:selected, .background:not(.csd) window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:selected:not(.progressbar):not(.trough), window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow .background:not(.csd) treeview.view:selected:not(.progressbar):not(.trough), .background:not(.csd) filechooser stack.view scrolledwindow treeview.view:selected, filechooser stack.view scrolledwindow .background:not(.csd) treeview.view:selected {
+.background:not(.csd) treeview.view:selected, .background:not(.csd) filechooser stack.view scrolledwindow treeview.view:selected, filechooser stack.view scrolledwindow .background:not(.csd) treeview.view:selected {
   background-image: image(rgba(235, 235, 235, 0.987));
 }
 
-treeview.view:hover, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:hover:not(.progressbar):not(.trough), filechooser stack.view scrolledwindow treeview.view:hover, treeview.view:selected, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:selected:not(.progressbar):not(.trough), filechooser stack.view scrolledwindow treeview.view:selected {
+treeview.view:hover, filechooser stack.view scrolledwindow treeview.view:hover, treeview.view:selected, filechooser stack.view scrolledwindow treeview.view:selected {
   border-radius: 0;
 }
 
-treeview.view acceleditor > label, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(.progressbar):not(.trough) acceleditor > label, filechooser stack.view scrolledwindow treeview.view acceleditor > label {
+treeview.view acceleditor > label, filechooser stack.view scrolledwindow treeview.view acceleditor > label {
   background-color: #1A73E8;
 }
 
-treeview.view.separator, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.separator.view:not(.progressbar):not(.trough), filechooser stack.view scrolledwindow treeview.separator.view {
+treeview.view.separator, filechooser stack.view scrolledwindow treeview.separator.view {
   min-height: 5px;
   color: rgba(0, 0, 0, 0.12);
 }
 
-treeview.view:drop(active), window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:drop(active):not(.progressbar):not(.trough), filechooser stack.view scrolledwindow treeview.view:drop(active) {
+treeview.view:drop(active), filechooser stack.view scrolledwindow treeview.view:drop(active) {
   border-style: solid none;
   border-width: 1px;
   border-color: rgba(15, 65, 131, 0.935);
 }
 
-treeview.view:drop(active).after, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:drop(active).after:not(.progressbar):not(.trough), filechooser stack.view scrolledwindow treeview.view:drop(active).after {
+treeview.view:drop(active).after, filechooser stack.view scrolledwindow treeview.view:drop(active).after {
   border-top-style: none;
 }
 
-treeview.view:drop(active).before, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:drop(active).before:not(.progressbar):not(.trough), filechooser stack.view scrolledwindow treeview.view:drop(active).before {
+treeview.view:drop(active).before, filechooser stack.view scrolledwindow treeview.view:drop(active).before {
   border-bottom-style: none;
 }
 
-treeview.view.expander, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.expander.view:not(.progressbar):not(.trough), filechooser stack.view scrolledwindow treeview.expander.view {
+treeview.view.expander, filechooser stack.view scrolledwindow treeview.expander.view {
   -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
   -gtk-icon-transform: rotate(-90deg);
   color: rgba(0, 0, 0, 0.6);
 }
 
-treeview.view.expander:dir(rtl), window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.expander.view:dir(rtl):not(.progressbar):not(.trough), filechooser stack.view scrolledwindow treeview.expander.view:dir(rtl) {
+treeview.view.expander:dir(rtl), filechooser stack.view scrolledwindow treeview.expander.view:dir(rtl) {
   -gtk-icon-transform: rotate(90deg);
 }
 
-treeview.view.expander:checked, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.expander.view:checked:not(.progressbar):not(.trough), filechooser stack.view scrolledwindow treeview.expander.view:checked {
+treeview.view.expander:checked, filechooser stack.view scrolledwindow treeview.expander.view:checked {
   -gtk-icon-transform: unset;
 }
 
-treeview.view.expander:hover, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.expander.view:hover:not(.progressbar):not(.trough), filechooser stack.view scrolledwindow treeview.expander.view:hover, treeview.view.expander:active, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.expander.view:active:not(.progressbar):not(.trough), filechooser stack.view scrolledwindow treeview.expander.view:active {
+treeview.view.expander:hover, filechooser stack.view scrolledwindow treeview.expander.view:hover, treeview.view.expander:active, filechooser stack.view scrolledwindow treeview.expander.view:active {
   color: rgba(0, 0, 0, 0.87);
 }
 
-treeview.view.expander:disabled, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.expander.view:disabled:not(.progressbar):not(.trough), filechooser stack.view scrolledwindow treeview.expander.view:disabled {
+treeview.view.expander:disabled, filechooser stack.view scrolledwindow treeview.expander.view:disabled {
   color: rgba(0, 0, 0, 0.26);
 }
 
-treeview.view.progressbar, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.progressbar.view:not(.progressbar):not(.trough), filechooser stack.view scrolledwindow treeview.progressbar.view {
+treeview.view.progressbar, filechooser stack.view scrolledwindow treeview.progressbar.view {
   border-bottom: 3px solid #1A73E8;
   box-shadow: none;
   background-color: transparent;
   background-image: none;
 }
 
-treeview.view.progressbar:selected:hover, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.progressbar.view:selected:hover:not(.progressbar):not(.trough), filechooser stack.view scrolledwindow treeview.progressbar.view:selected:hover {
+treeview.view.progressbar:selected:hover, filechooser stack.view scrolledwindow treeview.progressbar.view:selected:hover {
   box-shadow: none;
 }
 
-treeview.view.trough, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.trough.view:not(.progressbar):not(.trough), filechooser stack.view scrolledwindow treeview.trough.view {
+treeview.view.trough, filechooser stack.view scrolledwindow treeview.trough.view {
   border-bottom: 3px solid rgba(0, 0, 0, 0.12);
   box-shadow: none;
   background-color: transparent;
   background-image: none;
 }
 
-treeview.view.trough:selected:hover, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.trough.view:selected:hover:not(.progressbar):not(.trough), filechooser stack.view scrolledwindow treeview.trough.view:selected:hover {
+treeview.view.trough:selected:hover, filechooser stack.view scrolledwindow treeview.trough.view:selected:hover {
   box-shadow: none;
 }
 
-treeview.view header button, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(.progressbar):not(.trough) header button, filechooser stack.view scrolledwindow treeview.view header button {
+treeview.view header button, filechooser stack.view scrolledwindow treeview.view header button {
   padding: 2px 6px;
   border-style: none solid solid none;
   border-width: 1px;
@@ -2068,21 +2063,20 @@ treeview.view header button, window#gnome-system-monitor.background.csd > box.ve
   background-clip: border-box;
 }
 
-treeview.view header button:not(:focus):not(:hover):not(:active), window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(.progressbar):not(.trough) header button:not(:focus):not(:hover):not(:active), filechooser stack.view scrolledwindow treeview.view header button:not(:focus):not(:hover):not(:active) {
+treeview.view header button:not(:focus):not(:hover):not(:active), filechooser stack.view scrolledwindow treeview.view header button:not(:focus):not(:hover):not(:active) {
   color: rgba(0, 0, 0, 0.6);
 }
 
-treeview.view header button, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(.progressbar):not(.trough) header button, filechooser stack.view scrolledwindow treeview.view header button, treeview.view header button:disabled, filechooser stack.view scrolledwindow treeview.view header button:disabled {
+treeview.view header button, filechooser stack.view scrolledwindow treeview.view header button, treeview.view header button:disabled, filechooser stack.view scrolledwindow treeview.view header button:disabled {
   background-color: #FFFFFF;
 }
 
-treeview.view header button:last-child, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(.progressbar):not(.trough) header button:last-child, filechooser stack.view scrolledwindow treeview.view header button:last-child {
+treeview.view header button:last-child, filechooser stack.view scrolledwindow treeview.view header button:last-child {
   border-right-style: none;
 }
 
-treeview.view button.dnd, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(.progressbar):not(.trough) button.dnd, filechooser stack.view scrolledwindow treeview.view button.dnd,
+treeview.view button.dnd, filechooser stack.view scrolledwindow treeview.view button.dnd,
 treeview.view header.button.dnd,
-window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(.progressbar):not(.trough) header.button.dnd,
 filechooser stack.view scrolledwindow treeview.view header.button.dnd {
   padding: 2px 6px;
   border-style: none solid solid;
@@ -2095,7 +2089,7 @@ filechooser stack.view scrolledwindow treeview.view header.button.dnd {
   color: #1A73E8;
 }
 
-treeview.view acceleditor > label, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(.progressbar):not(.trough) acceleditor > label, filechooser stack.view scrolledwindow treeview.view acceleditor > label {
+treeview.view acceleditor > label, filechooser stack.view scrolledwindow treeview.view acceleditor > label {
   background-color: #1A73E8;
 }
 
@@ -2317,7 +2311,6 @@ popover.background > toolbar {
 
 popover > list,
 popover > .view,
-window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow popover > treeview.view:not(.progressbar):not(.trough),
 filechooser stack.view scrolledwindow popover > treeview.view,
 popover > toolbar,
 popover.background > list,
@@ -2331,8 +2324,6 @@ popover.background > toolbar {
 
 popover list,
 popover .view:not(:selected),
-popover window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(:selected):not(.progressbar):not(.trough),
-window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow popover treeview.view:not(:selected):not(.progressbar):not(.trough),
 popover filechooser stack.view scrolledwindow treeview.view:not(:selected),
 filechooser stack.view scrolledwindow popover treeview.view:not(:selected),
 popover toolbar,
@@ -2844,7 +2835,7 @@ switch:checked slider {
 /*************************
  * Check and Radio items *
  *************************/
-.view.content-view.check:not(list), window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.content-view.check.view:not(list):not(.progressbar):not(.trough), filechooser stack.view scrolledwindow treeview.content-view.check.view:not(list), filechooser stack.view window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.check.view:not(list):not(.progressbar):not(.trough),
+.view.content-view.check:not(list), filechooser stack.view scrolledwindow treeview.content-view.check.view:not(list),
 .content-view .tile check:not(list) {
   min-height: 40px;
   min-width: 40px;
@@ -2856,18 +2847,18 @@ switch:checked slider {
   -gtk-icon-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 2px 2px rgba(0, 0, 0, 0.14), 0 1px 3px rgba(0, 0, 0, 0.12);
 }
 
-.view.content-view.check:not(list):hover, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.content-view.check.view:not(list):hover:not(.progressbar):not(.trough), filechooser stack.view scrolledwindow treeview.content-view.check.view:not(list):hover, filechooser stack.view window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.check.view:not(list):hover:not(.progressbar):not(.trough), .view.content-view.check:not(list):active, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.content-view.check.view:not(list):active:not(.progressbar):not(.trough), filechooser stack.view scrolledwindow treeview.content-view.check.view:not(list):active, filechooser stack.view window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.check.view:not(list):active:not(.progressbar):not(.trough),
+.view.content-view.check:not(list):hover, filechooser stack.view scrolledwindow treeview.content-view.check.view:not(list):hover, .view.content-view.check:not(list):active, filechooser stack.view scrolledwindow treeview.content-view.check.view:not(list):active,
 .content-view .tile check:not(list):hover,
 .content-view .tile check:not(list):active {
   -gtk-icon-shadow: 0 2px 2px rgba(0, 0, 0, 0.2), 0 4px 3px rgba(0, 0, 0, 0.14), 0 1px 6px rgba(0, 0, 0, 0.12);
 }
 
-.view.content-view.check:not(list), window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.content-view.check.view:not(list):not(.progressbar):not(.trough), filechooser stack.view scrolledwindow treeview.content-view.check.view:not(list), filechooser stack.view window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.check.view:not(list):not(.progressbar):not(.trough),
+.view.content-view.check:not(list), filechooser stack.view scrolledwindow treeview.content-view.check.view:not(list),
 .content-view .tile check:not(list) {
   -gtk-icon-source: -gtk-scaled(url("assets/selectionmode-checkbox-unchecked.png"), url("assets/selectionmode-checkbox-unchecked@2.png"));
 }
 
-.view.content-view.check:not(list):checked, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.content-view.check.view:not(list):checked:not(.progressbar):not(.trough), filechooser stack.view scrolledwindow treeview.content-view.check.view:not(list):checked, filechooser stack.view window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.check.view:not(list):checked:not(.progressbar):not(.trough),
+.view.content-view.check:not(list):checked, filechooser stack.view scrolledwindow treeview.content-view.check.view:not(list):checked,
 .content-view .tile check:not(list):checked {
   -gtk-icon-source: -gtk-scaled(url("assets/selectionmode-checkbox-checked.png"), url("assets/selectionmode-checkbox-checked@2.png"));
 }
@@ -2990,28 +2981,28 @@ menu menuitem check, menu menuitem check:hover, menu menuitem check:disabled, me
   box-shadow: none;
 }
 
-treeview.view check, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(.progressbar):not(.trough) check, filechooser stack.view scrolledwindow treeview.view check, treeview.view radio, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(.progressbar):not(.trough) radio, filechooser stack.view scrolledwindow treeview.view radio {
+treeview.view check, filechooser stack.view scrolledwindow treeview.view check, treeview.view radio, filechooser stack.view scrolledwindow treeview.view radio {
   padding: 0;
   color: rgba(0, 0, 0, 0.6);
 }
 
-treeview.view check:hover, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(.progressbar):not(.trough) check:hover, filechooser stack.view scrolledwindow treeview.view check:hover, treeview.view check:active, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(.progressbar):not(.trough) check:active, filechooser stack.view scrolledwindow treeview.view check:active, treeview.view radio:hover, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(.progressbar):not(.trough) radio:hover, filechooser stack.view scrolledwindow treeview.view radio:hover, treeview.view radio:active, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(.progressbar):not(.trough) radio:active, filechooser stack.view scrolledwindow treeview.view radio:active {
+treeview.view check:hover, filechooser stack.view scrolledwindow treeview.view check:hover, treeview.view check:active, filechooser stack.view scrolledwindow treeview.view check:active, treeview.view radio:hover, filechooser stack.view scrolledwindow treeview.view radio:hover, treeview.view radio:active, filechooser stack.view scrolledwindow treeview.view radio:active {
   color: rgba(0, 0, 0, 0.87);
 }
 
-treeview.view check:disabled, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(.progressbar):not(.trough) check:disabled, filechooser stack.view scrolledwindow treeview.view check:disabled, treeview.view radio:disabled, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(.progressbar):not(.trough) radio:disabled, filechooser stack.view scrolledwindow treeview.view radio:disabled {
+treeview.view check:disabled, filechooser stack.view scrolledwindow treeview.view check:disabled, treeview.view radio:disabled, filechooser stack.view scrolledwindow treeview.view radio:disabled {
   color: rgba(0, 0, 0, 0.26);
 }
 
-treeview.view check:checked, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(.progressbar):not(.trough) check:checked, filechooser stack.view scrolledwindow treeview.view check:checked, treeview.view check:indeterminate, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(.progressbar):not(.trough) check:indeterminate, filechooser stack.view scrolledwindow treeview.view check:indeterminate, treeview.view radio:checked, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(.progressbar):not(.trough) radio:checked, filechooser stack.view scrolledwindow treeview.view radio:checked, treeview.view radio:indeterminate, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(.progressbar):not(.trough) radio:indeterminate, filechooser stack.view scrolledwindow treeview.view radio:indeterminate {
+treeview.view check:checked, filechooser stack.view scrolledwindow treeview.view check:checked, treeview.view check:indeterminate, filechooser stack.view scrolledwindow treeview.view check:indeterminate, treeview.view radio:checked, filechooser stack.view scrolledwindow treeview.view radio:checked, treeview.view radio:indeterminate, filechooser stack.view scrolledwindow treeview.view radio:indeterminate {
   color: #1A73E8;
 }
 
-treeview.view check:checked:disabled, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(.progressbar):not(.trough) check:checked:disabled, filechooser stack.view scrolledwindow treeview.view check:checked:disabled, treeview.view check:indeterminate:disabled, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(.progressbar):not(.trough) check:indeterminate:disabled, filechooser stack.view scrolledwindow treeview.view check:indeterminate:disabled, treeview.view radio:checked:disabled, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(.progressbar):not(.trough) radio:checked:disabled, filechooser stack.view scrolledwindow treeview.view radio:checked:disabled, treeview.view radio:indeterminate:disabled, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(.progressbar):not(.trough) radio:indeterminate:disabled, filechooser stack.view scrolledwindow treeview.view radio:indeterminate:disabled {
+treeview.view check:checked:disabled, filechooser stack.view scrolledwindow treeview.view check:checked:disabled, treeview.view check:indeterminate:disabled, filechooser stack.view scrolledwindow treeview.view check:indeterminate:disabled, treeview.view radio:checked:disabled, filechooser stack.view scrolledwindow treeview.view radio:checked:disabled, treeview.view radio:indeterminate:disabled, filechooser stack.view scrolledwindow treeview.view radio:indeterminate:disabled {
   color: rgba(0, 0, 0, 0.26);
 }
 
-treeview.view check:hover, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(.progressbar):not(.trough) check:hover, filechooser stack.view scrolledwindow treeview.view check:hover, treeview.view check:focus, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(.progressbar):not(.trough) check:focus, filechooser stack.view scrolledwindow treeview.view check:focus, treeview.view check:selected, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(.progressbar):not(.trough) check:selected, filechooser stack.view scrolledwindow treeview.view check:selected, treeview.view check:selected:hover, filechooser stack.view scrolledwindow treeview.view check:selected:hover, treeview.view check:checked:hover, filechooser stack.view scrolledwindow treeview.view check:checked:hover, treeview.view check:indeterminate:hover, filechooser stack.view scrolledwindow treeview.view check:indeterminate:hover, treeview.view radio:hover, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(.progressbar):not(.trough) radio:hover, filechooser stack.view scrolledwindow treeview.view radio:hover, treeview.view radio:focus, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(.progressbar):not(.trough) radio:focus, filechooser stack.view scrolledwindow treeview.view radio:focus, treeview.view radio:selected, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(.progressbar):not(.trough) radio:selected, filechooser stack.view scrolledwindow treeview.view radio:selected, treeview.view radio:selected:hover, filechooser stack.view scrolledwindow treeview.view radio:selected:hover, treeview.view radio:checked:hover, filechooser stack.view scrolledwindow treeview.view radio:checked:hover, treeview.view radio:indeterminate:hover, filechooser stack.view scrolledwindow treeview.view radio:indeterminate:hover {
+treeview.view check:hover, filechooser stack.view scrolledwindow treeview.view check:hover, treeview.view check:focus, filechooser stack.view scrolledwindow treeview.view check:focus, treeview.view check:selected, filechooser stack.view scrolledwindow treeview.view check:selected, treeview.view check:selected:hover, filechooser stack.view scrolledwindow treeview.view check:selected:hover, treeview.view check:checked:hover, filechooser stack.view scrolledwindow treeview.view check:checked:hover, treeview.view check:indeterminate:hover, filechooser stack.view scrolledwindow treeview.view check:indeterminate:hover, treeview.view radio:hover, filechooser stack.view scrolledwindow treeview.view radio:hover, treeview.view radio:focus, filechooser stack.view scrolledwindow treeview.view radio:focus, treeview.view radio:selected, filechooser stack.view scrolledwindow treeview.view radio:selected, treeview.view radio:selected:hover, filechooser stack.view scrolledwindow treeview.view radio:selected:hover, treeview.view radio:checked:hover, filechooser stack.view scrolledwindow treeview.view radio:checked:hover, treeview.view radio:indeterminate:hover, filechooser stack.view scrolledwindow treeview.view radio:indeterminate:hover {
   box-shadow: none;
   background-color: transparent;
 }
@@ -3097,7 +3088,7 @@ menu menuitem radio:indeterminate {
   -gtk-icon-source: -gtk-recolor(url("assets/scalable/small-radio-mixed-symbolic.svg"));
 }
 
-treeview.view radio:checked, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(.progressbar):not(.trough) radio:checked, filechooser stack.view scrolledwindow treeview.view radio:checked {
+treeview.view radio:checked, filechooser stack.view scrolledwindow treeview.view radio:checked {
   -gtk-icon-source: -gtk-recolor(url("assets/scalable/radio-checked-symbolic.svg"));
   border-image: none;
 }
@@ -3455,7 +3446,6 @@ frame > border,
 
 frame > border.view,
 .frame.view,
-window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.frame.view:not(.progressbar):not(.trough),
 filechooser stack.view scrolledwindow treeview.frame.view {
   border-radius: 2px;
 }
@@ -3525,7 +3515,7 @@ list row {
   padding: 2px;
 }
 
-.budgie-popover.budgie-menu button.flat:not(.image-button):not(.indicator-item), treeview.view header button, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(.progressbar):not(.trough) header button, filechooser stack.view scrolledwindow treeview.view header button, row.activatable {
+.budgie-popover.budgie-menu button.flat:not(.image-button):not(.indicator-item), treeview.view header button, filechooser stack.view scrolledwindow treeview.view header button, row.activatable {
   outline: none;
   background-image: image(rgba(26, 115, 232, 0));
   background-position: 2px center;
@@ -3534,12 +3524,12 @@ list row {
   box-shadow: inset 0 0 0 9999px transparent;
 }
 
-.budgie-popover.budgie-menu button.flat:hover:not(.image-button):not(.indicator-item), treeview.view header button:hover, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(.progressbar):not(.trough) header button:hover, filechooser stack.view scrolledwindow treeview.view header button:hover, row.activatable:hover {
+.budgie-popover.budgie-menu button.flat:hover:not(.image-button):not(.indicator-item), treeview.view header button:hover, filechooser stack.view scrolledwindow treeview.view header button:hover, row.activatable:hover {
   transition: box-shadow 75ms cubic-bezier(0, 0, 0.2, 1), background-image 0;
   box-shadow: inset 0 0 0 9999px alpha(currentColor, 0.08);
 }
 
-.budgie-popover.budgie-menu button.has-open-popup.flat:not(.image-button):not(.indicator-item), treeview.view header button.has-open-popup, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(.progressbar):not(.trough) header button.has-open-popup, filechooser stack.view scrolledwindow treeview.view header button.has-open-popup, .budgie-popover.budgie-menu button.flat:active:not(.image-button):not(.indicator-item), treeview.view header button:active, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(.progressbar):not(.trough) header button:active, filechooser stack.view scrolledwindow treeview.view header button:active, row.activatable.has-open-popup, row.activatable:active {
+.budgie-popover.budgie-menu button.has-open-popup.flat:not(.image-button):not(.indicator-item), treeview.view header button.has-open-popup, filechooser stack.view scrolledwindow treeview.view header button.has-open-popup, .budgie-popover.budgie-menu button.flat:active:not(.image-button):not(.indicator-item), treeview.view header button:active, filechooser stack.view scrolledwindow treeview.view header button:active, row.activatable.has-open-popup, row.activatable:active {
   transition: background-image 1200ms cubic-bezier(0, 0, 0.2, 1), box-shadow 1200ms cubic-bezier(0, 0, 0.2, 1);
   box-shadow: inset 0 0 0 9999px alpha(currentColor, 0.16);
 }
@@ -3713,7 +3703,7 @@ filechooser stack.view scrolledwindow list {
   background-color: transparent;
 }
 
-filechooser stack.view scrolledwindow treeview.view, filechooser stack.view window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(.progressbar):not(.trough), filechooser stack.view scrolledwindow treeview.view {
+filechooser stack.view scrolledwindow treeview.view, filechooser stack.view scrolledwindow treeview.view {
   background-color: transparent;
 }
 
@@ -4184,17 +4174,17 @@ messagedialog.csd decoration {
   background-color: #3c3c3c;
 }
 
-XfdesktopIconView.view:active, calendar.raven-calendar:selected, .budgie-popover.budgie-menu button.flat:not(.image-button):not(.indicator-item):checked, box.vertical > widget > widget:selected, .background.csd .view:selected, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:selected:not(.progressbar):not(.trough), modelbutton.flat:selected,
+XfdesktopIconView.view:active, calendar.raven-calendar:selected, .budgie-popover.budgie-menu button.flat:not(.image-button):not(.indicator-item):checked, box.vertical > widget > widget:selected, .background.csd .view:selected, modelbutton.flat:selected,
 .menuitem.button.flat:selected, row:selected, calendar:selected, .background.csd filechooser stack.view scrolledwindow treeview.view:selected, filechooser stack.view scrolledwindow .background.csd treeview.view:selected {
   background-color: alpha(currentColor, 0.06);
 }
 
-.nemo-window .nemo-window-pane notebook .view:selected, .nemo-window .nemo-window-pane notebook filechooser stack.view scrolledwindow treeview.view:selected, filechooser stack.view scrolledwindow .nemo-window .nemo-window-pane notebook treeview.view:selected, .nemo-window .nemo-window-pane notebook window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:selected:not(.progressbar):not(.trough), window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow .nemo-window .nemo-window-pane notebook treeview.view:selected:not(.progressbar):not(.trough), .nautilus-window notebook :not(treeview).view selection, .nautilus-window notebook window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(treeview):not(.progressbar):not(.trough) selection, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow .nautilus-window notebook treeview.view:not(treeview):not(.progressbar):not(.trough) selection, .nautilus-window notebook filechooser stack.view scrolledwindow treeview.view:not(treeview) selection, filechooser stack.view scrolledwindow .nautilus-window notebook treeview.view:not(treeview) selection, .nautilus-window notebook :not(treeview).view:selected, .nautilus-window notebook window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(treeview):selected:not(.progressbar):not(.trough), window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow .nautilus-window notebook treeview.view:not(treeview):selected:not(.progressbar):not(.trough), .nautilus-window notebook filechooser stack.view scrolledwindow treeview.view:not(treeview):selected, filechooser stack.view scrolledwindow .nautilus-window notebook treeview.view:not(treeview):selected, .nautilus-window flowboxchild:selected .icon-item-background, textview text selection, textview text selection:focus, flowbox flowboxchild:selected {
+.nemo-window .nemo-window-pane notebook .view:selected, .nemo-window .nemo-window-pane notebook filechooser stack.view scrolledwindow treeview.view:selected, filechooser stack.view scrolledwindow .nemo-window .nemo-window-pane notebook treeview.view:selected, .nautilus-window notebook :not(treeview).view selection, .nautilus-window notebook filechooser stack.view scrolledwindow treeview.view:not(treeview) selection, filechooser stack.view scrolledwindow .nautilus-window notebook treeview.view:not(treeview) selection, .nautilus-window notebook :not(treeview).view:selected, .nautilus-window notebook filechooser stack.view scrolledwindow treeview.view:not(treeview):selected, filechooser stack.view scrolledwindow .nautilus-window notebook treeview.view:not(treeview):selected, .nautilus-window flowboxchild:selected .icon-item-background, textview text selection, textview text selection:focus, flowbox flowboxchild:selected {
   color: #1A73E8;
   background-color: rgba(26, 115, 232, 0.2);
 }
 
-.nemo-window .nemo-window-pane widget.entry:selected, #MozillaGtkWidget > widget text:selected, #MozillaGtkWidget > widget text selection, #MozillaGtkWidget > widget text selection:focus, window.background.chromium > textview.view selection, window.background.chromium textview selection, window.background.chromium treeview.view.cell:selected:focus, window.background.chromium filechooser stack.view scrolledwindow treeview.cell.view:selected:focus, filechooser stack.view scrolledwindow window.background.chromium treeview.cell.view:selected:focus, window.background.chromium window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.cell.view:selected:focus:not(.progressbar):not(.trough), window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow window.background.chromium treeview.cell.view:selected:focus:not(.progressbar):not(.trough), window.background.csd evview.view.content-view:selected, window.background.csd evview.view.content-view:selected:backdrop, widget.view:selected, .background.csd textview text selection, .background.csd textview text selection:focus, label selection,
+.nemo-window .nemo-window-pane widget.entry:selected, #MozillaGtkWidget > widget text:selected, #MozillaGtkWidget > widget text selection, #MozillaGtkWidget > widget text selection:focus, window.background.chromium > textview.view selection, window.background.chromium textview selection, window.background.chromium treeview.view.cell:selected:focus, window.background.chromium filechooser stack.view scrolledwindow treeview.cell.view:selected:focus, filechooser stack.view scrolledwindow window.background.chromium treeview.cell.view:selected:focus, window.background.csd evview.view.content-view:selected, window.background.csd evview.view.content-view:selected:backdrop, widget.view:selected, .background.csd textview text selection, .background.csd textview text selection:focus, label selection,
 entry selection, spinbutton:not(.vertical) selection, spinbutton.vertical selection {
   color: white;
   background-color: #1A73E8;
@@ -4430,16 +4420,16 @@ popover.emoji-completion .emoji:hover {
   border-radius: 3px;
 }
 
-.nautilus-window.background.csd .nautilus-list-view treeview.view:not(:hover):not(:active):not(:selected), .nautilus-window.background.csd .nautilus-list-view window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(:hover):not(:active):not(:selected):not(.progressbar):not(.trough), window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow .nautilus-window.background.csd .nautilus-list-view treeview.view:not(:hover):not(:active):not(:selected):not(.progressbar):not(.trough), .nautilus-window.background.csd .nautilus-list-view filechooser stack.view scrolledwindow treeview.view:not(:hover):not(:active):not(:selected), filechooser stack.view scrolledwindow .nautilus-window.background.csd .nautilus-list-view treeview.view:not(:hover):not(:active):not(:selected) {
+.nautilus-window.background.csd .nautilus-list-view treeview.view:not(:hover):not(:active):not(:selected), .nautilus-window.background.csd .nautilus-list-view filechooser stack.view scrolledwindow treeview.view:not(:hover):not(:active):not(:selected), filechooser stack.view scrolledwindow .nautilus-window.background.csd .nautilus-list-view treeview.view:not(:hover):not(:active):not(:selected) {
   background-color: transparent;
   border-radius: 0;
 }
 
-.nautilus-window.background.csd .nautilus-list-view treeview.view:not(:hover):not(:active):not(:selected) > header > button:first-child, .nautilus-window.background.csd .nautilus-list-view window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(:hover):not(:active):not(:selected):not(.progressbar):not(.trough) > header > button:first-child, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow .nautilus-window.background.csd .nautilus-list-view treeview.view:not(:hover):not(:active):not(:selected):not(.progressbar):not(.trough) > header > button:first-child, .nautilus-window.background.csd .nautilus-list-view filechooser stack.view scrolledwindow treeview.view:not(:hover):not(:active):not(:selected) > header > button:first-child, filechooser stack.view scrolledwindow .nautilus-window.background.csd .nautilus-list-view treeview.view:not(:hover):not(:active):not(:selected) > header > button:first-child {
+.nautilus-window.background.csd .nautilus-list-view treeview.view:not(:hover):not(:active):not(:selected) > header > button:first-child, .nautilus-window.background.csd .nautilus-list-view filechooser stack.view scrolledwindow treeview.view:not(:hover):not(:active):not(:selected) > header > button:first-child, filechooser stack.view scrolledwindow .nautilus-window.background.csd .nautilus-list-view treeview.view:not(:hover):not(:active):not(:selected) > header > button:first-child {
   border-top-left-radius: 3px;
 }
 
-.nautilus-window.background.csd .nautilus-list-view treeview.view:not(:hover):not(:active):not(:selected) > header > button:last-child, .nautilus-window.background.csd .nautilus-list-view window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(:hover):not(:active):not(:selected):not(.progressbar):not(.trough) > header > button:last-child, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow .nautilus-window.background.csd .nautilus-list-view treeview.view:not(:hover):not(:active):not(:selected):not(.progressbar):not(.trough) > header > button:last-child, .nautilus-window.background.csd .nautilus-list-view filechooser stack.view scrolledwindow treeview.view:not(:hover):not(:active):not(:selected) > header > button:last-child, filechooser stack.view scrolledwindow .nautilus-window.background.csd .nautilus-list-view treeview.view:not(:hover):not(:active):not(:selected) > header > button:last-child {
+.nautilus-window.background.csd .nautilus-list-view treeview.view:not(:hover):not(:active):not(:selected) > header > button:last-child, .nautilus-window.background.csd .nautilus-list-view filechooser stack.view scrolledwindow treeview.view:not(:hover):not(:active):not(:selected) > header > button:last-child, filechooser stack.view scrolledwindow .nautilus-window.background.csd .nautilus-list-view treeview.view:not(:hover):not(:active):not(:selected) > header > button:last-child {
   border-top-right-radius: 3px;
 }
 
@@ -4452,7 +4442,7 @@ popover.emoji-completion .emoji:hover {
   border-radius: 0 0 4px 4px;
 }
 
-.nautilus-window.background.csd:not(.unified) notebook scrolledwindow > .view:not(:selected):not(:hover):not(:checked), .nautilus-window.background.csd:not(.unified) notebook window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow > treeview.view:not(:selected):not(:hover):not(:checked):not(.progressbar):not(.trough), .nautilus-window.background.csd:not(.unified) notebook filechooser stack.view scrolledwindow > treeview.view:not(:selected):not(:hover):not(:checked), filechooser stack.view .nautilus-window.background.csd:not(.unified) notebook scrolledwindow > treeview.view:not(:selected):not(:hover):not(:checked) {
+.nautilus-window.background.csd:not(.unified) notebook scrolledwindow > .view:not(:selected):not(:hover):not(:checked), .nautilus-window.background.csd:not(.unified) notebook filechooser stack.view scrolledwindow > treeview.view:not(:selected):not(:hover):not(:checked), filechooser stack.view .nautilus-window.background.csd:not(.unified) notebook scrolledwindow > treeview.view:not(:selected):not(:hover):not(:checked) {
   background-color: transparent;
 }
 
@@ -4609,7 +4599,7 @@ popover.emoji-completion .emoji:hover {
   background-color: transparent;
 }
 
-.nautilus-window notebook :not(treeview).view, .nautilus-window notebook window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(treeview):not(.progressbar):not(.trough), window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow .nautilus-window notebook treeview.view:not(treeview):not(.progressbar):not(.trough), .nautilus-window notebook filechooser stack.view scrolledwindow treeview.view:not(treeview), filechooser stack.view scrolledwindow .nautilus-window notebook treeview.view:not(treeview) {
+.nautilus-window notebook :not(treeview).view, .nautilus-window notebook filechooser stack.view scrolledwindow treeview.view:not(treeview), filechooser stack.view scrolledwindow .nautilus-window notebook treeview.view:not(treeview) {
   border-radius: 3px;
 }
 
@@ -4678,7 +4668,7 @@ window.org-gnome-gedit > overlay > box.vertical > paned.gedit-side-panel-paned >
   border-bottom-left-radius: 3px;
 }
 
-window.org-gnome-gedit > overlay > box.vertical > paned.gedit-side-panel-paned > box.vertical > stack > grid.horizontal > scrolledwindow treeview.view:not(:hover):not(:selected), window.org-gnome-gedit > overlay > box.vertical > paned.gedit-side-panel-paned > box.vertical > stack > grid.horizontal > scrolledwindow window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(:hover):not(:selected):not(.progressbar):not(.trough), window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow window.org-gnome-gedit > overlay > box.vertical > paned.gedit-side-panel-paned > box.vertical > stack > grid.horizontal > scrolledwindow treeview.view:not(:hover):not(:selected):not(.progressbar):not(.trough), filechooser stack.view window.org-gnome-gedit > overlay > box.vertical > paned.gedit-side-panel-paned > box.vertical > stack > grid.horizontal > scrolledwindow treeview.view:not(:hover):not(:selected) {
+window.org-gnome-gedit > overlay > box.vertical > paned.gedit-side-panel-paned > box.vertical > stack > grid.horizontal > scrolledwindow treeview.view:not(:hover):not(:selected), filechooser stack.view window.org-gnome-gedit > overlay > box.vertical > paned.gedit-side-panel-paned > box.vertical > stack > grid.horizontal > scrolledwindow treeview.view:not(:hover):not(:selected) {
   background: none;
 }
 
@@ -4974,7 +4964,7 @@ window#gnome-system-monitor.background.csd > box.vertical > stack {
   border-radius: 0 0 3px 3px;
 }
 
-window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(.progressbar):not(.trough) {
+window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(.progressbar):not(.trough):not(:hover):not(:selected) {
   background: none;
 }
 
@@ -5161,7 +5151,7 @@ stack.view.polari-entry-area {
   border-bottom-right-radius: 3px;
 }
 
-stack:disabled.view.polari-entry-area, filechooser stack.view scrolledwindow treeview.view:disabled.polari-entry-area, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:disabled.polari-entry-area:not(.progressbar):not(.trough) {
+stack:disabled.view.polari-entry-area, filechooser stack.view scrolledwindow treeview.view:disabled.polari-entry-area {
   background-image: image(#F2F2F2);
 }
 
@@ -5558,19 +5548,19 @@ overlay grid.horizontal > revealer > scrolledwindow.frame:dir(rtl) {
   border-color: rgba(0, 0, 0, 0.12);
 }
 
-.side-panel .view, .side-panel filechooser stack.view scrolledwindow treeview.view, filechooser stack.view scrolledwindow .side-panel treeview.view, .side-panel window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(.progressbar):not(.trough), window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow .side-panel treeview.view:not(.progressbar):not(.trough) {
+.side-panel .view, .side-panel filechooser stack.view scrolledwindow treeview.view, filechooser stack.view scrolledwindow .side-panel treeview.view {
   background-image: image(#FAFAFA);
 }
 
-.side-panel .view:hover, .side-panel filechooser stack.view scrolledwindow treeview.view:hover, filechooser stack.view scrolledwindow .side-panel treeview.view:hover, .side-panel window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:hover:not(.progressbar):not(.trough), window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow .side-panel treeview.view:hover:not(.progressbar):not(.trough) {
+.side-panel .view:hover, .side-panel filechooser stack.view scrolledwindow treeview.view:hover, filechooser stack.view scrolledwindow .side-panel treeview.view:hover {
   background-image: image(rgba(234, 234, 234, 0.9896));
 }
 
-.side-panel .view:selected, .side-panel filechooser stack.view scrolledwindow treeview.view:selected, filechooser stack.view scrolledwindow .side-panel treeview.view:selected, .side-panel window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:selected:not(.progressbar):not(.trough), window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow .side-panel treeview.view:selected:not(.progressbar):not(.trough) {
+.side-panel .view:selected, .side-panel filechooser stack.view scrolledwindow treeview.view:selected, filechooser stack.view scrolledwindow .side-panel treeview.view:selected {
   background-image: image(#1A73E8);
 }
 
-.side-panel .view:selected:hover, .side-panel filechooser stack.view scrolledwindow treeview.view:selected:hover, filechooser stack.view scrolledwindow .side-panel treeview.view:selected:hover, .side-panel window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:selected:hover:not(.progressbar):not(.trough), window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow .side-panel treeview.view:selected:hover:not(.progressbar):not(.trough) {
+.side-panel .view:selected:hover, .side-panel filechooser stack.view scrolledwindow treeview.view:selected:hover, filechooser stack.view scrolledwindow .side-panel treeview.view:selected:hover {
   background-image: image(#2c7eea);
 }
 
@@ -5637,7 +5627,7 @@ window.background.csd evview.view.content-view {
   background-color: #FFFFFF;
 }
 
-.background.csd > grid.horizontal > paned.horizontal > scrolledwindow treeview.view:not(:hover):not(:selected), filechooser stack.view .background.csd > grid.horizontal > paned.horizontal > scrolledwindow treeview.view:not(:hover):not(:selected), .background.csd > grid.horizontal > paned.horizontal > scrolledwindow window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(:hover):not(:selected):not(.progressbar):not(.trough), window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow .background.csd > grid.horizontal > paned.horizontal > scrolledwindow treeview.view:not(:hover):not(:selected):not(.progressbar):not(.trough) {
+.background.csd > grid.horizontal > paned.horizontal > scrolledwindow treeview.view:not(:hover):not(:selected), filechooser stack.view .background.csd > grid.horizontal > paned.horizontal > scrolledwindow treeview.view:not(:hover):not(:selected) {
   background-color: transparent;
 }
 
@@ -5646,7 +5636,7 @@ window.background.csd evview.view.content-view {
   background-color: #F2F2F2;
 }
 
-.background.csd > grid.horizontal > paned.horizontal > box.vertical > scrolledwindow treeview.view:not(:hover):not(:selected), filechooser stack.view .background.csd > grid.horizontal > paned.horizontal > box.vertical > scrolledwindow treeview.view:not(:hover):not(:selected), .background.csd > grid.horizontal > paned.horizontal > box.vertical > scrolledwindow window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(:hover):not(:selected):not(.progressbar):not(.trough), window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow .background.csd > grid.horizontal > paned.horizontal > box.vertical > scrolledwindow treeview.view:not(:hover):not(:selected):not(.progressbar):not(.trough) {
+.background.csd > grid.horizontal > paned.horizontal > box.vertical > scrolledwindow treeview.view:not(:hover):not(:selected), filechooser stack.view .background.csd > grid.horizontal > paned.horizontal > box.vertical > scrolledwindow treeview.view:not(:hover):not(:selected) {
   background-color: transparent;
 }
 
@@ -5660,7 +5650,7 @@ button.feature-tile {
 /**************
  * Gnome Disk *
  **************/
-window.background.csd > box.vertical > paned.horizontal > scrolledwindow treeview.view:not(:selected):not(:hover), filechooser stack.view window.background.csd > box.vertical > paned.horizontal > scrolledwindow treeview.view:not(:selected):not(:hover), window.background.csd > box.vertical > paned.horizontal > scrolledwindow window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(:selected):not(:hover):not(.progressbar):not(.trough), window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow window.background.csd > box.vertical > paned.horizontal > scrolledwindow treeview.view:not(:selected):not(:hover):not(.progressbar):not(.trough) {
+window.background.csd > box.vertical > paned.horizontal > scrolledwindow treeview.view:not(:selected):not(:hover), filechooser stack.view window.background.csd > box.vertical > paned.horizontal > scrolledwindow treeview.view:not(:selected):not(:hover) {
   background-color: transparent;
 }
 
@@ -5881,7 +5871,7 @@ window#GearyMainWindow.background.csd stack#conversation_viewer .geary-composer-
   background-color: rgba(0, 0, 0, 0.12);
 }
 
-.geary-main-window > deck > overlay > .geary-main-layout .geary-folder-frame treeview.sidebar.view:not(:hover):not(:selected), .geary-main-window > deck > overlay > .geary-main-layout .geary-folder-frame filechooser stack.view scrolledwindow treeview.sidebar.view:not(:hover):not(:selected), filechooser stack.view scrolledwindow .geary-main-window > deck > overlay > .geary-main-layout .geary-folder-frame treeview.sidebar.view:not(:hover):not(:selected), .geary-main-window > deck > overlay > .geary-main-layout .geary-folder-frame window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.sidebar.view:not(:hover):not(:selected):not(.progressbar):not(.trough), window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow .geary-main-window > deck > overlay > .geary-main-layout .geary-folder-frame treeview.sidebar.view:not(:hover):not(:selected):not(.progressbar):not(.trough) {
+.geary-main-window > deck > overlay > .geary-main-layout .geary-folder-frame treeview.sidebar.view:not(:hover):not(:selected), .geary-main-window > deck > overlay > .geary-main-layout .geary-folder-frame filechooser stack.view scrolledwindow treeview.sidebar.view:not(:hover):not(:selected), filechooser stack.view scrolledwindow .geary-main-window > deck > overlay > .geary-main-layout .geary-folder-frame treeview.sidebar.view:not(:hover):not(:selected) {
   background-color: transparent;
   background-image: none;
 }
@@ -5989,11 +5979,11 @@ dialog.background.csd stack scrolledwindow.frame textview.view > text {
   background: none;
 }
 
-dialog.background.csd stack scrolledwindow.frame treeview.view:not(:hover):not(:selected), dialog.background.csd filechooser stack.view scrolledwindow.frame treeview.view:not(:hover):not(:selected), filechooser dialog.background.csd stack.view scrolledwindow.frame treeview.view:not(:hover):not(:selected), dialog.background.csd window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow scrolledwindow.frame treeview.view:not(:hover):not(:selected):not(.progressbar):not(.trough), dialog.background.csd filechooser stack.view scrolledwindow.frame window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(:hover):not(:selected):not(.progressbar):not(.trough), filechooser dialog.background.csd stack.view scrolledwindow.frame window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(:hover):not(:selected):not(.progressbar):not(.trough) {
+dialog.background.csd stack scrolledwindow.frame treeview.view:not(:hover):not(:selected), dialog.background.csd filechooser stack.view scrolledwindow.frame treeview.view:not(:hover):not(:selected), filechooser dialog.background.csd stack.view scrolledwindow.frame treeview.view:not(:hover):not(:selected) {
   background: none;
 }
 
-dialog.background.csd stack scrolledwindow viewport.frame.view, dialog.background.csd filechooser stack.view scrolledwindow treeview.frame.view, filechooser dialog.background.csd stack.view scrolledwindow treeview.frame.view, dialog.background.csd window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow scrolledwindow treeview.frame.view:not(.progressbar):not(.trough), dialog.background.csd filechooser stack.view window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.frame.view:not(.progressbar):not(.trough), filechooser dialog.background.csd stack.view window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.frame.view:not(.progressbar):not(.trough) {
+dialog.background.csd stack scrolledwindow viewport.frame.view, dialog.background.csd filechooser stack.view scrolledwindow treeview.frame.view, filechooser dialog.background.csd stack.view scrolledwindow treeview.frame.view {
   border-radius: 2px;
 }
 
@@ -6147,7 +6137,7 @@ window.background.chromium textview.view {
   background-color: transparent;
 }
 
-window.background.chromium treeview.view button, window.background.chromium filechooser stack.view scrolledwindow treeview.view button, filechooser stack.view scrolledwindow window.background.chromium treeview.view button, window.background.chromium window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(.progressbar):not(.trough) button, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow window.background.chromium treeview.view:not(.progressbar):not(.trough) button {
+window.background.chromium treeview.view button, window.background.chromium filechooser stack.view scrolledwindow treeview.view button, filechooser stack.view scrolledwindow window.background.chromium treeview.view button {
   border: 1px solid rgba(0, 0, 0, 0.26);
 }
 
@@ -6834,12 +6824,10 @@ na-tray-applet {
   border-radius: 2px;
 }
 
-.caja-desktop.view .entry, filechooser stack.view scrolledwindow treeview.caja-desktop.view .entry, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.caja-desktop.view:not(.progressbar):not(.trough) .entry,
+.caja-desktop.view .entry, filechooser stack.view scrolledwindow treeview.caja-desktop.view .entry,
 .caja-navigation-window .view .entry,
 .caja-navigation-window filechooser stack.view scrolledwindow treeview.view .entry,
-filechooser stack.view scrolledwindow .caja-navigation-window treeview.view .entry,
-.caja-navigation-window window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(.progressbar):not(.trough) .entry,
-window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow .caja-navigation-window treeview.view:not(.progressbar):not(.trough) .entry {
+filechooser stack.view scrolledwindow .caja-navigation-window treeview.view .entry {
   border: none;
   border-radius: 2px;
   background-color: rgba(0, 0, 0, 0.04);
@@ -6847,23 +6835,21 @@ window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical
   color: rgba(0, 0, 0, 0.87);
 }
 
-.caja-desktop.view .entry:selected, filechooser stack.view scrolledwindow treeview.caja-desktop.view .entry:selected, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.caja-desktop.view:not(.progressbar):not(.trough) .entry:selected,
+.caja-desktop.view .entry:selected, filechooser stack.view scrolledwindow treeview.caja-desktop.view .entry:selected,
 .caja-navigation-window .view .entry:selected,
 .caja-navigation-window filechooser stack.view scrolledwindow treeview.view .entry:selected,
-filechooser stack.view scrolledwindow .caja-navigation-window treeview.view .entry:selected,
-.caja-navigation-window window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(.progressbar):not(.trough) .entry:selected,
-window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow .caja-navigation-window treeview.view:not(.progressbar):not(.trough) .entry:selected {
+filechooser stack.view scrolledwindow .caja-navigation-window treeview.view .entry:selected {
   background-color: alpha(currentColor, 0.06);
 }
 
-.caja-desktop.view .entry, filechooser stack.view scrolledwindow treeview.caja-desktop.view .entry, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.caja-desktop.view:not(.progressbar):not(.trough) .entry {
+.caja-desktop.view .entry, filechooser stack.view scrolledwindow treeview.caja-desktop.view .entry {
   background-color: rgba(0, 0, 0, 0.3);
   color: white;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.14), 0 1px 3px rgba(0, 0, 0, 0.12);
   caret-color: currentColor;
 }
 
-.caja-desktop.view .entry:selected, filechooser stack.view scrolledwindow treeview.caja-desktop.view .entry:selected, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.caja-desktop.view:not(.progressbar):not(.trough) .entry:selected {
+.caja-desktop.view .entry:selected, filechooser stack.view scrolledwindow treeview.caja-desktop.view .entry:selected {
   background-color: alpha(currentColor, 0.06);
 }
 
@@ -7065,17 +7051,17 @@ MsdOsdWindow.background.osd .progressbar {
   background-color: transparent;
 }
 
-.budgie-popover treeview.view.sidebar, .budgie-popover filechooser stack.view scrolledwindow treeview.sidebar.view, filechooser stack.view scrolledwindow .budgie-popover treeview.sidebar.view, .budgie-popover window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.sidebar.view:not(.progressbar):not(.trough), window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow .budgie-popover treeview.sidebar.view:not(.progressbar):not(.trough) {
+.budgie-popover treeview.view.sidebar, .budgie-popover filechooser stack.view scrolledwindow treeview.sidebar.view, filechooser stack.view scrolledwindow .budgie-popover treeview.sidebar.view {
   background: none;
   border-right: none;
   color: rgba(0, 0, 0, 0.87);
 }
 
-.budgie-popover treeview.view.sidebar label, .budgie-popover filechooser stack.view scrolledwindow treeview.sidebar.view label, filechooser stack.view scrolledwindow .budgie-popover treeview.sidebar.view label, .budgie-popover window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.sidebar.view:not(.progressbar):not(.trough) label, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow .budgie-popover treeview.sidebar.view:not(.progressbar):not(.trough) label {
+.budgie-popover treeview.view.sidebar label, .budgie-popover filechooser stack.view scrolledwindow treeview.sidebar.view label, filechooser stack.view scrolledwindow .budgie-popover treeview.sidebar.view label {
   padding: 2px 6px;
 }
 
-.budgie-popover treeview.view.sidebar:hover, .budgie-popover filechooser stack.view scrolledwindow treeview.sidebar.view:hover, filechooser stack.view scrolledwindow .budgie-popover treeview.sidebar.view:hover, .budgie-popover window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.sidebar.view:hover:not(.progressbar):not(.trough), window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow .budgie-popover treeview.sidebar.view:hover:not(.progressbar):not(.trough) {
+.budgie-popover treeview.view.sidebar:hover, .budgie-popover filechooser stack.view scrolledwindow treeview.sidebar.view:hover, filechooser stack.view scrolledwindow .budgie-popover treeview.sidebar.view:hover {
   background-color: rgba(0, 0, 0, 0.12);
 }
 
@@ -7789,17 +7775,17 @@ XfdesktopIconView.view .rubberband {
   padding: 2px;
 }
 
-.thunar paned > scrolledwindow treeview.view, .thunar filechooser stack.view paned > scrolledwindow treeview.view, filechooser stack.view .thunar paned > scrolledwindow treeview.view, .thunar paned > scrolledwindow window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(.progressbar):not(.trough), window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow .thunar paned > scrolledwindow treeview.view:not(.progressbar):not(.trough) {
+.thunar paned > scrolledwindow treeview.view, .thunar filechooser stack.view paned > scrolledwindow treeview.view, filechooser stack.view .thunar paned > scrolledwindow treeview.view {
   border-radius: 2px;
   min-height: 24px;
 }
 
-.thunar paned > scrolledwindow treeview.view:not(:hover):not(:selected), .thunar filechooser stack.view paned > scrolledwindow treeview.view:not(:hover):not(:selected), filechooser stack.view .thunar paned > scrolledwindow treeview.view:not(:hover):not(:selected), .thunar paned > scrolledwindow window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(:hover):not(:selected):not(.progressbar):not(.trough), window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow .thunar paned > scrolledwindow treeview.view:not(:hover):not(:selected):not(.progressbar):not(.trough) {
+.thunar paned > scrolledwindow treeview.view:not(:hover):not(:selected), .thunar filechooser stack.view paned > scrolledwindow treeview.view:not(:hover):not(:selected), filechooser stack.view .thunar paned > scrolledwindow treeview.view:not(:hover):not(:selected) {
   background-color: transparent;
   background-image: none;
 }
 
-.thunar paned > scrolledwindow treeview.view:selected, .thunar filechooser stack.view paned > scrolledwindow treeview.view:selected, filechooser stack.view .thunar paned > scrolledwindow treeview.view:selected, .thunar paned > scrolledwindow window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:selected:not(.progressbar):not(.trough), window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow .thunar paned > scrolledwindow treeview.view:selected:not(.progressbar):not(.trough) {
+.thunar paned > scrolledwindow treeview.view:selected, .thunar filechooser stack.view paned > scrolledwindow treeview.view:selected, filechooser stack.view .thunar paned > scrolledwindow treeview.view:selected {
   border-left: 2px solid #1A73E8;
   transition: background-color 1200ms cubic-bezier(0, 0, 0.2, 1);
 }
@@ -7839,7 +7825,7 @@ XfdesktopIconView.view .rubberband {
   border-style: none;
 }
 
-.thunar .sidebar .view:not(:selected), .thunar .sidebar filechooser stack.view scrolledwindow treeview.view:not(:selected), filechooser stack.view scrolledwindow .thunar .sidebar treeview.view:not(:selected), .thunar .sidebar window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(:selected):not(.progressbar):not(.trough), window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow .thunar .sidebar treeview.view:not(:selected):not(.progressbar):not(.trough) {
+.thunar .sidebar .view:not(:selected), .thunar .sidebar filechooser stack.view scrolledwindow treeview.view:not(:selected), filechooser stack.view scrolledwindow .thunar .sidebar treeview.view:not(:selected) {
   background-color: transparent;
 }
 
@@ -7857,7 +7843,7 @@ window.background.csd.thunar > grid.horizontal > paned.horizontal > scrolledwind
   border-bottom-left-radius: 3px;
 }
 
-window.background.csd.thunar > grid.horizontal > paned.horizontal > scrolledwindow.frame.sidebar.shortcuts-pane treeview.view:not(:hover):not(:selected), filechooser stack.view window.background.csd.thunar > grid.horizontal > paned.horizontal > scrolledwindow.frame.sidebar.shortcuts-pane treeview.view:not(:hover):not(:selected), window.background.csd.thunar > grid.horizontal > paned.horizontal > scrolledwindow.frame.sidebar.shortcuts-pane window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(:hover):not(:selected):not(.progressbar):not(.trough), window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow window.background.csd.thunar > grid.horizontal > paned.horizontal > scrolledwindow.frame.sidebar.shortcuts-pane treeview.view:not(:hover):not(:selected):not(.progressbar):not(.trough) {
+window.background.csd.thunar > grid.horizontal > paned.horizontal > scrolledwindow.frame.sidebar.shortcuts-pane treeview.view:not(:hover):not(:selected), filechooser stack.view window.background.csd.thunar > grid.horizontal > paned.horizontal > scrolledwindow.frame.sidebar.shortcuts-pane treeview.view:not(:hover):not(:selected) {
   background-color: transparent;
 }
 
@@ -8002,11 +7988,11 @@ window.background.csd.thunar > grid.horizontal > paned.horizontal > scrolledwind
   border-style: none;
 }
 
-.nemo-window scrolledwindow.frame .view:not(:selected), .nemo-window filechooser stack.view scrolledwindow.frame treeview.view:not(:selected), filechooser stack.view .nemo-window scrolledwindow.frame treeview.view:not(:selected), .nemo-window scrolledwindow.frame window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(:selected):not(.progressbar):not(.trough), window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow .nemo-window scrolledwindow.frame treeview.view:not(:selected):not(.progressbar):not(.trough) {
+.nemo-window scrolledwindow.frame .view:not(:selected), .nemo-window filechooser stack.view scrolledwindow.frame treeview.view:not(:selected), filechooser stack.view .nemo-window scrolledwindow.frame treeview.view:not(:selected) {
   background-color: transparent;
 }
 
-.nemo-window .nemo-inactive-pane .view:not(:selected), .nemo-window .nemo-inactive-pane filechooser stack.view scrolledwindow treeview.view:not(:selected), filechooser stack.view scrolledwindow .nemo-window .nemo-inactive-pane treeview.view:not(:selected), .nemo-window .nemo-inactive-pane window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(:selected):not(.progressbar):not(.trough), window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow .nemo-window .nemo-inactive-pane treeview.view:not(:selected):not(.progressbar):not(.trough) {
+.nemo-window .nemo-inactive-pane .view:not(:selected), .nemo-window .nemo-inactive-pane filechooser stack.view scrolledwindow treeview.view:not(:selected), filechooser stack.view scrolledwindow .nemo-window .nemo-inactive-pane treeview.view:not(:selected) {
   background-color: #FAFAFA;
 }
 
