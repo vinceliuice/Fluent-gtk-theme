@@ -349,21 +349,6 @@ $slider_color: if($variant == 'light', $accent_color, $accent_color);
   width: 30em;
   border: none;
 
-  .modal-dialog-linked-button:last-child {
-    color: white;
-    background-color: $destructive_color;
-
-    &:hover {
-      color: white;
-      background-color: lighten($destructive_color, 9%);
-    }
-
-    &:active {
-      color: white;
-      background-color: darken($destructive_color, 5%);
-    }
-  }
-
   .end-session-dialog-battery-warning,
   .dialog-list-title {
     color: $warning_color;
@@ -475,7 +460,6 @@ $slider_color: if($variant == 'light', $accent_color, $accent_color);
 .prompt-dialog {
   //this is the width of the entire modal popup
   width: 28em;
-  border: none;
 
   .modal-dialog-content-box {
     margin-bottom: 24px;

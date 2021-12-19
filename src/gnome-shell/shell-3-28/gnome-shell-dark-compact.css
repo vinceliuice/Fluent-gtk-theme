@@ -420,21 +420,6 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   border: none;
 }
 
-.end-session-dialog .modal-dialog-linked-button:last-child {
-  color: white;
-  background-color: #FF5252;
-}
-
-.end-session-dialog .modal-dialog-linked-button:last-child:hover {
-  color: white;
-  background-color: #ff8080;
-}
-
-.end-session-dialog .modal-dialog-linked-button:last-child:active {
-  color: white;
-  background-color: #ff3939;
-}
-
 .end-session-dialog .end-session-dialog-battery-warning,
 .end-session-dialog .dialog-list-title {
   color: #FF6D00;
@@ -567,7 +552,6 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 /* Password or Authentication Dialog */
 .prompt-dialog {
   width: 28em;
-  border: none;
 }
 
 .prompt-dialog .modal-dialog-content-box {
@@ -3715,6 +3699,10 @@ StWidget.focused .app-well-app-running-dot {
 
 #dashtodockContainer.right.extended #dash, #dashtodockContainer.right.extended:overview #dash {
   border-radius: 0;
+}
+
+#dashtodockContainer.dashtodock #dash {
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 #dashtodockContainer #dash {
