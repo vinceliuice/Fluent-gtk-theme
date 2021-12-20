@@ -4172,7 +4172,8 @@ decoration:backdrop {
 }
 
 .ssd decoration {
-  box-shadow: none;
+  border-radius: 3px 3px 0 0;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.12);
 }
 
 .csd.popup decoration {
