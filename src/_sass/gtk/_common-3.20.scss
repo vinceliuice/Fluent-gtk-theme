@@ -3161,26 +3161,26 @@ scrolledwindow {
 
   // This is used when content is touch-dragged past boundaries.
   // draws a box on top of the content, the size changes programmatically.
-//  @at-root overshoot {
-//    &.top { @include overshoot(top); }
+  @at-root overshoot {
+    &.top { @include overshoot(top); }
 
-//    &.bottom { @include overshoot(bottom); }
+    &.bottom { @include overshoot(bottom); }
 
-//    &.left { @include overshoot(left); }
+    &.left { @include overshoot(left); }
 
-//    &.right { @include overshoot(right); }
-//  }
+    &.right { @include overshoot(right); }
+  }
 
   // Overflow indication, works similarly to the overshoot, the size if fixed tho.
-//  @at-root undershoot {
-//    &.top { @include undershoot(top); }
-
-//    &.bottom { @include undershoot(bottom); }
-
-//    &.left { @include undershoot(left); }
-
-//    &.right { @include undershoot(right); }
-//  }
+  // @at-root undershoot {
+  //   &.top { @include undershoot(top); }
+  //
+  //   &.bottom { @include undershoot(bottom); }
+  //
+  //   &.left { @include undershoot(left); }
+  //
+  //   &.right { @include undershoot(right); }
+  // }
 
   @at-root junction { // the small square between two scrollbars
     border-style: solid none none solid;
@@ -4115,34 +4115,21 @@ stackswitcher {
 viewswitcher {
   button:not(.suggested-action):not(.destructive-action) {
     @extend %linked;
-    background-clip: padding-box;
 
     &:hover:not(:active):not(:checked) {
       background-color: $fill;
-      background-clip: padding-box;
-      box-shadow: inset 1px 0 $track, inset -1px 0 $track;
-
-      &:first-child {
-        box-shadow: inset -1px 0 $track;
-      }
-
-      &:last-child {
-        box-shadow: inset 1px 0 $track;
-      }
+      box-shadow: none;
+      border-color: $border;
+      border-bottom-color: $border-bottom;
+      background-clip: border-box;
     }
 
     &:active {
       background-color: $divider;
-      background-clip: padding-box;
-      box-shadow: inset 1px 0 $track, inset -1px 0 $track;
-
-      &:first-child {
-        box-shadow: inset -1px 0 $track;
-      }
-
-      &:last-child {
-        box-shadow: inset 1px 0 $track;
-      }
+      box-shadow: none;
+      border-color: $border;
+      border-bottom-color: $border-bottom;
+      background-clip: border-box;
     }
 
     > stack > box {

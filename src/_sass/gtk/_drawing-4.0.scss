@@ -194,19 +194,14 @@
 }
 
 
-@mixin overshoot($p, $t:normal, $c:$text) {
+@mixin overshoot($p) {
 //
 // overshoot
 //
 // $p: position
-// $t: type
-// $c: base color
 //
 // possible $p values:
 // top, bottom, right, left
-//
-// possible $t values:
-// normal, backdrop
 //
 
   $_small_gradient_length: 3%;
@@ -220,33 +215,16 @@
     $_big_gradient_size: $_big_gradient_length 100%;
   }
 
-  $_small_gradient_color: $c;
-  $_big_gradient_color: transparentize($c, 0.93);
-
-  @if $c==$text {
-    $_small_gradient_color: $divider;
-    $_big_gradient_color: $primary;
-
-    @if $t==backdrop { $_small_gradient_color: $fill; }
-  }
-
   $_small_gradient: radial-gradient(farthest-side at $p,
-                                    $_small_gradient_color 85%,
-                                    transparentize($_small_gradient_color, 1));
+                                    gtkalpha(currentColor, 0.12) 85%,
+                                    gtkalpha(currentColor, 0));
 
   $_big_gradient: radial-gradient(farthest-side at $p,
-                                  $_big_gradient_color,
-                                  transparentize($_big_gradient_color, 1));
+                                  gtkalpha(currentColor, 0.05),
+                                  gtkalpha(currentColor, 0));
 
-  @if $t==normal {
-    background-image: $_small_gradient, $_big_gradient;
-    background-size: $_small_gradient_size, $_big_gradient_size;
-  }
-
-  @else if $t==backdrop {
-    background-image: $_small_gradient;
-    background-size: $_small_gradient_size;
-  }
+  background-image: $_small_gradient, $_big_gradient;
+  background-size: $_small_gradient_size, $_big_gradient_size;
 
   background-repeat: no-repeat;
   background-position: $p;

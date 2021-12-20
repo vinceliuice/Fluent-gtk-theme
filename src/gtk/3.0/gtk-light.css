@@ -162,18 +162,6 @@ XfdesktopIconView.view .content-view filechooser stack.view scrolledwindow treev
 filechooser stack.view scrolledwindow .content-view treeview.view rubberband,
 filechooser stack.view scrolledwindow .content-view treeview.view XfdesktopIconView.view .rubberband,
 XfdesktopIconView.view filechooser stack.view scrolledwindow .content-view treeview.view .rubberband,
-.content-view filechooser stack.view scrolledwindow treeview.view rubberband,
-.content-view filechooser stack.view scrolledwindow treeview.view XfdesktopIconView.view .rubberband,
-XfdesktopIconView.view .content-view filechooser stack.view scrolledwindow treeview.view .rubberband,
-filechooser stack.view scrolledwindow treeview.view .content-view rubberband,
-filechooser stack.view scrolledwindow treeview.view .content-view XfdesktopIconView.view .rubberband,
-XfdesktopIconView.view filechooser stack.view scrolledwindow treeview.view .content-view .rubberband,
-.content-view filechooser stack.view scrolledwindow treeview.view rubberband,
-.content-view filechooser stack.view scrolledwindow treeview.view XfdesktopIconView.view .rubberband,
-XfdesktopIconView.view .content-view filechooser stack.view scrolledwindow treeview.view .rubberband,
-filechooser stack.view scrolledwindow treeview.view .content-view rubberband,
-filechooser stack.view scrolledwindow treeview.view .content-view XfdesktopIconView.view .rubberband,
-XfdesktopIconView.view filechooser stack.view scrolledwindow treeview.view .content-view .rubberband,
 filechooser stack.view scrolledwindow treeview.view .content-view .rubberband,
 .content-view filechooser stack.view scrolledwindow treeview.view .rubberband,
 flowbox rubberband,
@@ -3477,6 +3465,46 @@ stack scrolledwindow.frame viewport.frame list {
   border: none;
 }
 
+overshoot.top {
+  background-image: -gtk-gradient(radial, center top, 0, center top, 0.5, to(rgba(0, 0, 0, 0.08)), to(rgba(0, 0, 0, 0))), -gtk-gradient(radial, center top, 0, center top, 0.6, from(rgba(0, 0, 0, 0.07)), to(rgba(0, 0, 0, 0)));
+  background-size: 100% 5%, 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+overshoot.bottom {
+  background-image: -gtk-gradient(radial, center bottom, 0, center bottom, 0.5, to(rgba(0, 0, 0, 0.08)), to(rgba(0, 0, 0, 0))), -gtk-gradient(radial, center bottom, 0, center bottom, 0.6, from(rgba(0, 0, 0, 0.07)), to(rgba(0, 0, 0, 0)));
+  background-size: 100% 5%, 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+overshoot.left {
+  background-image: -gtk-gradient(radial, left center, 0, left center, 0.5, to(rgba(0, 0, 0, 0.08)), to(rgba(0, 0, 0, 0))), -gtk-gradient(radial, left center, 0, left center, 0.6, from(rgba(0, 0, 0, 0.07)), to(rgba(0, 0, 0, 0)));
+  background-size: 5% 100%, 100% 100%;
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+overshoot.right {
+  background-image: -gtk-gradient(radial, right center, 0, right center, 0.5, to(rgba(0, 0, 0, 0.08)), to(rgba(0, 0, 0, 0))), -gtk-gradient(radial, right center, 0, right center, 0.6, from(rgba(0, 0, 0, 0.07)), to(rgba(0, 0, 0, 0)));
+  background-size: 5% 100%, 100% 100%;
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+
 junction {
   border-style: solid none none solid;
   border-width: 1px;
@@ -3702,7 +3730,7 @@ filechooser stack.view scrolledwindow list {
   background-color: transparent;
 }
 
-filechooser stack.view scrolledwindow treeview.view, filechooser stack.view scrolledwindow treeview.view {
+filechooser stack.view scrolledwindow treeview.view {
   background-color: transparent;
 }
 
@@ -4178,7 +4206,7 @@ XfdesktopIconView.view:active, calendar.raven-calendar:selected, .budgie-popover
   background-color: alpha(currentColor, 0.06);
 }
 
-.nemo-window .nemo-window-pane notebook .view:selected, .nemo-window .nemo-window-pane notebook filechooser stack.view scrolledwindow treeview.view:selected, filechooser stack.view scrolledwindow .nemo-window .nemo-window-pane notebook treeview.view:selected, .nautilus-window notebook :not(treeview).view selection, .nautilus-window notebook filechooser stack.view scrolledwindow treeview.view:not(treeview) selection, filechooser stack.view scrolledwindow .nautilus-window notebook treeview.view:not(treeview) selection, .nautilus-window notebook :not(treeview).view:selected, .nautilus-window notebook filechooser stack.view scrolledwindow treeview.view:not(treeview):selected, filechooser stack.view scrolledwindow .nautilus-window notebook treeview.view:not(treeview):selected, .nautilus-window flowboxchild:selected .icon-item-background, textview text selection, textview text selection:focus, flowbox flowboxchild:selected {
+.nemo-window .nemo-window-pane notebook .view:selected, .nemo-window .nemo-window-pane notebook filechooser stack.view scrolledwindow treeview.view:selected, filechooser stack.view scrolledwindow .nemo-window .nemo-window-pane notebook treeview.view:selected, .nautilus-window notebook .view:not(treeview) selection, .nautilus-window notebook filechooser stack.view scrolledwindow treeview.view:not(treeview) selection, filechooser stack.view scrolledwindow .nautilus-window notebook treeview.view:not(treeview) selection, .nautilus-window notebook .view:not(treeview):selected, .nautilus-window notebook filechooser stack.view scrolledwindow treeview.view:not(treeview):selected, filechooser stack.view scrolledwindow .nautilus-window notebook treeview.view:not(treeview):selected, .nautilus-window flowboxchild:selected .icon-item-background, textview text selection, textview text selection:focus, flowbox flowboxchild:selected {
   color: #1A73E8;
   background-color: rgba(26, 115, 232, 0.2);
 }
@@ -4281,36 +4309,20 @@ stackswitcher button.text-button.circular {
   padding: 0;
 }
 
-viewswitcher button:not(.suggested-action):not(.destructive-action) {
-  background-clip: padding-box;
-}
-
 viewswitcher button:not(.suggested-action):not(.destructive-action):hover:not(:active):not(:checked) {
   background-color: rgba(0, 0, 0, 0.04);
-  background-clip: padding-box;
-  box-shadow: inset 1px 0 rgba(0, 0, 0, 0.26), inset -1px 0 rgba(0, 0, 0, 0.26);
-}
-
-viewswitcher button:not(.suggested-action):not(.destructive-action):hover:not(:active):not(:checked):first-child {
-  box-shadow: inset -1px 0 rgba(0, 0, 0, 0.26);
-}
-
-viewswitcher button:not(.suggested-action):not(.destructive-action):hover:not(:active):not(:checked):last-child {
-  box-shadow: inset 1px 0 rgba(0, 0, 0, 0.26);
+  box-shadow: none;
+  border-color: rgba(0, 0, 0, 0.08);
+  border-bottom-color: rgba(0, 0, 0, 0.18);
+  background-clip: border-box;
 }
 
 viewswitcher button:not(.suggested-action):not(.destructive-action):active {
   background-color: rgba(0, 0, 0, 0.12);
-  background-clip: padding-box;
-  box-shadow: inset 1px 0 rgba(0, 0, 0, 0.26), inset -1px 0 rgba(0, 0, 0, 0.26);
-}
-
-viewswitcher button:not(.suggested-action):not(.destructive-action):active:first-child {
-  box-shadow: inset -1px 0 rgba(0, 0, 0, 0.26);
-}
-
-viewswitcher button:not(.suggested-action):not(.destructive-action):active:last-child {
-  box-shadow: inset 1px 0 rgba(0, 0, 0, 0.26);
+  box-shadow: none;
+  border-color: rgba(0, 0, 0, 0.08);
+  border-bottom-color: rgba(0, 0, 0, 0.18);
+  background-clip: border-box;
 }
 
 viewswitcher button:not(.suggested-action):not(.destructive-action) > stack > box {
@@ -7050,14 +7062,15 @@ MsdOsdWindow.background.osd .progressbar {
   background: none;
   border-right: none;
   color: rgba(0, 0, 0, 0.87);
-}
-
-.budgie-popover treeview.view.sidebar label, .budgie-popover filechooser stack.view scrolledwindow treeview.sidebar.view label, filechooser stack.view scrolledwindow .budgie-popover treeview.sidebar.view label {
-  padding: 3px 9px;
+  padding: 3px;
 }
 
 .budgie-popover treeview.view.sidebar:hover, .budgie-popover filechooser stack.view scrolledwindow treeview.sidebar.view:hover, filechooser stack.view scrolledwindow .budgie-popover treeview.sidebar.view:hover {
-  background-color: rgba(0, 0, 0, 0.12);
+  background-color: alpha(currentColor, 0.08);
+}
+
+.budgie-popover treeview.view.sidebar:selected, .budgie-popover filechooser stack.view scrolledwindow treeview.sidebar.view:selected, filechooser stack.view scrolledwindow .budgie-popover treeview.sidebar.view:selected {
+  background-color: alpha(currentColor, 0.16);
 }
 
 .budgie-popover scrolledwindow.sidebar.categories {

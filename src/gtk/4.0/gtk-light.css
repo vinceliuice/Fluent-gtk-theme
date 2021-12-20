@@ -72,10 +72,6 @@ filechooser stack.view scrolledwindow .content-view treeview.view > rubberband,
 filechooser stack.view scrolledwindow treeview.view > rubberband,
 filechooser stack.view scrolledwindow .content-view treeview.view > rubberband,
 .content-view filechooser stack.view scrolledwindow treeview.view > rubberband,
-filechooser stack.view scrolledwindow .content-view treeview.view > rubberband,
-.content-view filechooser stack.view scrolledwindow treeview.view > rubberband,
-.content-view filechooser stack.view scrolledwindow treeview.view > rubberband,
-filechooser stack.view scrolledwindow .content-view treeview.view > rubberband,
 filechooser stack.view scrolledwindow .content-view treeview.view > .rubberband,
 .content-view filechooser stack.view scrolledwindow treeview.view > .rubberband, gridview > rubberband, flowbox > rubberband {
   border: 1px solid #1A73E8;
@@ -3448,6 +3444,46 @@ stack scrolledwindow.frame viewport.frame list {
   border: none;
 }
 
+overshoot.top {
+  background-image: radial-gradient(farthest-side at top, alpha(currentColor, 0.12) 85%, alpha(currentColor, 0)), radial-gradient(farthest-side at top, alpha(currentColor, 0.05), alpha(currentColor, 0));
+  background-size: 100% 3%, 100% 50%;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+overshoot.bottom {
+  background-image: radial-gradient(farthest-side at bottom, alpha(currentColor, 0.12) 85%, alpha(currentColor, 0)), radial-gradient(farthest-side at bottom, alpha(currentColor, 0.05), alpha(currentColor, 0));
+  background-size: 100% 3%, 100% 50%;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+overshoot.left {
+  background-image: radial-gradient(farthest-side at left, alpha(currentColor, 0.12) 85%, alpha(currentColor, 0)), radial-gradient(farthest-side at left, alpha(currentColor, 0.05), alpha(currentColor, 0));
+  background-size: 3% 100%, 50% 100%;
+  background-repeat: no-repeat;
+  background-position: left;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+overshoot.right {
+  background-image: radial-gradient(farthest-side at right, alpha(currentColor, 0.12) 85%, alpha(currentColor, 0)), radial-gradient(farthest-side at right, alpha(currentColor, 0.05), alpha(currentColor, 0));
+  background-size: 3% 100%, 50% 100%;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+
 junction {
   border-style: solid none none solid;
   border-width: 1px;
@@ -3764,7 +3800,7 @@ filechooser stack.view scrolledwindow list {
   background-color: transparent;
 }
 
-filechooser stack.view scrolledwindow treeview.view, filechooser stack.view scrolledwindow treeview.view {
+filechooser stack.view scrolledwindow treeview.view {
   background-color: transparent;
 }
 
