@@ -75,6 +75,14 @@
       }
     }
 
+    &.unified notebook {
+      border-radius: 0;
+
+      > stack {
+        border-radius: 0;
+      }
+    }
+
     &:not(.unified) box + separator + overlay > notebook > stack { // reset for siebar mode
       border-radius: 0 0 $window-radius + 1px 0;
     }

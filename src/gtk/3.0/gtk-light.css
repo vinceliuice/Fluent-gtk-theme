@@ -4470,6 +4470,14 @@ popover.emoji-completion .emoji:hover {
   background-color: transparent;
 }
 
+.nautilus-window.background.csd.unified notebook {
+  border-radius: 0;
+}
+
+.nautilus-window.background.csd.unified notebook > stack {
+  border-radius: 0;
+}
+
 .nautilus-window.background.csd:not(.unified) box + separator + overlay > notebook > stack {
   border-radius: 0 0 4px 0;
 }

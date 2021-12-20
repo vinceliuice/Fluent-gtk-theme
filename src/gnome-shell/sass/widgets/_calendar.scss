@@ -35,8 +35,8 @@
 
   &:active { color: $fg_color; background-color: $track_color; }
 
-  &:ltr { margin-right: $container_padding + 2; border-left-width: 0; }
-  &:rtl { margin-left: $container_padding + 2; border-right-width: 0; }
+  &:ltr { margin-right: $container_padding * 2; border-left-width: 0; }
+  &:rtl { margin-left: $container_padding * 2; border-right-width: 0; }
 
   .datemenu-displays-section {
   }
