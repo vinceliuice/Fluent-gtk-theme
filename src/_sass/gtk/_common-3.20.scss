@@ -3975,7 +3975,7 @@ decoration {
   // server-side decorations as used by mutter
   .ssd & {
     border-radius: $window-radius $window-radius 0 0;
-    box-shadow: 0 0 0 1px $divider; // just doing borders, wm draws actual shadows
+    box-shadow: 0 0 0 1px if($variant == 'light', $border, rgba(white, 0.35)); // just doing borders, wm draws actual shadows
   }
 
   .csd.popup & {

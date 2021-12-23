@@ -2526,7 +2526,7 @@ StWidget.focused .app-well-app-running-dot {
 
 /* On-screen Keyboard */
 #keyboard {
-  background-color: rgba(0, 0, 0, 0.85);
+  background-color: rgba(238, 238, 238, 0.95);
   border: none;
   border-top-width: 0;
   box-shadow: none;
@@ -2555,7 +2555,7 @@ StWidget.focused .app-well-app-running-dot {
   border: none;
   color: inherit;
   background-color: #FAFAFA;
-  box-shadow: 0 1px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 -1px rgba(0, 0, 0, 0.25);
 }
 
 .keyboard-key:focus, .keyboard-key:hover {
@@ -2575,18 +2575,17 @@ StWidget.focused .app-well-app-running-dot {
 }
 
 .keyboard-key.default-key {
-  background-color: #E0E0E0;
-  box-shadow: 0 1px rgba(0, 0, 0, 0.2);
+  background-color: #c7c7c7;
 }
 
 .keyboard-key.default-key:focus, .keyboard-key.default-key:hover {
   color: rgba(0, 0, 0, 0.62);
-  background-color: #FAFAFA;
+  background-color: #b7b7b7;
 }
 
 .keyboard-key.default-key:checked, .keyboard-key.default-key:active {
   color: rgba(0, 0, 0, 0.62);
-  background-color: #ebebeb;
+  background-color: #adadad;
 }
 
 .keyboard-key.enter-key {
@@ -2621,7 +2620,6 @@ StWidget.focused .app-well-app-running-dot {
   -arrow-base: 20px;
   -arrow-rise: 10px;
   -boxpointer-gap: 5px;
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.35);
 }
 
 .emoji-page .keyboard-key {

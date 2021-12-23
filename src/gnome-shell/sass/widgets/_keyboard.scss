@@ -2,10 +2,11 @@
 
 $keyboard_hover_bg_color: if($variant == 'light', darken($keyboard_bg_color, 10%), lighten($keyboard_bg_color, 10%));
 $keyboard_active_bg_color: if($variant == 'light', darken($keyboard_bg_color, 20%), lighten($keyboard_bg_color, 20%));
+$key_shadow: if($variant == 'light', inset 0 -1px rgba($black, 0.25), inset 0 1px rgba(white, 0.1));
 
 // draw keys using button function
 #keyboard {
-  background-color: rgba(black, 0.85);
+  background-color: if($variant == 'light', rgba(#eeeeee, 0.95), rgba(#1a1a1a, 0.95));
   border: none;
   border-top-width: 0;
   box-shadow: none;
@@ -36,7 +37,7 @@ $keyboard_active_bg_color: if($variant == 'light', darken($keyboard_bg_color, 20
   border: none;
   color: inherit;
   background-color: $keyboard_bg_color;
-  box-shadow: 0 1px rgba($black, 0.2);
+  box-shadow: $key_shadow;
 
   &:focus, &:hover { color: $fg_color; background-color: $keyboard_hover_bg_color; }
   &:checked, &:active { color: $fg_color; background-color: $keyboard_active_bg_color; }
@@ -49,9 +50,15 @@ $keyboard_active_bg_color: if($variant == 'light', darken($keyboard_bg_color, 20
 
   &.default-key {
     background-color: $alt_keyboard_bg_color;
-    box-shadow: 0 1px rgba($black, 0.2);
-    &:focus, &:hover { color: $button_fg_color; background-color: $keyboard_bg_color; }
-    &:checked, &:active { color: $button_fg_color; background-color: darken($keyboard_bg_color, 6%); }
+
+    &:focus, &:hover {
+      color: $button_fg_color;
+      background-color: if($variant == 'light', darken($alt_keyboard_bg_color, 6%), lighten($alt_keyboard_bg_color, 10%));
+    }
+    &:checked, &:active {
+      color: $button_fg_color;
+      background-color: if($variant == 'light', darken($alt_keyboard_bg_color, 10%), lighten($alt_keyboard_bg_color, 15%));
+    }
   }
 
   &.enter-key {
@@ -77,7 +84,6 @@ $keyboard_active_bg_color: if($variant == 'light', darken($keyboard_bg_color, 20
   -arrow-base: 20px;
   -arrow-rise: 10px;
   -boxpointer-gap: 5px;
-  box-shadow: $shadow_2;
 }
 
 // emoji

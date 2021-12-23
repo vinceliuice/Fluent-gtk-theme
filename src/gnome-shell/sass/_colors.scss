@@ -70,8 +70,8 @@ $dark_bg_color:         rgba(#202020, 0.9);
 $alt_dark_bg_color:     rgba(#202020, 0.75);
 $inverse_bg_color: rgba($inverse_fg_color, 0.13);
 $button_bg_color:  if($variant == 'light', rgba(white, 1), rgba(white, 0.1));
-$keyboard_bg_color:  if($variant == 'light', $grey_50, fade($grey_700)); // for gnome-shell keyboard
-$alt_keyboard_bg_color:  if($variant == 'light', $grey_300, fade($grey_900)); // for gnome-shell keyboard
+$keyboard_bg_color:  if($variant == 'light', $grey-50, fade($grey-600)); // for gnome-shell keyboard
+$alt_keyboard_bg_color:  if($variant == 'light', darken($grey-300, 10%), fade($grey-800)); // for gnome-shell keyboard
 
 $popover_button_bg: if($variant == 'light', rgba(white, 0.35), rgba(white, 0.03));
 $popover_button_hover: if($variant == 'light', rgba(white, 0.85), rgba(white, 0.08));
