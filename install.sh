@@ -248,7 +248,7 @@ install() {
   fi
 
   mkdir -p                                                                      "$THEME_DIR/plank"
-  cp -r "$SRC_DIR/plank/dock.theme"                                             "$THEME_DIR/plank"
+  cp -r "$SRC_DIR/plank/theme${ELSE_LIGHT:-}/dock.theme"                        "$THEME_DIR/plank"
 }
 
 themes=()
