@@ -166,8 +166,8 @@ StWidget.focused {
   }
 
   & .icon-grid {
-    row-spacing: $container_padding * 2;
-    column-spacing: $container_padding * 5;
+    row-spacing: 12px;
+    column-spacing: 30px;
     page-padding-top: 0;
     page-padding-bottom: 0;
     page-padding-left: 0;
@@ -189,6 +189,7 @@ StWidget.focused {
 .rename-folder-popup {
   .rename-folder-popup-item {
     spacing: $container_padding;
+
     &:ltr, &:rtl { padding: 0 $container_padding * 2; }
   }
 }

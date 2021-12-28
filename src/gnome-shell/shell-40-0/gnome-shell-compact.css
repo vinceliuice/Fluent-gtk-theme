@@ -2091,7 +2091,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 #dash {
   font-size: 1em;
   margin-top: 12px;
-  padding: 0 6px;
+  padding: 0 10px;
 }
 
 #dash .placeholder {
@@ -2106,23 +2106,23 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 #dash .overview-icon {
-  padding: 3px;
+  padding: 5px;
 }
 
 .dash-background {
   background-color: rgba(255, 255, 255, 0.2);
-  margin-bottom: 8px;
-  padding: 6px;
-  border-radius: 9px;
+  margin-bottom: 18px;
+  padding: 10px;
+  border-radius: 13px;
 }
 
 .dash-item-container .app-well-app, .show-apps {
-  padding: 6px 2px 14px;
+  padding: 10px 3px 28px;
 }
 
 .dash-separator {
   width: 1px;
-  margin: 0 5px 8px;
+  margin: 0 8px 18px;
   background-color: rgba(255, 255, 255, 0.15);
 }
 
@@ -2307,8 +2307,8 @@ StWidget.focused .app-well-app-running-dot {
 }
 
 .app-folder-dialog .icon-grid {
-  row-spacing: 8px;
-  column-spacing: 20px;
+  row-spacing: 12px;
+  column-spacing: 30px;
   page-padding-top: 0;
   page-padding-bottom: 0;
   page-padding-left: 0;
@@ -3287,7 +3287,7 @@ StWidget.focused .app-well-app-running-dot {
 }
 
 #dashtodockContainer.left #dash .dash-item-container .app-well-app, #dashtodockContainer.right #dash .dash-item-container .app-well-app {
-  padding: 2px 4px !important;
+  padding: 3px 4px !important;
 }
 
 #dashtodockContainer.left #dash .show-apps, #dashtodockContainer.right #dash .show-apps {
@@ -3300,11 +3300,11 @@ StWidget.focused .app-well-app-running-dot {
 }
 
 #dashtodockContainer.left.extended #dash .dash-item-container .app-well-app, #dashtodockContainer.left.extended #dash .show-apps, #dashtodockContainer.left.straight-corner #dash .dash-item-container .app-well-app, #dashtodockContainer.left.straight-corner #dash .show-apps, #dashtodockContainer.right.extended #dash .dash-item-container .app-well-app, #dashtodockContainer.right.extended #dash .show-apps, #dashtodockContainer.right.straight-corner #dash .dash-item-container .app-well-app, #dashtodockContainer.right.straight-corner #dash .show-apps {
-  padding: 2px 6px !important;
+  padding: 3px 10px !important;
 }
 
 #dashtodockContainer.top #dash .dash-background, #dashtodockContainer.bottom #dash .dash-background {
-  padding: 6px 3px !important;
+  padding: 10px 5px !important;
 }
 
 #dashtodockContainer.top.shrink #dash .dash-background, #dashtodockContainer.bottom.shrink #dash .dash-background {
@@ -3313,15 +3313,15 @@ StWidget.focused .app-well-app-running-dot {
 
 #dashtodockContainer.top.shrink #dash .dash-item-container .app-well-app, #dashtodockContainer.top.shrink #dash .show-apps, #dashtodockContainer.bottom.shrink #dash .dash-item-container .app-well-app, #dashtodockContainer.bottom.shrink #dash .show-apps {
   margin: 0 !important;
-  padding: 0 0 8px !important;
+  padding: 0 0 18px !important;
 }
 
 #dashtodockContainer.top.extended #dash .dash-separator, #dashtodockContainer.top.straight-corner #dash .dash-separator, #dashtodockContainer.bottom.extended #dash .dash-separator, #dashtodockContainer.bottom.straight-corner #dash .dash-separator {
-  margin: 0 5px !important;
+  margin: 0 8px !important;
 }
 
 #dashtodockContainer.top.extended #dash .dash-item-container .app-well-app, #dashtodockContainer.top.extended #dash .show-apps, #dashtodockContainer.top.straight-corner #dash .dash-item-container .app-well-app, #dashtodockContainer.top.straight-corner #dash .show-apps, #dashtodockContainer.bottom.extended #dash .dash-item-container .app-well-app, #dashtodockContainer.bottom.extended #dash .show-apps, #dashtodockContainer.bottom.straight-corner #dash .dash-item-container .app-well-app, #dashtodockContainer.bottom.straight-corner #dash .show-apps {
-  padding: 6px 2px !important;
+  padding: 10px 3px !important;
 }
 
 #dashtodockContainer #dash {
