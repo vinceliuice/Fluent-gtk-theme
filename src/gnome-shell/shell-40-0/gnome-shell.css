@@ -533,7 +533,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .datemenu-calendar-column {
   spacing: 6px;
   border: 0 solid rgba(0, 0, 0, 0.12);
-  padding: 0 6px;
+  padding: 0 12px;
   color: rgba(0, 0, 0, 0.54);
 }
 
@@ -548,12 +548,12 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .datemenu-calendar-column:ltr {
-  margin-right: 12px;
+  margin-right: 0;
   border-left-width: 0;
 }
 
 .datemenu-calendar-column:rtl {
-  margin-left: 12px;
+  margin-left: 0;
   border-right-width: 0;
 }
 
