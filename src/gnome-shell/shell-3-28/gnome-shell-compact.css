@@ -374,6 +374,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   color: rgba(0, 0, 0, 0.87);
   background-color: transparent;
   border: none;
+  box-shadow: none;
   padding: 4px 6px 8px !important;
   margin: 0 !important;
   border-image: url("assets/menu.svg") 24 32 28 28;

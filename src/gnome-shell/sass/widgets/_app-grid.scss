@@ -219,8 +219,8 @@ StWidget.focused {
 // shutdown and other actions in the grid
 .system-action-icon {
   background-color: rgba(0,0,0,0.8);
-  color: #fff;
-  border-radius: 99px;
+  color: white;
+  border-radius: $circular_radius;
   icon-size: 8px;
 }
 
