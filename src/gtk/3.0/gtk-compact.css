@@ -4216,12 +4216,12 @@ XfdesktopIconView.view:active, calendar.raven-calendar:selected, .budgie-popover
   background-color: alpha(currentColor, 0.06);
 }
 
-.nemo-window .nemo-window-pane notebook .view:selected, .nemo-window .nemo-window-pane notebook filechooser stack.view scrolledwindow treeview.view:selected, filechooser stack.view scrolledwindow .nemo-window .nemo-window-pane notebook treeview.view:selected, .nautilus-window notebook .view:not(treeview) selection, .nautilus-window notebook filechooser stack.view scrolledwindow treeview.view:not(treeview) selection, filechooser stack.view scrolledwindow .nautilus-window notebook treeview.view:not(treeview) selection, .nautilus-window notebook .view:not(treeview):selected, .nautilus-window notebook filechooser stack.view scrolledwindow treeview.view:not(treeview):selected, filechooser stack.view scrolledwindow .nautilus-window notebook treeview.view:not(treeview):selected, .nautilus-window flowboxchild:selected .icon-item-background, textview text selection, textview text selection:focus, flowbox flowboxchild:selected {
+.nemo-window .nemo-window-pane notebook .view:selected, .nemo-window .nemo-window-pane notebook filechooser stack.view scrolledwindow treeview.view:selected, filechooser stack.view scrolledwindow .nemo-window .nemo-window-pane notebook treeview.view:selected, textview text selection, textview text selection:focus, flowbox flowboxchild:selected {
   color: #1A73E8;
   background-color: rgba(26, 115, 232, 0.2);
 }
 
-.nemo-window .nemo-window-pane widget.entry:selected, #MozillaGtkWidget > widget text:selected, #MozillaGtkWidget > widget text selection, #MozillaGtkWidget > widget text selection:focus, window.background.chromium > textview.view selection, window.background.chromium textview selection, window.background.chromium treeview.view.cell:selected:focus, window.background.chromium filechooser stack.view scrolledwindow treeview.cell.view:selected:focus, filechooser stack.view scrolledwindow window.background.chromium treeview.cell.view:selected:focus, window.background.csd evview.view.content-view:selected, window.background.csd evview.view.content-view:selected:backdrop, widget.view:selected, .background.csd textview text selection, .background.csd textview text selection:focus, label selection,
+.nemo-window .nemo-window-pane widget.entry:selected, #MozillaGtkWidget > widget text:selected, #MozillaGtkWidget > widget text selection, #MozillaGtkWidget > widget text selection:focus, window.background.chromium > textview.view selection, window.background.chromium textview selection, window.background.chromium treeview.view.cell:selected:focus, window.background.chromium filechooser stack.view scrolledwindow treeview.cell.view:selected:focus, filechooser stack.view scrolledwindow window.background.chromium treeview.cell.view:selected:focus, window.background.csd evview.view.content-view:selected, window.background.csd evview.view.content-view:selected:backdrop, .nautilus-window notebook .view:not(treeview) selection, .nautilus-window notebook filechooser stack.view scrolledwindow treeview.view:not(treeview) selection, filechooser stack.view scrolledwindow .nautilus-window notebook treeview.view:not(treeview) selection, .nautilus-window notebook .view:not(treeview):selected, .nautilus-window notebook filechooser stack.view scrolledwindow treeview.view:not(treeview):selected, filechooser stack.view scrolledwindow .nautilus-window notebook treeview.view:not(treeview):selected, .nautilus-window flowboxchild:selected .icon-item-background, widget.view:selected, .background.csd textview text selection, .background.csd textview text selection:focus, label selection,
 entry selection, spinbutton:not(.vertical) selection, spinbutton.vertical selection {
   color: white;
   background-color: #1A73E8;
@@ -4630,6 +4630,10 @@ popover.emoji-completion .emoji:hover {
 
 .nautilus-window notebook :not(treeview).view, .nautilus-window notebook filechooser stack.view scrolledwindow treeview.view:not(treeview), filechooser stack.view scrolledwindow .nautilus-window notebook treeview.view:not(treeview) {
   border-radius: 3px;
+}
+
+.nautilus-window notebook :not(treeview).view selection, .nautilus-window notebook filechooser stack.view scrolledwindow treeview.view:not(treeview) selection, filechooser stack.view scrolledwindow .nautilus-window notebook treeview.view:not(treeview) selection, .nautilus-window notebook :not(treeview).view:selected, .nautilus-window notebook filechooser stack.view scrolledwindow treeview.view:not(treeview):selected, filechooser stack.view scrolledwindow .nautilus-window notebook treeview.view:not(treeview):selected {
+  background-image: image(#1A73E8);
 }
 
 dialog.background > box.dialog-vbox.vertical > grid.horizontal > scrolledwindow.frame {

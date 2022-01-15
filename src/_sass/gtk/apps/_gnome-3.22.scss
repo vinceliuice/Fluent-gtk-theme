@@ -240,7 +240,7 @@
   &:selected {
     background-color: transparent;
 
-    .icon-item-background { @extend %selected_items_color; }
+    .icon-item-background { @extend %selected_items_primary; }
   }
 }
 
@@ -249,7 +249,8 @@
 
   selection,
   &:selected {
-    @extend %selected_items_color;
+    @extend %selected_items_primary;
+    background-image: image($primary);
   }
 }
 
