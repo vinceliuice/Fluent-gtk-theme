@@ -844,6 +844,8 @@ tabbox { // Gnome 40.0
 }
 
 .sidebar-paned .inline-toolbar.horizontal.sidebar-toolbar {
+  box-shadow: inset 0 1px $border;
+
   button.image-button {
     border-radius: $corner-radius;
 
@@ -855,10 +857,10 @@ tabbox { // Gnome 40.0
 window.csd > box.vertical > box.vertical,
 window.solid-csd > box.vertical > box.vertical {
   > toolbar.horizontal {
+    margin: -1px 0;
     padding: $container-padding;
-    // margin: -1px 0;
     border-bottom: none;
-    box-shadow: none;
+    border-top: 1px solid $border;
     background-color: transparent;
 
     > toolitem > .linked > button,

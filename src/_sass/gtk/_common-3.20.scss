@@ -222,7 +222,7 @@ assistant {
   }
 }
 
-// %osd, .osd { opacity: 0.9; }
+%osd, .osd { opacity: 0.9; }
 
 
 /*********************
@@ -500,12 +500,11 @@ button {
   }
 
   &.text-button {
-    min-width: 64px - 16px * 2;
+    min-width: 32px;
     padding-left: 16px;
     padding-right: 16px;
 
     &.flat {
-      min-width: 64px - 8px * 2;
       padding-left: 8px;
       padding-right: 8px;
     }
@@ -3920,15 +3919,17 @@ colorchooser .popover.osd {
   rubberband, .rubberband { @extend rubberband; }
 }
 
-// .scale-popup {
-//   .osd & { @extend %osd; }
-//
-//   .osd & button.flat { // FIXME: quick hack, redo properly
-//   }
-//
-//   button { // +/- buttons on GtkVolumeButton popup
-//   }
-// }
+.scale-popup {
+  .osd & { @extend %osd; }
+
+  // .osd & button.flat { // FIXME: quick hack, redo properly
+  // }
+
+  button.flat.text-button { // +/- buttons on GtkVolumeButton popup
+    min-width: 24px;
+    padding: $container-padding;
+  }
+}
 
 
 /**********************

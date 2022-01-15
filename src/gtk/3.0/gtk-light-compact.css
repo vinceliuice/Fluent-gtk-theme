@@ -238,6 +238,10 @@ assistant .sidebar label.highlight {
   color: rgba(0, 0, 0, 0.87);
 }
 
+.osd .scale-popup, .osd {
+  opacity: 0.9;
+}
+
 /*********************
  * Spinner Animation *
  *********************/
@@ -636,7 +640,6 @@ button.text-button {
 }
 
 button.text-button.flat {
-  min-width: 48px;
   padding-left: 8px;
   padding-right: 8px;
 }
@@ -4149,6 +4152,11 @@ colorchooser .popover.osd:backdrop {
   background-color: #F2F2F2;
 }
 
+.scale-popup button.flat.text-button {
+  min-width: 24px;
+  padding: 4px;
+}
+
 /**********************
  * Window Decorations *
  **********************/
@@ -5122,6 +5130,10 @@ window.solid-csd > box.vertical > box.vertical > toolbar.horizontal > toolitem >
   margin: 0;
 }
 
+.sidebar-paned .inline-toolbar.horizontal.sidebar-toolbar {
+  box-shadow: inset 0 1px rgba(0, 0, 0, 0.08);
+}
+
 .sidebar-paned .inline-toolbar.horizontal.sidebar-toolbar button.image-button {
   border-radius: 2px;
 }
@@ -5132,9 +5144,10 @@ window.solid-csd > box.vertical > box.vertical > toolbar.horizontal > toolitem >
 
 window.csd > box.vertical > box.vertical > toolbar.horizontal,
 window.solid-csd > box.vertical > box.vertical > toolbar.horizontal {
+  margin: -1px 0;
   padding: 4px;
   border-bottom: none;
-  box-shadow: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
   background-color: transparent;
 }
 

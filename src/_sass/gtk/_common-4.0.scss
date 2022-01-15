@@ -294,6 +294,7 @@ entry {
   border-radius: $corner-radius;
   caret-color: currentColor; // this shouldn't be needed.
   border: 1px solid $divider;
+  background-clip: padding-box;
 
   @if $window == 'round' {
     @include entry(round-normal);
@@ -444,6 +445,7 @@ button {
   border-radius: $corner-radius;
   font-weight: 500;
   border: 1px solid $border;
+  background-clip: padding-box;
   @include button(normal);
 
   &:focus, &:checked:focus { @include button(focus); }
