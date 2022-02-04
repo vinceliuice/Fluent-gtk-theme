@@ -158,14 +158,19 @@ flowbox {
     padding: $container-padding;
     border-radius: $corner-radius;
 
+    label.version-label { background-clip: border-box; }
+
     &:focus {
       background-image: url("assets/selected-line.png"), url("assets/selected-line@2.png");
       background-position: ($container-padding - 2px) center;
       background-repeat: no-repeat;
       background-size: 3px 32px;
+      outline: none;
     }
 
-    &:selected { @extend %selected_items_color; }
+    &:selected {
+      @extend %selected_items_color;
+    }
   }
 }
 

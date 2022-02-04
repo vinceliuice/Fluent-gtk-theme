@@ -186,11 +186,16 @@ flowbox flowboxchild {
   border-radius: 2px;
 }
 
+flowbox flowboxchild label.version-label {
+  background-clip: border-box;
+}
+
 flowbox flowboxchild:focus {
-  background-image: url("assets/selected-line.png"), url("assets/selected-line@2.png");
+  background-image: url("assets/selected-line.png"), url("assets/selected-line@2.png"), image(rgba(255, 255, 255, 0.04));
   background-position: 4px center;
   background-repeat: no-repeat;
   background-size: 3px 32px;
+  outline: none;
 }
 
 .content-view .tile:selected {
