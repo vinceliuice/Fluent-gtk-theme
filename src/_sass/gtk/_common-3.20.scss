@@ -2090,7 +2090,7 @@ popover.background {
   transition: $transition-shadow;
   padding: 2px;
   background-color: $menu;
-  box-shadow: $shadow-z4;
+  box-shadow: $shadow-z5;
   background-clip: if($variant == 'light', padding-box, border-box);
 
   &:backdrop { box-shadow: $shadow-z2; }
