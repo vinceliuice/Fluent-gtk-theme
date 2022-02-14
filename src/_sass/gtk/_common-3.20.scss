@@ -158,14 +158,19 @@ flowbox {
     padding: $container-padding;
     border-radius: $corner-radius;
 
+    label.version-label { background-clip: border-box; }
+
     &:focus {
       background-image: url("assets/selected-line.png"), url("assets/selected-line@2.png");
       background-position: ($container-padding - 2px) center;
       background-repeat: no-repeat;
       background-size: 3px 32px;
+      outline: none;
     }
 
-    &:selected { @extend %selected_items_color; }
+    &:selected {
+      @extend %selected_items_color;
+    }
   }
 }
 
@@ -2085,7 +2090,7 @@ popover.background {
   transition: $transition-shadow;
   padding: 2px;
   background-color: $menu;
-  box-shadow: $shadow-z4;
+  box-shadow: $shadow-z5;
   background-clip: if($variant == 'light', padding-box, border-box);
 
   &:backdrop { box-shadow: $shadow-z2; }
@@ -3272,6 +3277,19 @@ row {
     &:disabled {
       image,
       label { color: $text-disabled; }
+    }
+  }
+
+  &.expander {
+    outline: none;
+    padding: 0;
+
+    &:checked {
+      list.nested > row.activatable {
+        background-color: $fill;
+        border: none;
+        box-shadow: inset 0 -1px $border, inset 0 1px $border;
+      }
     }
   }
 }
