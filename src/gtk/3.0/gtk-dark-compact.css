@@ -2925,18 +2925,6 @@ popover modelbutton.flat check, popover modelbutton.flat check:focus, popover mo
   background-image: none;
 }
 
-popover modelbutton.flat check:not(:checked):not(:indeterminate):not(:disabled), popover modelbutton.flat radio:not(:checked):not(:indeterminate):not(:disabled) {
-  color: rgba(255, 255, 255, 0.7);
-}
-
-popover modelbutton.flat check:checked, popover modelbutton.flat check:indeterminate, popover modelbutton.flat radio:checked, popover modelbutton.flat radio:indeterminate {
-  color: rgba(255, 255, 255, 0.7);
-}
-
-popover modelbutton.flat check:checked:hover, popover modelbutton.flat check:indeterminate:hover, popover modelbutton.flat radio:checked:hover, popover modelbutton.flat radio:indeterminate:hover {
-  color: white;
-}
-
 popover modelbutton.flat check.left:dir(rtl), popover modelbutton.flat radio.left:dir(rtl) {
   margin-left: -4px;
 }
@@ -2959,17 +2947,8 @@ menu menuitem check:dir(rtl), menu menuitem radio:dir(rtl) {
   margin-left: 8px;
 }
 
-menu menuitem check:not(:checked):not(:indeterminate):not(:disabled), menu menuitem radio:not(:checked):not(:indeterminate):not(:disabled) {
-  color: rgba(255, 255, 255, 0.7);
-}
-
 menu menuitem check:checked, menu menuitem check:indeterminate, menu menuitem radio:checked, menu menuitem radio:indeterminate {
-  color: rgba(255, 255, 255, 0.7);
   background-image: none;
-}
-
-menu menuitem check:checked:hover, menu menuitem check:indeterminate:hover, menu menuitem radio:checked:hover, menu menuitem radio:indeterminate:hover {
-  color: white;
 }
 
 menu menuitem check, menu menuitem check:hover, menu menuitem check:disabled, menu menuitem radio, menu menuitem radio:hover, menu menuitem radio:disabled {

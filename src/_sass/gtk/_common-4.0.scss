@@ -2512,14 +2512,6 @@ radio {
       background-image: none;
     }
 
-    &:not(:checked):not(:indeterminate):not(:disabled) { color: $text-secondary; }
-
-    &:checked, &:indeterminate {
-      color: $text-secondary;
-
-      &:hover { color: $text; }
-    }
-
     &.left:dir(rtl) {
       margin-left: -4px;
     }
@@ -2538,14 +2530,6 @@ radio {
     &:dir(ltr) { margin-right: 8px; }
 
     &:dir(rtl) { margin-left: 8px; }
-
-    &:not(:checked):not(:indeterminate):not(:disabled) { color: $text-secondary; }
-
-    &:checked, &:indeterminate {
-      color: $text-secondary;
-
-      &:hover { color: $text; }
-    }
 
     &, &:hover, &:disabled {
       box-shadow: none;
