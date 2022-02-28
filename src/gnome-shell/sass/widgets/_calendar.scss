@@ -9,6 +9,16 @@
   }
 }
 
+.clock {
+  padding: 0;
+  margin: 0 6px;
+  border: none;
+  box-shadow: none;
+  background: none;
+  text-shadow: none;
+  color: $secondary_fg_color;
+}
+
 // overall menu
 #calendarArea {
   padding: $container_padding 0;
