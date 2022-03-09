@@ -516,6 +516,16 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   padding-right: 8px;
 }
 
+.clock {
+  padding: 0;
+  margin: 0 6px;
+  border: none;
+  box-shadow: none;
+  background: none;
+  text-shadow: none;
+  color: rgba(0, 0, 0, 0.54);
+}
+
 #calendarArea {
   padding: 4px 0;
 }
@@ -937,15 +947,17 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .message .message-icon-bin {
-  padding: 8px 0 8px 8px;
+  padding: 12px;
+  padding-right: 4px;
 }
 
 .message .message-icon-bin:rtl {
-  padding: 8px 8px 8px 0;
+  padding-left: 4px;
 }
 
 .message .message-icon-bin > StIcon {
-  icon-size: 48px;
+  icon-size: 40px;
+  -st-icon-style: symbolic;
 }
 
 .message .message-icon-bin > .fallback-app-icon {
@@ -956,11 +968,13 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .message .message-content {
   padding: 8px;
   spacing: 2px;
+  margin-bottom: 4px;
   color: rgba(0, 0, 0, 0.54);
 }
 
 .message .message-title {
   font-weight: bold;
+  padding-top: 0.57em;
 }
 
 .message .message-secondary-bin {
@@ -969,7 +983,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .message .message-secondary-bin > .event-time {
   color: rgba(0, 0, 0, 0.54);
-  font-size: 1em;
+  font-size: 0.9em;
   padding-bottom: 0.13em;
 }
 
@@ -983,7 +997,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .message .message-close-button {
   color: rgba(0, 0, 0, 0.54);
-  padding: 0;
+  padding: 1px;
   height: 24px;
   width: 24px;
   border-radius: 9999px;
@@ -1783,6 +1797,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 #panel .panel-button.clock-display .clock {
+  color: rgba(255, 255, 255, 0.75);
   transition-duration: 150ms;
   border: none;
   border-radius: 0;
@@ -1806,6 +1821,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 #panel .panel-button:hover.clock-display .clock, #panel .panel-button:active.clock-display .clock, #panel .panel-button:overview.clock-display .clock, #panel .panel-button:focus.clock-display .clock, #panel .panel-button:checked.clock-display .clock {
   box-shadow: none;
   background: none;
+  color: #FFFFFF;
 }
 
 #panel .panel-button .system-status-icon {

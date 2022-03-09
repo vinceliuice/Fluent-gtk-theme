@@ -58,14 +58,15 @@
 
   // icon container
   .message-icon-bin {
-    padding: $container_padding * 2  0 $container_padding * 2 $container_padding * 2;
+    padding: $container_padding * 3;
+    padding-right: $container_padding;
 
-    &:rtl { padding: $container_padding * 2 $container_padding * 2 $container_padding * 2 0; }
+    &:rtl { padding-left: $container_padding; }
 
     // icon size and color
     > StIcon {
-      icon-size: 48px; // 32px
-      // -st-icon-style: symbolic;
+      icon-size: $medium_size + $container_padding * 2;
+      -st-icon-style: symbolic;
     }
 
     // fallback
@@ -79,12 +80,14 @@
   .message-content {
     padding: $container_padding + $container_margin * 2;
     spacing: $container_margin;
+    margin-bottom: $container_margin * 2;
     color: $secondary_fg_color;
   }
 
   // title
   .message-title {
     font-weight: bold;
+    padding-top: 0.57em;
   }
 
   // secondary container in title box
@@ -94,7 +97,7 @@
     // notification time stamp
     > .event-time {
       color: $secondary_fg_color;
-      font-size: 1em;
+      font-size: 0.9em;
       padding-bottom: 0.13em;
 
       &:ltr { text-align: right };
@@ -105,7 +108,7 @@
   // close button
   .message-close-button {
     color: $secondary_fg_color;
-    padding: 0;
+    padding: $container_margin / 2;
     height: 24px;
     width: 24px;
     border-radius: $circular_radius;
@@ -128,12 +131,12 @@
 
 /* Media Controls */
 .message-media-control {
-  margin: 20px 4px;
-  padding: 8px;
+  margin: $container_padding * 2 + 12px $container_padding;
+  padding: $container_padding * 2;
   border-radius: $circular_radius;
   color: $secondary_fg_color;
 
-  &:hover,&:focus { color: $fg_color; background-color: $divider_color; }
+  &:hover, &:focus { color: $fg_color; background-color: $divider_color; }
   &:active { color: $fg_color; background-color: $track_color; }
   &:insensitive { color: $disabled_secondary_fg_color; }
 
