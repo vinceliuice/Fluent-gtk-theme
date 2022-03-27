@@ -61,6 +61,7 @@ $panel_transition_duration: 250ms; // same as the overview transition duration
 
     &.clock-display {
       .clock {
+        color: $panel_secondary_fg_color;
         transition-duration: 150ms;
         border: none;
         border-radius: 0;
@@ -93,6 +94,7 @@ $panel_transition_duration: 250ms; // same as the overview transition duration
         .clock {
           box-shadow: none;
           background: none;
+          color: $panel_fg_color;
         }
       }
     }
