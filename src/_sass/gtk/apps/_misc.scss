@@ -79,7 +79,8 @@ window.background.chromium {
   > button { border: 1px solid $track; }
 
   > button {
-    color: $primary;
+    color: $text;
+    background-color: $base;
 
     &:disabled { color: $text-secondary-disabled; }
   }
@@ -88,7 +89,9 @@ window.background.chromium {
   headerbar { color: $titlebar-text-secondary; }
 
   // Workaround for non-animatable buttons in headerbar
-  headerbar button:active { background-color: $overlay-active; }
+  headerbar button {
+    &:active { background-color: $track; }
+  }
 
   spinner { color: $primary; }
 
@@ -99,7 +102,8 @@ window.background.chromium {
 
   // For prominent button, starred icon, etc.
   treeview.view.cell:selected:focus {
-    @extend %selected_items_primary;
+    color: on($primary);
+    background-image: image($primary);
   }
 
   // For table header
