@@ -90,7 +90,7 @@ window.background.chromium {
 
   // Workaround for non-animatable buttons in headerbar
   headerbar button {
-    &:active { background-color: $track; }
+    &:active { background-image: image($track); }
   }
 
   spinner { color: $primary; }
