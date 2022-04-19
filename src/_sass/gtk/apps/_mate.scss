@@ -464,7 +464,10 @@ na-tray-applet widget box widget {
   box-shadow: $shadow-z6, inset 0 1px highlight($surface); // not sure if box-shadow works here
   background-color: $surface;
 
-  frame > border { border-style: none; }
+  frame > border { 
+    border-style: none; 
+    background-color: transparent;
+  }
 
   button {
     @extend %button-flat;
