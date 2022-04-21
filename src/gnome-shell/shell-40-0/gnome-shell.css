@@ -368,12 +368,12 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   color: rgba(0, 0, 0, 0.87);
 }
 
-.popup-menu-item.selected:checked {
+.popup-menu-item:checked.selected {
   background-color: rgba(0, 0, 0, 0.1);
   color: rgba(0, 0, 0, 0.87);
 }
 
-.popup-menu-item:checked:active, .popup-menu-item.selected:checked:active {
+.popup-menu-item:checked:active, .popup-menu-item:checked.selected:active {
   background-color: rgba(0, 0, 0, 0.08);
   color: rgba(0, 0, 0, 0.87);
 }
@@ -1819,7 +1819,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   box-shadow: none;
 }
 
-#panel .panel-button.clock-display:hover .clock, #panel .panel-button.clock-display:active .clock, #panel .panel-button.clock-display:overview .clock, #panel .panel-button.clock-display:focus .clock, #panel .panel-button.clock-display:checked .clock {
+#panel .panel-button:hover.clock-display .clock, #panel .panel-button:active.clock-display .clock, #panel .panel-button:overview.clock-display .clock, #panel .panel-button:focus.clock-display .clock, #panel .panel-button:checked.clock-display .clock {
   box-shadow: none;
   background: none;
   color: #FFFFFF;
@@ -1853,7 +1853,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   -st-icon-style: symbolic;
 }
 
-#panel #panelActivities.panel-button {
+#panel .panel-button#panelActivities {
   background-image: url("assets/activities.svg");
   background-position: center center;
   background-repeat: no-repeat;
@@ -1863,11 +1863,11 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   box-shadow: none;
 }
 
-#panel #panelActivities.panel-button > * {
+#panel .panel-button#panelActivities > * {
   width: 36px;
 }
 
-#panel #panelActivities.panel-button:overview {
+#panel .panel-button#panelActivities:overview {
   background-color: transparent;
   box-shadow: none;
   border: none;

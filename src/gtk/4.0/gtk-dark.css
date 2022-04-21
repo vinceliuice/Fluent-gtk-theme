@@ -72,10 +72,6 @@ filechooser stack.view scrolledwindow .content-view treeview.view > rubberband,
 filechooser stack.view scrolledwindow treeview.view > rubberband,
 filechooser stack.view scrolledwindow .content-view treeview.view > rubberband,
 .content-view filechooser stack.view scrolledwindow treeview.view > rubberband,
-filechooser stack.view scrolledwindow .content-view treeview.view > rubberband,
-.content-view filechooser stack.view scrolledwindow treeview.view > rubberband,
-.content-view filechooser stack.view scrolledwindow treeview.view > rubberband,
-filechooser stack.view scrolledwindow .content-view treeview.view > rubberband,
 filechooser stack.view scrolledwindow .content-view treeview.view > .rubberband,
 .content-view filechooser stack.view scrolledwindow treeview.view > .rubberband, gridview > rubberband, flowbox > rubberband {
   border: 1px solid #3281ea;
@@ -686,7 +682,7 @@ button.text-button.image-button image:not(:only-child) {
   border-radius: 2px;
 }
 
-.linked:not(.vertical) > button.flat.image-button:not(:only-child):not(.text-button), .linked.vertical > button.flat.image-button:not(:only-child):not(.text-button) {
+.linked:not(.vertical) > button.flat:not(:only-child).image-button:not(.text-button), .linked.vertical > button.flat:not(:only-child).image-button:not(.text-button) {
   border-radius: 2px;
 }
 
@@ -1137,13 +1133,13 @@ button.color {
 }
 
 
-list > row button.image-button.suggested-action:not(.flat) {
+list > row button.image-button:not(.flat).suggested-action {
   background-color: #3281ea;
   color: white;
 }
 
 
-list > row button.image-button.destructive-action:not(.flat) {
+list > row button.image-button:not(.flat).destructive-action {
   background-color: #F28B82;
   color: rgba(0, 0, 0, 0.87);
 }
@@ -1683,7 +1679,7 @@ searchbar > revealer > box {
   border-radius: 2px;
 }
 
-.titlebar stackswitcher.linked:not(.vertical) > button.text-button:not(.suggested-action):not(.destructive-action) {
+.titlebar stackswitcher.linked:not(.vertical) > button:not(.suggested-action):not(.destructive-action).text-button {
   border-radius: 2px;
   margin: 0 0;
 }
@@ -1729,11 +1725,11 @@ searchbar > revealer > box {
   border-spacing: 6px;
 }
 
-.titlebar windowcontrols.start:not(.empty):dir(ltr), .titlebar windowcontrols.end:not(.empty):dir(rtl) {
+.titlebar windowcontrols:not(.empty).start:dir(ltr), .titlebar windowcontrols:not(.empty).end:dir(rtl) {
   margin-right: 6px;
 }
 
-.titlebar windowcontrols.start:not(.empty):dir(rtl), .titlebar windowcontrols.end:not(.empty):dir(ltr) {
+.titlebar windowcontrols:not(.empty).start:dir(rtl), .titlebar windowcontrols:not(.empty).end:dir(ltr) {
   margin-left: 6px;
 }
 
@@ -1745,12 +1741,12 @@ searchbar > revealer > box {
   margin-right: 3px;
 }
 
-.titlebar windowcontrols > button.close:not(.suggested-action):not(.destructive-action):hover {
+.titlebar windowcontrols > button:not(.suggested-action):not(.destructive-action).close:hover {
   background-color: #E57373;
   color: white;
 }
 
-.titlebar windowcontrols > button.close:not(.suggested-action):not(.destructive-action):active {
+.titlebar windowcontrols > button:not(.suggested-action):not(.destructive-action).close:active {
   background-color: #E53935;
   color: white;
 }
@@ -1950,15 +1946,15 @@ filechooser stack.view scrolledwindow treeview.view:drop(active) {
   border-color: #99c0f5;
 }
 
-columnview.view.after:drop(active),
-treeview.view.after:drop(active),
-filechooser stack.view scrolledwindow treeview.view.after:drop(active) {
+columnview.view:drop(active).after,
+treeview.view:drop(active).after,
+filechooser stack.view scrolledwindow treeview.view:drop(active).after {
   border-top-style: none;
 }
 
-columnview.view.before:drop(active),
-treeview.view.before:drop(active),
-filechooser stack.view scrolledwindow treeview.view.before:drop(active) {
+columnview.view:drop(active).before,
+treeview.view:drop(active).before,
+filechooser stack.view scrolledwindow treeview.view:drop(active).before {
   border-bottom-style: none;
 }
 
@@ -1970,15 +1966,15 @@ filechooser stack.view scrolledwindow treeview.view > dndtarget:drop(active) {
   border-color: alpha(currentColor, 0.06);
 }
 
-columnview.view > dndtarget.after:drop(active),
-treeview.view > dndtarget.after:drop(active),
-filechooser stack.view scrolledwindow treeview.view > dndtarget.after:drop(active) {
+columnview.view > dndtarget:drop(active).after,
+treeview.view > dndtarget:drop(active).after,
+filechooser stack.view scrolledwindow treeview.view > dndtarget:drop(active).after {
   border-top-style: none;
 }
 
-columnview.view > dndtarget.before:drop(active),
-treeview.view > dndtarget.before:drop(active),
-filechooser stack.view scrolledwindow treeview.view > dndtarget.before:drop(active) {
+columnview.view > dndtarget:drop(active).before,
+treeview.view > dndtarget:drop(active).before,
+filechooser stack.view scrolledwindow treeview.view > dndtarget:drop(active).before {
   border-bottom-style: none;
 }
 
@@ -2367,7 +2363,7 @@ notebook > header tab:checked:disabled {
   color: rgba(255, 255, 255, 0.5);
 }
 
-notebook > header tab.reorderable-page:checked {
+notebook > header tab:checked.reorderable-page {
   background-color: #2B2B2B;
 }
 
@@ -2677,19 +2673,19 @@ scrollbar.overlay-indicator:not(.dragging):not(.hovering) button:disabled {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
-scrollbar.overlay-indicator.horizontal:not(.dragging):not(.hovering) > range > trough > slider {
+scrollbar.overlay-indicator:not(.dragging):not(.hovering).horizontal > range > trough > slider {
   min-width: 24px;
 }
 
-scrollbar.overlay-indicator.horizontal:not(.dragging):not(.hovering) button {
+scrollbar.overlay-indicator:not(.dragging):not(.hovering).horizontal button {
   min-width: 8px;
 }
 
-scrollbar.overlay-indicator.vertical:not(.dragging):not(.hovering) slider {
+scrollbar.overlay-indicator:not(.dragging):not(.hovering).vertical slider {
   min-height: 24px;
 }
 
-scrollbar.overlay-indicator.vertical:not(.dragging):not(.hovering) button {
+scrollbar.overlay-indicator:not(.dragging):not(.hovering).vertical button {
   min-height: 8px;
 }
 
@@ -3782,7 +3778,7 @@ filechooser stack.view scrolledwindow list {
   background-color: transparent;
 }
 
-filechooser stack.view scrolledwindow treeview.view, filechooser stack.view scrolledwindow treeview.view {
+filechooser stack.view scrolledwindow treeview.view {
   background-color: transparent;
 }
 
@@ -3824,12 +3820,12 @@ filechooserbutton:drop(active) {
   background-color: #303030;
 }
 
-.sidebar:not(separator):dir(ltr), .sidebar.left:not(separator), .sidebar.left:not(separator):dir(rtl) {
+.sidebar:not(separator):dir(ltr), .sidebar:not(separator).left, .sidebar:not(separator).left:dir(rtl) {
   border-right: 1px solid rgba(255, 255, 255, 0.12);
   border-left-style: none;
 }
 
-.sidebar:not(separator):dir(rtl), .sidebar.right:not(separator) {
+.sidebar:not(separator):dir(rtl), .sidebar:not(separator).right {
   border-left: 1px solid rgba(255, 255, 255, 0.12);
   border-right-style: none;
 }
@@ -4389,7 +4385,7 @@ stackswitcher.linked:not(.vertical) > button:not(.suggested-action):not(.destruc
   border: none;
 }
 
-stackswitcher.linked:not(.vertical) > button.text-button:not(.suggested-action):not(.destructive-action) {
+stackswitcher.linked:not(.vertical) > button:not(.suggested-action):not(.destructive-action).text-button {
   min-width: 100px;
 }
 
