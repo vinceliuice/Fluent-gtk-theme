@@ -31,14 +31,19 @@ SIZE_VARIANTS=('' '-compact')
 
 if [[ "$(command -v gnome-shell)" ]]; then
   SHELL_VERSION="$(gnome-shell --version | cut -d ' ' -f 3 | cut -d . -f -1)"
-  if [[ "${SHELL_VERSION:-}" -ge "40" ]]; then
-    GS_VERSION="new"
+  if [[ "${SHELL_VERSION:-}" -ge "42" ]]; then
+    GS_VERSION="42-0"
+    echo "gnome-shell 42.0"
+  elif [[ "${SHELL_VERSION:-}" -ge "40" ]]; then
+    GS_VERSION="40-0"
+    echo "gnome-shell 40.0"
   else
-    GS_VERSION="old"
+    GS_VERSION="3-28"
+    echo "gnome-shell 3.38"
   fi
   else
     echo "'gnome-shell' not found, using styles for last gnome-shell version available."
-    GS_VERSION="new"
+    GS_VERSION="42"
 fi
 
 usage() {
@@ -118,17 +123,9 @@ install() {
   cp -r "$SRC_DIR/gnome-shell/pad-osd.css"                                      "$THEME_DIR/gnome-shell"
 
   if [[ "$tweaks" == 'true' ]]; then
-    if [[ "${GS_VERSION:-}" == 'new' ]]; then
-      sassc $SASSC_OPT "$SRC_DIR/gnome-shell/shell-40-0/gnome-shell$color$size.scss" "$THEME_DIR/gnome-shell/gnome-shell.css"
-    else
-      sassc $SASSC_OPT "$SRC_DIR/gnome-shell/shell-3-28/gnome-shell$color$size.scss" "$THEME_DIR/gnome-shell/gnome-shell.css"
-    fi
+    sassc $SASSC_OPT "$SRC_DIR/gnome-shell/shell-$GS_VERSION/gnome-shell$color$size.scss" "$THEME_DIR/gnome-shell/gnome-shell.css"
   else
-    if [[ "${GS_VERSION:-}" == 'new' ]]; then
-      cp -r "$SRC_DIR/gnome-shell/shell-40-0/gnome-shell$color$size.css"        "$THEME_DIR/gnome-shell/gnome-shell.css"
-    else
-      cp -r "$SRC_DIR/gnome-shell/shell-3-28/gnome-shell$color$size.css"        "$THEME_DIR/gnome-shell/gnome-shell.css"
-    fi
+    cp -r "$SRC_DIR/gnome-shell/shell-$GS_VERSION/gnome-shell$color$size.css"   "$THEME_DIR/gnome-shell/gnome-shell.css"
   fi
 
   cp -r "${SRC_DIR}/gnome-shell/common-assets"                                  "$THEME_DIR/gnome-shell/assets"

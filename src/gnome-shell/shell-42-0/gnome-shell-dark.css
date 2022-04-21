@@ -1,6 +1,6 @@
 /* This stylesheet is generated, DO NOT EDIT */
 stage {
-  font-size: 9.75pt;
+  font-size: 10.5pt;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.9);
 }
@@ -12,7 +12,7 @@ stage {
 }
 
 .modal-dialog .modal-dialog-linked-button {
-  font-size: 9.75pt;
+  font-size: 10.5pt;
   font-weight: 500;
   margin: 0;
   border-radius: 0;
@@ -99,12 +99,12 @@ stage {
 /* Entries */
 StEntry {
   min-height: 24px;
-  padding: 2px 6px;
+  padding: 3px 9px;
   border-radius: 3px;
   border-width: 0;
   selection-background-color: #3281ea;
   selected-color: #FFFFFF !important;
-  font-size: 11.25pt;
+  font-size: 12pt;
   font-weight: 400;
   caret-color: rgba(255, 255, 255, 0.7);
   color: rgba(255, 255, 255, 0.7);
@@ -146,11 +146,11 @@ StEntry StLabel.hint-text {
 
 /* Buttons */
 .button {
-  min-height: 32px;
+  min-height: 36px;
   padding: 0 16px;
   border-width: 0;
   border-radius: 3px;
-  font-size: 9.75pt;
+  font-size: 10.5pt;
   font-weight: 500;
   color: rgba(255, 255, 255, 0.7);
   background-color: transparent;
@@ -188,7 +188,7 @@ StEntry StLabel.hint-text {
 .check-box StBin {
   width: 24px;
   height: 24px;
-  padding: 4px;
+  padding: 6px;
   border-radius: 100px;
   background-image: url("assets/checkbox-off.svg");
 }
@@ -326,13 +326,13 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .popup-menu.panel-menu {
-  -boxpointer-gap: 2px;
+  -boxpointer-gap: 4px;
   margin-bottom: 1.75em;
 }
 
 .popup-menu-content {
   border-image: url("assets/menu.svg") 24 32 28 28;
-  padding: 8px 6px 12px !important;
+  padding: 10px 6px 14px !important;
   margin: 0 !important;
   border: none;
   background-color: transparent;
@@ -340,9 +340,9 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .popup-menu-item {
-  spacing: 4px;
-  padding: 4px;
-  margin: 0 4px;
+  spacing: 6px;
+  padding: 6px;
+  margin: 0 6px;
   color: rgba(255, 255, 255, 0.9);
   transition-duration: 100ms;
   border-radius: 3px;
@@ -350,64 +350,64 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .popup-menu-item:ltr {
-  padding-right: 1.5em;
-  padding-left: 0;
+  padding-right: 12px !important;
+  padding-left: 6px !important;
 }
 
 .popup-menu-item:rtl {
-  padding-right: 0;
-  padding-left: 1.5em;
+  padding-right: 6px !important;
+  padding-left: 12px !important;
 }
 
 .popup-menu-item:checked {
-  background-color: rgba(255, 255, 255, 0.06);
+  background-color: rgba(255, 255, 255, 0.06) !important;
   font-weight: normal;
   border-radius: 3px 3px 0 0;
   border: none;
   box-shadow: none;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.9) !important;
 }
 
-.popup-menu-item.selected:checked {
-  background-color: rgba(255, 255, 255, 0.08);
-  color: rgba(255, 255, 255, 0.9);
+.popup-menu-item.selected:checked, .popup-menu-item:checked:hover, .popup-menu-item:checked:focus {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  color: rgba(255, 255, 255, 0.9) !important;
 }
 
 .popup-menu-item:checked:active, .popup-menu-item.selected:checked:active {
-  background-color: rgba(255, 255, 255, 0.06);
-  color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.06) !important;
+  color: rgba(255, 255, 255, 0.9) !important;
 }
 
 .popup-menu-item:checked:insensitive {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.5) !important;
 }
 
-.popup-menu-item.selected {
-  background-color: rgba(255, 255, 255, 0.06);
-  color: rgba(255, 255, 255, 0.9);
+.popup-menu-item.selected, .popup-menu-item:hover, .popup-menu-item:focus {
+  background-color: rgba(255, 255, 255, 0.06) !important;
+  color: rgba(255, 255, 255, 0.9) !important;
   transition-duration: 0ms;
 }
 
 .popup-menu-item:active {
-  background-color: rgba(255, 255, 255, 0.1);
-  color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  color: rgba(255, 255, 255, 0.9) !important;
   transition-duration: 150ms;
 }
 
 .popup-menu-item.selected:active {
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.9) !important;
 }
 
 .popup-menu-item:insensitive {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.5) !important;
 }
 
 .popup-inactive-menu-item {
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.9) !important;
 }
 
 .popup-inactive-menu-item:insensitive {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.5) !important;
 }
 
 .popup-menu-arrow,
@@ -416,7 +416,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .popup-sub-menu {
-  margin: 0 4px;
+  margin: 0 6px;
   background-color: rgba(255, 255, 255, 0.06);
   border-radius: 0 0 3px 3px;
   border: none;
@@ -426,7 +426,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .popup-sub-menu .popup-menu-item {
   margin: 0;
-  border-radius: 3px;
+  border-radius: 0;
   background-image: none;
 }
 
@@ -438,7 +438,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-.popup-sub-menu .popup-menu-item:not(:first-child):last-child {
+.popup-sub-menu:last-child .popup-menu-item:last-child, .popup-sub-menu .popup-menu-section:last-child .popup-menu-item:last-child {
   border-radius: 0 0 3px 3px;
 }
 
@@ -459,7 +459,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   border: none;
   padding: 0 0;
   margin: 0 0;
-  height: 2px;
+  height: 4px;
 }
 
 .popup-separator-menu-item .popup-separator-menu-item-separator {
@@ -476,12 +476,12 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .background-menu {
-  -boxpointer-gap: 2px;
+  -boxpointer-gap: 4px;
   -arrow-rise: 0px;
 }
 
 .aggregate-menu {
-  min-width: 19em;
+  min-width: 21em;
 }
 
 .aggregate-menu .popup-menu-icon {
@@ -491,19 +491,17 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .aggregate-menu .popup-menu-icon:ltr {
-  margin-right: 2px;
+  margin-right: 4px;
 }
 
 .aggregate-menu .popup-sub-menu .popup-menu-item > :first-child:ltr {
-  /* 12px spacing + 2*4px padding */
-  padding-left: 8px;
-  margin-left: 1em;
+  padding-left: 12px !important;
+  margin-left: 3px !important;
 }
 
 .aggregate-menu .popup-sub-menu .popup-menu-item > :first-child:rtl {
-  /* 12px spacing + 2*4px padding */
-  padding-right: 8px;
-  margin-right: 1em;
+  padding-right: 12px !important;
+  margin-right: 3px !important;
 }
 
 /* Date/Time Menu */
@@ -512,8 +510,8 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .clock-display-box .clock {
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 12px;
+  padding-right: 12px;
 }
 
 .clock {
@@ -527,7 +525,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 #calendarArea {
-  padding: 4px 0;
+  padding: 6px 0;
 }
 
 .calendar {
@@ -541,9 +539,9 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .datemenu-calendar-column {
-  spacing: 4px;
+  spacing: 6px;
   border: 0 solid rgba(255, 255, 255, 0.1);
-  padding: 0 8px;
+  padding: 0 12px;
   color: rgba(255, 255, 255, 0.7);
 }
 
@@ -568,12 +566,12 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .datemenu-calendar-column .datemenu-displays-box {
-  spacing: 4px;
+  spacing: 6px;
 }
 
 .datemenu-today-button {
-  min-height: 48px;
-  padding: 4px;
+  min-height: 56px;
+  padding: 6px;
   border-radius: 3px;
   border: none;
   box-shadow: none;
@@ -604,7 +602,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .calendar-month-label {
-  height: 20px;
+  height: 24px;
   margin: 2px;
   padding: 6px 16px;
   border-radius: 3px;
@@ -620,8 +618,8 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .pager-button {
-  width: 28px;
-  height: 28px;
+  width: 32px;
+  height: 32px;
   margin: 2px;
   border-radius: 9999px;
   background-color: transparent;
@@ -660,8 +658,8 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   font-size: 9pt;
   font-weight: 400;
   text-align: center;
-  width: 28px;
-  height: 28px;
+  width: 32px;
+  height: 32px;
   padding: 0 0;
   margin: 2px;
   border-radius: 9999px;
@@ -688,8 +686,8 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .calendar-day-base.calendar-day-heading {
-  width: 28px;
-  height: 21px;
+  width: 32px;
+  height: 25px;
   margin-top: 2px;
   padding: 7px 0 0;
   border-radius: 100px;
@@ -758,7 +756,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   height: 1.8em !important;
   width: 1.8em !important;
   padding: 4px !important;
-  margin: 4px 0 !important;
+  margin: 6px 0 !important;
   border-radius: 9999px;
   background-color: rgba(255, 255, 255, 0.03);
   color: rgba(255, 255, 255, 0.5);
@@ -771,7 +769,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .world-clocks-button,
 .weather-button,
 .events-button {
-  padding: 4px 8px;
+  padding: 6px 8px;
   border-radius: 3px;
   box-shadow: none;
   text-shadow: none;
@@ -822,11 +820,11 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .events-button .events-box {
-  spacing: 4px;
+  spacing: 6px;
 }
 
 .events-button .events-list {
-  spacing: 8px;
+  spacing: 12px;
   text-shadow: none;
 }
 
@@ -863,11 +861,11 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .weather-button .weather-box {
-  spacing: 4px;
+  spacing: 6px;
 }
 
 .weather-button .weather-header-box {
-  spacing: 4px;
+  spacing: 6px;
 }
 
 .weather-button .weather-header.location {
@@ -876,7 +874,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .weather-button .weather-forecast-icon {
-  icon-size: 24px;
+  icon-size: 32px;
   color: rgba(255, 255, 255, 0.5);
 }
 
@@ -898,7 +896,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 /* Message List */
 .message-list {
   width: 31.5em;
-  padding: 0 8px;
+  padding: 0 12px;
   color: rgba(255, 255, 255, 0.7);
   text-shadow: none;
   box-shadow: none;
@@ -909,19 +907,19 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .message-list-sections {
-  spacing: 4px;
-  margin: 0 8px;
+  spacing: 6px;
+  margin: 0 16px;
 }
 
 .message-list-section,
 .message-list-section-list {
-  spacing: 4px;
+  spacing: 6px;
 }
 
 .message-list-controls {
-  margin: 4px 8px 0;
-  padding: 2px;
-  spacing: 8px;
+  margin: 8px 16px 0;
+  padding: 4px;
+  spacing: 12px;
 }
 
 .message {
@@ -948,16 +946,16 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .message .message-icon-bin {
-  padding: 12px;
-  padding-right: 4px;
+  padding: 18px;
+  padding-right: 6px;
 }
 
 .message .message-icon-bin:rtl {
-  padding-left: 4px;
+  padding-left: 6px;
 }
 
 .message .message-icon-bin > StIcon {
-  icon-size: 40px;
+  icon-size: 48px;
   -st-icon-style: symbolic;
 }
 
@@ -967,9 +965,9 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .message .message-content {
-  padding: 8px;
-  spacing: 2px;
-  margin-bottom: 4px;
+  padding: 14px;
+  spacing: 4px;
+  margin-bottom: 8px;
   color: rgba(255, 255, 255, 0.7);
 }
 
@@ -979,7 +977,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .message .message-secondary-bin {
-  padding: 0 4px;
+  padding: 0 8px;
 }
 
 .message .message-secondary-bin > .event-time {
@@ -998,7 +996,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .message .message-close-button {
   color: rgba(255, 255, 255, 0.7);
-  padding: 1px;
+  padding: 2px;
   height: 24px;
   width: 24px;
   border-radius: 9999px;
@@ -1028,8 +1026,8 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 /* Media Controls */
 .message-media-control {
-  margin: 20px 4px;
-  padding: 8px;
+  margin: 24px 6px;
+  padding: 12px;
   border-radius: 9999px;
   color: rgba(255, 255, 255, 0.7);
 }
@@ -1077,9 +1075,9 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   background-color: rgba(32, 32, 32, 0.95);
   border-radius: 3px;
   box-shadow: 0 3px 8px -2px rgba(0, 0, 0, 0.25) !important;
-  margin: 2px 8px 11px;
-  padding: 4px;
-  spacing: 4px;
+  margin: 3px 8px 11px;
+  padding: 6px;
+  spacing: 6px;
   border: 1px solid rgba(255, 255, 255, 0.06);
 }
 
@@ -1090,7 +1088,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .candidate-box {
   padding: 0.3em 0.5em 0.3em 0.5em;
-  margin-right: 2px;
+  margin-right: 3px;
   border-radius: 3px;
   color: rgba(255, 255, 255, 0.7);
 }
@@ -1273,7 +1271,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   padding: 2px 10px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   text-shadow: none;
-  font-size: 9.75pt;
+  font-size: 10.5pt;
   font-weight: 500;
   color: rgba(255, 255, 255, 0.7);
   background-color: transparent;
@@ -1419,7 +1417,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .run-dialog .run-dialog-description {
-  font-size: 11.25pt;
+  font-size: 12pt;
   font-weight: 400;
   text-align: center;
   color: rgba(255, 255, 255, 0.5);
@@ -1571,15 +1569,15 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   border: none;
   background-color: rgba(255, 255, 255, 0.06);
   border-radius: 3px;
-  padding: 8px;
+  padding: 12px;
   padding-right: 0;
 }
 
 .nm-dialog-item {
   font-size: 1em;
   border-bottom: none;
-  border-radius: -1px;
-  padding: 8px;
+  border-radius: -3px;
+  padding: 12px;
   spacing: 0px;
 }
 
@@ -1601,7 +1599,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .nm-dialog-icons {
-  spacing: 8px;
+  spacing: 12px;
 }
 
 .no-networks-label {
@@ -1609,7 +1607,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .no-networks-box {
-  spacing: 4px;
+  spacing: 6px;
 }
 
 /* OSD */
@@ -1625,14 +1623,25 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .osd-window {
   text-align: center;
   font-weight: bold;
+  spacing: 12px;
+  padding: 12px 18px;
+  margin-bottom: 4em;
+}
+
+.osd-window > * {
   spacing: 8px;
-  margin: 16px;
-  min-width: 64px;
-  min-height: 64px;
 }
 
 .osd-window StIcon {
-  icon-size: 96px;
+  icon-size: 32px;
+}
+
+.osd-window StLabel:ltr {
+  margin-right: 6px;
+}
+
+.osd-window StLabel:rtl {
+  margin-left: 6px;
 }
 
 .osd-window .osd-monitor-label {
@@ -1671,7 +1680,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 /* App Switcher */
 .switcher-popup {
   padding: 8px;
-  spacing: 16px;
+  spacing: 24px;
 }
 
 .switcher-list .item-box {
@@ -1691,7 +1700,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .switcher-list .thumbnail-box {
   padding: 2px;
-  spacing: 4px;
+  spacing: 6px;
 }
 
 .switcher-list .thumbnail {
@@ -1704,7 +1713,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .switcher-list .switcher-list-item-container {
-  spacing: 8px;
+  spacing: 12px;
 }
 
 .switcher-arrow {
@@ -1728,7 +1737,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 /* Workspace Switcher */
 .workspace-switcher-group {
-  padding: 8px;
+  padding: 12px;
 }
 
 .workspace-switcher {
@@ -1736,7 +1745,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   border: none;
   border-radius: 0;
   padding: 0;
-  spacing: 8px;
+  spacing: 12px;
 }
 
 .ws-switcher-box {
@@ -1754,7 +1763,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   height: 52px;
   background-color: #3281ea;
   border: none;
-  border-radius: 5px;
+  border-radius: 6px;
   color: #FFFFFF;
 }
 
@@ -1766,7 +1775,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   background-color: rgba(0, 0, 0, 0.5);
   margin: 0;
   border-radius: 0;
-  height: 30px;
+  height: 34px;
 }
 
 #panel #panelLeft, #panel #panelCenter {
@@ -1783,8 +1792,8 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 #panel .panel-button {
-  -natural-hpadding: 4px;
-  -minimum-hpadding: 2px;
+  -natural-hpadding: 8px;
+  -minimum-hpadding: 4px;
   font-weight: normal;
   color: rgba(255, 255, 255, 0.75);
   transition-duration: 150ms;
@@ -1827,8 +1836,8 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 #panel .panel-button .system-status-icon {
   icon-size: 16px;
-  padding: 4px;
-  margin: 0 4px;
+  padding: 6px;
+  margin: 0 6px;
 }
 
 #panel .panel-button .panel-status-menu-box .system-status-icon {
@@ -1836,11 +1845,11 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 #panel .panel-button .panel-status-menu-box StLabel {
-  padding: 0 0 0 2px;
+  padding: 0 0 0 3px;
 }
 
 #panel .panel-button .appindicator-trayicons-box {
-  margin: 0 4px;
+  margin: 0 6px;
 }
 
 #panel .panel-button .panel-status-indicators-box,
@@ -1864,7 +1873,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 #panel #panelActivities.panel-button > * {
-  width: 32px;
+  width: 36px;
 }
 
 #panel #panelActivities.panel-button:overview {
@@ -1903,7 +1912,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 #panel Gjs_ui_panel_AggregateMenu.panel-button .system-status-icon {
   margin: 0 0 !important;
-  padding: 4px !important;
+  padding: 6px !important;
 }
 
 #panel .screencast-indicator,
@@ -1912,7 +1921,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 #appMenu {
-  spacing: 4px;
+  spacing: 6px;
 }
 
 #appMenu .label-shadow {
@@ -1920,8 +1929,8 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 #appMenu .panel-status-menu-box {
-  padding: 0 4px;
-  spacing: 4px;
+  padding: 0 6px;
+  spacing: 6px;
 }
 
 /* Activities Ripple */
@@ -1938,7 +1947,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 /* OVERVIEW */
 .controls-manager, .secondary-monitor-workspaces {
-  spacing: 8px;
+  spacing: 12px;
 }
 
 #overviewGroup {
@@ -1951,14 +1960,14 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 /* Window Picker */
 .window-picker {
-  spacing: 4px;
+  spacing: 6px;
 }
 
 .window-caption {
   color: rgba(255, 255, 255, 0.85);
   background-color: rgba(32, 32, 32, 0.9);
   border-radius: 6px;
-  padding: 4px 8px;
+  padding: 6px 12px;
 }
 
 .window-close {
@@ -2003,8 +2012,8 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   box-shadow: none;
   selection-background-color: #3281ea;
   selected-color: #FFFFFF !important;
-  margin-top: 8px;
-  margin-bottom: 4px;
+  margin-top: 12px;
+  margin-bottom: 6px;
 }
 
 #overview .search-entry:hover {
@@ -2039,11 +2048,11 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 /* Search */
 #searchResultsContent {
   max-width: 1024px;
-  spacing: 4px;
+  spacing: 8px;
 }
 
 .search-section {
-  spacing: 4px;
+  spacing: 8px;
 }
 
 .search-section .search-section-separator {
@@ -2058,8 +2067,8 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
   text-shadow: none;
   color: rgba(255, 255, 255, 0.85);
-  padding: 12px;
-  spacing: 4px;
+  padding: 18px;
+  spacing: 8px;
 }
 
 .list-search-result, .search-provider-icon {
@@ -2080,11 +2089,11 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .grid-search-results {
-  spacing: 24px;
+  spacing: 36px;
 }
 
 .search-provider-icon .list-search-provider-content {
-  spacing: 8px;
+  spacing: 12px;
 }
 
 .search-provider-icon .list-search-provider-content .list-search-provider-details {
@@ -2094,15 +2103,15 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .list-search-results {
-  spacing: 4px;
+  spacing: 6px;
 }
 
 .list-search-result .list-search-result-content {
-  spacing: 4px;
+  spacing: 6px;
 }
 
 .list-search-result .list-search-result-title {
-  spacing: 8px;
+  spacing: 12px;
 }
 
 .list-search-result .list-search-result-description {
@@ -2150,14 +2159,14 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .dash-label {
   border-radius: 3px;
-  padding: 4px 8px;
-  margin: 4px;
+  padding: 6px 12px;
+  margin: 6px;
   color: rgba(255, 255, 255, 0.85);
   background-color: rgba(0, 0, 0, 0.75);
   border: none;
   box-shadow: none;
   text-align: center;
-  -y-offset: 10px;
+  -y-offset: 20px;
 }
 
 /* App Grid */
@@ -2224,7 +2233,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .show-apps .overview-icon.overview-icon-with-label > StBoxLayout,
 .app-well-app .overview-icon.overview-icon-with-label > StBoxLayout,
 .grid-search-result .overview-icon.overview-icon-with-label > StBoxLayout {
-  spacing: 4px;
+  spacing: 6px;
 }
 
 .app-well-app-running-dot {
@@ -2348,11 +2357,11 @@ StWidget.focused .app-well-app-running-dot {
 }
 
 .rename-folder-popup .rename-folder-popup-item {
-  spacing: 4px;
+  spacing: 6px;
 }
 
 .rename-folder-popup .rename-folder-popup-item:ltr, .rename-folder-popup .rename-folder-popup-item:rtl {
-  padding: 0 8px;
+  padding: 0 12px;
 }
 
 .app-menu,
@@ -2361,7 +2370,7 @@ StWidget.focused .app-well-app-running-dot {
 }
 
 .page-indicator {
-  padding: 4px 8px 0;
+  padding: 6px 12px 0;
 }
 
 .page-indicator .page-indicator-icon {
@@ -2420,8 +2429,8 @@ StWidget.focused .app-well-app-running-dot {
 
 .workspace-thumbnails {
   visible-width: 32px;
-  spacing: 4px;
-  padding: 4px;
+  spacing: 6px;
+  padding: 6px;
 }
 
 .workspace-thumbnails .workspace-thumbnail {
@@ -2483,7 +2492,7 @@ StWidget.focused .app-well-app-running-dot {
 .user-icon StIcon {
   background-color: rgba(255, 255, 255, 0.05);
   border-radius: 99px;
-  padding: 8px;
+  padding: 12px;
   width: 40px;
   height: 40px;
 }
@@ -2497,9 +2506,9 @@ StWidget.focused .app-well-app-running-dot {
 }
 
 .user-widget.vertical .user-icon StIcon {
-  padding: 14px;
-  padding-top: 12px;
-  padding-bottom: 16px;
+  padding: 20px;
+  padding-top: 18px;
+  padding-bottom: 22px;
   width: 88px;
   height: 88px;
 }
@@ -2519,7 +2528,7 @@ StWidget.focused .app-well-app-running-dot {
 .caps-lock-warning-label {
   text-align: center;
   padding-bottom: 8px;
-  font-size: 9.75pt;
+  font-size: 10.5pt;
   font-weight: 400;
   color: #FF6D00;
 }
@@ -2556,7 +2565,7 @@ StWidget.focused .app-well-app-running-dot {
 }
 
 #keyboard .page-indicator {
-  padding: 4px;
+  padding: 6px;
 }
 
 #keyboard .page-indicator .page-indicator-icon {
@@ -2565,8 +2574,8 @@ StWidget.focused .app-well-app-running-dot {
 }
 
 .key-container {
-  padding: 2px;
-  spacing: 2px;
+  padding: 4px;
+  spacing: 4px;
 }
 
 .keyboard-key {
@@ -2693,7 +2702,7 @@ StWidget.focused .app-well-app-running-dot {
   transition-duration: 150ms;
   padding-left: 16px;
   padding-right: 16px;
-  min-height: 32px;
+  min-height: 36px;
   padding: 0 32px;
 }
 
@@ -2742,11 +2751,11 @@ StWidget.focused .app-well-app-running-dot {
 }
 
 .lg-obj-inspector-button {
-  min-height: 32px;
+  min-height: 36px;
   padding: 0 16px;
   border: none;
   border-radius: 3px;
-  font-size: 9.75pt;
+  font-size: 10.5pt;
   font-weight: 500;
   color: rgba(255, 255, 255, 0.7);
   background-color: transparent;
@@ -3108,7 +3117,7 @@ StWidget.focused .app-well-app-running-dot {
 .login-dialog-prompt-layout {
   padding-top: 24px;
   padding-bottom: 12px;
-  spacing: 8px;
+  spacing: 12px;
   width: 23em;
 }
 
@@ -3310,11 +3319,11 @@ StWidget.focused .app-well-app-running-dot {
 }
 
 #dashtodockContainer.left #dash .dash-item-container .app-well-app, #dashtodockContainer.right #dash .dash-item-container .app-well-app {
-  padding: 3px 4px !important;
+  padding: 3px 6px !important;
 }
 
 #dashtodockContainer.left #dash .show-apps, #dashtodockContainer.right #dash .show-apps {
-  padding-bottom: 4px !important;
+  padding-bottom: 6px !important;
 }
 
 #dashtodockContainer.left.shrink #dash .dash-item-container .app-well-app, #dashtodockContainer.left.shrink #dash .show-apps, #dashtodockContainer.right.shrink #dash .dash-item-container .app-well-app, #dashtodockContainer.right.shrink #dash .show-apps {
@@ -3592,15 +3601,15 @@ StWidget.focused .app-well-app-running-dot {
 
 .gsconnect-device-menu .popup-menu-item {
   height: 20px !important;
-  padding: 2px 0;
+  padding: 3px 0;
 }
 
 .gsconnect-device-menu .popup-menu-item > :last-child:ltr {
-  padding-right: 4px !important;
-  margin-right: 8px !important;
+  padding-right: 6px !important;
+  margin-right: 12px !important;
 }
 
 .gsconnect-device-menu .popup-menu-item > :last-child:rtl {
-  padding-left: 4px !important;
-  padding-left: 8px !important;
+  padding-left: 6px !important;
+  padding-left: 12px !important;
 }

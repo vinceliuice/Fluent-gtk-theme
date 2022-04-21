@@ -350,64 +350,64 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .popup-menu-item:ltr {
-  padding-right: 1.5em;
-  padding-left: 0;
+  padding-right: 8px !important;
+  padding-left: 4px !important;
 }
 
 .popup-menu-item:rtl {
-  padding-right: 0;
-  padding-left: 1.5em;
+  padding-right: 4px !important;
+  padding-left: 8px !important;
 }
 
 .popup-menu-item:checked {
-  background-color: rgba(255, 255, 255, 0.06);
+  background-color: rgba(255, 255, 255, 0.06) !important;
   font-weight: normal;
   border-radius: 3px 3px 0 0;
   border: none;
   box-shadow: none;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.9) !important;
 }
 
-.popup-menu-item.selected:checked {
-  background-color: rgba(255, 255, 255, 0.08);
-  color: rgba(255, 255, 255, 0.9);
+.popup-menu-item.selected:checked, .popup-menu-item:checked:hover, .popup-menu-item:checked:focus {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  color: rgba(255, 255, 255, 0.9) !important;
 }
 
 .popup-menu-item:checked:active, .popup-menu-item.selected:checked:active {
-  background-color: rgba(255, 255, 255, 0.06);
-  color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.06) !important;
+  color: rgba(255, 255, 255, 0.9) !important;
 }
 
 .popup-menu-item:checked:insensitive {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.5) !important;
 }
 
-.popup-menu-item.selected {
-  background-color: rgba(255, 255, 255, 0.06);
-  color: rgba(255, 255, 255, 0.9);
+.popup-menu-item.selected, .popup-menu-item:hover, .popup-menu-item:focus {
+  background-color: rgba(255, 255, 255, 0.06) !important;
+  color: rgba(255, 255, 255, 0.9) !important;
   transition-duration: 0ms;
 }
 
 .popup-menu-item:active {
-  background-color: rgba(255, 255, 255, 0.1);
-  color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  color: rgba(255, 255, 255, 0.9) !important;
   transition-duration: 150ms;
 }
 
 .popup-menu-item.selected:active {
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.9) !important;
 }
 
 .popup-menu-item:insensitive {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.5) !important;
 }
 
 .popup-inactive-menu-item {
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.9) !important;
 }
 
 .popup-inactive-menu-item:insensitive {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.5) !important;
 }
 
 .popup-menu-arrow,
@@ -426,7 +426,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .popup-sub-menu .popup-menu-item {
   margin: 0;
-  border-radius: 3px;
+  border-radius: 0;
   background-image: none;
 }
 
@@ -438,7 +438,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-.popup-sub-menu .popup-menu-item:not(:first-child):last-child {
+.popup-sub-menu:last-child .popup-menu-item:last-child, .popup-sub-menu .popup-menu-section:last-child .popup-menu-item:last-child {
   border-radius: 0 0 3px 3px;
 }
 
@@ -495,15 +495,13 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .aggregate-menu .popup-sub-menu .popup-menu-item > :first-child:ltr {
-  /* 12px spacing + 2*4px padding */
-  padding-left: 8px;
-  margin-left: 1em;
+  padding-left: 8px !important;
+  margin-left: 2px !important;
 }
 
 .aggregate-menu .popup-sub-menu .popup-menu-item > :first-child:rtl {
-  /* 12px spacing + 2*4px padding */
-  padding-right: 8px;
-  margin-right: 1em;
+  padding-right: 8px !important;
+  margin-right: 2px !important;
 }
 
 /* Date/Time Menu */
@@ -1626,13 +1624,24 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   text-align: center;
   font-weight: bold;
   spacing: 8px;
-  margin: 16px;
-  min-width: 64px;
-  min-height: 64px;
+  padding: 8px 12px;
+  margin-bottom: 4em;
+}
+
+.osd-window > * {
+  spacing: 8px;
 }
 
 .osd-window StIcon {
-  icon-size: 96px;
+  icon-size: 32px;
+}
+
+.osd-window StLabel:ltr {
+  margin-right: 6px;
+}
+
+.osd-window StLabel:rtl {
+  margin-left: 6px;
 }
 
 .osd-window .osd-monitor-label {

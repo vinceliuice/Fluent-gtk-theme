@@ -158,6 +158,12 @@ $panel_transition_duration: 250ms; // same as the overview transition duration
       border-radius: $buttons_radius;
       color: $inverse_secondary_fg_color;
 
+      &.clock-display {
+        .clock {
+          color: $inverse_secondary_fg_color;
+        }
+      }
+
       &:hover {
         background-color: $inverse_divider_color;
       }
