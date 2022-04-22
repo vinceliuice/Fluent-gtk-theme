@@ -129,10 +129,10 @@
 .calendar-day-base {
   @include font(caption);
   text-align: center;
-  width: $menuitem_size;
-  height: $menuitem_size;
-  padding: 0 0;
-  margin: 2px;
+  width: $menuitem_size !important;
+  height: $menuitem_size !important;
+  padding: 0 !important;
+  margin: 2px !important;
   border-radius: $circular_radius;
   color: $secondary_fg_color;
   border: none;
@@ -216,8 +216,8 @@
 
 .calendar-week-number {
   height: 1.8em !important;
-  width: 1.8em !important;
-  padding: 4px !important;
+  width: 2.6em !important;
+  padding: 0 !important;
   margin: $container_padding 0 !important;
   border-radius: $circular_radius;
   background-color: if($variant == 'light', rgba(black, 0.04), rgba(white, 0.03));

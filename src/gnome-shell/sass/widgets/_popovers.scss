@@ -124,10 +124,6 @@
     &:active {
       background-color: $track_color;
     }
-
-    &:not(:first-child):last-child {
-      border-radius: 0 0 $buttons_radius $buttons_radius;
-    }
   }
 }
 
