@@ -460,11 +460,14 @@ na-tray-applet widget box widget {
 /* mate-screensaver lock dialog */
 .lock-dialog {
   border: 1px solid $frame;
-  border-radius: $corner-radius + 1px;
-  box-shadow: $shadow-z6, inset 0 1px highlight($surface); // not sure if box-shadow works here
+  border-radius: 0; // Using rounded corners will reveal a black background
   background-color: $surface;
 
-  frame > border { border-style: none; }
+  notebook { 
+    background-color: $surface;
+  }
+
+  frame > border { border-style: none; border-color: transparent; }
 
   button {
     @extend %button-flat;
