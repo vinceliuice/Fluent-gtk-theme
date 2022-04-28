@@ -3364,20 +3364,18 @@ calendar {
  * Dialogs *
  ***********/
 messagedialog { // Message Dialog styling
-  &, &.csd {
-    &.background { background-color: $surface; }
+  &.background { background-color: $surface; }
 
-    .titlebar {
-      min-height: $small-size;
-      border-style: none;
-      // box-shadow: inset 0 1px highlight($surface);
+  .titlebar {
+    min-height: $small-size;
+    border-style: none;
+    box-shadow: none;
+    background-color: $surface;
+    color: $text;
+
+    &:backdrop {
       background-color: $surface;
-      color: $text;
-
-      &:backdrop {
-        background-color: $surface;
-        color: $text-secondary;
-      }
+      color: $text-secondary;
     }
   }
 

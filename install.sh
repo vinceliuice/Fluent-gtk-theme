@@ -273,23 +273,28 @@ while [[ "$#" -gt 0 ]]; do
             ;;
           float)
             panel="float"
+            echo -e "Install floating panel version ..."
             shift
             ;;
           round)
             window="round"
+            echo -e "Install rounded windows version ..."
             shift
             ;;
           blur)
             blur="true"
             panel="compact"
+            echo -e "Install blur version ..."
             shift
             ;;
           noborder)
             outline="false"
+            echo -e "Install windows without outline version ..."
             shift
             ;;
           square)
             titlebutton="square"
+            echo -e "Install square windows button version ..."
             shift
             ;;
           -*)
@@ -539,7 +544,6 @@ tweaks_temp() {
 install_float_panel() {
   sed -i "/\$panel_style:/s/compact/float/" ${SRC_DIR}/gnome-shell/sass/_tweaks-temp.scss
   sed -i "/\$panel_style:/s/compact/float/" ${SRC_DIR}/_sass/_tweaks-temp.scss
-  echo -e "Install floating panel version ..."
 }
 
 install_solid() {
@@ -551,24 +555,20 @@ install_solid() {
 install_round() {
   sed -i "/\$window:/s/default/round/" ${SRC_DIR}/gnome-shell/sass/_tweaks-temp.scss
   sed -i "/\$window:/s/default/round/" ${SRC_DIR}/_sass/_tweaks-temp.scss
-  echo -e "Install rounded windows version ..."
 }
 
 install_blur() {
   sed -i "/\$blur:/s/false/true/" ${SRC_DIR}/gnome-shell/sass/_tweaks-temp.scss
   sed -i "/\$blur:/s/false/true/" ${SRC_DIR}/_sass/_tweaks-temp.scss
-  echo -e "Install blur version ..."
 }
 
 install_noborder() {
   sed -i "/\$outline:/s/true/false/" ${SRC_DIR}/gnome-shell/sass/_tweaks-temp.scss
   sed -i "/\$outline:/s/true/false/" ${SRC_DIR}/_sass/_tweaks-temp.scss
-  echo -e "Install windows without outline version ..."
 }
 
 install_square() {
   sed -i "/\$titlebutton:/s/circular/square/" ${SRC_DIR}/_sass/_tweaks-temp.scss
-  echo -e "Install square windows button version ..."
 }
 
 install_theme_color() {

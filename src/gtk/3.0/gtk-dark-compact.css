@@ -3659,18 +3659,19 @@ calendar:indeterminate {
 /***********
  * Dialogs *
  ***********/
-messagedialog.background, messagedialog.csd.background {
+messagedialog.background {
   background-color: #3C3C3C;
 }
 
-messagedialog .titlebar, messagedialog.csd .titlebar {
+messagedialog .titlebar {
   min-height: 20px;
   border-style: none;
+  box-shadow: none;
   background-color: #3C3C3C;
   color: white;
 }
 
-messagedialog .titlebar:backdrop, messagedialog.csd .titlebar:backdrop {
+messagedialog .titlebar:backdrop {
   background-color: #3C3C3C;
   color: rgba(255, 255, 255, 0.7);
 }
