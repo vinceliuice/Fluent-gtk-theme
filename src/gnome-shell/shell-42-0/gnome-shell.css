@@ -496,12 +496,12 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .aggregate-menu .popup-sub-menu .popup-menu-item > :first-child:ltr {
   padding-left: 12px !important;
-  margin-left: 3px !important;
+  margin-left: 0 !important;
 }
 
 .aggregate-menu .popup-sub-menu .popup-menu-item > :first-child:rtl {
   padding-right: 12px !important;
-  margin-right: 3px !important;
+  margin-right: 0 !important;
 }
 
 /* Date/Time Menu */

@@ -125,7 +125,7 @@
       background-color: $track_color;
     }
   }
-  
+
   &, .popup-menu-section {
     &:last-child .popup-menu-item:last-child {
       border-radius: 0 0 $buttons_radius $buttons_radius;
@@ -183,7 +183,7 @@
   }
 
   .popup-sub-menu .popup-menu-item > :first-child {
-    &:ltr { padding-left: $container_padding * 2 !important; margin-left: $container_padding / 2 !important; }
-    &:rtl { padding-right: $container_padding * 2 !important; margin-right: $container_padding / 2 !important; }
+    &:ltr { padding-left: $container_padding * 2 !important; margin-left: 0 !important; }
+    &:rtl { padding-right: $container_padding * 2 !important; margin-right: 0 !important; }
   }
 }
