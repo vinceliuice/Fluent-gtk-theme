@@ -4503,6 +4503,26 @@ popover.emoji-completion .emoji:hover {
   margin: 5px;
 }
 
+.nautilus-window .windowhandle .linked.nautilus-path-bar {
+  background-color: rgba(255, 255, 255, 0.04);
+  border-radius: 2px;
+  margin: 6px 0;
+}
+
+.nautilus-window .windowhandle .linked.nautilus-path-bar button:not(.suggested-action):not(.destructive-action) {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.nautilus-window .windowhandle .linked.nautilus-path-bar button:not(.suggested-action):not(.destructive-action).current-dir {
+  color: white;
+}
+
+.nautilus-window .windowhandle .linked.nautilus-path-bar button:not(.suggested-action):not(.destructive-action).current-dir:hover, .nautilus-window .windowhandle .linked.nautilus-path-bar button:not(.suggested-action):not(.destructive-action).current-dir:active {
+  background: none;
+  box-shadow: none;
+}
+
 .nautilus-canvas-item.dim-label,
 .nautilus-list-dim-label {
   color: rgba(0, 0, 0, 0.6);
@@ -6968,13 +6988,17 @@ filechooser stack.view scrolledwindow .caja-navigation-window treeview.view .ent
 /* mate-screensaver lock dialog */
 .lock-dialog {
   border: 1px solid rgba(0, 0, 0, 0.08);
-  border-radius: 3px;
-  box-shadow: 0 3px 3px -1px rgba(0, 0, 0, 0.2), 0 6px 6px 0 rgba(0, 0, 0, 0.14), 0 1px 10.8px 0 rgba(0, 0, 0, 0.12), inset 0 1px rgba(255, 255, 255, 0.4);
+  border-radius: 0;
+  background-color: #FFFFFF;
+}
+
+.lock-dialog notebook {
   background-color: #FFFFFF;
 }
 
 .lock-dialog frame > border {
   border-style: none;
+  border-color: transparent;
 }
 
 .lock-dialog button:not(:disabled) {

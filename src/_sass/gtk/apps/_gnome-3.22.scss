@@ -107,6 +107,27 @@
       @extend %small_button;
     }
   }
+
+  // >= 42.0
+  .windowhandle .linked.nautilus-path-bar {
+    background-color: $titlebar-fill;
+    border-radius: $corner-radius;
+    margin: $container-padding 0;
+
+    button:not(.suggested-action):not(.destructive-action) {
+      margin-top: 0;
+      margin-bottom: 0;
+
+      &.current-dir {
+        color: $titlebar-text;
+
+        &:hover, &:active {
+          background: none;
+          box-shadow: none;
+        }
+      }
+    }
+  }
 }
 
 .nautilus-canvas-item.dim-label,

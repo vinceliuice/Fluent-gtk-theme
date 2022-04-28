@@ -438,10 +438,6 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-.popup-sub-menu .popup-menu-item:not(:first-child):last-child {
-  border-radius: 0 0 3px 3px;
-}
-
 .popup-menu-ornament {
   width: 1.2em;
 }
@@ -660,10 +656,10 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   font-size: 9pt;
   font-weight: 400;
   text-align: center;
-  width: 32px;
-  height: 32px;
-  padding: 0 0;
-  margin: 2px;
+  width: 32px !important;
+  height: 32px !important;
+  padding: 0 !important;
+  margin: 2px !important;
   border-radius: 9999px;
   color: rgba(255, 255, 255, 0.7);
   border: none;
@@ -756,8 +752,8 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .calendar-week-number {
   height: 1.8em !important;
-  width: 1.8em !important;
-  padding: 4px !important;
+  width: 2.6em !important;
+  padding: 0 !important;
   margin: 6px 0 !important;
   border-radius: 9999px;
   background-color: rgba(255, 255, 255, 0.03);
