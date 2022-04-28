@@ -1451,7 +1451,7 @@ box.vertical > revealer > toolbar.search-bar {
 window.background.csd {
   > box.vertical {
     > paned.horizontal > box.vertical > scrolledwindow {
-      > treeview.view:not(:hover):not(:selected) { background-color: transparent; }
+      > treeview.view:not(:hover):not(:selected) { background: none; }
     }
   }
 
@@ -1466,16 +1466,19 @@ window.background.csd {
 
 
 /*******************
- * Archive Manager *
+ * Archive Manager * (File roller)
  *******************/
 .background.csd {
   > grid.horizontal > paned.horizontal {
     > scrolledwindow {
       border-radius: 0 0 $window-radius $window-radius;
-      background-color: $base;
 
       treeview.view:not(:hover):not(:selected) {
-        background-color: transparent;
+        background: none;
+      }
+
+      &, > treeview.view:not(:hover):not(:selected) {
+        background-color: $base;
       }
     }
 
@@ -1485,7 +1488,7 @@ window.background.csd {
         background-color: $background;
 
         treeview.view:not(:hover):not(:selected) {
-          background-color: transparent;
+          background: none;
         }
       }
     }
@@ -1875,7 +1878,7 @@ dialog.background.csd {
 
       > box.vertical > stack.view {
         > scrolledwindow > treeview.view:not(:hover):not(:selected):not(:active) {
-          background-color: transparent;
+          background: none;
         }
       }
 

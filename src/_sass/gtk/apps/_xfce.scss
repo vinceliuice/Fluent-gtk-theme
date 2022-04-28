@@ -173,7 +173,7 @@ window.background.csd.thunar {
     border-bottom-left-radius: $window-radius;
 
     treeview.view:not(:hover):not(:selected) {
-      background-color: transparent;
+      background: none;
     }
   }
 }

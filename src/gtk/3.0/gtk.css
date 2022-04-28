@@ -1954,7 +1954,6 @@ headerbar.default-decoration button.titlebutton:not(.suggested-action):not(.dest
  * Tree Views *
  **************/
 treeview.view, filechooser stack.view scrolledwindow treeview.view {
-  background-image: image(#FFFFFF);
   border-left-color: rgba(0, 0, 0, 0.26);
   border-top-color: rgba(0, 0, 0, 0.12);
 }
@@ -1966,6 +1965,10 @@ treeview.view, filechooser stack.view scrolledwindow treeview.view {
   -GtkTreeView-tree-line-width: 1;
   -GtkTreeView-tree-line-pattern: '';
   -GtkTreeView-expander-size: 16;
+}
+
+.csd treeview.view:not(:selected):not(:hover):not(.progressbar):not(.expander):not(.trough):not(.separator), .csd filechooser stack.view scrolledwindow treeview.view:not(:selected):not(:hover):not(.progressbar):not(.expander):not(.trough):not(.separator), filechooser stack.view scrolledwindow .csd treeview.view:not(:selected):not(:hover):not(.progressbar):not(.expander):not(.trough):not(.separator) {
+  background-color: transparent;
 }
 
 treeview.view:selected, filechooser stack.view scrolledwindow treeview.view:selected {
