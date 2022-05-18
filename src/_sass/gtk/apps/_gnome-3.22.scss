@@ -483,7 +483,7 @@ frame.gedit-map-frame > border {
  %sidebar_row {
    margin: 0 ($container-padding / 2);
    border-radius: $corner-radius;
-   padding: $container-padding ($container-padding + 4px);
+   padding: $container-padding * 2 - 2px;
  }
 
 // the sidebar

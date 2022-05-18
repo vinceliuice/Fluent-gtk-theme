@@ -467,7 +467,7 @@ infobar.error > revealer > box button:checked:disabled, infobar.warning > reveal
 button {
   min-height: 24px;
   min-width: 16px;
-  padding: 3px 7px;
+  padding: 4px 8px;
   border-radius: 2px;
   font-weight: 500;
   border: 1px solid rgba(0, 0, 0, 0.08);
@@ -629,29 +629,29 @@ button.text-button.flat {
 
 button.image-button {
   min-width: 24px;
-  padding: 3px;
+  padding: 4px;
 }
 
 button.text-button.image-button {
   min-width: 24px;
-  padding: 3px;
+  padding: 4px;
   border-radius: 2px;
 }
 
 button.text-button.image-button label:first-child {
-  margin-left: 13px;
+  margin-left: 12px;
 }
 
 button.text-button.image-button label:last-child {
-  margin-right: 13px;
+  margin-right: 12px;
 }
 
 button.text-button.image-button.flat label:first-child {
-  margin-left: 9px;
+  margin-left: 8px;
 }
 
 button.text-button.image-button.flat label:last-child {
-  margin-right: 9px;
+  margin-right: 8px;
 }
 
 button.text-button.image-button image:not(:only-child) {
@@ -691,11 +691,11 @@ button.text-button.image-button image:not(:only-child) {
 }
 
 button.osd {
-  padding: 9px 13px;
+  padding: 11px 15px;
 }
 
 button.osd.image-button {
-  padding: 9px;
+  padding: 11px;
 }
 
 button.osd:disabled {
@@ -1176,7 +1176,7 @@ spinbutton:not(.vertical) {
 }
 
 spinbutton:not(.vertical) > text {
-  min-width: 26px;
+  min-width: 30px;
   margin: 0;
   padding-left: 12px;
   border: none;
@@ -1783,7 +1783,7 @@ searchbar > revealer > box {
 }
 
 headerbar {
-  min-height: 42px;
+  min-height: 46px;
   padding: 0 6px;
 }
 
@@ -1809,14 +1809,14 @@ headerbar button {
 }
 
 headerbar separator:not(.sidebar) {
-  margin-top: 10.5px;
-  margin-bottom: 10.5px;
+  margin-top: 11.5px;
+  margin-bottom: 11.5px;
   background-color: rgba(255, 255, 255, 0.12);
 }
 
 headerbar switch {
-  margin-top: 9px;
-  margin-bottom: 9px;
+  margin-top: 11px;
+  margin-bottom: 11px;
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3);
 }
 

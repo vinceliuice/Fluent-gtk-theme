@@ -496,7 +496,7 @@ treeview entry.flat, treeview entry.flat:focus, treeview entry, treeview entry:f
 button {
   min-height: 24px;
   min-width: 16px;
-  padding: 3px 7px;
+  padding: 4px 8px;
   border-radius: 2px;
   font-weight: 500;
   border: 1px solid rgba(0, 0, 0, 0.08);
@@ -656,24 +656,24 @@ button.image-button {
 
 button.text-button.image-button {
   min-width: 24px;
-  padding: 3px;
+  padding: 4px;
   border-radius: 2px;
 }
 
 button.text-button.image-button label:first-child {
-  margin-left: 13px;
+  margin-left: 12px;
 }
 
 button.text-button.image-button label:last-child {
-  margin-right: 13px;
+  margin-right: 12px;
 }
 
 button.text-button.image-button.flat label:first-child {
-  margin-left: 9px;
+  margin-left: 8px;
 }
 
 button.text-button.image-button.flat label:last-child {
-  margin-right: 9px;
+  margin-right: 8px;
 }
 
 button.text-button.image-button image:not(:only-child) {
@@ -713,11 +713,11 @@ button.text-button.image-button image:not(:only-child) {
 }
 
 button.osd {
-  padding: 9px 13px;
+  padding: 11px 15px;
 }
 
 button.osd.image-button, button.osd.circular {
-  padding: 9px;
+  padding: 11px;
 }
 
 button.osd.circular {
@@ -1646,7 +1646,7 @@ headerbar button.titlebutton:not(.suggested-action):not(.destructive-action) {
 }
 
 .titlebar .linked:not(.vertical) > entry:not(:only-child) {
-  border-radius: 4px;
+  border-radius: 2px;
 }
 
 .titlebar button:not(.suggested-action):not(.destructive-action):not(.titlebutton) {
@@ -1753,7 +1753,7 @@ headerbar button.titlebutton:not(.suggested-action):not(.destructive-action) {
 }
 
 headerbar {
-  min-height: 42px;
+  min-height: 46px;
   padding: 0 6px;
 }
 
@@ -1773,14 +1773,14 @@ headerbar button {
 }
 
 headerbar separator.titlebutton {
-  margin-top: 10.5px;
-  margin-bottom: 10.5px;
+  margin-top: 11.5px;
+  margin-bottom: 11.5px;
   background-color: rgba(0, 0, 0, 0.12);
 }
 
 headerbar switch {
-  margin-top: 9px;
-  margin-bottom: 9px;
+  margin-top: 11px;
+  margin-bottom: 11px;
   box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.26);
 }
 
@@ -1802,8 +1802,8 @@ headerbar spinbutton button {
 }
 
 headerbar .entry-tag {
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin-top: 6px;
+  margin-bottom: 6px;
 }
 
 headerbar.windowhandle viewswitcher button:not(.titlebutton):not(.suggested-action):not(.destructive-action) {
@@ -1953,6 +1953,7 @@ headerbar.default-decoration button.titlebutton:not(.suggested-action):not(.dest
  * Tree Views *
  **************/
 treeview.view, filechooser stack.view scrolledwindow treeview.view {
+  background-image: image(#FFFFFF);
   border-left-color: rgba(0, 0, 0, 0.26);
   border-top-color: rgba(0, 0, 0, 0.12);
 }
@@ -1964,10 +1965,6 @@ treeview.view, filechooser stack.view scrolledwindow treeview.view {
   -GtkTreeView-tree-line-width: 1;
   -GtkTreeView-tree-line-pattern: '';
   -GtkTreeView-expander-size: 16;
-}
-
-.csd treeview.view:not(:selected):not(:hover):not(.progressbar):not(.expander):not(.trough):not(.separator), .csd filechooser stack.view scrolledwindow treeview.view:not(:selected):not(:hover):not(.progressbar):not(.expander):not(.trough):not(.separator), filechooser stack.view scrolledwindow .csd treeview.view:not(:selected):not(:hover):not(.progressbar):not(.expander):not(.trough):not(.separator) {
-  background-color: transparent;
 }
 
 treeview.view:selected, filechooser stack.view scrolledwindow treeview.view:selected {
@@ -5667,7 +5664,7 @@ box.vertical > revealer > toolbar.search-bar button > widget {
  * Document Viewer *
  *******************/
 window.background.csd > box.vertical > paned.horizontal > box.vertical > scrolledwindow > treeview.view:not(:hover):not(:selected), filechooser stack.view window.background.csd > box.vertical > paned.horizontal > box.vertical > scrolledwindow > treeview.view:not(:hover):not(:selected) {
-  background-color: transparent;
+  background: none;
 }
 
 window.background.csd evview.view.content-view {
@@ -5675,15 +5672,18 @@ window.background.csd evview.view.content-view {
 }
 
 /*******************
- * Archive Manager *
+ * Archive Manager * (File roller)
  *******************/
 .background.csd > grid.horizontal > paned.horizontal > scrolledwindow {
   border-radius: 0 0 3px 3px;
-  background-color: #FFFFFF;
 }
 
 .background.csd > grid.horizontal > paned.horizontal > scrolledwindow treeview.view:not(:hover):not(:selected), filechooser stack.view .background.csd > grid.horizontal > paned.horizontal > scrolledwindow treeview.view:not(:hover):not(:selected) {
-  background-color: transparent;
+  background: none;
+}
+
+.background.csd > grid.horizontal > paned.horizontal > scrolledwindow, .background.csd > grid.horizontal > paned.horizontal > scrolledwindow > treeview.view:not(:hover):not(:selected), filechooser stack.view .background.csd > grid.horizontal > paned.horizontal > scrolledwindow > treeview.view:not(:hover):not(:selected) {
+  background-color: #FFFFFF;
 }
 
 .background.csd > grid.horizontal > paned.horizontal > box.vertical > scrolledwindow {
@@ -5692,7 +5692,7 @@ window.background.csd evview.view.content-view {
 }
 
 .background.csd > grid.horizontal > paned.horizontal > box.vertical > scrolledwindow treeview.view:not(:hover):not(:selected), filechooser stack.view .background.csd > grid.horizontal > paned.horizontal > box.vertical > scrolledwindow treeview.view:not(:hover):not(:selected) {
-  background-color: transparent;
+  background: none;
 }
 
 /************
@@ -6011,7 +6011,7 @@ dialog.background.csd > box.vertical.dialog-vbox > stack > scrolledwindow > view
 }
 
 dialog.background.csd > box.vertical.dialog-vbox > stack > box.vertical > stack.view > scrolledwindow > treeview.view:not(:hover):not(:selected):not(:active), filechooser dialog.background.csd > box.vertical.dialog-vbox > stack > box.vertical > stack.view > scrolledwindow > treeview.view:not(:hover):not(:selected):not(:active) {
-  background-color: transparent;
+  background: none;
 }
 
 dialog.background.csd > box.vertical.dialog-vbox > stack toolbar.toolbar {
@@ -6816,7 +6816,7 @@ na-tray-applet {
 }
 
 .brisk-menu .session-button {
-  padding: 9px;
+  padding: 11px;
 }
 
 .brisk-menu .frame {
@@ -7562,7 +7562,7 @@ frame.raven-frame > border {
 
 .raven .powerstrip button {
   margin: 2px 0 1px;
-  padding: 9px;
+  padding: 11px;
 }
 
 .raven .option-subtitle {
@@ -7617,7 +7617,7 @@ calendar.raven-calendar:selected {
 }
 
 .raven-mpris button.image-button {
-  padding: 9px;
+  padding: 11px;
 }
 
 .raven-notifications-view > .raven-background > viewport.frame {
@@ -7894,7 +7894,7 @@ window.background.csd.thunar > grid.horizontal > paned.horizontal > scrolledwind
 }
 
 window.background.csd.thunar > grid.horizontal > paned.horizontal > scrolledwindow.frame.sidebar.shortcuts-pane treeview.view:not(:hover):not(:selected), filechooser stack.view window.background.csd.thunar > grid.horizontal > paned.horizontal > scrolledwindow.frame.sidebar.shortcuts-pane treeview.view:not(:hover):not(:selected) {
-  background-color: transparent;
+  background: none;
 }
 
 .xfsm-logout-dialog {

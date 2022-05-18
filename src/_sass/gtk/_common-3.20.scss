@@ -464,7 +464,7 @@ treeview entry {
 button {
   min-height: 24px;
   min-width: 16px;
-  padding: ($medium-size - 26px) / 2 ($medium-size - 18px) / 2;
+  padding: ($medium-size - 24px) / 2 ($medium-size - 16px) / 2;
   border-radius: $corner-radius;
   font-weight: 500;
   border: 1px solid $border;
@@ -517,7 +517,7 @@ button {
 
   &.image-button {
     min-width: 24px;
-    padding: ($medium-size - 26px) / 2;
+    padding: ($medium-size - 24px) / 2;
 
     // @extend %circular_button;
   }
@@ -525,19 +525,19 @@ button {
   // NOTE: Some image-only buttons use this as well
   &.text-button.image-button {
     min-width: 24px;
-    padding: ($medium-size - 26px) / 2;
+    padding: ($medium-size - 24px) / 2;
     border-radius: $corner-radius;
 
     label {
-      &:first-child { margin-left: 16px - ($medium-size - 26px) / 2; }
+      &:first-child { margin-left: 16px - ($medium-size - 24px) / 2; }
 
-      &:last-child { margin-right: 16px - ($medium-size - 26px) / 2; }
+      &:last-child { margin-right: 16px - ($medium-size - 24px) / 2; }
     }
 
     &.flat label {
-      &:first-child { margin-left: 12px - ($medium-size - 26px) / 2; }
+      &:first-child { margin-left: 12px - ($medium-size - 24px) / 2; }
 
-      &:last-child { margin-right: 12px - ($medium-size - 26px) / 2; }
+      &:last-child { margin-right: 12px - ($medium-size - 24px) / 2; }
     }
 
     image:not(:only-child) { margin: 0 (24px - 16px) / 2; }
@@ -1395,12 +1395,12 @@ searchbar > revealer > box {
   }
 
   .title {
-    padding: 0 12px;
+    padding: 0 $container-padding * 2;
     font-weight: bold;
   }
 
   .subtitle {
-    padding: 0 12px;
+    padding: 0 $container-padding * 2;
     font-size: smaller;
   }
 
@@ -1426,12 +1426,12 @@ searchbar > revealer > box {
   // Titlebar Entries
   entry {
     @extend %titlebar-entry;
-    margin-left: 3px;
-    margin-right: 3px;
+    margin-left: $container-padding / 2;
+    margin-right: $container-padding / 2;
   }
 
   .linked:not(.vertical) > entry:not(:only-child) {
-    border-radius: 4px;
+    border-radius: $corner-radius;
 
     @if $window == 'round' {
       &, &:first-child, &:last-child {
@@ -1448,7 +1448,7 @@ searchbar > revealer > box {
 
     &:not(.titlebutton) {
       border-radius: $corner-radius;
-      padding: ($medium-size - 26px) / 2 ($medium-size - 16px) / 2;
+      padding: ($medium-size - 24px) / 2 ($medium-size - 16px) / 2;
     }
 
     .linked:not(.vertical) > & {
@@ -1595,8 +1595,8 @@ headerbar {
 
   // FIXME: This is a hacky workaround.
   .entry-tag {
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin-top: $container-padding;
+    margin-bottom: $container-padding;
   }
 
   &.windowhandle {
@@ -1697,6 +1697,7 @@ headerbar {
         background-color: $red-300;
         color: on($red-300);
       }
+
       &:active {
         background-color: $red-600;
         color: on($red-600);
