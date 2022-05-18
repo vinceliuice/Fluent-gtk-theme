@@ -651,7 +651,7 @@ button.text-button.flat {
 
 button.image-button {
   min-width: 24px;
-  padding: 3px;
+  padding: 4px;
 }
 
 button.text-button.image-button {
@@ -713,11 +713,11 @@ button.text-button.image-button image:not(:only-child) {
 }
 
 button.osd {
-  padding: 11px 15px;
+  padding: 10px 14px;
 }
 
 button.osd.image-button, button.osd.circular {
-  padding: 11px;
+  padding: 10px;
 }
 
 button.osd.circular {
@@ -1651,7 +1651,7 @@ headerbar button.titlebutton:not(.suggested-action):not(.destructive-action) {
 
 .titlebar button:not(.suggested-action):not(.destructive-action):not(.titlebutton) {
   border-radius: 2px;
-  padding: 3px 8px;
+  padding: 4px 8px;
 }
 
 .linked:not(.vertical) > .titlebar button:not(.suggested-action):not(.destructive-action) {
@@ -1753,7 +1753,7 @@ headerbar button.titlebutton:not(.suggested-action):not(.destructive-action) {
 }
 
 headerbar {
-  min-height: 46px;
+  min-height: 44px;
   padding: 0 6px;
 }
 
@@ -1773,14 +1773,14 @@ headerbar button {
 }
 
 headerbar separator.titlebutton {
-  margin-top: 11.5px;
-  margin-bottom: 11.5px;
+  margin-top: 11px;
+  margin-bottom: 11px;
   background-color: rgba(255, 255, 255, 0.12);
 }
 
 headerbar switch {
-  margin-top: 11px;
-  margin-bottom: 11px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3);
 }
 
@@ -4844,7 +4844,7 @@ window.background.csd > box.vertical > overlay > stack > box.vertical > box.hori
 window.background.csd > box.vertical > overlay > stack > box.vertical > box.horizontal > revealer > stack > box.vertical > stack > scrolledwindow > viewport.frame > list > row.activatable, hdyleaflet > box.vertical > scrolledwindow > viewport.frame list:not(.view):not(.tweak-group) row.activatable, leaflet > box.vertical > scrolledwindow > viewport.frame list:not(.view):not(.tweak-group) row.activatable {
   margin: 0 3px;
   border-radius: 2px;
-  padding: 6px 10px;
+  padding: 10px;
 }
 
 .tweak-categories {
@@ -6816,7 +6816,7 @@ na-tray-applet {
 }
 
 .brisk-menu .session-button {
-  padding: 11px;
+  padding: 10px;
 }
 
 .brisk-menu .frame {
@@ -7562,7 +7562,7 @@ frame.raven-frame > border {
 
 .raven .powerstrip button {
   margin: 2px 0 1px;
-  padding: 11px;
+  padding: 10px;
 }
 
 .raven .option-subtitle {
@@ -7617,7 +7617,7 @@ calendar.raven-calendar:selected {
 }
 
 .raven-mpris button.image-button {
-  padding: 11px;
+  padding: 10px;
 }
 
 .raven-notifications-view > .raven-background > viewport.frame {

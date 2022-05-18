@@ -691,11 +691,11 @@ button.text-button.image-button image:not(:only-child) {
 }
 
 button.osd {
-  padding: 11px 15px;
+  padding: 10px 14px;
 }
 
 button.osd.image-button {
-  padding: 11px;
+  padding: 10px;
 }
 
 button.osd:disabled {
@@ -1176,7 +1176,7 @@ spinbutton:not(.vertical) {
 }
 
 spinbutton:not(.vertical) > text {
-  min-width: 30px;
+  min-width: 28px;
   margin: 0;
   padding-left: 12px;
   border: none;
@@ -1783,7 +1783,7 @@ searchbar > revealer > box {
 }
 
 headerbar {
-  min-height: 46px;
+  min-height: 44px;
   padding: 0 6px;
 }
 
@@ -1809,14 +1809,14 @@ headerbar button {
 }
 
 headerbar separator:not(.sidebar) {
-  margin-top: 11.5px;
-  margin-bottom: 11.5px;
+  margin-top: 11px;
+  margin-bottom: 11px;
   background-color: rgba(255, 255, 255, 0.12);
 }
 
 headerbar switch {
-  margin-top: 11px;
-  margin-bottom: 11px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3);
 }
 
