@@ -35,6 +35,7 @@
     background-color: $base;
     box-shadow: inset 0 0 0 1px if($fc == $primary, $text-disabled, $fc);
     border-color: if($fc == $primary, $text-disabled, $fc);
+    outline: none;
   }
 
   @if $t == disabled {
@@ -53,6 +54,8 @@
     border-image-slice: 4 4 4 4;
     border-image-repeat: stretch;
     border-image-source: -gtk-scaled(url("assets/entry-normal#{$asset-suffix}.png"),url("assets/entry-normal#{$asset-suffix}@2.png"));
+    box-shadow: none;
+    outline: none;
   }
 
   @if $t == round-hover {
@@ -61,6 +64,8 @@
 
   @if $t == round-focus {
     border-image-source: -gtk-scaled(url("assets/entry-focus#{$asset-suffix}.png"),url("assets/entry-focus#{$asset-suffix}@2.png"));
+    box-shadow: none;
+    outline: none;
   }
 
   @if $t == round-disabled {
