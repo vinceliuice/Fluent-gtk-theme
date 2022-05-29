@@ -162,13 +162,13 @@ window.assistant {
   background-clip: padding-box;
   border-radius: $corner-radius;
   border: none;
+  box-shadow: $shadow-z6;
 }
 
 .osd {
   @extend %osd;
   padding: $container-padding;
   margin: $container-padding;
-  box-shadow: $shadow-z6;
 
   &.circular { border-radius: $circular-radius; }
 }
@@ -821,6 +821,8 @@ button {
 .linked:not(.vertical) {
   &:not(.path-bar):not(.nautilus-path-bar) { @include linking_rules($entry_rules:'true'); }
 
+  > button + button { margin: 0; }
+
   headerbar, .titlebar & {
     &:not(.path-bar):not(.nautilus-path-bar):not(.stack-switcher) {
       @include linking_rules($entry_rules:'false');
@@ -1015,19 +1017,6 @@ combobox {
   popover {
    margin-top: $container-padding - 2px;
    padding: 0;
-
-   listview {
-      margin: $container-padding 0;
-
-      & > row {
-         padding: $container-padding;
-
-         &:selected {
-           color: $text;
-           background-color: $overlay-selected;
-         }
-      }
-   }
 
     // drodowns with searchboxes on top
     .dropdown-searchbar {
@@ -1235,6 +1224,9 @@ searchbar > revealer > box {
   border-color: $divider;
   background-color: $background;
   background-clip: border-box;
+  box-shadow: none;
+
+  entry { margin: 0; }
 }
 
 
@@ -1305,11 +1297,12 @@ searchbar > revealer > box {
   }
 }
 
-.titlebar {
+headerbar {
   transition: background-color $duration $ease-out, color $duration $ease-out;
-  border-radius: $window-radius $window-radius 0 0;
   box-shadow: inset 0 -1px $divider;
   color: $titlebar-text;
+  min-height: $large-size;
+  padding: 0 $container-padding;
 
   @if $outline == 'true' and $topbar == 'dark' and $variant == 'light' {
     box-shadow: inset 0 -1px $divider, inset 0 1px highlight($titlebar);
@@ -1331,12 +1324,12 @@ searchbar > revealer > box {
   }
 
   .title {
-    padding: 0 12px;
+    padding: 0 $container-padding * 2;
     font-weight: bold;
   }
 
   .subtitle {
-    padding: 0 12px;
+    padding: 0 $container-padding * 2;
     font-size: smaller;
   }
 
@@ -1352,6 +1345,69 @@ searchbar > revealer > box {
   .titlebar {
     background-color: transparent;
     box-shadow: none;
+  }
+
+  > windowhandle > box {
+    &,
+    > box.start,
+    > box.end {
+      border-spacing: $container-padding;
+    }
+  }
+
+  // add vertical margins to common widget on the headerbar to avoid them spanning the whole height
+  entry,
+  spinbutton,
+  button {
+    margin-top: $container-padding;
+    margin-bottom: $container-padding;
+  }
+
+  menubutton {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  separator:not(.sidebar) {
+    margin-top: $large-size / 4;
+    margin-bottom: $large-size / 4;
+    background-color: $titlebar-divider;
+  }
+
+  switch {
+    margin-top: ($large-size - 24px) / 2;
+    margin-bottom: ($large-size - 24px) / 2;
+    box-shadow: inset 0 0 0 1px $titlebar-text-secondary-disabled;
+
+    &:hover { box-shadow: inset 0 0 0 1px $titlebar-text-disabled; }
+
+    checked { box-shadow: none; }
+
+    slider { background-color: $titlebar-text-secondary-disabled; }
+  }
+
+  // reset button margins of the spinbutton
+  spinbutton > button {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  // FIXME: This is a hacky workaround.
+  .entry-tag {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  &.windowhandle {
+    > viewswitcher > box > button:not(.suggested-action):not(.destructive-action) {
+      border-radius: 0;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    > button.popup {
+      label, image { min-height: 0; }
+    }
   }
 
   // The separator for split headerbars
@@ -1435,7 +1491,7 @@ searchbar > revealer > box {
 
   // Window button
   windowcontrols {
-    border-spacing: 6px;
+    border-spacing: $container-padding;
 
     &:not(.empty) {
       &.start:dir(ltr),
@@ -1452,10 +1508,12 @@ searchbar > revealer > box {
     > button:not(.suggested-action):not(.destructive-action) {
       min-height: $medium-size - 6px;
       min-width: $medium-size - 6px;
-      padding: 0 0;
+      padding: 0;
       margin-left: 3px;
       margin-right: 3px;
       @extend %circular-button;
+
+      > image { background: none; }
 
       &.close {
         &:hover { background-color: $red-300; color: on($red-300); }
@@ -1502,76 +1560,6 @@ searchbar > revealer > box {
     &:dir(rtl), &:dir(ltr) { // specificity bump
       border-radius: 0;
       box-shadow: none; // just remove the highlight
-    }
-  }
-}
-
-headerbar {
-  // The sizing factor needs to be defined in the headerbar node for the case of split headerbars
-  min-height: $large-size;
-  padding: 0 $container-padding;
-
-  > windowhandle > box {
-    &,
-    > box.start,
-    > box.end {
-      border-spacing: $container-padding;
-    }
-  }
-
-  &:not(.titlebar) { box-shadow: none; }
-
-  box.vertical & {
-    background-color: $titlebar;
-  }
-
-  // add vertical margins to common widget on the headerbar to avoid them spanning the whole height
-  entry,
-  spinbutton,
-  button {
-    margin-top: $container-padding;
-    margin-bottom: $container-padding;
-  }
-
-  separator:not(.sidebar) {
-    margin-top: $large-size / 4;
-    margin-bottom: $large-size / 4;
-    background-color: $titlebar-divider;
-  }
-
-  switch {
-    margin-top: ($large-size - 24px) / 2;
-    margin-bottom: ($large-size - 24px) / 2;
-    box-shadow: inset 0 0 0 1px $titlebar-text-secondary-disabled;
-
-    &:hover { box-shadow: inset 0 0 0 1px $titlebar-text-disabled; }
-
-    checked { box-shadow: none; }
-
-    slider { background-color: $titlebar-text-secondary-disabled; }
-  }
-
-  // reset button margins of the spinbutton
-  spinbutton > button {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-
-  // FIXME: This is a hacky workaround.
-  .entry-tag {
-    margin-top: 5px;
-    margin-bottom: 5px;
-  }
-
-  &.windowhandle {
-    > viewswitcher > box > button:not(.suggested-action):not(.destructive-action) {
-      border-radius: 0;
-      margin-top: 0;
-      margin-bottom: 0;
-    }
-
-    > button.popup {
-      label, image { min-height: 0; }
     }
   }
 }
@@ -1692,13 +1680,15 @@ treeview.view {
   &.expander {
     min-width: 16px;
     min-height: 16px;
-    -gtk-icon-source: -gtk-icontheme('pan-down-symbolic');
+    -gtk-icon-source: -gtk-icontheme('pan-end-symbolic');
 
     &:dir(rtl) { -gtk-icon-source: -gtk-icontheme('pan-end-symbolic-rtl'); }
 
     color: $text-secondary;
 
     &:hover, &:active { color: $text; }
+
+    &:checked { -gtk-icon-source: -gtk-icontheme('pan-down-symbolic'); }
 
     &:disabled { color: $text-secondary-disabled; }
   }
@@ -1938,8 +1928,22 @@ popover.background {
   .view:not(:selected),
   toolbar { background-color: $surface; }
 
+  listview {
+    margin: 0;
+
+    > row {
+      padding: $container-padding $container-padding * 2;
+
+      &:selected {
+        color: $text;
+        background-color: $overlay-selected;
+      }
+    }
+  }
+
   .linked > button:not(.radio) {
     border-radius: $corner-radius;
+
     &:first-child { border-radius: $corner-radius; }
     &:last-child { border-radius: $corner-radius; }
     &:only-child { border-radius: $corner-radius; }
@@ -1948,7 +1952,6 @@ popover.background {
   &.menu button,
   button.model {
     @extend %button-flat;
-
     min-height: 32px;
     padding: 0 8px;
     border-radius: $corner-radius;
@@ -1964,9 +1967,6 @@ popover.background {
     > arrow,
     > contents {
       @extend %osd;
-
-      border: none;
-      box-shadow: none;
     }
   }
 
@@ -2260,6 +2260,7 @@ scrollbar {
 
   transition: $transition;
   background-color: $base;
+  outline: none;
 
   // scrollbar border
   &.top { border-bottom: 1px solid $divider; }
@@ -2268,20 +2269,30 @@ scrollbar {
   &.right { border-left: 1px solid $divider; }
 
   // slider
-  > range > trough > slider {
-    transition: background-color $duration $ease-out;
-    min-width: if($window == 'round', $container-padding, ($container-padding + 4px));
-    min-height: if($window == 'round', $container-padding, ($container-padding + 4px));
+  > range > trough {
+    background: none;
     border: none;
-    border-radius: if($window == 'round', $circular_radius, 0);
-    background-clip: padding-box;
-    background-color: $track;
+    outline: none;
+    padding: 0;
+    margin: 0;
 
-    &:hover { background-color: $text-secondary-disabled; }
+    > slider {
+      transition: background-color $duration $ease-out;
+      min-width: if($window == 'round', $container-padding, ($container-padding + 4px));
+      min-height: if($window == 'round', $container-padding, ($container-padding + 4px));
+      border: none;
+      border-radius: if($window == 'round', $circular_radius, 0);
+      background-clip: padding-box;
+      background-color: $track;
+      box-shadow: none;
+      outline: none;
 
-    &:active { background-color: $text-disabled; }
+      &:hover { background-color: $text-secondary-disabled; }
 
-    &:disabled { background-color: $track-disabled; }
+      &:active { background-color: $text-disabled; }
+
+      &:disabled { background-color: $track-disabled; }
+    }
   }
 
   &.horizontal > range > trough > slider { margin: 2px 0; }
@@ -2639,31 +2650,6 @@ scale {
 
   &.vertical { padding: 12px ($medium-size - $trough_size) / 2; }
 
-  // the slider is inside the trough, so to have make it bigger there's a negative margin
-  > trough > slider {
-    min-height: $slider_size;
-    min-width: $slider_size;
-    margin: $slider_margin;
-  }
-
-  // click-and-hold the slider to activate
-  &.fine-tune {
-    &.horizontal {
-      min-height: $finetune_trough_size;
-      padding-top: ($medium-size - $finetune_trough_size) / 2;
-      padding-bottom: ($medium-size - $finetune_trough_size) / 2;
-    }
-
-    &.vertical {
-      min-width: $finetune_trough_size;
-      padding-left: ($medium-size - $finetune_trough_size) / 2;
-      padding-right: ($medium-size - $finetune_trough_size) / 2;
-    }
-
-    // to make the trough grow in fine-tune mode
-    > trough > slider { margin: $finetune_slider_margin; }
-  }
-
   // the backing bit
   > trough {
     transition: background-color $duration $ease-out;
@@ -2693,7 +2679,14 @@ scale {
     &:disabled { background-color: transparent; }
   }
 
-  slider {
+  > trough > slider {
+    min-height: $slider_size;
+    min-width: $slider_size;
+    margin: $slider_margin;
+    box-shadow: none;
+    outline: none;
+    border: none;
+    background-color: transparent;
     transition: background-image $duration $ease-out;
     border-radius: 50%;
     color: $primary;
@@ -2711,6 +2704,24 @@ scale {
         background-image: -gtk-scaled(url('#{$_url}.png'), url('#{$_url}@2.png'));
       }
     }
+  }
+
+  // click-and-hold the slider to activate
+  &.fine-tune {
+    &.horizontal {
+      min-height: $finetune_trough_size;
+      padding-top: ($medium-size - $finetune_trough_size) / 2;
+      padding-bottom: ($medium-size - $finetune_trough_size) / 2;
+    }
+
+    &.vertical {
+      min-width: $finetune_trough_size;
+      padding-left: ($medium-size - $finetune_trough_size) / 2;
+      padding-right: ($medium-size - $finetune_trough_size) / 2;
+    }
+
+    // to make the trough grow in fine-tune mode
+    > trough > slider { margin: $finetune_slider_margin; }
   }
 
   > marks,
@@ -2763,6 +2774,8 @@ scale {
                                         ('marks-after', 'marks-after:not(.marks-before)') {
       &.#{$dir_class}.#{$marks_class} {
         slider {
+          transform: none;
+
           @each $state, $state_infix in ('', ''),
                                         (':disabled', '-disabled') {
             &#{$state} {
@@ -3056,6 +3069,8 @@ listview,
 list {
   border-color: $divider;
   background-color: $base;
+  color: $text;
+  box-shadow: none;
 
   row { padding: 2px; }
 
@@ -3322,46 +3337,6 @@ filechooser {
       @extend %circular-button;
     }
   }
-
-  stack.view {
-    background-color: transparent;
-
-    scrolledwindow {
-      background-color: transparent;
-      border-radius: 0 0 $window-radius 0;
-
-      list { background-color: transparent; }
-
-      treeview.view {
-        @extend .view;
-        background-color: transparent;
-      }
-    }
-
-    > placesview {
-      background-color: transparent;
-      // border-bottom-right-radius: $window-radius;
-
-      > actionbar {
-        &, > revealer > box {
-          background-color: transparent;
-        }
-      }
-    }
-
-    frame > border { border: none; }
-  }
-
-  .csd & placessidebar {
-    background: none;
-    border-bottom-left-radius: $window-radius;
-  }
-
-  actionbar {
-    &, > revealer > box {
-      background-color: transparent;
-    }
-  }
 }
 
 filechooserbutton > button > box {
@@ -3448,14 +3423,14 @@ separator.sidebar {
  **********************/
 
 .navigation-sidebar {
-  padding: $container-padding 0; //only vertical padding. horizontal row size would clip
+  padding: $container-padding - 2px 0; //only vertical padding. horizontal row size would clip
   border-right: none;
 
   > row {
-    min-height: $small-size;
+    min-height: $medium-size;
     padding: $container-padding $container-padding * 1.5;
     border-radius: $corner-radius;
-    margin: 0 $container-padding;
+    margin: 2px $container-padding;
 
     &:hover,
     &:focus-visible:focus-within {
@@ -3463,9 +3438,13 @@ separator.sidebar {
     }
 
     &:selected {
-      @extend %selected_items_color;
-
-      label { color: $primary; }
+      background-color: $overlay-checked;
+      color: $text;
+      font-weight: 500;
+      background-image: url("assets/selected-line.png"), url("assets/selected-line@2.png");
+      background-position: ($container-padding / 2) center;
+      background-repeat: no-repeat;
+      background-size: 3px 16px;
 
       &:hover {
         background-color: $overlay-focus-hover;
@@ -3474,6 +3453,7 @@ separator.sidebar {
       &:focus-visible:focus-within {
         outline: none;
         background-color: $overlay-focus;
+
         &:hover { background-color: $overlay-focus-hover; }
       }
     }
@@ -3671,6 +3651,7 @@ infobar {
     &:hover > revealer > box,
     &:backdrop > revealer > box {
       background-color: $base;
+      color: $text;
 
       button {
         &, &.text-button:not(:disabled) { color: $primary; }
@@ -3877,58 +3858,57 @@ colorchooser .popover.osd {
  **********************/
 
 window {
-  &.csd {
-    transition: $transition-shadow;
-    border-radius: $window-radius;
-    margin: 0;
+  transition: $transition-shadow;
+  border-radius: $window-radius;
+  margin: 0;
+  outline: none;
+
+  @if $outline == 'false' {
+    box-shadow: $shadow-z16, 0 16px (24px * .6) 2px transparent, 0 6px (30px * .6) 5px transparent;
+  } @else {
+    box-shadow: $shadow-z16, 0 16px (24px * .6) 2px transparent, 0 6px (30px * .6) 5px transparent, 0 0 0 1px $divider;
+  }
+
+  &:backdrop {
+    // the transparent shadow here is to enforce that the shadow extents don't
+    // change when we go to backdrop, to prevent jumping windows.
+    // The biggest shadow should be in the same order then in the active state
+    // or the jumping will happen during the transition.
 
     @if $outline == 'false' {
-      box-shadow: $shadow-z16, 0 16px (24px * .6) 2px transparent, 0 6px (30px * .6) 5px transparent;
+      box-shadow: $shadow-z4, 0 16px (24px * .6) 2px transparent, 0 6px (30px * .6) 5px transparent;
     } @else {
-      box-shadow: $shadow-z16, 0 16px (24px * .6) 2px transparent, 0 6px (30px * .6) 5px transparent, 0 0 0 1px $divider;
+      box-shadow: $shadow-z4, 0 16px (24px * .6) 2px transparent, 0 6px (30px * .6) 5px transparent, 0 0 0 1px $divider;
     }
-
-    &:backdrop {
-      // the transparent shadow here is to enforce that the shadow extents don't
-      // change when we go to backdrop, to prevent jumping windows.
-      // The biggest shadow should be in the same order then in the active state
-      // or the jumping will happen during the transition.
-
-      @if $outline == 'false' {
-        box-shadow: $shadow-z4, 0 16px (24px * .6) 2px transparent, 0 6px (30px * .6) 5px transparent;
-      } @else {
-        box-shadow: $shadow-z4, 0 16px (24px * .6) 2px transparent, 0 6px (30px * .6) 5px transparent, 0 0 0 1px $divider;
-      }
-    }
-
-    &.popup {
-      border-radius: $corner-radius;
-      box-shadow: $shadow-z4;
-    }
-
-    &.dialog.message {
-      border-radius: $window-radius;
-    }
-
-    .solid-csd & {
-      margin: 0;
-      padding: 2px;
-      border-radius: 0;
-      box-shadow: none;
-      box-shadow: inset 0 1px highlight($titlebar);
-      background-color: $titlebar;
-
-      &:backdrop { background-color: $titlebar-backdrop; }
-    }
-
-    .maximized &,
-    .fullscreen &,
-    .tiled &,
-    .tiled-top &,
-    .tiled-right &,
-    .tiled-bottom &,
-    .tiled-left & { border-radius: 0; }
   }
+
+  &.popup {
+    border-radius: $corner-radius;
+    box-shadow: $shadow-z4;
+  }
+
+  &.dialog.message {
+    border-radius: $window-radius;
+  }
+
+  .solid-csd & {
+    margin: 0;
+    padding: 2px;
+    border-radius: 0;
+    box-shadow: none;
+    box-shadow: inset 0 1px highlight($titlebar);
+    background-color: $titlebar;
+
+    &:backdrop { background-color: $titlebar-backdrop; }
+  }
+
+  .maximized &,
+  .fullscreen &,
+  .tiled &,
+  .tiled-top &,
+  .tiled-right &,
+  .tiled-bottom &,
+  .tiled-left & { border-radius: 0; }
 }
 
 // catch all extend :)

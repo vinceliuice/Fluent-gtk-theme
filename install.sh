@@ -248,6 +248,30 @@ install() {
   cp -r "$SRC_DIR/plank/theme${ELSE_LIGHT:-}/dock.theme"                        "$THEME_DIR/plank"
 }
 
+link_libadwaita() {
+  local dest="$1"
+  local name="$2"
+  local theme="$3"
+  local color="$4"
+  local size="$5"
+
+  if [[ "$window" == 'round' ]]; then
+    round='-round'
+  else
+    round=$window
+  fi
+
+  local THEME_DIR="$dest/$name$round$theme$color$size"
+
+  echo -e "\nLink '$THEME_DIR/gtk-4.0' to '${HOME}/.config/gtk-4.0' for libadwaita..."
+
+  mkdir -p                                                                      "${HOME}/.config/gtk-4.0"
+  rm -rf "${HOME}/.config/gtk-4.0/"{assets,gtk.css,gtk-dark.css}
+  ln -sf "${THEME_DIR}/gtk-4.0/assets"                                          "${HOME}/.config/gtk-4.0/assets"
+  ln -sf "${THEME_DIR}/gtk-4.0/gtk.css"                                         "${HOME}/.config/gtk-4.0/gtk.css"
+  ln -sf "${THEME_DIR}/gtk-4.0/gtk-dark.css"                                    "${HOME}/.config/gtk-4.0/gtk-dark.css"
+}
+
 themes=()
 colors=()
 sizes=()
@@ -645,7 +669,17 @@ install_theme() {
   done
 }
 
-install_theme
+link_theme() {
+  for theme in "${themes[@]}"; do
+    for color in "${COLOR_VARIANTS[2]}"; do
+      for size in "${SIZE_VARIANTS[0]}"; do
+        link_libadwaita "${dest:-$DEST_DIR}" "${_name:-$THEME_NAME}" "$theme" "$color" "$size"
+      done
+    done
+  done
+}
+
+install_theme && link_theme
 
 echo
 echo "Done."
