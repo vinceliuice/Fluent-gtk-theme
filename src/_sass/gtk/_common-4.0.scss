@@ -979,15 +979,16 @@ spinbutton {
   }
 
   // Misc
-  treeview &:not(.vertical),
-  row &:not(.vertical) {
-    min-height: 0;
-    border-style: none;
-    border-radius: 0;
+  // treeview &:not(.vertical),
+  list > row &:not(.vertical) {
+    > button {
+      margin: $container-padding;
 
-    > text {
-      min-height: 0;
-      padding: 1px 2px;
+      &.up:dir(ltr),
+      &.down:dir(rtl) { margin-left: $container-padding / 2; }
+
+      &.up:dir(rtl),
+      &.down:dir(ltr) { margin-right: $container-padding / 2; }
     }
   }
 }
@@ -1822,21 +1823,6 @@ popover.menu {
     }
   }
 
-  & > arrow,
-  &.background > contents {
-    padding: $container-padding;
-    background-color: $menu;
-    background-clip: border-box;
-    border: none; // axes borders in a composited env
-    border-radius: $menu-radius;
-
-    @if $outline == 'false' {
-      box-shadow: $shadow-z6;
-    } @else {
-      box-shadow: $shadow-z6, 0 0 0 1px if($variant == 'light', rgba(black, 0.06), rgba(white, 0.2));
-    }
-  }
-
   &.background separator {
     margin: $container-padding / 2 0;
   }
@@ -1890,10 +1876,11 @@ popover.background {
     padding: $container-padding;
     box-shadow: $shadow-z6; // TODO: this should really have a highlight
     background-color: $menu;
-    border-style: solid;
-    border-width: 0;
-    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.0) rgba(0, 0, 0, 0.0);
     border-radius: $corner-radius;
+
+    @if $outline == 'true' {
+      border: 1px solid if($variant == 'light', rgba(black, 0.2), rgba(white, 0.12));
+    }
   }
 
   &:backdrop {
@@ -2775,6 +2762,32 @@ scale {
       &.#{$dir_class}.#{$marks_class} {
         slider {
           transform: none;
+          transition: background-color $duration $ease-out,
+                      background-size $ripple-fade-out-duration $ease-out,
+                      background-image $ripple-fade-out-opacity-duration $ease-out;
+          min-height: 32px;
+          min-width: 32px;
+          margin: -15px;
+          border-radius: 50%;
+          background-size: auto, 1000% 1000%;
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-color: transparent;
+
+          &:focus { background-color: $overlay-focus; }
+
+          &:hover { background-color: $overlay-hover; }
+
+          &:focus:hover { background-color: $overlay-focus-hover; }
+
+          &:active {
+            transition: background-color $duration $ease-out,
+                        background-size 0ms,
+                        background-image 0ms;
+            animation: ripple-on-slider $ripple-fade-in-duration $ease-out forwards;
+            background-size: auto, 0% 0%;
+            background-color: $overlay-hover;
+          }
 
           @each $state, $state_infix in ('', ''),
                                         (':disabled', '-disabled') {

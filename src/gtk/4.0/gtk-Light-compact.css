@@ -1242,15 +1242,16 @@ spinbutton.vertical > button.down {
   margin: 0 2px;
 }
 
-treeview spinbutton:not(.vertical), row spinbutton:not(.vertical) {
-  min-height: 0;
-  border-style: none;
-  border-radius: 0;
+list > row spinbutton:not(.vertical) > button {
+  margin: 4px;
 }
 
-treeview spinbutton:not(.vertical) > text, row spinbutton:not(.vertical) > text {
-  min-height: 0;
-  padding: 1px 2px;
+list > row spinbutton:not(.vertical) > button.up:dir(ltr), list > row spinbutton:not(.vertical) > button.down:dir(rtl) {
+  margin-left: 2px;
+}
+
+list > row spinbutton:not(.vertical) > button.up:dir(rtl), list > row spinbutton:not(.vertical) > button.down:dir(ltr) {
+  margin-right: 2px;
 }
 
 /**************
@@ -2142,15 +2143,6 @@ popover.menu box.circular-buttons button.circular.image-button.model:focus {
   background-color: alpha(currentColor, 0.06);
 }
 
-popover.menu > arrow, popover.menu.background > contents {
-  padding: 4px;
-  background-color: rgba(255, 255, 255, 0.98);
-  background-clip: border-box;
-  border: none;
-  border-radius: 3px;
-  box-shadow: 0 3px 3px -1px rgba(0, 0, 0, 0.2), 0 6px 6px 0 rgba(0, 0, 0, 0.14), 0 1px 10.8px 0 rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(0, 0, 0, 0.06);
-}
-
 popover.menu.background separator {
   margin: 2px 0;
 }
@@ -2205,10 +2197,8 @@ popover.background > contents {
   padding: 4px;
   box-shadow: 0 3px 3px -1px rgba(0, 0, 0, 0.2), 0 6px 6px 0 rgba(0, 0, 0, 0.14), 0 1px 10.8px 0 rgba(0, 0, 0, 0.12);
   background-color: rgba(255, 255, 255, 0.98);
-  border-style: solid;
-  border-width: 0;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
   border-radius: 2px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 popover.background:backdrop > arrow,
@@ -3146,6 +3136,34 @@ scale.vertical indicator {
 
 scale.horizontal.marks-before:not(.marks-after) slider {
   transform: none;
+  transition: background-color 75ms cubic-bezier(0, 0, 0.2, 1), background-size 300ms cubic-bezier(0, 0, 0.2, 1), background-image 1200ms cubic-bezier(0, 0, 0.2, 1);
+  min-height: 32px;
+  min-width: 32px;
+  margin: -15px;
+  border-radius: 50%;
+  background-size: auto, 1000% 1000%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: transparent;
+}
+
+scale.horizontal.marks-before:not(.marks-after) slider:focus {
+  background-color: alpha(currentColor, 0.08);
+}
+
+scale.horizontal.marks-before:not(.marks-after) slider:hover {
+  background-color: alpha(currentColor, 0.08);
+}
+
+scale.horizontal.marks-before:not(.marks-after) slider:focus:hover {
+  background-color: alpha(currentColor, 0.16);
+}
+
+scale.horizontal.marks-before:not(.marks-after) slider:active {
+  transition: background-color 75ms cubic-bezier(0, 0, 0.2, 1), background-size 0ms, background-image 0ms;
+  animation: ripple-on-slider 225ms cubic-bezier(0, 0, 0.2, 1) forwards;
+  background-size: auto, 0% 0%;
+  background-color: alpha(currentColor, 0.08);
 }
 
 scale.horizontal.marks-before:not(.marks-after) slider {
@@ -3162,6 +3180,34 @@ scale.horizontal.marks-before:not(.marks-after) slider:active {
 
 scale.horizontal.marks-after:not(.marks-before) slider {
   transform: none;
+  transition: background-color 75ms cubic-bezier(0, 0, 0.2, 1), background-size 300ms cubic-bezier(0, 0, 0.2, 1), background-image 1200ms cubic-bezier(0, 0, 0.2, 1);
+  min-height: 32px;
+  min-width: 32px;
+  margin: -15px;
+  border-radius: 50%;
+  background-size: auto, 1000% 1000%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: transparent;
+}
+
+scale.horizontal.marks-after:not(.marks-before) slider:focus {
+  background-color: alpha(currentColor, 0.08);
+}
+
+scale.horizontal.marks-after:not(.marks-before) slider:hover {
+  background-color: alpha(currentColor, 0.08);
+}
+
+scale.horizontal.marks-after:not(.marks-before) slider:focus:hover {
+  background-color: alpha(currentColor, 0.16);
+}
+
+scale.horizontal.marks-after:not(.marks-before) slider:active {
+  transition: background-color 75ms cubic-bezier(0, 0, 0.2, 1), background-size 0ms, background-image 0ms;
+  animation: ripple-on-slider 225ms cubic-bezier(0, 0, 0.2, 1) forwards;
+  background-size: auto, 0% 0%;
+  background-color: alpha(currentColor, 0.08);
 }
 
 scale.horizontal.marks-after:not(.marks-before) slider {
@@ -3178,6 +3224,34 @@ scale.horizontal.marks-after:not(.marks-before) slider:active {
 
 scale.vertical.marks-before:not(.marks-after) slider {
   transform: none;
+  transition: background-color 75ms cubic-bezier(0, 0, 0.2, 1), background-size 300ms cubic-bezier(0, 0, 0.2, 1), background-image 1200ms cubic-bezier(0, 0, 0.2, 1);
+  min-height: 32px;
+  min-width: 32px;
+  margin: -15px;
+  border-radius: 50%;
+  background-size: auto, 1000% 1000%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: transparent;
+}
+
+scale.vertical.marks-before:not(.marks-after) slider:focus {
+  background-color: alpha(currentColor, 0.08);
+}
+
+scale.vertical.marks-before:not(.marks-after) slider:hover {
+  background-color: alpha(currentColor, 0.08);
+}
+
+scale.vertical.marks-before:not(.marks-after) slider:focus:hover {
+  background-color: alpha(currentColor, 0.16);
+}
+
+scale.vertical.marks-before:not(.marks-after) slider:active {
+  transition: background-color 75ms cubic-bezier(0, 0, 0.2, 1), background-size 0ms, background-image 0ms;
+  animation: ripple-on-slider 225ms cubic-bezier(0, 0, 0.2, 1) forwards;
+  background-size: auto, 0% 0%;
+  background-color: alpha(currentColor, 0.08);
 }
 
 scale.vertical.marks-before:not(.marks-after) slider {
@@ -3194,6 +3268,34 @@ scale.vertical.marks-before:not(.marks-after) slider:active {
 
 scale.vertical.marks-after:not(.marks-before) slider {
   transform: none;
+  transition: background-color 75ms cubic-bezier(0, 0, 0.2, 1), background-size 300ms cubic-bezier(0, 0, 0.2, 1), background-image 1200ms cubic-bezier(0, 0, 0.2, 1);
+  min-height: 32px;
+  min-width: 32px;
+  margin: -15px;
+  border-radius: 50%;
+  background-size: auto, 1000% 1000%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: transparent;
+}
+
+scale.vertical.marks-after:not(.marks-before) slider:focus {
+  background-color: alpha(currentColor, 0.08);
+}
+
+scale.vertical.marks-after:not(.marks-before) slider:hover {
+  background-color: alpha(currentColor, 0.08);
+}
+
+scale.vertical.marks-after:not(.marks-before) slider:focus:hover {
+  background-color: alpha(currentColor, 0.16);
+}
+
+scale.vertical.marks-after:not(.marks-before) slider:active {
+  transition: background-color 75ms cubic-bezier(0, 0, 0.2, 1), background-size 0ms, background-image 0ms;
+  animation: ripple-on-slider 225ms cubic-bezier(0, 0, 0.2, 1) forwards;
+  background-size: auto, 0% 0%;
+  background-color: alpha(currentColor, 0.08);
 }
 
 scale.vertical.marks-after:not(.marks-before) slider {
@@ -5244,6 +5346,33 @@ list.boxed-list > row:last-child.expander:checked list.nested > row:last-child {
 
 leaflet > box > scrolledwindow > viewport > widget > stack {
   background-color: #FFFFFF;
+}
+
+preferencesgroup > box button.background-preview-button.toggle {
+  padding: 0;
+  background: none;
+  box-shadow: none;
+  outline-color: transparent;
+  outline-width: 2px;
+  outline-offset: 3px;
+  outline-style: solid;
+  border: none;
+}
+
+preferencesgroup > box button.background-preview-button.toggle, preferencesgroup > box button.background-preview-button.toggle > background-preview {
+  border-radius: 2px;
+}
+
+preferencesgroup > box button.background-preview-button.toggle:hover {
+  outline-color: rgba(0, 0, 0, 0.12);
+}
+
+preferencesgroup > box button.background-preview-button.toggle:active {
+  outline-color: rgba(0, 0, 0, 0.26);
+}
+
+preferencesgroup > box button.background-preview-button.toggle:checked {
+  outline-color: #1A73E8;
 }
 
 /* GTK NAMED COLORS

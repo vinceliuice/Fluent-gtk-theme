@@ -818,3 +818,33 @@ leaflet {
     background-color: $base;
   }
 }
+
+// Appearance preferences on gnome setting
+preferencesgroup > box {
+  button.background-preview-button.toggle {
+    padding: 0;
+    background: none;
+    box-shadow: none;
+    outline-color: transparent;
+    outline-width: 2px;
+    outline-offset: 3px;
+    outline-style: solid;
+    border: none;
+
+    &, > background-preview {
+      border-radius: $corner-radius;
+    }
+
+    &:hover {
+      outline-color: $divider;
+    }
+
+    &:active {
+      outline-color: $track;
+    }
+
+    &:checked {
+      outline-color: $primary;
+    }
+  }
+}

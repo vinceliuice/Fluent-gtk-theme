@@ -128,7 +128,7 @@ window.assistant .sidebar {
 }
 
 window.assistant .sidebar label {
-  min-height: 32px;
+  min-height: 28px;
   padding: 0 12px;
   color: rgba(255, 255, 255, 0.5);
   font-weight: 500;
@@ -151,8 +151,8 @@ popover.background.magnifier > contents, .osd {
 }
 
 .osd {
-  padding: 6px;
-  margin: 6px;
+  padding: 4px;
+  margin: 4px;
 }
 
 .osd.circular {
@@ -233,9 +233,9 @@ spinner:checked:disabled {
  ****************/
 spinbutton.vertical, spinbutton:not(.vertical),
 entry {
-  min-height: 28px;
+  min-height: 24px;
   padding: 0 8px;
-  border-spacing: 6px;
+  border-spacing: 4px;
   border-radius: 2px;
   caret-color: currentColor;
   border: 1px solid rgba(255, 255, 255, 0.12);
@@ -298,14 +298,14 @@ entry image:disabled {
 
 spinbutton.vertical image.left, spinbutton:not(.vertical) image.left,
 entry image.left {
-  margin-left: 0px;
+  margin-left: -2px;
   margin-right: 6px;
 }
 
 spinbutton.vertical image.right, spinbutton:not(.vertical) image.right,
 entry image.right {
   margin-left: 6px;
-  margin-right: 0px;
+  margin-right: -2px;
 }
 
 spinbutton.vertical undershoot.left, spinbutton:not(.vertical) undershoot.left,
@@ -459,7 +459,7 @@ toast button:checked:disabled, menubutton.osd > button:checked:disabled, infobar
 button {
   min-height: 24px;
   min-width: 16px;
-  padding: 4px 8px;
+  padding: 2px 6px;
   border-radius: 2px;
   font-weight: 500;
   border: 1px solid rgba(255, 255, 255, 0.12);
@@ -628,29 +628,29 @@ button.text-button.flat {
 
 button.image-button {
   min-width: 24px;
-  padding: 4px;
+  padding: 2px;
 }
 
 button.text-button.image-button {
   min-width: 24px;
-  padding: 4px;
+  padding: 2px;
   border-radius: 2px;
 }
 
 button.text-button.image-button label:first-child {
-  margin-left: 12px;
+  margin-left: 14px;
 }
 
 button.text-button.image-button label:last-child {
-  margin-right: 12px;
+  margin-right: 14px;
 }
 
 button.text-button.image-button.flat label:first-child {
-  margin-left: 8px;
+  margin-left: 10px;
 }
 
 button.text-button.image-button.flat label:last-child {
-  margin-right: 8px;
+  margin-right: 10px;
 }
 
 button.text-button.image-button image:not(:only-child) {
@@ -690,11 +690,11 @@ button.text-button.image-button image:not(:only-child) {
 }
 
 button.osd {
-  padding: 10px 14px;
+  padding: 6px 10px;
 }
 
 button.osd.image-button {
-  padding: 10px;
+  padding: 6px;
 }
 
 button.osd:disabled {
@@ -816,7 +816,7 @@ stackswitcher > button.needs-attention:checked > image {
 }
 
 button.font > box, button.file > box {
-  border-spacing: 6px;
+  border-spacing: 4px;
 }
 
 button.font > box > box > label, button.file > box > box > label {
@@ -832,8 +832,8 @@ menubutton.circular > button label, filechooser #pathbarbox > stack > box > butt
 }
 
 placessidebar .navigation-sidebar > row button.sidebar-button, popover.menu box.circular-buttons button.circular.image-button.model, spinbutton.vertical > button, spinbutton:not(.vertical) > button {
-  min-height: 22px;
-  min-width: 22px;
+  min-height: 20px;
+  min-width: 20px;
   padding: 0;
   border-radius: 9999px;
 }
@@ -1116,7 +1116,7 @@ stackswitcher > button.needs-attention > image:dir(rtl) {
 
 modelbutton.flat {
   min-height: 28px;
-  padding: 0 9px;
+  padding: 0 6px;
   border-radius: 2px;
   color: white;
 }
@@ -1130,9 +1130,9 @@ modelbutton.flat arrow.right {
 }
 
 button.color {
-  min-height: 22px;
-  min-width: 22px;
-  padding: 6px;
+  min-height: 20px;
+  min-width: 20px;
+  padding: 4px;
 }
 
 
@@ -1179,9 +1179,9 @@ spinbutton:not(.vertical) {
 }
 
 spinbutton:not(.vertical) > text {
-  min-width: 28px;
+  min-width: 20px;
   margin: 0;
-  padding-left: 12px;
+  padding-left: 8px;
   border: none;
   border-image: none;
   border-radius: 0;
@@ -1190,7 +1190,7 @@ spinbutton:not(.vertical) > text {
 }
 
 spinbutton:not(.vertical) > button {
-  border: solid 6px transparent;
+  border: solid 4px transparent;
 }
 
 spinbutton:not(.vertical) > button:focus:not(:hover):not(:active):not(:disabled) {
@@ -1199,11 +1199,11 @@ spinbutton:not(.vertical) > button:focus:not(:hover):not(:active):not(:disabled)
 }
 
 spinbutton:not(.vertical) > button.up:dir(ltr), spinbutton:not(.vertical) > button.down:dir(rtl) {
-  margin-left: -3px;
+  margin-left: -2px;
 }
 
 spinbutton:not(.vertical) > button.up:dir(rtl), spinbutton:not(.vertical) > button.down:dir(ltr) {
-  margin-right: -3px;
+  margin-right: -2px;
 }
 
 spinbutton.vertical {
@@ -1226,7 +1226,7 @@ spinbutton.vertical > text {
 
 spinbutton.vertical > button {
   padding: 0;
-  border: solid 6px transparent;
+  border: solid 4px transparent;
 }
 
 spinbutton.vertical > button:focus:not(:hover):not(:active) {
@@ -1235,22 +1235,23 @@ spinbutton.vertical > button:focus:not(:hover):not(:active) {
 }
 
 spinbutton.vertical > button.up {
-  margin: 0 3px;
+  margin: 0 2px;
 }
 
 spinbutton.vertical > button.down {
-  margin: 0 3px;
+  margin: 0 2px;
 }
 
-treeview spinbutton:not(.vertical), row spinbutton:not(.vertical) {
-  min-height: 0;
-  border-style: none;
-  border-radius: 0;
+list > row spinbutton:not(.vertical) > button {
+  margin: 4px;
 }
 
-treeview spinbutton:not(.vertical) > text, row spinbutton:not(.vertical) > text {
-  min-height: 0;
-  padding: 1px 2px;
+list > row spinbutton:not(.vertical) > button.up:dir(ltr), list > row spinbutton:not(.vertical) > button.down:dir(rtl) {
+  margin-left: 2px;
+}
+
+list > row spinbutton:not(.vertical) > button.up:dir(rtl), list > row spinbutton:not(.vertical) > button.down:dir(ltr) {
+  margin-right: 2px;
 }
 
 /**************
@@ -1261,7 +1262,7 @@ dropdown > popover.menu.background > contents {
 }
 
 dropdown > button > box {
-  border-spacing: 6px;
+  border-spacing: 4px;
 }
 
 dropdown arrow,
@@ -1273,29 +1274,29 @@ combobox arrow {
 
 dropdown > popover.menu > contents modelbutton,
 combobox > popover.menu > contents modelbutton {
-  padding-left: 9px;
-  padding-right: 9px;
+  padding-left: 6px;
+  padding-right: 6px;
 }
 
 dropdown popover,
 combobox popover {
-  margin-top: 4px;
+  margin-top: 2px;
   padding: 0;
 }
 
 dropdown popover .dropdown-searchbar,
 combobox popover .dropdown-searchbar {
-  padding: 6px;
+  padding: 4px;
 }
 
 dropdown button.combo cellview:dir(ltr),
 combobox button.combo cellview:dir(ltr) {
-  margin-left: 0px;
+  margin-left: 2px;
 }
 
 dropdown button.combo cellview:dir(rtl),
 combobox button.combo cellview:dir(rtl) {
-  margin-right: 0px;
+  margin-right: 2px;
 }
 
 dropdown.linked button:nth-child(2):dir(ltr),
@@ -1318,22 +1319,22 @@ combobox > .linked:not(.vertical) > entry:not(:only-child) {
 
 dropdown > .linked:not(.vertical) > entry:not(:only-child):first-child,
 combobox > .linked:not(.vertical) > entry:not(:only-child):first-child {
-  margin-right: -32px;
-  padding-right: 32px;
+  margin-right: -28px;
+  padding-right: 28px;
 }
 
 dropdown > .linked:not(.vertical) > entry:not(:only-child):last-child,
 combobox > .linked:not(.vertical) > entry:not(:only-child):last-child {
-  margin-left: -32px;
-  padding-left: 32px;
+  margin-left: -28px;
+  padding-left: 28px;
 }
 
 dropdown > .linked:not(.vertical) > button:not(:only-child),
 combobox > .linked:not(.vertical) > button:not(:only-child) {
   min-height: 16px;
   min-width: 16px;
-  margin: 5px;
-  padding: 3px;
+  margin: 4px;
+  padding: 2px;
   border-radius: 2px;
 }
 
@@ -1410,9 +1411,9 @@ combobox > .linked:not(.vertical) > button:not(:only-child) {
  ************/
 .toolbar,
 toolbar {
-  padding: 3px 6px;
+  padding: 2px 4px;
   background-color: #333333;
-  border-spacing: 6px;
+  border-spacing: 4px;
 }
 
 .osd .toolbar, .osd toolbar {
@@ -1422,7 +1423,7 @@ toolbar {
 .app-notification, .toolbar.osd,
 toolbar.osd {
   transition: box-shadow 75ms cubic-bezier(0, 0, 0.2, 1);
-  padding: 6px;
+  padding: 4px;
   border-radius: 2px;
   box-shadow: 0 2px 2.4px -1px rgba(0, 0, 0, 0.2), 0 4px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 6px 0 rgba(0, 0, 0, 0.12), inset 0 1px rgba(255, 255, 255, 0.1);
   background-color: #3C3C3C;
@@ -1497,7 +1498,7 @@ toolbar:not(.inline-toolbar):not(.osd):not(.primary-toolbar) spinbutton button {
 
 .toolbar:not(.inline-toolbar):not(.osd):not(.primary-toolbar) switch,
 toolbar:not(.inline-toolbar):not(.osd):not(.primary-toolbar) switch {
-  margin: 8px 2px;
+  margin: 6px 2px;
 }
 
 .toolbar button {
@@ -1505,8 +1506,8 @@ toolbar:not(.inline-toolbar):not(.osd):not(.primary-toolbar) switch {
 }
 
 searchbar > revealer > box {
-  padding: 6px;
-  border-spacing: 6px;
+  padding: 4px;
+  border-spacing: 4px;
   border-style: solid;
   border-width: 0 0 1px;
   border-color: rgba(255, 255, 255, 0.12);
@@ -1525,7 +1526,7 @@ searchbar > revealer > box entry {
 headerbar button:not(.suggested-action):not(.destructive-action) {
   color: rgba(255, 255, 255, 0.7);
   border-radius: 2px;
-  padding: 3px 8px;
+  padding: 1px 6px;
 }
 
 headerbar .linked:not(.vertical) > button:not(.suggested-action):not(.destructive-action) {
@@ -1602,8 +1603,8 @@ headerbar {
   transition: background-color 75ms cubic-bezier(0, 0, 0.2, 1), color 75ms cubic-bezier(0, 0, 0.2, 1);
   box-shadow: inset 0 -1px rgba(255, 255, 255, 0.12);
   color: white;
-  min-height: 44px;
-  padding: 0 6px;
+  min-height: 36px;
+  padding: 0 4px;
   background-color: rgba(32, 32, 32, 0.98);
 }
 
@@ -1621,12 +1622,12 @@ headerbar:backdrop:disabled {
 }
 
 headerbar .title {
-  padding: 0 12px;
+  padding: 0 8px;
   font-weight: bold;
 }
 
 headerbar .subtitle {
-  padding: 0 12px;
+  padding: 0 8px;
   font-size: smaller;
 }
 
@@ -1655,14 +1656,14 @@ headerbar .titlebar {
 headerbar > windowhandle > box,
 headerbar > windowhandle > box > box.start,
 headerbar > windowhandle > box > box.end {
-  border-spacing: 6px;
+  border-spacing: 4px;
 }
 
 headerbar entry,
 headerbar spinbutton,
 headerbar button {
-  margin-top: 6px;
-  margin-bottom: 6px;
+  margin-top: 4px;
+  margin-bottom: 4px;
 }
 
 headerbar menubutton {
@@ -1671,14 +1672,14 @@ headerbar menubutton {
 }
 
 headerbar separator:not(.sidebar) {
-  margin-top: 11px;
-  margin-bottom: 11px;
+  margin-top: 9px;
+  margin-bottom: 9px;
   background-color: rgba(255, 255, 255, 0.12);
 }
 
 headerbar switch {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 6px;
+  margin-bottom: 6px;
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3);
 }
 
@@ -1783,20 +1784,20 @@ headerbar .selection-mode {
 }
 
 headerbar windowcontrols {
-  border-spacing: 6px;
+  border-spacing: 4px;
 }
 
 headerbar windowcontrols:not(.empty).start:dir(ltr), headerbar windowcontrols:not(.empty).end:dir(rtl) {
-  margin-right: 6px;
+  margin-right: 4px;
 }
 
 headerbar windowcontrols:not(.empty).start:dir(rtl), headerbar windowcontrols:not(.empty).end:dir(ltr) {
-  margin-left: 6px;
+  margin-left: 4px;
 }
 
 headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action) {
-  min-height: 26px;
-  min-width: 26px;
+  min-height: 22px;
+  min-width: 22px;
   padding: 0;
   margin-left: 3px;
   margin-right: 3px;
@@ -1818,8 +1819,8 @@ headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action
 
 headerbar.default-decoration {
   background-color: #202020;
-  min-height: 22px;
-  padding: 6px;
+  min-height: 20px;
+  padding: 4px;
   border-radius: 2px 2px 0 0;
   box-shadow: none;
 }
@@ -1835,8 +1836,8 @@ headerbar.default-decoration:backdrop {
 
 headerbar.default-decoration windowcontrols button,
 headerbar.default-decoration windowcontrols menubutton {
-  min-height: 22px;
-  min-width: 22px;
+  min-height: 20px;
+  min-width: 20px;
   margin: 0;
   padding: 0;
 }
@@ -1860,8 +1861,8 @@ window.devel headerbar.titlebar:backdrop {
  ************/
 
 pathbar > button {
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 8px;
+  padding-right: 8px;
   border-image: radial-gradient(circle closest-corner at center calc(100% - 1px), #3281ea 0%, transparent 0%) 0 0 0/0 0 0px;
   border-radius: 2px;
 }
@@ -2083,8 +2084,8 @@ menubar:backdrop {
 
 menubar > item {
   transition: background-color 75ms cubic-bezier(0, 0, 0.2, 1);
-  min-height: 20px;
-  padding: 4px 8px;
+  min-height: 16px;
+  padding: 2px 6px;
   color: rgba(255, 255, 255, 0.7);
 }
 
@@ -2103,7 +2104,7 @@ menubar > item label:disabled {
 }
 
 menubar > item popover.menu popover.menu {
-  margin-left: 6px;
+  margin-left: 4px;
 }
 
 menubar > item popover.menu.background popover.menu.background > contents {
@@ -2114,7 +2115,7 @@ menubar > item popover.menu.background popover.menu.background > contents {
  * Popover Base Menus *
  **********************/
 popover.menu box.inline-buttons {
-  padding: 0 6px;
+  padding: 0 4px;
 }
 
 popover.menu box.inline-buttons button.image-button.model {
@@ -2131,28 +2132,19 @@ popover.menu box.inline-buttons button.image-button.model:selected {
 }
 
 popover.menu box.circular-buttons {
-  padding: 6px;
+  padding: 4px;
 }
 
 popover.menu box.circular-buttons button.circular.image-button.model {
-  padding: 6px;
+  padding: 4px;
 }
 
 popover.menu box.circular-buttons button.circular.image-button.model:focus {
   background-color: alpha(currentColor, 0.06);
 }
 
-popover.menu > arrow, popover.menu.background > contents {
-  padding: 6px;
-  background-color: rgba(60, 60, 60, 0.98);
-  background-clip: border-box;
-  border: none;
-  border-radius: 3px;
-  box-shadow: 0 3px 3px -1px rgba(0, 0, 0, 0.2), 0 6px 6px 0 rgba(0, 0, 0, 0.14), 0 1px 10.8px 0 rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(255, 255, 255, 0.2);
-}
-
 popover.menu.background separator {
-  margin: 3px 0;
+  margin: 2px 0;
 }
 
 popover.menu arrow.left,
@@ -2171,9 +2163,9 @@ popover.menu check.right {
 
 popover.menu modelbutton {
   transition: background-color 75ms cubic-bezier(0, 0, 0.2, 1);
-  min-height: 20px;
+  min-height: 16px;
   min-width: 40px;
-  padding: 4px 8px;
+  padding: 2px 6px;
   color: white;
   font: initial;
   text-shadow: none;
@@ -2202,13 +2194,11 @@ popover.background, popover.background:backdrop {
 popover.background > arrow,
 popover.background > contents {
   transition: box-shadow 75ms cubic-bezier(0, 0, 0.2, 1);
-  padding: 6px;
+  padding: 4px;
   box-shadow: 0 3px 3px -1px rgba(0, 0, 0, 0.2), 0 6px 6px 0 rgba(0, 0, 0, 0.14), 0 1px 10.8px 0 rgba(0, 0, 0, 0.12);
   background-color: rgba(60, 60, 60, 0.98);
-  border-style: solid;
-  border-width: 0;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
   border-radius: 2px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 popover.background:backdrop > arrow,
@@ -2234,7 +2224,7 @@ popover.background > contents > toolbar {
 
 popover.background > contents separator {
   background-color: rgba(255, 255, 255, 0.12);
-  margin: 3px 0;
+  margin: 2px 0;
 }
 
 popover.background > contents list separator {
@@ -2252,7 +2242,7 @@ popover.background listview {
 }
 
 popover.background listview > row {
-  padding: 6px 12px;
+  padding: 4px 8px;
 }
 
 popover.background listview > row:selected {
@@ -2304,9 +2294,9 @@ magnifier {
  *************/
 notebook > header tab {
   transition: all 75ms cubic-bezier(0, 0, 0.2, 1), background-size 0ms, background-image 0ms;
-  min-height: 22px;
-  min-width: 22px;
-  padding: 3px 12px;
+  min-height: 20px;
+  min-width: 20px;
+  padding: 2px 12px;
   border-width: 1px;
   border-color: transparent;
   border-style: solid;
@@ -2377,7 +2367,7 @@ notebook > header.top {
 
 notebook > header.top > tabs {
   margin-bottom: -1px;
-  margin-top: 3px;
+  margin-top: 2px;
 }
 
 notebook > header.top > tabs > tab {
@@ -2392,7 +2382,7 @@ notebook > header.bottom {
 
 notebook > header.bottom > tabs {
   margin-top: -1px;
-  margin-bottom: 3px;
+  margin-bottom: 2px;
 }
 
 notebook > header.bottom > tabs > tab {
@@ -2406,7 +2396,7 @@ notebook > header.left {
 }
 
 notebook > header.left > tabs {
-  margin-left: 3px;
+  margin-left: 2px;
   margin-right: -1px;
 }
 
@@ -2422,7 +2412,7 @@ notebook > header.right {
 
 notebook > header.right > tabs {
   margin-left: -1px;
-  margin-right: 3px;
+  margin-right: 2px;
 }
 
 notebook > header.right > tabs > tab {
@@ -2484,8 +2474,8 @@ notebook > header > tabs > arrow {
 
 notebook > header tab > box {
   transition: background-color 75ms cubic-bezier(0, 0, 0.2, 1);
-  margin: -6px -12px;
-  padding: 6px 12px;
+  margin: -4px -12px;
+  padding: 4px 12px;
 }
 
 notebook > header tab > box:drop(active) {
@@ -2501,13 +2491,13 @@ notebook > header tab button.flat {
 }
 
 notebook > header tab button.flat:last-child {
-  margin-left: 6px;
-  margin-right: -6px;
+  margin-left: 4px;
+  margin-right: -8px;
 }
 
 notebook > header tab button.flat:first-child {
-  margin-left: -6px;
-  margin-right: 6px;
+  margin-left: -8px;
+  margin-right: 4px;
 }
 
 notebook > header.top tabs, notebook > header.bottom tabs {
@@ -2584,8 +2574,8 @@ scrollbar > range > trough {
 
 scrollbar > range > trough > slider {
   transition: background-color 75ms cubic-bezier(0, 0, 0.2, 1);
-  min-width: 10px;
-  min-height: 10px;
+  min-width: 8px;
+  min-height: 8px;
   border: none;
   border-radius: 0;
   background-clip: padding-box;
@@ -2639,7 +2629,7 @@ scrollbar.overlay-indicator:not(.dragging):not(.hovering) {
 scrollbar.overlay-indicator:not(.dragging):not(.hovering) > range > trough > slider {
   min-width: 4px;
   min-height: 4px;
-  margin: 3px;
+  margin: 2px;
   border: 1px solid rgba(43, 43, 43, 0.3);
 }
 
@@ -2714,7 +2704,7 @@ scrollbar.horizontal button.up {
  **********/
 switch {
   transition: all 75ms cubic-bezier(0, 0, 0.2, 1);
-  margin: 6px 0;
+  margin: 4px 0;
   padding: 0;
   border: 0 solid transparent;
   border-radius: 9999px;
@@ -3000,11 +2990,11 @@ scale {
 }
 
 scale.horizontal {
-  padding: 15px 12px;
+  padding: 13px 12px;
 }
 
 scale.vertical {
-  padding: 12px 15px;
+  padding: 12px 13px;
 }
 
 scale > trough {
@@ -3070,14 +3060,14 @@ scale > trough > slider:disabled {
 
 scale.fine-tune.horizontal {
   min-height: 4px;
-  padding-top: 14px;
-  padding-bottom: 14px;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 
 scale.fine-tune.vertical {
   min-width: 4px;
-  padding-left: 14px;
-  padding-right: 14px;
+  padding-left: 12px;
+  padding-right: 12px;
 }
 
 scale.fine-tune > trough > slider {
@@ -3146,6 +3136,34 @@ scale.vertical indicator {
 
 scale.horizontal.marks-before:not(.marks-after) slider {
   transform: none;
+  transition: background-color 75ms cubic-bezier(0, 0, 0.2, 1), background-size 300ms cubic-bezier(0, 0, 0.2, 1), background-image 1200ms cubic-bezier(0, 0, 0.2, 1);
+  min-height: 32px;
+  min-width: 32px;
+  margin: -15px;
+  border-radius: 50%;
+  background-size: auto, 1000% 1000%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: transparent;
+}
+
+scale.horizontal.marks-before:not(.marks-after) slider:focus {
+  background-color: alpha(currentColor, 0.08);
+}
+
+scale.horizontal.marks-before:not(.marks-after) slider:hover {
+  background-color: alpha(currentColor, 0.08);
+}
+
+scale.horizontal.marks-before:not(.marks-after) slider:focus:hover {
+  background-color: alpha(currentColor, 0.16);
+}
+
+scale.horizontal.marks-before:not(.marks-after) slider:active {
+  transition: background-color 75ms cubic-bezier(0, 0, 0.2, 1), background-size 0ms, background-image 0ms;
+  animation: ripple-on-slider 225ms cubic-bezier(0, 0, 0.2, 1) forwards;
+  background-size: auto, 0% 0%;
+  background-color: alpha(currentColor, 0.08);
 }
 
 scale.horizontal.marks-before:not(.marks-after) slider {
@@ -3162,6 +3180,34 @@ scale.horizontal.marks-before:not(.marks-after) slider:active {
 
 scale.horizontal.marks-after:not(.marks-before) slider {
   transform: none;
+  transition: background-color 75ms cubic-bezier(0, 0, 0.2, 1), background-size 300ms cubic-bezier(0, 0, 0.2, 1), background-image 1200ms cubic-bezier(0, 0, 0.2, 1);
+  min-height: 32px;
+  min-width: 32px;
+  margin: -15px;
+  border-radius: 50%;
+  background-size: auto, 1000% 1000%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: transparent;
+}
+
+scale.horizontal.marks-after:not(.marks-before) slider:focus {
+  background-color: alpha(currentColor, 0.08);
+}
+
+scale.horizontal.marks-after:not(.marks-before) slider:hover {
+  background-color: alpha(currentColor, 0.08);
+}
+
+scale.horizontal.marks-after:not(.marks-before) slider:focus:hover {
+  background-color: alpha(currentColor, 0.16);
+}
+
+scale.horizontal.marks-after:not(.marks-before) slider:active {
+  transition: background-color 75ms cubic-bezier(0, 0, 0.2, 1), background-size 0ms, background-image 0ms;
+  animation: ripple-on-slider 225ms cubic-bezier(0, 0, 0.2, 1) forwards;
+  background-size: auto, 0% 0%;
+  background-color: alpha(currentColor, 0.08);
 }
 
 scale.horizontal.marks-after:not(.marks-before) slider {
@@ -3178,6 +3224,34 @@ scale.horizontal.marks-after:not(.marks-before) slider:active {
 
 scale.vertical.marks-before:not(.marks-after) slider {
   transform: none;
+  transition: background-color 75ms cubic-bezier(0, 0, 0.2, 1), background-size 300ms cubic-bezier(0, 0, 0.2, 1), background-image 1200ms cubic-bezier(0, 0, 0.2, 1);
+  min-height: 32px;
+  min-width: 32px;
+  margin: -15px;
+  border-radius: 50%;
+  background-size: auto, 1000% 1000%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: transparent;
+}
+
+scale.vertical.marks-before:not(.marks-after) slider:focus {
+  background-color: alpha(currentColor, 0.08);
+}
+
+scale.vertical.marks-before:not(.marks-after) slider:hover {
+  background-color: alpha(currentColor, 0.08);
+}
+
+scale.vertical.marks-before:not(.marks-after) slider:focus:hover {
+  background-color: alpha(currentColor, 0.16);
+}
+
+scale.vertical.marks-before:not(.marks-after) slider:active {
+  transition: background-color 75ms cubic-bezier(0, 0, 0.2, 1), background-size 0ms, background-image 0ms;
+  animation: ripple-on-slider 225ms cubic-bezier(0, 0, 0.2, 1) forwards;
+  background-size: auto, 0% 0%;
+  background-color: alpha(currentColor, 0.08);
 }
 
 scale.vertical.marks-before:not(.marks-after) slider {
@@ -3194,6 +3268,34 @@ scale.vertical.marks-before:not(.marks-after) slider:active {
 
 scale.vertical.marks-after:not(.marks-before) slider {
   transform: none;
+  transition: background-color 75ms cubic-bezier(0, 0, 0.2, 1), background-size 300ms cubic-bezier(0, 0, 0.2, 1), background-image 1200ms cubic-bezier(0, 0, 0.2, 1);
+  min-height: 32px;
+  min-width: 32px;
+  margin: -15px;
+  border-radius: 50%;
+  background-size: auto, 1000% 1000%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: transparent;
+}
+
+scale.vertical.marks-after:not(.marks-before) slider:focus {
+  background-color: alpha(currentColor, 0.08);
+}
+
+scale.vertical.marks-after:not(.marks-before) slider:hover {
+  background-color: alpha(currentColor, 0.08);
+}
+
+scale.vertical.marks-after:not(.marks-before) slider:focus:hover {
+  background-color: alpha(currentColor, 0.16);
+}
+
+scale.vertical.marks-after:not(.marks-before) slider:active {
+  transition: background-color 75ms cubic-bezier(0, 0, 0.2, 1), background-size 0ms, background-image 0ms;
+  animation: ripple-on-slider 225ms cubic-bezier(0, 0, 0.2, 1) forwards;
+  background-size: auto, 0% 0%;
+  background-color: alpha(currentColor, 0.08);
 }
 
 scale.vertical.marks-after:not(.marks-before) slider {
@@ -3304,7 +3406,7 @@ levelbar.horizontal trough > block {
 }
 
 levelbar.horizontal.discrete trough > block {
-  min-width: 32px;
+  min-width: 28px;
 }
 
 levelbar.horizontal.discrete trough > block:not(:last-child) {
@@ -3316,7 +3418,7 @@ levelbar.vertical trough > block {
 }
 
 levelbar.vertical.discrete trough > block {
-  min-height: 32px;
+  min-height: 28px;
 }
 
 levelbar.vertical.discrete trough > block:not(:last-child) {
@@ -3404,8 +3506,8 @@ frame.flat > border, statusbar frame > border {
 }
 
 actionbar > revealer > box {
-  padding: 6px;
-  border-spacing: 6px;
+  padding: 4px;
+  border-spacing: 4px;
   border-top: 1px solid rgba(255, 255, 255, 0.12);
   background-color: #2B2B2B;
   background-clip: border-box;
@@ -3580,13 +3682,13 @@ columnview row:not(:selected) cell editablelabel.editing text selection {
 }
 
 .rich-list > row {
-  padding: 9px 12px;
+  padding: 6px 8px;
   min-height: 32px;
   /* should be tall even when only containing a label */
 }
 
 .rich-list > row > box {
-  border-spacing: 12px;
+  border-spacing: 8px;
 }
 
 /*********************
@@ -3594,8 +3696,8 @@ columnview row:not(:selected) cell editablelabel.editing text selection {
  *********************/
 .app-notification {
   margin: 8px;
-  border-spacing: 6px;
-  padding: 6px;
+  border-spacing: 4px;
+  padding: 4px;
 }
 
 .app-notification button.text-button:not(:disabled) {
@@ -3667,16 +3769,16 @@ calendar:selected {
 }
 
 calendar > header {
-  padding: 3px;
+  padding: 2px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 calendar > header > button {
-  min-height: 22px;
+  min-height: 20px;
 }
 
 calendar > grid {
-  margin: 3px;
+  margin: 2px;
 }
 
 calendar > grid > label {
@@ -3693,7 +3795,7 @@ calendar > grid > label:focus {
 }
 
 calendar > grid > label.day-number {
-  padding: 9px;
+  padding: 6px;
 }
 
 calendar > grid > label.day-number.other-month {
@@ -3712,7 +3814,7 @@ window.dialog.message box.dialog-vbox.vertical {
 }
 
 window.dialog.message .titlebar {
-  min-height: 22px;
+  min-height: 20px;
   border-style: none;
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
   background-color: #3C3C3C;
@@ -3730,7 +3832,7 @@ window.dialog.message.csd.background {
 }
 
 window.dialog.message.csd .dialog-action-area {
-  margin-top: -6px;
+  margin-top: -4px;
 }
 
 window.dialog.message.csd .dialog-action-area > button, window.dialog.message.csd .dialog-action-area > button:first-child, window.dialog.message.csd .dialog-action-area > button:last-child {
@@ -3738,7 +3840,7 @@ window.dialog.message.csd .dialog-action-area > button, window.dialog.message.cs
 }
 
 window.dialog.message.csd .dialog-action-area > button:not(:last-child) {
-  margin-right: 6px;
+  margin-right: 4px;
 }
 
 window.dialog.message.csd .dialog-action-area > button.suggested-action:not(:disabled) {
@@ -3764,7 +3866,7 @@ filechooser #pathbarbox {
 }
 
 filechooserbutton > button > box {
-  border-spacing: 6px;
+  border-spacing: 4px;
 }
 
 filechooserbutton:drop(active) {
@@ -3833,15 +3935,15 @@ separator.sidebar {
  * Navigation Sidebar *
  **********************/
 .navigation-sidebar {
-  padding: 4px 0;
+  padding: 2px 0;
   border-right: none;
 }
 
 .navigation-sidebar > row {
-  min-height: 32px;
-  padding: 6px 9px;
+  min-height: 28px;
+  padding: 4px 6px;
   border-radius: 2px;
-  margin: 2px 6px;
+  margin: 2px 4px;
 }
 
 .navigation-sidebar > row:hover, .navigation-sidebar > row:focus-visible:focus-within {
@@ -3853,7 +3955,7 @@ separator.sidebar {
   color: white;
   font-weight: 500;
   background-image: url("assets/selected-line.png"), url("assets/selected-line@2.png");
-  background-position: 3px center;
+  background-position: 2px center;
   background-repeat: no-repeat;
   background-size: 3px 16px;
 }
@@ -3896,8 +3998,8 @@ placessidebar list {
 }
 
 placessidebar .navigation-sidebar > row {
-  min-height: 32px;
-  margin: 0 6px;
+  min-height: 28px;
+  margin: 0 4px;
   padding: 0;
   border-radius: 2px;
   transition: background-image 0, box-shadow 0;
@@ -3916,7 +4018,7 @@ placessidebar .navigation-sidebar > row:selected {
   color: white;
   font-weight: 500;
   background-image: url("assets/selected-line.png"), url("assets/selected-line@2.png");
-  background-position: 3px center;
+  background-position: 2px center;
   background-repeat: no-repeat;
   background-size: 3px 20px;
   transition: background-image 0, box-shadow 0;
@@ -3974,7 +4076,7 @@ placesview .server-list-button:checked > image {
 }
 
 placesview > actionbar > revealer > box > label {
-  border-spacing: 6px;
+  border-spacing: 4px;
 }
 
 /*********
@@ -4060,8 +4162,8 @@ infobar {
 }
 
 infobar > revealer > box {
-  padding: 6px;
-  border-spacing: 12px;
+  padding: 4px;
+  border-spacing: 8px;
 }
 
 infobar.info > revealer > box, infobar.info:hover > revealer > box, infobar.info:backdrop > revealer > box {
@@ -4116,7 +4218,7 @@ infobar.error > revealer > box *:link, infobar.error:backdrop > revealer > box *
  * Tooltips *
  ************/
 tooltip {
-  padding: 6px 12px;
+  padding: 4px 8px;
   box-shadow: none;
 }
 
@@ -4129,7 +4231,7 @@ tooltip.background {
 }
 
 tooltip > box {
-  border-spacing: 6px;
+  border-spacing: 4px;
 }
 
 /*****************
@@ -4341,7 +4443,7 @@ shortcut > .keycap {
 stackswitcher {
   min-height: 0;
   padding: 0;
-  margin: 6px 0;
+  margin: 4px 0;
   border-radius: 2px;
   background-color: alpha(currentColor, 0.05);
 }
@@ -4376,13 +4478,13 @@ stackswitcher button.text-button {
 }
 
 stackswitcher.circular {
-  border-spacing: 12px;
+  border-spacing: 8px;
 }
 
 stackswitcher.circular button.circular,
 stackswitcher.circular button.text-button.circular {
-  min-width: 32px;
-  min-height: 32px;
+  min-width: 28px;
+  min-height: 28px;
   padding: 0;
 }
 
@@ -4409,8 +4511,8 @@ popover.emoji-picker > contents {
 }
 
 .emoji-searchbar {
-  padding: 6px;
-  border-spacing: 6px;
+  padding: 4px;
+  border-spacing: 4px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
   background: none;
 }
@@ -4422,15 +4524,15 @@ popover.emoji-picker > contents {
 
 .emoji-toolbar {
   padding: 0;
-  border-spacing: 3px;
+  border-spacing: 2px;
   border-top: 1px solid rgba(255, 255, 255, 0.12);
   background: none;
 }
 
 button.emoji-section {
   margin: 0;
-  padding: 6px;
-  border-radius: -1px;
+  padding: 4px;
+  border-radius: 0px;
 }
 
 button.emoji-section:checked {
@@ -4439,7 +4541,7 @@ button.emoji-section:checked {
 
 popover.emoji-picker emoji {
   font-size: x-large;
-  padding: 6px;
+  padding: 4px;
   transition: all 75ms cubic-bezier(0, 0, 0.2, 1);
   border-radius: 2px;
 }
@@ -4450,12 +4552,12 @@ popover.emoji-picker emoji:focus, popover.emoji-picker emoji:hover {
 
 emoji-completion-row {
   min-height: 28px;
-  padding: 0 12px;
+  padding: 0 8px;
 }
 
 emoji-completion-row > box {
-  border-spacing: 6px;
-  padding: 2px 6px;
+  border-spacing: 4px;
+  padding: 2px 4px;
 }
 
 emoji-completion-row:focus, emoji-completion-row:hover,
@@ -4469,7 +4571,7 @@ popover.entry-completion > contents {
 }
 
 statusbar {
-  padding: 6px 12px;
+  padding: 4px 8px;
 }
 
 /**************
@@ -4613,7 +4715,7 @@ button.font separator {
 }
 
 button.font > box {
-  border-spacing: 6px;
+  border-spacing: 4px;
 }
 
 button.font > box > box > label {
@@ -4701,8 +4803,8 @@ menubutton.suggested-action > button, menubutton.suggested-action > button:check
 
 menubutton.image-button > button {
   min-width: 24px;
-  padding-left: 6px;
-  padding-right: 6px;
+  padding-left: 4px;
+  padding-right: 4px;
 }
 
 menubutton arrow {
@@ -4740,8 +4842,8 @@ splitbutton, splitbutton > separator {
 }
 
 splitbutton > separator {
-  margin-top: 6px;
-  margin-bottom: 6px;
+  margin-top: 4px;
+  margin-bottom: 4px;
   background: none;
 }
 
@@ -4752,17 +4854,17 @@ splitbutton > menubutton > button {
 
 splitbutton.image-button > button {
   min-width: 24px;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+splitbutton.text-button.image-button > button, splitbutton.image-text-button > button {
   padding-left: 6px;
   padding-right: 6px;
 }
 
-splitbutton.text-button.image-button > button, splitbutton.image-text-button > button {
-  padding-left: 9px;
-  padding-right: 9px;
-}
-
 splitbutton.text-button.image-button > button > box, splitbutton.image-text-button > button > box {
-  border-spacing: 6px;
+  border-spacing: 4px;
 }
 
 splitbutton > button:dir(ltr),
@@ -4834,7 +4936,7 @@ splitbutton > menubutton > button > arrow.none {
 }
 
 buttoncontent {
-  border-spacing: 6px;
+  border-spacing: 4px;
 }
 
 buttoncontent > label {
@@ -4858,32 +4960,32 @@ buttoncontent > label:dir(rtl) {
 }
 
 toast {
-  margin: 12px;
+  margin: 8px;
   margin-bottom: 24px;
   border-radius: 9999px;
-  border-spacing: 6px;
-  padding: 6px;
+  border-spacing: 4px;
+  padding: 4px;
 }
 
 toast:dir(ltr) {
-  padding-left: 12px;
+  padding-left: 8px;
 }
 
 toast:dir(rtl) {
-  padding-right: 12px;
+  padding-right: 8px;
 }
 
 toast > widget {
-  margin: 0 6px;
+  margin: 0 4px;
 }
 
 statuspage > scrolledwindow > viewport > box {
-  margin: 36px 12px;
-  border-spacing: 24px;
+  margin: 24px 8px;
+  border-spacing: 16px;
 }
 
 statuspage > scrolledwindow > viewport > box > clamp > box {
-  border-spacing: 12px;
+  border-spacing: 8px;
 }
 
 statuspage > scrolledwindow > viewport > box > clamp > box > .icon {
@@ -4900,8 +5002,8 @@ statuspage > scrolledwindow > viewport > box > clamp > box > .icon:not(:last-chi
 }
 
 statuspage.compact > scrolledwindow > viewport > box {
-  margin: 24px 6px 8 2;
-  border-spacing: 24px;
+  margin: 16px 4px 8 2;
+  border-spacing: 16px;
 }
 
 statuspage.compact > scrolledwindow > viewport > box > clamp > box > .icon {
@@ -4909,7 +5011,7 @@ statuspage.compact > scrolledwindow > viewport > box > clamp > box > .icon {
 }
 
 statuspage.compact > scrolledwindow > viewport > box > clamp > box > .icon:not(:last-child) {
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 
 statuspage.compact > scrolledwindow > viewport > box > clamp > box > .title {
@@ -4944,16 +5046,16 @@ list.boxed-list, .card {
 }
 
 preferencespage > scrolledwindow > viewport > clamp > box {
-  margin: 24px 12px;
-  border-spacing: 24px;
+  margin: 16px 8px;
+  border-spacing: 16px;
 }
 
 preferencesgroup > box, preferencesgroup > box .labels {
-  border-spacing: 6px;
+  border-spacing: 4px;
 }
 
 preferencesgroup > box > box.header:not(.single-line) {
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 }
 
 preferencesgroup > box > box.single-line {
@@ -4961,12 +5063,12 @@ preferencesgroup > box > box.single-line {
 }
 
 statuspage > scrolledwindow > viewport > box {
-  margin: 36px 12px;
-  border-spacing: 36px;
+  margin: 24px 8px;
+  border-spacing: 24px;
 }
 
 statuspage > scrolledwindow > viewport > box > clamp > box {
-  border-spacing: 12px;
+  border-spacing: 8px;
 }
 
 statuspage > scrolledwindow > viewport > box > clamp > box > .icon {
@@ -4979,12 +5081,12 @@ statuspage > scrolledwindow > viewport > box > clamp > box > .icon:disabled {
 }
 
 statuspage > scrolledwindow > viewport > box > clamp > box > .icon:not(:last-child) {
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 
 statuspage.compact > scrolledwindow > viewport > box {
-  margin: 24px 12px;
-  border-spacing: 24px;
+  margin: 16px 8px;
+  border-spacing: 16px;
 }
 
 statuspage.compact > scrolledwindow > viewport > box > clamp > box > .icon {
@@ -4992,7 +5094,7 @@ statuspage.compact > scrolledwindow > viewport > box > clamp > box > .icon {
 }
 
 statuspage.compact > scrolledwindow > viewport > box > clamp > box > .icon:not(:last-child) {
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 
 statuspage.compact > scrolledwindow > viewport > box > clamp > box > .title {
@@ -5004,11 +5106,11 @@ viewswitcher {
 }
 
 viewswitcher.wide {
-  border-spacing: 3px;
+  border-spacing: 2px;
   border-radius: 2px;
   background-color: rgba(255, 255, 255, 0.04);
-  margin-top: 6px;
-  margin-bottom: 6px;
+  margin-top: 4px;
+  margin-bottom: 4px;
 }
 
 viewswitcher.wide button.toggle:checked, viewswitcher.wide button.toggle.flat:checked {
@@ -5043,19 +5145,19 @@ viewswitcher button.toggle {
 
 viewswitcher button.toggle > stack > box.narrow {
   font-size: 0.75rem;
-  padding-top: 7px;
-  padding-bottom: 5px;
-  border-spacing: 4px;
+  padding-top: 5px;
+  padding-bottom: 3px;
+  border-spacing: 2px;
 }
 
 viewswitcher button.toggle > stack > box.narrow > stack > label {
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 6px;
+  padding-right: 6px;
 }
 
 viewswitcher button.toggle > stack > box.wide {
-  padding: 0 12px;
-  border-spacing: 6px;
+  padding: 0 8px;
+  border-spacing: 4px;
 }
 
 viewswitcherbar actionbar > revealer > box {
@@ -5063,13 +5165,13 @@ viewswitcherbar actionbar > revealer > box {
 }
 
 viewswitchertitle viewswitcher {
-  margin-left: 12px;
-  margin-right: 12px;
+  margin-left: 8px;
+  margin-right: 8px;
 }
 
 indicatorbin > indicator, indicatorbin > mask {
-  min-width: 6px;
-  min-height: 6px;
+  min-width: 4px;
+  min-height: 4px;
   border-radius: 9999px;
 }
 
@@ -5104,9 +5206,9 @@ row label.subtitle {
 }
 
 row > box.header {
-  margin-left: 12px;
-  margin-right: 12px;
-  min-height: 44px;
+  margin-left: 8px;
+  margin-right: 8px;
+  min-height: 36px;
 }
 
 row > box.header > .icon:disabled {
@@ -5114,9 +5216,9 @@ row > box.header > .icon:disabled {
 }
 
 row > box.header > box.title {
-  margin-top: 6px;
-  margin-bottom: 6px;
-  border-spacing: 3px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  border-spacing: 2px;
 }
 
 row.combo image.dropdown-arrow:disabled {
@@ -5244,6 +5346,33 @@ list.boxed-list > row:last-child.expander:checked list.nested > row:last-child {
 
 leaflet > box > scrolledwindow > viewport > widget > stack {
   background-color: #2B2B2B;
+}
+
+preferencesgroup > box button.background-preview-button.toggle {
+  padding: 0;
+  background: none;
+  box-shadow: none;
+  outline-color: transparent;
+  outline-width: 2px;
+  outline-offset: 3px;
+  outline-style: solid;
+  border: none;
+}
+
+preferencesgroup > box button.background-preview-button.toggle, preferencesgroup > box button.background-preview-button.toggle > background-preview {
+  border-radius: 2px;
+}
+
+preferencesgroup > box button.background-preview-button.toggle:hover {
+  outline-color: rgba(255, 255, 255, 0.12);
+}
+
+preferencesgroup > box button.background-preview-button.toggle:active {
+  outline-color: rgba(255, 255, 255, 0.3);
+}
+
+preferencesgroup > box button.background-preview-button.toggle:checked {
+  outline-color: #3281ea;
 }
 
 /* GTK NAMED COLORS

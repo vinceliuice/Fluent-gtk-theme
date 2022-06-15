@@ -26,7 +26,7 @@ SASSC_OPT="-M -t expanded"
 
 THEME_NAME=Fluent
 THEME_VARIANTS=('' '-purple' '-pink' '-red' '-orange' '-yellow' '-green' '-teal' '-grey')
-COLOR_VARIANTS=('' '-light' '-dark')
+COLOR_VARIANTS=('' '-Light' '-Dark')
 SIZE_VARIANTS=('' '-compact')
 
 if [[ "$(command -v gnome-shell)" ]]; then
@@ -85,9 +85,9 @@ install() {
   local size="$5"
   local icon="$6"
 
-  [[ "$color" == '-dark' ]] && local ELSE_DARK="$color"
-  [[ "$color" == '-light' ]] && local ELSE_LIGHT="$color"
-  [[ "$color" == '-dark' ]] || [[ "$color" == '' ]] && local ACTIVITIES_ASSETS_SUFFIX="-dark"
+  [[ "$color" == '-Dark' ]] && local ELSE_DARK="$color"
+  [[ "$color" == '-Light' ]] && local ELSE_LIGHT="$color"
+  [[ "$color" == '-Dark' ]] || [[ "$color" == '' ]] && local ACTIVITIES_ASSETS_SUFFIX="-Dark"
 
   if [[ "$window" == 'round' ]]; then
     round='-round'
@@ -190,12 +190,12 @@ install() {
 
   if [[ "$tweaks" == 'true' ]]; then
     sassc $SASSC_OPT "$SRC_DIR/gtk/3.0/gtk$color$size.scss"                     "$THEME_DIR/gtk-3.0/gtk.css"
-    [[ "$color" != '-dark' ]] && \
-    sassc $SASSC_OPT "$SRC_DIR/gtk/3.0/gtk-dark$size.scss"                      "$THEME_DIR/gtk-3.0/gtk-dark.css"
+    [[ "$color" != '-Dark' ]] && \
+    sassc $SASSC_OPT "$SRC_DIR/gtk/3.0/gtk-Dark$size.scss"                      "$THEME_DIR/gtk-3.0/gtk-dark.css"
   else
     cp -r "$SRC_DIR/gtk/3.0/gtk$theme$color$size.css"                           "$THEME_DIR/gtk-3.0/gtk.css"
-    [[ "$color" != '-dark' ]] && \
-    cp -r "$SRC_DIR/gtk/3.0/gtk$theme-dark$size.css"                            "$THEME_DIR/gtk-3.0/gtk-dark.css"
+    [[ "$color" != '-Dark' ]] && \
+    cp -r "$SRC_DIR/gtk/3.0/gtk$theme-Dark$size.css"                            "$THEME_DIR/gtk-3.0/gtk-dark.css"
   fi
 
   mkdir -p                                                                      "$THEME_DIR/gtk-4.0"
@@ -204,12 +204,12 @@ install() {
 
   if [[ "$tweaks" == 'true' ]]; then
     sassc $SASSC_OPT "$SRC_DIR/gtk/4.0/gtk$color$size.scss"                     "$THEME_DIR/gtk-4.0/gtk.css"
-    [[ "$color" != '-dark' ]] && \
-    sassc $SASSC_OPT "$SRC_DIR/gtk/4.0/gtk-dark$size.scss"                      "$THEME_DIR/gtk-4.0/gtk-dark.css"
+    [[ "$color" != '-Dark' ]] && \
+    sassc $SASSC_OPT "$SRC_DIR/gtk/4.0/gtk-Dark$size.scss"                      "$THEME_DIR/gtk-4.0/gtk-dark.css"
   else
     cp -r "$SRC_DIR/gtk/4.0/gtk$color$size.css"                                 "$THEME_DIR/gtk-4.0/gtk.css"
-    [[ "$color" != '-dark' ]] && \
-    cp -r "$SRC_DIR/gtk/4.0/gtk-dark$size.css"                                  "$THEME_DIR/gtk-4.0/gtk-dark.css"
+    [[ "$color" != '-Dark' ]] && \
+    cp -r "$SRC_DIR/gtk/4.0/gtk-Dark$size.css"                                  "$THEME_DIR/gtk-4.0/gtk-dark.css"
   fi
 
   mkdir -p                                                                      "$THEME_DIR/cinnamon"
@@ -659,6 +659,31 @@ theme_tweaks() {
   fi
 }
 
+clean() {
+  local dest="$1"
+  local name="$2"
+  local theme="$3"
+  local color="$4"
+  local size="$5"
+
+  local THEME_DIR="$dest/$name$round$theme$color$size"
+
+  if [[ -d ${THEME_DIR} ]]; then
+    rm -rf ${THEME_DIR}
+    echo -e "Find: ${THEME_DIR} ! removing it ..."
+  fi
+}
+
+clean_theme() {
+  for theme in "${THEME_VARIANTS[@]}"; do
+    for color in '-light' '-dark'; do
+      for size in "${SIZE_VARIANTS[@]}"; do
+        clean "${dest:-$DEST_DIR}" "${_name:-$THEME_NAME}" "$theme" "$color" "$size"
+      done
+    done
+  done
+}
+
 install_theme() {
   for theme in "${themes[@]}"; do
     for color in "${colors[@]}"; do
@@ -679,7 +704,7 @@ link_theme() {
   done
 }
 
-install_theme && link_theme
+clean_theme && install_theme && link_theme
 
 echo
 echo "Done."
