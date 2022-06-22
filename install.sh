@@ -248,30 +248,6 @@ install() {
   cp -r "$SRC_DIR/plank/theme${ELSE_LIGHT:-}/dock.theme"                        "$THEME_DIR/plank"
 }
 
-link_libadwaita() {
-  local dest="$1"
-  local name="$2"
-  local theme="$3"
-  local color="$4"
-  local size="$5"
-
-  if [[ "$window" == 'round' ]]; then
-    round='-round'
-  else
-    round=$window
-  fi
-
-  local THEME_DIR="$dest/$name$round$theme$color$size"
-
-  echo -e "\nLink '$THEME_DIR/gtk-4.0' to '${HOME}/.config/gtk-4.0' for libadwaita..."
-
-  mkdir -p                                                                      "${HOME}/.config/gtk-4.0"
-  rm -rf "${HOME}/.config/gtk-4.0/"{assets,gtk.css,gtk-dark.css}
-  ln -sf "${THEME_DIR}/gtk-4.0/assets"                                          "${HOME}/.config/gtk-4.0/assets"
-  ln -sf "${THEME_DIR}/gtk-4.0/gtk.css"                                         "${HOME}/.config/gtk-4.0/gtk.css"
-  ln -sf "${THEME_DIR}/gtk-4.0/gtk-dark.css"                                    "${HOME}/.config/gtk-4.0/gtk-dark.css"
-}
-
 themes=()
 colors=()
 sizes=()
@@ -659,12 +635,37 @@ theme_tweaks() {
   fi
 }
 
-clean() {
+link_libadwaita() {
   local dest="$1"
   local name="$2"
   local theme="$3"
   local color="$4"
   local size="$5"
+
+  if [[ "$window" == 'round' ]]; then
+    round='-round'
+  else
+    round=$window
+  fi
+
+  local THEME_DIR="$dest/$name$round$theme$color$size"
+
+  echo -e "\nLink '$THEME_DIR/gtk-4.0' to '${HOME}/.config/gtk-4.0' for libadwaita..."
+
+  mkdir -p                                                                      "${HOME}/.config/gtk-4.0"
+  rm -rf "${HOME}/.config/gtk-4.0/"{assets,gtk.css,gtk-dark.css}
+  ln -sf "${THEME_DIR}/gtk-4.0/assets"                                          "${HOME}/.config/gtk-4.0/assets"
+  ln -sf "${THEME_DIR}/gtk-4.0/gtk.css"                                         "${HOME}/.config/gtk-4.0/gtk.css"
+  ln -sf "${THEME_DIR}/gtk-4.0/gtk-dark.css"                                    "${HOME}/.config/gtk-4.0/gtk-dark.css"
+}
+
+clean() {
+  local dest="$1"
+  local name="$2"
+  local round="$3"
+  local theme="$4"
+  local color="$5"
+  local size="$6"
 
   local THEME_DIR="$dest/$name$round$theme$color$size"
 
@@ -675,10 +676,12 @@ clean() {
 }
 
 clean_theme() {
-  for theme in "${THEME_VARIANTS[@]}"; do
-    for color in '-light' '-dark'; do
-      for size in "${SIZE_VARIANTS[@]}"; do
-        clean "${dest:-$DEST_DIR}" "${_name:-$THEME_NAME}" "$theme" "$color" "$size"
+  for round in '' '-round'; do
+    for theme in "${THEME_VARIANTS[@]}"; do
+      for color in '-light' '-dark'; do
+        for size in "${SIZE_VARIANTS[@]}"; do
+          clean "${dest:-$DEST_DIR}" "${_name:-$THEME_NAME}" "$round" "$theme" "$color" "$size"
+        done
       done
     done
   done
