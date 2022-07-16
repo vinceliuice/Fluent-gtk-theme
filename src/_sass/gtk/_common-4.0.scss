@@ -1876,7 +1876,7 @@ popover.background {
     padding: $container-padding;
     box-shadow: $shadow-z6; // TODO: this should really have a highlight
     background-color: $menu;
-    border-radius: $corner-radius;
+    border-radius: $menu-radius;
 
     @if $outline == 'true' {
       border: 1px solid if($variant == 'light', rgba(black, 0.2), rgba(white, 0.12));
@@ -1891,9 +1891,6 @@ popover.background {
   }
 
   > contents {
-    > stack { margin: -4px; } // remove extra padding from menu style popovers
-    > toolbar { margin: -2px; }
-
     > list,
     > .view,
     > toolbar {
@@ -1901,6 +1898,8 @@ popover.background {
       box-shadow: none;
       background-color: transparent;
     }
+
+    > scrolledwindow > viewport > stack > box { padding: 0; } // reset
 
     separator {
       background-color: $divider;
@@ -1917,9 +1916,12 @@ popover.background {
 
   listview {
     margin: 0;
+    padding: 0;
 
     > row {
       padding: $container-padding $container-padding * 2;
+      margin: 0;
+      border-radius: $corner-radius;
 
       &:selected {
         color: $text;
