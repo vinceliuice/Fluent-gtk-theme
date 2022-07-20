@@ -197,6 +197,7 @@ $panel_transition_duration: 250ms; // same as the overview transition duration
 
   @if $panel_style == 'float' {
     Gjs_ArcMenu_ApplicationsButton.panel-button,
+    Gjs_arcmenu_arcmenu_com_menuButton_ArcMenu_MenuButton.panel-button,
     Gjs_arcmenu_arcmenu_com_menuButton_Arc_Menu_MenuButton.panel-button,
     Gjs_arc-menu_linuxgem33_com_menuButton_ArcMenu_MenuButton.panel-button,
     Gjs_ui_panel_ActivitiesButton.panel-button { // Activities button
