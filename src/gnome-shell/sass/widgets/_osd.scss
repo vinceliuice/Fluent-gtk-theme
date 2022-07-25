@@ -3,12 +3,12 @@
 $osd_levelbar_height: 4px;
 
 %osd_panel {
-  color: $fg_color;
-  background-color: $base_color;
+  color: $inverse_fg_color;
+  background-color: $system_bg_color;
   border: none;
   box-shadow: $shadow_2;
   border-radius: $buttons_radius;
-  padding: 12px;
+  padding: $container_padding * 2;
 }
 
 .osd-window {

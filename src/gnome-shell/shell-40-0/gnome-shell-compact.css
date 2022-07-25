@@ -1610,12 +1610,12 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 /* OSD */
 .workspace-switcher-container, .switcher-list, .resize-popup, .osd-window {
-  color: rgba(0, 0, 0, 0.87);
-  background-color: #ffffff;
+  color: rgba(255, 255, 255, 0.85);
+  background-color: #222222;
   border: none;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.35);
   border-radius: 3px;
-  padding: 12px;
+  padding: 8px;
 }
 
 .osd-window {
@@ -1958,8 +1958,8 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .window-close {
-  background-color: #222222;
-  color: #FFFFFF;
+  background-color: #1A73E8;
+  color: white;
   border-radius: 21px;
   padding: 3px;
   height: 30px;
@@ -1973,12 +1973,12 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .window-close:hover {
-  background-color: #484848;
+  background-color: #609eef;
 }
 
 .window-close:active {
-  color: rgba(255, 255, 255, 0.8);
-  background-color: #151515;
+  color: rgba(255, 255, 255, 0.85);
+  background-color: #1567d3;
 }
 
 .workspace-background {
