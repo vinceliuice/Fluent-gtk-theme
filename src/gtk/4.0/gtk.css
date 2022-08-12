@@ -526,7 +526,8 @@ button:drop(active) {
 
 placessidebar .navigation-sidebar > row button.sidebar-button, calendar > header > button, check,
 radio, scrollbar button, notebook > header > tabs > arrow, spinbutton.vertical > button, spinbutton:not(.vertical) > button,
-list > row button.image-button:not(.flat), modelbutton.flat, splitbutton.flat > button,
+list > row button.image-button:not(.flat), modelbutton.flat, tabbar tab button.image-button,
+dnd tab button.image-button, splitbutton.flat > button,
 splitbutton.flat > menubutton > button, menubutton.flat > button, filechooser #pathbarbox > stack > box > button, window.dialog.message.csd .dialog-action-area > button, .app-notification button, popover.background.menu button,
 popover.background button.model,
 pathbar > button, headerbar button:not(.suggested-action):not(.destructive-action), .toolbar button,
@@ -542,7 +543,8 @@ combobox > .linked:not(.vertical) > button:not(:only-child), toast button, menub
 
 placessidebar .navigation-sidebar > row button.sidebar-button:focus, calendar > header > button:focus, check:focus,
 radio:focus, scrollbar button:focus, notebook > header > tabs > arrow:focus, spinbutton.vertical > button:focus, spinbutton:not(.vertical) > button:focus,
-list > row button.image-button:focus:not(.flat), modelbutton.flat:focus, splitbutton.flat > button:focus,
+list > row button.image-button:focus:not(.flat), modelbutton.flat:focus, tabbar tab button.image-button:focus,
+dnd tab button.image-button:focus, splitbutton.flat > button:focus,
 splitbutton.flat > menubutton > button:focus, menubutton.flat > button:focus, filechooser #pathbarbox > stack > box > button:focus, window.dialog.message.csd .dialog-action-area > button:focus, .app-notification button:focus, popover.background.menu button:focus,
 popover.background button.model:focus,
 pathbar > button:focus, headerbar button:focus:not(.suggested-action):not(.destructive-action), .toolbar button:focus,
@@ -555,7 +557,8 @@ combobox > .linked:not(.vertical) > button:focus:not(:only-child), toast button:
 
 placessidebar .navigation-sidebar > row button.sidebar-button:hover, calendar > header > button:hover, check:hover,
 radio:hover, scrollbar button:hover, notebook > header > tabs > arrow:hover, spinbutton.vertical > button:hover, spinbutton:not(.vertical) > button:hover,
-list > row button.image-button:hover:not(.flat), modelbutton.flat:hover, splitbutton.flat > button:hover,
+list > row button.image-button:hover:not(.flat), modelbutton.flat:hover, tabbar tab button.image-button:hover,
+dnd tab button.image-button:hover, splitbutton.flat > button:hover,
 splitbutton.flat > menubutton > button:hover, menubutton.flat > button:hover, filechooser #pathbarbox > stack > box > button:hover, window.dialog.message.csd .dialog-action-area > button:hover, .app-notification button:hover, popover.background.menu button:hover,
 popover.background button.model:hover,
 pathbar > button:hover, headerbar button:hover:not(.suggested-action):not(.destructive-action), .toolbar button:hover,
@@ -568,7 +571,8 @@ combobox > .linked:not(.vertical) > button:hover:not(:only-child), toast button:
 
 placessidebar .navigation-sidebar > row button.sidebar-button:active, calendar > header > button:active, check:active,
 radio:active, scrollbar button:active, notebook > header > tabs > arrow:active, spinbutton.vertical > button:active, spinbutton:not(.vertical) > button:active,
-list > row button.image-button:active:not(.flat), modelbutton.flat:active, splitbutton.flat > button:active,
+list > row button.image-button:active:not(.flat), modelbutton.flat:active, tabbar tab button.image-button:active,
+dnd tab button.image-button:active, splitbutton.flat > button:active,
 splitbutton.flat > menubutton > button:active, menubutton.flat > button:active, filechooser #pathbarbox > stack > box > button:active, window.dialog.message.csd .dialog-action-area > button:active, .app-notification button:active, popover.background.menu button:active,
 popover.background button.model:active,
 pathbar > button:active, headerbar button:active:not(.suggested-action):not(.destructive-action), .toolbar button:active,
@@ -583,7 +587,8 @@ combobox > .linked:not(.vertical) > button:active:not(:only-child), toast button
 
 placessidebar .navigation-sidebar > row button.sidebar-button:disabled, calendar > header > button:disabled, check:disabled,
 radio:disabled, scrollbar button:disabled, notebook > header > tabs > arrow:disabled, spinbutton.vertical > button:disabled, spinbutton:not(.vertical) > button:disabled,
-list > row button.image-button:disabled:not(.flat), modelbutton.flat:disabled, splitbutton.flat > button:disabled,
+list > row button.image-button:disabled:not(.flat), modelbutton.flat:disabled, tabbar tab button.image-button:disabled,
+dnd tab button.image-button:disabled, splitbutton.flat > button:disabled,
 splitbutton.flat > menubutton > button:disabled, menubutton.flat > button:disabled, filechooser #pathbarbox > stack > box > button:disabled, window.dialog.message.csd .dialog-action-area > button:disabled, .app-notification button:disabled, popover.background.menu button:disabled,
 popover.background button.model:disabled,
 pathbar > button:disabled, headerbar button:disabled:not(.suggested-action):not(.destructive-action), .toolbar button:disabled,
@@ -594,7 +599,8 @@ combobox > .linked:not(.vertical) > button:disabled:not(:only-child), toast butt
   color: rgba(0, 0, 0, 0.26);
 }
 
-splitbutton.flat > button:checked,
+tabbar tab button.image-button:checked,
+dnd tab button.image-button:checked, splitbutton.flat > button:checked,
 splitbutton.flat > menubutton > button:checked, menubutton.flat > button:checked, filechooser #pathbarbox > stack > box > button:checked, window.dialog.message.csd .dialog-action-area > button:checked, .app-notification button:checked, popover.background.menu button:checked,
 popover.background button.model:checked,
 pathbar > button:checked, headerbar button:checked:not(.suggested-action):not(.destructive-action), .toolbar button:checked,
@@ -604,7 +610,8 @@ combobox > .linked:not(.vertical) > button:checked:not(:only-child), toast butto
   color: rgba(0, 0, 0, 0.87);
 }
 
-splitbutton.flat > button:checked:disabled,
+tabbar tab button.image-button:checked:disabled,
+dnd tab button.image-button:checked:disabled, splitbutton.flat > button:checked:disabled,
 splitbutton.flat > menubutton > button:checked:disabled, menubutton.flat > button:checked:disabled, filechooser #pathbarbox > stack > box > button:checked:disabled, window.dialog.message.csd .dialog-action-area > button:checked:disabled, .app-notification button:checked:disabled, popover.background.menu button:checked:disabled,
 popover.background button.model:checked:disabled,
 pathbar > button:checked:disabled, headerbar button:checked:disabled:not(.suggested-action):not(.destructive-action), .toolbar button:checked:disabled,
@@ -2217,6 +2224,10 @@ popover.background > contents > toolbar {
 
 popover.background > contents > scrolledwindow > viewport > stack > box {
   padding: 0;
+}
+
+popover.background > contents > box > button {
+  margin: 0;
 }
 
 popover.background > contents separator {
@@ -5373,6 +5384,114 @@ preferencesgroup > box button.background-preview-button.toggle:active {
 
 preferencesgroup > box button.background-preview-button.toggle:checked {
   outline-color: #1A73E8;
+}
+
+tabbar .box {
+  min-height: 28px;
+}
+
+tabbar tabbox > tabboxchild {
+  border-radius: 2px;
+  margin: 3px;
+}
+
+tabbar tabbox > separator {
+  margin-top: 9px;
+  margin-bottom: 9px;
+  transition: opacity 150ms ease-in-out;
+}
+
+tabbar tabbox > separator.hidden {
+  opacity: 0;
+}
+
+tabbar tabbox > revealer > indicator {
+  min-width: 2px;
+  border-radius: 2px;
+  margin: 9px 6px;
+  background: alpha(#1A73E8, 0.5);
+}
+
+tabbar tab {
+  transition: background 150ms ease-in-out;
+}
+
+tabbar tab:selected, tabbar tab:checked, tabbar tab:active, tabbar tab:active:hover, tabbar tab:checked:hover {
+  background-color: rgba(0, 0, 0, 0.12);
+  box-shadow: none;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+tabbar tab:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+  box-shadow: none;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+tabbar .start-action,
+tabbar .end-action {
+  padding: 5px;
+}
+
+tabbar .start-action:dir(ltr),
+tabbar .end-action:dir(rtl) {
+  padding-right: 0;
+}
+
+tabbar .start-action:dir(rtl),
+tabbar .end-action:dir(ltr) {
+  padding-left: 0;
+}
+
+tabbar:not(.inline) .box {
+  background-color: #F2F2F2;
+  color: rgba(0, 0, 0, 0.6);
+  padding: 3px;
+  box-shadow: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+tabbar:not(.inline):backdrop .box > scrolledwindow,
+tabbar:not(.inline):backdrop .box > .start-action,
+tabbar:not(.inline):backdrop .box > .end-action {
+  filter: opacity(0.5);
+}
+
+dnd tab {
+  background-color: #F2F2F2;
+  color: rgba(0, 0, 0, 0.6);
+  box-shadow: none;
+  margin: 24px;
+}
+
+tabbar tab,
+dnd tab {
+  min-height: 28px;
+  padding: 3px 6px;
+  border-radius: 1px;
+  margin: 0 1px;
+}
+
+tabbar tab button.image-button,
+dnd tab button.image-button {
+  padding: 0;
+  margin: 0;
+  min-width: 20px;
+  min-height: 20px;
+  border-radius: 9999px;
+  border: none;
+}
+
+tabbar tab indicator,
+dnd tab indicator {
+  min-height: 2px;
+  border-radius: 2px;
+  background: alpha(#1A73E8, 0.5);
+}
+
+tabview:drop(active),
+tabbox:drop(active) {
+  box-shadow: none;
 }
 
 /* GTK NAMED COLORS
