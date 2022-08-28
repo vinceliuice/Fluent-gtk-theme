@@ -5390,8 +5390,8 @@ tabbar .box {
 }
 
 tabbar tabbox > tabboxchild {
-  border-radius: 2px;
-  margin: 3px;
+  border-radius: 0;
+  margin: 0;
 }
 
 tabbar tabbox > separator {
@@ -5413,11 +5413,21 @@ tabbar tabbox > revealer > indicator {
 
 tabbar tab {
   transition: background 150ms ease-in-out;
+  border-width: 1px;
+  border-color: transparent;
+  border-style: solid;
+  min-height: 22px;
+  min-width: 22px;
+  padding: 3px 12px;
+  background-clip: padding-box;
+  color: rgba(0, 0, 0, 0.6);
+  background-color: transparent;
 }
 
 tabbar tab:selected, tabbar tab:checked, tabbar tab:active, tabbar tab:active:hover, tabbar tab:checked:hover {
-  background-color: rgba(0, 0, 0, 0.12);
-  box-shadow: none;
+  background-color: #FFFFFF;
+  background-clip: padding-box;
+  border-color: #d9d9d9;
   color: rgba(0, 0, 0, 0.87);
 }
 
@@ -5445,7 +5455,7 @@ tabbar .end-action:dir(ltr) {
 tabbar:not(.inline) .box {
   background-color: #F2F2F2;
   color: rgba(0, 0, 0, 0.6);
-  padding: 3px;
+  padding: 0;
   box-shadow: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.12);
 }
@@ -5467,8 +5477,9 @@ tabbar tab,
 dnd tab {
   min-height: 28px;
   padding: 3px 6px;
-  border-radius: 1px;
-  margin: 0 1px;
+  border-radius: 2px 2px 0 0;
+  margin-top: 3px;
+  margin-bottom: -1px;
 }
 
 tabbar tab button.image-button,

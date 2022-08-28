@@ -554,13 +554,17 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .datemenu-calendar-column:ltr {
-  margin-right: 0;
-  border-left-width: 0;
+  margin-right: 4px;
+  border-left-width: 1px;
 }
 
 .datemenu-calendar-column:rtl {
-  margin-left: 0;
-  border-right-width: 0;
+  margin-left: 4px;
+  border-right-width: 1px;
+}
+
+.datemenu-calendar-column .datemenu-displays-section {
+  padding-bottom: 0;
 }
 
 .datemenu-calendar-column .datemenu-displays-box {
@@ -658,7 +662,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   text-align: center;
   width: 32px !important;
   height: 32px !important;
-  padding: 0 !important;
+  padding: 2px !important;
   margin: 2px !important;
   border-radius: 9999px;
   color: rgba(0, 0, 0, 0.54);
@@ -773,7 +777,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   text-shadow: none;
   color: rgba(0, 0, 0, 0.54);
   background-color: rgba(255, 255, 255, 0.35) !important;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.12);
 }
 
 .world-clocks-button:hover, .world-clocks-button:focus,
@@ -782,7 +786,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .events-button:hover,
 .events-button:focus {
   color: rgba(0, 0, 0, 0.87);
-  background-color: rgba(255, 255, 255, 0.85) !important;
+  background-color: rgba(0, 0, 0, 0.06) !important;
   border-color: rgba(0, 0, 0, 0.15);
 }
 
@@ -790,7 +794,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .weather-button:active,
 .events-button:active {
   color: rgba(0, 0, 0, 0.87);
-  background-color: white !important;
+  background-color: rgba(0, 0, 0, 0.08) !important;
 }
 
 .world-clocks-header,
@@ -894,19 +898,39 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 /* Message List */
 .message-list {
   width: 31.5em;
-  padding: 0 12px;
+  padding: 0;
   color: rgba(0, 0, 0, 0.54);
   text-shadow: none;
   box-shadow: none;
+}
+
+.message-list:ltr {
+  margin-left: 0;
+  margin-right: 0;
+  padding-right: 0;
+  border-right-width: 0;
+}
+
+.message-list:rtl {
+  margin-right: 0;
+  margin-left: 0;
+  padding-left: 0;
+  border-left-width: 0;
 }
 
 .message-list .message-list-placeholder {
   spacing: 12px;
 }
 
+.message-list .message-list-placeholder > StIcon {
+  icon-size: 48px;
+  margin-bottom: 12px;
+  -st-icon-style: symbolic;
+}
+
 .message-list-sections {
   spacing: 6px;
-  margin: 0 16px;
+  margin: 0 8px;
 }
 
 .message-list-section,
@@ -927,7 +951,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   text-shadow: none;
   box-shadow: 0 3px 8px -2px rgba(0, 0, 0, 0.15);
   margin: 0 8px 11px 8px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.12);
 }
 
 .popup-menu .message {
@@ -935,12 +959,12 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .message:hover, .message:focus {
-  background-color: rgba(255, 255, 255, 0.85);
+  background-color: rgba(0, 0, 0, 0.06);
   border-color: rgba(0, 0, 0, 0.15);
 }
 
 .message:active {
-  background-color: white;
+  background-color: rgba(0, 0, 0, 0.08);
 }
 
 .message .message-icon-bin {
@@ -1989,12 +2013,13 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 #overview .search-entry {
+  min-height: 32px;
   width: 320px;
   border: none;
   border-radius: 5px;
   caret-color: rgba(0, 0, 0, 0.75);
   color: rgba(0, 0, 0, 0.75);
-  background-color: rgba(255, 255, 255, 0.75);
+  background-color: rgba(255, 255, 255, 0.75) !important;
   border-color: transparent;
   box-shadow: none;
   selection-background-color: #1A73E8;
@@ -2005,13 +2030,13 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 #overview .search-entry:hover {
   color: rgba(0, 0, 0, 0.75);
-  background-color: rgba(255, 255, 255, 0.85);
+  background-color: rgba(255, 255, 255, 0.85) !important;
 }
 
 #overview .search-entry:focus {
   color: rgba(0, 0, 0, 0.85);
   border-color: transparent;
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: rgba(255, 255, 255, 0.95) !important;
   border: none;
   selection-background-color: #1A73E8;
   selected-color: #FFFFFF !important;
