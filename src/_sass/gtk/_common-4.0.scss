@@ -1901,6 +1901,8 @@ popover.background {
 
     > scrolledwindow > viewport > stack > box { padding: 0; } // reset
 
+    > box > button { margin: 0; }
+
     separator {
       background-color: $divider;
       margin: $container-padding / 2 0;

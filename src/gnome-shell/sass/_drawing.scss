@@ -153,7 +153,7 @@
   @if $t == normal {
     caret-color: rgba(black, 0.75);
     color: rgba(black, 0.75);
-    background-color: rgba(white, 0.75);
+    background-color: rgba(white, 0.75) !important;
     border-color: transparent;
     box-shadow: none;
   }
@@ -161,13 +161,13 @@
   @if $t == focus {
     color: rgba(black, 0.85);
     border-color: transparent;
-    background-color: rgba(white, 0.95);
+    background-color: rgba(white, 0.95) !important;
     border: none;
   }
 
   @if $t == hover {
     color: rgba(black, 0.75);
-    background-color: rgba(white, 0.85);
+    background-color: rgba(white, 0.85) !important;
   }
 
   @if $t == insensitive {

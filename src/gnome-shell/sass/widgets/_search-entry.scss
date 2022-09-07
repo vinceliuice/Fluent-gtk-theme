@@ -3,6 +3,7 @@
 $search_entry_width: 320px;
 
 %search_entry {
+  min-height: $menuitem-size;
   width: $search_entry_width;
   border: none;
   border-radius: $buttons_radius + 2px;

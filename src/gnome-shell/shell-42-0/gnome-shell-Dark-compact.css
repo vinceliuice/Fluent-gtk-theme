@@ -585,13 +585,17 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .datemenu-calendar-column:ltr {
-  margin-right: 0;
-  border-left-width: 0;
+  margin-right: 2px;
+  border-left-width: 1px;
 }
 
 .datemenu-calendar-column:rtl {
-  margin-left: 0;
-  border-right-width: 0;
+  margin-left: 2px;
+  border-right-width: 1px;
+}
+
+.datemenu-calendar-column .datemenu-displays-section {
+  padding-bottom: 0;
 }
 
 .datemenu-calendar-column .datemenu-displays-box {
@@ -689,7 +693,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   text-align: center;
   width: 28px !important;
   height: 28px !important;
-  padding: 0 !important;
+  padding: 2px !important;
   margin: 2px !important;
   border-radius: 9999px;
   color: rgba(255, 255, 255, 0.7);
@@ -925,19 +929,39 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 /* Message List */
 .message-list {
   width: 31.5em;
-  padding: 0 8px;
+  padding: 0;
   color: rgba(255, 255, 255, 0.7);
   text-shadow: none;
   box-shadow: none;
 }
 
+.message-list:ltr {
+  margin-left: 0;
+  margin-right: 0;
+  padding-right: 0;
+  border-right-width: 0;
+}
+
+.message-list:rtl {
+  margin-right: 0;
+  margin-left: 0;
+  padding-left: 0;
+  border-left-width: 0;
+}
+
 .message-list .message-list-placeholder {
-  spacing: 12px;
+  spacing: 8px;
+}
+
+.message-list .message-list-placeholder > StIcon {
+  icon-size: 48px;
+  margin-bottom: 6px;
+  -st-icon-style: symbolic;
 }
 
 .message-list-sections {
   spacing: 4px;
-  margin: 0 8px;
+  margin: 0 4px;
 }
 
 .message-list-section,
@@ -967,7 +991,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .message:hover, .message:focus {
   background-color: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.08);
 }
 
 .message:active {
@@ -2031,12 +2055,13 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 #overview .search-entry {
+  min-height: 28px;
   width: 320px;
   border: none;
   border-radius: 5px;
   caret-color: rgba(0, 0, 0, 0.75);
   color: rgba(0, 0, 0, 0.75);
-  background-color: rgba(255, 255, 255, 0.75);
+  background-color: rgba(255, 255, 255, 0.75) !important;
   border-color: transparent;
   box-shadow: none;
   selection-background-color: #3281ea;
@@ -2047,13 +2072,13 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 #overview .search-entry:hover {
   color: rgba(0, 0, 0, 0.75);
-  background-color: rgba(255, 255, 255, 0.85);
+  background-color: rgba(255, 255, 255, 0.85) !important;
 }
 
 #overview .search-entry:focus {
   color: rgba(0, 0, 0, 0.85);
   border-color: transparent;
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: rgba(255, 255, 255, 0.95) !important;
   border: none;
   selection-background-color: #3281ea;
   selected-color: #FFFFFF !important;
