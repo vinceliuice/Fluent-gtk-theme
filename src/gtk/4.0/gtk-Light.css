@@ -1611,7 +1611,6 @@ headerbar {
   box-shadow: inset 0 -1px rgba(0, 0, 0, 0.12);
   color: rgba(0, 0, 0, 0.87);
   min-height: 44px;
-  padding: 0 6px;
   background-color: rgba(247, 247, 247, 0.98);
 }
 
@@ -1658,6 +1657,10 @@ row.expander:not(:checked) headerbar image.expander-row-arrow:backdrop {
 headerbar .titlebar {
   background-color: transparent;
   box-shadow: none;
+}
+
+headerbar > windowhandle > box {
+  padding: o 6px;
 }
 
 headerbar > windowhandle > box,
@@ -2314,11 +2317,13 @@ notebook > header tab {
   background-clip: padding-box;
   color: rgba(0, 0, 0, 0.6);
   font-weight: 500;
+  box-shadow: none;
 }
 
 notebook > header tab:hover {
   background-color: rgba(0, 0, 0, 0.12);
   color: rgba(0, 0, 0, 0.87);
+  box-shadow: none;
 }
 
 notebook > header tab:disabled {
@@ -2331,6 +2336,7 @@ notebook > header tab:checked {
   background-clip: padding-box;
   border-color: #d9d9d9;
   color: rgba(0, 0, 0, 0.87);
+  box-shadow: none;
 }
 
 notebook > header tab:checked:disabled {
@@ -2607,11 +2613,11 @@ scrollbar > range > trough > slider:disabled {
 }
 
 scrollbar.horizontal > range > trough > slider {
-  margin: 2px 0;
+  margin: 3px 0;
 }
 
 scrollbar.vertical > range > trough > slider {
-  margin: 0 2px;
+  margin: 0 3px;
 }
 
 scrollbar > range.fine-tune > trough > slider {
@@ -2620,11 +2626,11 @@ scrollbar > range.fine-tune > trough > slider {
 }
 
 scrollbar > range.fine-tune.horizontal > trough > slider {
-  margin: 2px 0;
+  margin: 3px 0;
 }
 
 scrollbar > range.fine-tune.vertical > trough > slider {
-  margin: 0 2px;
+  margin: 0 3px;
 }
 
 scrollbar.overlay-indicator:not(.fine-tune) > range > trough > slider {
