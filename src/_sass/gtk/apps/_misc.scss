@@ -416,3 +416,21 @@ window.background:not(.solid-csd) {
     }
   }
 }
+
+#combobox {
+  > button { border-left: 1px solid $border; }
+}
+
+#gtk-combobox-popup-window {
+  scrolledwindow.frame { border: none; }
+
+  treeview.view {
+    &:selected, &:hover {
+      background-image: image($primary);
+      background-color: transparent;
+      color: on($primary);
+
+      label { color: on($primary); }
+    }
+  }
+}

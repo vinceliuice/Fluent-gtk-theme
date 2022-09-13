@@ -109,9 +109,8 @@
   color: rgba(0, 0, 0, 0.38);
 }
 
-.view:selected, filechooser stack.view scrolledwindow treeview.view:selected {
-  background-color: rgba(214, 214, 214, 0.974);
-  color: rgba(0, 0, 0, 0.87);
+.view:selected:hover, filechooser stack.view scrolledwindow treeview.view:selected:hover {
+  box-shadow: none;
 }
 
 textview {
@@ -4215,8 +4214,8 @@ XfdesktopIconView.view:active, calendar.raven-calendar:selected, .budgie-popover
   background-color: rgba(26, 115, 232, 0.2);
 }
 
-.nemo-window .nemo-window-pane widget.entry:selected, #MozillaGtkWidget > widget text:selected, #MozillaGtkWidget > widget text selection, #MozillaGtkWidget > widget text selection:focus, window.background.chromium > textview.view selection, window.background.chromium textview selection, window.background.csd evview.view.content-view:selected, window.background.csd evview.view.content-view:selected:backdrop, .nautilus-window notebook .view:not(treeview) selection, .nautilus-window notebook filechooser stack.view scrolledwindow treeview.view:not(treeview) selection, filechooser stack.view scrolledwindow .nautilus-window notebook treeview.view:not(treeview) selection, .nautilus-window notebook .view:not(treeview):selected, .nautilus-window notebook filechooser stack.view scrolledwindow treeview.view:not(treeview):selected, filechooser stack.view scrolledwindow .nautilus-window notebook treeview.view:not(treeview):selected, .nautilus-window flowboxchild:selected .icon-item-background, widget.view:selected, .background.csd textview text selection, .background.csd textview text selection:focus, label selection,
-entry selection, spinbutton:not(.vertical) selection, spinbutton.vertical selection {
+.nemo-window .nemo-window-pane widget.entry:selected, #MozillaGtkWidget > widget text:selected, #MozillaGtkWidget > widget text selection, #MozillaGtkWidget > widget text selection:focus, window.background.chromium > textview.view selection, window.background.chromium textview selection, window.background.csd evview.view.content-view:selected, window.background.csd evview.view.content-view:selected:backdrop, .nautilus-window notebook .view:not(treeview) selection, .nautilus-window notebook filechooser stack.view scrolledwindow treeview.view:not(treeview) selection, filechooser stack.view scrolledwindow .nautilus-window notebook treeview.view:not(treeview) selection, .nautilus-window notebook .view:not(treeview):selected, .nautilus-window notebook filechooser stack.view scrolledwindow treeview.view:not(treeview):selected, filechooser stack.view scrolledwindow .nautilus-window notebook treeview.view:not(treeview):selected, .nautilus-window flowboxchild:selected .icon-item-background, .view:selected, widget.view:selected, .background.csd textview text selection, .background.csd textview text selection:focus, label selection,
+entry selection, spinbutton:not(.vertical) selection, spinbutton.vertical selection, filechooser stack.view scrolledwindow treeview.view:selected {
   color: white;
   background-color: #1A73E8;
 }
@@ -6466,6 +6465,24 @@ window.background:not(.solid-csd) > notebook {
 window.background:not(.solid-csd) > notebook > stack {
   border: none;
   box-shadow: none;
+}
+
+#combobox > button {
+  border-left: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+#gtk-combobox-popup-window scrolledwindow.frame {
+  border: none;
+}
+
+#gtk-combobox-popup-window treeview.view:selected, #gtk-combobox-popup-window treeview.view:hover {
+  background-image: image(#1A73E8);
+  background-color: transparent;
+  color: white;
+}
+
+#gtk-combobox-popup-window treeview.view:selected label, #gtk-combobox-popup-window treeview.view:hover label {
+  color: white;
 }
 
 /*********
