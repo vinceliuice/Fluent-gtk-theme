@@ -535,6 +535,10 @@ viewswitcher {
     margin-top: $container-padding;
     margin-bottom: $container-padding;
 
+    > button.toggle, > button.toggle.flat {
+      padding: 0 $container-padding;
+    }
+
     button.toggle:checked, button.toggle.flat:checked {
       background-color: $primary;
       color: on($primary);

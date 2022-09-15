@@ -5129,6 +5129,10 @@ viewswitcher.wide {
   margin-bottom: 6px;
 }
 
+viewswitcher.wide > button.toggle, viewswitcher.wide > button.toggle.flat {
+  padding: 0 6px;
+}
+
 viewswitcher.wide button.toggle:checked, viewswitcher.wide button.toggle.flat:checked {
   background-color: #3281ea;
   color: white;
