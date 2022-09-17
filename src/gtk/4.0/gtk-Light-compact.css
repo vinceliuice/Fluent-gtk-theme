@@ -1660,7 +1660,7 @@ headerbar .titlebar {
 }
 
 headerbar > windowhandle > box {
-  padding: o 4px;
+  padding: 0 4px;
 }
 
 headerbar > windowhandle > box,
