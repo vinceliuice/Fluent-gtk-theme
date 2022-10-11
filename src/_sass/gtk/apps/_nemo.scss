@@ -11,7 +11,7 @@
   .primary-toolbar {
     background-color: $titlebar;
     border-bottom: 1px solid $divider;
-    padding: $container-padding ($container-padding - 2px);
+    padding: $space-size ($space-size - 2px);
 
     &:backdrop { background-color: $titlebar-backdrop; }
 
@@ -78,7 +78,7 @@
     @extend %button-flat;
     border-radius: $corner-radius;
     margin: 0 0;
-    padding: 0 $container-padding;
+    padding: 0 $space-size;
   }
 }
 
@@ -90,8 +90,8 @@
   -NemoPlacesTreeView-disk-full-bar-radius: 0;
   -NemoPlacesTreeView-disk-full-bottom-padding: 1px; // There is already hard-coded 1px bottom-padding
   -NemoPlacesTreeView-disk-full-max-length: 80px;
-  padding-top: $container-padding/2;
-  padding-bottom: $container-padding/2;
+  padding-top: $space-size/2;
+  padding-bottom: $space-size/2;
 }
 
 .nemo-desktop.nemo-canvas-item {

@@ -8,6 +8,10 @@ $panel_transition_duration: 250ms; // same as the overview transition duration
   font-feature-settings: "tnum";
   transition-duration: $panel_transition_duration;
 
+  @if $window == 'round' {
+    padding: 0 2px !important;
+  }
+
   @if $opacity == 'solid' {
     background-color: $panel_bg;
   } @else {
@@ -51,13 +55,13 @@ $panel_transition_duration: 250ms; // same as the overview transition duration
       border: 1px solid transparent;
       border-radius: $buttons_radius;
       box-shadow: inset 0 1px transparent;
-      margin: 2px 0;
+      margin: 2px 1px;
     } @else {
       border: none;
       border-radius: 0;
     }
 
-    StLabel { padding: 0 0; }
+    StLabel { padding: 0; }
 
     &.clock-display {
       .clock {
@@ -103,7 +107,7 @@ $panel_transition_duration: 250ms; // same as the overview transition duration
     .system-status-icon {
       icon-size: 16px;
       padding: $container_padding;
-      margin: 0 $container_padding;
+      margin: 0 $container_padding / 2;
     }
 
     // .panel-status-indicators-box .system-status-icon,

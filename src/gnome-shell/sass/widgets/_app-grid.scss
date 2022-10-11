@@ -249,8 +249,27 @@ StWidget.focused {
 }
 
 .page-navigation-arrow {
-  margin: 0;
-  width: 24px;
-  height: 24px;
-  color: white;
+  &  > StIcon {
+    margin: 6px;
+    padding: 18px;
+    width: 24px;
+    height: 24px;
+    border-radius: $circular_radius;
+    color: $inverse_secondary_fg_color;
+  }
+
+  &:insensitive > StIcon {
+    background-color: rgba(white, 0.05);
+    color: rgba(white, 0.45);
+  }
+
+  &:hover > StIcon {
+    background-color: rgba(white, 0.1);
+    color: white;
+  }
+
+  &:active > StIcon {
+    background-color: rgba(white, 0.2);
+    color: white;
+  }
 }

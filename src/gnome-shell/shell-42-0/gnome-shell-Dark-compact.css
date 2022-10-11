@@ -397,12 +397,12 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   color: rgba(255, 255, 255, 0.9) !important;
 }
 
-.popup-menu-item:checked.selected, .popup-menu-item:checked:hover, .popup-menu-item:checked:focus {
+.popup-menu-item.selected:checked, .popup-menu-item:checked:hover, .popup-menu-item:checked:focus {
   background-color: rgba(255, 255, 255, 0.08) !important;
   color: rgba(255, 255, 255, 0.9) !important;
 }
 
-.popup-menu-item:checked:active, .popup-menu-item:checked.selected:active {
+.popup-menu-item:checked:active, .popup-menu-item.selected:checked:active {
   background-color: rgba(255, 255, 255, 0.06) !important;
   color: rgba(255, 255, 255, 0.9) !important;
 }
@@ -1856,7 +1856,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 #panel .panel-button StLabel {
-  padding: 0 0;
+  padding: 0;
 }
 
 #panel .panel-button.clock-display .clock {
@@ -1881,7 +1881,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   box-shadow: none;
 }
 
-#panel .panel-button:hover.clock-display .clock, #panel .panel-button:active.clock-display .clock, #panel .panel-button:overview.clock-display .clock, #panel .panel-button:focus.clock-display .clock, #panel .panel-button:checked.clock-display .clock {
+#panel .panel-button.clock-display:hover .clock, #panel .panel-button.clock-display:active .clock, #panel .panel-button.clock-display:overview .clock, #panel .panel-button.clock-display:focus .clock, #panel .panel-button.clock-display:checked .clock {
   box-shadow: none;
   background: none;
   color: #FFFFFF;
@@ -1890,7 +1890,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 #panel .panel-button .system-status-icon {
   icon-size: 16px;
   padding: 4px;
-  margin: 0 4px;
+  margin: 0 2px;
 }
 
 #panel .panel-button .panel-status-menu-box .system-status-icon {
@@ -1915,7 +1915,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   -st-icon-style: symbolic;
 }
 
-#panel .panel-button#panelActivities {
+#panel #panelActivities.panel-button {
   background-image: url("assets/activities.svg");
   background-position: center center;
   background-repeat: no-repeat;
@@ -1925,11 +1925,11 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   box-shadow: none;
 }
 
-#panel .panel-button#panelActivities > * {
+#panel #panelActivities.panel-button > * {
   width: 32px;
 }
 
-#panel .panel-button#panelActivities:overview {
+#panel #panelActivities.panel-button:overview {
   background-color: transparent;
   box-shadow: none;
   border: none;
@@ -2467,10 +2467,27 @@ StWidget.focused .app-well-app-running-dot {
   border-radius: 0px 15px 15px 0px;
 }
 
-.page-navigation-arrow {
-  margin: 0;
+.page-navigation-arrow > StIcon {
+  margin: 6px;
+  padding: 18px;
   width: 24px;
   height: 24px;
+  border-radius: 9999px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.page-navigation-arrow:insensitive > StIcon {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.page-navigation-arrow:hover > StIcon {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.page-navigation-arrow:active > StIcon {
+  background-color: rgba(255, 255, 255, 0.2);
   color: white;
 }
 
@@ -2874,6 +2891,250 @@ StWidget.focused .app-well-app-running-dot {
   border-radius: 3px;
   padding: 6px;
   box-shadow: 0 14px 14px rgba(0, 0, 0, 0.5);
+}
+
+.quick-settings {
+  padding: 12px !important;
+  border-radius: 15px !important;
+}
+
+.quick-settings .icon-button, .quick-settings .button {
+  padding: 7px;
+}
+
+.quick-settings .popup-menu-content {
+  padding: 8px !important;
+}
+
+.quick-settings-grid {
+  spacing-rows: 8px;
+  spacing-columns: 8px;
+}
+
+.quick-toggle {
+  border-radius: 3px;
+  min-width: 12em;
+  max-width: 12em;
+  min-height: 40px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.06) !important;
+  /* Move padding into the box; this is to allow menu arrows
+     to extend to the border */
+}
+
+.quick-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+.quick-toggle:active {
+  background-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+.quick-toggle:checked {
+  background-color: #3281ea !important;
+  color: white;
+}
+
+.quick-toggle:checked:hover {
+  background-color: rgba(60, 135, 235, 0.994) !important;
+  color: white;
+}
+
+.quick-toggle:checked:active {
+  background-color: rgba(76, 145, 237, 0.985) !important;
+  color: white;
+}
+
+.quick-toggle > StBoxLayout {
+  spacing: 4px;
+}
+
+.quick-toggle.button {
+  padding: 0;
+}
+
+.quick-toggle > StBoxLayout {
+  padding: 0 8px;
+}
+
+.quick-toggle:ltr > StBoxLayout {
+  padding-left: 10px;
+}
+
+.quick-toggle:rtl > StBoxLayout {
+  padding-right: 10px;
+}
+
+.quick-toggle .quick-toggle-label {
+  font-weight: bold;
+}
+
+.quick-toggle .quick-toggle-icon, .quick-toggle .quick-toggle-arrow {
+  icon-size: 16px;
+}
+
+.quick-menu-toggle:ltr > StBoxLayout {
+  padding-right: 0;
+}
+
+.quick-menu-toggle:rtl > StBoxLayout {
+  padding-left: 0;
+}
+
+.quick-menu-toggle .quick-toggle-arrow {
+  background-color: rgba(255, 255, 255, 0.06) !important;
+  padding: 4px 7px;
+}
+
+.quick-menu-toggle .quick-toggle-arrow:active {
+  background-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+.quick-menu-toggle .quick-toggle-arrow:ltr {
+  border-radius: 0 3px 3px 0;
+}
+
+.quick-menu-toggle .quick-toggle-arrow:rtl {
+  border-radius: 3px 0 0 3px;
+}
+
+.quick-slider {
+  padding: 0 4px;
+}
+
+.quick-slider > StBoxLayout {
+  spacing: 4px;
+}
+
+.quick-slider .slider-bin {
+  min-height: 16px;
+  padding: 4px;
+  border-radius: 9999px;
+}
+
+.quick-slider .slider-bin:focus {
+  color: #3281ea;
+  box-shadow: none;
+}
+
+.quick-slider .slider-bin:focus:active {
+  color: white;
+}
+
+.quick-slider .quick-toggle-icon {
+  icon-size: 16px;
+}
+
+.quick-slider .icon-button {
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.quick-slider .icon-button:hover {
+  background-color: rgba(255, 255, 255, 0.06);
+}
+
+.quick-slider .icon-button:active {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.quick-toggle-menu {
+  background-color: rgba(32, 32, 32, 0.95) !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+  border-radius: 3px !important;
+  padding: 8px;
+  margin: 8px 12px 0;
+}
+
+.quick-toggle-menu .popup-menu-item {
+  border-radius: 3px !important;
+  margin: 0 !important;
+}
+
+.quick-toggle-menu .popup-menu-item:focus, .quick-toggle-menu .popup-menu-item:hover, .quick-toggle-menu .popup-menu-item.selected {
+  color: rgba(255, 255, 255, 0.9) !important;
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.quick-toggle-menu .popup-menu-item:active {
+  color: rgba(255, 255, 255, 0.9) !important;
+  background-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.quick-toggle-menu .popup-menu-item > StIcon {
+  -st-icon-style: symbolic;
+}
+
+.quick-toggle-menu .header {
+  spacing-rows: 2px;
+  spacing-columns: 8px;
+  padding-bottom: 8px;
+}
+
+.quick-toggle-menu .header .icon {
+  icon-size: 24px;
+  border-radius: 3px;
+  padding: 6px;
+  background-color: rgba(255, 255, 255, 0.06) !important;
+}
+
+.quick-toggle-menu .header .icon.active {
+  background-color: #3281ea !important;
+  color: white;
+}
+
+.quick-settings-system-item > StBoxLayout {
+  spacing: 8px;
+}
+
+.quick-settings-system-item .icon-button {
+  background-color: rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.9);
+  border-radius: 3px;
+}
+
+.quick-settings-system-item .icon-button:hover {
+  color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.06);
+  box-shadow: none;
+}
+
+.quick-settings-system-item .icon-button:active {
+  color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 transparent;
+}
+
+.quick-settings-system-item .icon-button:insensitive {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.quick-settings-system-item .icon-button:focus {
+  color: rgba(255, 255, 255, 0.9);
+  box-shadow: none;
+}
+
+.quick-settings-system-item .icon-button > StIcon {
+  -st-icon-style: symbolic;
+}
+
+.quick-settings-system-item .power-item {
+  min-height: 0;
+  min-width: 0;
+}
+
+.quick-settings-system-item .power-item:insensitive {
+  color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: none;
+  background-color: transparent;
+}
+
+.nm-network-item .wireless-secure-icon {
+  icon-size: 8px;
 }
 
 .icon-label-button-container {

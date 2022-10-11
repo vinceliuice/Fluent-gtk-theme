@@ -167,8 +167,8 @@ window.assistant {
 
 .osd {
   @extend %osd;
-  padding: $container-padding;
-  margin: $container-padding;
+  padding: $space-size;
+  margin: $space-size;
 
   &.circular { border-radius: $circular-radius; }
 }
@@ -290,7 +290,7 @@ spinner {
 entry {
   min-height: $medium-size - 4px;
   padding: 0 8px;
-  border-spacing: $container-padding;
+  border-spacing: $space-size;
   border-radius: $corner-radius;
   caret-color: currentColor; // this shouldn't be needed.
   border: 1px solid $divider;
@@ -343,7 +343,8 @@ entry {
 
   // entry error and warning style
   @each $e_type, $e_color in (error, $error),
-                             (warning, $warning) {
+                             (warning, $warning),
+                             (success, $success) {
     &.#{$e_type} {
       @include entry(normal, $e_color);
 
@@ -647,7 +648,7 @@ button {
   &.file {
     separator { @extend %hide_separators; }
 
-    > box { border-spacing: $container-padding; }
+    > box { border-spacing: $space-size; }
     > box > box > label { font-weight: bold; }
   }
 
@@ -835,7 +836,7 @@ button {
 // menu buttons
 modelbutton.flat {
   min-height: $menuitem-size;
-  padding: 0 $container-padding * 1.5;
+  padding: 0 $space-size * 1.5;
   border-radius: $corner-radius;
   color: $text;
 
@@ -852,7 +853,7 @@ modelbutton.flat arrow {
 button.color {
   min-height: $small-size;
   min-width: $small-size;
-  padding: $container-padding;
+  padding: $space-size;
 
   colorswatch:only-child {
     // &, overlay { border-radius: 0; }
@@ -912,7 +913,7 @@ spinbutton {
       min-width: $large-size - 8px * 2;
       // reset all the other props since the spinbutton node is styled here
       margin: 0;
-      padding-left: $container-padding * 2;
+      padding-left: $space-size * 2;
       border: none;
       border-image: none;
       border-radius: 0;
@@ -924,8 +925,8 @@ spinbutton {
       @extend %button-flat-simple;
       @extend %small-button;
 
-      // margin: $container-padding;
-      border: solid $container-padding transparent;
+      // margin: $space-size;
+      border: solid $space-size transparent;
 
       // Remove unwanted focus indicator
       &:focus:not(:hover):not(:active):not(:disabled) {
@@ -934,10 +935,10 @@ spinbutton {
       }
 
       &.up:dir(ltr),
-      &.down:dir(rtl) { margin-left: -$container-padding / 2; }
+      &.down:dir(rtl) { margin-left: -$space-size / 2; }
 
       &.up:dir(rtl),
-      &.down:dir(ltr) { margin-right: -$container-padding / 2; }
+      &.down:dir(ltr) { margin-right: -$space-size / 2; }
     }
   }
 
@@ -964,7 +965,7 @@ spinbutton {
       @extend %small-button;
       padding: 0;
 
-      border: solid $container-padding transparent;
+      border: solid $space-size transparent;
 
       // Remove unwanted focus indicator
       &:focus:not(:hover):not(:active) {
@@ -972,9 +973,9 @@ spinbutton {
         color: $text-secondary;
       }
 
-      &.up { margin: 0 $container-padding / 2; }
+      &.up { margin: 0 $space-size / 2; }
 
-      &.down { margin: 0 $container-padding / 2; }
+      &.down { margin: 0 $space-size / 2; }
     }
   }
 
@@ -982,13 +983,13 @@ spinbutton {
   // treeview &:not(.vertical),
   list > row &:not(.vertical) {
     > button {
-      margin: $container-padding;
+      margin: $space-size;
 
       &.up:dir(ltr),
-      &.down:dir(rtl) { margin-left: $container-padding / 2; }
+      &.down:dir(rtl) { margin-left: $space-size / 2; }
 
       &.up:dir(rtl),
-      &.down:dir(ltr) { margin-right: $container-padding / 2; }
+      &.down:dir(ltr) { margin-right: $space-size / 2; }
     }
   }
 }
@@ -998,7 +999,7 @@ spinbutton {
  * ComboBoxes *
  **************/
 dropdown > popover.menu.background > contents { padding: 0; }
-dropdown > button > box { border-spacing: $container-padding; }
+dropdown > button > box { border-spacing: $space-size; }
 
 dropdown,
 combobox {
@@ -1010,18 +1011,18 @@ combobox {
 
   // align menu labels with the button label
   > popover.menu > contents modelbutton {
-    padding-left: $container-padding * 1.5;
-    padding-right: $container-padding * 1.5;
+    padding-left: $space-size * 1.5;
+    padding-right: $space-size * 1.5;
   }
 
   // newstyle
   popover {
-   margin-top: $container-padding - 2px;
+   margin-top: $space-size - 2px;
    padding: 0;
 
     // drodowns with searchboxes on top
     .dropdown-searchbar {
-      padding: $container-padding;
+      padding: $space-size;
     }
   }
 
@@ -1148,9 +1149,9 @@ combobox {
  ************/
 .toolbar,
 toolbar {
-  padding: $container-padding / 2 $container-padding;
+  padding: $space-size / 2 $space-size;
   background-color: $background;
-  border-spacing: $container-padding;
+  border-spacing: $space-size;
 
   button { @extend %button-flat; }
 
@@ -1160,7 +1161,7 @@ toolbar {
   // stand-alone OSD toolbars
   @at-root %toolbar_osd, &.osd {
     transition: $transition-shadow;
-    padding: $container-padding;
+    padding: $space-size;
     border-radius: $corner-radius;
     box-shadow: $shadow-z4, inset 0 1px highlight($surface);
     background-color: $surface;
@@ -1206,7 +1207,7 @@ toolbar {
       button { margin: 0; }
     }
 
-    switch { margin: 2px + $container-padding 2px; }
+    switch { margin: 2px + $space-size 2px; }
   }
 }
 
@@ -1218,8 +1219,8 @@ toolbar {
 
 // searchbar
 searchbar > revealer > box {
-  padding: $container-padding;
-  border-spacing: $container-padding;
+  padding: $space-size;
+  border-spacing: $space-size;
   border-style: solid;
   border-width: 0 0 1px;
   border-color: $divider;
@@ -1280,7 +1281,7 @@ searchbar > revealer > box {
 
   &:hover { box-shadow: 0 2px 3px rgba(black, 0.08), inset 0 0 0 1px $titlebar-divider; }
 
-  &:focus {
+  &:focus-within {
     box-shadow: inset 0 0 0 2px $entry-highlight;
   }
 
@@ -1302,8 +1303,9 @@ headerbar {
   transition: background-color $duration $ease-out, color $duration $ease-out;
   box-shadow: inset 0 -1px $divider;
   color: $titlebar-text;
-  min-height: $large-size;
-  // padding: 0 $container-padding;
+  min-height: $large-size - 2px;
+  margin: 0;
+  // padding: 0 $space-size;
 
   @if $outline == 'true' and $topbar == 'dark' and $variant == 'light' {
     box-shadow: inset 0 -1px $divider, inset 0 1px highlight($titlebar);
@@ -1324,13 +1326,19 @@ headerbar {
     &:disabled { color: $titlebar-text-secondary-disabled; }
   }
 
+  &.flat, &.flat:backdrop {
+    background: none;
+    box-shadow: none;
+    transition: none;
+  }
+
   .title {
-    padding: 0 $container-padding * 2;
+    padding: 0 $space-size * 2;
     font-weight: bold;
   }
 
   .subtitle {
-    padding: 0 $container-padding * 2;
+    padding: 0 $space-size * 2;
     font-size: smaller;
   }
 
@@ -1349,31 +1357,33 @@ headerbar {
   }
 
   > windowhandle > box {
-    padding: 0 $container-padding;
+    padding: 0 $space-size;
 
     &,
     > box.start,
     > box.end {
-      border-spacing: $container-padding;
+      border-spacing: $space-size;
     }
   }
 
   // add vertical margins to common widget on the headerbar to avoid them spanning the whole height
   entry,
   spinbutton,
-  button {
-    margin-top: $container-padding;
-    margin-bottom: $container-padding;
+  button,
+  stackswitcher,
+  separator:not(.sidebar) {
+    margin-top: $space-size;
+    margin-bottom: $space-size;
   }
 
-  menubutton {
+  menubutton > button,
+  spinbutton > button,
+  splitbutton > button {
     margin-top: 0;
     margin-bottom: 0;
   }
 
   separator:not(.sidebar) {
-    margin-top: $large-size / 4;
-    margin-bottom: $large-size / 4;
     background-color: $titlebar-divider;
   }
 
@@ -1389,28 +1399,10 @@ headerbar {
     slider { background-color: $titlebar-text-secondary-disabled; }
   }
 
-  // reset button margins of the spinbutton
-  spinbutton > button {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-
   // FIXME: This is a hacky workaround.
   .entry-tag {
     margin-top: 5px;
     margin-bottom: 5px;
-  }
-
-  &.windowhandle {
-    > viewswitcher > box > button:not(.suggested-action):not(.destructive-action) {
-      border-radius: 0;
-      margin-top: 0;
-      margin-bottom: 0;
-    }
-
-    > button.popup {
-      label, image { min-height: 0; }
-    }
   }
 
   // The separator for split headerbars
@@ -1494,17 +1486,17 @@ headerbar {
 
   // Window button
   windowcontrols {
-    border-spacing: $container-padding;
+    border-spacing: $space-size;
 
     &:not(.empty) {
       &.start:dir(ltr),
       &.end:dir(rtl) {
-        margin-right: $container-padding;
+        margin-right: $space-size;
       }
 
       &.start:dir(rtl),
       &.end:dir(ltr) {
-        margin-left: $container-padding;
+        margin-left: $space-size;
       }
     }
 
@@ -1530,7 +1522,7 @@ headerbar {
   &.default-decoration {
     background-color: $titlebar;
     min-height: $small-size;
-    padding: $container-padding;
+    padding: $space-size;
     border-radius: $corner-radius $corner-radius 0 0;
 
     @if $outline == 'true' and $topbar == 'dark' and $variant == 'light' {
@@ -1629,21 +1621,46 @@ pathbar > button {
   }
 }
 
+.pathbar {
+  background-color: $fill;
+  color: $text-secondary;
+  border: none;
+  border-radius: $corner-radius;
+  padding: 2px;
+
+  headerbar & {
+    margin-top: $space-size;
+    margin-bottom: $space-size;
+    background-color: on($titlebar, fill);
+    color: $titlebar-text-secondary;
+  }
+
+  > button {
+    margin-top: 0;
+    margin-bottom: 0;
+    min-height: 20px;
+    border-radius: $corner-radius - 2px;
+    border: none;
+    box-shadow: none;
+
+    &:last-child {
+      @include button(flat-checked);
+    }
+  }
+}
+
 
 /**************
  * Tree Views *
  **************/
 columnview.view,
 treeview.view {
-  background-image: image($base);
-
   border-left-color: $solid-border; // this is actually the tree lines color,
   border-top-color: $solid-border; // while this is the grid lines color, better then nothing
 
   // FIXME: Avoid transparency background-color being slightly darker
   &:selected {
-    background-color: transparent;
-    background-image: image($overlay-checked);
+    background-color: $overlay-checked;
     color: $text;
   }
 
@@ -1768,8 +1785,8 @@ menubar {
 
   > item {
     transition: background-color $duration $ease-out;
-    min-height: 8px + $container-padding * 2;
-    padding: ($container-padding - 2px) ($container-padding + 2px);
+    min-height: 8px + $space-size * 2;
+    padding: ($space-size - 2px) ($space-size + 2px);
     color: $titlebar-text-secondary;
 
     &:hover { // Seems like it :hover even with keyboard focus
@@ -1785,7 +1802,7 @@ menubar {
 
   //nested submenus
   & > item popover.menu popover.menu {
-    margin-left: $container-padding;
+    margin-left: $space-size;
   }
 
   & > item popover.menu.background popover.menu.background > contents {
@@ -1798,7 +1815,7 @@ menubar {
  **********************/
 popover.menu {
   box.inline-buttons {
-    padding: 0 $container-padding;
+    padding: 0 $space-size;
 
     button.image-button.model {
       min-height: $menuitem-size;
@@ -1813,11 +1830,11 @@ popover.menu {
   }
 
   box.circular-buttons {
-    padding: $container-padding;
+    padding: $space-size;
 
     button.circular.image-button.model {
       @extend %small-button;
-      padding: $container-padding;
+      padding: $space-size;
 
       &:focus {
         background-color: $overlay-selected;
@@ -1826,7 +1843,7 @@ popover.menu {
   }
 
   &.background separator {
-    margin: $container-padding / 2 0;
+    margin: $space-size / 2 0;
   }
 
   arrow.left,
@@ -1845,9 +1862,9 @@ popover.menu {
 
   modelbutton {
     transition: background-color $duration $ease-out;
-    min-height: 8px + $container-padding * 2;
+    min-height: 8px + $space-size * 2;
     min-width: 40px;
-    padding: ($container-padding - 2px) ($container-padding + 2px);
+    padding: ($space-size - 2px) ($space-size + 2px);
     color: $text;
     font: initial;
     text-shadow: none;
@@ -1875,10 +1892,11 @@ popover.background {
   > arrow,
   > contents {
     transition: $transition-shadow;
-    padding: $container-padding;
+    padding: $space-size;
     box-shadow: $shadow-z6; // TODO: this should really have a highlight
     background-color: $menu;
     border-radius: $menu-radius;
+    color: on($menu);
 
     @if $outline == 'true' {
       border: 1px solid if($variant == 'light', rgba(black, 0.2), rgba(white, 0.12));
@@ -1907,7 +1925,7 @@ popover.background {
 
     separator {
       background-color: $divider;
-      margin: $container-padding / 2 0;
+      margin: $space-size / 2 0;
     }
 
     list separator { margin: 0; }
@@ -1923,7 +1941,7 @@ popover.background {
     padding: 0;
 
     > row {
-      padding: $container-padding $container-padding * 2;
+      padding: $space-size $space-size * 2;
       margin: 0;
       border-radius: $corner-radius;
 
@@ -1988,7 +2006,7 @@ $tab-radius: $corner-radius;
               background-image 0ms;
   min-height: $small-size;
   min-width: $small-size;
-  padding: ($container-padding / 2) 12px;
+  padding: ($space-size / 2) 12px;
   border-width: 1px;
   border-color: transparent;
   border-style: solid;
@@ -2058,7 +2076,7 @@ notebook {
 
       > tabs {
         margin-bottom: -1px;
-        margin-top: $container-padding / 2;
+        margin-top: $space-size / 2;
 
         > tab {
           border-radius: $tab-radius $tab-radius 0 0;
@@ -2073,7 +2091,7 @@ notebook {
 
       > tabs {
         margin-top: -1px;
-        margin-bottom: $container-padding / 2;
+        margin-bottom: $space-size / 2;
 
         > tab {
           border-radius: 0 0 $tab-radius $tab-radius;
@@ -2087,7 +2105,7 @@ notebook {
       border-radius: $corner-radius 0 0 $corner-radius;
 
       > tabs {
-        margin-left: $container-padding / 2;
+        margin-left: $space-size / 2;
         margin-right: -1px;
 
         > tab {
@@ -2103,7 +2121,7 @@ notebook {
 
       > tabs {
         margin-left: -1px;
-        margin-right: $container-padding / 2;
+        margin-right: $space-size / 2;
 
         > tab {
           border-radius: 0 $tab-radius $tab-radius 0;
@@ -2180,8 +2198,8 @@ notebook {
       // FIXME: The tab node doesn't have :drop(active), instead its child box has it.
       > box {
         transition: background-color $duration $ease-out;
-        margin: -$container-padding -12px;
-        padding: $container-padding 12px;
+        margin: -$space-size -12px;
+        padding: $space-size 12px;
 
         &:drop(active) {
           background-color: $divider;
@@ -2197,13 +2215,13 @@ notebook {
         margin: 2px 0;
 
         &:last-child {
-          margin-left: $container-padding;
-          margin-right: $container-padding - 12px;
+          margin-left: $space-size;
+          margin-right: $space-size - 12px;
         }
 
         &:first-child {
-          margin-left: $container-padding - 12px;
-          margin-right: $container-padding;
+          margin-left: $space-size - 12px;
+          margin-right: $space-size;
         }
       }
     }
@@ -2274,8 +2292,8 @@ scrollbar {
 
     > slider {
       transition: background-color $duration $ease-out;
-      min-width: if($window == 'round', $container-padding, ($container-padding + 4px));
-      min-height: if($window == 'round', $container-padding, ($container-padding + 4px));
+      min-width: if($window == 'round', $space-size, ($space-size + 4px));
+      min-height: if($window == 'round', $space-size, ($space-size + 4px));
       border: none;
       border-radius: if($window == 'round', $circular_radius, 0);
       background-clip: padding-box;
@@ -2291,9 +2309,9 @@ scrollbar {
     }
   }
 
-  &.horizontal > range > trough > slider { margin: $container-padding / 2 0; }
+  &.horizontal > range > trough > slider { margin: $space-size / 2 0; }
 
-  &.vertical > range > trough > slider { margin: 0 $container-padding / 2; }
+  &.vertical > range > trough > slider { margin: 0 $space-size / 2; }
 
   > range.fine-tune {
     > trough > slider {
@@ -2301,9 +2319,9 @@ scrollbar {
       min-height: 4px;
     }
 
-    &.horizontal > trough > slider { margin: $container-padding / 2 0; }
+    &.horizontal > trough > slider { margin: $space-size / 2 0; }
 
-    &.vertical > trough > slider { margin: 0 $container-padding / 2; }
+    &.vertical > trough > slider { margin: 0 $space-size / 2; }
   }
 
   &.overlay-indicator {
@@ -2318,7 +2336,7 @@ scrollbar {
       > range > trough > slider {
         min-width: 4px;
         min-height: 4px;
-        margin: if($window == 'round', 0, $container-padding / 2);
+        margin: if($window == 'round', 0, $space-size / 2);
         border: 1px solid rgba($base, 0.3);
       }
 
@@ -2390,7 +2408,7 @@ scrollbar {
  **********/
 switch {
   transition: all $duration $ease-out;
-  margin: $container-padding 0;
+  margin: $space-size 0;
   padding: 0;
   border: 0 solid transparent;
   border-radius: $circular-radius;
@@ -3012,8 +3030,8 @@ frame {
 }
 
 actionbar > revealer > box {
-  padding: $container-padding;
-  border-spacing: $container-padding;
+  padding: $space-size;
+  border-spacing: $space-size;
   border-top: 1px solid $divider;
   background-color: $base;
   background-clip: border-box;
@@ -3072,6 +3090,12 @@ separator {
   min-width: 1px;
   min-height: 1px;
   background-color: $divider;
+
+  &.spacer {
+    min-width: 0;
+    min-height: 0;
+    background-color: transparent;
+  }
 }
 
 %hide_separators {
@@ -3163,11 +3187,11 @@ columnview {
 
 .rich-list { /* rich lists usually containing other widgets than just labels/text */
   & > row {
-    padding: $container-padding*1.5 $container-padding*2;
+    padding: $space-size*1.5 $space-size*2;
     min-height: 32px; /* should be tall even when only containing a label */
 
     & > box {
-      border-spacing: $container-padding*2;
+      border-spacing: $space-size*2;
     }
   }
 }
@@ -3178,8 +3202,8 @@ columnview {
 .app-notification {
   @extend %toolbar_osd;
   margin: 8px;
-  border-spacing: $container-padding;
-  padding: $container-padding;
+  border-spacing: $space-size;
+  padding: $space-size;
 
   button {
     @extend %button-flat;
@@ -3247,7 +3271,7 @@ columnview {
    }
 
    > header {
-     padding: $container-padding / 2;
+     padding: $space-size / 2;
      border-bottom: 1px solid $divider;
 
      > button {
@@ -3258,7 +3282,7 @@ columnview {
    }
 
    > grid {
-     margin: $container-padding / 2;
+     margin: $space-size / 2;
 
      > label {
        border-radius: $circular-radius;
@@ -3279,7 +3303,7 @@ columnview {
      }
 
      > label.day-number {
-       padding: $container-padding*1.5;
+       padding: $space-size*1.5;
 
        &:selected {
          @extend %selected_items;
@@ -3324,15 +3348,15 @@ window.dialog.message { // Message Dialog styling
     }
 
     .dialog-action-area {
-      margin-top: -$container-padding;
-      // padding: $container-padding;
+      margin-top: -$space-size;
+      // padding: $space-size;
 
       > button {
         @extend %button-flat;
 
         &, &:first-child, &:last-child { border-radius: $corner-radius; }
 
-        &:not(:last-child) { margin-right: $container-padding; }
+        &:not(:last-child) { margin-right: $space-size; }
 
         &.suggested-action:not(:disabled) { color: $suggested; }
 
@@ -3362,7 +3386,7 @@ filechooser {
 }
 
 filechooserbutton > button > box {
-  border-spacing: $container-padding;
+  border-spacing: $space-size;
 }
 
 filechooserbutton:drop(active) {
@@ -3445,14 +3469,14 @@ separator.sidebar {
  **********************/
 
 .navigation-sidebar {
-  padding: $container-padding - 2px 0; //only vertical padding. horizontal row size would clip
+  padding: $space-size - 2px 0; //only vertical padding. horizontal row size would clip
   border-right: none;
 
   > row {
     min-height: $medium-size;
-    padding: $container-padding $container-padding * 1.5;
+    padding: $space-size $space-size * 1.5;
     border-radius: $corner-radius;
-    margin: 2px $container-padding;
+    margin: 2px $space-size;
 
     &:hover,
     &:focus-visible:focus-within {
@@ -3464,7 +3488,7 @@ separator.sidebar {
       color: $text;
       font-weight: 500;
       background-image: url("assets/selected-line.png"), url("assets/selected-line@2.png");
-      background-position: ($container-padding / 2) center;
+      background-position: ($space-size / 2) center;
       background-repeat: no-repeat;
       background-size: 3px 16px;
 
@@ -3503,7 +3527,7 @@ placessidebar {
   .navigation-sidebar > row {
     // Needs overriding of the GtkListBoxRow padding
     min-height: $medium-size;
-    margin: 0 $container-padding; // Remove unwanted hard-coded vertical margins with -1px
+    margin: 0 $space-size; // Remove unwanted hard-coded vertical margins with -1px
     padding: 0;
     border-radius: $corner-radius;
     transition: background-image 0, box-shadow 0;
@@ -3519,7 +3543,7 @@ placessidebar {
       color: $text;
       font-weight: 500;
       background-image: url("assets/selected-line.png"), url("assets/selected-line@2.png");
-      background-position: ($container-padding / 2) center;
+      background-position: ($space-size / 2) center;
       background-repeat: no-repeat;
       background-size: 3px 20px;
       transition: background-image 0, box-shadow 0;
@@ -3573,7 +3597,7 @@ placesview {
 
   // this selects the "connect to server" label
   > actionbar > revealer > box > label {
-    border-spacing: $container-padding;
+    border-spacing: $space-size;
   }
 }
 
@@ -3664,8 +3688,8 @@ infobar {
   margin-bottom: 0;
 
   > revealer > box {
-    padding: $container-padding;
-    border-spacing: $container-padding * 2;
+    padding: $space-size;
+    border-spacing: $space-size * 2;
   }
 
   &.info {
@@ -3746,11 +3770,11 @@ tooltip {
     margin: 2px 6px 8px 6px;
   }
 
-  padding: $container-padding $container-padding*2;
+  padding: $space-size $space-size*2;
   box-shadow: none; // otherwise it gets inherited by windowframe.csd
 
   > box {
-    border-spacing: $container-padding;
+    border-spacing: $space-size;
   }
 }
 
@@ -4004,7 +4028,7 @@ shortcut > .keycap {
 stackswitcher {
   min-height: 0;
   padding: 0;
-  margin: $container-padding 0;
+  margin: $space-size 0;
   border-radius: $corner-radius;
   background-color: $overlay-normal;
 
@@ -4032,7 +4056,7 @@ stackswitcher {
   button.text-button { min-width: 100px; } // FIXME aggregate with buttons
 
   &.circular {
-    border-spacing: $container-padding * 2;
+    border-spacing: $space-size * 2;
 
     button.circular,
     button.text-button.circular { // FIXME aggregate with buttons
@@ -4070,8 +4094,8 @@ popover.emoji-picker {
 }
 
 .emoji-searchbar {
-  padding: $container-padding;
-  border-spacing: $container-padding;
+  padding: $space-size;
+  border-spacing: $space-size;
   border-bottom: 1px solid $divider;
   background: none;
 
@@ -4085,15 +4109,15 @@ popover.emoji-picker {
 
 .emoji-toolbar {
   padding: 0;
-  border-spacing: $container-padding/2;
+  border-spacing: $space-size/2;
   border-top: 1px solid $divider;
   background: none;
 }
 
 button.emoji-section {
   margin: 0;
-  padding: $container-padding;
-  border-radius: $corner-radius -$container-padding/2;
+  padding: $space-size;
+  border-radius: $corner-radius -$space-size/2;
 
   &:checked {
     color: $primary;
@@ -4102,7 +4126,7 @@ button.emoji-section {
 
 popover.emoji-picker emoji {
   font-size: x-large;
-  padding: $container-padding;
+  padding: $space-size;
   transition: $transition;
   border-radius: $corner-radius;
 
@@ -4114,11 +4138,11 @@ popover.emoji-picker emoji {
 
 emoji-completion-row {
   min-height: $menuitem-size;
-  padding: 0 $container-padding*2;
+  padding: 0 $space-size*2;
 
   > box {
-    border-spacing: $container-padding;
-    padding: 2px $container-padding;
+    border-spacing: $space-size;
+    padding: 2px $space-size;
   }
 
   &:focus, &:hover,
@@ -4133,5 +4157,5 @@ popover.entry-completion > contents {
 }
 
 statusbar {
-  padding: $container-padding $container-padding * 2;
+  padding: $space-size $space-size * 2;
 }

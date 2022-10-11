@@ -112,7 +112,7 @@
   .windowhandle .linked.nautilus-path-bar {
     background-color: $titlebar-fill;
     border-radius: $corner-radius;
-    margin: $container-padding 0;
+    margin: $space-size 0;
 
     button:not(.suggested-action):not(.destructive-action) {
       margin-top: 0;
@@ -158,7 +158,7 @@
 // Path bar
 .path-bar-box {
   transition: background-color $duration $ease-out;
-  margin: $container-padding 0;
+  margin: $space-size 0;
   border-radius: $corner-radius;
   // background-color: $titlebar-fill;
 
@@ -254,7 +254,7 @@
   // .icon-background { background-color: black; }
 
   .icon-item-background {
-    padding: $container-padding;
+    padding: $space-size;
     border-radius: $bar-size;
   }
 
@@ -403,7 +403,7 @@ window.org-gnome-gedit {
 
 .gedit-search-slider {
   margin: 0 6px 10px;
-  padding: $container-padding;
+  padding: $space-size;
   box-shadow: $shadow-z4;
   background-color: $surface;
   border-radius: 0 0 $menu-radius $menu-radius;
@@ -416,13 +416,13 @@ window.org-gnome-gedit {
       }
 
       &:dir(ltr) {
-        .gedit-search-entry-occurrences-tag { margin-left: $container-padding; }
+        .gedit-search-entry-occurrences-tag { margin-left: $space-size; }
 
         image.right { margin-right: 0; }
       }
 
       &:dir(rtl) {
-        .gedit-search-entry-occurrences-tag { margin-right: $container-padding; }
+        .gedit-search-entry-occurrences-tag { margin-right: $space-size; }
 
         image.left { margin-left: 0; }
       }
@@ -481,14 +481,14 @@ frame.gedit-map-frame > border {
  }
 
  %sidebar_row {
-   margin: 0 ($container-padding / 2);
+   margin: 0 ($space-size / 2);
    border-radius: $corner-radius;
-   padding: $container-padding * 2 - 2px;
+   padding: $space-size * 2 - 2px;
  }
 
 // the sidebar
 .tweak-categories {
-  padding: $container_padding / 2 0;
+  padding: $space-size / 2 0;
   background-image: image($base-alt);
 
   separator { @extend %hide_separators; }
@@ -500,7 +500,7 @@ frame.gedit-map-frame > border {
 
 .tweak {
   // padding-top: 3px;
-  padding: 3px;
+  padding: $space-size / 2;
 
   &.title:hover { box-shadow: none; }
 }
@@ -625,7 +625,7 @@ window.background.csd {
         background-color: transparent;
 
         list { // left-pane
-          padding: $container_padding / 2 0;
+          padding: $space-size / 2 0;
           background-color: transparent;
 
           row.activatable:not(:hover):not(:active):not(:selected) {
@@ -635,13 +635,13 @@ window.background.csd {
           row.activatable {
             &:selected {
               background-image: url("assets/selected-line.png"), url("assets/selected-line@2.png");
-              background-position: ($container-padding - 2px) center;
+              background-position: ($space-size - 2px) center;
               background-repeat: no-repeat;
               background-size: 3px 24px;
             }
           }
 
-          > separator { margin: $container_padding / 2 0; }
+          > separator { margin: $space-size / 2 0; }
         }
       }
     }
@@ -836,7 +836,7 @@ window.background.csd.unified {
 tabbox { // Gnome 40.0
   background-color: $background;
   box-shadow: inset 0 -1px $divider;
-  padding: ($container-padding / 2) ($container-padding / 2) 0;
+  padding: ($space-size / 2) ($space-size / 2) 0;
 
   > tab {
     @extend %tabs_tab;
@@ -880,7 +880,7 @@ window.csd > box.vertical > box.vertical,
 window.solid-csd > box.vertical > box.vertical {
   > toolbar.horizontal {
     margin: -1px 0;
-    padding: $container-padding;
+    padding: $space-size;
     border-bottom: none;
     border-top: 1px solid $border;
     background-color: transparent;
@@ -1118,7 +1118,7 @@ docktab {
   min-height: $small-size;
   min-width: $small-size;
   margin-bottom: -1px;
-  padding: $container-padding 6px;
+  padding: $space-size 6px;
 
   border-width: 1px;         // for reorderable tabs
   border-color: transparent; //

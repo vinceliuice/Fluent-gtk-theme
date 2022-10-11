@@ -106,7 +106,7 @@ button {
   // hide separators
   &.font {
     separator { background-color: transparent; }
-    > box { border-spacing: $container-padding; }
+    > box { border-spacing: $space-size; }
     > box > box > label { font-weight: bold; }
   }
 
@@ -192,8 +192,8 @@ menubutton {
 
   &.image-button > button {
     min-width: 24px;
-    padding-left: $container-padding;
-    padding-right: $container-padding;
+    padding-left: $space-size;
+    padding-right: $space-size;
   }
 
   arrow {
@@ -226,8 +226,8 @@ splitbutton {
   }
 
   > separator {
-    margin-top: $container-padding;
-    margin-bottom: $container-padding;
+    margin-top: $space-size;
+    margin-bottom: $space-size;
     background: none;
   }
 
@@ -240,17 +240,17 @@ splitbutton {
   // we have to add them manually
   &.image-button > button {
     min-width: 24px;
-    padding-left: $container-padding;
-    padding-right: $container-padding;
+    padding-left: $space-size;
+    padding-right: $space-size;
   }
 
   &.text-button.image-button > button,
   &.image-text-button > button {
-    padding-left: $container-padding * 1.5;
-    padding-right: $container-padding * 1.5;
+    padding-left: $space-size * 1.5;
+    padding-right: $space-size * 1.5;
 
     > box {
-      border-spacing: $container-padding;
+      border-spacing: $space-size;
     }
   }
 
@@ -337,7 +337,7 @@ splitbutton {
 }
 
 buttoncontent {
-  border-spacing: $container-padding;
+  border-spacing: $space-size;
 
   > label {
     font-weight: bold;
@@ -361,17 +361,17 @@ buttoncontent {
 
 toast {
   @extend %osd;
-  margin: $container-padding * 2;
+  margin: $space-size * 2;
   margin-bottom: 24px;
   border-radius: $circular-radius;
-  border-spacing: $container-padding;
-  padding: $container-padding;
+  border-spacing: $space-size;
+  padding: $space-size;
 
-  &:dir(ltr) { padding-left: $container-padding * 2; }
-  &:dir(rtl) { padding-right: $container-padding * 2; }
+  &:dir(ltr) { padding-left: $space-size * 2; }
+  &:dir(rtl) { padding-right: $space-size * 2; }
 
   > widget {
-    margin: 0 $container-padding;
+    margin: 0 $space-size;
   }
 
   button {
@@ -385,11 +385,11 @@ toast {
 
 statuspage {
   > scrolledwindow > viewport > box {
-    margin: $container-padding * 6 $container-padding * 2;
-    border-spacing: $container-padding * 4;
+    margin: $space-size * 6 $space-size * 2;
+    border-spacing: $space-size * 4;
 
     > clamp > box {
-      border-spacing: $container-padding * 2;
+      border-spacing: $space-size * 2;
 
       > .icon {
         -gtk-icon-size: 128px;
@@ -408,15 +408,15 @@ statuspage {
   }
 
   &.compact > scrolledwindow > viewport > box {
-    margin: $container-padding * 4 $container-padding 8 2;
-    border-spacing: $container-padding * 4;
+    margin: $space-size * 4 $space-size 8 2;
+    border-spacing: $space-size * 4;
 
     > clamp > box {
       > .icon {
         -gtk-icon-size: 96px;
 
         &:not(:last-child) {
-          margin-bottom: $container-padding * 2;
+          margin-bottom: $space-size * 2;
         }
       }
 
@@ -455,17 +455,17 @@ statuspage {
 //
 
 preferencespage > scrolledwindow > viewport > clamp > box {
-  margin: $container-padding * 4 $container-padding * 2;
-  border-spacing: $container-padding * 4;
+  margin: $space-size * 4 $space-size * 2;
+  border-spacing: $space-size * 4;
 }
 
 preferencesgroup > box {
   &, .labels {
-    border-spacing: $container-padding;
+    border-spacing: $space-size;
   }
 
   > box.header:not(.single-line) {
-    margin-bottom: $container-padding;
+    margin-bottom: $space-size;
   }
 
   > box.single-line {
@@ -479,11 +479,11 @@ preferencesgroup > box {
 
 statuspage {
   > scrolledwindow > viewport > box {
-    margin: $container-padding * 6 $container-padding * 2;
-    border-spacing: $container-padding * 6;
+    margin: $space-size * 6 $space-size * 2;
+    border-spacing: $space-size * 6;
 
     > clamp > box {
-      border-spacing: $container-padding * 2;
+      border-spacing: $space-size * 2;
 
       > .icon {
         -gtk-icon-size: 128px;
@@ -495,22 +495,22 @@ statuspage {
         }
 
         &:not(:last-child) {
-          margin-bottom: $container-padding * 4;
+          margin-bottom: $space-size * 4;
         }
       }
     }
   }
 
   &.compact > scrolledwindow > viewport > box {
-    margin: $container-padding * 4 $container-padding * 2;
-    border-spacing: $container-padding * 4;
+    margin: $space-size * 4 $space-size * 2;
+    border-spacing: $space-size * 4;
 
     > clamp > box {
       > .icon {
         -gtk-icon-size: 96px;
 
         &:not(:last-child) {
-          margin-bottom: $container-padding * 2;
+          margin-bottom: $space-size * 2;
         }
       }
 
@@ -529,14 +529,14 @@ viewswitcher {
   margin: 0;
 
   &.wide {
-    border-spacing: $container-padding / 2;
+    border-spacing: $space-size / 2;
     border-radius: $corner-radius;
     background-color: $fill;
-    margin-top: $container-padding;
-    margin-bottom: $container-padding;
+    margin-top: $space-size;
+    margin-bottom: $space-size;
 
     > button.toggle, > button.toggle.flat {
-      padding: 0 $container-padding;
+      padding: 0 $space-size;
     }
 
     button.toggle:checked, button.toggle.flat:checked {
@@ -567,19 +567,19 @@ viewswitcher {
     > stack > box {
       &.narrow {
         font-size: 0.75rem;
-        padding-top: $container-padding + 1px;
-        padding-bottom: $container-padding - 1px;
-        border-spacing: $container-padding - 2px;
+        padding-top: $space-size + 1px;
+        padding-bottom: $space-size - 1px;
+        border-spacing: $space-size - 2px;
 
         > stack > label {
-          padding-left: $container-padding + 2px;
-          padding-right: $container-padding + 2px;
+          padding-left: $space-size + 2px;
+          padding-right: $space-size + 2px;
         }
       }
 
       &.wide {
-        padding: 0 $container-padding * 2;
-        border-spacing: $container-padding;
+        padding: 0 $space-size * 2;
+        border-spacing: $space-size;
       }
     }
   }
@@ -592,15 +592,15 @@ viewswitcherbar actionbar > revealer > box {
 
 // AdwViewSwitcherTitle
 viewswitchertitle viewswitcher {
-  margin-left: $container-padding * 2;
-  margin-right: $container-padding * 2;
+  margin-left: $space-size * 2;
+  margin-right: $space-size * 2;
 }
 
 // AdwIndicatorBin
 indicatorbin {
   > indicator, > mask {
-    min-width: $container-padding;
-    min-height: $container-padding;
+    min-width: $space-size;
+    min-height: $space-size;
     border-radius: $circular-radius;
   }
 
@@ -640,8 +640,8 @@ row {
   }
 
   > box.header {
-    margin-left: $container-padding * 2;
-    margin-right: $container-padding * 2;
+    margin-left: $space-size * 2;
+    margin-right: $space-size * 2;
     min-height: $large-size;
 
     > .icon:disabled {
@@ -649,9 +649,9 @@ row {
     }
 
     > box.title {
-      margin-top: $container-padding;
-      margin-bottom: $container-padding;
-      border-spacing: $container-padding / 2;
+      margin-top: $space-size;
+      margin-bottom: $space-size;
+      border-spacing: $space-size / 2;
     }
   }
 }
@@ -869,8 +869,8 @@ tabbar {
     }
 
     > separator {
-      margin-top: $container-padding * 1.5;
-      margin-bottom: $container-padding * 1.5;
+      margin-top: $space-size * 1.5;
+      margin-bottom: $space-size * 1.5;
       transition: opacity 150ms ease-in-out;
 
       &.hidden {
@@ -881,7 +881,7 @@ tabbar {
     > revealer > indicator {
       min-width: 2px;
       border-radius: 2px;
-      margin: $container-padding * 1.5 $container-padding;
+      margin: $space-size * 1.5 $space-size;
       background: gtkalpha($primary, 0.5);
     }
   }
@@ -893,7 +893,7 @@ tabbar {
     border-style: solid;
     min-height: $small-size;
     min-width: $small-size;
-    padding: ($container-padding / 2) 12px;
+    padding: ($space-size / 2) 12px;
     background-clip: padding-box;
     color: $text-secondary;
     background-color: transparent;
@@ -950,16 +950,16 @@ dnd tab {
   background-color: $background;
   color: $text-secondary;
   box-shadow: none;
-  margin: $container-padding * 4;
+  margin: $space-size * 4;
 }
 
 tabbar,
 dnd {
   tab {
     min-height: $menuitem-size;
-    padding: $container-padding / 2 $container-padding;
+    padding: $space-size / 2 $space-size;
     border-radius: $tab-radius $tab-radius 0 0;
-    margin-top: $container-padding / 2;
+    margin-top: $space-size / 2;
     margin-bottom: -1px;
 
     button.image-button {

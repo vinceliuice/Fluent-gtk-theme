@@ -105,7 +105,7 @@ XfdesktopIconView.view {
  **********/
 .thunar {
   paned > scrolledwindow {
-    padding: $container-padding / 2;
+    padding: $space-size / 2;
 
     treeview.view {
       border-radius: $corner-radius;
@@ -207,7 +207,7 @@ window.background.csd.thunar {
 // xfce4-docklike-plugin
 
 //change these colors according to your color palette
-#docklike-plugin button { min-width: $medium-size; min-height: $medium-size + $container-padding; }
+#docklike-plugin button { min-width: $medium-size; min-height: $medium-size + $space-size; }
 #docklike-plugin button.hover_group { background-color: on($panel, divider); }
 #docklike-plugin button.active_group { background-color: on($panel, track); }
 #docklike-plugin button.active_group.hover_group { background-color: rgba($primary, 0.12); }
