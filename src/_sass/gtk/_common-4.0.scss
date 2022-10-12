@@ -3036,8 +3036,8 @@ actionbar > revealer > box {
   background-color: $base;
   background-clip: border-box;
 
-  .background.csd box.vertical > & {
-    border-radius: 0 0 $window-radius $window-radius;
+  entry, button, menubutton {
+    margin: 0;
   }
 }
 
