@@ -1,13 +1,13 @@
 .quick-settings {
-  padding: $container_padding * 3 !important;
   border-radius: $buttons_radius + $container_padding * 3 !important;
+  @if $laptop == 'false' {
+    padding: 10px + $container_padding 6px + $container_padding * 2 14px + $container_padding !important;
+  } @else {
+    padding: 8px + $container_padding 6px + $container_padding * 2 12px + $container_padding !important;
+  }
 
   .icon-button, .button {
     padding: $container_padding * 1.75;
-  }
-
-  .popup-menu-content {
-    padding: $container_padding * 2 !important;
   }
 }
 
@@ -108,7 +108,7 @@
 }
 
 .quick-toggle-menu {
-  background-color: $menu_bg_color !important;
+  background-color: lighten($base_color, 5%) !important;
   color: $fg_color !important;
   border-radius: $menu_radius !important;
   padding: $container_padding * 2;
@@ -154,14 +154,16 @@
   & > StBoxLayout { spacing: 2 * $container_padding; }
 
   .icon-button {
-    background-color: rgba($fg_color, 0.06);
+    background-color: $divider_color;
     color: $fg_color;
     border-radius: $buttons_radius;
 
-    &:hover { @include button(flat-hover); }
-    &:active { @include button(flat-active); }
-    &:insensitive { @include button(flat-insensitive); }
-    &:focus { @include button(flat-focus); }
+    &:hover {
+      background-color: $visit_color;
+    }
+    &:active {
+      background-color: $track_color;
+    }
 
     > StIcon { -st-icon-style: symbolic; }
   }

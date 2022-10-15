@@ -42,9 +42,9 @@ $secondary_fg_color:                 if($variant == 'light', rgba($black, 0.54),
 $hint_fg_color:                      if($variant == 'light', rgba($black, 0.38), rgba($white, 0.5));
 $disabled_fg_color:                  if($variant == 'light', rgba($black, 0.38), rgba($white, 0.5));
 $disabled_secondary_fg_color:        if($variant == 'light', rgba($black, 0.26), rgba($white, 0.3));
-$track_color:                        if($variant == 'light', rgba($black, 0.2), rgba($white, 0.1));
-$visit_color:                        if($variant == 'light', rgba($black, 0.15), rgba($white, 0.08));
-$divider_color:                      if($variant == 'light', rgba($black, 0.08), rgba($white, 0.06));
+$track_color:                        if($variant == 'light', rgba($black, 0.2), rgba($white, 0.15));
+$visit_color:                        if($variant == 'light', rgba($black, 0.12), rgba($white, 0.1));
+$divider_color:                      if($variant == 'light', rgba($black, 0.06), rgba($white, 0.06));
 
 $panel_fg_color:                     if($panel == 'light', rgba($black, 0.88), $white);
 $panel_secondary_fg_color:           if($panel == 'light', rgba($black, 0.75), rgba($white, 0.75));

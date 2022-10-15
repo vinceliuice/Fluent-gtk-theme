@@ -1899,7 +1899,12 @@ popover.background {
     color: on($menu);
 
     @if $outline == 'true' {
-      border: 1px solid if($variant == 'light', rgba(black, 0.2), rgba(white, 0.12));
+      @if $variant == 'light' {
+        box-shadow: $shadow-z6, 0 0 0 1px $divider;
+      } @else {
+        border: 1px solid $divider;
+        background-clip: border-box;
+      }
     }
   }
 
@@ -2006,7 +2011,7 @@ $tab-radius: $corner-radius;
               background-image 0ms;
   min-height: $small-size;
   min-width: $small-size;
-  padding: ($space-size / 2) 12px;
+  padding: ($space-size / 2) $space-size * 2;
   border-width: 1px;
   border-color: transparent;
   border-style: solid;
@@ -2024,13 +2029,16 @@ $tab-radius: $corner-radius;
 
   &:disabled { color: $text-secondary-disabled; }
 
-  &:checked {
+  &:checked, &:selected {
     transition: $transition;
-    background-color: $base;
     background-clip: padding-box;
     border-color: $solid-border;
     color: $text;
     box-shadow: none;
+
+    &, &:hover {
+      background-color: $base;
+    }
 
     &:disabled { color: $text-disabled; }
 
@@ -2262,6 +2270,56 @@ notebook {
   > stack:not(:only-child) { // the :not(:only-child) is for "hidden" notebooks
     background-color: transparent;
     border-radius: $corner-radius;
+  }
+}
+
+tabbar {
+  .box {
+    min-height: $medium-size;
+    border-bottom: none;
+    background-color: $background;
+    background-clip: border-box;
+    box-shadow: inset 0 -1px $divider;
+    padding: 0;
+  }
+
+  &:backdrop .box {
+    background-color: $background;
+
+    > scrolledwindow,
+    > .start-action,
+    > .end-action {
+      filter: opacity(0.5);
+    }
+  }
+
+  tabbox {
+    > tabboxchild {
+      padding: 0;
+      margin: 0;
+    }
+
+    tab {
+      @extend %tabs_tab;
+      padding: $space-size / 2 $space-size;
+      border-bottom: none;
+      margin-bottom: -1px;
+    }
+
+    .start-action,
+    .end-action {
+      padding: $space-size;
+    }
+  
+    .start-action:dir(ltr),
+    .end-action:dir(rtl) {
+      padding-right: 0;
+    }
+  
+    .start-action:dir(rtl),
+    .end-action:dir(ltr) {
+      padding-left: 0;
+    }
   }
 }
 
@@ -3128,7 +3186,7 @@ row {
   @at-root %row_activatable, &.activatable {
     transition: $transition;
     outline: none;
-    box-shadow: inset 0 0 0 9999px transparent;
+    box-shadow: inset 0 0 0 2px transparent;
 
     &:focus {
       box-shadow: inset 0 0 0 2px $overlay-focus;
@@ -3137,13 +3195,15 @@ row {
     &:hover {
       transition: $transition,
                   box-shadow 0ms;
-      box-shadow: inset 0 0 0 9999px $overlay-hover;
+      background-color: $overlay-hover;
+      box-shadow: none;
     }
 
     &.has-open-popup,
     &:active {
       transition: $transition;
-      box-shadow: inset 0 0 0 9999px $overlay-active;
+      background-color: $overlay-active;
+      box-shadow: none;
     }
   }
 
@@ -3187,11 +3247,11 @@ columnview {
 
 .rich-list { /* rich lists usually containing other widgets than just labels/text */
   & > row {
-    padding: $space-size*1.5 $space-size*2;
-    min-height: 32px; /* should be tall even when only containing a label */
+    padding: $space-size * 1.5 $space-size * 2;
+    min-height: $medium-size; /* should be tall even when only containing a label */
 
     & > box {
-      border-spacing: $space-size*2;
+      border-spacing: $space-size * 2;
     }
   }
 }
@@ -4117,7 +4177,7 @@ popover.emoji-picker {
 button.emoji-section {
   margin: 0;
   padding: $space-size;
-  border-radius: $corner-radius -$space-size/2;
+  border-radius: $corner-radius;
 
   &:checked {
     color: $primary;

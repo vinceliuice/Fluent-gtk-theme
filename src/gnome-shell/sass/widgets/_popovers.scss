@@ -31,9 +31,9 @@
   border-image: url("assets/menu.svg") 24 32 28 28;
 
   @if $laptop == 'false' {
-    padding: 10px 6px 14px !important;
+    padding: 10px (6px + $container_padding) 14px !important;
   } @else {
-    padding: 8px 6px 12px !important;
+    padding: 8px (6px + $container_padding) 12px !important;
   }
 
   margin: 0 !important;
@@ -46,7 +46,7 @@
 .popup-menu-item {
   spacing: $container_padding;
   padding: $container_padding;
-  margin: 0 $container_padding;
+  margin: 0;
   color: $fg_color;
   transition-duration: $shorter_duration;
   border-radius: $buttons_radius;
@@ -105,7 +105,7 @@
 
 // popover submenus
 .popup-sub-menu {
-  margin: 0 $container_padding;
+  margin: 0;
   background-color: if($variant == 'light', rgba(black, 0.08), rgba(white, 0.06));
   border-radius: 0 0 $buttons_radius $buttons_radius;
   border: none;
