@@ -48,6 +48,10 @@ Run the following commands in the terminal:
                         [default|apple|simple|gnome|ubuntu|arch|manjaro|fedora|debian|void|opensuse|popos|mxlinux|zorin]
                         (Default: Windows icon)
 
+-l, --libadwaita        Install link to gtk4 config for theming libadwaita
+
+-u, --uninstall         Uninstall themes or link for libadwaita
+
 --tweaks                Specify versions for tweaks [solid|float|round|blur|noborder|square]
                         solid:    no transparency version
                         float:    floating panel

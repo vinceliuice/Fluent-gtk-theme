@@ -65,6 +65,10 @@ OPTIONS:
                           [default|apple|simple|gnome|ubuntu|arch|manjaro|fedora|debian|void|opensuse|popos|mxlinux|zorin|endeavouros]
                           (Default: Windows)
 
+  -l, --libadwaita        Install link to gtk4 config for theming libadwaita
+
+  -u, --uninstall         Uninstall themes or link for libadwaita
+
   --tweaks                Specify versions for tweaks [solid|float|round|blur|noborder|square]
                           solid:    no transparency version
                           float:    floating panel
@@ -251,6 +255,7 @@ install() {
 themes=()
 colors=()
 sizes=()
+lcolors=()
 
 while [[ "$#" -gt 0 ]]; do
   case "${1:-}" in
@@ -262,6 +267,14 @@ while [[ "$#" -gt 0 ]]; do
     -n|--name)
       _name="$2"
       shift 2
+      ;;
+    -l|--libadwaita)
+      libadwaita="true"
+      shift
+      ;;
+    -u|--uninstall)
+      uninstall="true"
+      shift
       ;;
     --tweaks)
       shift
@@ -445,17 +458,20 @@ while [[ "$#" -gt 0 ]]; do
         case "$variant" in
           standard)
             colors+=("${COLOR_VARIANTS[0]}")
+            lcolors+=("${COLOR_VARIANTS[0]}")
             shift
             ;;
           light)
             colors+=("${COLOR_VARIANTS[1]}")
+            lcolors+=("${COLOR_VARIANTS[1]}")
             shift
             ;;
           dark)
             colors+=("${COLOR_VARIANTS[2]}")
+            lcolors+=("${COLOR_VARIANTS[2]}")
             shift
             ;;
-          -*)
+          -*|--*)
             break
             ;;
           *)
@@ -507,6 +523,10 @@ fi
 
 if [[ "${#colors[@]}" -eq 0 ]] ; then
   colors=("${COLOR_VARIANTS[@]}")
+fi
+
+if [[ "${#lcolors[@]}" -eq 0 ]] ; then
+  lcolors=("${COLOR_VARIANTS[1]}")
 fi
 
 if [[ "${#sizes[@]}" -eq 0 ]] ; then
@@ -635,6 +655,31 @@ theme_tweaks() {
   fi
 }
 
+uninstall() {
+  local dest="${1}"
+  local name="${2}"
+  local theme="${3}"
+  local color="${4}"
+  local size="${5}"
+
+  if [[ "$window" == 'round' ]]; then
+    round='-round'
+  else
+    round=$window
+  fi
+
+  local THEME_DIR="$dest/$name$round$theme$color$size"
+
+  if [[ -d "${THEME_DIR}" ]]; then
+    echo -e "Uninstall ${THEME_DIR}... "
+    rm -rf "${THEME_DIR}"
+  fi
+}
+
+uninstall_link() {
+  rm -rf "${HOME}/.config/gtk-4.0"/{assets,gtk.css,gtk-dark.css}
+}
+
 link_libadwaita() {
   local dest="$1"
   local name="$2"
@@ -653,7 +698,6 @@ link_libadwaita() {
   echo -e "\nLink '$THEME_DIR/gtk-4.0' to '${HOME}/.config/gtk-4.0' for libadwaita..."
 
   mkdir -p                                                                      "${HOME}/.config/gtk-4.0"
-  rm -rf "${HOME}/.config/gtk-4.0/"{assets,gtk.css,gtk-dark.css}
   ln -sf "${THEME_DIR}/gtk-4.0/assets"                                          "${HOME}/.config/gtk-4.0/assets"
   ln -sf "${THEME_DIR}/gtk-4.0/gtk.css"                                         "${HOME}/.config/gtk-4.0/gtk.css"
   ln -sf "${THEME_DIR}/gtk-4.0/gtk-dark.css"                                    "${HOME}/.config/gtk-4.0/gtk-dark.css"
@@ -687,6 +731,16 @@ clean_theme() {
   done
 }
 
+uninstall_theme() {
+  for theme in "${themes[@]}"; do
+    for color in "${colors[@]}"; do
+      for size in "${sizes[@]}"; do
+        uninstall "${dest:-$DEST_DIR}" "${_name:-$THEME_NAME}" "$theme" "$color" "$size"
+      done
+    done
+  done
+}
+
 install_theme() {
   for theme in "${themes[@]}"; do
     for color in "${colors[@]}"; do
@@ -699,15 +753,28 @@ install_theme() {
 
 link_theme() {
   for theme in "${themes[@]}"; do
-    for color in "${COLOR_VARIANTS[2]}"; do
-      for size in "${SIZE_VARIANTS[0]}"; do
+    for color in "${lcolors[@]}"; do
+      for size in "${sizes[0]}"; do
         link_libadwaita "${dest:-$DEST_DIR}" "${_name:-$THEME_NAME}" "$theme" "$color" "$size"
       done
     done
   done
 }
 
-clean_theme && install_theme && link_theme
+if [[ "$uninstall" == 'true' ]]; then
+  if [[ "$libadwaita" == 'true' ]]; then
+    echo -e "\nUninstall ${HOME}/.config/gtk-4.0 links ..."
+    uninstall_link
+  else
+    echo && uninstall_theme && uninstall_link
+  fi
+else
+   clean_theme && install_theme
+
+   if [[ "$libadwaita" == 'true' ]]; then
+     uninstall_link && link_theme
+   fi
+fi
 
 echo
 echo "Done."
