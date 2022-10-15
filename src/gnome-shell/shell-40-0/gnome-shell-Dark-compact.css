@@ -115,7 +115,7 @@ StEntry {
 }
 
 StEntry:hover {
-  border: 2px solid rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.15);
 }
 
 StEntry:focus {
@@ -165,7 +165,7 @@ StEntry StLabel.hint-text {
 
 .button:active {
   color: rgba(255, 255, 255, 0.9);
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.15);
   box-shadow: 0 0 transparent;
 }
 
@@ -202,7 +202,7 @@ StEntry StLabel.hint-text {
 }
 
 .check-box:active StBin {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.15);
 }
 
 .check-box:checked StBin {
@@ -245,7 +245,7 @@ StEntry StLabel.hint-text {
 .slider {
   height: 12px;
   -barlevel-height: 2px;
-  -barlevel-background-color: rgba(255, 255, 255, 0.1);
+  -barlevel-background-color: rgba(255, 255, 255, 0.15);
   -barlevel-border-width: 0;
   -barlevel-border-color: rgba(255, 255, 255, 0.1);
   -barlevel-active-background-color: #408aeb;
@@ -332,7 +332,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .popup-menu-content {
   border-image: url("assets/menu.svg") 24 32 28 28;
-  padding: 8px 6px 12px !important;
+  padding: 8px 10px 12px !important;
   margin: 0 !important;
   border: none;
   background-color: transparent;
@@ -342,7 +342,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .popup-menu-item {
   spacing: 4px;
   padding: 4px;
-  margin: 0 4px;
+  margin: 0;
   color: rgba(255, 255, 255, 0.9);
   transition-duration: 100ms;
   border-radius: 3px;
@@ -389,7 +389,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .popup-menu-item:active {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.15);
   color: rgba(255, 255, 255, 0.9);
   transition-duration: 150ms;
 }
@@ -416,7 +416,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .popup-sub-menu {
-  margin: 0 4px;
+  margin: 0;
   background-color: rgba(255, 255, 255, 0.06);
   border-radius: 0 0 3px 3px;
   border: none;
@@ -435,7 +435,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .popup-sub-menu .popup-menu-item:active {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.15);
 }
 
 .popup-menu-ornament {
@@ -550,7 +550,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .datemenu-calendar-column:active {
   color: rgba(255, 255, 255, 0.9);
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.15);
 }
 
 .datemenu-calendar-column:ltr {
@@ -600,7 +600,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .datemenu-today-button:active {
   color: rgba(255, 255, 255, 0.9);
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.15);
 }
 
 .calendar-month-label {
@@ -635,7 +635,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .pager-button:active {
   color: rgba(255, 255, 255, 0.9);
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.15);
 }
 
 .calendar-change-month-back {
@@ -677,13 +677,13 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .calendar-day-base:active {
   color: rgba(255, 255, 255, 0.7);
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.15);
   border-color: transparent;
 }
 
 .calendar-day-base:selected {
   color: rgba(255, 255, 255, 0.9);
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.15);
   border-color: transparent;
 }
 
@@ -1031,7 +1031,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .message .message-close-button:active {
   color: rgba(255, 255, 255, 0.9);
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.15);
 }
 
 .message .message-close-button:insensitive {
@@ -1061,7 +1061,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .message-media-control:active {
   color: rgba(255, 255, 255, 0.9);
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.15);
 }
 
 .message-media-control:insensitive {
@@ -1121,7 +1121,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .candidate-box:active {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.15);
   color: rgba(255, 255, 255, 0.9);
 }
 
@@ -1223,7 +1223,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .notification-banner .notification-button:active {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.15);
   color: rgba(255, 255, 255, 0.9);
 }
 
@@ -1308,7 +1308,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .hotplug-notification-item:active {
   color: rgba(255, 255, 255, 0.9);
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.15);
   box-shadow: 0 0 transparent;
 }
 
@@ -1608,7 +1608,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .nm-dialog-item:active {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.15);
 }
 
 .nm-dialog-item:selected {
@@ -2736,7 +2736,7 @@ StWidget.focused .app-well-app-running-dot {
 }
 
 #LookingGlassDialog .notebook-tab:hover {
-  box-shadow: inset 0 -2px 0 rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 -2px 0 rgba(255, 255, 255, 0.15);
   color: rgba(255, 255, 255, 0.9);
   text-shadow: none;
 }
@@ -2799,7 +2799,7 @@ StWidget.focused .app-well-app-running-dot {
 
 .lg-obj-inspector-button:active {
   color: rgba(255, 255, 255, 0.9);
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.15);
   box-shadow: 0 0 transparent;
 }
 
@@ -3591,7 +3591,7 @@ StWidget.focused .app-well-app-running-dot {
 
 .openweather-provider:active {
   color: rgba(255, 255, 255, 0.9);
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.15);
   box-shadow: 0 0 transparent;
 }
 

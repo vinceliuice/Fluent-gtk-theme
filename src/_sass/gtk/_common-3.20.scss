@@ -1833,20 +1833,19 @@ treeview.view {
     -GtkTreeView-expander-size: 16;
   }
 
-  background-image: image($base);
+  background-color: $base;
   border-left-color: $track; // this is actually the tree lines color,
   border-top-color: $divider; // while this is the grid lines color, better then nothing
 
   // FIXME: Avoid transparency background-color being slightly darker
   &:selected {
-    background-color: transparent;
-    background-image: image($overlay-checked);
+    background-color: $overlay-checked;
     box-shadow: none;
     color: $text;
   }
 
   .background:not(.csd) &:selected { // Fix for xfce4 setting
-    background-image: image(mix($text, $base, 10%));
+    background-color: mix($text, $base, 10%);
   }
 
   &:hover, &:selected { border-radius: 0; }
@@ -3433,8 +3432,7 @@ filechooser {
 
       list { background-color: transparent; }
 
-      treeview.view {
-        @extend .view;
+      treeview.view:not(:hover):not(:selected) {
         background-color: transparent;
       }
     }
