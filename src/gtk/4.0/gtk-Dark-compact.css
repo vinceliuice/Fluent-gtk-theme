@@ -2249,6 +2249,7 @@ popover.background > contents {
   border-radius: 3px;
   color: white;
   border: 1px solid rgba(255, 255, 255, 0.12);
+  background-clip: border-box;
 }
 
 popover.background:backdrop > arrow,
@@ -2345,11 +2346,11 @@ magnifier {
 /*************
  * Notebooks *
  *************/
-notebook > header tab {
+tabbar tabbox tab, notebook > header tab {
   transition: all 75ms cubic-bezier(0, 0, 0.2, 1), background-size 0ms, background-image 0ms;
   min-height: 20px;
   min-width: 20px;
-  padding: 2px 12px;
+  padding: 2px 8px;
   border-width: 1px;
   border-color: transparent;
   border-style: solid;
@@ -2360,30 +2361,33 @@ notebook > header tab {
   box-shadow: none;
 }
 
-notebook > header tab:hover {
+tabbar tabbox tab:hover, notebook > header tab:hover {
   background-color: rgba(255, 255, 255, 0.04);
   color: white;
   box-shadow: none;
 }
 
-notebook > header tab:disabled {
+tabbar tabbox tab:disabled, notebook > header tab:disabled {
   color: rgba(255, 255, 255, 0.3);
 }
 
-notebook > header tab:checked {
+tabbar tabbox tab:checked, notebook > header tab:checked, tabbar tabbox tab:selected, notebook > header tab:selected {
   transition: all 75ms cubic-bezier(0, 0, 0.2, 1);
-  background-color: #2B2B2B;
   background-clip: padding-box;
   border-color: #4d4d4d;
   color: white;
   box-shadow: none;
 }
 
-notebook > header tab:checked:disabled {
+tabbar tabbox tab:checked, notebook > header tab:checked, notebook > header tab:checked:hover, tabbar tabbox tab:selected, notebook > header tab:selected, notebook > header tab:selected:hover {
+  background-color: #2B2B2B;
+}
+
+tabbar tabbox tab:checked:disabled, notebook > header tab:checked:disabled, tabbar tabbox tab:selected:disabled, notebook > header tab:selected:disabled {
   color: rgba(255, 255, 255, 0.5);
 }
 
-notebook > header tab.reorderable-page:checked {
+tabbar tabbox tab.reorderable-page:checked, notebook > header tab.reorderable-page:checked, tabbar tabbox tab.reorderable-page:selected, notebook > header tab.reorderable-page:selected {
   background-color: #2B2B2B;
 }
 
@@ -2593,6 +2597,51 @@ notebook > header.left tabs tab.reorderable-page, notebook > header.right tabs t
 notebook > stack:not(:only-child) {
   background-color: transparent;
   border-radius: 2px;
+}
+
+tabbar .box {
+  min-height: 28px;
+  border-bottom: none;
+  background-color: #333333;
+  background-clip: border-box;
+  box-shadow: inset 0 -1px rgba(255, 255, 255, 0.12);
+  padding: 0;
+}
+
+tabbar:backdrop .box {
+  background-color: #333333;
+}
+
+tabbar:backdrop .box > scrolledwindow,
+tabbar:backdrop .box > .start-action,
+tabbar:backdrop .box > .end-action {
+  filter: opacity(0.5);
+}
+
+tabbar tabbox > tabboxchild {
+  padding: 0;
+  margin: 0;
+}
+
+tabbar tabbox tab {
+  padding: 2px 4px;
+  border-bottom: none;
+  margin-bottom: -1px;
+}
+
+tabbar tabbox .start-action,
+tabbar tabbox .end-action {
+  padding: 4px;
+}
+
+tabbar tabbox .start-action:dir(ltr),
+tabbar tabbox .end-action:dir(rtl) {
+  padding-right: 0;
+}
+
+tabbar tabbox .start-action:dir(rtl),
+tabbar tabbox .end-action:dir(ltr) {
+  padding-left: 0;
 }
 
 /**************
@@ -3682,7 +3731,7 @@ columnview.view > header > button,
 treeview.view > header > button, row.activatable {
   transition: all 75ms cubic-bezier(0, 0, 0.2, 1);
   outline: none;
-  box-shadow: inset 0 0 0 9999px transparent;
+  box-shadow: inset 0 0 0 2px transparent;
 }
 
 columnview.view > header > button:focus,
@@ -3693,14 +3742,16 @@ treeview.view > header > button:focus, row.activatable:focus {
 columnview.view > header > button:hover,
 treeview.view > header > button:hover, row.activatable:hover {
   transition: all 75ms cubic-bezier(0, 0, 0.2, 1), box-shadow 0ms;
-  box-shadow: inset 0 0 0 9999px alpha(currentColor, 0.08);
+  background-color: alpha(currentColor, 0.08);
+  box-shadow: none;
 }
 
 columnview.view > header > button.has-open-popup,
 treeview.view > header > button.has-open-popup, columnview.view > header > button:active,
 treeview.view > header > button:active, row.activatable.has-open-popup, row.activatable:active {
   transition: all 75ms cubic-bezier(0, 0, 0.2, 1);
-  box-shadow: inset 0 0 0 9999px alpha(currentColor, 0.16);
+  background-color: alpha(currentColor, 0.16);
+  box-shadow: none;
 }
 
 row:selected {
@@ -3745,7 +3796,7 @@ columnview row:not(:selected) cell editablelabel.editing text selection {
 
 .rich-list > row {
   padding: 6px 8px;
-  min-height: 32px;
+  min-height: 28px;
   /* should be tall even when only containing a label */
 }
 
@@ -4594,7 +4645,7 @@ popover.emoji-picker > contents {
 button.emoji-section {
   margin: 0;
   padding: 4px;
-  border-radius: 0px;
+  border-radius: 2px;
 }
 
 button.emoji-section:checked {

@@ -1900,6 +1900,7 @@ popover.background {
 
     @if $outline == 'true' {
       @if $variant == 'light' {
+        border: none;
         box-shadow: $shadow-z6, 0 0 0 1px $divider;
       } @else {
         border: 1px solid $divider;
@@ -2310,12 +2311,12 @@ tabbar {
     .end-action {
       padding: $space-size;
     }
-  
+
     .start-action:dir(ltr),
     .end-action:dir(rtl) {
       padding-right: 0;
     }
-  
+
     .start-action:dir(rtl),
     .end-action:dir(ltr) {
       padding-left: 0;
