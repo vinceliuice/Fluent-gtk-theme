@@ -2899,7 +2899,7 @@ StWidget.focused .app-well-app-running-dot {
 }
 
 .quick-settings .icon-button, .quick-settings .button {
-  padding: 7px;
+  padding: 8px;
 }
 
 .quick-settings-grid {
@@ -2911,7 +2911,8 @@ StWidget.focused .app-well-app-running-dot {
   border-radius: 3px;
   min-width: 12em;
   max-width: 12em;
-  min-height: 40px;
+  min-height: 34px;
+  padding: 0;
   border: none;
   background-color: rgba(255, 255, 255, 0.06) !important;
   /* Move padding into the box; this is to allow menu arrows
@@ -2979,7 +2980,7 @@ StWidget.focused .app-well-app-running-dot {
 
 .quick-menu-toggle .quick-toggle-arrow {
   background-color: rgba(255, 255, 255, 0.06) !important;
-  padding: 4px 7px;
+  padding: 4px 8px;
 }
 
 .quick-menu-toggle .quick-toggle-arrow:active {
@@ -3039,7 +3040,7 @@ StWidget.focused .app-well-app-running-dot {
   color: rgba(255, 255, 255, 0.9) !important;
   border-radius: 3px !important;
   padding: 8px;
-  margin: 8px 12px 0;
+  margin: 8px 14px 0;
 }
 
 .quick-toggle-menu .popup-menu-item {
