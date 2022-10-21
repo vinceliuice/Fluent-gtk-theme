@@ -7,7 +7,7 @@
   }
 
   .icon-button, .button {
-    padding: $container_padding * 1.75;
+    padding: $container_padding + 4px;
   }
 }
 
@@ -20,7 +20,8 @@
   border-radius: $buttons_radius;
   min-width: 12em;
   max-width: 12em;
-  min-height: 40px;
+  min-height: $container_padding * 3 + 22px;
+  padding: 0;
   border: none;
   background-color: rgba($fg_color, 0.06) !important;
 
@@ -66,7 +67,7 @@
 
   .quick-toggle-arrow {
     background-color: rgba($fg_color, 0.06) !important;
-    padding: $container_padding $container_padding * 1.75;
+    padding: $container_padding $container_padding * 2;
 
     &:active {
       background-color: rgba($fg_color, 0.12) !important;
@@ -112,7 +113,7 @@
   color: $fg_color !important;
   border-radius: $menu_radius !important;
   padding: $container_padding * 2;
-  margin: $container_padding * 2 $container_padding * 3 0;
+  margin: $container_padding * 2 $container_padding * 2 + 6px 0;
 
   .popup-menu-item {
     border-radius: $buttons_radius !important;

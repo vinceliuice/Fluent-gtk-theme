@@ -310,12 +310,11 @@ StScrollBar {
 }
 
 StScrollView StScrollBar {
-  min-width: 16px;
-  min-height: 6px;
+  min-width: 8px;
+  min-height: 8px;
 }
 
 StScrollBar StBin#trough {
-  margin: 6px;
   border-radius: 9999px;
   background-color: rgba(255, 255, 255, 0.06);
 }
@@ -323,7 +322,7 @@ StScrollBar StBin#trough {
 StScrollBar StButton#vhandle, StScrollBar StButton#hhandle {
   border-radius: 9999px;
   background-color: rgba(255, 255, 255, 0.5);
-  margin: 6px;
+  border: 4px solid transparent;
 }
 
 StScrollBar StButton#vhandle:hover, StScrollBar StButton#hhandle:hover {
@@ -2899,7 +2898,7 @@ StWidget.focused .app-well-app-running-dot {
 }
 
 .quick-settings .icon-button, .quick-settings .button {
-  padding: 10.5px;
+  padding: 10px;
 }
 
 .quick-settings-grid {
@@ -2912,6 +2911,7 @@ StWidget.focused .app-well-app-running-dot {
   min-width: 12em;
   max-width: 12em;
   min-height: 40px;
+  padding: 0;
   border: none;
   background-color: rgba(255, 255, 255, 0.06) !important;
   /* Move padding into the box; this is to allow menu arrows
@@ -2979,7 +2979,7 @@ StWidget.focused .app-well-app-running-dot {
 
 .quick-menu-toggle .quick-toggle-arrow {
   background-color: rgba(255, 255, 255, 0.06) !important;
-  padding: 6px 10.5px;
+  padding: 6px 12px;
 }
 
 .quick-menu-toggle .quick-toggle-arrow:active {

@@ -281,12 +281,11 @@ StScrollBar {
 }
 
 StScrollView StScrollBar {
-  min-width: 16px;
-  min-height: 6px;
+  min-width: 8px;
+  min-height: 8px;
 }
 
 StScrollBar StBin#trough {
-  margin: 6px;
   border-radius: 9999px;
   background-color: rgba(0, 0, 0, 0.06);
 }
@@ -294,7 +293,7 @@ StScrollBar StBin#trough {
 StScrollBar StButton#vhandle, StScrollBar StButton#hhandle {
   border-radius: 9999px;
   background-color: rgba(0, 0, 0, 0.38);
-  margin: 6px;
+  border: 4px solid transparent;
 }
 
 StScrollBar StButton#vhandle:hover, StScrollBar StButton#hhandle:hover {
