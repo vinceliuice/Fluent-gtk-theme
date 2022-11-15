@@ -2731,6 +2731,7 @@ scrollbar.horizontal button.up {
  **********/
 switch {
   transition: all 75ms cubic-bezier(0, 0, 0.2, 1);
+  min-width: 22px;
   margin: 6px 0;
   padding: 0;
   border: 0 solid transparent;
@@ -2766,8 +2767,8 @@ switch image {
 
 switch slider {
   transition: all 75ms cubic-bezier(0, 0, 0.2, 1);
-  min-width: 10px;
-  min-height: 10px;
+  min-width: 12px;
+  min-height: 12px;
   margin: 5px;
   border-radius: 9999px;
   outline: none;

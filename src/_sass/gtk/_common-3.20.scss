@@ -2546,6 +2546,7 @@ scrollbar {
  **********/
 switch {
   transition: all $duration $ease-out;
+  min-width: $small-size;
   margin: $space-size 0;
   padding: 0;
   border: 0 solid transparent;
@@ -2577,8 +2578,8 @@ switch {
 
   slider {
     transition: all $duration $ease-out;
-    min-width: 10px;
-    min-height: 10px;
+    min-width: $space-size + 6px;
+    min-height: $space-size + 6px;
     margin: 5px;
     border-radius: $circular-radius;
     outline: none;
