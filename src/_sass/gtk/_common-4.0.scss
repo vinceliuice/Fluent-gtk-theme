@@ -288,7 +288,7 @@ spinner {
 
 %entry,
 entry {
-  min-height: $medium-size - 4px;
+  min-height: $medium-size;
   padding: 0 8px;
   border-spacing: $space-size;
   border-radius: $corner-radius;
@@ -1240,7 +1240,6 @@ searchbar > revealer > box {
   @extend %button-flat;
   color: $titlebar-text-secondary;
   border-radius: $corner-radius;
-  padding: ($medium-size - 26px) / 2 ($medium-size - 16px) / 2;
 
   .linked:not(.vertical) > & {
     border-radius: $corner-radius;
@@ -1303,9 +1302,8 @@ headerbar {
   transition: background-color $duration $ease-out, color $duration $ease-out;
   box-shadow: inset 0 -1px $divider;
   color: $titlebar-text;
-  min-height: $large-size - 2px;
+  min-height: $large-size;
   margin: 0;
-  // padding: 0 $space-size;
 
   @if $outline == 'true' and $topbar == 'dark' and $variant == 'light' {
     box-shadow: inset 0 -1px $divider, inset 0 1px highlight($titlebar);
@@ -2467,6 +2465,7 @@ scrollbar {
  **********/
 switch {
   transition: all $duration $ease-out;
+  min-width: $small-size;
   margin: $space-size 0;
   padding: 0;
   border: 0 solid transparent;
@@ -2496,8 +2495,8 @@ switch {
 
   > slider {
     transition: all $duration $ease-out;
-    min-width: 10px;
-    min-height: 10px;
+    min-width: $space-size + 6px;
+    min-height: $space-size + 6px;
     margin: 5px;
     border-radius: $circular-radius;
     outline: none;
