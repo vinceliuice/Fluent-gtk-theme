@@ -90,13 +90,9 @@
   background-color: $base;
   color: $text;
 
-  &:hover { box-shadow: inset 0 0 0 9999px $overlay-hover; }
-
-  &:selected:hover { box-shadow: inset 0 0 0 9999px $overlay-selected; }
+  &:hover { background-color: $overlay-hover; }
 
   &:disabled { color: $text-disabled; }
-
-  // &:hover, &:selected { border-radius: $corner-radius; }
 
   &:selected {
     @extend %selected_items_primary;
@@ -1845,7 +1841,7 @@ treeview.view {
   }
 
   .background:not(.csd) &:selected { // Fix for xfce4 setting
-    background-color: mix($text, $base, 10%);
+    background-color: mix($text, $base, 15%);
   }
 
   &:hover, &:selected { border-radius: 0; }

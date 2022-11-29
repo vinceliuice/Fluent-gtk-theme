@@ -98,11 +98,7 @@
 }
 
 .view:hover {
-  box-shadow: inset 0 0 0 9999px alpha(currentColor, 0.08);
-}
-
-.view:selected:hover {
-  box-shadow: inset 0 0 0 9999px alpha(currentColor, 0.06);
+  background-color: alpha(currentColor, 0.08);
 }
 
 .view:disabled {
@@ -1935,7 +1931,7 @@ treeview.view:selected {
 }
 
 .background:not(.csd) treeview.view:selected {
-  background-color: #404040;
+  background-color: #4b4b4b;
 }
 
 treeview.view:hover, treeview.view:selected {
