@@ -1162,7 +1162,7 @@ toolbar {
   @at-root %toolbar_osd, &.osd {
     transition: $transition-shadow;
     padding: $space-size;
-    border-radius: $corner-radius;
+    border-radius: $window-radius;
     box-shadow: $shadow-z4, inset 0 1px highlight($surface);
     background-color: $surface;
     border: none;
@@ -2707,7 +2707,7 @@ scale {
   $trough_size: 2px;
   $finetune_trough_size: 4px;
 
-  $slider_size: 32px;
+  $slider_size: 26px;
 
   $slider_margin: -($slider_size - $trough_size) / 2;
   $finetune_slider_margin: -($slider_size - $finetune_trough_size) / 2;
@@ -2763,8 +2763,8 @@ scale {
     border-radius: 50%;
     color: $primary;
     background-repeat: no-repeat;
-    background-size: 25px 25px;
-    background-position: center center;
+    background-size: auto;
+    background-position: center;
 
     @each $s, $as in ('', ''),
                      (':hover', '-hover'),
@@ -2847,48 +2847,25 @@ scale {
       &.#{$dir_class}.#{$marks_class} {
         slider {
           transform: none;
-          transition: background-color $duration $ease-out,
-                      background-size $ripple-fade-out-duration $ease-out,
-                      background-image $ripple-fade-out-opacity-duration $ease-out;
-          min-height: 32px;
-          min-width: 32px;
-          margin: -15px;
+          min-height: 38px;
+          min-width: 38px;
+          margin: -18px;
           border-radius: 50%;
-          background-size: auto, 1000% 1000%;
-          background-repeat: no-repeat;
-          background-position: center center;
           background-color: transparent;
-
-          &:focus { background-color: $overlay-focus; }
-
-          &:hover { background-color: $overlay-hover; }
-
-          &:focus:hover { background-color: $overlay-focus-hover; }
-
-          &:active {
-            transition: background-color $duration $ease-out,
-                        background-size 0ms,
-                        background-image 0ms;
-            animation: ripple-on-slider $ripple-fade-in-duration $ease-out forwards;
-            background-size: auto, 0% 0%;
-            background-color: $overlay-hover;
-          }
 
           @each $state, $state_infix in ('', ''),
                                         (':disabled', '-disabled') {
             &#{$state} {
               $_scale_asset: 'assets/scale-#{$dir_infix}-#{$marks_infix}-slider#{$state_infix}#{$asset-suffix}';
 
-              background-image: -gtk-scaled(url('#{$_scale_asset}.png'), url('#{$_scale_asset}@2.png')),
-                                radial-gradient(circle, transparent 10%, transparent 0%);
+              background-image: -gtk-scaled(url('#{$_scale_asset}.png'), url('#{$_scale_asset}@2.png'));
             }
           }
 
           &:active {
             $_scale_asset: 'assets/scale-#{$dir_infix}-#{$marks_infix}-slider#{$asset-suffix}';
 
-            background-image: -gtk-scaled(url('#{$_scale_asset}.png'), url('#{$_scale_asset}@2.png')),
-                              radial-gradient(circle, $overlay-active 10%, transparent 0%);
+            background-image: -gtk-scaled(url('#{$_scale_asset}.png'), url('#{$_scale_asset}@2.png'));
           }
         }
       }
@@ -3265,9 +3242,10 @@ columnview {
  *********************/
 .app-notification {
   @extend %toolbar_osd;
-  margin: 8px;
+  margin: $space-size;
   border-spacing: $space-size;
   padding: $space-size;
+  border: none;
 
   button {
     @extend %button-flat;
@@ -3276,7 +3254,7 @@ columnview {
   }
 
   &.frame,
-  border { border-style: none; }
+  border { border: none; }
 }
 
 
@@ -3823,12 +3801,13 @@ tooltip {
     background-color: $tooltip;
     color: on($tooltip);
     box-shadow: $shadow-z4;
-    border-radius: $corner-radius;
+    border-radius: $window-radius;
     margin: 2px 6px 8px 6px;
   }
 
-  padding: $space-size $space-size*2;
+  padding: $space-size $space-size * 2;
   box-shadow: none; // otherwise it gets inherited by windowframe.csd
+  border: none;
 
   > box {
     border-spacing: $space-size;
