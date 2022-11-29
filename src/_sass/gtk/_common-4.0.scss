@@ -3187,16 +3187,19 @@ row {
     transition: $transition;
     outline: none;
     box-shadow: inset 0 0 0 2px transparent;
+    color: $text-secondary;
 
-    &:focus {
+    &:focus:not(:selected) {
       box-shadow: inset 0 0 0 2px $overlay-focus;
+      color: $text;
     }
 
-    &:hover {
+    &:hover:not(:active):not(.has-open-popup) {
       transition: $transition,
                   box-shadow 0ms;
       background-color: $overlay-hover;
       box-shadow: none;
+      color: $text;
     }
 
     &.has-open-popup,
@@ -3204,6 +3207,7 @@ row {
       transition: $transition;
       background-color: $overlay-active;
       box-shadow: none;
+      color: $text;
     }
   }
 
@@ -3538,11 +3542,6 @@ separator.sidebar {
     border-radius: $corner-radius;
     margin: 2px $space-size;
 
-    &:hover,
-    &:focus-visible:focus-within {
-      background-color: $overlay-hover;
-    }
-
     &:selected {
       background-color: $overlay-checked;
       color: $text;
@@ -3595,8 +3594,6 @@ placessidebar {
     // Using margins/padding directly in the SidebarRow
     // will make the animation of the new bookmark row jump
     > revealer { padding: 0 8px 0 16px; }
-
-    &:active { background-color: $overlay-active; }
 
     &:selected {
       background-color: $overlay-checked;
