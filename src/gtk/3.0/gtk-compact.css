@@ -98,11 +98,7 @@
 }
 
 .view:hover {
-  box-shadow: inset 0 0 0 9999px alpha(currentColor, 0.08);
-}
-
-.view:selected:hover {
-  box-shadow: inset 0 0 0 9999px alpha(currentColor, 0.06);
+  background-color: alpha(currentColor, 0.08);
 }
 
 .view:disabled {
@@ -1936,7 +1932,7 @@ treeview.view:selected {
 }
 
 .background:not(.csd) treeview.view:selected {
-  background-color: rgba(235, 235, 235, 0.987);
+  background-color: rgba(224, 224, 224, 0.9805);
 }
 
 treeview.view:hover, treeview.view:selected {
@@ -3039,9 +3035,31 @@ scale.vertical {
 }
 
 scale slider {
-  min-height: 32px;
-  min-width: 32px;
-  margin: -15px;
+  min-height: 26px;
+  min-width: 26px;
+  margin: -12px;
+  transition: background-image 75ms cubic-bezier(0, 0, 0.2, 1);
+  border-radius: 50%;
+  color: #1A73E8;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+}
+
+scale slider {
+  background-image: -gtk-scaled(url("assets/scale-slider.png"), url("assets/scale-slider@2.png"));
+}
+
+scale slider:hover {
+  background-image: -gtk-scaled(url("assets/scale-slider-hover.png"), url("assets/scale-slider-hover@2.png"));
+}
+
+scale slider:active {
+  background-image: -gtk-scaled(url("assets/scale-slider-active.png"), url("assets/scale-slider-active@2.png"));
+}
+
+scale slider:disabled {
+  background-image: -gtk-scaled(url("assets/scale-slider-disabled.png"), url("assets/scale-slider-disabled@2.png"));
 }
 
 scale.fine-tune.horizontal {
@@ -3057,7 +3075,7 @@ scale.fine-tune.vertical {
 }
 
 scale.fine-tune slider {
-  margin: -14px;
+  margin: -11px;
 }
 
 scale trough {
@@ -3087,31 +3105,6 @@ scale fill {
 
 scale fill:disabled {
   background-color: transparent;
-}
-
-scale slider {
-  transition: background-image 75ms cubic-bezier(0, 0, 0.2, 1);
-  border-radius: 50%;
-  color: #1A73E8;
-  background-repeat: no-repeat;
-  background-size: 25px 25px;
-  background-position: center center;
-}
-
-scale slider {
-  background-image: -gtk-scaled(url("assets/scale-slider.png"), url("assets/scale-slider@2.png"));
-}
-
-scale slider:hover {
-  background-image: -gtk-scaled(url("assets/scale-slider-hover.png"), url("assets/scale-slider-hover@2.png"));
-}
-
-scale slider:active {
-  background-image: -gtk-scaled(url("assets/scale-slider-active.png"), url("assets/scale-slider-active@2.png"));
-}
-
-scale slider:disabled {
-  background-image: -gtk-scaled(url("assets/scale-slider-disabled.png"), url("assets/scale-slider-disabled@2.png"));
 }
 
 scale marks,
@@ -3175,6 +3168,13 @@ scale.vertical indicator {
 }
 
 scale.horizontal.marks-before:not(.marks-after) slider {
+  min-height: 38px;
+  min-width: 38px;
+  margin: -18px;
+  background-color: transparent;
+}
+
+scale.horizontal.marks-before:not(.marks-after) slider {
   background-image: -gtk-scaled(url("assets/scale-horz-marks-before-slider.png"), url("assets/scale-horz-marks-before-slider@2.png")), radial-gradient(circle, transparent 10%, transparent 0%);
 }
 
@@ -3184,6 +3184,13 @@ scale.horizontal.marks-before:not(.marks-after) slider:disabled {
 
 scale.horizontal.marks-before:not(.marks-after) slider:active {
   background-image: -gtk-scaled(url("assets/scale-horz-marks-before-slider.png"), url("assets/scale-horz-marks-before-slider@2.png")), radial-gradient(circle, alpha(currentColor, 0.16) 10%, transparent 0%);
+}
+
+scale.horizontal.marks-after:not(.marks-before) slider {
+  min-height: 38px;
+  min-width: 38px;
+  margin: -18px;
+  background-color: transparent;
 }
 
 scale.horizontal.marks-after:not(.marks-before) slider {
@@ -3199,6 +3206,13 @@ scale.horizontal.marks-after:not(.marks-before) slider:active {
 }
 
 scale.vertical.marks-before:not(.marks-after) slider {
+  min-height: 38px;
+  min-width: 38px;
+  margin: -18px;
+  background-color: transparent;
+}
+
+scale.vertical.marks-before:not(.marks-after) slider {
   background-image: -gtk-scaled(url("assets/scale-vert-marks-before-slider.png"), url("assets/scale-vert-marks-before-slider@2.png")), radial-gradient(circle, transparent 10%, transparent 0%);
 }
 
@@ -3208,6 +3222,13 @@ scale.vertical.marks-before:not(.marks-after) slider:disabled {
 
 scale.vertical.marks-before:not(.marks-after) slider:active {
   background-image: -gtk-scaled(url("assets/scale-vert-marks-before-slider.png"), url("assets/scale-vert-marks-before-slider@2.png")), radial-gradient(circle, alpha(currentColor, 0.16) 10%, transparent 0%);
+}
+
+scale.vertical.marks-after:not(.marks-before) slider {
+  min-height: 38px;
+  min-width: 38px;
+  margin: -18px;
+  background-color: transparent;
 }
 
 scale.vertical.marks-after:not(.marks-before) slider {
@@ -3232,8 +3253,8 @@ scale.color.horizontal {
 }
 
 scale.color.horizontal slider:dir(ltr), scale.color.horizontal slider:dir(rtl) {
-  margin-bottom: -24px;
-  margin-top: 8px;
+  margin-bottom: -19.5px;
+  margin-top: 9.5px;
 }
 
 scale.color.vertical:dir(ltr) {
@@ -3241,8 +3262,8 @@ scale.color.vertical:dir(ltr) {
 }
 
 scale.color.vertical:dir(ltr) slider {
-  margin-left: -24px;
-  margin-right: 8px;
+  margin-left: -19.5px;
+  margin-right: 9.5px;
 }
 
 scale.color.vertical:dir(rtl) {
@@ -3250,8 +3271,8 @@ scale.color.vertical:dir(rtl) {
 }
 
 scale.color.vertical:dir(rtl) slider {
-  margin-right: -24px;
-  margin-left: 8px;
+  margin-right: -19.5px;
+  margin-left: 9.5px;
 }
 
 /*****************

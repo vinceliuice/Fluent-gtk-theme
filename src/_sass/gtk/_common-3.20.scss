@@ -90,13 +90,9 @@
   background-color: $base;
   color: $text;
 
-  &:hover { box-shadow: inset 0 0 0 9999px $overlay-hover; }
-
-  &:selected:hover { box-shadow: inset 0 0 0 9999px $overlay-selected; }
+  &:hover { background-color: $overlay-hover; }
 
   &:disabled { color: $text-disabled; }
-
-  // &:hover, &:selected { border-radius: $corner-radius; }
 
   &:selected {
     @extend %selected_items_primary;
@@ -1845,7 +1841,7 @@ treeview.view {
   }
 
   .background:not(.csd) &:selected { // Fix for xfce4 setting
-    background-color: mix($text, $base, 10%);
+    background-color: mix($text, $base, 15%);
   }
 
   &:hover, &:selected { border-radius: 0; }
@@ -2798,7 +2794,7 @@ scale {
   $trough_size: 2px;
   $finetune_trough_size: 4px;
 
-  $slider_size: 32px;
+  $slider_size: 26px;
 
   $slider_margin: -($slider_size - $trough_size) / 2;
   $finetune_slider_margin: -($slider_size - $finetune_trough_size) / 2;
@@ -2818,6 +2814,23 @@ scale {
     min-height: $slider_size;
     min-width: $slider_size;
     margin: $slider_margin;
+    transition: background-image $duration $ease-out;
+    border-radius: 50%;
+    color: $primary;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+
+    @each $s, $as in ('', ''),
+                     (':hover', '-hover'),
+                     (':active', '-active'),
+                     (':disabled', '-disabled') {
+      &#{$s} {
+        $_url: 'assets/scale-slider#{$as}#{$asset-suffix}';
+
+        background-image: -gtk-scaled(url('#{$_url}.png'), url('#{$_url}@2.png'));
+      }
+    }
   }
 
   // click-and-hold the slider to activate
@@ -2865,26 +2878,6 @@ scale {
     background-color: $track;
 
     &:disabled { background-color: transparent; }
-  }
-
-  slider {
-    transition: background-image $duration $ease-out;
-    border-radius: 50%;
-    color: $primary;
-    background-repeat: no-repeat;
-    background-size: 25px 25px;
-    background-position: center center;
-
-    @each $s, $as in ('', ''),
-                     (':hover', '-hover'),
-                     (':active', '-active'),
-                     (':disabled', '-disabled') {
-      &#{$s} {
-        $_url: 'assets/scale-slider#{$as}#{$asset-suffix}';
-
-        background-image: -gtk-scaled(url('#{$_url}.png'), url('#{$_url}@2.png'));
-      }
-    }
   }
 
   marks,
@@ -2937,6 +2930,11 @@ scale {
                                         ('marks-after', 'marks-after:not(.marks-before)') {
       &.#{$dir_class}.#{$marks_class} {
         slider {
+          min-height: 38px;
+          min-width: 38px;
+          margin: -18px;
+          background-color: transparent;
+
           @each $state, $state_infix in ('', ''),
                                         (':disabled', '-disabled') {
             &#{$state} {
