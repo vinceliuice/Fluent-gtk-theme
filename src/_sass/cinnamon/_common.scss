@@ -7,7 +7,7 @@ $asset_path: assets;
 $font-size: 9;
 
 stage {
-  @include fontsize($font-size);
+  // @include fontsize($font-size);
   color: $text;
 }
 
@@ -265,32 +265,43 @@ StScrollBar {
 // Popovers/Menus
 //
 
-$menu_bg: if($variant=='light', rgba($base, 0.95), rgba($background, 0.95));
-$sub_menu_bg: if($variant == 'light', rgba(black, 0.05), rgba(white, 0.05));
-$menu_item_radius: $corner-radius;
-
 .menu,
 .popup-menu,
 %menu {
-  padding: $space-size / 2;
-  color: $text;
-  background-color: $menu_bg;
-  border-radius: $window-radius;
-  margin: $space-size;
-  box-shadow: 0 5px 12px rgba(black, 0.35);
+  padding: 0;
+  margin: 0;
+  box-shadow: none;
+  border: none;
+  background: none;
 
   &-arrow { icon-size: 16px; }
 
+  .popup-menu-content {
+    padding: $space-size 0;
+    color: $text;
+    background-color: $menu;
+    border-radius: $menu-radius;
+    margin: $space-size;
+    box-shadow: 0 5px 12px rgba(black, 0.35);
+  }
+
   .popup-sub-menu {
-    border-radius: $menu_item_radius;
+    border-radius: 0;
+    padding: $space-size 0;
+    margin: 0 $space-size;
     background-gradient-direction: none;
     box-shadow: none;
-    background-color: $sub_menu_bg;
-    color: on($menu_bg, secondary);
+    background-color: $fill;
+    color: on($menu, secondary);
 
-    .popup-menu-item:active {
-      background-color: on($menu_bg, divider);
-      color: on($menu_bg);
+    .popup-menu-item {
+      margin: 0;
+      border-radius: 0;
+
+      &:active {
+        background-color: on($menu, divider);
+        color: on($menu);
+      }
     }
 
     StScrollBar {
@@ -299,12 +310,11 @@ $menu_item_radius: $corner-radius;
     }
   }
 
-  .popup-menu-content { padding: $space-size / 2; }
-
   .popup-menu-item {
-    padding: $space-size $space-size*2;
-    spacing: $space-size*2;
-    border-radius: $menu_item_radius;
+    padding: $space-size $space-size * 2;
+    spacing: $space-size * 2;
+    border-radius: $corner-radius;
+    margin: 0 $space-size;
 
     &:hover, &:active {
       color: $text;
@@ -341,8 +351,6 @@ $menu_item_radius: $corner-radius;
   @extend %menu;
   padding: $space-size * 2;
 }
-
-// .popup-image-menu-item {}
 
 .popup-combobox-item { spacing: 1em; }
 
@@ -661,10 +669,37 @@ $menu_item_radius: $corner-radius;
 //
 // Calendar
 //
+
+.calendar-main-box {
+  margin: 0 $space-size;
+}
+
 .calendar {
-  padding: .4em 1.75em;
+  padding: $space-size $space-size * 2;
   spacing-rows: 0px;
   spacing-columns: 0px;
+}
+
+.calendar-today-home-button,
+.calendar-today-home-button-enabled {
+  margin: $space-size 0;
+  padding: $space-size;
+  @extend %flat_button;
+}
+
+.calendar-today-day-label {
+  font-size: 1.75em;
+  color: $text-secondary;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: .1em;
+}
+
+.calendar-today-date-label {
+  font-size: 1.1em;
+  color: $text-disabled;
+  font-weight: bold;
+  text-align: center;
 }
 
 .calendar-month-label {
@@ -704,6 +739,18 @@ $menu_item_radius: $corner-radius;
   }
 }
 
+.calendar-day-event-dot-box {
+  margin-top: 1.75em;
+  max-rows: 1;
+}
+
+.calendar-day-event-dot {
+  margin: 1px;
+  border-radius: 2px;
+  width: 4px;
+  height: 4px;
+}
+
 .datemenu-date-label {
   padding: .4em 1.75em;
   font-weight: normal;
@@ -720,6 +767,18 @@ $menu_item_radius: $corner-radius;
   padding: 0;
   margin: 2px;
   border-radius: $circular-radius;
+
+  &:hover {
+    background-color: $fill;
+  }
+
+  &:active {
+    background-color: $divider;
+  }
+
+  &:selected {
+    background-color: $divider;
+  }
 }
 
 .calendar-day-heading {
@@ -749,7 +808,8 @@ $menu_item_radius: $corner-radius;
 .calendar-today,
 .calendar-today:active,
 .calendar-today:focus,
-.calendar-today:hover {
+.calendar-today:hover,
+.calendar-today:selected {
   font-weight: bold;
   color: on($primary);
   background-color: $primary;
@@ -776,18 +836,143 @@ $menu_item_radius: $corner-radius;
   }
 }
 
+.calendar-events-main-box {
+  height: 300px;
+  margin: $space-size + 2px 0.8em 0 0;
+  padding: $space-size + 2px;
+  min-width: 350px;
+  border: none;
+  border-radius: $corner-radius;
+  background-gradient-direction: vertical;
+  background-gradient-start: $fill;
+  background-gradient-end: $fill;
+  color: $text-secondary;
+}
+
+.calendar-events-no-events-button {
+  margin: $space-size 0;
+  padding: $space-size;
+  border-radius: $corner-radius;
+
+  &:hover {
+    background-gradient-direction: vertical;
+    background-gradient-start: $fill;
+    background-gradient-end: $fill;
+    box-shadow: none;
+  }
+}
+
+.calendar-events-no-events-icon {
+  color: $text-disabled;
+}
+
+.calendar-events-no-events-label {
+  font-size: 1.1em;
+  color: $text-disabled;
+  font-weight: bold;
+  text-align: center;
+  margin-top: $space-size * 1.5;
+}
+
+.calendar-events-date-label {
+  padding: $space-size / 2 0 $space-size * 2 $space-size / 2;
+  font-size: 1.1em;
+  color: $text-secondary;
+  font-weight: bold;
+  text-align: center;
+}
+
+.calendar-events-event-container {
+  padding: 2px;
+}
+
+.calendar-events-main-box .separator {
+  -margin-horizontal: 1em;
+  -gradient-height: 1px;
+  -gradient-start: $border;
+  -gradient-end: $border;
+}
+
+.calendar-event-button {
+  margin: $space-size 0 $space-size 0;
+  border-radius: $corner-radius;
+
+  &:hover {
+    background-gradient-direction: vertical;
+    background-gradient-start: $fill;
+    background-gradient-end: $fill;
+    box-shadow: none;
+  }
+}
+
+.calendar-event-color-strip {
+  width: 4px;
+  border-radius: 4px 0 0 4px;
+}
+
+.calendar-event-row-content {
+  margin: $space-size;
+}
+
+.calendar-event-time-past {
+  color: $text-secondary-disabled;
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: .6em;
+}
+
+.calendar-event-time-present {
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: .6em;
+}
+
+.calendar-event-time-present:all-day {
+  color: rgba($success, 0.6);
+}
+
+.calendar-event-time-future {
+  text-align: left;
+  margin-bottom: .6em;
+}
+
+.calendar-event-countdown {
+  color: $text-disabled;
+  font-weight: bold;
+  text-align: right;
+  margin-bottom: .6em;
+}
+
+.calendar-event-countdown:soon {
+  color: white;
+}
+
+.calendar-event-countdown:imminent {
+  color: rgba($warning, 0.6);
+}
+
+.calendar-event-countdown:current {
+  color: rgba($success, 0.6);
+}
+
+.calendar-event-summary {
+  color: $text-disabled;
+  text-align: left;
+  width: 200px;
+}
+
 //
 // Notifications
 //
 #notification {
   border-radius: $window-radius;
-  padding: $space-size*2;
-  spacing-rows: $space-size*1.5;
-  spacing-columns: $space-size*1.5;
-  margin-from-right-edge-of-screen: $space-size*3;
+  padding: $space-size * 2;
+  spacing-rows: $space-size * 1.5;
+  spacing-columns: $space-size * 1.5;
+  margin-from-right-edge-of-screen: $space-size * 3;
   width: 28em;
   color: $text;
-  background-color: rgba($base, 0.8);
+  background-color: $menu;
   box-shadow: 0 5px 12px rgba(black, 0.35);
   margin: 7px 12px 17px 12px;
 
@@ -865,7 +1050,7 @@ $menu_item_radius: $corner-radius;
 
 .switcher-list {
   color: $text;
-  background-color: $menu_bg;
+  background-color: $menu;
   border: none;
   border-radius: $corner-radius;
   padding: 20px;
@@ -1150,7 +1335,7 @@ $menu_item_radius: $corner-radius;
 .menu {
   &-favorites-box {
     margin: auto;
-    margin-bottom: $space-size;
+    margin-bottom: $space-size * 1.5;
     padding: $space-size;
     transition-duration: 300;
     background-color: rgba($text, 0.05);
@@ -1159,7 +1344,7 @@ $menu_item_radius: $corner-radius;
   }
 
   &-favorites-button {
-    padding: $space-size*1.5;
+    padding: $space-size * 1.5;
     border: none;
     border-radius: $corner-radius;
 
@@ -1208,7 +1393,7 @@ $menu_item_radius: $corner-radius;
   StScrollView.menu-application-button { // extracted submenu container
     padding: $space-size/2 0;
     border-radius: $corner-radius;
-    background-color: $sub_menu_bg;
+    background-color: $fill;
     color: $text-secondary;
 
     .popup-menu-item {
@@ -1223,7 +1408,7 @@ $menu_item_radius: $corner-radius;
 
       &:active {
         border-image: none; // image independent
-        background-color: on($menu_bg, divider);
+        background-color: on($menu, divider);
         color: $text;
       }
 
@@ -1261,15 +1446,9 @@ $menu_item_radius: $corner-radius;
   // Name and description of the currently hovered item in the menu
   // This appears on the bottom right hand corner of the menu
   &-selected-app-box {
-    padding-right: 30px;
-    padding-left: 28px;
+    padding: 10px 30px;
     text-align: right;
     height: 30px;
-
-    &:rtl {
-      padding-top: 10px;
-      height: 30px;
-    }
   }
 
   &-selected-app-title { font-weight: bold; }
@@ -1287,10 +1466,6 @@ $menu_item_radius: $corner-radius;
   caret-color: $text;
 
   @extend %entry;
-
-  &:focus {
-    box-shadow: inset 0 0 0 2px $entry-highlight;
-  }
 }
 
 .menu-search-entry-icon {
@@ -1480,6 +1655,11 @@ $menu_item_radius: $corner-radius;
 
   &-thumbnail-menu {
     padding: $space-size;
+    color: $text;
+    background-color: $menu;
+    border-radius: $menu-radius;
+    margin: $space-size;
+    box-shadow: 0 5px 12px rgba(black, 0.35);
 
     .item-box {
       padding: $space-size;
@@ -1644,7 +1824,7 @@ $menu_item_radius: $corner-radius;
   padding: 0 0;
   margin-top: 6px;
   border-radius: $corner-radius;
-  background-color: $sub_menu_bg;
+  background-color: $fill;
   color: $text;
 
   > StBoxLayout:first-child {
@@ -1656,8 +1836,8 @@ $menu_item_radius: $corner-radius;
       height: 24px;
       border-radius: $circular-radius;
 
-      &:hover { background-color: on($menu_bg, divider); }
-      &:active { background-color: on($menu_bg, track); }
+      &:hover { background-color: on($menu, divider); }
+      &:active { background-color: on($menu, track); }
 
       StIcon { icon-size: 16px; }
     }
