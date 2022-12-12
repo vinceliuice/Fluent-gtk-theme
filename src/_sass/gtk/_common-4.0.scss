@@ -1166,6 +1166,7 @@ toolbar {
     box-shadow: $shadow-z4, inset 0 1px highlight($surface);
     background-color: $surface;
     border: none;
+    color: $text;
 
     &:backdrop { box-shadow: $shadow-z2, inset 0 1px highlight($surface); }
 
@@ -3243,8 +3244,8 @@ columnview {
 .app-notification {
   @extend %toolbar_osd;
   margin: $space-size;
-  border-spacing: $space-size;
-  padding: $space-size;
+  border-spacing: 0;
+  padding: 0;
   border: none;
 
   button {
@@ -3252,6 +3253,8 @@ columnview {
 
     &.text-button:not(:disabled) { color: $primary; }
   }
+
+  > box > label { margin-left: $space-size; }
 
   &.frame,
   border { border: none; }
