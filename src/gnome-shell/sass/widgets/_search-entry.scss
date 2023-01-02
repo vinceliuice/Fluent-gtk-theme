@@ -2,43 +2,76 @@
 
 $search_entry_width: 320px;
 
-%search_entry {
-  min-height: $menuitem-size;
+.search-entry {
+  min-height: 24px;
+  padding: $container_padding / 2 $container_padding * 1;
   width: $search_entry_width;
-  border: none;
-  border-radius: $buttons_radius + 2px;
-  @include search_entry(normal);
+  border: none !important;
+  border-radius: $buttons_radius;
   selection-background-color: $primary_color;
   selected-color: $light_fg_color !important;
-  margin-top: $container_padding * 2;
-  margin-bottom: $container_padding;
+  @include entry(normal);
 
-  &:hover {
-    @include search_entry(hover);
-  }
-
-  &:focus {
-    @include search_entry(focus);
-    selection-background-color: $primary_color;
-    selected-color: $light_fg_color !important;
-  }
+  &:hover { @include entry(hover); }
+  &:focus { @include entry(focus); }
+  &:insensitive { @include entry(insensitive); }
 
   .search-entry-icon {
     icon-size: 16px;
     padding: 0 4px;
-    color: inherit;
-  }
-
-  &:hover, &:focus {
-    .search-entry-icon { color: rgba(black, 0.75); }
+    color: $secondary_fg_color;
   }
 
   StLabel.hint-text {
     margin-left: 2px;
-    color: rgba(black, 0.35);
+    color: $disabled_fg_color;
   }
 }
 
 #overview {
-  .search-entry { @extend %search_entry; }
+  .search-entry {
+    min-height: 24px;
+    padding: $container_padding $container_padding * 1.5;
+    margin-top: $container_padding * 2;
+    margin-bottom: $container_padding;
+    border-radius: $buttons_radius + 2px;
+
+    @include search_entry(normal);
+
+    &:hover {
+      @include search_entry(hover);
+    }
+
+    &:focus {
+      @include search_entry(focus);
+      selection-background-color: $primary_color;
+      selected-color: $light_fg_color !important;
+    }
+
+    .search-entry-icon {
+      color: rgba(black, 0.65);
+    }
+
+    &:hover, &:focus {
+      .search-entry-icon { color: rgba(black, 0.75); }
+    }
+
+    StLabel.hint-text {
+      color: rgba(black, 0.35);
+    }
+  }
+}
+
+.overview-components-transparent .search-entry,
+.overview-components-light .search-entry,
+.overview-components-dark .search-entry {
+  caret-color: rgba(white, 0.75) !important;
+
+  .search-entry-icon {
+    color: rgba(white, 0.65);
+  }
+
+  StLabel.hint-text {
+    color: rgba(white, 0.35) !important;
+  }
 }
