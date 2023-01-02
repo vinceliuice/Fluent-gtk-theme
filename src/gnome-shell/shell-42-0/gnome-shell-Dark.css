@@ -2133,24 +2133,6 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   color: rgba(0, 0, 0, 0.35);
 }
 
-.overview-components-transparent .search-entry,
-.overview-components-light .search-entry,
-.overview-components-dark .search-entry {
-  caret-color: rgba(255, 255, 255, 0.75) !important;
-}
-
-.overview-components-transparent .search-entry .search-entry-icon,
-.overview-components-light .search-entry .search-entry-icon,
-.overview-components-dark .search-entry .search-entry-icon {
-  color: rgba(255, 255, 255, 0.65);
-}
-
-.overview-components-transparent .search-entry StLabel.hint-text,
-.overview-components-light .search-entry StLabel.hint-text,
-.overview-components-dark .search-entry StLabel.hint-text {
-  color: rgba(255, 255, 255, 0.35) !important;
-}
-
 /* Search */
 #searchResultsContent {
   max-width: 1024px;
@@ -4164,4 +4146,66 @@ StWidget.focused .app-well-app-running-dot {
 .gsconnect-device-menu .popup-menu-item > :last-child:rtl {
   padding-left: 6px !important;
   padding-left: 12px !important;
+}
+
+#panel.light-panel .panel-button,
+#panel.dark-panel .panel-button,
+#panel.transparent-panel .panel-button {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+#panel.light-panel .panel-button.clock-display .clock,
+#panel.dark-panel .panel-button.clock-display .clock,
+#panel.transparent-panel .panel-button.clock-display .clock {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+#panel.light-panel .panel-button:hover,
+#panel.dark-panel .panel-button:hover,
+#panel.transparent-panel .panel-button:hover {
+  color: rgba(255, 255, 255, 0.7) !important;
+  background-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+#panel.light-panel .panel-button:active, #panel.light-panel .panel-button:checked, #panel.light-panel .panel-button:focus,
+#panel.dark-panel .panel-button:active,
+#panel.dark-panel .panel-button:checked,
+#panel.dark-panel .panel-button:focus,
+#panel.transparent-panel .panel-button:active,
+#panel.transparent-panel .panel-button:checked,
+#panel.transparent-panel .panel-button:focus {
+  color: rgba(255, 255, 255, 0.85) !important;
+  background-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+#panel.light-panel .panel-button:hover.clock-display .clock, #panel.light-panel .panel-button:active.clock-display .clock, #panel.light-panel .panel-button:overview.clock-display .clock, #panel.light-panel .panel-button:focus.clock-display .clock, #panel.light-panel .panel-button:checked.clock-display .clock,
+#panel.dark-panel .panel-button:hover.clock-display .clock,
+#panel.dark-panel .panel-button:active.clock-display .clock,
+#panel.dark-panel .panel-button:overview.clock-display .clock,
+#panel.dark-panel .panel-button:focus.clock-display .clock,
+#panel.dark-panel .panel-button:checked.clock-display .clock,
+#panel.transparent-panel .panel-button:hover.clock-display .clock,
+#panel.transparent-panel .panel-button:active.clock-display .clock,
+#panel.transparent-panel .panel-button:overview.clock-display .clock,
+#panel.transparent-panel .panel-button:focus.clock-display .clock,
+#panel.transparent-panel .panel-button:checked.clock-display .clock {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.overview-components-transparent .search-entry,
+.overview-components-light .search-entry,
+.overview-components-dark .search-entry {
+  caret-color: rgba(255, 255, 255, 0.75) !important;
+}
+
+.overview-components-transparent .search-entry .search-entry-icon,
+.overview-components-light .search-entry .search-entry-icon,
+.overview-components-dark .search-entry .search-entry-icon {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.overview-components-transparent .search-entry StLabel.hint-text,
+.overview-components-light .search-entry StLabel.hint-text,
+.overview-components-dark .search-entry StLabel.hint-text {
+  color: rgba(255, 255, 255, 0.35) !important;
 }

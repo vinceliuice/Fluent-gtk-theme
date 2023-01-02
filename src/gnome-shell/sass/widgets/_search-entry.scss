@@ -61,17 +61,3 @@ $search_entry_width: 320px;
     }
   }
 }
-
-.overview-components-transparent .search-entry,
-.overview-components-light .search-entry,
-.overview-components-dark .search-entry {
-  caret-color: rgba(white, 0.75) !important;
-
-  .search-entry-icon {
-    color: rgba(white, 0.65);
-  }
-
-  StLabel.hint-text {
-    color: rgba(white, 0.35) !important;
-  }
-}
