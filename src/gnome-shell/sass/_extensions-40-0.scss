@@ -429,3 +429,53 @@
     }
   }
 }
+
+//
+// Blur my shell
+//
+
+#panel.light-panel,
+#panel.dark-panel,
+#panel.transparent-panel {
+  .panel-button {
+    color: $inverse_secondary_fg_color !important;
+
+    &.clock-display {
+      .clock {
+        color: $inverse_secondary_fg_color !important;
+      }
+    }
+
+    &:hover {
+      color: $inverse_secondary_fg_color !important;
+      background-color: $inverse_divider_color !important;
+    }
+
+    &:active, &:checked, &:focus {
+      color: $inverse_fg_color !important;
+      background-color: $inverse_track_color !important;
+    }
+
+    &:hover, &:active, &:overview, &:focus, &:checked {
+      &.clock-display {
+        .clock {
+          color: $inverse_fg_color !important;
+        }
+      }
+    }
+  }
+}
+
+.overview-components-transparent .search-entry,
+.overview-components-light .search-entry,
+.overview-components-dark .search-entry {
+  caret-color: rgba(white, 0.75) !important;
+
+  .search-entry-icon {
+    color: rgba(white, 0.65);
+  }
+
+  StLabel.hint-text {
+    color: rgba(white, 0.35) !important;
+  }
+}

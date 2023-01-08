@@ -1453,6 +1453,7 @@ toolbar.osd {
   box-shadow: 0 2px 2.4px -1px rgba(0, 0, 0, 0.2), 0 4px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 6px 0 rgba(0, 0, 0, 0.12), inset 0 1px rgba(255, 255, 255, 0.4);
   background-color: #FFFFFF;
   border: none;
+  color: rgba(0, 0, 0, 0.87);
 }
 
 .app-notification:backdrop, .toolbar.osd:backdrop,
@@ -3721,13 +3722,17 @@ columnview row:not(:selected) cell editablelabel.editing text selection {
  *********************/
 .app-notification {
   margin: 6px;
-  border-spacing: 6px;
-  padding: 6px;
+  border-spacing: 0;
+  padding: 0;
   border: none;
 }
 
 .app-notification button.text-button:not(:disabled) {
   color: #1A73E8;
+}
+
+.app-notification > box > label {
+  margin-left: 6px;
 }
 
 .app-notification.frame,

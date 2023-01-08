@@ -1,8 +1,8 @@
 /* Buttons */
 
 .button {
-  min-height: $medium_size;
-  padding: 0 16px;
+  min-height: 24px;
+  padding: $container_padding $container_padding * 2;
   border-width: 0;
   border-radius: $buttons_radius;
   @include font(button);
