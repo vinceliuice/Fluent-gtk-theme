@@ -3378,18 +3378,9 @@ messagedialog { // Message Dialog styling
     }
   }
 
-  &.csd { // rounded bottom border styling for csd version
-    &.background {
-      // bigger radius for better antialiasing
-      border-bottom-left-radius: $window-radius;
-      border-bottom-right-radius: $window-radius;
-    }
-
+  &, &.csd {
     .dialog-action-box {
-      margin-top: -$space-size;
-      // padding: $space-size;
-
-      button {
+      > .linked > button {
         @extend %button-flat;
 
         &, &:first-child, &:last-child { border-radius: $corner-radius; }
@@ -3400,6 +3391,18 @@ messagedialog { // Message Dialog styling
 
         &.destructive-action:not(:disabled) { color: $destructive; }
       }
+    }
+  }
+
+  &.csd { // rounded bottom border styling for csd version
+    &.background {
+      // bigger radius for better antialiasing
+      border-bottom-left-radius: $window-radius;
+      border-bottom-right-radius: $window-radius;
+    }
+
+    .dialog-action-box {
+      margin-top: -$space-size;
     }
   }
 }
