@@ -7,7 +7,7 @@
   }
 
   .icon-button, .button {
-    padding: $container_padding + 4px;
+    padding: $container_padding * 1.5;
   }
 }
 
@@ -95,6 +95,8 @@
   }
 
   .icon-button {
+    min-width: 22px;
+    min-height: 22px;
     background-color: transparent;
     color: $fg_color !important;
 
@@ -158,6 +160,8 @@
     background-color: $divider_color;
     color: $fg_color;
     border-radius: $buttons_radius;
+    min-height: 22px;
+    min-width: 22px;
 
     &:hover {
       background-color: $visit_color;

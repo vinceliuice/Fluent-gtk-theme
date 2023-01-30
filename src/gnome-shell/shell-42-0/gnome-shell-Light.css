@@ -2934,7 +2934,7 @@ StWidget.focused .app-well-app-running-dot {
 }
 
 .quick-settings .icon-button, .quick-settings .button {
-  padding: 10px;
+  padding: 9px;
 }
 
 .quick-settings-grid {
@@ -3058,6 +3058,8 @@ StWidget.focused .app-well-app-running-dot {
 }
 
 .quick-slider .icon-button {
+  min-width: 22px;
+  min-height: 22px;
   background-color: transparent;
   color: rgba(0, 0, 0, 0.87) !important;
 }
@@ -3123,6 +3125,8 @@ StWidget.focused .app-well-app-running-dot {
   background-color: rgba(0, 0, 0, 0.06);
   color: rgba(0, 0, 0, 0.87);
   border-radius: 3px;
+  min-height: 22px;
+  min-width: 22px;
 }
 
 .quick-settings-system-item .icon-button:hover {
