@@ -3138,6 +3138,7 @@ StWidget.focused .app-well-app-running-dot {
 
 .quick-settings-system-item .icon-button > StIcon {
   -st-icon-style: symbolic;
+  icon-size: 16px;
 }
 
 .quick-settings-system-item .power-item {

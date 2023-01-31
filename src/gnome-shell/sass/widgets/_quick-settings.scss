@@ -166,11 +166,15 @@
     &:hover {
       background-color: $visit_color;
     }
+
     &:active {
       background-color: $track_color;
     }
 
-    > StIcon { -st-icon-style: symbolic; }
+    > StIcon {
+      -st-icon-style: symbolic;
+      icon-size: 16px;
+    }
   }
 
   & .power-item {
