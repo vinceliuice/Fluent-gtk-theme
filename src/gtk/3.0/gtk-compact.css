@@ -7036,11 +7036,16 @@ MsdOsdWindow.background.osd .progressbar {
 }
 
 .budgie-popover .container {
+  padding: 4px;
+}
+
+.budgie-popover .container .container {
   padding: 0;
 }
 
-.budgie-popover separator {
+.budgie-popover widget > separator {
   margin: 2px 0;
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .budgie-popover border {
@@ -7125,7 +7130,7 @@ MsdOsdWindow.background.osd .progressbar {
 
 .budgie-popover.budgie-menu .budgie-menu-footer {
   border-top: 1px solid rgba(0, 0, 0, 0.08);
-  padding: 4px;
+  padding: 2px;
 }
 
 .budgie-popover.budgie-menu .budgie-menu-footer button.flat {
@@ -7433,10 +7438,6 @@ MsdOsdWindow.background.osd .progressbar {
 
 .budgie-panel.vertical button {
   padding: 4px 0;
-}
-
-.budgie-panel separator {
-  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .budgie-panel .alert {

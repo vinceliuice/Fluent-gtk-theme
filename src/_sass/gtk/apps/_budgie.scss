@@ -25,9 +25,18 @@
   box-shadow: $shadow-z4;
   background-color: $surface;
 
-  .container { padding: 0; }
+  .container {
+    padding: $space-size;
 
-  separator { margin: $space-size / 2 0; }
+    .container {
+      padding: 0;
+    }
+  }
+
+  widget > separator {
+    margin: $space-size / 2 0;
+    background-color: on($panel, track);
+  }
 
   border { border: none; }
 
@@ -103,7 +112,7 @@
 
     .budgie-menu-footer {
       border-top: 1px solid $border;
-      padding: $space-size;
+      padding: $space-size / 2;
 
       button.flat {
         min-height: 16px;
@@ -202,17 +211,16 @@
     }
   }
 
-  &.sound-popover {
-  }
+  // &.sound-popover {
+  // }
 
   &.night-light-indicator {
     .container { padding: $space-size / 2; }
     .view-header { margin: 0 $space-size; }
   }
 
-  &.caffeine-popover {
-    .container { padding: $space-size; }
-  }
+  // &.caffeine-popover {
+  // }
 
   &.places-menu {
     .container { padding: $space-size / 2; }
@@ -404,8 +412,6 @@
   &.horizontal button { padding: 0 4px; }
 
   &.vertical button { padding: 4px 0; }
-
-  separator { background-color: on($panel, track); }
 
   // used to indicate unread notifications
   .alert { color: $destructive; }
