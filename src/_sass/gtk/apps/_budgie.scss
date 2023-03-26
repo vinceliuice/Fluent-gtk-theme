@@ -497,6 +497,39 @@
       }
     }
   }
+
+  // Add padding for panel indicators icons
+  > box > widget > widget {
+    > image, // normal
+    > stack > image, // Screenshot
+    > box > image { // Places
+      margin-left: $space-size;
+      margin-right: $space-size;
+    }
+
+    > box > image + label { // Reset for mailneg
+      margin-left: -$space-size + 2px;
+    }
+
+    > box { // keyboard Layout
+      > widget > image { margin-left: $space-size; }
+      > stack > widget > label { margin-right: $space-size; }
+    }
+
+    > box > widget > widget > image { // Status
+      margin-left: $space-size / 2;
+      margin-right: $space-size / 2;
+    }
+  }
+
+  // Time label
+  .budgie-clock-applet,
+  .budgie-calendar-applet {
+    > widget > box {
+      padding-left: $space-size / 2;
+      padding-right: $space-size / 2;
+    }
+  }
 }
 
 %underscores {
@@ -670,6 +703,12 @@ calendar.raven-calendar {
   }
 }
 
+image.raven-mpris {
+  background-color: $divider;
+  color: $text-secondary;
+  border-radius: $corner-radius;
+}
+
 // notification list
 .raven-notifications-view {
   > .raven-background > viewport.frame {
@@ -744,7 +783,7 @@ calendar.raven-calendar {
 
 .drop-shadow {
   margin: 5px 9px;
-  padding: 3px;
+  padding: $space-size;
   border-radius: $window-radius;
   box-shadow: $shadow-z4, inset 0 1px highlight($surface);
   background-color: $surface;
@@ -759,6 +798,10 @@ calendar.raven-calendar {
   background-color: $surface;
 
   &.background.csd { border-radius: $window-radius; }
+
+  > box > grid {
+    padding: $space-size * 4;
+  }
 }
 
 // Session Dialog
@@ -788,6 +831,10 @@ calendar.raven-calendar {
   .message { color: $text-secondary; }
 
   .failure { color: $destructive; }
+
+  > box > grid {
+    padding-bottom: 0;
+  }
 }
 
 // Run Dialog
