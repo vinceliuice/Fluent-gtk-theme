@@ -7806,6 +7806,12 @@ XfdesktopIconView.view .rubberband {
   border-radius: 0;
 }
 
+#XfceNotifyWindow {
+  box-shadow: none;
+  border: none;
+  border-radius: 3px;
+}
+
 #XfceNotifyWindow buttonbox {
   padding: 0;
 }

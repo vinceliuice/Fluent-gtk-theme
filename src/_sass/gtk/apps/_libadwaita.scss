@@ -231,10 +231,7 @@ splitbutton {
     background: none;
   }
 
-  > menubutton > button {
-    padding-left: 4px;
-    padding-right: 4px;
-  }
+  // > menubutton > button { }
 
   // Since the inner button doesn't have any style classes on it,
   // we have to add them manually
