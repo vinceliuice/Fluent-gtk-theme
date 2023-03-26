@@ -25,9 +25,18 @@
   box-shadow: $shadow-z4;
   background-color: $surface;
 
-  .container { padding: 0; }
+  .container {
+    padding: $space-size;
 
-  separator { margin: $space-size / 2 0; }
+    .container {
+      padding: 0;
+    }
+  }
+
+  widget > separator {
+    margin: $space-size / 2 0;
+    background-color: on($panel, track);
+  }
 
   border { border: none; }
 
@@ -70,7 +79,7 @@
       &:focus { box-shadow: none; }
     }
 
-    button.flat:not(.image-button):not(.indicator-item) {
+    row.activatable > button.flat {
       @extend %row_activatable;
       min-height: 32px;
       padding: 0 8px;
@@ -79,6 +88,46 @@
       &:checked { @extend %selected_items; }
 
       &:checked:disabled { background-color: transparent; } // remove pointless indicator
+    }
+
+    list.left-overlay-menu {
+      background-color: $base;
+      padding: $space-size;
+      margin: $space-size;
+      border-radius: $menu-radius;
+      box-shadow: $shadow-z4;
+
+      > row.activatable {
+        border-radius: $corner-radius;
+
+        &:not(:last-child) {
+          margin-bottom: $space-size / 2;
+        }
+
+        button.menuitem {
+          border-radius: $corner-radius;
+        }
+      }
+    }
+
+    .budgie-menu-footer {
+      border-top: 1px solid $border;
+      padding: $space-size / 2;
+
+      button.flat {
+        min-height: 16px;
+        min-width: 16px;
+        padding: $space-size;
+        border-radius: $corner-radius;
+
+        &.image-button {
+          border-radius: $circular-radius;
+
+          &:not(.last-child) {
+            margin-right: $space-size;
+          }
+        }
+      }
     }
   }
 
@@ -98,6 +147,10 @@
 
   scrolledwindow.sidebar.categories { // AppMenu
     background-color: $fill;
+
+    button.category-button {
+      border-radius: 0;
+    }
   }
 
   scrolledwindow.sidebar:not(.categories) { //AppMenu (Elementary)
@@ -158,17 +211,16 @@
     }
   }
 
-  &.sound-popover {
-  }
+  // &.sound-popover {
+  // }
 
   &.night-light-indicator {
     .container { padding: $space-size / 2; }
     .view-header { margin: 0 $space-size; }
   }
 
-  &.caffeine-popover {
-    .container { padding: $space-size; }
-  }
+  // &.caffeine-popover {
+  // }
 
   &.places-menu {
     .container { padding: $space-size / 2; }
@@ -271,6 +323,49 @@
 
   &.transparent { background-color: rgba($panel, 0.8); }
 
+  .bottom & {
+    &.dock-mode {
+      border-radius: $window-radius $window-radius 0 0;
+
+      .icon-tasklist {
+        button.launcher {
+          &:checked, &:active { color: on($panel); }
+        }
+
+        > box > revealer {
+          &:first-child > button.launcher { border-top-left-radius: $window-radius; }
+          &:last-child > button.launcher { border-top-right-radius: $window-radius; }
+        }
+      }
+    }
+  }
+
+  .left & {
+    &.dock-mode {
+      border-radius: 0 $window-radius $window-radius 0;
+
+      .icon-tasklist {
+        .launcher {
+          &:first-child { border-top-right-radius: $window-radius; }
+          &:last-child { border-bottom-right-radius: $window-radius; }
+        }
+      }
+    }
+  }
+
+  .right & {
+    &.dock-mode {
+      border-radius: $window-radius 0 0 $window-radius;
+
+      .icon-tasklist {
+        .launcher {
+          &:first-child { border-top-left-radius: $window-radius; }
+          &:last-child { border-bottom-left-radius: $window-radius; }
+        }
+      }
+    }
+  }
+
   button, button.flat, button.image-button {
     color: on($panel, secondary);
     background: none;
@@ -317,8 +412,6 @@
   &.horizontal button { padding: 0 4px; }
 
   &.vertical button { padding: 4px 0; }
-
-  separator { background-color: on($panel, track); }
 
   // used to indicate unread notifications
   .alert { color: $destructive; }
