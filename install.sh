@@ -31,7 +31,10 @@ SIZE_VARIANTS=('' '-compact')
 
 if [[ "$(command -v gnome-shell)" ]]; then
   SHELL_VERSION="$(gnome-shell --version | cut -d ' ' -f 3 | cut -d . -f -1)"
-  if [[ "${SHELL_VERSION:-}" -ge "42" ]]; then
+  if [[ "${SHELL_VERSION:-}" -ge "44" ]]; then
+    GS_VERSION="44-0"
+    echo "gnome-shell 44.0"
+  elif [[ "${SHELL_VERSION:-}" -ge "42" ]]; then
     GS_VERSION="42-0"
     echo "gnome-shell 42.0"
   elif [[ "${SHELL_VERSION:-}" -ge "40" ]]; then
@@ -43,7 +46,7 @@ if [[ "$(command -v gnome-shell)" ]]; then
   fi
   else
     echo "'gnome-shell' not found, using styles for last gnome-shell version available."
-    GS_VERSION="42-0"
+    GS_VERSION="44-0"
 fi
 
 usage() {

@@ -661,7 +661,7 @@ button.text-button.image-button image:not(:only-child) {
   border-radius: 2px;
 }
 
-.linked:not(.vertical) > button.flat:not(:only-child).image-button:not(.text-button), .linked.vertical > button.flat:not(:only-child).image-button:not(.text-button) {
+.linked:not(.vertical) > button.flat.image-button:not(:only-child):not(.text-button), .linked.vertical > button.flat.image-button:not(:only-child):not(.text-button) {
   border-radius: 2px;
 }
 
@@ -1628,11 +1628,11 @@ headerbar button.titlebutton:not(.suggested-action):not(.destructive-action) {
   border-radius: 2px;
 }
 
-.titlebar stackswitcher.linked:not(.vertical) > button:not(.suggested-action):not(.destructive-action).text-button {
+.titlebar stackswitcher.linked:not(.vertical) > button.text-button:not(.suggested-action):not(.destructive-action) {
   border-radius: 2px;
 }
 
-.titlebar .path-bar button:not(.suggested-action):not(.destructive-action).text-button {
+.titlebar .path-bar button.text-button:not(.suggested-action):not(.destructive-action) {
   min-width: 0;
   padding-left: 4px;
   padding-right: 4px;
@@ -1814,12 +1814,12 @@ headerbar.windowhandle > button.popup label, headerbar.windowhandle > button.pop
   border-radius: 0;
 }
 
-headerbar button.titlebutton:not(.suggested-action):not(.destructive-action).close:hover, headerbar button.titlebutton:not(.suggested-action):not(.destructive-action).close:backdrop:hover {
+headerbar button.titlebutton.close:not(.suggested-action):not(.destructive-action):hover, headerbar button.titlebutton.close:not(.suggested-action):not(.destructive-action):backdrop:hover {
   background-color: #E57373;
   color: white;
 }
 
-headerbar button.titlebutton:not(.suggested-action):not(.destructive-action).close:active {
+headerbar button.titlebutton.close:not(.suggested-action):not(.destructive-action):active {
   background-color: #E53935;
   color: white;
 }
@@ -1953,11 +1953,11 @@ treeview.view:drop(active) {
   border-color: rgba(15, 65, 131, 0.935);
 }
 
-treeview.view:drop(active).after {
+treeview.view.after:drop(active) {
   border-top-style: none;
 }
 
-treeview.view:drop(active).before {
+treeview.view.before:drop(active) {
   border-bottom-style: none;
 }
 
@@ -2356,7 +2356,7 @@ tabbox > tab:checked:disabled, notebook > header tab:checked:disabled {
   color: rgba(0, 0, 0, 0.38);
 }
 
-tabbox > tab:checked.reorderable-page, notebook > header tab:checked.reorderable-page {
+tabbox > tab.reorderable-page:checked, notebook > header tab.reorderable-page:checked {
   background-color: #FFFFFF;
 }
 
@@ -2671,19 +2671,19 @@ scrollbar.overlay-indicator:not(.dragging):not(.hovering) button:disabled {
   background-color: rgba(0, 0, 0, 0.26);
 }
 
-scrollbar.overlay-indicator:not(.dragging):not(.hovering).horizontal slider {
+scrollbar.overlay-indicator.horizontal:not(.dragging):not(.hovering) slider {
   min-width: 24px;
 }
 
-scrollbar.overlay-indicator:not(.dragging):not(.hovering).horizontal button {
+scrollbar.overlay-indicator.horizontal:not(.dragging):not(.hovering) button {
   min-width: 8px;
 }
 
-scrollbar.overlay-indicator:not(.dragging):not(.hovering).vertical slider {
+scrollbar.overlay-indicator.vertical:not(.dragging):not(.hovering) slider {
   min-height: 24px;
 }
 
-scrollbar.overlay-indicator:not(.dragging):not(.hovering).vertical button {
+scrollbar.overlay-indicator.vertical:not(.dragging):not(.hovering) button {
   min-height: 8px;
 }
 
@@ -3735,12 +3735,12 @@ filechooser actionbar, filechooser actionbar > revealer > box {
   background-color: #FAFAFA;
 }
 
-stacksidebar.sidebar:dir(ltr) list, stacksidebar.sidebar.left list, stacksidebar.sidebar.left:dir(rtl) list, .sidebar:not(separator):dir(ltr), .sidebar:not(separator).left {
+stacksidebar.sidebar:dir(ltr) list, stacksidebar.sidebar.left list, stacksidebar.sidebar.left:dir(rtl) list, .sidebar:not(separator):dir(ltr), .sidebar.left:not(separator) {
   border-right: 1px solid rgba(0, 0, 0, 0.12);
   border-left-style: none;
 }
 
-stacksidebar.sidebar:dir(rtl) list, stacksidebar.sidebar.right list, .sidebar:not(separator):dir(rtl), .sidebar:not(separator).right {
+stacksidebar.sidebar:dir(rtl) list, stacksidebar.sidebar.right list, .sidebar:not(separator):dir(rtl), .sidebar.right:not(separator) {
   border-left: 1px solid rgba(0, 0, 0, 0.12);
   border-right-style: none;
 }
@@ -4258,7 +4258,7 @@ stackswitcher.linked:not(.vertical) > button:not(.suggested-action):not(.destruc
   border: none;
 }
 
-stackswitcher.linked:not(.vertical) > button:not(.suggested-action):not(.destructive-action).text-button {
+stackswitcher.linked:not(.vertical) > button.text-button:not(.suggested-action):not(.destructive-action) {
   min-width: 100px;
 }
 
@@ -4488,11 +4488,11 @@ popover.emoji-completion .emoji:hover {
   margin-bottom: 0;
 }
 
-.nautilus-window .windowhandle .linked.nautilus-path-bar button:not(.suggested-action):not(.destructive-action).current-dir {
+.nautilus-window .windowhandle .linked.nautilus-path-bar button.current-dir:not(.suggested-action):not(.destructive-action) {
   color: rgba(0, 0, 0, 0.87);
 }
 
-.nautilus-window .windowhandle .linked.nautilus-path-bar button:not(.suggested-action):not(.destructive-action).current-dir:hover, .nautilus-window .windowhandle .linked.nautilus-path-bar button:not(.suggested-action):not(.destructive-action).current-dir:active {
+.nautilus-window .windowhandle .linked.nautilus-path-bar button.current-dir:not(.suggested-action):not(.destructive-action):hover, .nautilus-window .windowhandle .linked.nautilus-path-bar button.current-dir:not(.suggested-action):not(.destructive-action):active {
   background: none;
   box-shadow: none;
 }
@@ -4564,11 +4564,11 @@ popover.emoji-completion .emoji:hover {
   margin-right: 0;
 }
 
-.path-bar-box .linked.nautilus-path-bar button:not(.suggested-action):not(.destructive-action).text-button {
+.path-bar-box .linked.nautilus-path-bar button.text-button:not(.suggested-action):not(.destructive-action) {
   min-width: 0;
 }
 
-.path-bar-box .linked.nautilus-path-bar button:not(.suggested-action):not(.destructive-action).text-button.image-button image:not(:only-child) {
+.path-bar-box .linked.nautilus-path-bar button.text-button.image-button:not(.suggested-action):not(.destructive-action) image:not(:only-child) {
   margin: 0;
 }
 
@@ -4616,11 +4616,11 @@ popover.emoji-completion .emoji:hover {
   background-color: transparent;
 }
 
-.nautilus-window notebook :not(treeview).view {
+.nautilus-window notebook .view:not(treeview) {
   border-radius: 3px;
 }
 
-.nautilus-window notebook :not(treeview).view selection, .nautilus-window notebook :not(treeview).view:selected {
+.nautilus-window notebook .view:not(treeview) selection, .nautilus-window notebook .view:not(treeview):selected {
   background-image: image(#1A73E8);
 }
 
@@ -5175,7 +5175,7 @@ stack.view.polari-entry-area {
   border-bottom-right-radius: 3px;
 }
 
-stack:disabled.view.polari-entry-area {
+stack.view.polari-entry-area:disabled {
   background-image: image(#F2F2F2);
 }
 
@@ -6506,7 +6506,7 @@ UnityDecoration .menuitem:hover {
   box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.3), 0 1px 2px -1px rgba(0, 0, 0, 0.24), 0 1px 2px -0.6px rgba(0, 0, 0, 0.17);
 }
 
-.background:not(.csd) headerbar:not(.titlebar).inline-toolbar {
+.background:not(.csd) headerbar.inline-toolbar:not(.titlebar) {
   border-style: none;
 }
 
@@ -7230,10 +7230,6 @@ MsdOsdWindow.background.osd .progressbar {
 
 .budgie-popover.night-light-indicator .view-header {
   margin: 0 6px;
-}
-
-.budgie-popover.caffeine-popover .container {
-  padding: 6px;
 }
 
 .budgie-popover.places-menu .container {

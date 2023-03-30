@@ -72,6 +72,31 @@ stage {
 }
 
 /* General Typography */
+.quick-toggle-menu .header .title {
+  font-weight: 700;
+  font-size: 15pt;
+}
+
+.bt-menu-placeholder.popup-menu-item {
+  font-weight: 700;
+  font-size: 13pt;
+}
+
+.background-app-item .title {
+  font-weight: 700;
+  font-size: 11pt;
+}
+
+.quick-toggle-menu .header .subtitle {
+  font-weight: 700;
+  font-size: 9pt;
+}
+
+.background-app-item .subtitle {
+  font-weight: 400;
+  font-size: 9pt;
+}
+
 /* WIDGETS */
 .shell-link {
   border-radius: 3px;
@@ -2933,11 +2958,11 @@ StWidget.focused .app-well-app-running-dot {
   padding: 16px 18px 20px !important;
 }
 
-.quick-settings .icon-button, .quick-settings .button {
+.quick-settings .icon-button, .quick-settings .background-app-item .close-button, .background-app-item .quick-settings .close-button, .quick-settings .button {
   padding: 9px;
 }
 
-.quick-settings .icon-button StIcon, .quick-settings .button StIcon {
+.quick-settings .icon-button StIcon, .quick-settings .background-app-item .close-button StIcon, .background-app-item .quick-settings .close-button StIcon, .quick-settings .button StIcon {
   icon-size: 16px;
 }
 
@@ -2946,7 +2971,7 @@ StWidget.focused .app-well-app-running-dot {
   spacing-columns: 12px;
 }
 
-.quick-toggle {
+.quick-toggle, .quick-menu-toggle {
   border-radius: 3px;
   min-width: 12em;
   max-width: 12em;
@@ -2954,6 +2979,9 @@ StWidget.focused .app-well-app-running-dot {
   padding: 0;
   border: none;
   background-color: rgba(255, 255, 255, 0.06) !important;
+}
+
+.quick-toggle {
   /* Move padding into the box; this is to allow menu arrows
      to extend to the border */
 }
@@ -3001,20 +3029,46 @@ StWidget.focused .app-well-app-running-dot {
   padding-right: 15px;
 }
 
-.quick-toggle .quick-toggle-label {
+.quick-toggle .quick-toggle-title {
   font-weight: bold;
+}
+
+.quick-toggle StBoxLayout > .quick-toggle-subtitle {
+  font-weight: normal;
+  font-size: 12px;
 }
 
 .quick-toggle .quick-toggle-icon, .quick-toggle .quick-toggle-arrow {
   icon-size: 16px;
 }
 
-.quick-menu-toggle:ltr > StBoxLayout {
-  padding-right: 0;
+.quick-menu-toggle .quick-toggle {
+  min-width: auto;
+  max-width: auto;
 }
 
-.quick-menu-toggle:rtl > StBoxLayout {
-  padding-left: 0;
+.quick-menu-toggle .quick-toggle:ltr {
+  border-radius: 3px 0 0 3px;
+}
+
+.quick-menu-toggle .quick-toggle:ltr > StBoxLayout {
+  padding-right: 9px;
+}
+
+.quick-menu-toggle .quick-toggle:rtl {
+  border-radius: 0 3px 3px 0;
+}
+
+.quick-menu-toggle .quick-toggle:rtr > StBoxLayout {
+  padding-left: 9px;
+}
+
+.quick-menu-toggle .quick-toggle:ltr:last-child {
+  border-radius: 3px;
+}
+
+.quick-menu-toggle .quick-toggle:rtl:last-child {
+  border-radius: 3px;
 }
 
 .quick-menu-toggle .quick-toggle-arrow {
@@ -3022,16 +3076,27 @@ StWidget.focused .app-well-app-running-dot {
   padding: 6px 12px;
 }
 
-.quick-menu-toggle .quick-toggle-arrow:active {
+.quick-menu-toggle .quick-toggle-arrow:hover {
   background-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+.quick-menu-toggle .quick-toggle-arrow:active {
+  background-color: rgba(255, 255, 255, 0.18) !important;
+}
+
+.quick-menu-toggle .quick-toggle-arrow:checked {
+  background-color: #3281ea !important;
+  color: #FFFFFF !important;
 }
 
 .quick-menu-toggle .quick-toggle-arrow:ltr {
   border-radius: 0 3px 3px 0;
+  border-left-width: 0;
 }
 
 .quick-menu-toggle .quick-toggle-arrow:rtl {
   border-radius: 3px 0 0 3px;
+  border-right-width: 0;
 }
 
 .quick-slider {
@@ -3061,18 +3126,18 @@ StWidget.focused .app-well-app-running-dot {
   icon-size: 16px;
 }
 
-.quick-slider .icon-button {
+.quick-slider .icon-button, .quick-slider .background-app-item .close-button, .background-app-item .quick-slider .close-button {
   min-width: 22px;
   min-height: 22px;
   background-color: transparent;
   color: rgba(255, 255, 255, 0.9) !important;
 }
 
-.quick-slider .icon-button:hover {
+.quick-slider .icon-button:hover, .quick-slider .background-app-item .close-button:hover, .background-app-item .quick-slider .close-button:hover {
   background-color: rgba(255, 255, 255, 0.06);
 }
 
-.quick-slider .icon-button:active {
+.quick-slider .icon-button:active, .quick-slider .background-app-item .close-button:active, .background-app-item .quick-slider .close-button:active {
   background-color: rgba(255, 255, 255, 0.12);
 }
 
@@ -3125,7 +3190,7 @@ StWidget.focused .app-well-app-running-dot {
   spacing: 12px;
 }
 
-.quick-settings-system-item .icon-button {
+.quick-settings-system-item .icon-button, .quick-settings-system-item .background-app-item .close-button, .background-app-item .quick-settings-system-item .close-button {
   background-color: rgba(255, 255, 255, 0.06);
   color: rgba(255, 255, 255, 0.9);
   border-radius: 3px;
@@ -3133,15 +3198,15 @@ StWidget.focused .app-well-app-running-dot {
   min-width: 22px;
 }
 
-.quick-settings-system-item .icon-button:hover {
+.quick-settings-system-item .icon-button:hover, .quick-settings-system-item .background-app-item .close-button:hover, .background-app-item .quick-settings-system-item .close-button:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-.quick-settings-system-item .icon-button:active {
+.quick-settings-system-item .icon-button:active, .quick-settings-system-item .background-app-item .close-button:active, .background-app-item .quick-settings-system-item .close-button:active {
   background-color: rgba(255, 255, 255, 0.15);
 }
 
-.quick-settings-system-item .icon-button > StIcon {
+.quick-settings-system-item .icon-button > StIcon, .quick-settings-system-item .background-app-item .close-button > StIcon, .background-app-item .quick-settings-system-item .close-button > StIcon {
   -st-icon-style: symbolic;
   icon-size: 16px;
 }
@@ -3161,6 +3226,41 @@ StWidget.focused .app-well-app-running-dot {
 
 .nm-network-item .wireless-secure-icon {
   icon-size: 8px;
+}
+
+.bt-device-item .popup-menu-icon {
+  -st-icon-style: symbolic;
+}
+
+.bt-menu-placeholder.popup-menu-item {
+  text-align: center;
+  padding: 2em 4em;
+}
+
+.device-subtitle {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.background-apps-quick-toggle {
+  min-height: 40px;
+  background-color: transparent;
+}
+
+.background-apps-quick-toggle StIcon {
+  icon-size: 16px !important;
+}
+
+.background-app-item .popup-menu-icon {
+  icon-size: 32px !important;
+  -st-icon-style: regular !important;
+}
+
+.background-app-item .close-button {
+  padding: 6px;
+}
+
+.background-app-item.popup-inactive-menu-item {
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .icon-label-button-container {
