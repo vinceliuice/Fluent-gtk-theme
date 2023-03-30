@@ -7520,6 +7520,36 @@ MsdOsdWindow.background.osd .progressbar {
   border-image: radial-gradient(circle closest-corner at calc(100% - 1px) center, currentColor 100%, transparent 0%) 0 2 0 0/0 2px 0 0;
 }
 
+.budgie-panel > box > widget > widget > image,
+.budgie-panel > box > widget > widget > stack > image,
+.budgie-panel > box > widget > widget > box > image {
+  margin-left: 6px;
+  margin-right: 6px;
+}
+
+.budgie-panel > box > widget > widget > box > image + label {
+  margin-left: -4px;
+}
+
+.budgie-panel > box > widget > widget > box > widget > image {
+  margin-left: 6px;
+}
+
+.budgie-panel > box > widget > widget > box > stack > widget > label {
+  margin-right: 6px;
+}
+
+.budgie-panel > box > widget > widget > box > widget > widget > image {
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+.budgie-panel .budgie-clock-applet > widget > box,
+.budgie-panel .budgie-calendar-applet > widget > box {
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
 .top .budgie-panel #tasklist-button, .budgie-panel .top #tasklist-button {
   border-image: radial-gradient(circle closest-corner at center calc(1px), #1A73E8 0%, transparent 0%) 0 0 0 0/0 0 0 0;
 }
@@ -7692,6 +7722,12 @@ calendar.raven-calendar:selected {
   padding: 10px;
 }
 
+image.raven-mpris {
+  background-color: rgba(0, 0, 0, 0.12);
+  color: rgba(0, 0, 0, 0.6);
+  border-radius: 2px;
+}
+
 .raven-notifications-view > .raven-background > viewport.frame {
   padding: 0;
 }
@@ -7749,7 +7785,7 @@ calendar.raven-calendar:selected {
 
 .drop-shadow {
   margin: 5px 9px;
-  padding: 3px;
+  padding: 6px;
   border-radius: 3px;
   box-shadow: 0 2px 2.4px -1px rgba(0, 0, 0, 0.2), 0 4px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 6px 0 rgba(0, 0, 0, 0.12), inset 0 1px rgba(255, 255, 255, 0.4);
   background-color: #FFFFFF;
@@ -7766,6 +7802,10 @@ calendar.raven-calendar:selected {
 
 .background.csd.budgie-run-dialog, .background.csd.budgie-polkit-dialog, .background.csd.budgie-session-dialog {
   border-radius: 3px;
+}
+
+.budgie-run-dialog > box > grid, .budgie-polkit-dialog > box > grid, .budgie-session-dialog > box > grid {
+  padding: 24px;
 }
 
 .budgie-session-dialog label:not(:last-child),
@@ -7793,6 +7833,10 @@ calendar.raven-calendar:selected {
 
 .budgie-polkit-dialog .failure {
   color: #D93025;
+}
+
+.budgie-polkit-dialog > box > grid {
+  padding-bottom: 0;
 }
 
 .budgie-run-dialog {
@@ -7885,6 +7929,12 @@ XfdesktopIconView.view:active {
 
 XfdesktopIconView.view .rubberband {
   border-radius: 0;
+}
+
+#XfceNotifyWindow {
+  box-shadow: none;
+  border: none;
+  border-radius: 3px;
 }
 
 #XfceNotifyWindow buttonbox {

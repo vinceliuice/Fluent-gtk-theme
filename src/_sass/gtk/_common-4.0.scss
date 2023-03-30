@@ -3514,7 +3514,7 @@ separator.sidebar {
  **********************/
 
 .navigation-sidebar {
-  padding: $space-size - 2px 0; //only vertical padding. horizontal row size would clip
+  padding: $space-size 0; //only vertical padding. horizontal row size would clip
   border-right: none;
 
   > row {
@@ -3546,6 +3546,11 @@ separator.sidebar {
 
     &:disabled { color: $text-disabled; }
   }
+
+  > separator {
+    background-color: $border;
+    margin: $space-size 0;
+  }
 }
 
 /****************
@@ -3562,7 +3567,7 @@ row image.sidebar-icon {
 placessidebar {
   > viewport.frame { border-style: none; }
 
-  list { padding: 1px 0 4px; }
+  list { padding: $space-size 0; }
 
   .navigation-sidebar > row {
     // Needs overriding of the GtkListBoxRow padding

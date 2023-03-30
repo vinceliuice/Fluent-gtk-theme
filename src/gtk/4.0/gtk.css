@@ -3967,7 +3967,7 @@ separator.sidebar {
  * Navigation Sidebar *
  **********************/
 .navigation-sidebar {
-  padding: 4px 0;
+  padding: 6px 0;
   border-right: none;
 }
 
@@ -4005,6 +4005,11 @@ separator.sidebar {
   color: rgba(0, 0, 0, 0.38);
 }
 
+.navigation-sidebar > separator {
+  background-color: rgba(0, 0, 0, 0.08);
+  margin: 6px 0;
+}
+
 /****************
  * File chooser *
  ****************/
@@ -4022,7 +4027,7 @@ placessidebar > viewport.frame {
 }
 
 placessidebar list {
-  padding: 1px 0 4px;
+  padding: 6px 0;
 }
 
 placessidebar .navigation-sidebar > row {
@@ -5317,11 +5322,6 @@ splitbutton > separator {
   margin-top: 6px;
   margin-bottom: 6px;
   background: none;
-}
-
-splitbutton > menubutton > button {
-  padding-left: 4px;
-  padding-right: 4px;
 }
 
 splitbutton.image-button > button {
