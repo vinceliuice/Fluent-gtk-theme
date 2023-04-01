@@ -8,7 +8,9 @@ Fluent is a Fluent design theme for GNOME/GTK based desktop environments. See al
 ### Blur version (Only for Gnome-Shell desktop)
 ![screenshot-blur](https://github.com/vinceliuice/Fluent-gtk-theme/blob/Images/screenshot-blur.jpg?raw=true)
 
-- Blur version requirement [Blur Me](https://extensions.gnome.org/extension/4236/blur-me/)
+#### Blur version requirement
+
+- [Blur My Shell](https://github.com/aunetx/blur-my-shell)
 
 ## Requirements
 
