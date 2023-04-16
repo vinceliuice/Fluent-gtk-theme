@@ -2938,6 +2938,10 @@ StWidget.focused .app-well-app-running-dot {
   padding: 9px;
 }
 
+.quick-settings .icon-button StIcon, .quick-settings .button StIcon {
+  icon-size: 16px;
+}
+
 .quick-settings-grid {
   spacing-rows: 12px;
   spacing-columns: 12px;

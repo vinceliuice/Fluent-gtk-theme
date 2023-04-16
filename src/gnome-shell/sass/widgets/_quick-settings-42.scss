@@ -8,6 +8,10 @@
 
   .icon-button, .button {
     padding: $container_padding * 1.5;
+    
+    StIcon {
+      icon-size: 16px;
+    }
   }
 }
 
