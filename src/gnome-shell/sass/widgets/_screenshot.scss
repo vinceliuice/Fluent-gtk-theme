@@ -39,7 +39,7 @@ $screenshot_ui_button_red: $error_color;
 .screenshot-ui-capture-button {
   width: 36px;
   height: 36px;
-  border-radius: 1000px;
+  border-radius: $circular_radius;
   border: 4px $inverse_fg_color;
   padding: 4px;
 
@@ -47,7 +47,7 @@ $screenshot_ui_button_red: $error_color;
     background-color: $inverse_fg_color;
     transition-duration: 200ms;
     &:hover, &:focus { background-color: $visit_color; }
-    border-radius: 1000px;
+    border-radius: $circular_radius;
   }
 
   &:hover, &:focus {
@@ -105,7 +105,7 @@ $screenshot_ui_button_red: $error_color;
 
 .screenshot-ui-show-pointer-button {
   @extend %osd_button;
-  border-radius: 1000px;
+  border-radius: $circular_radius;
   padding: $container_padding * 2 !important;
   StIcon { icon-size: 16px; }
 }
@@ -125,7 +125,7 @@ $screenshot_ui_button_red: $error_color;
 }
 
 .screenshot-ui-area-selector-handle {
-  border-radius: 1000px;
+  border-radius: $circular_radius;
   background-color: white;
   box-shadow: 0 1px 3px 2px rgba(0,0,0,0.2);
   width: 24px;
@@ -156,7 +156,7 @@ $screenshot_ui_button_red: $error_color;
 .screenshot-ui-window-selector-check {
   transition-duration: 200ms;
   color: transparent;
-  border-radius: 1000px;
+  border-radius: $circular_radius;
   border-width: 12px;
   icon-size: 24px;
 }

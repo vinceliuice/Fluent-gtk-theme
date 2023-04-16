@@ -5,9 +5,13 @@
   @return ($size * 0.75 / 1px) + pt;
 }
 
-// provide icon size in em, with px fallback
 @function em($size: 16px) {
   @return ($size / $root-font-size) + em;
+}
+
+@mixin fontsize($size: 24, $base: 16) {
+  font-size: round($size) + pt;
+  //font-size: ($size / $base) * 1rem;
 }
 
 // Typography
@@ -210,6 +214,13 @@
     color: $tc;
     background-color: darken($c, 5%);
     border-color: if($variant == 'light', darken($c, 20%), rgba(white, 0.15));
+    box-shadow: none;
+  }
+
+  @if $t == checked {
+    color: $inverse_fg_color;
+    background-color: $primary_color;
+    border-color: $primary_color;
     box-shadow: none;
   }
 

@@ -37,16 +37,26 @@
 // Calendar menu side column
 .datemenu-calendar-column {
   spacing: $container_padding;
-  border: 0 solid $border_color;
-  padding: 0 $container_padding * 2;
+  border: none;
+  padding: 0;
+  margin: 0;
   color: $secondary_fg_color;
 
   &:hover, &:focus { color: $fg_color; background-color: $divider_color; }
 
   &:active { color: $fg_color; background-color: $track_color; }
 
-  &:ltr { margin-right: $container_margin; border-left-width: 1px; }
-  &:rtl { margin-left: $container_margin; border-right-width: 1px; }
+  &:ltr {
+    margin-right: $container_margin;
+    margin-left: $container_margin + $container_padding;
+    border-left-width: 0;
+  }
+
+  &:rtl {
+    margin-left: $container_margin;
+    margin-right: $container_margin + $container_padding;
+    border-right-width: 0;
+  }
 
   .datemenu-displays-section { padding-bottom: 0; }
 
@@ -216,7 +226,7 @@
 .calendar-week-number {
   height: 1.8em !important;
   width: 2.6em !important;
-  padding: 0 !important;
+  padding: 0 2px !important;
   margin: $container_padding 0 !important;
   border-radius: $circular_radius;
   background-color: if($variant == 'light', rgba(black, 0.04), rgba(white, 0.03));

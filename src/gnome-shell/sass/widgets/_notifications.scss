@@ -8,7 +8,7 @@ $notification_banner_width: 34em;
   min-height: $notification_banner_height;
   width: $notification_banner_width;
   font-size: 1em;
-  margin: 5px;
+  margin: $container_padding * 1.5 8px 12px;
   border-radius: $buttons_radius;
   color: $fg_color;
   background-color: rgba($base_color, 0.92);

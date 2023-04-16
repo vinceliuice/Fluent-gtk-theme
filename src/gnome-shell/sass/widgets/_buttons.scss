@@ -17,6 +17,7 @@
   @include button(flat-normal, $tc: $inverse_fg_color);
   &:hover { @include button(flat-hover, $tc: $inverse_fg_color); }
   &:active { @include button(flat-active, $tc: $inverse_fg_color); }
+  &:checked { @include button(checked); }
   &:insensitive { @include button(flat-insensitive, $tc: $inverse_disabled_secondary_fg_color); }
   &:focus { @include button(flat-focus, $tc: $inverse_fg_color); }
 }

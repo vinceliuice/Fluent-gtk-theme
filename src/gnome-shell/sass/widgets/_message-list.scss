@@ -3,18 +3,32 @@
 
 // main list
 .message-list {
-  width: 31.5em;
+  width: 30em;
   padding: 0;
   color: $secondary_fg_color;
   text-shadow: none;
   box-shadow: none;
+  border: 0 solid $border_color;
 
   // padding and margins to account for scrollbar
-  &:ltr { margin-left: 0; margin-right: 0; padding-right: 0; border-right-width: 0; }
-  &:rtl { margin-right: 0; margin-left: 0; padding-left: 0; border-left-width: 0; }
+  &:ltr {
+    margin-left: $container_padding;
+    margin-right: 0;
+    padding-right: $container_padding * 2;
+    border-right-width: 1px;
+  }
+
+  &:rtl {
+    margin-right: $container_padding;
+    margin-left: 0;
+    padding-left: $container_padding * 2;
+    border-left-width: 1px;
+  }
 
   .message-list-placeholder {
+    @extend %title_2;
     spacing: $container_padding * 2;
+    color: $inverse_secondary_fg_color;
 
     // icon size and color
     > StIcon {
@@ -27,7 +41,12 @@
 
 .message-list-sections {
   spacing: $container_padding;
-  margin: 0 $container_margin * 2; // to account for scrollbar
+  margin: 0; // to account for scrollbar
+  padding-bottom: $container_padding;
+
+  // to account for scrollbar
+  &:ltr { margin-right: 0; }
+  &:rtl { margin-left: 0; }
 }
 
 .message-list-section,
@@ -46,11 +65,10 @@
 // message bubbles
 .message {
   background-color: $popover_button_bg;
-  border-radius: $menu_radius;
+  border-radius: $buttons_radius;
   color: $secondary_fg_color;
   text-shadow: none;
   box-shadow: 0 3px 8px -2px rgba(black, 0.15);
-  margin: 0 8px 11px 8px;
 
   @if $outline == 'false' {
     border: none;
@@ -60,6 +78,7 @@
 
   .popup-menu & {
     box-shadow: none;
+    margin: 0 0 $container_margin;
   }
 
   &:hover, &:focus {

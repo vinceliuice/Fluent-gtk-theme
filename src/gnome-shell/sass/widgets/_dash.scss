@@ -26,6 +26,7 @@ $dash_border_radius: $menu_radius + $dash_padding;
 
   .overview-icon {
     padding: $dash_padding / 2;
+    border-radius: $menu_radius;
   }
 }
 
