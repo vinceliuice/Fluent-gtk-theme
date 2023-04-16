@@ -72,6 +72,11 @@ stage {
 }
 
 /* General Typography */
+.message-list .message-list-placeholder {
+  font-weight: 800;
+  font-size: 15pt;
+}
+
 /* WIDGETS */
 .shell-link {
   border-radius: 3px;
@@ -90,11 +95,11 @@ stage {
 }
 
 .lowres-icon {
-  icon-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  icon-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
 }
 
 .icon-dropshadow {
-  icon-shadow: 0 1px 5px rgba(0, 0, 0, 0.8);
+  icon-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
 }
 
 /* Entries */
@@ -538,8 +543,9 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .datemenu-calendar-column {
   spacing: 6px;
-  border: 0 solid rgba(0, 0, 0, 0.12);
-  padding: 0 12px;
+  border: none;
+  padding: 0;
+  margin: 0;
   color: rgba(0, 0, 0, 0.54);
 }
 
@@ -555,12 +561,14 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .datemenu-calendar-column:ltr {
   margin-right: 4px;
-  border-left-width: 1px;
+  margin-left: 10px;
+  border-left-width: 0;
 }
 
 .datemenu-calendar-column:rtl {
   margin-left: 4px;
-  border-right-width: 1px;
+  margin-right: 10px;
+  border-right-width: 0;
 }
 
 .datemenu-calendar-column .datemenu-displays-section {
@@ -757,7 +765,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .calendar-week-number {
   height: 1.8em !important;
   width: 2.6em !important;
-  padding: 0 !important;
+  padding: 0 2px !important;
   margin: 6px 0 !important;
   border-radius: 9999px;
   background-color: rgba(0, 0, 0, 0.04);
@@ -897,29 +905,31 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 /* Message List */
 .message-list {
-  width: 31.5em;
+  width: 30em;
   padding: 0;
   color: rgba(0, 0, 0, 0.54);
   text-shadow: none;
   box-shadow: none;
+  border: 0 solid rgba(0, 0, 0, 0.12);
 }
 
 .message-list:ltr {
-  margin-left: 0;
+  margin-left: 6px;
   margin-right: 0;
-  padding-right: 0;
-  border-right-width: 0;
+  padding-right: 12px;
+  border-right-width: 1px;
 }
 
 .message-list:rtl {
-  margin-right: 0;
+  margin-right: 6px;
   margin-left: 0;
-  padding-left: 0;
-  border-left-width: 0;
+  padding-left: 12px;
+  border-left-width: 1px;
 }
 
 .message-list .message-list-placeholder {
   spacing: 12px;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .message-list .message-list-placeholder > StIcon {
@@ -930,7 +940,16 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .message-list-sections {
   spacing: 6px;
-  margin: 0 8px;
+  margin: 0;
+  padding-bottom: 6px;
+}
+
+.message-list-sections:ltr {
+  margin-right: 0;
+}
+
+.message-list-sections:rtl {
+  margin-left: 0;
 }
 
 .message-list-section,
@@ -950,12 +969,12 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   color: rgba(0, 0, 0, 0.54);
   text-shadow: none;
   box-shadow: 0 3px 8px -2px rgba(0, 0, 0, 0.15);
-  margin: 0 8px 11px 8px;
   border: 1px solid rgba(0, 0, 0, 0.12);
 }
 
 .popup-menu .message {
   box-shadow: none;
+  margin: 0 0 4px;
 }
 
 .message:hover, .message:focus {
@@ -1168,7 +1187,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   min-height: 64px;
   width: 34em;
   font-size: 1em;
-  margin: 5px;
+  margin: 9px 8px 12px;
   border-radius: 3px;
   color: rgba(0, 0, 0, 0.87);
   background-color: rgba(255, 255, 255, 0.92);
@@ -2185,6 +2204,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 #dash .overview-icon {
   padding: 5px;
+  border-radius: 3px;
 }
 
 .dash-background {

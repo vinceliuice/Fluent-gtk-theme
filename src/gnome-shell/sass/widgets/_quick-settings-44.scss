@@ -168,7 +168,7 @@
   color: $fg_color !important;
   border-radius: $menu_radius !important;
   padding: $container_padding * 2;
-  margin: $container_padding * 2 $container_padding * 2 + 6px 0;
+  margin: $container_padding * 2 $container_padding * 2 + 8px 0 !important;
 
   .popup-menu-item {
     border-radius: $buttons_radius !important;
