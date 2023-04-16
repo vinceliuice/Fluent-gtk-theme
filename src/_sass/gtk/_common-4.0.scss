@@ -1305,6 +1305,7 @@ headerbar {
   color: $titlebar-text;
   min-height: $large-size;
   margin: 0;
+  padding: 0;
 
   @if $outline == 'true' and $topbar == 'dark' and $variant == 'light' {
     box-shadow: inset 0 -1px $divider, inset 0 1px highlight($titlebar);
@@ -1520,8 +1521,8 @@ headerbar {
 
   &.default-decoration {
     background-color: $titlebar;
-    min-height: $small-size;
-    padding: $space-size;
+    min-height: $medium-size;
+    padding: 0;
     border-radius: $corner-radius $corner-radius 0 0;
 
     @if $outline == 'true' and $topbar == 'dark' and $variant == 'light' {
@@ -3948,57 +3949,65 @@ colorchooser .popover.osd {
  **********************/
 
 window {
-  transition: $transition-shadow;
-  border-radius: $window-radius;
-  margin: 0;
-  outline: none;
+  border: none;
 
-  @if $outline == 'false' {
-    box-shadow: $shadow-z16, 0 16px (24px * .6) 2px transparent, 0 6px (30px * .6) 5px transparent;
-  } @else {
-    box-shadow: $shadow-z16, 0 16px (24px * .6) 2px transparent, 0 6px (30px * .6) 5px transparent, 0 0 0 1px $divider;
-  }
-
-  &:backdrop {
-    // the transparent shadow here is to enforce that the shadow extents don't
-    // change when we go to backdrop, to prevent jumping windows.
-    // The biggest shadow should be in the same order then in the active state
-    // or the jumping will happen during the transition.
-
+  &.csd {
+    border-radius: $window-radius;
+    margin: 0;
+    outline: none;
+    transition: none;
+  
     @if $outline == 'false' {
-      box-shadow: $shadow-z4, 0 16px (24px * .6) 2px transparent, 0 6px (30px * .6) 5px transparent;
+      box-shadow: $shadow-z16, 0 0 0 50px transparent;
     } @else {
-      box-shadow: $shadow-z4, 0 16px (24px * .6) 2px transparent, 0 6px (30px * .6) 5px transparent, 0 0 0 1px $divider;
+      box-shadow: $shadow-z16, 0 0 0 50px transparent, 0 0 0 1px $divider;
+    }
+  
+    &:backdrop {
+      transition: $transition-shadow;
+
+      // the transparent shadow here is to enforce that the shadow extents don't
+      // change when we go to backdrop, to prevent jumping windows.
+      // The biggest shadow should be in the same order then in the active state
+      // or the jumping will happen during the transition.
+  
+      @if $outline == 'false' {
+        box-shadow: $shadow-z4, 0 0 0 50px transparent;
+      } @else {
+        box-shadow: $shadow-z4, 0 0 0 50px transparent, 0 0 0 1px $divider;
+      }
+    }
+
+    &.maximized,
+    &.fullscreen,
+    &.tiled,
+    &.tiled-top,
+    &.tiled-right,
+    &.tiled-bottom,
+    &.tiled-left { border-radius: 0; }
+  
+    &.maximized,
+    &.fullscreen {
+      box-shadow: none;
     }
   }
 
-  &.popup {
-    border-radius: $corner-radius;
-    box-shadow: $shadow-z4;
-  }
-
-  &.dialog.message {
-    border-radius: $window-radius;
-  }
-
-  .solid-csd & {
+  &.solid-csd {
     margin: 0;
     padding: 2px;
     border-radius: 0;
+    border: none;
     box-shadow: none;
     box-shadow: inset 0 1px highlight($titlebar);
     background-color: $titlebar;
 
     &:backdrop { background-color: $titlebar-backdrop; }
-  }
 
-  .maximized &,
-  .fullscreen &,
-  .tiled &,
-  .tiled-top &,
-  .tiled-right &,
-  .tiled-bottom &,
-  .tiled-left & { border-radius: 0; }
+    &.maximized,
+    &.fullscreen {
+      box-shadow: none;
+    }
+  }
 }
 
 // catch all extend :)
