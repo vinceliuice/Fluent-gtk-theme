@@ -58,7 +58,7 @@
   &:checked {
     background-color: if($variant == 'light', rgba(black, 0.08), rgba(white, 0.06)) !important;
     font-weight: normal;
-    border-radius: $buttons_radius $buttons_radius 0 0;
+    border-radius: $buttons_radius $buttons_radius 0 0 !important;
     border: none;
     box-shadow: none;
     color: $fg_color !important;
@@ -106,29 +106,39 @@
 // popover submenus
 .popup-sub-menu {
   margin: 0;
-  background-color: if($variant == 'light', rgba(black, 0.08), rgba(white, 0.06));
-  border-radius: 0 0 $buttons_radius $buttons_radius;
+  background-color: if($variant == 'light', rgba(black, 0.08), rgba(white, 0.06)) !important;
+  border-radius: 0 0 $buttons_radius $buttons_radius !important;
   border: none;
   box-shadow: none;
-  background-image: none;
+  background-image: none !important;
 
   .popup-menu-item {
     margin: 0;
     border-radius: 0;
-    background-image: none;
+    background-image: none !important;
+    background-color: transparent !important;
 
-    &:hover {
-      background-color: $divider_color;
+    &.selected, &:hover, &:focus {
+      background-color: $divider_color !important;
     }
 
     &:active {
-      background-color: $track_color;
+      background-color: $track_color !important;
+    }
+
+    &:last-child {
+      border-radius: 0 0 $buttons_radius $buttons_radius !important;
+      border-bottom-width: 0;
     }
   }
 
-  &, .popup-menu-section {
+  .popup-menu-section {
+    .popup-menu-item:last-child {
+      &:hover, &:focus { border-radius: 0;}
+    }
+
     &:last-child .popup-menu-item:last-child {
-      border-radius: 0 0 $buttons_radius $buttons_radius;
+      border-radius: 0 0 $buttons_radius $buttons_radius !important;
     }
   }
 }

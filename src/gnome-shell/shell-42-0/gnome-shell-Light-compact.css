@@ -403,7 +403,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .popup-menu-item:checked {
   background-color: rgba(0, 0, 0, 0.08) !important;
   font-weight: normal;
-  border-radius: 3px 3px 0 0;
+  border-radius: 3px 3px 0 0 !important;
   border: none;
   box-shadow: none;
   color: rgba(0, 0, 0, 0.87) !important;
@@ -458,29 +458,39 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .popup-sub-menu {
   margin: 0;
-  background-color: rgba(0, 0, 0, 0.08);
-  border-radius: 0 0 3px 3px;
+  background-color: rgba(0, 0, 0, 0.08) !important;
+  border-radius: 0 0 3px 3px !important;
   border: none;
   box-shadow: none;
-  background-image: none;
+  background-image: none !important;
 }
 
 .popup-sub-menu .popup-menu-item {
   margin: 0;
   border-radius: 0;
-  background-image: none;
+  background-image: none !important;
+  background-color: transparent !important;
 }
 
-.popup-sub-menu .popup-menu-item:hover {
-  background-color: rgba(0, 0, 0, 0.06);
+.popup-sub-menu .popup-menu-item.selected, .popup-sub-menu .popup-menu-item:hover, .popup-sub-menu .popup-menu-item:focus {
+  background-color: rgba(0, 0, 0, 0.06) !important;
 }
 
 .popup-sub-menu .popup-menu-item:active {
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.2) !important;
 }
 
-.popup-sub-menu:last-child .popup-menu-item:last-child, .popup-sub-menu .popup-menu-section:last-child .popup-menu-item:last-child {
-  border-radius: 0 0 3px 3px;
+.popup-sub-menu .popup-menu-item:last-child {
+  border-radius: 0 0 3px 3px !important;
+  border-bottom-width: 0;
+}
+
+.popup-sub-menu .popup-menu-section .popup-menu-item:last-child:hover, .popup-sub-menu .popup-menu-section .popup-menu-item:last-child:focus {
+  border-radius: 0;
+}
+
+.popup-sub-menu .popup-menu-section:last-child .popup-menu-item:last-child {
+  border-radius: 0 0 3px 3px !important;
 }
 
 .popup-menu-ornament {
