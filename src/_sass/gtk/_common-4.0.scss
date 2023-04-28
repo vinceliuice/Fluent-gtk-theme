@@ -27,6 +27,10 @@ dnd {
   -gtk-icon-size: 32px;
 }
 
+.lowres-icon:not(.large-icons) {
+  -gtk-icon-size: 16px;
+}
+
 spinner:disabled,
 arrow:disabled,
 scrollbar:disabled,
@@ -1293,6 +1297,23 @@ searchbar > revealer > box {
   }
 }
 
+%circular_titlebutton {
+  min-height: $medium-size - 6px;
+  min-width: $medium-size - 6px;
+  padding: 0;
+  margin-left: $space-size / 2;
+  margin-right: $space-size / 2;
+  @extend %circular-button;
+}
+
+%square_titlebutton {
+  min-height: $large-size;
+  min-width: $large-size;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+}
+
 headerbar {
   transition: background-color $duration $ease-out, color $duration $ease-out;
   box-shadow: inset 0 -1px $divider;
@@ -1480,35 +1501,60 @@ headerbar {
 
   // Window button
   windowcontrols {
-    border-spacing: $space-size;
+    @if $titlebutton == "circular" {
+      border-spacing: $space-size;
 
-    &:not(.empty) {
-      &.start:dir(ltr),
-      &.end:dir(rtl) {
-        margin-right: $space-size;
+      &:not(.empty) {
+        &.start:dir(ltr),
+        &.end:dir(rtl) {
+          margin-right: $space-size;
+        }
+  
+        &.start:dir(rtl),
+        &.end:dir(ltr) {
+          margin-left: $space-size;
+        }
       }
+    } @else {
+      border-spacing: 0;
 
-      &.start:dir(rtl),
-      &.end:dir(ltr) {
-        margin-left: $space-size;
+      &:not(.empty) {
+        &.start:dir(ltr),
+        &.end:dir(rtl) {
+          margin-right: $space-size;
+          margin-left: -$space-size;
+        }
+  
+        &.start:dir(rtl),
+        &.end:dir(ltr) {
+          margin-left: $space-size;
+          margin-right: -$space-size;
+        }
       }
     }
 
+    // Windows button
     > button:not(.suggested-action):not(.destructive-action) {
-      min-height: $medium-size - 6px;
-      min-width: $medium-size - 6px;
-      padding: 0;
-      margin-left: 3px;
-      margin-right: 3px;
-      @extend %circular-button;
-
-      > image { background: none; }
-
-      &.close {
-        &:hover { background-color: $red-300; color: on($red-300); }
-        &:active { background-color: $red-600; color: on($red-600); }
+      @if $titlebutton == "circular" {
+        @extend %circular_titlebutton;
+      } @else {
+        @extend %square_titlebutton;
       }
 
+      > image { background: none; }
+  
+      &.close {
+        &:hover, &:backdrop:hover {
+          background-color: $red-300;
+          color: on($red-300);
+        }
+  
+        &:active {
+          background-color: $red-600;
+          color: on($red-600);
+        }
+      }
+  
       .selection-mode & { @extend %button-on-dark; }
     }
   }
@@ -1694,15 +1740,14 @@ treeview.view {
   &.expander {
     min-width: 16px;
     min-height: 16px;
+    color: $text-secondary;
     -gtk-icon-source: -gtk-icontheme('pan-end-symbolic');
 
     &:dir(rtl) { -gtk-icon-source: -gtk-icontheme('pan-end-symbolic-rtl'); }
 
-    color: $text-secondary;
+    &:checked { -gtk-icon-source: -gtk-icontheme('pan-down-symbolic'); }
 
     &:hover, &:active { color: $text; }
-
-    &:checked { -gtk-icon-source: -gtk-icontheme('pan-down-symbolic'); }
 
     &:disabled { color: $text-secondary-disabled; }
   }
@@ -3259,107 +3304,112 @@ columnview {
 /*************
  * Expanders *
  *************/
- expander {
-   transition: all $duration $ease-out;
-   min-width: 16px;
-   min-height: 16px;
-   color: $text-secondary;
-   -gtk-icon-source: -gtk-icontheme('pan-end-symbolic');
 
-   &:dir(rtl) { -gtk-icon-source: -gtk-icontheme('pan-end-symbolic-rtl'); }
+expander {
+  transition: all $duration $ease-out;
+  min-width: 16px;
+  min-height: 16px;
+  color: $text-secondary;
+  -gtk-icon-source: -gtk-icontheme('pan-end-symbolic');
 
-   &:hover, &:active { color: $text; }
+  &:dir(rtl) { -gtk-icon-source: -gtk-icontheme('pan-end-symbolic-rtl'); }
 
-   &:disabled { color: $text-secondary-disabled; }
- }
+  &:checked { -gtk-icon-source: -gtk-icontheme('pan-down-symbolic'); }
 
- expander-widget {
-   > box > title {
-     border-radius: $corner-radius;
+  &:hover, &:active { color: $text; }
 
-     &:hover > expander {
-       color: $text-secondary; //only lightens the icon
-     }
-   }
- }
+  &:disabled { color: $text-secondary-disabled; }
+}
 
- .navigation-sidebar,
- placessidebar,
- stackswitcher,
- expander-widget {
-   &:not(decoration):not(window):drop(active):focus,
-   &:not(decoration):not(window):drop(active) {
-     box-shadow: none;
-   }
- }
+expander-widget {
+  > box > title {
+    border-radius: $corner-radius;
+
+    &:hover > expander {
+      color: $text-secondary; //only lightens the icon
+    }
+  }
+}
+
+.navigation-sidebar,
+placessidebar,
+stackswitcher,
+expander-widget {
+  &:not(decoration):not(window):drop(active):focus,
+  &:not(decoration):not(window):drop(active) {
+    box-shadow: none;
+  }
+}
 
 /************
  * Calendar *
  ************/
- calendar {
-   padding: 0;
-   border: 1px solid $divider;
-   border-radius: $corner-radius;
-   color: $text;
 
-   &:disabled { color: $text-disabled; }
+calendar {
+  padding: 0;
+  border: 1px solid $divider;
+  border-radius: $corner-radius;
+  color: $text;
 
-   &:selected {
-     @extend %selected_items;
+  &:disabled { color: $text-disabled; }
 
-     border-radius: $corner-radius;
-   }
+  &:selected {
+    @extend %selected_items;
 
-   > header {
-     padding: $space-size / 2;
-     border-bottom: 1px solid $divider;
+    border-radius: $corner-radius;
+  }
 
-     > button {
-       min-height: $small-size;
+  > header {
+    padding: $space-size / 2;
+    border-bottom: 1px solid $divider;
 
-       @extend %button-flat-simple;
-     }
-   }
+    > button {
+      min-height: $small-size;
 
-   > grid {
-     margin: $space-size / 2;
+      @extend %button-flat-simple;
+    }
+  }
 
-     > label {
-       border-radius: $circular-radius;
-       margin: 0;
-     }
+  > grid {
+    margin: $space-size / 2;
 
-     > label.today {
-       @extend %selected_items_color;
+    > label {
+      border-radius: $circular-radius;
+      margin: 0;
+    }
 
-       &:selected {
-         box-shadow: none;
-         @extend %selected_items_primary;
-       }
-     }
+    > label.today {
+      @extend %selected_items_color;
 
-     > label:focus {
-       outline-style: none;
-     }
+      &:selected {
+        box-shadow: none;
+        @extend %selected_items_primary;
+      }
+    }
 
-     > label.day-number {
-       padding: $space-size*1.5;
+    > label:focus {
+      outline-style: none;
+    }
 
-       &:selected {
-         @extend %selected_items;
-       }
-     }
+    > label.day-number {
+      padding: $space-size*1.5;
 
-     > label.day-number.other-month {
-       color: gtkalpha(currentColor, 0.3);
-     }
-   }
- }
+      &:selected {
+        @extend %selected_items;
+      }
+    }
+
+    > label.day-number.other-month {
+      color: gtkalpha(currentColor, 0.3);
+    }
+  }
+}
 
 
 /***********
  * Dialogs *
  ***********/
+
 window.dialog.message { // Message Dialog styling
   &.background { background-color: $surface; }
 
@@ -3434,9 +3484,25 @@ filechooserbutton:drop(active) {
   border-color: transparent;
 }
 
+// aboutdialog
+window.aboutdialog {
+  stack scrolledwindow.frame {
+    &,
+    & > .view,
+    & > .view > text {
+      border-radius: $corner-radius;
+    }
+  }
+
+  .large-icons {
+    -gtk-icon-size: 128px;
+  }
+}
+
 /***********
  * Sidebar *
  ***********/
+
 .sidebar {
   border-style: none;
   background-color: $base-alt;

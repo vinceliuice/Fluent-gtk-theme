@@ -519,7 +519,7 @@ button {
     min-width: 24px;
     padding: ($medium-size - 24px) / 2;
 
-    // @extend %circular_button;
+    // @extend %circular-button;
   }
 
   // NOTE: Some image-only buttons use this as well
@@ -692,7 +692,7 @@ button {
 
   .primary-toolbar & { -gtk-icon-shadow: none; } // tango icons don't need shadows
 
-  @at-root %circular_button,
+  @at-root %circular-button,
   &.close,
   &.circular { // The Bloody Circul Button
     border-radius: $circular-radius;
@@ -708,7 +708,7 @@ button {
     // label { padding: 0; }
   }
 
-  @at-root %small_button {
+  @at-root %small-button {
     min-height: $small-size;
     min-width: $small-size;
     padding: 0;
@@ -953,7 +953,7 @@ spinbutton {
 
     button {
       @extend %button-flat-simple;
-      @extend %small_button;
+      @extend %small-button;
 
       // margin: $space-size;
       border: solid $space-size transparent;
@@ -1001,7 +1001,7 @@ spinbutton {
 
     button {
       @extend %button-flat-simple;
-      @extend %small_button;
+      @extend %small-button;
       padding: 0;
 
       border: solid $space-size transparent;
@@ -1012,9 +1012,9 @@ spinbutton {
         color: $text-secondary;
       }
 
-      &.up { margin: 0 $space-size/2; }
+      &.up { margin: 0 $space-size / 2; }
 
-      &.down { margin: 0 $space-size/2; }
+      &.down { margin: 0 $space-size / 2; }
     }
   }
 
@@ -1109,7 +1109,7 @@ combobox {
 
   > .linked:not(.vertical) > button:not(:only-child) {
     @extend %button-flat;
-    // @extend %small_button;
+    // @extend %small-button;
 
     min-height: 16px;
     min-width: 16px;
@@ -1342,16 +1342,16 @@ searchbar > revealer > box {
 %circular_titlebutton {
   min-height: $medium-size - 6px;
   min-width: $medium-size - 6px;
-  padding: 0 0;
+  padding: 0;
   margin-left: 7px - $space-size;
   margin-right: 7px - $space-size;
-  @extend %circular_button;
+  @extend %circular-button;
 }
 
 %square_titlebutton {
   min-height: $large-size;
   min-width: $large-size;
-  padding: 0 0;
+  padding: 0;
   margin: 0 -3px;
   border-radius: 0;
 }
@@ -3407,7 +3407,7 @@ filechooser {
 
     > stack > box > button { // The new folder button
       @extend %button-flat;
-      @extend %circular_button;
+      @extend %circular-button;
     }
   }
 
@@ -3589,7 +3589,7 @@ placessidebar.sidebar {
 
     button.sidebar-button {
       @extend %button-flat-simple;
-      @extend %small_button;
+      @extend %small-button;
     }
 
     &.sidebar-placeholder-row { background-color: $overlay-hover; }
