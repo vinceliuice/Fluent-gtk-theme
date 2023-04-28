@@ -47,7 +47,7 @@ Run the following commands in the terminal:
 -s, --size VARIANT      Specify size variant [standard|compact] (Default: All variants)
 
 -i, --icon VARIANT      Specify icon variant(s) for shell panel
-                        [default|apple|simple|gnome|ubuntu|arch|manjaro|fedora|debian|void|opensuse|popos|mxlinux|zorin]
+                        [default|apple|simple|gnome|ubuntu|arch|manjaro|fedora|debian|void|opensuse|popos|mxlinux|zorin|endeavouros|tux|nixos]
                         (Default: Windows icon)
 
 -l, --libadwaita        Install link to gtk4 config for theming libadwaita
