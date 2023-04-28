@@ -609,8 +609,6 @@ button {
 
         &:checked { background-color: rgba($b_color, 0.3); }
       }
-
-      .osd & { }
     }
   }
 
@@ -854,10 +852,6 @@ button.color {
   min-height: $small-size;
   min-width: $small-size;
   padding: $space-size;
-
-  colorswatch:only-child {
-    // &, overlay { border-radius: 0; }
-  }
 }
 
 %list_button,
@@ -3503,11 +3497,6 @@ stacksidebar {
 
 separator.sidebar {
   background-color: $divider;
-
-  &.selection-mode,
-  .selection-mode & {
-    // background-color: $divider;
-  }
 }
 
 /**********************
@@ -3898,9 +3887,6 @@ colorswatch {
     opacity: 0.5;
 
     overlay { box-shadow: none; }
-  }
-
-  row:selected & {
   }
 
   &#editor-color-sample {

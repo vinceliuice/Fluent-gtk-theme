@@ -62,7 +62,7 @@ OPTIONS:
   -s, --size VARIANT      Specify size variant [standard|compact] (Default: All variants)
 
   -i, --icon VARIANT      Specify icon variant(s) for shell panel
-                          [default|apple|simple|gnome|ubuntu|arch|manjaro|fedora|debian|void|opensuse|popos|mxlinux|zorin|endeavouros]
+                          [default|apple|simple|gnome|ubuntu|arch|manjaro|fedora|debian|void|opensuse|popos|mxlinux|zorin|endeavouros|tux|nixos]
                           (Default: Windows)
 
   -l, --libadwaita        Install link to gtk4 config for theming libadwaita
@@ -379,8 +379,8 @@ while [[ "$#" -gt 0 ]]; do
       ;;
     -i|--icon)
       shift
-      for variant in "$@"; do
-        case "$variant" in
+      for icons in "$@"; do
+        case "$icons" in
           default)
             icon='-default'
             shift
@@ -441,15 +441,24 @@ while [[ "$#" -gt 0 ]]; do
             icon='-endeavouros'
             shift
             ;;
+          tux)
+            icon='-tux'
+            shift
+            ;;
+          nixos)
+            icon='-nixos'
+            shift
+            ;;
           -*)
             break
             ;;
           *)
-            echo "ERROR: Unrecognized theme variant '$1'."
+            echo "ERROR: Unrecognized icon variant '$1'."
             echo "Try '$0 --help' for more information."
             exit 1
             ;;
         esac
+        echo "Install $icons icon for gnome-shell panel..."
       done
       ;;
     -c|--color)

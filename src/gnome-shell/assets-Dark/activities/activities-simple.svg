@@ -1,9 +1,1 @@
-<svg width="24" height="24" version="1.1" viewBox="0 0 22.5 22.5" xmlns="http://www.w3.org/2000/svg">
- <g transform="translate(0 -1029.9)">
-  <g transform="translate(0 1.7383e-5)" fill="#ffffff" opacity=".8">
-   <circle cx="3.75" cy="1041.1" r="1.875" opacity="1"/>
-   <circle cx="11.25" cy="1041.1" r="1.875" opacity="1"/>
-   <circle cx="18.75" cy="1041.1" r="1.875" opacity="1"/>
-  </g>
- </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 22.5 22.5"><g fill="#fff" opacity=".8" transform="translate(0 -1029.9)"><circle cx="3.75" cy="1041.1" r="1.875" opacity="1"/><circle cx="11.25" cy="1041.1" r="1.875" opacity="1"/><circle cx="18.75" cy="1041.1" r="1.875" opacity="1"/></g></svg>
