@@ -67,7 +67,8 @@ OPTIONS:
 
   -l, --libadwaita        Install link to gtk4 config for theming libadwaita
 
-  -u, --uninstall         Uninstall themes or link for libadwaita
+  -r, --remove
+  -u, --uninstall         Uninstall/remove themes or link for libadwaita
 
   --tweaks                Specify versions for tweaks [solid|float|round|blur|noborder|square]
                           solid:    no transparency version
@@ -272,7 +273,7 @@ while [[ "$#" -gt 0 ]]; do
       libadwaita="true"
       shift
       ;;
-    -u|--uninstall)
+    -u|--uninstall|-r|--remove)
       uninstall="true"
       shift
       ;;
