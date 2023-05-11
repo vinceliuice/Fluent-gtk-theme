@@ -7,6 +7,8 @@ $panel_transition_duration: 250ms; // same as the overview transition duration
   font-weight: normal;
   font-feature-settings: "tnum";
   transition-duration: $panel_transition_duration;
+  border: none;
+  box-shadow: none;
 
   @if $window == 'round' {
     padding: 0 2px !important;
@@ -45,7 +47,7 @@ $panel_transition_duration: 250ms; // same as the overview transition duration
   // panel menus
   .panel-button {
     -natural-hpadding: $minimum_hpadding * 2;
-    -minimum-hpadding: $minimum_hpadding;
+    -minimum-hpadding: $minimum_hpadding * 2;
     font-weight: normal;
     color: $panel_secondary_fg_color;
     transition-duration: 150ms;

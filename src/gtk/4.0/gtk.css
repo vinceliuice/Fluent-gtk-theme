@@ -26,6 +26,10 @@ dnd {
   -gtk-icon-size: 32px;
 }
 
+.lowres-icon:not(.large-icons) {
+  -gtk-icon-size: 16px;
+}
+
 spinner:disabled,
 arrow:disabled,
 scrollbar:disabled,
@@ -1624,6 +1628,14 @@ headerbar entry image:disabled {
   color: rgba(255, 255, 255, 0.5);
 }
 
+headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action) {
+  min-height: 26px;
+  min-width: 26px;
+  padding: 0;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
 headerbar {
   transition: background-color 75ms cubic-bezier(0, 0, 0.2, 1), color 75ms cubic-bezier(0, 0, 0.2, 1);
   box-shadow: inset 0 -1px rgba(0, 0, 0, 0.12);
@@ -1819,19 +1831,11 @@ headerbar windowcontrols.start:not(.empty):dir(rtl), headerbar windowcontrols.en
   margin-left: 6px;
 }
 
-headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action) {
-  min-height: 26px;
-  min-width: 26px;
-  padding: 0;
-  margin-left: 3px;
-  margin-right: 3px;
-}
-
 headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action) > image {
   background: none;
 }
 
-headerbar windowcontrols > button.close:not(.suggested-action):not(.destructive-action):hover {
+headerbar windowcontrols > button.close:not(.suggested-action):not(.destructive-action):hover, headerbar windowcontrols > button.close:not(.suggested-action):not(.destructive-action):backdrop:hover {
   background-color: #E57373;
   color: white;
 }
@@ -2018,8 +2022,8 @@ columnview.view.expander,
 treeview.view.expander {
   min-width: 16px;
   min-height: 16px;
-  -gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
   color: rgba(0, 0, 0, 0.6);
+  -gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
 }
 
 columnview.view.expander:dir(rtl),
@@ -2027,15 +2031,15 @@ treeview.view.expander:dir(rtl) {
   -gtk-icon-source: -gtk-icontheme("pan-end-symbolic-rtl");
 }
 
+columnview.view.expander:checked,
+treeview.view.expander:checked {
+  -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
+}
+
 columnview.view.expander:hover, columnview.view.expander:active,
 treeview.view.expander:hover,
 treeview.view.expander:active {
   color: rgba(0, 0, 0, 0.87);
-}
-
-columnview.view.expander:checked,
-treeview.view.expander:checked {
-  -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
 }
 
 columnview.view.expander:disabled,
@@ -3757,6 +3761,10 @@ expander:dir(rtl) {
   -gtk-icon-source: -gtk-icontheme("pan-end-symbolic-rtl");
 }
 
+expander:checked {
+  -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
+}
+
 expander:hover, expander:active {
   color: rgba(0, 0, 0, 0.87);
 }
@@ -3905,6 +3913,14 @@ filechooserbutton > button > box {
 filechooserbutton:drop(active) {
   box-shadow: none;
   border-color: transparent;
+}
+
+window.aboutdialog stack scrolledwindow.frame, window.aboutdialog stack scrolledwindow.frame > .view, window.aboutdialog stack scrolledwindow.frame > .view > text {
+  border-radius: 2px;
+}
+
+window.aboutdialog .large-icons {
+  -gtk-icon-size: 128px;
 }
 
 /***********
@@ -4375,12 +4391,12 @@ window.csd {
   margin: 0;
   outline: none;
   transition: none;
-  box-shadow: 0 8px 6px -5px rgba(0, 0, 0, 0.2), 0 16px 14.4px 2px rgba(0, 0, 0, 0.14), 0 6px 18px 5px rgba(0, 0, 0, 0.12), 0 0 0 50px transparent, 0 0 0 1px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 8px 6px -5px rgba(0, 0, 0, 0.2), 0 16px 14.4px 2px rgba(0, 0, 0, 0.14), 0 6px 18px 5px rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(0, 0, 0, 0.12), 0 2px 2.4px -1px transparent, 0 4px 3px 0 transparent, 0 1px 6px 0 transparent;
 }
 
 window.csd:backdrop {
   transition: box-shadow 75ms cubic-bezier(0, 0, 0.2, 1);
-  box-shadow: 0 2px 2.4px -1px rgba(0, 0, 0, 0.2), 0 4px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 6px 0 rgba(0, 0, 0, 0.12), 0 0 0 50px transparent, 0 0 0 1px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 2.4px -1px rgba(0, 0, 0, 0.2), 0 4px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 6px 0 rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(0, 0, 0, 0.12), 0 8px 6px -5px transparent, 0 16px 14.4px 2px transparent, 0 6px 18px 5px transparent;
 }
 
 window.csd.maximized, window.csd.fullscreen, window.csd.tiled, window.csd.tiled-top, window.csd.tiled-right, window.csd.tiled-bottom, window.csd.tiled-left {

@@ -109,6 +109,9 @@ StWidget.focused {
   @if $window == 'round' {
     border: 1px solid $icon_border_color;
     box-shadow: inset 0 1px $icon_highlight_color;
+  } @else {
+    border: none;
+    box-shadow: none;
   }
 
   & .folder-name-container {
