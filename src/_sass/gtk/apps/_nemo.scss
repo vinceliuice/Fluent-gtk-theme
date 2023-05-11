@@ -56,7 +56,7 @@
   // infobar { margin-top: -6px; }
 
   // Inactive F3 pane shading
-  .nemo-inactive-pane .view:not(:selected) { background-color: $base-alt; }
+  .nemo-inactive-pane .view:not(:selected):not(:hover) { background-color: $base-alt; }
 
   // Rename box styling in the icon view.
   .nemo-window-pane {

@@ -8181,7 +8181,7 @@ window.background.csd.thunar > grid.horizontal > paned.horizontal > scrolledwind
   border-style: none;
 }
 
-.nemo-window.background .nemo-inactive-pane .view:not(:selected) {
+.nemo-window.background .nemo-inactive-pane .view:not(:selected):not(:hover) {
   background-color: #FAFAFA;
 }
 
