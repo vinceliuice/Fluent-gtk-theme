@@ -294,11 +294,13 @@
 .events-button {
   .events-box {
     spacing: $container-padding;
+    color: $secondary_fg_color;
   }
 
   .events-list {
     spacing: $container-padding * 2;
     text-shadow: none;
+    color: $secondary_fg_color;
   }
 
   .event-time {

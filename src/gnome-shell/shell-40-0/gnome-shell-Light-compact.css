@@ -831,11 +831,13 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .events-button .events-box {
   spacing: 4px;
+  color: rgba(0, 0, 0, 0.54);
 }
 
 .events-button .events-list {
   spacing: 8px;
   text-shadow: none;
+  color: rgba(0, 0, 0, 0.54);
 }
 
 .events-button .event-time {

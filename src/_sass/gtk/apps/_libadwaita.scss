@@ -526,7 +526,7 @@ viewswitcher {
   margin: 0;
 
   &.wide {
-    border-spacing: $space-size / 2;
+    border-spacing: 0;
     border-radius: $corner-radius;
     background-color: $fill;
     margin-top: $space-size;

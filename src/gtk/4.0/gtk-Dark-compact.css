@@ -3530,6 +3530,7 @@ actionbar > revealer > box {
   border-top: 1px solid rgba(255, 255, 255, 0.12);
   background-color: #2B2B2B;
   background-clip: border-box;
+  box-shadow: none;
 }
 
 actionbar > revealer > box entry, actionbar > revealer > box button, actionbar > revealer > box menubutton {
@@ -5599,7 +5600,7 @@ viewswitcher {
 }
 
 viewswitcher.wide {
-  border-spacing: 2px;
+  border-spacing: 0;
   border-radius: 2px;
   background-color: rgba(255, 255, 255, 0.04);
   margin-top: 4px;
