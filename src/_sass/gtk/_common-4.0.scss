@@ -4012,14 +4012,14 @@ window {
   
     @if $outline == 'false' {
       box-shadow: $shadow-z16,
-      0 2px (4px * .6) -1px transparent,
-      0 4px (5px * .6) 0 transparent,
-      0 1px (10px * .6) 0 transparent;
+      0 1px 2px rgba(black, 0.01),
+      0 3px 4px rgba(black, 0.01),
+      0 1px 6px rgba(black, 0.01);
     } @else {
       box-shadow: $shadow-z16, 0 0 0 1px $divider,
-      0 2px (4px * .6) -1px transparent,
-      0 4px (5px * .6) 0 transparent,
-      0 1px (10px * .6) 0 transparent;
+      0 1px 2px rgba(black, 0.01),
+      0 3px 4px rgba(black, 0.01),
+      0 1px 6px rgba(black, 0.01);
     }
   
     &:backdrop {
@@ -4032,14 +4032,14 @@ window {
   
       @if $outline == 'false' {
         box-shadow: $shadow-z4,
-        0 8px (10px * .6) -5px transparent,
-        0 16px (24px * .6) 2px transparent,
-        0 6px (30px * .6) 5px transparent;
+        0 1px 3px rgba(black, 0.01),
+        0 16px 18px rgba(black, 0.01),
+        0 11px 23px rgba(black, 0.01);
       } @else {
         box-shadow: $shadow-z4, 0 0 0 1px $divider,
-        0 8px (10px * .6) -5px transparent,
-        0 16px (24px * .6) 2px transparent,
-        0 6px (30px * .6) 5px transparent;
+        0 1px 3px rgba(black, 0.01),
+        0 16px 18px rgba(black, 0.01),
+        0 11px 23px rgba(black, 0.01);
       }
     }
 

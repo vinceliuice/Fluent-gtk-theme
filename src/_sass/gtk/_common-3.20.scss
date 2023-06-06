@@ -3913,12 +3913,12 @@ decoration {
   border-radius: $window-radius;
 
   @if $outline == 'false' {
-    box-shadow: $shadow-z16, 0 16px (24px * .6) 2px transparent, 0 6px (30px * .6) 5px transparent;
+    box-shadow: $shadow-z16,
+    0 15px 30px transparent;
   } @else {
-    box-shadow: $shadow-z16, 0 16px (24px * .6) 2px transparent, 0 6px (30px * .6) 5px transparent, 0 0 0 1px $divider;
+    box-shadow: $shadow-z16, 0 0 0 1px $divider,
+    0 15px 30px transparent;
   }
-
-  // FIXME rationalize shadows
 
   // this is used for the resize cursor area
   margin: 8px;
@@ -3930,9 +3930,11 @@ decoration {
     // or the jumping will happen during the transition.
 
     @if $outline == 'false' {
-      box-shadow: $shadow-z4, 0 16px (24px * .6) 2px transparent, 0 6px (30px * .6) 5px transparent;
+      box-shadow: $shadow-z4,
+      0 15px 30px transparent;
     } @else {
-      box-shadow: $shadow-z4, 0 16px (24px * .6) 2px transparent, 0 6px (30px * .6) 5px transparent, 0 0 0 1px $divider;
+      box-shadow: $shadow-z4, 0 0 0 1px $divider,
+      0 15px 30px transparent;
     }
   }
 

@@ -108,6 +108,7 @@ StEntry {
   padding: 2px 6px;
   border-radius: 3px;
   border-width: 0;
+  caret-color: rgba(0, 0, 0, 0.54);
   selection-background-color: #1A73E8;
   selected-color: #FFFFFF !important;
   font-size: 11.25pt;
@@ -409,12 +410,12 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   color: rgba(0, 0, 0, 0.87) !important;
 }
 
-.popup-menu-item.selected:checked, .popup-menu-item:checked:hover, .popup-menu-item:checked:focus {
+.popup-menu-item:checked.selected, .popup-menu-item:checked:hover, .popup-menu-item:checked:focus {
   background-color: rgba(0, 0, 0, 0.1) !important;
   color: rgba(0, 0, 0, 0.87) !important;
 }
 
-.popup-menu-item:checked:active, .popup-menu-item.selected:checked:active {
+.popup-menu-item:checked:active, .popup-menu-item:checked.selected:active {
   background-color: rgba(0, 0, 0, 0.08) !important;
   color: rgba(0, 0, 0, 0.87) !important;
 }
@@ -1921,7 +1922,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   box-shadow: none;
 }
 
-#panel .panel-button.clock-display:hover .clock, #panel .panel-button.clock-display:active .clock, #panel .panel-button.clock-display:overview .clock, #panel .panel-button.clock-display:focus .clock, #panel .panel-button.clock-display:checked .clock {
+#panel .panel-button:hover.clock-display .clock, #panel .panel-button:active.clock-display .clock, #panel .panel-button:overview.clock-display .clock, #panel .panel-button:focus.clock-display .clock, #panel .panel-button:checked.clock-display .clock {
   box-shadow: none;
   background: none;
   color: #FFFFFF;
@@ -1955,7 +1956,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   -st-icon-style: symbolic;
 }
 
-#panel #panelActivities.panel-button {
+#panel .panel-button#panelActivities {
   background-image: url("assets/activities.svg");
   background-position: center center;
   background-repeat: no-repeat;
@@ -1965,11 +1966,11 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   box-shadow: none;
 }
 
-#panel #panelActivities.panel-button > * {
+#panel .panel-button#panelActivities > * {
   width: 32px;
 }
 
-#panel #panelActivities.panel-button:overview {
+#panel .panel-button#panelActivities:overview {
   background-color: transparent;
   box-shadow: none;
   border: none;
@@ -4230,17 +4231,17 @@ StWidget.focused .app-well-app-running-dot {
   background-color: rgba(255, 255, 255, 0.3) !important;
 }
 
-#panel.light-panel .panel-button.clock-display:hover .clock, #panel.light-panel .panel-button.clock-display:active .clock, #panel.light-panel .panel-button.clock-display:overview .clock, #panel.light-panel .panel-button.clock-display:focus .clock, #panel.light-panel .panel-button.clock-display:checked .clock,
-#panel.dark-panel .panel-button.clock-display:hover .clock,
-#panel.dark-panel .panel-button.clock-display:active .clock,
-#panel.dark-panel .panel-button.clock-display:overview .clock,
-#panel.dark-panel .panel-button.clock-display:focus .clock,
-#panel.dark-panel .panel-button.clock-display:checked .clock,
-#panel.transparent-panel .panel-button.clock-display:hover .clock,
-#panel.transparent-panel .panel-button.clock-display:active .clock,
-#panel.transparent-panel .panel-button.clock-display:overview .clock,
-#panel.transparent-panel .panel-button.clock-display:focus .clock,
-#panel.transparent-panel .panel-button.clock-display:checked .clock {
+#panel.light-panel .panel-button:hover.clock-display .clock, #panel.light-panel .panel-button:active.clock-display .clock, #panel.light-panel .panel-button:overview.clock-display .clock, #panel.light-panel .panel-button:focus.clock-display .clock, #panel.light-panel .panel-button:checked.clock-display .clock,
+#panel.dark-panel .panel-button:hover.clock-display .clock,
+#panel.dark-panel .panel-button:active.clock-display .clock,
+#panel.dark-panel .panel-button:overview.clock-display .clock,
+#panel.dark-panel .panel-button:focus.clock-display .clock,
+#panel.dark-panel .panel-button:checked.clock-display .clock,
+#panel.transparent-panel .panel-button:hover.clock-display .clock,
+#panel.transparent-panel .panel-button:active.clock-display .clock,
+#panel.transparent-panel .panel-button:overview.clock-display .clock,
+#panel.transparent-panel .panel-button:focus.clock-display .clock,
+#panel.transparent-panel .panel-button:checked.clock-display .clock {
   color: rgba(255, 255, 255, 0.85) !important;
 }
 

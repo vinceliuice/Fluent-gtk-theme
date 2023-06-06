@@ -63,51 +63,45 @@ $transition-shadow: box-shadow $duration $ease-out;
 // NOTE 2: Compared to rendering on the Web, GTK seems to have a bigger blur.
 
 $shadow-z1:
-  // 0 2px (1px * .6) -1px rgba(black, 0.2),
-  0 2px 2px -2px rgba(black, 0.3),
-  // 0 1px (1px * .6) 0 rgba(black, 0.14),
-  0 1px 2px -1px rgba(black, 0.24),
-  // 0 1px (3px * .6) 0 rgba(black, 0.12);
-  0 1px 2px -.6px rgba(black, 0.17);
+  0 1px 2px rgba(black, 0.15),
+  0 0 1px rgba(black, 0.12),
+  0 1px 2px rgba(black, 0.1);
 $shadow-z2:
-  // 0 3px (1px * .6) -2px rgba(black, 0.2),
-  0 3px 2px -3px rgba(black, 0.3),
-  // 0 2px (2px * .6) 0 rgba(black, 0.14),
-  0 2px 2px -1px rgba(black, 0.24),
-  0 1px (5px * .6) 0 rgba(black, 0.12);
+  0 3px 4px rgba(black, 0.15),
+  0 2px 2px rgba(black, 0.16),
+  0 1px 3px rgba(black, 0.12);
 $shadow-z3:
-  // 0 3px (3px * .6) -2px rgba(black, 0.2),
-  0 3px 2px -2px rgba(black, 0.2),
-  0 3px (4px * .6) 0 rgba(black, 0.14),
-  0 1px (8px * .6) 0 rgba(black, 0.12);
+  0 1px 1px rgba(black, 0.08),
+  0 2px 3px rgba(black, 0.14),
+  0 1px 3px rgba(black, 0.12);
 $shadow-z4:
-  0 2px (4px * .6) -1px rgba(black, 0.2),
-  0 4px (5px * .6) 0 rgba(black, 0.14),
-  0 1px (10px * .6) 0 rgba(black, 0.12);
+  0 1px 2px rgba(black, 0.1),
+  0 3px 4px rgba(black, 0.14),
+  0 1px 6px rgba(black, 0.12);
 $shadow-z5:
-  0 2px (4px * .6) -1px rgba(black, 0.1),
-  0 4px (5px * .6) 0 rgba(black, 0.08),
-  0 1px (10px * .6) 0 rgba(black, 0.06);
+  0 1px 2px rgba(black, 0.06),
+  0 3px 4px rgba(black, 0.08),
+  0 1px 6px rgba(black, 0.06);
 $shadow-z6:
-  0 3px (5px * .6) -1px rgba(black, 0.2),
-  0 6px (10px * .6) 0 rgba(black, 0.14),
-  0 1px (18px * .6) 0 rgba(black, 0.12);
+  0 1px 2px rgba(black, 0.12),
+  0 4px 5px 0 rgba(black, 0.16),
+  0 1px 6px 0 rgba(black, 0.1);
 $shadow-z8:
-  0 5px (5px * .6) -3px rgba(black, 0.2),
-  0 8px (10px * .6) 1px rgba(black, 0.14),
-  0 3px (14px * .6) 2px rgba(black, 0.12);
+  0 2px 0 rgba(black, 0.08),
+  0 7px 9px rgba(black, 0.15),
+  0 5px 11px rgba(black, 0.16);
 $shadow-z12:
-  0 7px (8px * .6) -4px rgba(black, 0.2),
-  0 12px (17px * .6) 2px rgba(black, 0.14),
-  0 5px (22px * .6) 4px rgba(black, 0.12);
+  0 1px 3px rgba(black, 0.1),
+  0 14px 15px rgba(black, 0.15),
+  0 9px 17px rgba(black, 0.15);
 $shadow-z16:
-  0 8px (10px * .6) -5px rgba(black, 0.2),
-  0 16px (24px * .6) 2px rgba(black, 0.14),
-  0 6px (30px * .6) 5px rgba(black, 0.12);
+  0 1px 3px rgba(black, 0.1),
+  0 16px 18px rgba(black, 0.15),
+  0 11px 23px rgba(black, 0.13);
 $shadow-z24:
-  0 11px (15px * .6) -7px rgba(black, 0.2),
-  0 24px (38px * .6) 3px rgba(black, 0.14),
-  0 9px (46px * .6) 8px rgba(black, 0.12);
+  0 2px 4px rgba(black, 0.1),
+  0 25px 28px rgba(black, 0.16),
+  0 17px 36px rgba(black, 0.15);
 
 $text-shadow:
   0 1px 1px rgba(black, 0.2),
@@ -118,8 +112,8 @@ $text-shadow:
 $icon-shadow-z2:
   0 1px 1px rgba(black, 0.2),
   0 2px 2px rgba(black, 0.14),
-  0 1px (5px * .6) rgba(black, 0.12);
+  0 1px 3px rgba(black, 0.12);
 $icon-shadow-z4:
   0 2px 2px rgba(black, 0.2),
-  0 4px (5px * .6) rgba(black, 0.14),
-  0 1px (10px * .6) rgba(black, 0.12);
+  0 3px 4px rgba(black, 0.14),
+  0 1px 6px rgba(black, 0.12);

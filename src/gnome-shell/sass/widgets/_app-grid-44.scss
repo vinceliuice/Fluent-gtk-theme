@@ -128,6 +128,7 @@ StWidget.focused {
       border: none;
       color: $light_fg_color;
       background-color: rgba(white, 0.15);
+      caret-color: $light_fg_color;
       selection-background-color: $primary_color;
       selected-color: $light_fg_color;
       width: 300px;
