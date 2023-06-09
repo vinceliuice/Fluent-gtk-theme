@@ -51,6 +51,7 @@
   transition-duration: $shorter_duration;
   border-radius: $buttons_radius;
   background-image: none;
+  background-gradient-direction: none !important;
 
   &:ltr { padding-right:1.5em; padding-left: 0; }
   &:rtl { padding-right: 0; padding-left:1.5em; }
@@ -62,6 +63,7 @@
     border: none;
     box-shadow: none;
     color: $fg_color;
+    background-gradient-direction: none !important;
 
     &.selected {
       background-color: if($variant == 'light', rgba(black, 0.1), rgba(white, 0.08));
@@ -80,6 +82,7 @@
     background-color: $divider_color;
     color: $fg_color;
     transition-duration: 0ms;
+    background-gradient-direction: none !important;
   }
 
   &:active {

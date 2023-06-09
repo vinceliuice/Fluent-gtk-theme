@@ -414,6 +414,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   transition-duration: 100ms;
   border-radius: 3px;
   background-image: none;
+  background-gradient-direction: none !important;
 }
 
 .popup-menu-item:ltr {
@@ -433,6 +434,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   border: none;
   box-shadow: none;
   color: rgba(0, 0, 0, 0.87) !important;
+  background-gradient-direction: none !important;
 }
 
 .popup-menu-item:checked.selected, .popup-menu-item:checked:hover, .popup-menu-item:checked:focus {
@@ -453,12 +455,14 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   background-color: rgba(0, 0, 0, 0.06) !important;
   color: rgba(0, 0, 0, 0.87) !important;
   transition-duration: 0ms;
+  background-gradient-direction: none !important;
 }
 
 .popup-menu-item:active {
   background-color: rgba(0, 0, 0, 0.2) !important;
   color: rgba(0, 0, 0, 0.87) !important;
   transition-duration: 150ms;
+  background-gradient-direction: none !important;
 }
 
 .popup-menu-item.selected:active {
@@ -1459,6 +1463,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .modal-dialog .modal-dialog-linked-button {
   min-height: 32px;
+  background-gradient-direction: none !important;
 }
 
 /* End Session Dialog */
@@ -1551,6 +1556,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .prompt-dialog .modal-dialog-linked-button:last-child {
   border-image: url("assets/prompt-modal-button-right.svg") 16 16 16 16;
+  background-gradient-direction: none !important;
 }
 
 .prompt-dialog .modal-dialog-linked-button:last-child:hover {

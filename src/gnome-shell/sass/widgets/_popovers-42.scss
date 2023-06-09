@@ -51,6 +51,7 @@
   transition-duration: $shorter_duration;
   border-radius: $buttons_radius;
   background-image: none;
+  background-gradient-direction: none !important;
 
   &:ltr { padding-right: $container_padding * 2 !important; padding-left: $container_padding !important; }
   &:rtl { padding-right: $container_padding !important; padding-left: $container_padding * 2 !important; }
@@ -62,6 +63,7 @@
     border: none;
     box-shadow: none;
     color: $fg_color !important;
+    background-gradient-direction: none !important;
 
     &.selected, &:hover, &:focus {
       background-color: if($variant == 'light', rgba(black, 0.1), rgba(white, 0.08)) !important;
@@ -80,15 +82,18 @@
     background-color: $divider_color !important;
     color: $fg_color !important;
     transition-duration: 0ms;
+    background-gradient-direction: none !important;
   }
 
   &:active {
     background-color: $track_color !important;
     color: $fg_color !important;
     transition-duration: $longer_duration;
+    background-gradient-direction: none !important;
   }
 
   &.selected:active { color: $fg_color !important; }
+
   &:insensitive { color: $disabled_fg_color !important; }
 }
 
