@@ -387,7 +387,7 @@ entry.search > window.background {
 /****************
  * Libre-Office *
  ****************/
-window.background:not(.solid-csd) {
+window.background:not(.solid-csd):not(.csd) {
   // reserved area at the most-right side of GtkMenuBar
   > grid.horizontal > grid.horizontal {
     background-color: $titlebar;
@@ -405,7 +405,7 @@ window.background:not(.solid-csd) {
   }
 
   // for 'Notebookbar' toolbar
-  > notebook {
+  > notebook:not(.frame) {
     border: none; // unset borders
     background-color: $base;
     box-shadow: none;

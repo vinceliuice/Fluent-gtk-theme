@@ -1830,8 +1830,12 @@ treeview.view {
     color: $text;
   }
 
-  .background:not(.csd) &:selected { // Fix for xfce4 setting
-    background-color: mix($text, $base, 15%);
+  .background:not(.csd) > notebook.frame scrolledwindow.frame &:hover { // Fix for xfce4 setting
+    background-color: mix($text, $base, 6%);
+  }
+
+  .background:not(.csd) > notebook.frame scrolledwindow.frame &:selected { // Fix for xfce4 setting
+    background-color: mix($text, $base, 10%);
   }
 
   &:hover, &:selected { border-radius: 0; }
