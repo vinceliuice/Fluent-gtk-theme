@@ -2124,7 +2124,17 @@ popover.background {
     padding: 0 8px;
     border-radius: $corner-radius;
 
+    &:focus {
+      box-shadow: inset 0 0 0 2px $overlay-focus;
+      background-color: transparent;
+      color: $text;
+    }
+
     // &:checked { color: $primary; }
+  }
+
+  button.model {
+    min-width: 32px;
   }
 
   separator { margin: 4px 0; }
@@ -3199,7 +3209,7 @@ list {
   border-color: $divider;
   background-color: $base;
 
-  row { padding: $space-size / 2; }
+  row { padding: $space-size / 2 $space-size; }
 
   &.content:not(.conversation-listbox) {
     @extend %circular_list;
@@ -3267,6 +3277,12 @@ row {
         box-shadow: inset 0 -1px $border, inset 0 1px $border;
       }
     }
+  }
+}
+
+.frame list > row {
+  > label {
+    margin: 0 $space-size;
   }
 }
 

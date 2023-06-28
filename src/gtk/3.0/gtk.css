@@ -2314,6 +2314,20 @@ popover.background button.model {
   border-radius: 2px;
 }
 
+popover.menu button:focus,
+popover button.model:focus,
+popover.background.menu button:focus,
+popover.background button.model:focus {
+  box-shadow: inset 0 0 0 2px alpha(currentColor, 0.08);
+  background-color: transparent;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+popover button.model,
+popover.background button.model {
+  min-width: 32px;
+}
+
 popover separator,
 popover.background separator {
   margin: 4px 0;
@@ -3506,7 +3520,7 @@ list {
 }
 
 list row {
-  padding: 3px;
+  padding: 3px 6px;
 }
 
 .budgie-popover.budgie-menu row.activatable > button.flat, treeview.view header button, row.activatable {
@@ -3558,6 +3572,10 @@ row.expander:checked list.nested > row.activatable {
   background-color: rgba(0, 0, 0, 0.04);
   border: none;
   box-shadow: inset 0 -1px rgba(0, 0, 0, 0.08), inset 0 1px rgba(0, 0, 0, 0.08);
+}
+
+.frame list > row > label {
+  margin: 0 6px;
 }
 
 /*********************
