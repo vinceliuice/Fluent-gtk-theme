@@ -2559,12 +2559,12 @@ switch {
 // all assets are rendered from assets.svg. never add pngs directly
 
 // selection-mode
-.view.content-view.check:not(list),
-.content-view .tile check:not(list) {
+checkbutton.selection-mode {
   min-height: 40px;
   min-width: 40px;
   margin: 0;
   padding: 0;
+  border-radius: 0;
   box-shadow: none;
   background-color: transparent;
   background-image: none;
@@ -2572,9 +2572,19 @@ switch {
 
   &:hover, &:active { -gtk-icon-shadow: $icon-shadow-z4; }
 
+  check, radio {
+    padding: 0;
+    border-radius: 0;
+  }
+
+  label {
+    &:dir(ltr) { margin-right: $space-size; }
+    &:dir(rtl) { margin-left: $space-size; }
+  }
+
   @each $s, $as in ('', '-unchecked'),
                    (':checked', '-checked') {
-    &#{$s} {
+    check#{$s} {
       -gtk-icon-source: -gtk-scaled(url("assets/selectionmode-checkbox#{$as}#{$asset-suffix}.png"),
                                     url("assets/selectionmode-checkbox#{$as}#{$asset-suffix}@2.png"));
     }
