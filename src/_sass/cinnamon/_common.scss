@@ -181,14 +181,11 @@ StScrollBar {
   StBin {
     width: 24px;
     height: 24px;
-    background-image: url("#{$asset_path}/checkbox-unchecked.svg");
   }
 
-  &:focus StBin { background-image: url("#{$asset_path}/checkbox-unchecked-focused.svg"); }
+  StBin, &:focus StBin { background-image: url("#{$asset_path}/checkbox-off.svg"); }
 
-  &:checked StBin { background-image: url("#{$asset_path}/checkbox-checked.svg"); }
-
-  &:focus:checked StBin { background-image: url("#{$asset_path}/checkbox-checked-focused.svg"); }
+  &:checked StBin, &:focus:checked StBin { background-image: url("#{$asset_path}/checkbox.svg"); }
 }
 
 //
@@ -210,14 +207,11 @@ StScrollBar {
   StBin {
     width: 24px;
     height: 24px;
-    background-image: url("#{$asset_path}/checkbox-unchecked.svg");
   }
 
-  &:focus StBin { background-image: url("#{$asset_path}/checkbox-unchecked-focused.svg"); }
+  StBin, &:focus StBin { background-image: url("#{$asset_path}/radiobutton-off.svg"); }
 
-  &:checked StBin { background-image: url("#{$asset_path}/checkbox-checked.svg"); }
-
-  &:focus:checked StBin { background-image: url("#{$asset_path}/checkbox-checked-focused.svg"); }
+  &:checked StBin, &:focus:checked StBin { background-image: url("#{$asset_path}/radiobutton.svg"); }
 }
 
 //
