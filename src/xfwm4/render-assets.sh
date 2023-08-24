@@ -5,10 +5,13 @@ OPTIPNG="/usr/bin/optipng"
 
 INDEX="assets.txt"
 
-for color in '' '-light' '-dark'; do
+for window in '' '-square'; do
+for color in '' '-Light' '-Dark'; do
 
-ASSETS_DIR="assets${color}"
-SRC_FILE="assets${color}.svg"
+ASSETS_DIR="assets${window}${color}"
+SRC_FILE="assets${window}${color}.svg"
+
+mkdir -p $ASSETS_DIR
 
 for i in `cat $INDEX`; do
 if [ -f $ASSETS_DIR/$i.png ]; then
@@ -21,6 +24,8 @@ else
               --export-filename=$ASSETS_DIR/$i.png $SRC_FILE >/dev/null \
     && $OPTIPNG -o7 --quiet $ASSETS_DIR/$i.png 
 fi
+done
+
 done
 done
 

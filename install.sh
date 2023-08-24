@@ -227,8 +227,14 @@ install() {
 
   if [[ "$size" == '' ]]; then
     mkdir -p                                                                    "$THEME_DIR/xfwm4"
-    cp -r "$SRC_DIR/xfwm4/assets$color/"*.png                                   "$THEME_DIR/xfwm4"
-    cp -r "$SRC_DIR/xfwm4/themerc${ELSE_LIGHT:-}"                               "$THEME_DIR/xfwm4/themerc"
+
+    if [[ "$titlebutton" = "square" ]] ; then
+      cp -r "$SRC_DIR/xfwm4/assets-square$color/"*.png                          "$THEME_DIR/xfwm4"
+      cp -r "$SRC_DIR/xfwm4/themerc-square${ELSE_LIGHT:-}"                      "$THEME_DIR/xfwm4/themerc"
+    else
+      cp -r "$SRC_DIR/xfwm4/assets$color/"*.png                                 "$THEME_DIR/xfwm4"
+      cp -r "$SRC_DIR/xfwm4/themerc${ELSE_LIGHT:-}"                             "$THEME_DIR/xfwm4/themerc"
+    fi
 
     mkdir -p                                                                    "$THEME_DIR/metacity-1"
     cp -r "$SRC_DIR/metacity-1/metacity-theme-2$color.xml"                      "$THEME_DIR/metacity-1/metacity-theme-2.xml"
