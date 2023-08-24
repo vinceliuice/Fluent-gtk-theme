@@ -1862,14 +1862,6 @@ headerbar.default-decoration:backdrop {
   border-radius: 0;
 }
 
-headerbar.default-decoration windowcontrols button,
-headerbar.default-decoration windowcontrols menubutton {
-  min-height: 20px;
-  min-width: 20px;
-  margin: 0;
-  padding: 0;
-}
-
 .solid-csd headerbar:dir(rtl), .solid-csd headerbar:dir(ltr) {
   border-radius: 0;
   box-shadow: none;

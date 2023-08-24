@@ -8045,15 +8045,15 @@ XfdesktopIconView.view .rubberband {
   border-top: 1px solid rgba(255, 255, 255, 0.12);
 }
 
-.thunar > grid.horizontal > paned.horizontal > scrolledwindow.frame.sidebar.shortcuts-pane {
+.thunar scrolledwindow.frame.sidebar.shortcuts-pane {
   border-top: none;
 }
 
-window.background.csd.thunar > grid.horizontal > paned.horizontal > scrolledwindow.frame.sidebar.shortcuts-pane {
+window.background.csd.thunar scrolledwindow.frame.sidebar.shortcuts-pane {
   border-bottom-left-radius: 3px;
 }
 
-window.background.csd.thunar > grid.horizontal > paned.horizontal > scrolledwindow.frame.sidebar.shortcuts-pane treeview.view:not(:hover):not(:selected) {
+window.background.csd.thunar scrolledwindow.frame.sidebar.shortcuts-pane treeview.view:not(:hover):not(:selected) {
   background: none;
 }
 

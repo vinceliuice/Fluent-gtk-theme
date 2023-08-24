@@ -163,13 +163,13 @@ XfdesktopIconView.view {
     border-top: 1px solid $divider;
   }
 
-  > grid.horizontal > paned.horizontal > scrolledwindow.frame.sidebar.shortcuts-pane {
+  scrolledwindow.frame.sidebar.shortcuts-pane {
     border-top: none;
   }
 }
 
 window.background.csd.thunar {
-  > grid.horizontal > paned.horizontal > scrolledwindow.frame.sidebar.shortcuts-pane {
+  scrolledwindow.frame.sidebar.shortcuts-pane {
     border-bottom-left-radius: $window-radius;
 
     treeview.view:not(:hover):not(:selected) {
