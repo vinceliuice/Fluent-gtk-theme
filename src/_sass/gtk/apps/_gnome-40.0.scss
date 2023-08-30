@@ -38,10 +38,16 @@
 }
 
 #NautilusQueryEditor { // search entry
-  > menubutton > button {
-    min-width: 16px;
-    min-height: 16px;
+  padding: 0 $space-size;
+
+  > menubutton {
     margin: 0;
+
+    > button {
+      min-width: 16px;
+      min-height: 16px;
+      margin: 4px 0;
+    }
   }
 
   > text { margin: 0; }
