@@ -15,6 +15,10 @@
   }
 }
 
+#desktopwindow.background {
+  background-color: transparent;
+}
+
 dnd {
   color: on($background);
 }
