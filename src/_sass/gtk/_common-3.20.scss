@@ -1343,8 +1343,8 @@ searchbar > revealer > box {
   min-height: $medium-size - 6px;
   min-width: $medium-size - 6px;
   padding: 0;
-  margin-left: 7px - $space-size;
-  margin-right: 7px - $space-size;
+  margin-left: $space-size / 2;
+  margin-right: $space-size / 2;
   @extend %circular-button;
 }
 

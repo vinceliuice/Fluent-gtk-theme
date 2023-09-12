@@ -1543,8 +1543,8 @@ headerbar button.titlebutton:not(.suggested-action):not(.destructive-action) {
   min-height: 22px;
   min-width: 22px;
   padding: 0;
-  margin-left: 3px;
-  margin-right: 3px;
+  margin-left: 2px;
+  margin-right: 2px;
 }
 
 .titlebar {

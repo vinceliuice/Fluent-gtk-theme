@@ -1304,10 +1304,12 @@ searchbar > revealer > box {
 %circular_titlebutton {
   min-height: $medium-size - 6px;
   min-width: $medium-size - 6px;
-  padding: 0;
+  padding: 3px 0;
   margin-left: $space-size / 2;
   margin-right: $space-size / 2;
   @extend %circular-button;
+
+  > image { border-radius: 100%; }
 }
 
 %square_titlebutton {
@@ -1316,6 +1318,8 @@ searchbar > revealer > box {
   padding: 0;
   margin: 0;
   border-radius: 0;
+
+  > image { border-radius: 0; }
 }
 
 headerbar {
@@ -1545,20 +1549,42 @@ headerbar {
         @extend %square_titlebutton;
       }
 
-      > image { background: none; }
-  
+      &, &:hover, &:active {
+        box-shadow: none;
+        background-color: transparent;
+      }
+
+      > image {
+        padding: 0;
+        margin: 0;
+        background-color: transparent;
+      }
+
+      &.minimize,
+      &.maximize {
+        &:hover > image {
+          background-color: $overlay-hover;
+          color: $titlebar-text;
+        }
+
+        &:active > image {
+          background-color: $overlay-active;
+          color: $titlebar-text;
+        }
+      }
+
       &.close {
-        &:hover, &:backdrop:hover {
+        &:hover > image {
           background-color: $red-300;
           color: on($red-300);
         }
-  
-        &:active {
+
+        &:active > image {
           background-color: $red-600;
           color: on($red-600);
         }
       }
-  
+
       .selection-mode & { @extend %button-on-dark; }
     }
   }

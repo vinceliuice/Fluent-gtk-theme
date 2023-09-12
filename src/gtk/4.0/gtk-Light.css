@@ -14,6 +14,10 @@
   border-radius: 0;
 }
 
+#desktopwindow.background {
+  background-color: transparent;
+}
+
 dnd {
   color: rgba(0, 0, 0, 0.87);
 }
@@ -557,7 +561,7 @@ toolbar button, dropdown > .linked:not(.vertical) > button:not(:only-child),
 combobox > .linked:not(.vertical) > button:not(:only-child), toast button, menubutton.osd > button, infobar.error > revealer > box button, infobar.error:backdrop > revealer > box button, infobar.warning > revealer > box button, infobar.warning:backdrop > revealer > box button, infobar.action > revealer > box button, infobar.action:backdrop > revealer > box button, infobar.question > revealer > box button, infobar.question:backdrop > revealer > box button, popover.background.touch-selection button, popover.background.magnifier button, .selection-mode headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action), headerbar.selection-mode button:not(.suggested-action):not(.destructive-action), button.flat {
   transition: all 75ms cubic-bezier(0, 0, 0.2, 1), box-shadow 300ms cubic-bezier(0, 0, 0.2, 1);
   outline: none;
-  box-shadow: inset 0 0 0 9999px transparent;
+  box-shadow: none;
   background-color: transparent;
   border: none;
   color: rgba(0, 0, 0, 0.6);
@@ -586,7 +590,7 @@ popover.background button.model:hover,
 pathbar > button:hover, headerbar button:hover:not(.suggested-action):not(.destructive-action), .toolbar button:hover,
 toolbar button:hover, dropdown > .linked:not(.vertical) > button:hover:not(:only-child),
 combobox > .linked:not(.vertical) > button:hover:not(:only-child), toast button:hover, menubutton.osd > button:hover, infobar.error > revealer > box button:hover, infobar.warning > revealer > box button:hover, infobar.action > revealer > box button:hover, infobar.question > revealer > box button:hover, popover.background.touch-selection button:hover, popover.background.magnifier button:hover, .selection-mode headerbar windowcontrols > button:hover:not(.suggested-action):not(.destructive-action), button.flat:hover {
-  box-shadow: inset 0 0 0 9999px alpha(currentColor, 0.08);
+  background-color: alpha(currentColor, 0.08);
   color: rgba(0, 0, 0, 0.87);
   border-color: transparent;
 }
@@ -602,7 +606,7 @@ toolbar button:active, dropdown > .linked:not(.vertical) > button:active:not(:on
 combobox > .linked:not(.vertical) > button:active:not(:only-child), toast button:active, menubutton.osd > button:active, infobar.error > revealer > box button:active, infobar.warning > revealer > box button:active, infobar.action > revealer > box button:active, infobar.question > revealer > box button:active, popover.background.touch-selection button:active, popover.background.magnifier button:active, .selection-mode headerbar windowcontrols > button:active:not(.suggested-action):not(.destructive-action), button.flat:active {
   animation: none;
   transition: all 75ms cubic-bezier(0, 0, 0.2, 1), box-shadow 300ms cubic-bezier(0, 0, 0.2, 1);
-  box-shadow: inset 0 0 0 9999px alpha(currentColor, 0.16);
+  background-color: alpha(currentColor, 0.16);
   color: rgba(0, 0, 0, 0.87);
   border-color: transparent;
 }
@@ -1631,9 +1635,13 @@ headerbar entry image:disabled {
 headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action) {
   min-height: 26px;
   min-width: 26px;
-  padding: 0;
+  padding: 3px 0;
   margin-left: 3px;
   margin-right: 3px;
+}
+
+headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action) > image {
+  border-radius: 100%;
 }
 
 headerbar {
@@ -1830,16 +1838,33 @@ headerbar windowcontrols:not(.empty).start:dir(rtl), headerbar windowcontrols:no
   margin-left: 6px;
 }
 
-headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action) > image {
-  background: none;
+headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action), headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action):hover, headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action):active {
+  box-shadow: none;
+  background-color: transparent;
 }
 
-headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action).close:hover, headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action).close:backdrop:hover {
+headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action) > image {
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+}
+
+headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action).minimize:hover > image, headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action).maximize:hover > image {
+  background-color: alpha(currentColor, 0.08);
+  color: rgba(0, 0, 0, 0.87);
+}
+
+headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action).minimize:active > image, headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action).maximize:active > image {
+  background-color: alpha(currentColor, 0.16);
+  color: rgba(0, 0, 0, 0.87);
+}
+
+headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action).close:hover > image {
   background-color: #E57373;
   color: white;
 }
 
-headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action).close:active {
+headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action).close:active > image {
   background-color: #E53935;
   color: white;
 }
@@ -4656,10 +4681,18 @@ statusbar {
   border-spacing: 0;
 }
 
+#NautilusQueryEditor {
+  padding: 0 6px;
+}
+
+#NautilusQueryEditor > menubutton {
+  margin: 0;
+}
+
 #NautilusQueryEditor > menubutton > button {
   min-width: 16px;
   min-height: 16px;
-  margin: 0;
+  margin: 4px 0;
 }
 
 #NautilusQueryEditor > text {
@@ -6382,11 +6415,11 @@ row.expander:checked image.expander-row-arrow {
 }
 
 row.expander:not(:checked) image.expander-row-arrow:dir(ltr) {
-  -gtk-icon-transform: rotate(-0.25turn);
+  -gtk-icon-transform: rotate(0.5turn);
 }
 
 row.expander:not(:checked) image.expander-row-arrow:dir(rtl) {
-  -gtk-icon-transform: rotate(0.25turn);
+  -gtk-icon-transform: rotate(-0.5turn);
 }
 
 row.expander:checked image.expander-row-arrow:not(:disabled) {

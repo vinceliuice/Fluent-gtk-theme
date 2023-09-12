@@ -154,14 +154,14 @@
     transition: $transition,
                 box-shadow $ripple-fade-out-duration $ease-out;
     outline: none;
-    box-shadow: inset 0 0 0 9999px transparent;
+    box-shadow: none;
     background-color: transparent;
     border: none;
     color: $text-secondary;
   }
 
   @if $t == flat-hover {
-    box-shadow: inset 0 0 0 9999px $overlay-hover;
+    background-color: $overlay-hover;
     color: $text;
     border-color: transparent;
   }
@@ -176,7 +176,7 @@
     animation: none;
     transition: $transition,
                 box-shadow $ripple-fade-out-duration $ease-out;
-    box-shadow: inset 0 0 0 9999px $overlay-active;
+    background-color: $overlay-active;
     color: $text;
     border-color: transparent;
   }
