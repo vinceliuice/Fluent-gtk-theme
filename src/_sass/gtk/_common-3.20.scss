@@ -466,7 +466,7 @@ button {
   min-width: 16px;
   padding: ($medium-size - 24px) / 2 ($medium-size - 16px) / 2;
   border-radius: $corner-radius;
-  font-weight: 500;
+  // font-weight: 500;
   border: 1px solid $border;
   @include button(normal);
 
@@ -2159,7 +2159,7 @@ $tab-radius: $corner-radius;
   outline: none;
   background-clip: padding-box;
   color: $text-secondary;
-  font-weight: 500;
+  // font-weight: 500;
 
   &:hover {
     background-color: if($variant == 'light', $divider, $fill);
