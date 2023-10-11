@@ -408,7 +408,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .popup-menu-item {
   spacing: 6px;
-  padding: 6px;
+  padding: 6px 12px;
   margin: 0;
   color: rgba(0, 0, 0, 0.87);
   transition-duration: 100ms;
@@ -418,13 +418,13 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .popup-menu-item:ltr {
-  padding-right: 12px !important;
-  padding-left: 6px !important;
+  padding-right: 12px;
+  padding-left: 12px;
 }
 
 .popup-menu-item:rtl {
-  padding-right: 6px !important;
-  padding-left: 12px !important;
+  padding-right: 12px;
+  padding-left: 12px;
 }
 
 .popup-menu-item:checked {
@@ -742,6 +742,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   background-image: url("assets/calendar-arrow-left.svg");
 }
 
+.calendar-day,
 .calendar-day-base {
   font-size: 9pt;
   font-weight: 400;
@@ -757,22 +758,29 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   text-shadow: none;
 }
 
-.calendar-day-base:hover, .calendar-day-base:focus {
+.calendar-day:hover, .calendar-day:focus,
+.calendar-day-base:hover,
+.calendar-day-base:focus {
   background-color: rgba(0, 0, 0, 0.06);
+  box-shadow: none !important;
 }
 
+.calendar-day:active,
 .calendar-day-base:active {
   color: rgba(0, 0, 0, 0.54);
   background-color: rgba(0, 0, 0, 0.2);
   border-color: transparent;
 }
 
+.calendar-day:selected,
 .calendar-day-base:selected {
   color: rgba(0, 0, 0, 0.87);
   background-color: rgba(0, 0, 0, 0.2);
   border-color: transparent;
+  box-shadow: none !important;
 }
 
+.calendar-day.calendar-day-heading,
 .calendar-day-base.calendar-day-heading {
   width: 32px;
   height: 25px;
@@ -813,11 +821,13 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .calendar-today:hover, .calendar-today:focus {
   background-color: #287ce9;
   color: white;
+  box-shadow: none !important;
 }
 
 .calendar-today:active, .calendar-today:selected {
   background-color: #1A73E8;
   color: white;
+  box-shadow: none !important;
 }
 
 .calendar-today:active:hover, .calendar-today:active:focus, .calendar-today:selected:hover, .calendar-today:selected:focus {
@@ -835,9 +845,10 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   font-weight: bold;
 }
 
+.calendar-other-month,
 .calendar-other-month-day {
-  color: rgba(0, 0, 0, 0.26);
-  opacity: 0.5;
+  color: rgba(0, 0, 0, 0.26) !important;
+  opacity: 1;
 }
 
 .calendar-week-number {
@@ -1997,15 +2008,12 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   box-shadow: none;
 }
 
-#panel .panel-button#panelActivities > * {
+#panel .panel-button#panelActivities * {
   width: 36px;
 }
 
-#panel .panel-button#panelActivities:overview {
+#panel .panel-button#panelActivities .workspace-dot {
   background-color: transparent;
-  box-shadow: none;
-  border: none;
-  background-image: url("assets/activities-white.svg") !important;
 }
 
 #panel.unlock-screen, #panel.login-screen, #panel.lock-screen, #panel:overview {
@@ -2015,6 +2023,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 #panel.unlock-screen .panel-button, #panel.login-screen .panel-button, #panel.lock-screen .panel-button, #panel:overview .panel-button {
   border-radius: 3px;
   color: rgba(255, 255, 255, 0.7);
+  background-color: transparent;
 }
 
 #panel.unlock-screen .panel-button.clock-display .clock, #panel.login-screen .panel-button.clock-display .clock, #panel.lock-screen .panel-button.clock-display .clock, #panel:overview .panel-button.clock-display .clock {
@@ -2027,6 +2036,17 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 #panel.unlock-screen .panel-button:active, #panel.unlock-screen .panel-button:checked, #panel.unlock-screen .panel-button:focus, #panel.login-screen .panel-button:active, #panel.login-screen .panel-button:checked, #panel.login-screen .panel-button:focus, #panel.lock-screen .panel-button:active, #panel.lock-screen .panel-button:checked, #panel.lock-screen .panel-button:focus, #panel:overview .panel-button:active, #panel:overview .panel-button:checked, #panel:overview .panel-button:focus {
   background-color: rgba(255, 255, 255, 0.3);
+}
+
+#panel.unlock-screen .panel-button#panelActivities, #panel.login-screen .panel-button#panelActivities, #panel.lock-screen .panel-button#panelActivities, #panel:overview .panel-button#panelActivities {
+  box-shadow: none;
+  border: none;
+  background-color: transparent;
+  background-image: url("assets/activities-white.svg") !important;
+}
+
+#panel.unlock-screen .panel-button#panelActivities:hover, #panel.login-screen .panel-button#panelActivities:hover, #panel.lock-screen .panel-button#panelActivities:hover, #panel:overview .panel-button#panelActivities:hover {
+  background-color: rgba(255, 255, 255, 0.15);
 }
 
 #panel.unlock-screen .panel-corner, #panel.login-screen .panel-corner, #panel.lock-screen .panel-corner, #panel:overview .panel-corner {
@@ -2871,6 +2891,36 @@ StWidget.focused .app-well-app-running-dot {
   border-radius: 0;
   background-color: rgba(255, 255, 255, 0.01);
   box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.12);
+  color: rgba(0, 0, 0, 0.54);
+}
+
+#LookingGlassDialog > #Toolbar .lg-toolbar-button {
+  color: rgba(0, 0, 0, 0.54);
+  background-color: transparent;
+  box-shadow: none;
+}
+
+#LookingGlassDialog > #Toolbar .lg-toolbar-button:hover {
+  color: rgba(0, 0, 0, 0.87);
+  background-color: rgba(0, 0, 0, 0.06);
+  box-shadow: none;
+}
+
+#LookingGlassDialog > #Toolbar .lg-toolbar-button:active {
+  color: rgba(0, 0, 0, 0.87);
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 transparent;
+}
+
+#LookingGlassDialog > #Toolbar .lg-toolbar-button:insensitive {
+  color: rgba(0, 0, 0, 0.26);
+  background-color: transparent;
+  box-shadow: none;
+}
+
+#LookingGlassDialog > #Toolbar .lg-toolbar-button:focus {
+  color: rgba(0, 0, 0, 0.87);
+  box-shadow: none;
 }
 
 #LookingGlassDialog .labels {
@@ -2887,6 +2937,7 @@ StWidget.focused .app-well-app-running-dot {
   padding-right: 16px;
   min-height: 36px;
   padding: 0 32px;
+  border-radius: 0;
 }
 
 #LookingGlassDialog .notebook-tab:hover {

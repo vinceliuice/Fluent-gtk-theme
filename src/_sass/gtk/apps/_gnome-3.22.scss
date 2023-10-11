@@ -487,11 +487,12 @@ frame.gedit-map-frame > border {
  }
 
 // the sidebar
-.tweak-categories {
+.tweak-categories,
+leaflet > box > scrolledwindow > viewport > list.navigation-sidebar {
   padding: $space-size / 2 0;
   background-image: image($base-alt);
 
-  separator { @extend %hide_separators; }
+  > separator { @extend %hide_separators; }
 
   .csd & {
     border-bottom-left-radius: $window-radius;

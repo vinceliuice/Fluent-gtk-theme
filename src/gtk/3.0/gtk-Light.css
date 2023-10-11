@@ -1129,7 +1129,7 @@ button.color {
  * Links *
  *********/
 *:link {
-  color: #1A73E8;
+  color: #1E88E5;
 }
 
 *:visited {
@@ -1137,7 +1137,7 @@ button.color {
 }
 
 button.link:link, button.link:link:focus, button.link:link:hover, button.link:link:active {
-  color: #1A73E8;
+  color: #1E88E5;
 }
 
 button.link:visited, button.link:visited:focus, button.link:visited:hover, button.link:visited:active {
@@ -3500,7 +3500,8 @@ separator {
   background-color: rgba(0, 0, 0, 0.12);
 }
 
-preferences stacksidebar.sidebar list separator, .tweak-categories separator, stacksidebar.sidebar + separator.vertical,
+preferences stacksidebar.sidebar list separator, .tweak-categories > separator,
+leaflet > box > scrolledwindow > viewport > list.navigation-sidebar > separator, stacksidebar.sidebar + separator.vertical,
 stacksidebar.sidebar separator.horizontal, button.font separator, button.file separator {
   min-width: 0;
   min-height: 0;
@@ -4850,12 +4851,13 @@ window.background.csd > box.vertical > overlay > stack > box.vertical > box.hori
   padding: 10px;
 }
 
-.tweak-categories {
+.tweak-categories,
+leaflet > box > scrolledwindow > viewport > list.navigation-sidebar {
   padding: 3px 0;
   background-image: image(#FAFAFA);
 }
 
-.csd .tweak-categories {
+.csd .tweak-categories, .csd leaflet > box > scrolledwindow > viewport > list.navigation-sidebar {
   border-bottom-left-radius: 3px;
 }
 

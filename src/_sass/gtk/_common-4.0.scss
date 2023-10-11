@@ -562,11 +562,42 @@ button {
 
   // big standalone buttons like in Documents pager
   &.osd {
-    padding: ($large-size - 24px) / 2 ($large-size - 16px) / 2;
+    box-shadow: none;
+    background-color: rgba(black, 0.35);
+    color: white;
 
-    &.image-button { padding: ($large-size - 24px) / 2; }
+    &, &.image-button {
+      min-height: $medium-size;
+      min-width: $medium-size;
+      padding: 4px;
+    }
 
-    &:disabled { opacity: 0; }
+    > image {
+      padding: 0;
+    }
+
+    &.remove-button {
+      padding: 0;
+    }
+
+    &:focus {
+      outline-color: transparent;
+    }
+
+    &:hover {
+      background-color: rgba(black, 0.45);
+      color: white;
+    }
+
+    &:active {
+      background-color: rgba(black, 0.65);
+      color: white;
+    }
+
+    &:disabled {
+      background-color: rgba(black, 0.15);
+      color: rgba(white, 0.35);
+    }
   }
 
   // overlay / OSD style
@@ -1393,6 +1424,7 @@ headerbar {
   entry,
   spinbutton,
   button,
+  menubutton,
   stackswitcher,
   separator:not(.sidebar) {
     margin-top: $space-size;
@@ -1401,9 +1433,23 @@ headerbar {
 
   menubutton > button,
   spinbutton > button,
-  splitbutton > button {
+  splitbutton > button,
+  splitbutton > menubutton,
+  .linked > menubutton,
+  entry > menubutton {
     margin-top: 0;
     margin-bottom: 0;
+  }
+
+  popover {
+    entry,
+    spinbutton,
+    button,
+    menubutton,
+    stackswitcher {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
   }
 
   separator:not(.sidebar) {
@@ -3174,34 +3220,40 @@ scrolledwindow {
 
   // This is used when content is touch-dragged past boundaries.
   // draws a box on top of the content, the size changes programmatically.
-  @at-root overshoot {
-    &.top { @include overshoot(top); }
+  > overshoot {
+    &.top {
+      @include overshoot(top);
+    }
 
-    &.bottom { @include overshoot(bottom); }
+    &.bottom {
+      @include overshoot(bottom);
+    }
 
-    &.left { @include overshoot(left); }
+    &.left {
+      @include overshoot(left);
+    }
 
-    &.right { @include overshoot(right); }
+    &.right {
+      @include overshoot(right);
+    }
   }
 
-  // Overflow indication, works similarly to the overshoot, the size if fixed tho.
-  // @at-root undershoot {
-  //   &.top { @include undershoot(top); }
-  //
-  //   &.bottom { @include undershoot(bottom); }
-  //
-  //   &.left { @include undershoot(left); }
-  //
-  //   &.right { @include undershoot(right); }
-  // }
+  &.undershoot-top {
+    @include undershoot(top);
+  }
 
-  @at-root junction { // the small square between two scrollbars
-    border-style: solid none none solid;
-    border-width: 1px;
-    border-color: $divider;
-    background-color: $base;
+  &.undershoot-bottom {
+    @include undershoot(bottom);
+  }
 
-    &:dir(rtl) { border-style: solid solid none none; }
+  &.undershoot-start {
+    &:dir(ltr) { @include undershoot(left); }
+    &:dir(rtl) { @include undershoot(right); }
+  }
+
+  &.undershoot-end {
+    &:dir(ltr) { @include undershoot(right); }
+    &:dir(rtl) { @include undershoot(left); }
   }
 }
 

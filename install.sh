@@ -144,8 +144,8 @@ install() {
     cp -r "${SRC_DIR}/gnome-shell/assets${ELSE_DARK:-}/buttons/"*.svg           "$THEME_DIR/gnome-shell/assets"
   fi
 
-  if [[ "$color" = "-light" ]] ; then
-    cp -r "${SRC_DIR}/gnome-shell/assets-dark/activities/activities${icon}.svg" "$THEME_DIR/gnome-shell/assets/activities-white.svg"
+  if [[ "$color" = "-Light" ]] ; then
+    cp -r "${SRC_DIR}/gnome-shell/assets-Dark/activities/activities${icon}.svg" "$THEME_DIR/gnome-shell/assets/activities-white.svg"
   fi
 
   if [[ "$opacity" = "solid" ]] ; then

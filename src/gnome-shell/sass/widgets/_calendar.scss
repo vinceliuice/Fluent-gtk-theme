@@ -135,6 +135,7 @@
   &:rtl { background-image: url("assets/calendar-arrow-left.svg"); }
 }
 
+.calendar-day,
 .calendar-day-base {
   @include font(caption);
   text-align: center;
@@ -148,7 +149,10 @@
   font-feature-settings: "tnum";
   text-shadow: none;
 
-  &:hover, &:focus { background-color: $divider_color; }
+  &:hover, &:focus {
+    background-color: $divider_color;
+    box-shadow: none !important;
+  }
 
   &:active {
     color: $secondary_fg_color;
@@ -160,6 +164,7 @@
     color: $fg_color;
     background-color: $track_color;
     border-color: transparent; //avoid jumparound due to today
+    box-shadow: none !important;
   }
 
   &.calendar-day-heading {  //day of week heading
@@ -195,11 +200,13 @@
   &:hover, &:focus {
     background-color: lighten($primary_color, 3%);
     color: white;
+    box-shadow: none !important;
   }
 
   &:active, &:selected {
     background-color: $primary_color;
     color: white;
+    box-shadow: none !important;
 
     &:hover, &:focus {
       background-color: lighten($primary_color, 3%);
@@ -218,9 +225,10 @@
   }
 }
 
+.calendar-other-month,
 .calendar-other-month-day {
-  color: $disabled_secondary_fg_color;
-  opacity: 0.5;
+  color: $disabled_secondary_fg_color !important;
+  opacity: 1;
 }
 
 .calendar-week-number {

@@ -139,16 +139,12 @@ $panel_transition_duration: 250ms; // same as the overview transition duration
       font-size: 0;
       box-shadow: none;
 
-      > * { width: $medium_size; }
+      * {
+        width: $medium_size;
+      }
 
-      &:overview {
+      .workspace-dot {
         background-color: transparent;
-        box-shadow: none;
-        border: none;
-
-        @if $variant == 'light' and $panel == 'light' {
-          background-image: url("assets/activities-white.svg") !important;
-        }
       }
     }
   }
@@ -163,6 +159,7 @@ $panel_transition_duration: 250ms; // same as the overview transition duration
     .panel-button {
       border-radius: $buttons_radius;
       color: $inverse_secondary_fg_color;
+      background-color: transparent;
 
       &.clock-display {
         .clock {
@@ -182,6 +179,20 @@ $panel_transition_duration: 250ms; // same as the overview transition duration
         &:hover, &:active, &:overview, &:focus, &:checked {
           border: 1px solid $icon_border_color;
           box-shadow: inset 0 1px $icon_highlight_color;
+        }
+      }
+
+      &#panelActivities {
+        box-shadow: none;
+        border: none;
+        background-color: transparent;
+
+        &:hover {
+          background-color: $inverse_divider_color;
+        }
+
+        @if $variant == 'light' and $panel == 'light' {
+          background-image: url("assets/activities-white.svg") !important;
         }
       }
     }

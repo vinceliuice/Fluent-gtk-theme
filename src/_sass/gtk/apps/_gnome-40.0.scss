@@ -249,7 +249,7 @@ datechooser {
   navigator {
     label { font-weight: bold; }
 
-    button, button.image-button {
+    button.flat {
       min-height: $medium-size;
       min-width: $medium-size;
       padding: 0;
@@ -454,6 +454,10 @@ agenda-view list {
   > label {
     padding: $space-size $space-size * 2;
   }
+
+  &.background {
+    background-color: transparent;
+  }
 }
 
 label.no-events {
@@ -545,7 +549,7 @@ screenshot-carousel button,
   padding: $space-size / 2 $space-size * 1.5;
 }
 
-flowboxchild {
+.card flowboxchild {
   &.card {
     border: none;
     box-shadow: none;
@@ -554,7 +558,7 @@ flowboxchild {
   }
 }
 
-button.card.category-tile {
+.category-tile.card {
   padding: $space-size * 3.5;
   border: none;
   border-radius: $corner-radius;

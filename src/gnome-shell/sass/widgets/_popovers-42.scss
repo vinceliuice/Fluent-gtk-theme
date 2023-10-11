@@ -45,7 +45,7 @@
 // menu items
 .popup-menu-item {
   spacing: $container_padding;
-  padding: $container_padding;
+  padding: $container_padding $container_padding * 2;
   margin: 0;
   color: $fg_color;
   transition-duration: $shorter_duration;
@@ -53,8 +53,8 @@
   background-image: none;
   background-gradient-direction: none !important;
 
-  &:ltr { padding-right: $container_padding * 2 !important; padding-left: $container_padding !important; }
-  &:rtl { padding-right: $container_padding !important; padding-left: $container_padding * 2 !important; }
+  &:ltr { padding-right: $container_padding * 2; padding-left: $container_padding * 2; }
+  &:rtl { padding-right: $container_padding * 2; padding-left: $container_padding * 2; }
 
   &:checked {
     background-color: if($variant == 'light', rgba(black, 0.08), rgba(white, 0.06)) !important;
