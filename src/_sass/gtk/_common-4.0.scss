@@ -1639,7 +1639,6 @@ headerbar {
     background-color: $titlebar;
     min-height: $medium-size;
     padding: 0;
-    border-radius: $corner-radius $corner-radius 0 0;
 
     @if $outline == 'true' and $topbar == 'dark' and $variant == 'light' {
       box-shadow: inset 0 1px highlight($titlebar);
@@ -1659,12 +1658,16 @@ headerbar {
     windowcontrols {
       > button:not(.suggested-action):not(.destructive-action),
       > menubutton {
-        @if $titlebutton == "square" {
+        padding: 0;
+
+        @if $titlebutton == "circular" {
+          min-height: $small-size;
+          min-width: $small-size;
+          margin: 0 3px;
+        } @else {
           min-height: $medium-size;
-          min-width: $large-size;
-          padding: 0;
+          min-width: $medium-size;
           margin: 0;
-          border-radius: 0;
         }
       }
     }
@@ -4104,17 +4107,11 @@ window {
     margin: 0;
     outline: none;
     transition: none;
-  
+
     @if $outline == 'false' {
-      box-shadow: $shadow-z16,
-      0 1px 2px rgba(black, 0.01),
-      0 3px 4px rgba(black, 0.01),
-      0 1px 6px rgba(black, 0.01);
+      box-shadow: $shadow-z16, 0 0 0 36px transparent;
     } @else {
-      box-shadow: $shadow-z16, 0 0 0 1px $divider,
-      0 1px 2px rgba(black, 0.01),
-      0 3px 4px rgba(black, 0.01),
-      0 1px 6px rgba(black, 0.01);
+      box-shadow: $shadow-z16, 0 0 0 1px $divider, 0 0 0 36px transparent;
     }
   
     &:backdrop {
@@ -4126,15 +4123,9 @@ window {
       // or the jumping will happen during the transition.
   
       @if $outline == 'false' {
-        box-shadow: $shadow-z4,
-        0 1px 3px rgba(black, 0.01),
-        0 16px 18px rgba(black, 0.01),
-        0 11px 23px rgba(black, 0.01);
+        box-shadow: $shadow-z4, 0 0 0 36px transparent;
       } @else {
-        box-shadow: $shadow-z4, 0 0 0 1px $divider,
-        0 1px 3px rgba(black, 0.01),
-        0 16px 18px rgba(black, 0.01),
-        0 11px 23px rgba(black, 0.01);
+        box-shadow: $shadow-z4, 0 0 0 1px $divider, 0 0 0 36px transparent;
       }
     }
 
@@ -4144,10 +4135,33 @@ window {
     &.tiled-top,
     &.tiled-right,
     &.tiled-bottom,
-    &.tiled-left { border-radius: 0; }
-  
+    &.tiled-left {
+      border-radius: 0;
+    }
+
+    &.tiled,
+    &.tiled-top,
+    &.tiled-right,
+    &.tiled-bottom,
+    &.tiled-left {
+      @if $outline == 'false' {
+        box-shadow: 0 0 6px rgba(black, 0.1);
+      } @else {
+        box-shadow: 0 0 6px rgba(black, 0.1), 0 0 0 1px $divider;
+      }
+
+      &:backdrop {
+        @if $outline == 'false' {
+          box-shadow: 0 0 6px rgba(black, 0.05);
+        } @else {
+          box-shadow: 0 0 6px rgba(black, 0.05), 0 0 0 1px $divider;
+        }
+      }
+    }
+
     &.maximized,
     &.fullscreen {
+      border-radius: 0;
       box-shadow: none;
     }
   }
@@ -4166,6 +4180,14 @@ window {
     &.maximized,
     &.fullscreen {
       box-shadow: none;
+    }
+  }
+
+  &.ssd {
+    @if $outline == 'false' {
+      box-shadow: none;
+    } @else {
+      box-shadow: 0 0 0 1px $divider;
     }
   }
 }

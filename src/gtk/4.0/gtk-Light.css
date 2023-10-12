@@ -1899,7 +1899,6 @@ headerbar.default-decoration {
   background-color: #F7F7F7;
   min-height: 32px;
   padding: 0;
-  border-radius: 2px 2px 0 0;
   box-shadow: none;
 }
 
@@ -1910,6 +1909,14 @@ headerbar.default-decoration:backdrop {
 .tiled headerbar.default-decoration, .maximized headerbar.default-decoration, .fullscreen headerbar.default-decoration {
   box-shadow: none;
   border-radius: 0;
+}
+
+headerbar.default-decoration windowcontrols > button:not(.suggested-action):not(.destructive-action),
+headerbar.default-decoration windowcontrols > menubutton {
+  padding: 0;
+  min-height: 22px;
+  min-width: 22px;
+  margin: 0 3px;
 }
 
 .solid-csd headerbar:dir(rtl), .solid-csd headerbar:dir(ltr) {
@@ -4462,19 +4469,28 @@ window.csd {
   margin: 0;
   outline: none;
   transition: none;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 16px 18px rgba(0, 0, 0, 0.15), 0 11px 23px rgba(0, 0, 0, 0.13), 0 0 0 1px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.01), 0 3px 4px rgba(0, 0, 0, 0.01), 0 1px 6px rgba(0, 0, 0, 0.01);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 16px 18px rgba(0, 0, 0, 0.15), 0 11px 23px rgba(0, 0, 0, 0.13), 0 0 0 1px rgba(0, 0, 0, 0.12), 0 0 0 36px transparent;
 }
 
 window.csd:backdrop {
   transition: box-shadow 75ms cubic-bezier(0, 0, 0.2, 1);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 3px 4px rgba(0, 0, 0, 0.14), 0 1px 6px rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.01), 0 16px 18px rgba(0, 0, 0, 0.01), 0 11px 23px rgba(0, 0, 0, 0.01);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 3px 4px rgba(0, 0, 0, 0.14), 0 1px 6px rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(0, 0, 0, 0.12), 0 0 0 36px transparent;
 }
 
 window.csd.maximized, window.csd.fullscreen, window.csd.tiled, window.csd.tiled-top, window.csd.tiled-right, window.csd.tiled-bottom, window.csd.tiled-left {
   border-radius: 0;
 }
 
+window.csd.tiled, window.csd.tiled-top, window.csd.tiled-right, window.csd.tiled-bottom, window.csd.tiled-left {
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.12);
+}
+
+window.csd.tiled:backdrop, window.csd.tiled-top:backdrop, window.csd.tiled-right:backdrop, window.csd.tiled-bottom:backdrop, window.csd.tiled-left:backdrop {
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(0, 0, 0, 0.12);
+}
+
 window.csd.maximized, window.csd.fullscreen {
+  border-radius: 0;
   box-shadow: none;
 }
 
@@ -4494,6 +4510,10 @@ window.solid-csd:backdrop {
 
 window.solid-csd.maximized, window.solid-csd.fullscreen {
   box-shadow: none;
+}
+
+window.ssd {
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.12);
 }
 
 .view:selected, iconview:selected, gridview > child:selected, modelbutton.flat:selected, row:selected, calendar:selected, calendar > grid > label.day-number:selected {

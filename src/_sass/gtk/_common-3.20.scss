@@ -1716,12 +1716,6 @@ headerbar {
       @if $titlebutton == "square" {
         padding: 0 if($compact == 'true', 3px, 6px);
       }
-
-      @if $outline == 'true' and $topbar == 'dark' and $variant == 'light' {
-        box-shadow: inset 0 1px highlight($titlebar), inset 0 -1px $divider;
-      } @else {
-        box-shadow: inset 0 -1px $divider;
-      }
     }
 
     &:backdrop {
