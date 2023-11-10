@@ -48,6 +48,15 @@ install_package
 cp -rf src/_sass/_tweaks.scss src/_sass/_tweaks-temp.scss
 cp -rf src/gnome-shell/sass/_tweaks.scss src/gnome-shell/sass/_tweaks-temp.scss
 
+if [[ "$(command -v gnome-shell)" ]]; then
+  gnome-shell --version
+  SHELL_VERSION="$(gnome-shell --version | cut -d ' ' -f 3 | cut -d . -f -1)"
+
+  if [[ "${SHELL_VERSION:-}" -ge "45" ]]; then
+    sed -i "/\$activities:/s/icon/default/" src/gnome-shell/sass/_tweaks-temp.scss
+  fi
+fi
+
 for color in "${_COLOR_VARIANTS[@]}"; do
   for size in "${_SIZE_VARIANTS[@]}"; do
     sassc "${SASSC_OPT[@]}" "src/gtk/3.0/gtk$color$size."{scss,css}

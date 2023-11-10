@@ -1902,6 +1902,21 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 /* Top Bar */
+#panel .panel-button#panelActivities {
+  -natural-hpadding: 15px;
+}
+
+#panel .panel-button#panelActivities StBoxLayout {
+  spacing: 6px;
+}
+
+#panel .panel-button#panelActivities .workspace-dot {
+  border-radius: 9999px;
+  min-width: 8px;
+  min-height: 8px;
+  background-color: #FFFFFF;
+}
+
 #panel {
   font-weight: normal;
   font-feature-settings: "tnum";
@@ -1998,24 +2013,6 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   -st-icon-style: symbolic;
 }
 
-#panel .panel-button#panelActivities {
-  background-image: url("assets/activities.svg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: auto;
-  color: transparent !important;
-  font-size: 0;
-  box-shadow: none;
-}
-
-#panel .panel-button#panelActivities * {
-  width: 36px;
-}
-
-#panel .panel-button#panelActivities .workspace-dot {
-  background-color: transparent;
-}
-
 #panel.unlock-screen, #panel.login-screen, #panel.lock-screen, #panel:overview {
   background-color: transparent;
 }
@@ -2046,6 +2043,10 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 #panel.unlock-screen .panel-button#panelActivities:hover, #panel.login-screen .panel-button#panelActivities:hover, #panel.lock-screen .panel-button#panelActivities:hover, #panel:overview .panel-button#panelActivities:hover {
   background-color: rgba(255, 255, 255, 0.15);
+}
+
+#panel.unlock-screen .panel-button#panelActivities .workspace-dot, #panel.login-screen .panel-button#panelActivities .workspace-dot, #panel.lock-screen .panel-button#panelActivities .workspace-dot, #panel:overview .panel-button#panelActivities .workspace-dot {
+  background-color: rgba(255, 255, 255, 0.85);
 }
 
 #panel.unlock-screen .panel-corner, #panel.login-screen .panel-corner, #panel.lock-screen .panel-corner, #panel:overview .panel-corner {

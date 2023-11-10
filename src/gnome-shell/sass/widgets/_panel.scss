@@ -3,6 +3,39 @@
 
 $panel_transition_duration: 250ms; // same as the overview transition duration
 
+%activities_icon {
+  background-image: url("assets/activities.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: auto;
+  color: transparent !important;
+  font-size: 0;
+  box-shadow: none;
+
+  * {
+    width: $medium_size;
+  }
+
+  .workspace-dot {
+    background-color: transparent;
+  }
+}
+
+%activities_default {
+  -natural-hpadding: $container_padding * 2.5;
+
+  & StBoxLayout {
+    spacing: $container_padding;
+  }
+
+  & .workspace-dot {
+    border-radius: $circular_radius;
+    min-width: 8px;
+    min-height: 8px;
+    background-color: $panel_fg_color;
+  }
+}
+
 #panel {
   font-weight: normal;
   font-feature-settings: "tnum";
@@ -131,20 +164,10 @@ $panel_transition_duration: 250ms; // same as the overview transition duration
     }
 
     &#panelActivities {
-      background-image: url("assets/activities.svg");
-      background-position: center center;
-      background-repeat: no-repeat;
-      background-size: auto;
-      color: transparent !important;
-      font-size: 0;
-      box-shadow: none;
-
-      * {
-        width: $medium_size;
-      }
-
-      .workspace-dot {
-        background-color: transparent;
+      @if $activities == 'icon' {
+        @extend %activities_icon;
+      } @else {
+        @extend %activities_default;
       }
     }
   }
@@ -191,8 +214,14 @@ $panel_transition_duration: 250ms; // same as the overview transition duration
           background-color: $inverse_divider_color;
         }
 
-        @if $variant == 'light' and $panel == 'light' {
-          background-image: url("assets/activities-white.svg") !important;
+        @if $activities == 'icon' {
+          @if $variant == 'light' and $panel == 'light' {
+            background-image: url("assets/activities-white.svg") !important;
+          }
+        } @else {
+          & .workspace-dot {
+            background-color: $inverse_fg_color;
+          }
         }
       }
     }

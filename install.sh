@@ -41,9 +41,13 @@ if [[ "$(command -v gnome-shell)" ]]; then
   else
     GS_VERSION="3-28"
   fi
-  else
-    echo "'gnome-shell' not found, using styles for last gnome-shell version available."
-    GS_VERSION="44-0"
+
+  if [[ "${SHELL_VERSION:-}" -ge "45" ]]; then
+    activities="default"
+  fi
+else
+  echo "'gnome-shell' not found, using styles for last gnome-shell version available."
+  GS_VERSION="44-0"
 fi
 
 usage() {
@@ -603,6 +607,10 @@ install_square() {
   sed -i "/\$titlebutton:/s/circular/square/" ${SRC_DIR}/_sass/_tweaks-temp.scss
 }
 
+activities_style() {
+  sed -i "/\$activities:/s/icon/default/" ${SRC_DIR}/gnome-shell/sass/_tweaks-temp.scss
+}
+
 install_theme_color() {
   if [[ "$theme" != '' ]]; then
     case "$theme" in
@@ -664,6 +672,10 @@ theme_tweaks() {
 
   if [[ "$titlebutton" = "square" ]] ; then
     install_square
+  fi
+
+  if [[ "$activities" = "default" ]] ; then
+    activities_style
   fi
 }
 
