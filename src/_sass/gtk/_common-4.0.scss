@@ -1995,6 +1995,15 @@ popover.menu {
       background-color: $overlay-hover;
     }
 
+    &:active {
+      background-color: $overlay-active;
+    }
+
+    &:focus {
+      box-shadow: none;
+      outline: none;
+    }
+
     &:disabled { color: $text-disabled; }
   }
 }
@@ -2093,6 +2102,11 @@ popover.background {
     min-height: 32px;
     padding: 0 8px;
     border-radius: $corner-radius;
+
+    &:focus {
+      box-shadow: none;
+      outline: none;
+    }
 
     // &:checked { color: $primary; }
   }

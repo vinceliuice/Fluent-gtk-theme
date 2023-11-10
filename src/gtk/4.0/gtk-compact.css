@@ -318,13 +318,13 @@ entry image.right {
 
 spinbutton.vertical undershoot.left > undershoot.left, spinbutton:not(.vertical) undershoot.left > undershoot.left,
 entry undershoot.left > undershoot.left {
-  box-shadow: none;
+  box-shadow: inset 1px 0 rgba(0, 0, 0, 0.08);
   background: linear-gradient(to right, alpha(rgba(0, 0, 0, 0.08), 0.75), transparent 4px);
 }
 
 spinbutton.vertical undershoot.right > undershoot.right, spinbutton:not(.vertical) undershoot.right > undershoot.right,
 entry undershoot.right > undershoot.right {
-  box-shadow: none;
+  box-shadow: inset -1px 0 rgba(0, 0, 0, 0.08);
   background: linear-gradient(to left, alpha(rgba(0, 0, 0, 0.08), 0.75), transparent 4px);
 }
 
@@ -489,11 +489,13 @@ button:focus, button:checked:focus {
   box-shadow: inset 0 0 0 1px transparent, 0 0 0 2px rgba(0, 0, 0, 0.6);
   border-color: transparent;
   background-clip: padding-box;
+  outline: none;
 }
 
 button:hover {
   box-shadow: inset 0 0 0 1px transparent, 0 0 0 2px transparent;
   border-color: rgba(0, 0, 0, 0.26);
+  outline: none;
 }
 
 button:active {
@@ -534,6 +536,7 @@ button:checked:disabled {
 button:drop(active) {
   box-shadow: inset 0 0 0 1px transparent, 0 0 0 2px transparent;
   border-color: rgba(0, 0, 0, 0.26);
+  outline: none;
 }
 
 .category-tile.card.category-tile-iconless, placessidebar .navigation-sidebar > row button.sidebar-button, calendar > header > button, check,
@@ -565,6 +568,7 @@ combobox > .linked:not(.vertical) > button:focus:not(:only-child), toast button:
   box-shadow: inset 0 0 0 2px alpha(currentColor, 0.08);
   color: rgba(0, 0, 0, 0.87);
   border-color: transparent;
+  outline: none;
 }
 
 .category-tile.card.category-tile-iconless:hover, placessidebar .navigation-sidebar > row button.sidebar-button:hover, calendar > header > button:hover, check:hover,
@@ -579,6 +583,7 @@ combobox > .linked:not(.vertical) > button:hover:not(:only-child), toast button:
   background-color: alpha(currentColor, 0.08);
   color: rgba(0, 0, 0, 0.87);
   border-color: transparent;
+  outline: none;
 }
 
 .category-tile.card.category-tile-iconless:active, placessidebar .navigation-sidebar > row button.sidebar-button:active, calendar > header > button:active, check:active,
@@ -620,6 +625,7 @@ toolbar button:checked, dropdown > .linked:not(.vertical) > button:checked:not(:
 combobox > .linked:not(.vertical) > button:checked:not(:only-child), toast button:checked, menubutton.osd > button:checked, infobar.error > revealer > box button:checked, infobar.warning > revealer > box button:checked, infobar.action > revealer > box button:checked, infobar.question > revealer > box button:checked, popover.background.touch-selection button:checked, popover.background.magnifier button:checked, .selection-mode headerbar windowcontrols > button:checked:not(.suggested-action):not(.destructive-action), button.flat:checked, button.flat:checked:hover {
   background-color: alpha(currentColor, 0.1);
   color: rgba(0, 0, 0, 0.87);
+  outline: none;
 }
 
 tabbar tab button.image-button:checked:disabled,
@@ -2004,6 +2010,7 @@ headerbar .pathbar {
 .pathbar > button:last-child {
   background-color: alpha(currentColor, 0.1);
   color: rgba(0, 0, 0, 0.87);
+  outline: none;
 }
 
 /**************
@@ -2281,6 +2288,15 @@ popover.menu modelbutton:hover {
   background-color: alpha(currentColor, 0.08);
 }
 
+popover.menu modelbutton:active {
+  background-color: alpha(currentColor, 0.16);
+}
+
+popover.menu modelbutton:focus {
+  box-shadow: none;
+  outline: none;
+}
+
 popover.menu modelbutton:disabled {
   color: rgba(0, 0, 0, 0.38);
 }
@@ -2381,6 +2397,12 @@ popover.background button.model {
   min-height: 32px;
   padding: 0 8px;
   border-radius: 2px;
+}
+
+popover.background.menu button:focus,
+popover.background button.model:focus {
+  box-shadow: none;
+  outline: none;
 }
 
 .osd popover.background, popover.background.touch-selection, popover.background.magnifier {
@@ -3646,32 +3668,32 @@ scrolledwindow > overshoot.right {
 }
 
 scrolledwindow.undershoot-top > undershoot.top {
-  box-shadow: none;
+  box-shadow: inset 0 1px rgba(0, 0, 0, 0.08);
   background: linear-gradient(to bottom, alpha(rgba(0, 0, 0, 0.08), 0.75), transparent 4px);
 }
 
 scrolledwindow.undershoot-bottom > undershoot.bottom {
-  box-shadow: none;
+  box-shadow: inset 0 -1px rgba(0, 0, 0, 0.08);
   background: linear-gradient(to top, alpha(rgba(0, 0, 0, 0.08), 0.75), transparent 4px);
 }
 
 scrolledwindow.undershoot-start:dir(ltr) > undershoot.left {
-  box-shadow: none;
+  box-shadow: inset 1px 0 rgba(0, 0, 0, 0.08);
   background: linear-gradient(to right, alpha(rgba(0, 0, 0, 0.08), 0.75), transparent 4px);
 }
 
 scrolledwindow.undershoot-start:dir(rtl) > undershoot.right {
-  box-shadow: none;
+  box-shadow: inset -1px 0 rgba(0, 0, 0, 0.08);
   background: linear-gradient(to left, alpha(rgba(0, 0, 0, 0.08), 0.75), transparent 4px);
 }
 
 scrolledwindow.undershoot-end:dir(ltr) > undershoot.right {
-  box-shadow: none;
+  box-shadow: inset -1px 0 rgba(0, 0, 0, 0.08);
   background: linear-gradient(to left, alpha(rgba(0, 0, 0, 0.08), 0.75), transparent 4px);
 }
 
 scrolledwindow.undershoot-end:dir(rtl) > undershoot.left {
-  box-shadow: none;
+  box-shadow: inset 1px 0 rgba(0, 0, 0, 0.08);
   background: linear-gradient(to right, alpha(rgba(0, 0, 0, 0.08), 0.75), transparent 4px);
 }
 
@@ -5933,6 +5955,7 @@ button.card {
 button.card:hover {
   box-shadow: inset 0 0 0 1px transparent, 0 0 0 2px transparent;
   border-color: rgba(0, 0, 0, 0.26);
+  outline: none;
 }
 
 button.card.keyboard-activating, button.card:active {
@@ -6604,12 +6627,12 @@ overlay-split-view > shadow.down {
 }
 
 toolbarview.undershoot-top scrolledwindow > undershoot.top {
-  box-shadow: none;
+  box-shadow: inset 0 1px rgba(0, 0, 0, 0.08);
   background: linear-gradient(to bottom, alpha(rgba(0, 0, 0, 0.08), 0.75), transparent 4px);
 }
 
 toolbarview.undershoot-bottom scrolledwindow > undershoot.bottom {
-  box-shadow: none;
+  box-shadow: inset 0 -1px rgba(0, 0, 0, 0.08);
   background: linear-gradient(to top, alpha(rgba(0, 0, 0, 0.08), 0.75), transparent 4px);
 }
 
@@ -6636,42 +6659,42 @@ toolbarview.undershoot-bottom scrolledwindow > undershoot.bottom {
 }
 
 .sidebar-pane toolbarview.undershoot-top scrolledwindow > undershoot.top {
-  box-shadow: none;
+  box-shadow: inset 0 1px rgba(0, 0, 0, 0.08);
   background: linear-gradient(to bottom, alpha(rgba(0, 0, 0, 0.08), 0.75), transparent 4px);
 }
 
 .sidebar-pane toolbarview.undershoot-bottom scrolledwindow > undershoot.bottom {
-  box-shadow: none;
+  box-shadow: inset 0 -1px rgba(0, 0, 0, 0.08);
   background: linear-gradient(to top, alpha(rgba(0, 0, 0, 0.08), 0.75), transparent 4px);
 }
 
 .sidebar-pane scrolledwindow.undershoot-top > undershoot.top {
-  box-shadow: none;
+  box-shadow: inset 0 1px rgba(0, 0, 0, 0.08);
   background: linear-gradient(to bottom, alpha(rgba(0, 0, 0, 0.08), 0.75), transparent 4px);
 }
 
 .sidebar-pane scrolledwindow.undershoot-bottom > undershoot.bottom {
-  box-shadow: none;
+  box-shadow: inset 0 -1px rgba(0, 0, 0, 0.08);
   background: linear-gradient(to top, alpha(rgba(0, 0, 0, 0.08), 0.75), transparent 4px);
 }
 
 .sidebar-pane scrolledwindow.undershoot-start:dir(ltr) > undershoot.left {
-  box-shadow: none;
+  box-shadow: inset 1px 0 rgba(0, 0, 0, 0.08);
   background: linear-gradient(to right, alpha(rgba(0, 0, 0, 0.08), 0.75), transparent 4px);
 }
 
 .sidebar-pane scrolledwindow.undershoot-start:dir(rtl) > undershoot.right {
-  box-shadow: none;
+  box-shadow: inset -1px 0 rgba(0, 0, 0, 0.08);
   background: linear-gradient(to left, alpha(rgba(0, 0, 0, 0.08), 0.75), transparent 4px);
 }
 
 .sidebar-pane scrolledwindow.undershoot-end:dir(ltr) > undershoot.right {
-  box-shadow: none;
+  box-shadow: inset -1px 0 rgba(0, 0, 0, 0.08);
   background: linear-gradient(to left, alpha(rgba(0, 0, 0, 0.08), 0.75), transparent 4px);
 }
 
 .sidebar-pane scrolledwindow.undershoot-end:dir(rtl) > undershoot.left {
-  box-shadow: none;
+  box-shadow: inset 1px 0 rgba(0, 0, 0, 0.08);
   background: linear-gradient(to right, alpha(rgba(0, 0, 0, 0.08), 0.75), transparent 4px);
 }
 
@@ -6759,49 +6782,49 @@ toolbarview.undershoot-bottom scrolledwindow > undershoot.bottom {
 
 .content-pane .sidebar-pane toolbarview.undershoot-top scrolledwindow > undershoot.top,
 .sidebar-pane .content-pane toolbarview.undershoot-top scrolledwindow > undershoot.top {
-  box-shadow: none;
+  box-shadow: inset 0 1px rgba(0, 0, 0, 0.08);
   background: linear-gradient(to bottom, alpha(rgba(0, 0, 0, 0.08), 0.75), transparent 4px);
 }
 
 .content-pane .sidebar-pane toolbarview.undershoot-bottom scrolledwindow > undershoot.bottom,
 .sidebar-pane .content-pane toolbarview.undershoot-bottom scrolledwindow > undershoot.bottom {
-  box-shadow: none;
+  box-shadow: inset 0 -1px rgba(0, 0, 0, 0.08);
   background: linear-gradient(to top, alpha(rgba(0, 0, 0, 0.08), 0.75), transparent 4px);
 }
 
 .content-pane .sidebar-pane scrolledwindow.undershoot-top > undershoot.top,
 .sidebar-pane .content-pane scrolledwindow.undershoot-top > undershoot.top {
-  box-shadow: none;
+  box-shadow: inset 0 1px rgba(0, 0, 0, 0.08);
   background: linear-gradient(to bottom, alpha(rgba(0, 0, 0, 0.08), 0.75), transparent 4px);
 }
 
 .content-pane .sidebar-pane scrolledwindow.undershoot-bottom > undershoot.bottom,
 .sidebar-pane .content-pane scrolledwindow.undershoot-bottom > undershoot.bottom {
-  box-shadow: none;
+  box-shadow: inset 0 -1px rgba(0, 0, 0, 0.08);
   background: linear-gradient(to top, alpha(rgba(0, 0, 0, 0.08), 0.75), transparent 4px);
 }
 
 .content-pane .sidebar-pane scrolledwindow.undershoot-start:dir(ltr) > undershoot.left,
 .sidebar-pane .content-pane scrolledwindow.undershoot-start:dir(ltr) > undershoot.left {
-  box-shadow: none;
+  box-shadow: inset 1px 0 rgba(0, 0, 0, 0.08);
   background: linear-gradient(to right, alpha(rgba(0, 0, 0, 0.08), 0.75), transparent 4px);
 }
 
 .content-pane .sidebar-pane scrolledwindow.undershoot-start:dir(rtl) > undershoot.right,
 .sidebar-pane .content-pane scrolledwindow.undershoot-start:dir(rtl) > undershoot.right {
-  box-shadow: none;
+  box-shadow: inset -1px 0 rgba(0, 0, 0, 0.08);
   background: linear-gradient(to left, alpha(rgba(0, 0, 0, 0.08), 0.75), transparent 4px);
 }
 
 .content-pane .sidebar-pane scrolledwindow.undershoot-end:dir(ltr) > undershoot.right,
 .sidebar-pane .content-pane scrolledwindow.undershoot-end:dir(ltr) > undershoot.right {
-  box-shadow: none;
+  box-shadow: inset -1px 0 rgba(0, 0, 0, 0.08);
   background: linear-gradient(to left, alpha(rgba(0, 0, 0, 0.08), 0.75), transparent 4px);
 }
 
 .content-pane .sidebar-pane scrolledwindow.undershoot-end:dir(rtl) > undershoot.left,
 .sidebar-pane .content-pane scrolledwindow.undershoot-end:dir(rtl) > undershoot.left {
-  box-shadow: none;
+  box-shadow: inset 1px 0 rgba(0, 0, 0, 0.08);
   background: linear-gradient(to right, alpha(rgba(0, 0, 0, 0.08), 0.75), transparent 4px);
 }
 

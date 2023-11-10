@@ -105,12 +105,14 @@
     box-shadow: inset 0 0 0 1px transparent, 0 0 0 2px transparent;
     // background-color: $base;
     border-color: $track;
+    outline: none;
   }
 
   @if $t == focus {
     box-shadow: inset 0 0 0 1px transparent, 0 0 0 2px $text-secondary;
     border-color: transparent;
     background-clip: padding-box;
+    outline: none;
   }
 
   @if $t == active {
@@ -164,12 +166,14 @@
     background-color: $overlay-hover;
     color: $text;
     border-color: transparent;
+    outline: none;
   }
 
   @if $t == flat-focus {
     box-shadow: inset 0 0 0 2px $overlay-focus;
     color: $text;
     border-color: transparent;
+    outline: none;
   }
 
   @if $t == flat-active {
@@ -190,6 +194,7 @@
   @if $t == flat-checked {
     background-color: $overlay-checked;
     color: $text;
+    outline: none;
   }
 
   @if $t == flat-checked-disabled {
@@ -314,8 +319,7 @@
   }
   
   #{$_selector} undershoot.#{$p} {
-    // box-shadow: inset $_border_pos $border;
-    box-shadow: none;
+    box-shadow: inset $_border_pos $border;
     background: linear-gradient(to $_direction, gtkalpha($c, .75), transparent 4px);
   }
 }
