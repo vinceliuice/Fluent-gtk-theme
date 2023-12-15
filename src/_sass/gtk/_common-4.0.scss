@@ -2148,9 +2148,8 @@ $tab-radius: $corner-radius;
   min-height: $small-size;
   min-width: $small-size;
   padding: ($space-size / 2) $space-size * 2;
-  border-width: 1px;
-  border-color: transparent;
-  border-style: solid;
+  border: 1px solid transparent;
+  border-bottom: 0;
   outline: none;
   background-clip: padding-box;
   color: $text-secondary;
@@ -2430,6 +2429,9 @@ tabbar {
   }
 
   tabbox {
+    padding: 0;
+    margin: 0;
+
     > tabboxchild {
       padding: 0;
       margin: 0;

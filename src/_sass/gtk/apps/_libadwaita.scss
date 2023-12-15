@@ -1022,6 +1022,10 @@ toolbarview.undershoot-bottom scrolledwindow {
 }
 
 .top-bar {
+  border: none;
+  box-shadow: none;
+  background-color: transparent;
+
   .collapse-spacing {
     padding: 0;
   }

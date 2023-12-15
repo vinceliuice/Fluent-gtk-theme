@@ -2428,9 +2428,8 @@ tabbar tabbox tab, notebook > header tab {
   min-height: 20px;
   min-width: 20px;
   padding: 2px 8px;
-  border-width: 1px;
-  border-color: transparent;
-  border-style: solid;
+  border: 1px solid transparent;
+  border-bottom: 0;
   outline: none;
   background-clip: padding-box;
   color: rgba(255, 255, 255, 0.7);
@@ -2693,6 +2692,11 @@ tabbar:backdrop .box > scrolledwindow,
 tabbar:backdrop .box > .start-action,
 tabbar:backdrop .box > .end-action {
   filter: opacity(0.5);
+}
+
+tabbar tabbox {
+  padding: 0;
+  margin: 0;
 }
 
 tabbar tabbox > tabboxchild {
@@ -6944,6 +6948,12 @@ toolbarview.undershoot-bottom scrolledwindow > undershoot.bottom {
 .content-pane headerbar:backdrop {
   background-color: transparent;
   box-shadow: none;
+}
+
+.top-bar {
+  border: none;
+  box-shadow: none;
+  background-color: transparent;
 }
 
 .top-bar .collapse-spacing {
