@@ -4814,6 +4814,10 @@ statusbar {
   margin-left: 0;
 }
 
+navigation-view-page > toolbarview > scrolledwindow > viewport > clamp > box > box > stack > button {
+  margin-top: 8px;
+}
+
 label.primary-label, label.month-name, label.secondary-label {
   font-size: 16pt;
   font-weight: bold;

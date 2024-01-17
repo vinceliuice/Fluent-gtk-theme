@@ -75,6 +75,12 @@
   }
 }
 
+navigation-view-page > toolbarview > scrolledwindow > viewport > clamp {
+  > box > box > stack > button {
+    margin-top: $space-size * 2;
+  }
+}
+
 //
 // Calendar
 //
