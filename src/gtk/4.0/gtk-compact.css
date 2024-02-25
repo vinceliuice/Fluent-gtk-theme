@@ -7115,6 +7115,134 @@ tabbox:drop(active) {
   box-shadow: none;
 }
 
+themeselector,
+panelthemeselector {
+  margin: 6px;
+}
+
+themeselector checkbutton,
+panelthemeselector checkbutton {
+  padding: 0;
+  min-height: 44px;
+  min-width: 44px;
+  padding: 1px;
+  background-clip: content-box;
+  border-radius: 9999px;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.08);
+}
+
+themeselector checkbutton.follow:checked, themeselector checkbutton.light:checked, themeselector checkbutton.dark:checked,
+panelthemeselector checkbutton.follow:checked,
+panelthemeselector checkbutton.light:checked,
+panelthemeselector checkbutton.dark:checked {
+  box-shadow: inset 0 0 0 2px #1A73E8;
+}
+
+themeselector checkbutton.follow,
+panelthemeselector checkbutton.follow {
+  background-image: linear-gradient(to bottom right, #ffffff 50%, #202020 50%);
+}
+
+themeselector checkbutton.light,
+panelthemeselector checkbutton.light {
+  background-color: #ffffff;
+}
+
+themeselector checkbutton.dark,
+panelthemeselector checkbutton.dark {
+  background-color: #202020;
+}
+
+themeselector checkbutton.theme-selector radio,
+panelthemeselector checkbutton.theme-selector radio {
+  -gtk-icon-source: none;
+  border: none;
+  background: none;
+  box-shadow: none;
+  min-height: 20px;
+  min-width: 20px;
+  padding: 0;
+}
+
+themeselector checkbutton.theme-selector radio:hover, themeselector checkbutton.theme-selector radio:active, themeselector checkbutton.theme-selector radio:checked,
+panelthemeselector checkbutton.theme-selector radio:hover,
+panelthemeselector checkbutton.theme-selector radio:active,
+panelthemeselector checkbutton.theme-selector radio:checked {
+  background-color: transparent;
+}
+
+themeselector checkbutton.theme-selector radio:checked,
+panelthemeselector checkbutton.theme-selector radio:checked {
+  -gtk-icon-size: 20px;
+  -gtk-icon-source: -gtk-scaled(-gtk-recolor(url("assets/scalable/check-symbolic.svg")), -gtk-recolor(url("assets/scalable/check-symbolic@2.svg")));
+  color: white;
+  background-color: #1A73E8;
+}
+
+themeselector checkbutton.theme-selector radio:checked, themeselector checkbutton.theme-selector radio:checked:hover, themeselector checkbutton.theme-selector radio:checked:active,
+panelthemeselector checkbutton.theme-selector radio:checked,
+panelthemeselector checkbutton.theme-selector radio:checked:hover,
+panelthemeselector checkbutton.theme-selector radio:checked:active {
+  box-shadow: 0 2px 3px -1px rgba(0, 0, 0, 0.08), 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+themeswitcher {
+  padding: 4px;
+}
+
+themeswitcher .check {
+  min-height: 20px;
+  min-width: 20px;
+  background: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 9999px;
+  color: white;
+  background-color: #1A73E8;
+}
+
+themeswitcher .check, themeswitcher .check:hover, themeswitcher .check:active {
+  box-shadow: 0 2px 3px -1px rgba(0, 0, 0, 0.08), 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+themeswitcher checkbutton {
+  padding: 0;
+  min-height: 44px;
+  min-width: 44px;
+  padding: 1px;
+  background-clip: content-box;
+  border-radius: 9999px;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.08);
+}
+
+themeswitcher checkbutton:checked {
+  box-shadow: inset 0 0 0 2px #1A73E8;
+}
+
+themeswitcher checkbutton radio, themeswitcher checkbutton radio:hover, themeswitcher checkbutton radio:active, themeswitcher checkbutton radio:checked, themeswitcher checkbutton radio:checked:hover, themeswitcher checkbutton radio:checked:active {
+  background-color: transparent;
+  border: none;
+  background: none;
+  box-shadow: none;
+  color: transparent;
+  -gtk-icon-source: none;
+  -gtk-icon-size: 0;
+}
+
+themeswitcher checkbutton.system {
+  background: linear-gradient(-45deg, #1e1e1e 50%, white 50%);
+}
+
+themeswitcher checkbutton.light {
+  color: alpha(black, 0.8);
+  background-color: white;
+}
+
+themeswitcher checkbutton.dark {
+  color: white;
+  background-color: #1e1e1e;
+}
+
 /* GTK NAMED COLORS
    ----------------
    use responsibly! */
