@@ -1,0 +1,156 @@
+{
+    "spec_version": 1,
+    "script_name": "install.sh",
+    "theme_name": "Fluent",
+    "adwaita_link_to_gtk4": true,
+    "options": [
+        {
+            "name": "color",
+            "label": "Color variant",
+            "type": "combo",
+            "desktop": "all",
+            "ids": [
+                "standard",
+                "light",
+                "dark"
+            ],
+            "labels": [
+                "Standard",
+                "Light",
+                "Dark"
+            ],
+            "value": 0
+        },
+        {
+            "name": "theme",
+            "label": "Accent color",
+            "type": "combo",
+            "desktop": "all",
+            "ids": [
+                "default",
+                "purple",
+                "pink",
+                "red",
+                "orange",
+                "yellow",
+                "green",
+                "grey",
+                "teal"
+            ],
+            "labels": [
+                "Blue",
+                "Purple",
+                "Pink",
+                "Red",
+                "Orange",
+                "Yellow",
+                "Green",
+                "Grey",
+                "Teal"
+            ],
+            "value": 0
+        },
+        {
+            "name": "icon",
+            "label": "Shell panel icon",
+            "type": "combo",
+            "desktop": "GNOME",
+            "ids": [
+                "default",
+                "apple",
+                "simple",
+                "gnome",
+                "ubuntu",
+                "arch",
+                "manjaro",
+                "fedora",
+                "debian",
+                "void",
+                "opensuse",
+                "popos",
+                "mxlinux",
+                "zorin",
+                "endeavouros",
+                "tux",
+                "nixos"
+            ],
+            "labels": [
+                "Windows",
+                "Apple",
+                "Simple",
+                "GNOME",
+                "Ubuntu",
+                "Arch",
+                "Manjaro",
+                "Fedora",
+                "Debian",
+                "Void",
+                "Opensuse",
+                "PopOS",
+                "MX Linux",
+                "Zorin",
+                "EndeavourOS",
+                "Tux",
+                "Nixos"
+            ],
+            "value": 4
+        },
+        {
+            "name": "size",
+            "label": "Size",
+            "type": "combo",
+            "desktop": "all",
+            "ids": [
+                "standard",
+                "compact"
+            ],
+            "labels": [
+                "Standard",
+                "Compact"
+            ],
+            "value": 0
+        },
+        {
+            "name": "solid",
+            "label": "Solid (no transparency)",
+            "type": "switch",
+            "desktop": "all",
+            "value": false
+        },
+        {
+            "name": "float",
+            "label": "floating panel",
+            "type": "switch",
+            "desktop": "GNOME",
+            "value": false
+        },
+        {
+            "name": "round",
+            "label": "Rounded windows",
+            "type": "switch",
+            "desktop": "all",
+            "value": false
+        },
+        {
+            "name": "blur",
+            "label": "blur version for 'Blur-Me'",
+            "type": "switch",
+            "desktop": "GNOME",
+            "value": false
+        },
+        {
+            "name": "noborder",
+            "label": "Windows and menu with no border",
+            "type": "switch",
+            "desktop": "all",
+            "value": false
+        },
+        {
+            "name": "square",
+            "label": "Square window buttons",
+            "type": "switch",
+            "desktop": "all",
+            "value": false
+        }
+    ]
+}
