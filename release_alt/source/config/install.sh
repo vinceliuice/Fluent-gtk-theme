@@ -123,8 +123,8 @@ while [[ "$#" -gt 0 ]]; do
             ;;
           *)
             echo "ERROR: Unrecognized theme variant '$1'."
-            echo "Try '$0 --help' for more information."
-            exit 1
+            echo "Ignoring..."
+            shift
             ;;
         esac
       done
@@ -206,8 +206,8 @@ while [[ "$#" -gt 0 ]]; do
             ;;
           *)
             echo "ERROR: Unrecognized icon variant '$1'."
-            echo "Try '$0 --help' for more information."
-            exit 1
+            echo "Ignoring..."
+            shift
             ;;
         esac
         echo "Install $icons icon for gnome-shell panel..."
@@ -234,8 +234,8 @@ while [[ "$#" -gt 0 ]]; do
             ;;
           *)
             echo "ERROR: Unrecognized color variant '$1'."
-            echo "Try '$0 --help' for more information."
-            exit 1
+            echo "Ignoring..."
+            shift
             ;;
         esac
       done
@@ -257,16 +257,16 @@ while [[ "$#" -gt 0 ]]; do
             ;;
           *)
             echo "ERROR: Unrecognized size variant '${1:-}'."
-            echo "Try '$0 --help' for more information."
-            exit 1
+            echo "Ignoring..."
+            shift
             ;;
         esac
       done
       ;;
     *)
       echo "ERROR: Unrecognized installation option '${1:-}'."
-      echo "Try '$0 --help' for more information."
-      exit 1
+      echo "Ignoring..."
+      shift
       ;;
   esac
 done

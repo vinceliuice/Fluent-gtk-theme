@@ -3,7 +3,9 @@
 import gi
 gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk
-from gi.repository import Gio
+gi.require_version('Gdk', '3.0')
+from gi.repository import Gdk
+from gi.repository import Gio, GLib
 import json
 import os
 import subprocess
@@ -12,23 +14,23 @@ import random
 import time
 
 '''
-$XDG_CURRENT_DESKTOP values:
-Cinnamon: "X-Cinnamon"
-GNOME: "GNOME"
-MATE: "MATE"
-XFCE: "XFCE"
-pop: "pop:GNOME"
-Pantheon: "Pantheon"
-
-Desktops:
-GNOME, XFCE (xubuntu 23, Manjaro xfce 22), MATE, Unity (Ubuntu Unity 23): Works OK
-Cinnamon, Pantheon (elementaryos-7): Works OK, but don't know how to update wm
-    theme without renaming theme
-pop (popOS 22): Treat as GNOME but doesn't seem to affect some gtk3 apps or wm
-    theme (and neither does GNOME tweaks)
-Budgie (Ubuntu Budgie 23): Works OK, but don't know how to update wm theme without
-    renaming theme and have to set org.gnome.desktop.interface color-scheme as it changes
-    to "prefer-dark" each time.
+Dist, $XDG_CURRENT_DESKTOP, $XDG_SESSION_TYPE
+Ubuntu 18.04,       ubuntu:GNOME,   x11,        rename theme.
+Ubuntu 20.04,       ubuntu:GNOME,   x11,        rename theme.
+Ubuntu 22.04,       ubuntu:GNOME,   x11,        rename theme.
+Manjaro gnome 23    GNOME,          x11,        rename theme.
+Fedora 39,          GNOME,          wayland,    ok
+Ubuntu Unity 23     Unity:Unity7:ubuntu, x11    ok
+xubuntu 23          XFCE,           x11,        ok
+Manjaro xfce 22     XFCE,           x11,        ok
+MX Linux 23.2       XFCE,           x11,
+Manjaro Cinnamon    X-Cinnamon,     x11,        rename theme.
+Manjaro Cinnamon    X-Cinnamon,     wayland,    ok
+LinuxMint 21.3 mate MATE,           x11,        ok
+elementaryos-7      Pantheon,       x11,        rename theme. Has no effect on gtk3 apps
+popOS 22,           pop:GNOME,      x11,        rename theme.
+Ubuntu Budgie 23    Budgie:GNOME,   x11,        rename theme and set org.gnome.desktop.interface
+    color-scheme as it changes to "prefer-dark" each time.
 '''
 rename_theme_on_update = False
 desktop_environment = os.environ.get('XDG_CURRENT_DESKTOP')
@@ -41,11 +43,16 @@ elif "Unity" in desktop_environment:
     desktop_environment = 'Unity'
 elif "pop" in desktop_environment:
     desktop_environment = 'pop'
+    rename_theme_on_update = os.environ["XDG_SESSION_TYPE"] == "x11"
+elif "ubuntu:GNOME" in desktop_environment:
+    desktop_environment = 'ubuntu:GNOME'
+    rename_theme_on_update = os.environ["XDG_SESSION_TYPE"] == "x11"
 elif "GNOME" in desktop_environment:
     desktop_environment = 'GNOME'
+    rename_theme_on_update = os.environ["XDG_SESSION_TYPE"] == "x11"
 elif "Cinnamon" in desktop_environment:
     desktop_environment = "Cinnamon"
-    rename_theme_on_update = True
+    rename_theme_on_update = os.environ["XDG_SESSION_TYPE"] == "x11"
 elif "MATE" in desktop_environment:
     desktop_environment = "MATE"
 elif "XFCE" in desktop_environment:
@@ -53,8 +60,6 @@ elif "XFCE" in desktop_environment:
 elif "Pantheon" in desktop_environment:
     desktop_environment = "Pantheon"
     rename_theme_on_update = True
-else:
-    desktop_environment = "Unknown"
 
 print(f"Desktop environment is: {desktop_environment}...")
 
@@ -70,11 +75,11 @@ class OptionsWindow(Gtk.Window):
         
         self.set_default_size(500, 100)
         
-        box = Gtk.Box.new(Gtk.Orientation.VERTICAL, 5)
-        box.set_margin_top(15)
-        box.set_margin_bottom(15)
-        box.set_margin_start(25)
-        box.set_margin_end(25)
+        box = Gtk.Box.new(Gtk.Orientation.VERTICAL, 15)
+        box.set_margin_top(20)
+        box.set_margin_bottom(20)
+        box.set_margin_start(35)
+        box.set_margin_end(35)
         self.add(box)
         self.set_icon_name("applications-graphics")
         
@@ -88,36 +93,75 @@ class OptionsWindow(Gtk.Window):
             desktops = option["desktop"]
             if isinstance(desktops, str):
                 desktops = [desktops]
-            if "all" in desktops or self.desktop_environment in desktops:
-                if option["type"] == "combo":
-                    combobox = Gtk.Box.new(Gtk.Orientation.HORIZONTAL, 10)
-                    combobox_label = Gtk.Label.new(option["label"])
-                    combobox_label.set_halign(Gtk.Align.START)
-                    combobox.pack_start(combobox_label, True, True, 0)
-                    combo_widget = Gtk.ComboBoxText.new()
-                    for label in option["labels"]:
-                        combo_widget.append_text(label)
-                    combo_widget.set_active(option["value"])
-                    combo_widget.set_halign(Gtk.Align.END)
-                    combo_widget.connect("changed", self.on_combo_changed)
-                    combobox.pack_start(combo_widget, True, True, 0)
-                    box.pack_start(combobox, False, True, 0)
-                    self.widgets[option["name"]] = combo_widget
-                elif option["type"] == "switch":
-                    switchbox = Gtk.Box.new(Gtk.Orientation.HORIZONTAL, 10)
-                    switchbox_label = Gtk.Label.new(option["label"])
-                    switchbox_label.set_halign(Gtk.Align.START)
-                    switchbox.pack_start(switchbox_label, True, True, 0)
-                    switch_widget = Gtk.Switch.new()
-                    switch_widget.set_active(option["value"])
-                    switch_widget.set_halign(Gtk.Align.END)
-                    switch_widget.set_valign(Gtk.Align.CENTER)
-                    switch_widget.connect("state-set", self.on_switch_changed)
-                    switchbox.pack_start(switch_widget, True, True, 0)
-                    box.pack_start(switchbox, False, True, 0)
-                    self.widgets[option["name"]] = switch_widget
+            if not ("all" in desktops or self.desktop_environment in desktops):
+                continue
+            
+            if option["type"] == "combo":
+                combobox = Gtk.Box.new(Gtk.Orientation.HORIZONTAL, 10)
+                combobox_label = Gtk.Label.new(option["label"])
+                combobox_label.set_halign(Gtk.Align.START)
+                combobox.pack_start(combobox_label, True, True, 0)
+                combo_widget = Gtk.ComboBoxText.new()
+                for label in option["labels"]:
+                    combo_widget.append_text(label)
+                combo_widget.set_active(option["value"])
+                combo_widget.set_halign(Gtk.Align.END)
+                combo_widget.connect("changed", self.on_setting_changed)
+                combobox.pack_start(combo_widget, True, True, 0)
+                box.pack_start(combobox, False, True, 0)
+                self.widgets[option["name"]] = combo_widget
+            elif option["type"] == "switch":
+                switchbox = Gtk.Box.new(Gtk.Orientation.HORIZONTAL, 10)
+                switchbox_label = Gtk.Label.new(option["label"])
+                switchbox_label.set_halign(Gtk.Align.START)
+                switchbox.pack_start(switchbox_label, True, True, 0)
+                switch = Gtk.Switch.new()
+                switch.set_active(option["value"])
+                switch.set_halign(Gtk.Align.END)
+                switch.set_valign(Gtk.Align.CENTER)
+                switch.connect("state-set", self.on_setting_changed)
+                switchbox.pack_start(switch, True, True, 0)
+                box.pack_start(switchbox, False, True, 0)
+                self.widgets[option["name"]] = switch
+            elif option["type"] == "color-chooser":
+                colorbox = Gtk.Box.new(Gtk.Orientation.HORIZONTAL, 10)
+                colorbox_label = Gtk.Label.new(option["label"])
+                colorbox_label.set_halign(Gtk.Align.START)
+                colorbox.pack_start(colorbox_label, True, True, 0)
+                colorButton = Gtk.ColorButton.new()
+                color = Gdk.RGBA()
+                color.parse(option["value"])
+                colorButton.set_rgba(color)
+                colorButton.set_halign(Gtk.Align.END)
+                colorButton.set_valign(Gtk.Align.CENTER)
+                colorButton.connect("color-set", self.on_setting_changed)
+                colorbox.pack_start(colorButton, True, True, 0)
+                box.pack_start(colorbox, False, True, 0)
+                self.widgets[option["name"]] = colorButton
+            elif option["type"] == "spinbutton":
+                spinbox = Gtk.Box.new(Gtk.Orientation.HORIZONTAL, 10)
+                spinbox_label = Gtk.Label.new(option["label"])
+                spinbox_label.set_halign(Gtk.Align.START)
+                spinbox.pack_start(spinbox_label, True, True, 0)
+                spinbutton = Gtk.SpinButton.new_with_range(option["min"],option["max"],option["step"])
+                spinbutton.set_value(option["value"])
+                spinbutton.set_snap_to_ticks(True)
+                spinbutton.set_halign(Gtk.Align.END)
+                spinbutton.set_valign(Gtk.Align.CENTER)
+                spinbutton.connect("changed", self.on_setting_changed)
+                spinbox.pack_start(spinbutton, True, True, 0)
+                box.pack_start(spinbox, False, True, 0)
+                self.widgets[option["name"]] = spinbutton
         #---------------------------
         if len(self.widgets) > 0:
+            xfwm_dir = os.path.join(self.current_theme_dir, "xfwm4")
+            if (self.desktop_environment == "XFCE" and os.path.exists(xfwm_dir)):
+                label = Gtk.Label.new("For title bar changes, ensure 'Set matching Xfwm4 theme'"\
+                   " in Appearance settings is checked.")
+                label.set_line_wrap(True)
+                label.set_size_request(450, -1)
+                box.pack_start(label, False, True, 0)
+            #---------------------------
             self.applybutton = Gtk.Button.new_with_label("Apply")
             self.applybutton.set_halign(Gtk.Align.CENTER)
             self.applybutton.set_valign(Gtk.Align.END)
@@ -132,7 +176,6 @@ class OptionsWindow(Gtk.Window):
         setthemebox = Gtk.Box.new(Gtk.Orientation.HORIZONTAL, 10)
         self.setthemebox_label = Gtk.Label.new("")
         self.setthemebox_label.set_halign(Gtk.Align.START)
-        self.setthemebox_label.set_line_wrap(True)
         setthemebox.pack_start(self.setthemebox_label, True, True, 0)
         self.setthemebox_button = Gtk.Button.new()
         self.setthemebox_button.set_label("Set theme")
@@ -147,7 +190,6 @@ class OptionsWindow(Gtk.Window):
             adwaitabox = Gtk.Box.new(Gtk.Orientation.HORIZONTAL, 10)
             self.adwaitabox_label = Gtk.Label.new("")
             self.adwaitabox_label.set_halign(Gtk.Align.START)
-            self.adwaitabox_label.set_line_wrap(True)
             adwaitabox.pack_start(self.adwaitabox_label, True, True, 0)
             self.adwaitabox_button = Gtk.Button.new()
             self.adwaitabox_button.set_halign(Gtk.Align.END)
@@ -156,7 +198,6 @@ class OptionsWindow(Gtk.Window):
             adwaitabox.pack_start(self.adwaitabox_button, True, True, 0)
             box.pack_start(adwaitabox, False, True, 0)
             self.update_adwaitabox()
-        
 
     def update_adwaitabox(self):
         if is_libadwaita_linked(self.current_theme_dir):
@@ -184,13 +225,10 @@ class OptionsWindow(Gtk.Window):
             self.setthemebox_button.set_sensitive(True)
 
     def on_setthemebox_button_clicked(self, button):
-        set_theme(self.current_theme_name, self.current_theme_name, reload_only = False)
+        set_theme(self.current_theme_name)
         self.update_setthemebox()
 
-    def on_combo_changed(self, combo):
-        self.applybutton.set_sensitive(True)
-
-    def on_switch_changed(self, switch, state):
+    def on_setting_changed(self, *args):
         self.applybutton.set_sensitive(True)
 
     def load_config_file(self):
@@ -208,6 +246,7 @@ class OptionsWindow(Gtk.Window):
             random_chars = "".join(random.choices(string.digits, k=3))
             new_theme_name = self.options["theme_name"] + random_chars
             new_theme_dir = os.path.join(os.path.dirname(self.current_theme_dir), new_theme_name)
+            print ("Renaming theme to " + new_theme_name + "...")
         else: #keep same name
             new_theme_dir = self.current_theme_dir
             new_theme_name = self.current_theme_name
@@ -238,21 +277,33 @@ class OptionsWindow(Gtk.Window):
                     option["value"] = value
                     if value:
                         command.append("--" + option["name"])
+                elif option["type"] == "color-chooser":
+                    command.append("--" + option["name"])
+                    rgba = self.widgets[option["name"]].get_rgba()
+                    red = int(round(rgba.red * 255))
+                    green = int(round(rgba.green * 255))
+                    blue = int(round(rgba.blue * 255))
+                    value = f"#{red:02x}{green:02x}{blue:02x}"
+                    option["value"] = value
+                    command.append(value)
+                elif option["type"] == "spinbutton":
+                    command.append("--" + option["name"])
+                    value = self.widgets[option["name"]].get_value()
+                    if value == int(value):
+                        value = int(value)
+                    option["value"] = value
+                    command.append(str(value))
         
         #Install theme
-        try:
-            print ("Running..." + " ".join(command))
-            subprocess.run(command, check=True)
-            print("Install finished OK")
-        except subprocess.CalledProcessError as e:
-            print(f"Install script error. Return code: {e.returncode}")
-            print(f"Output:\n{e.output.decode('utf-8')}")
+        print ("Running..." + " ".join(command))
+        subprocess.run(command, check=True)
+        print("Install finished OK")
         
         #save settings
         self.save_config_file(new_theme_dir)
 
         #apply desktop theme
-        set_theme(self.current_theme_name, new_theme_name, reload_only = True)
+        update_theme(self.current_theme_name, new_theme_name)
         self.applybutton.set_sensitive(False)
 
         #Relink libadwaita if neccessary
@@ -295,14 +346,11 @@ def gsettings_get(schema, key):
     else:
         return ""
 
-def gsettings_set(schema, key, old_value, new_value, reload_only):
-    if not reload_only or gsettings_get(schema, key) == old_value:
-        if Gio.SettingsSchemaSource.get_default().lookup(schema, True) is not None:
-            print ("gsettings resetting " + schema + " " + key)
-            setting = Gio.Settings.new(schema)
-            if new_value == old_value:
-                setting.set_string(key, "")
-            setting.set_string(key, new_value)
+def gsettings_set(schema, key, value):
+    if Gio.SettingsSchemaSource.get_default().lookup(schema, True) is not None:
+        print ("gsettings setting " + schema + " " + key + " " + value)
+        setting = Gio.Settings.new(schema)
+        setting.set_string(key, value)
 
 def xfconf_get(channel, key):
     try:
@@ -313,14 +361,22 @@ def xfconf_get(channel, key):
         output = ""
     return output.rstrip("\n")
 
-def xfconf_set(channel, key, theme_name, reload_only):
-    if not reload_only or xfconf_get(channel, key) == theme_name:
+def xfconf_set(channel, key, value):
+    try:
+        print ("xfconf-query setting ", channel, key, value)
+        subprocess.run(["xfconf-query", "-c", channel, "-p", key, "-s", value])
+    except Exception as e:
+        print("xfconf-query error: ", e)
+
+def xfconf_reset(channel, key):
+    try:
         print ("xfconf-query resetting ", channel, key)
         subprocess.run(["xfconf-query", "-c", channel, "-p", key, "-r"])
-        subprocess.run(["xfconf-query", "-c", channel, "-p", key, "-s", theme_name])
+    except Exception as e:
+        print("xfconf-query error: ", e)
 
 def is_current_theme(current_theme_name):
-    if desktop_environment in {"GNOME", "pop", "Pantheon", "Budgie", "Unity"}:
+    if desktop_environment in {"GNOME", "ubuntu:GNOME", "pop", "Pantheon", "Budgie", "Unity"}:
         return gsettings_get("org.gnome.desktop.interface",
                                         "gtk-theme") == current_theme_name
     elif desktop_environment == "Cinnamon":
@@ -332,33 +388,82 @@ def is_current_theme(current_theme_name):
     elif desktop_environment == "MATE":
         return gsettings_get("org.mate.interface", "gtk-theme") == current_theme_name
 
-def set_theme(current_theme_name, new_theme_name, reload_only):
-    if desktop_environment in {"GNOME", "pop", "Pantheon"}:
-        gsettings_set("org.gnome.desktop.interface", "gtk-theme",
-                    current_theme_name, new_theme_name, reload_only)
+def set_theme(theme_name):
+    if desktop_environment in {"ubuntu:GNOME", "GNOME", "pop", "Pantheon"}:
+        gsettings_set("org.gnome.desktop.interface", "gtk-theme", theme_name)
     elif desktop_environment == "Cinnamon":
-        gsettings_set("org.cinnamon.desktop.interface", "gtk-theme",
-                            current_theme_name, new_theme_name, reload_only)
-        gsettings_set("org.cinnamon.theme", "name", current_theme_name,
-                                            new_theme_name, reload_only)
+        gsettings_set("org.cinnamon.desktop.interface", "gtk-theme", theme_name)
     elif desktop_environment == "XFCE":
-        xfconf_set("xsettings", "/Net/ThemeName", current_theme_name, reload_only)
+        xfconf_set("xsettings", "/Net/ThemeName", theme_name)
         #xfconf_set("xfwm4", "/general/theme", current_theme_name, reload_only)
     elif desktop_environment == "MATE":
-        gsettings_set("org.mate.interface", "gtk-theme",
-                            current_theme_name, new_theme_name, reload_only)
+            gsettings_set("org.mate.interface", "gtk-theme", theme_name)
     elif desktop_environment == "Budgie":
         setting = Gio.Settings.new("org.gnome.desktop.interface")
         current_color_scheme = setting.get_string("color-scheme")
-        gsettings_set("org.gnome.desktop.interface", "gtk-theme",
-                            current_theme_name, new_theme_name, reload_only)
+        gsettings_set("org.gnome.desktop.interface", "gtk-theme", theme_name)
         time.sleep(1)
         setting.set_string("color-scheme", current_color_scheme)
     elif desktop_environment == "Unity":
-        gsettings_set("org.gnome.desktop.interface", "gtk-theme",
-                            current_theme_name, new_theme_name, reload_only)
-        gsettings_set("org.gnome.desktop.wm.preferences", "theme",
-                            current_theme_name, new_theme_name, reload_only)
+        gsettings_set("org.gnome.desktop.interface", "gtk-theme", theme_name)
+        gsettings_set("org.gnome.desktop.wm.preferences", "theme", theme_name)
+
+def update_theme(current_theme_name, new_theme_name):
+    if desktop_environment in {"ubuntu:GNOME", "GNOME", "pop", "Pantheon"}:
+        if gsettings_get("org.gnome.desktop.interface", "gtk-theme") == current_theme_name:
+            if current_theme_name == new_theme_name:
+                gsettings_set("org.gnome.desktop.interface", "gtk-theme", "")
+            gsettings_set("org.gnome.desktop.interface", "gtk-theme", new_theme_name)
+
+    elif desktop_environment == "Cinnamon":
+        def reset_cinnamon_theme():
+            if current_theme_name == new_theme_name:
+                gsettings_set("org.cinnamon.theme", "name", "")
+            gsettings_set("org.cinnamon.theme", "name", new_theme_name)
+            return False
+
+        if gsettings_get("org.cinnamon.desktop.interface", "gtk-theme") == current_theme_name:
+            if current_theme_name == new_theme_name:
+                gsettings_set("org.cinnamon.desktop.interface", "gtk-theme", "")
+            gsettings_set("org.cinnamon.desktop.interface", "gtk-theme", new_theme_name)
+
+            if gsettings_get("org.cinnamon.theme", "name") == current_theme_name:
+                GLib.timeout_add_seconds(1, reset_cinnamon_theme)
+        elif gsettings_get("org.cinnamon.theme", "name") == current_theme_name:
+            reset_cinnamon_theme()
+
+    elif desktop_environment == "XFCE":
+        if xfconf_get("xsettings", "/Net/ThemeName") == current_theme_name:
+            xfconf_reset("xsettings", "/Net/ThemeName")
+            xfconf_set("xsettings", "/Net/ThemeName", new_theme_name)
+        #xfconf_set("xfwm4", "/general/theme", current_theme_name, reload_only)
+
+    elif desktop_environment == "MATE":
+        def set_mate_theme():
+            gsettings_set("org.mate.interface", "gtk-theme", new_theme_name)
+            return False
+            
+        if gsettings_get("org.mate.interface", "gtk-theme") == current_theme_name:
+            gsettings_set("org.mate.interface", "gtk-theme", "")
+            GLib.timeout_add_seconds(1, set_mate_theme)
+
+    elif desktop_environment == "Budgie":
+        if gsettings_get("org.gnome.desktop.interface", "gtk-theme") == current_theme_name:
+            setting = Gio.Settings.new("org.gnome.desktop.interface")
+            current_color_scheme = setting.get_string("color-scheme")
+            if current_theme_name == new_theme_name:
+                gsettings_set("org.gnome.desktop.interface", "gtk-theme", "")
+            gsettings_set("org.gnome.desktop.interface", "gtk-theme", new_theme_name)
+            time.sleep(1)
+            setting.set_string("color-scheme", current_color_scheme)
+            
+    elif desktop_environment == "Unity":
+        if gsettings_get("org.gnome.desktop.interface", "gtk-theme") == current_theme_name:
+            if current_theme_name == new_theme_name:
+                gsettings_set("org.gnome.desktop.interface", "gtk-theme", "")
+                gsettings_set("org.gnome.desktop.wm.preferences", "theme", "")
+            gsettings_set("org.gnome.desktop.interface", "gtk-theme", new_theme_name)
+            gsettings_set("org.gnome.desktop.wm.preferences", "theme", new_theme_name)
     
 if __name__ == "__main__":
     Gtk.init()
