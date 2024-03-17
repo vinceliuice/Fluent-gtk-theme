@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="64"
+   height="64"
+   viewBox="0 0 16.933333 16.933334"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20, custom)"
+   sodipodi:docname="menu.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#d9d9d9"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     units="px"
+     width="120px"
+     inkscape:zoom="8.16734"
+     inkscape:cx="7.9585275"
+     inkscape:cy="47.628726"
+     inkscape:window-width="1920"
+     inkscape:window-height="1012"
+     inkscape:window-x="0"
+     inkscape:window-y="34"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     showguides="true"
+     inkscape:guide-bbox="true">
+    <inkscape:grid
+       type="xygrid"
+       id="grid1045" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2">
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter1295"
+       x="-0.108"
+       y="-0.108"
+       width="1.216"
+       height="1.216">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.61912499"
+         id="feGaussianBlur1297" />
+    </filter>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1317">
+      <path
+         id="path1319"
+         style="opacity:0.95;fill:#ffffff;stroke-width:0.973839;stroke-linecap:round;stroke-linejoin:round"
+         d="m 0.23047689,-3.96875 c -2.03320019,0 -3.67006019,1.63686 -3.67006019,3.67006023 V 16.173689 c 0,2.033201 1.63686,3.670061 3.67006019,3.670061 H 16.702856 c 2.033201,0 3.67006,-1.63686 3.67006,-3.670061 V -0.29868977 C 20.372916,-2.33189 18.736057,-3.96875 16.702856,-3.96875 Z M 2.38125,1.0583333 h 1.326534 9.517765 1.326534 c 0.439737,0 0.79375,0.3540128 0.79375,0.79375 v 1.3265341 9.5177646 1.326534 c 0,0.439738 -0.354013,0.79375 -0.79375,0.79375 H 13.225549 3.707784 2.38125 c -0.4397373,0 -0.79375,-0.354012 -0.79375,-0.79375 V 12.696382 3.1786174 1.8520833 c 0,-0.4397372 0.3540127,-0.79375 0.79375,-0.79375 z" />
+    </clipPath>
+  </defs>
+  <g
+     inkscape:label="图层 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="opacity:0.25;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.15;paint-order:stroke fill markers;filter:url(#filter1295)"
+       id="rect1275"
+       width="13.758333"
+       height="13.758333"
+       x="1.5875003"
+       y="1.5875003"
+       rx="0.79374951"
+       ry="0.79374951"
+       clip-path="url(#clipPath1317)" />
+    <path
+       id="rect1038"
+       style="opacity:0.1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2.07693;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.15;paint-order:stroke fill markers"
+       d="M 9 3 C 6.7840006 3 5 4.7840006 5 7 L 5 53 C 5 55.215999 6.7840006 57 9 57 L 55 57 C 57.215999 57 59 55.215999 59 53 L 59 7 C 59 4.7840006 57.215999 3 55 3 L 9 3 z M 9 4 L 55 4 C 56.661999 4 58 5.338001 58 7 L 58 53 C 58 54.661999 56.661999 56 55 56 L 9 56 C 7.338001 56 6 54.661999 6 53 L 6 7 C 6 5.338001 7.338001 4 9 4 z "
+       transform="scale(0.26458333)" />
+    <rect
+       style="opacity:0.95;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.15;paint-order:stroke fill markers"
+       id="rect832"
+       width="13.758333"
+       height="13.758333"
+       x="1.5875001"
+       y="1.0583333"
+       rx="0.79374951"
+       ry="0.79374951" />
+  </g>
+</svg>

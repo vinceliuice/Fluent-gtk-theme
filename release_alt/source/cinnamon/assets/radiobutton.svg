@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="24"
+   height="24"
+   version="1.1"
+   viewBox="0 0 24 24"
+   id="svg2117"
+   sodipodi:docname="radiobutton.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs2121" />
+  <sodipodi:namedview
+     id="namedview2119"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="19.666667"
+     inkscape:cx="15.635593"
+     inkscape:cy="11.542373"
+     inkscape:window-width="1920"
+     inkscape:window-height="1012"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2117" />
+  <path
+     d="M 12,2 C 6.48,2 2,6.48 2,12 2,17.52 6.48,22 12,22 17.52,22 22,17.52 22,12 22,6.48 17.52,2 12,2 Z"
+     fill="#3476cf"
+     id="path2115"
+     sodipodi:nodetypes="sssss" />
+  <path
+     d="m 12,7 c 2.761424,0 5,2.2385763 5,5 0,2.761424 -2.238576,5 -5,5 C 9.2385763,17 7,14.761424 7,12 7,9.2385763 9.2385763,7 12,7 Z"
+     fill="#3476cf"
+     id="path2123"
+     sodipodi:nodetypes="sssss"
+     style="fill:#ffffff" />
+</svg>
