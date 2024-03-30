@@ -22,7 +22,6 @@ $notification_banner_width: 34em;
   background-color: transparent !important;
   color: $secondary_fg_color !important;
   font-weight: 500;
-  border-width: 0;
   border-top: 1px solid $border_color !important;
 
   &:focus {
@@ -48,26 +47,48 @@ $notification_banner_width: 34em;
   }
 
   &:first-child:ltr {
-    border-radius: 0 0 0 $buttons_radius;
+    border-radius: 0 0 0 $material_radius;
   }
 
   &:last-child:ltr {
-    border-radius: 0 0 $buttons_radius;
+    border-radius: 0 0 $material_radius;
     margin-right: 0 !important;
   }
 
   &:first-child:rtl {
-    border-radius: 0 0 $buttons_radius;
+    border-radius: 0 0 $material_radius;
   }
 
   &:last-child:rtl {
-    border-radius: 0 0 0 $buttons_radius;
+    border-radius: 0 0 0 $material_radius;
     margin-left: 0 !important;
   }
 
   &:first-child:last-child {
-    border-radius: 0 0 $buttons_radius $buttons_radius;
+    border-radius: 0 0 $material_radius $material_radius;
     margin-left: 0 !important;
     margin-right: 0 !important;
+  }
+
+  .popup-menu & {
+    &:first-child:ltr {
+      border-radius: 0 0 0 $buttons_radius;
+    }
+  
+    &:last-child:ltr {
+      border-radius: 0 0 $buttons_radius;
+    }
+  
+    &:first-child:rtl {
+      border-radius: 0 0 $buttons_radius;
+    }
+  
+    &:last-child:rtl {
+      border-radius: 0 0 0 $buttons_radius;
+    }
+  
+    &:first-child:last-child {
+      border-radius: 0 0 $buttons_radius $buttons_radius;
+    }
   }
 }

@@ -1193,10 +1193,11 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   border-radius: 3px;
   color: rgba(255, 255, 255, 0.7);
   text-shadow: none;
-  padding: 0.818em;
+  padding: 0;
   margin: 2px;
   box-shadow: 0 3px 8px -2px rgba(0, 0, 0, 0.15);
   background-color: rgba(32, 32, 32, 0.95);
+  border: 1px solid transparent;
 }
 
 .message:hover, .message:focus, .message:active {
@@ -1205,7 +1206,6 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .popup-menu .message {
   box-shadow: none;
-  padding: 0;
   margin: 0 0 2px;
   box-shadow: none;
   background-color: rgba(255, 255, 255, 0.03);
@@ -1469,7 +1469,6 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   background-color: transparent !important;
   color: rgba(255, 255, 255, 0.7) !important;
   font-weight: 500;
-  border-width: 0;
   border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
 }
 
@@ -1496,27 +1495,47 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .notification-button:first-child:ltr {
-  border-radius: 0 0 0 3px;
+  border-radius: 0 0 0 6px;
 }
 
 .notification-button:last-child:ltr {
-  border-radius: 0 0 3px;
+  border-radius: 0 0 6px;
   margin-right: 0 !important;
 }
 
 .notification-button:first-child:rtl {
-  border-radius: 0 0 3px;
+  border-radius: 0 0 6px;
 }
 
 .notification-button:last-child:rtl {
-  border-radius: 0 0 0 3px;
+  border-radius: 0 0 0 6px;
   margin-left: 0 !important;
 }
 
 .notification-button:first-child:last-child {
-  border-radius: 0 0 3px 3px;
+  border-radius: 0 0 6px 6px;
   margin-left: 0 !important;
   margin-right: 0 !important;
+}
+
+.popup-menu .notification-button:first-child:ltr {
+  border-radius: 0 0 0 3px;
+}
+
+.popup-menu .notification-button:last-child:ltr {
+  border-radius: 0 0 3px;
+}
+
+.popup-menu .notification-button:first-child:rtl {
+  border-radius: 0 0 3px;
+}
+
+.popup-menu .notification-button:last-child:rtl {
+  border-radius: 0 0 0 3px;
+}
+
+.popup-menu .notification-button:first-child:last-child {
+  border-radius: 0 0 3px 3px;
 }
 
 .hotplug-notification-item {

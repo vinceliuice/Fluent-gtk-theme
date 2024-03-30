@@ -79,16 +79,16 @@
   border-radius: $buttons_radius;
   color: $secondary_fg_color;
   text-shadow: none;
-  padding: $scaled_padding * 2;
+  padding: 0;
   margin: $container_margin;
   box-shadow: 0 3px 8px -2px rgba(black, 0.15);
   background-color: rgba($base_color, 0.95);
+  border: 1px solid transparent;
 
   &:hover, &:focus, &:active { background-color: $base_color; }
 
   .popup-menu & {
     box-shadow: none;
-    padding: 0;
     margin: 0 0 $container_margin;
     box-shadow: none;
     background-color: $popover_button_bg;
