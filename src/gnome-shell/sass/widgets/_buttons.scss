@@ -1,23 +1,78 @@
 /* Buttons */
 
-.button {
-  min-height: 24px;
+%osd_button {
+  @include button(flat-normal, $tc: $inverse_fg_color);
+  &:focus { @include button(flat-focus, $tc: $inverse_fg_color); }
+  &:hover { @include button(flat-hover, $tc: $inverse_fg_color); }
+  &:active { @include button(flat-active, $tc: $inverse_fg_color); }
+  &:checked { @include button(checked); }
+  &:insensitive { @include button(flat-insensitive, $tc: $inverse_disabled_secondary_fg_color); }
+}
+
+%flat_button {
+  @include button(flat-normal);
+  &:focus { @include button(flat-focus); }
+  &:hover { @include button(flat-hover); }
+  &:selected, &:active { @include button(flat-active); }
+  &:checked { @include button(flat-checked); }
+  &:insensitive { @include button(flat-insensitive); }
+}
+
+%default_button {
+  @include button(normal, $c:$primary_color, $tc:$light_fg_color);
+  &:focus { @include button(focus, $c:$primary_color, $tc:$light_fg_color); }
+  &:hover { @include button(hover, $c:$primary_color, $tc:$light_fg_color); }
+  &:insensitive { @include button(insensitive, $c:$primary_color, $tc:$light_fg_color); }
+  &:active { @include button(active, $c:$primary_color, $tc:$light_fg_color); }
+}
+
+%button {
   padding: $container_padding $container_padding * 2;
   border-width: 0;
   border-radius: $buttons_radius;
   @include font(button);
   @include button(flat-normal);
-  &:hover { @include button(flat-hover); }
-  &:active { @include button(flat-active); }
-  &:insensitive { @include button(flat-insensitive); }
   &:focus { @include button(flat-focus); }
+  &:hover { @include button(flat-hover); }
+  &:selected, &:active { @include button(flat-active); }
+  &:checked { @include button(checked); }
+  &:insensitive { @include button(flat-insensitive); }
 }
 
-%osd_button {
-  @include button(flat-normal, $tc: $inverse_fg_color);
-  &:hover { @include button(flat-hover, $tc: $inverse_fg_color); }
-  &:active { @include button(flat-active, $tc: $inverse_fg_color); }
-  &:checked { @include button(checked); }
-  &:insensitive { @include button(flat-insensitive, $tc: $inverse_disabled_secondary_fg_color); }
-  &:focus { @include button(flat-focus, $tc: $inverse_fg_color); }
+.button {
+  @extend %button;
+  min-height: to_em(22px);
+
+  // default style
+  &.default {
+    @extend %default_button;
+  }
+
+  // flat style
+  &.flat {
+    @extend %flat_button;
+  }
+}
+
+.icon-button {
+  @extend %button;
+
+  border-radius: $circular_radius; // is circular
+  padding: $scaled_padding * 2;
+  min-height: $scalable_icon_size;
+
+  StIcon {
+    icon-size: $scalable_icon_size;
+    -st-icon-style: symbolic;
+  }
+
+  // default style
+  &.default {
+    @extend %default_button;
+  }
+
+  // flat style
+  &.flat {
+    @extend %flat_button;
+  }
 }

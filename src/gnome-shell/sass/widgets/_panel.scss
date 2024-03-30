@@ -99,11 +99,25 @@ $panel_transition_duration: 250ms; // same as the overview transition duration
     StLabel { padding: 0; }
 
     &.clock-display {
+      &:hover {
+        color: $panel_secondary_fg_color;
+        background-color: $panel_divider_color !important;
+      }
+  
+      &:active, &:checked, &:focus {
+        color: $panel_fg_color;
+        background-color: $panel_track_color !important;
+      }
+
       .clock {
         color: $panel_secondary_fg_color;
         transition-duration: 150ms;
         border: none;
         border-radius: 0;
+      }
+
+      .messages-indicator {
+        icon-size: $scalable_icon_size;
       }
     }
 

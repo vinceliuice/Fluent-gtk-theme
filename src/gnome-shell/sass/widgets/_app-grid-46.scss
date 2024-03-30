@@ -1,42 +1,40 @@
 /* App Grid */
 
-%icon_tile {
-  color: $inverse_fg_color;
-  border-radius: $buttons_radius * 3;
-  padding: 6px;
-  border: 1px solid transparent;
-  box-shadow: inset 0 1px transparent;
-  transition-duration: $longer_duration;
-  text-align: center;
-}
-
+$app_icon_size: 96px;
+$app_folder_size: 720px;
 
 // app icons
 .icon-grid {
   row-spacing: 12px;
   column-spacing: 12px;
-  max-row-spacing: 72px;
-  max-column-spacing: 72px;
+  max-row-spacing: 36px;
+  max-column-spacing: 36px;
   page-padding-top: 24px;
   page-padding-bottom: 24px;
-  page-padding-left: 12px;
-  page-padding-right: 12px;
+  page-padding-left: 18px;
+  page-padding-right: 18px;
 }
 
 /* App Icons */
 
-%app-well-app,
-.show-apps,
-.app-well-app,
-.grid-search-result {
-  & .overview-icon {
-    @extend %icon_tile;
-  }
+// items in the app grid and dash
+.overview-tile {
+  border-radius: $menu_radius * 3;
+  padding: 12px;
+  spacing: 6px;
+  transition-duration: $longer_duration;
+  text-align: center;
+  background-color: transparent;
+  color: $inverse_fg_color;
+  border: 1px solid transparent;
+  box-shadow: inset 0 1px transparent;
 
-  &:hover .overview-icon,
-  &:focus .overview-icon,
-  &:selected .overview-icon {
+  &:hover,
+  &:focus,
+  &:highlighted,
+  &:selected {
     background-color: $inverse_divider_color;
+    color: $inverse_fg_color;
     transition-duration: 0ms;
     border-image: none;
     background-image: none;
@@ -47,10 +45,11 @@
     }
   }
 
-  &:active .overview-icon,
-  &:checked .overview-icon {
+  &:active,
+  &:checked {
     background-color: $inverse_divider_color;
     transition-duration: $longer_duration;
+    color: $inverse_fg_color;
 
     @if $window == 'round' {
       border: 1px solid $icon_border_color;
@@ -58,17 +57,31 @@
     }
   }
 
-  .overview-icon.overview-icon-with-label {
-    padding: 10px 8px 5px 8px;
-
-    > StBoxLayout {
-      spacing: $container_padding;
+  // the icon itself
+  .overview-icon {
+    // item with a label
+    &.overview-icon-with-label {
+      > StBoxLayout {
+        spacing: $container_padding;
+      }
     }
   }
 }
 
+// app folders
+.app-folder {
+  background-color: $inverse_bg_color;
+
+  &:focus { background-color: $inverse_divider_color; }
+  &:hover { background-color: $inverse_divider_color; }
+  &:active { background-color: $inverse_track_color; }
+  &:highlighted,&:selected,
+  &:checked { background-color: $inverse_track_color; }
+  &:insensitive { background-color: transparent; }
+}
+
 // Running app indicator (also shown in dash)
-.app-well-app-running-dot {
+.app-grid-running-dot {
   width: 6px; height: 3px;
   border-radius: 2px;
   background-color: $inverse_hint_fg_color;
@@ -76,39 +89,35 @@
 }
 
 StWidget.focused {
-  .app-well-app-running-dot {
+  .app-grid-running-dot {
     width: 18px;
     background-color: $primary_color;
   }
 }
 
-/* App Folders */
-.app-well-app.app-folder {
-  background: none;
-  border-radius: $buttons_radius * 2;
-
-  .overview-icon {
-    background-color: $inverse_bg_color;
-    border-radius: $buttons_radius * 2;
-  }
-
-  &:hover .overview-icon {
-    background-color: $inverse_divider_color;
-  }
-
-  &:active .overview-icon {
-    background-color: $inverse_track_color;
+.app-folder-dialog-container {
+  // pad the top with panel height so the folder doesn't overlap the panel on smaller resolutions
+  @if $panel_style == 'compact' {
+    padding-top: $medium_size - 2px;
+  } @else {
+    padding-top: $medium_size + 2px;
   }
 }
 
 // expanded folder
 .app-folder-dialog { //style like the dash
+  width: $app_folder_size;
+  height: $app_folder_size;
   border-radius: $buttons_radius * 4;
   background-color: rgba(#222, 0.95);
+  color: white;
 
   @if $window == 'round' {
     border: 1px solid $icon_border_color;
     box-shadow: inset 0 1px $icon_highlight_color;
+  } @else {
+    border: none;
+    box-shadow: none;
   }
 
   & .folder-name-container {
@@ -125,6 +134,7 @@ StWidget.focused {
       border: none;
       color: $light_fg_color;
       background-color: rgba(white, 0.15);
+      caret-color: $light_fg_color;
       selection-background-color: $primary_color;
       selected-color: $light_fg_color;
       width: 300px;
@@ -146,9 +156,12 @@ StWidget.focused {
     }
 
     /* FIXME: this is to keep the label in sync with the entry */
-    & .folder-name-label { padding: 5px 7px; color: $inverse_secondary_fg_color; }
+    & .folder-name-label {
+      padding: 5px 7px;
+      color: $inverse_secondary_fg_color;
+    }
 
-    & .edit-folder-button {
+    & .icon-button {
       background-color: $inverse_divider_color;
       color: $inverse_secondary_fg_color;
       border: none;
@@ -209,6 +222,7 @@ StWidget.focused {
     height: 10px;
     border-radius: 10px; // the same as height&width
     background-color: white;
+    transition-duration: 400ms;
   }
 }
 
@@ -225,8 +239,6 @@ StWidget.focused {
 }
 
 .page-navigation-hint {
-  width: 300px;
-
   &.dnd {
     background: rgba(255, 255, 255, 0.1);
   }
@@ -249,26 +261,27 @@ StWidget.focused {
 }
 
 .page-navigation-arrow {
-  &  > StIcon {
-    margin: 6px;
-    padding: 18px;
-    width: 24px;
-    height: 24px;
-    border-radius: $circular_radius;
-    color: $inverse_secondary_fg_color;
-  }
+  margin: 6px;
+  padding: 18px;
+  width: 24px;
+  height: 24px;
+  border-radius: $circular_radius;
+  color: $inverse_secondary_fg_color;
+  background-color: transparent;
 
-  &:insensitive > StIcon {
+  > StIcon { color: $inverse_fg_color; }
+
+  &:insensitive {
     background-color: rgba(white, 0.05);
     color: rgba(white, 0.45);
   }
 
-  &:hover > StIcon {
+  &:hover {
     background-color: rgba(white, 0.1);
     color: white;
   }
 
-  &:active > StIcon {
+  &:active {
     background-color: rgba(white, 0.2);
     color: white;
   }

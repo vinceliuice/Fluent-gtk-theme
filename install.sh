@@ -32,7 +32,9 @@ SIZE_VARIANTS=('' '-compact')
 if [[ "$(command -v gnome-shell)" ]]; then
   gnome-shell --version
   SHELL_VERSION="$(gnome-shell --version | cut -d ' ' -f 3 | cut -d . -f -1)"
-  if [[ "${SHELL_VERSION:-}" -ge "44" ]]; then
+  if [[ "${SHELL_VERSION:-}" -ge "46" ]]; then
+    GS_VERSION="46-0"
+  elif [[ "${SHELL_VERSION:-}" -ge "44" ]]; then
     GS_VERSION="44-0"
   elif [[ "${SHELL_VERSION:-}" -ge "42" ]]; then
     GS_VERSION="42-0"
