@@ -88,7 +88,6 @@
   &:hover, &:focus, &:active { background-color: $base_color; }
 
   .popup-menu & {
-    box-shadow: none;
     margin: 0 0 $container_margin;
     box-shadow: none;
     background-color: $popover_button_bg;
