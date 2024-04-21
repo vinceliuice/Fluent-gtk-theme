@@ -405,7 +405,7 @@ statuspage {
   }
 
   &.compact > scrolledwindow > viewport > box {
-    margin: $space-size * 4 $space-size 8 2;
+    margin: $space-size * 4 $space-size 8px 2px;
     border-spacing: $space-size * 4;
 
     > clamp > box {
