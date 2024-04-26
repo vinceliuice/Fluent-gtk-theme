@@ -99,6 +99,14 @@ $panel_transition_duration: 250ms; // same as the overview transition duration
     StLabel { padding: 0; }
 
     &.clock-display {
+      @if $window == 'round' {
+        border: 1px solid transparent !important;
+        box-shadow: inset 0 1px transparent !important;
+      } @else {
+        border: none !important;
+        box-shadow: none !important;
+      }
+
       &:hover {
         color: $panel_secondary_fg_color;
         background-color: $panel_divider_color !important;
@@ -198,12 +206,6 @@ $panel_transition_duration: 250ms; // same as the overview transition duration
       color: $inverse_secondary_fg_color;
       background-color: transparent;
 
-      &.clock-display {
-        .clock {
-          color: $inverse_secondary_fg_color;
-        }
-      }
-
       &:hover {
         background-color: $inverse_divider_color;
       }
@@ -216,6 +218,27 @@ $panel_transition_duration: 250ms; // same as the overview transition duration
         &:hover, &:active, &:overview, &:focus, &:checked {
           border: 1px solid $icon_border_color;
           box-shadow: inset 0 1px $icon_highlight_color;
+        }
+      }
+
+      &.clock-display {
+        &:hover {
+          background-color: $inverse_divider_color !important;
+        }
+
+        &:active, &:checked, &:focus {
+          background-color: $inverse_track_color !important;
+        }
+
+        @if $window == 'round' {
+          &:hover, &:active, &:overview, &:focus, &:checked {
+            border: 1px solid $icon_border_color !important;
+            box-shadow: inset 0 1px $icon_highlight_color !important;
+          }
+        }
+
+        .clock {
+          color: $inverse_secondary_fg_color;
         }
       }
 

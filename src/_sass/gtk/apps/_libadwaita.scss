@@ -1319,3 +1319,23 @@ themeswitcher { // Gnome console
     }
   }
 }
+
+//
+// Floating Sheet
+//
+
+floating-sheet {
+  > dimming {
+    background-color: rgba(black, 0.25);
+  }
+
+  > sheet.background {
+    border-radius: $window-radius;
+
+    @if $outline == 'false' {
+      box-shadow: $shadow-z16, 0 0 0 36px transparent;
+    } @else {
+      box-shadow: $shadow-z16, 0 0 0 1px $divider, 0 0 0 36px transparent;
+    }
+  }
+}

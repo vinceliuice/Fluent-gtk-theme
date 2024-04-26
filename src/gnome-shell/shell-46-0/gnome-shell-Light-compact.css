@@ -1205,7 +1205,6 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .popup-menu .message {
-  box-shadow: none;
   margin: 0 0 2px;
   box-shadow: none;
   background-color: rgba(255, 255, 255, 0.35);
@@ -2096,6 +2095,11 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   padding: 0;
 }
 
+#panel .panel-button.clock-display {
+  border: none !important;
+  box-shadow: none !important;
+}
+
 #panel .panel-button.clock-display:hover {
   color: rgba(0, 0, 0, 0.75);
   background-color: rgba(255, 255, 255, 0.35) !important;
@@ -2176,16 +2180,24 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   background-color: transparent;
 }
 
-#panel.unlock-screen .panel-button.clock-display .clock, #panel.login-screen .panel-button.clock-display .clock, #panel.lock-screen .panel-button.clock-display .clock, #panel:overview .panel-button.clock-display .clock {
-  color: rgba(255, 255, 255, 0.7);
-}
-
 #panel.unlock-screen .panel-button:hover, #panel.login-screen .panel-button:hover, #panel.lock-screen .panel-button:hover, #panel:overview .panel-button:hover {
   background-color: rgba(255, 255, 255, 0.15);
 }
 
 #panel.unlock-screen .panel-button:active, #panel.unlock-screen .panel-button:checked, #panel.unlock-screen .panel-button:focus, #panel.login-screen .panel-button:active, #panel.login-screen .panel-button:checked, #panel.login-screen .panel-button:focus, #panel.lock-screen .panel-button:active, #panel.lock-screen .panel-button:checked, #panel.lock-screen .panel-button:focus, #panel:overview .panel-button:active, #panel:overview .panel-button:checked, #panel:overview .panel-button:focus {
   background-color: rgba(255, 255, 255, 0.3);
+}
+
+#panel.unlock-screen .panel-button.clock-display:hover, #panel.login-screen .panel-button.clock-display:hover, #panel.lock-screen .panel-button.clock-display:hover, #panel:overview .panel-button.clock-display:hover {
+  background-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+#panel.unlock-screen .panel-button.clock-display:active, #panel.unlock-screen .panel-button.clock-display:checked, #panel.unlock-screen .panel-button.clock-display:focus, #panel.login-screen .panel-button.clock-display:active, #panel.login-screen .panel-button.clock-display:checked, #panel.login-screen .panel-button.clock-display:focus, #panel.lock-screen .panel-button.clock-display:active, #panel.lock-screen .panel-button.clock-display:checked, #panel.lock-screen .panel-button.clock-display:focus, #panel:overview .panel-button.clock-display:active, #panel:overview .panel-button.clock-display:checked, #panel:overview .panel-button.clock-display:focus {
+  background-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+#panel.unlock-screen .panel-button.clock-display .clock, #panel.login-screen .panel-button.clock-display .clock, #panel.lock-screen .panel-button.clock-display .clock, #panel:overview .panel-button.clock-display .clock {
+  color: rgba(255, 255, 255, 0.7);
 }
 
 #panel.unlock-screen .panel-button#panelActivities, #panel.login-screen .panel-button#panelActivities, #panel.lock-screen .panel-button#panelActivities, #panel:overview .panel-button#panelActivities {
@@ -2744,12 +2756,6 @@ StWidget.focused .app-grid-running-dot {
 
 .app-folder-dialog .page-indicators {
   margin-bottom: 18px;
-}
-
-.app-folder-dialog-container {
-  padding: 12px;
-  width: 620px;
-  height: 620px;
 }
 
 .rename-folder-popup .rename-folder-popup-item {

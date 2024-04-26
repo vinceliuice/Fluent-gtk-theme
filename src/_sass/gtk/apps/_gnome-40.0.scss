@@ -1073,3 +1073,19 @@ spinner.fade-in:checked {
   animation: pre-delay 0.5s linear 1, fade-in 1s linear 1, spin 1s linear infinite;
   animation-delay: 0s, 0.5s, 0.5s;
 }
+
+//
+// Text Editor
+//
+
+window.org-gnome-TextEditor {
+  popover.open-popover {
+    > contents {
+      padding: 0;
+
+      separator {
+        margin: 0;
+      }
+    }
+  }
+}

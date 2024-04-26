@@ -155,7 +155,7 @@ popover.background.magnifier > contents, .osd {
   background-clip: padding-box;
   border-radius: 2px;
   border: none;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 4px 5px 0 rgba(0, 0, 0, 0.16), 0 1px 6px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 4px 5px rgba(0, 0, 0, 0.16), 0 1px 6px rgba(0, 0, 0, 0.1);
 }
 
 .osd {
@@ -1842,10 +1842,6 @@ headerbar.selection-mode .selection-menu {
   padding-right: 16px;
 }
 
-headerbar.selection-mode .selection-menu arrow {
-  -GtkArrow-arrow-scaling: 1;
-}
-
 headerbar.selection-mode .selection-menu .arrow {
   -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
 }
@@ -2316,12 +2312,12 @@ popover.background > arrow,
 popover.background > contents {
   transition: box-shadow 75ms cubic-bezier(0, 0, 0.2, 1);
   padding: 6px;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 4px 5px 0 rgba(0, 0, 0, 0.16), 0 1px 6px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 4px 5px rgba(0, 0, 0, 0.16), 0 1px 6px rgba(0, 0, 0, 0.1);
   background-color: rgba(255, 255, 255, 0.98);
   border-radius: 3px;
   color: rgba(0, 0, 0, 0.87);
   border: none;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 4px 5px 0 rgba(0, 0, 0, 0.16), 0 1px 6px 0 rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 4px 5px rgba(0, 0, 0, 0.16), 0 1px 6px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.12);
 }
 
 popover.background:backdrop > arrow,
@@ -2358,6 +2354,10 @@ popover.background list,
 popover.background .view:not(:selected),
 popover.background toolbar {
   background-color: #FFFFFF;
+}
+
+popover.background list > row {
+  border-radius: 2px;
 }
 
 popover.background listview {
@@ -4666,7 +4666,7 @@ stackswitcher.circular button.text-button.circular {
 }
 
 .icon-dropshadow {
-  -gtk-icon-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 4px 5px 0 rgba(0, 0, 0, 0.16), 0 1px 6px 0 rgba(0, 0, 0, 0.1);
+  -gtk-icon-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 4px 5px rgba(0, 0, 0, 0.16), 0 1px 6px rgba(0, 0, 0, 0.1);
 }
 
 /*********
@@ -5284,7 +5284,7 @@ screenshot-carousel button,
 }
 
 .category-tile.card:hover {
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 4px 5px 0 rgba(0, 0, 0, 0.16), 0 1px 6px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 4px 5px rgba(0, 0, 0, 0.16), 0 1px 6px rgba(0, 0, 0, 0.1);
 }
 
 .category-tile.card.category-tile-iconless {
@@ -5795,6 +5795,14 @@ spinner.fade-in:checked {
   animation-delay: 0s, 0.5s, 0.5s;
 }
 
+window.org-gnome-TextEditor popover.open-popover > contents {
+  padding: 0;
+}
+
+window.org-gnome-TextEditor popover.open-popover > contents separator {
+  margin: 0;
+}
+
 avatar {
   border-radius: 9999px;
   font-weight: bold;
@@ -5908,7 +5916,7 @@ splitbutton.suggested-action > button:checked.keyboard-activating, splitbutton.s
 }
 
 button.opaque {
-  background-color: gtkmix(#FFFFFF, rgba(0, 0, 0, 0.87), 85%);
+  background-color: mix(#FFFFFF,rgba(0, 0, 0, 0.87),0.15);
   color: rgba(0, 0, 0, 0.87);
 }
 
@@ -6003,7 +6011,7 @@ menubutton.destructive-action {
 }
 
 menubutton.opaque {
-  background-color: gtkmix(#FFFFFF, rgba(0, 0, 0, 0.87), 85%);
+  background-color: mix(#FFFFFF,rgba(0, 0, 0, 0.87),0.15);
   color: rgba(0, 0, 0, 0.87);
 }
 
@@ -6128,7 +6136,7 @@ splitbutton.destructive-action {
 }
 
 splitbutton.opaque {
-  background-color: gtkmix(#FFFFFF, rgba(0, 0, 0, 0.87), 85%);
+  background-color: mix(#FFFFFF,rgba(0, 0, 0, 0.87),0.15);
   color: rgba(0, 0, 0, 0.87);
 }
 
@@ -6216,7 +6224,7 @@ statuspage > scrolledwindow > viewport > box > clamp > box > .icon:not(:last-chi
 }
 
 statuspage.compact > scrolledwindow > viewport > box {
-  margin: 24px 6px 8 2;
+  margin: 24px 6px 8px 2px;
   border-spacing: 24px;
 }
 
@@ -6757,12 +6765,12 @@ toolbarview.undershoot-bottom scrolledwindow > undershoot.bottom {
 }
 
 .sidebar-pane banner > revealer > widget {
-  background-color: gtkmix(#1A73E8, #FAFAFA, 30%);
+  background-color: mix(#1A73E8,#FAFAFA,0.7);
   color: rgba(0, 0, 0, 0.87);
 }
 
 .sidebar-pane banner > revealer > widget:backdrop {
-  background-color: gtkmix(#1A73E8, #FAFAFA, 30%);
+  background-color: mix(#1A73E8,#FAFAFA,0.7);
 }
 
 .sidebar-pane:dir(ltr), .sidebar-pane:dir(ltr) banner > revealer > widget, .sidebar-pane.end:dir(rtl), .sidebar-pane.end:dir(rtl) banner > revealer > widget {
@@ -6916,13 +6924,13 @@ toolbarview.undershoot-bottom scrolledwindow > undershoot.bottom {
 
 .content-pane .sidebar-pane banner > revealer > widget,
 .sidebar-pane .content-pane banner > revealer > widget {
-  background-color: gtkmix(#1A73E8, #FFFFFF, 30%);
+  background-color: mix(#1A73E8,#FFFFFF,0.7);
   color: rgba(0, 0, 0, 0.87);
 }
 
 .content-pane .sidebar-pane banner > revealer > widget:backdrop,
 .sidebar-pane .content-pane banner > revealer > widget:backdrop {
-  background-color: gtkmix(#1A73E8, #FFFFFF, 30%);
+  background-color: mix(#1A73E8,#FFFFFF,0.7);
 }
 
 .content-pane .sidebar-pane:dir(ltr), .content-pane .sidebar-pane:dir(ltr) banner > revealer > widget, .content-pane .sidebar-pane.end:dir(rtl), .content-pane .sidebar-pane.end:dir(rtl) banner > revealer > widget,
@@ -7241,6 +7249,15 @@ themeswitcher checkbutton.light {
 themeswitcher checkbutton.dark {
   color: white;
   background-color: #1e1e1e;
+}
+
+floating-sheet > dimming {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+floating-sheet > sheet.background {
+  border-radius: 3px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 16px 18px rgba(0, 0, 0, 0.15), 0 11px 23px rgba(0, 0, 0, 0.13), 0 0 0 1px rgba(0, 0, 0, 0.12), 0 0 0 36px transparent;
 }
 
 /* GTK NAMED COLORS

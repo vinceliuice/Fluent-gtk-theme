@@ -2070,6 +2070,10 @@ popover.background {
   .view:not(:selected),
   toolbar { background-color: $surface; }
 
+  list > row {
+    border-radius: $corner-radius;
+  }
+
   listview {
     margin: 0;
     padding: 0;

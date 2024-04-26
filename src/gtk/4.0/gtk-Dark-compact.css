@@ -155,7 +155,7 @@ popover.background.magnifier > contents, .osd {
   background-clip: padding-box;
   border-radius: 2px;
   border: none;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 4px 5px 0 rgba(0, 0, 0, 0.16), 0 1px 6px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 4px 5px rgba(0, 0, 0, 0.16), 0 1px 6px rgba(0, 0, 0, 0.1);
 }
 
 .osd {
@@ -1841,10 +1841,6 @@ headerbar.selection-mode .selection-menu {
   padding-right: 16px;
 }
 
-headerbar.selection-mode .selection-menu arrow {
-  -GtkArrow-arrow-scaling: 1;
-}
-
 headerbar.selection-mode .selection-menu .arrow {
   -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
 }
@@ -2315,7 +2311,7 @@ popover.background > arrow,
 popover.background > contents {
   transition: box-shadow 75ms cubic-bezier(0, 0, 0.2, 1);
   padding: 4px;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 4px 5px 0 rgba(0, 0, 0, 0.16), 0 1px 6px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 4px 5px rgba(0, 0, 0, 0.16), 0 1px 6px rgba(0, 0, 0, 0.1);
   background-color: rgba(60, 60, 60, 0.98);
   border-radius: 3px;
   color: white;
@@ -2357,6 +2353,10 @@ popover.background list,
 popover.background .view:not(:selected),
 popover.background toolbar {
   background-color: #3C3C3C;
+}
+
+popover.background list > row {
+  border-radius: 2px;
 }
 
 popover.background listview {
@@ -4665,7 +4665,7 @@ stackswitcher.circular button.text-button.circular {
 }
 
 .icon-dropshadow {
-  -gtk-icon-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 4px 5px 0 rgba(0, 0, 0, 0.16), 0 1px 6px 0 rgba(0, 0, 0, 0.1);
+  -gtk-icon-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 4px 5px rgba(0, 0, 0, 0.16), 0 1px 6px rgba(0, 0, 0, 0.1);
 }
 
 /*********
@@ -5283,7 +5283,7 @@ screenshot-carousel button,
 }
 
 .category-tile.card:hover {
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 4px 5px 0 rgba(0, 0, 0, 0.16), 0 1px 6px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 4px 5px rgba(0, 0, 0, 0.16), 0 1px 6px rgba(0, 0, 0, 0.1);
 }
 
 .category-tile.card.category-tile-iconless {
@@ -5794,6 +5794,14 @@ spinner.fade-in:checked {
   animation-delay: 0s, 0.5s, 0.5s;
 }
 
+window.org-gnome-TextEditor popover.open-popover > contents {
+  padding: 0;
+}
+
+window.org-gnome-TextEditor popover.open-popover > contents separator {
+  margin: 0;
+}
+
 avatar {
   border-radius: 9999px;
   font-weight: bold;
@@ -5907,7 +5915,7 @@ splitbutton.suggested-action > button:checked.keyboard-activating, splitbutton.s
 }
 
 button.opaque {
-  background-color: gtkmix(#2B2B2B, white, 85%);
+  background-color: mix(#2B2B2B,white,0.15);
   color: white;
 }
 
@@ -6002,7 +6010,7 @@ menubutton.destructive-action {
 }
 
 menubutton.opaque {
-  background-color: gtkmix(#2B2B2B, white, 85%);
+  background-color: mix(#2B2B2B,white,0.15);
   color: white;
 }
 
@@ -6127,7 +6135,7 @@ splitbutton.destructive-action {
 }
 
 splitbutton.opaque {
-  background-color: gtkmix(#2B2B2B, white, 85%);
+  background-color: mix(#2B2B2B,white,0.15);
   color: white;
 }
 
@@ -6215,7 +6223,7 @@ statuspage > scrolledwindow > viewport > box > clamp > box > .icon:not(:last-chi
 }
 
 statuspage.compact > scrolledwindow > viewport > box {
-  margin: 16px 4px 8 2;
+  margin: 16px 4px 8px 2px;
   border-spacing: 16px;
 }
 
@@ -6756,12 +6764,12 @@ toolbarview.undershoot-bottom scrolledwindow > undershoot.bottom {
 }
 
 .sidebar-pane banner > revealer > widget {
-  background-color: gtkmix(#3281EA, #303030, 30%);
+  background-color: mix(#3281EA,#303030,0.7);
   color: white;
 }
 
 .sidebar-pane banner > revealer > widget:backdrop {
-  background-color: gtkmix(#3281EA, #303030, 30%);
+  background-color: mix(#3281EA,#303030,0.7);
 }
 
 .sidebar-pane:dir(ltr), .sidebar-pane:dir(ltr) banner > revealer > widget, .sidebar-pane.end:dir(rtl), .sidebar-pane.end:dir(rtl) banner > revealer > widget {
@@ -6915,13 +6923,13 @@ toolbarview.undershoot-bottom scrolledwindow > undershoot.bottom {
 
 .content-pane .sidebar-pane banner > revealer > widget,
 .sidebar-pane .content-pane banner > revealer > widget {
-  background-color: gtkmix(#3281EA, #2B2B2B, 30%);
+  background-color: mix(#3281EA,#2B2B2B,0.7);
   color: white;
 }
 
 .content-pane .sidebar-pane banner > revealer > widget:backdrop,
 .sidebar-pane .content-pane banner > revealer > widget:backdrop {
-  background-color: gtkmix(#3281EA, #2B2B2B, 30%);
+  background-color: mix(#3281EA,#2B2B2B,0.7);
 }
 
 .content-pane .sidebar-pane:dir(ltr), .content-pane .sidebar-pane:dir(ltr) banner > revealer > widget, .content-pane .sidebar-pane.end:dir(rtl), .content-pane .sidebar-pane.end:dir(rtl) banner > revealer > widget,
@@ -7240,6 +7248,15 @@ themeswitcher checkbutton.light {
 themeswitcher checkbutton.dark {
   color: white;
   background-color: #1e1e1e;
+}
+
+floating-sheet > dimming {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+floating-sheet > sheet.background {
+  border-radius: 3px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 16px 18px rgba(0, 0, 0, 0.15), 0 11px 23px rgba(0, 0, 0, 0.13), 0 0 0 1px rgba(255, 255, 255, 0.12), 0 0 0 36px transparent;
 }
 
 /* GTK NAMED COLORS
