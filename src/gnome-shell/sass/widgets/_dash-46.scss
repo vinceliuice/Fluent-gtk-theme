@@ -86,5 +86,5 @@ $dash_border_radius: $menu_radius + $dash_padding;
   border: none;
   box-shadow: none;
   text-align: center;
-  -y-offset: $container_margin * 5; // distance from the dash edge
+  -y-offset: $container_margin; // distance from the dash edge
 }

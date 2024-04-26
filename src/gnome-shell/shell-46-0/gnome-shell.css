@@ -2573,7 +2573,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   border: none;
   box-shadow: none;
   text-align: center;
-  -y-offset: 20px;
+  -y-offset: 4px;
 }
 
 /* App Grid */
