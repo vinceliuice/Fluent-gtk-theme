@@ -27,7 +27,7 @@
 
   .message-list-placeholder {
     @extend %title_2;
-    color: $inverse_secondary_fg_color;
+    color: $disabled_secondary_fg_color;
 
     // icon size and color
     > StIcon {

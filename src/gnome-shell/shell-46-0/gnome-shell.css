@@ -1145,7 +1145,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .message-list .message-list-placeholder {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(0, 0, 0, 0.26);
 }
 
 .message-list .message-list-placeholder > StIcon {
