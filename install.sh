@@ -230,32 +230,30 @@ install() {
   fi
 
   cp -r "$SRC_DIR/cinnamon/thumbnail$theme$color.png"                           "$THEME_DIR/cinnamon/thumbnail.png"
+  
+  mkdir -p                                                                      "$THEME_DIR/xfwm4"
 
-  if [[ "$size" == '' ]]; then
-    mkdir -p                                                                    "$THEME_DIR/xfwm4"
-
-    if [[ "$titlebutton" = "square" ]] ; then
-      cp -r "$SRC_DIR/xfwm4/assets-square$color/"*.png                          "$THEME_DIR/xfwm4"
-      cp -r "$SRC_DIR/xfwm4/themerc-square${ELSE_LIGHT:-}"                      "$THEME_DIR/xfwm4/themerc"
-    else
-      cp -r "$SRC_DIR/xfwm4/assets$color/"*.png                                 "$THEME_DIR/xfwm4"
-      cp -r "$SRC_DIR/xfwm4/themerc${ELSE_LIGHT:-}"                             "$THEME_DIR/xfwm4/themerc"
-    fi
-
-    mkdir -p                                                                    "$THEME_DIR/metacity-1"
-    cp -r "$SRC_DIR/metacity-1/metacity-theme-2$color.xml"                      "$THEME_DIR/metacity-1/metacity-theme-2.xml"
-
-    if [[ "$window" = "round" ]] ; then
-      cp -r "$SRC_DIR/metacity-1/metacity-theme-3-round.xml"                    "$THEME_DIR/metacity-1/metacity-theme-3.xml"
-      cp -r "$SRC_DIR/metacity-1/assets-round"                                  "$THEME_DIR/metacity-1/assets"
-    else
-      cp -r "$SRC_DIR/metacity-1/metacity-theme-3.xml"                          "$THEME_DIR/metacity-1"
-      cp -r "$SRC_DIR/metacity-1/assets"                                        "$THEME_DIR/metacity-1"
-    fi
-
-    cp -r "$SRC_DIR/metacity-1/thumbnail${ELSE_DARK:-}.png"                     "$THEME_DIR/metacity-1/thumbnail.png"
-    cd "$THEME_DIR/metacity-1" && ln -s metacity-theme-2.xml metacity-theme-1.xml
+  if [[ "$titlebutton" = "square" ]] ; then
+    cp -r "$SRC_DIR/xfwm4/assets-square$color/"*.png                            "$THEME_DIR/xfwm4"
+    cp -r "$SRC_DIR/xfwm4/themerc-square${ELSE_LIGHT:-}"                        "$THEME_DIR/xfwm4/themerc"
+  else
+    cp -r "$SRC_DIR/xfwm4/assets$color/"*.png                                   "$THEME_DIR/xfwm4"
+    cp -r "$SRC_DIR/xfwm4/themerc${ELSE_LIGHT:-}"                               "$THEME_DIR/xfwm4/themerc"
   fi
+
+  mkdir -p                                                                      "$THEME_DIR/metacity-1"
+  cp -r "$SRC_DIR/metacity-1/metacity-theme-2$color.xml"                        "$THEME_DIR/metacity-1/metacity-theme-2.xml"
+
+  if [[ "$window" = "round" ]] ; then
+    cp -r "$SRC_DIR/metacity-1/metacity-theme-3-round.xml"                      "$THEME_DIR/metacity-1/metacity-theme-3.xml"
+    cp -r "$SRC_DIR/metacity-1/assets-round"                                    "$THEME_DIR/metacity-1/assets"
+  else
+    cp -r "$SRC_DIR/metacity-1/metacity-theme-3.xml"                            "$THEME_DIR/metacity-1"
+    cp -r "$SRC_DIR/metacity-1/assets"                                          "$THEME_DIR/metacity-1"
+  fi
+
+  cp -r "$SRC_DIR/metacity-1/thumbnail${ELSE_DARK:-}.png"                       "$THEME_DIR/metacity-1/thumbnail.png"
+  cd "$THEME_DIR/metacity-1" && ln -s metacity-theme-2.xml metacity-theme-1.xml
 
   mkdir -p                                                                      "$THEME_DIR/plank"
   cp -r "$SRC_DIR/plank/theme${ELSE_LIGHT:-}/dock.theme"                        "$THEME_DIR/plank"
