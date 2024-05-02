@@ -1460,6 +1460,9 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .notification-buttons-bin {
   spacing: 0;
+  padding: 0;
+  margin: 0;
+  border: none;
 }
 
 .notification-button {

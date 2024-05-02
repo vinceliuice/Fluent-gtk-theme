@@ -93,12 +93,7 @@
     background-color: $popover_button_bg;
     border-radius: $buttons_radius;
     color: $secondary_fg_color;
-
-    @if $outline == 'false' {
-      border: none;
-    } @else {
-      border: 1px solid $popover_button_border;
-    }
+    border: 1px solid $popover_button_border;
 
     &:hover, &:focus {
       background-color: $popover_button_hover;
