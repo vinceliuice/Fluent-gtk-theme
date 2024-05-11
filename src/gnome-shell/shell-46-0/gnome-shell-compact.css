@@ -4411,10 +4411,6 @@ StWidget.focused .app-grid-running-dot {
   padding: 1px 8px !important;
 }
 
-#dashtodockContainer.top #dash .dash-background, #dashtodockContainer.bottom #dash .dash-background {
-  padding: 8px 4px !important;
-}
-
 #dashtodockContainer.top.shrink #dash .dash-background, #dashtodockContainer.bottom.shrink #dash .dash-background {
   padding: 0 !important;
 }
@@ -4466,14 +4462,6 @@ StWidget.focused .app-grid-running-dot {
   background-clip: padding-box;
 }
 
-#dashtodockContainer #dash .app-grid-running-dot {
-  background-color: rgba(255, 255, 255, 0.55) !important;
-}
-
-#dashtodockContainer #dash StWidget.focused .app-grid-running-dot {
-  background-color: #1A73E8;
-}
-
 #dashtodockContainer #dash .show-apps .overview-icon,
 #dashtodockContainer #dash .overview-tile .overview-icon,
 #dashtodockContainer #dash .grid-search-result .overview-icon,
@@ -4509,6 +4497,11 @@ StWidget.focused .app-grid-running-dot {
 
 #dashtodockContainer .dash-separator {
   background-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+#dashtodockContainer .app-grid-running-dot {
+  background-color: rgba(255, 255, 255, 0.55) !important;
+  margin: 0 0 6px !important;
 }
 
 #dashtodockContainer StWidget.focused .overview-icon {
@@ -4573,8 +4566,12 @@ StWidget.focused .app-grid-running-dot {
   color: rgba(255, 255, 255, 0.85) !important;
 }
 
+#dashtodockContainer:overview #dash .dash-separator {
+  background-color: rgba(255, 255, 255, 0.15) !important;
+}
+
 #dashtodockContainer:overview #dash .app-grid-running-dot {
-  background-color: rgba(255, 255, 255, 0.55) !important;
+  background-color: rgba(255, 255, 255, 0.5) !important;
 }
 
 #dashtodockContainer:overview #dash StWidget.focused .overview-icon {
@@ -4583,14 +4580,6 @@ StWidget.focused .app-grid-running-dot {
 
 #dashtodockContainer:overview #dash StWidget.focused:hover .overview-icon {
   background-color: rgba(255, 255, 255, 0.3) !important;
-}
-
-#dashtodockContainer:overview #dash StWidget.focused .app-grid-running-dot {
-  background-color: #1A73E8 !important;
-}
-
-#dashtodockContainer:overview #dash .app-grid-running-dot {
-  background-color: rgba(255, 255, 255, 0.5) !important;
 }
 
 #dashtodockContainer:overview #dash StWidget.focused .app-grid-running-dot {
