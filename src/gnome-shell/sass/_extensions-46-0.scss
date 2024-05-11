@@ -51,7 +51,8 @@
         margin-bottom: 0 !important;
       }
 
-      .dash-item-container .app-well-app, .show-apps {
+      .show-apps,
+      .overview-tile {
         margin: 0 !important;
       }
     }
@@ -70,7 +71,8 @@
       border-radius: $menu_radius;
     }
 
-    .dash-item-container .app-well-app, .show-apps {
+    .show-apps,
+    .overview-tile {
       margin: 0 !important;
       padding: 0 !important;
     }
@@ -79,7 +81,7 @@
   &.left,
   &.right {
     #dash {
-      .dash-item-container .app-well-app {
+      .overview-tile {
         padding: $dash_spacing $container-padding !important;
       }
 
@@ -89,7 +91,8 @@
     }
 
     &.shrink #dash {
-      .dash-item-container .app-well-app, .show-apps {
+      .show-apps,
+      .overview-tile {
         margin: 0 !important;
         padding: 0 !important;
       }
@@ -97,7 +100,8 @@
 
     &.extended #dash,
     &.straight-corner #dash {
-      .dash-item-container .app-well-app, .show-apps {
+      .show-apps,
+      .overview-tile {
         padding: $dash_spacing $dash_padding !important;
       }
     }
@@ -105,18 +109,13 @@
 
   &.top,
   &.bottom {
-    #dash {
-      .dash-background {
-        padding: $dash_padding $dash_padding / 2 !important;
-      }
-    }
-
     &.shrink #dash {
       .dash-background {
         padding: 0 !important;
       }
 
-      .dash-item-container .app-well-app, .show-apps {
+      .show-apps,
+      .overview-tile {
         margin: 0 !important;
         padding: 0 0 18px !important;
       }
@@ -128,7 +127,8 @@
         margin: 0 ($dash_spacing + ($dash_padding / 2)) !important;
       }
 
-      .dash-item-container .app-well-app, .show-apps {
+      .show-apps,
+      .overview-tile {
         padding: $dash_padding $dash_spacing !important;
       }
     }
@@ -144,26 +144,22 @@
     }
 
     .show-apps,
-    .app-well-app {
+    .overview-tile {
       .overview-icon {
         color: $panel_secondary_fg_color !important;
       }
 
       &:hover .overview-icon,
       &:focus .overview-icon,
-      &:selected .overview-icon {
-        background-color: $panel_divider_color !important;
-        color: $panel_fg_color !important;
-
-        @if $window == 'round' {
-          border: 1px solid $panel_border_color;
-        }
-      }
-
+      &:selected .overview-icon,
       &:active .overview-icon,
       &:checked .overview-icon {
         background-color: $panel_divider_color !important;
         color: $panel_fg_color !important;
+
+        @if $window == 'round' {
+          border: 1px solid $panel_border_color !important;
+        }
       }
     }
   }
@@ -172,8 +168,9 @@
     background-color: rgba($panel_fg_color, 0.15) !important;
   }
 
-  .app-well-app-running-dot {
+  .app-grid-running-dot {
     background-color: $panel_hint_fg_color !important;
+    margin: 0 0 6px !important;
   }
 
   StWidget.focused {
@@ -181,8 +178,8 @@
       background-color: $panel_divider_color !important;
 
       @if $window == 'round' {
-        border: 1px solid $panel_border_color;
-        box-shadow: inset 0 1px $panel_highlight_color;
+        border: 1px solid $panel_border_color !important;
+        box-shadow: inset 0 1px $panel_highlight_color !important;
       }
     }
 
@@ -190,7 +187,7 @@
       background-color: $panel_track_color !important;
     }
 
-    .app-well-app-running-dot {
+    .app-grid-running-dot {
       background-color: $primary_color !important;
     }
   }
@@ -209,7 +206,7 @@
     }
 
     .show-apps,
-    .app-well-app {
+    .overview-tile {
       .overview-icon {
         color: $inverse_secondary_fg_color !important;
       }
@@ -232,7 +229,7 @@
       background-color: rgba($inverse_fg_color, 0.15) !important;
     }
 
-    .app-well-app-running-dot {
+    .app-grid-running-dot {
       background-color: $inverse_hint_fg_color !important;
     }
 
@@ -241,8 +238,8 @@
         background-color: $inverse_divider_color !important;
 
         @if $window == 'round' {
-          border: 1px solid $icon_border_color;
-          box-shadow: inset 0 1px $icon_highlight_color;
+          border: 1px solid $icon_border_color !important;
+          box-shadow: inset 0 1px $icon_highlight_color !important;
         }
       }
 
@@ -250,7 +247,7 @@
         background-color: $inverse_track_color !important;
       }
 
-      .app-well-app-running-dot {
+      .app-grid-running-dot {
         background-color: $primary_color !important;
       }
     }
@@ -290,8 +287,8 @@
 
   &.extended,
   &.extended:overview {
-    .app-well-app,
-    .show-apps {
+    .show-apps,
+    .overview-tile {
       .overview-icon {
         border-radius: $buttons_radius;
       }

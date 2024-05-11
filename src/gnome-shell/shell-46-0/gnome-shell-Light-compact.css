@@ -4266,7 +4266,17 @@ StWidget.focused .app-grid-running-dot {
   margin-bottom: 0 !important;
 }
 
-#dashtodockContainer.top.straight-corner #dash .dash-item-container .app-well-app, #dashtodockContainer.top.straight-corner #dash .show-apps, #dashtodockContainer.top.shrink.straight-corner #dash .dash-item-container .app-well-app, #dashtodockContainer.top.shrink.straight-corner #dash .show-apps, #dashtodockContainer.top.extended #dash .dash-item-container .app-well-app, #dashtodockContainer.top.extended #dash .show-apps, #dashtodockContainer.top.extended:overview #dash .dash-item-container .app-well-app, #dashtodockContainer.top.extended:overview #dash .show-apps {
+#dashtodockContainer.top.straight-corner #dash .show-apps,
+#dashtodockContainer.top.straight-corner #dash .overview-tile,
+#dashtodockContainer.top.straight-corner #dash .grid-search-result,
+#dashtodockContainer.top.straight-corner #dash .search-provider-icon,
+#dashtodockContainer.top.straight-corner #dash .list-search-result, #dashtodockContainer.top.shrink.straight-corner #dash .show-apps,
+#dashtodockContainer.top.shrink.straight-corner #dash .overview-tile, #dashtodockContainer.top.extended #dash .show-apps,
+#dashtodockContainer.top.extended #dash .overview-tile,
+#dashtodockContainer.top.extended #dash .grid-search-result,
+#dashtodockContainer.top.extended #dash .search-provider-icon,
+#dashtodockContainer.top.extended #dash .list-search-result, #dashtodockContainer.top.extended:overview #dash .show-apps,
+#dashtodockContainer.top.extended:overview #dash .overview-tile {
   margin: 0 !important;
 }
 
@@ -4280,7 +4290,17 @@ StWidget.focused .app-grid-running-dot {
   margin-bottom: 0 !important;
 }
 
-#dashtodockContainer.bottom.straight-corner #dash .dash-item-container .app-well-app, #dashtodockContainer.bottom.straight-corner #dash .show-apps, #dashtodockContainer.bottom.shrink.straight-corner #dash .dash-item-container .app-well-app, #dashtodockContainer.bottom.shrink.straight-corner #dash .show-apps, #dashtodockContainer.bottom.extended #dash .dash-item-container .app-well-app, #dashtodockContainer.bottom.extended #dash .show-apps, #dashtodockContainer.bottom.extended:overview #dash .dash-item-container .app-well-app, #dashtodockContainer.bottom.extended:overview #dash .show-apps {
+#dashtodockContainer.bottom.straight-corner #dash .show-apps,
+#dashtodockContainer.bottom.straight-corner #dash .overview-tile,
+#dashtodockContainer.bottom.straight-corner #dash .grid-search-result,
+#dashtodockContainer.bottom.straight-corner #dash .search-provider-icon,
+#dashtodockContainer.bottom.straight-corner #dash .list-search-result, #dashtodockContainer.bottom.shrink.straight-corner #dash .show-apps,
+#dashtodockContainer.bottom.shrink.straight-corner #dash .overview-tile, #dashtodockContainer.bottom.extended #dash .show-apps,
+#dashtodockContainer.bottom.extended #dash .overview-tile,
+#dashtodockContainer.bottom.extended #dash .grid-search-result,
+#dashtodockContainer.bottom.extended #dash .search-provider-icon,
+#dashtodockContainer.bottom.extended #dash .list-search-result, #dashtodockContainer.bottom.extended:overview #dash .show-apps,
+#dashtodockContainer.bottom.extended:overview #dash .overview-tile {
   margin: 0 !important;
 }
 
@@ -4294,7 +4314,17 @@ StWidget.focused .app-grid-running-dot {
   margin-bottom: 0 !important;
 }
 
-#dashtodockContainer.left.straight-corner #dash .dash-item-container .app-well-app, #dashtodockContainer.left.straight-corner #dash .show-apps, #dashtodockContainer.left.shrink.straight-corner #dash .dash-item-container .app-well-app, #dashtodockContainer.left.shrink.straight-corner #dash .show-apps, #dashtodockContainer.left.extended #dash .dash-item-container .app-well-app, #dashtodockContainer.left.extended #dash .show-apps, #dashtodockContainer.left.extended:overview #dash .dash-item-container .app-well-app, #dashtodockContainer.left.extended:overview #dash .show-apps {
+#dashtodockContainer.left.straight-corner #dash .show-apps,
+#dashtodockContainer.left.straight-corner #dash .overview-tile,
+#dashtodockContainer.left.straight-corner #dash .grid-search-result,
+#dashtodockContainer.left.straight-corner #dash .search-provider-icon,
+#dashtodockContainer.left.straight-corner #dash .list-search-result, #dashtodockContainer.left.shrink.straight-corner #dash .show-apps,
+#dashtodockContainer.left.shrink.straight-corner #dash .overview-tile, #dashtodockContainer.left.extended #dash .show-apps,
+#dashtodockContainer.left.extended #dash .overview-tile,
+#dashtodockContainer.left.extended #dash .grid-search-result,
+#dashtodockContainer.left.extended #dash .search-provider-icon,
+#dashtodockContainer.left.extended #dash .list-search-result, #dashtodockContainer.left.extended:overview #dash .show-apps,
+#dashtodockContainer.left.extended:overview #dash .overview-tile {
   margin: 0 !important;
 }
 
@@ -4308,7 +4338,17 @@ StWidget.focused .app-grid-running-dot {
   margin-bottom: 0 !important;
 }
 
-#dashtodockContainer.right.straight-corner #dash .dash-item-container .app-well-app, #dashtodockContainer.right.straight-corner #dash .show-apps, #dashtodockContainer.right.shrink.straight-corner #dash .dash-item-container .app-well-app, #dashtodockContainer.right.shrink.straight-corner #dash .show-apps, #dashtodockContainer.right.extended #dash .dash-item-container .app-well-app, #dashtodockContainer.right.extended #dash .show-apps, #dashtodockContainer.right.extended:overview #dash .dash-item-container .app-well-app, #dashtodockContainer.right.extended:overview #dash .show-apps {
+#dashtodockContainer.right.straight-corner #dash .show-apps,
+#dashtodockContainer.right.straight-corner #dash .overview-tile,
+#dashtodockContainer.right.straight-corner #dash .grid-search-result,
+#dashtodockContainer.right.straight-corner #dash .search-provider-icon,
+#dashtodockContainer.right.straight-corner #dash .list-search-result, #dashtodockContainer.right.shrink.straight-corner #dash .show-apps,
+#dashtodockContainer.right.shrink.straight-corner #dash .overview-tile, #dashtodockContainer.right.extended #dash .show-apps,
+#dashtodockContainer.right.extended #dash .overview-tile,
+#dashtodockContainer.right.extended #dash .grid-search-result,
+#dashtodockContainer.right.extended #dash .search-provider-icon,
+#dashtodockContainer.right.extended #dash .list-search-result, #dashtodockContainer.right.extended:overview #dash .show-apps,
+#dashtodockContainer.right.extended:overview #dash .overview-tile {
   margin: 0 !important;
 }
 
@@ -4317,16 +4357,20 @@ StWidget.focused .app-grid-running-dot {
 }
 
 #dashtodockContainer.shrink #dash .dash-background {
-  padding: 0 0 !important;
+  padding: 0 !important;
   border-radius: 3px;
 }
 
-#dashtodockContainer.shrink #dash .dash-item-container .app-well-app, #dashtodockContainer.shrink #dash .show-apps {
+#dashtodockContainer.shrink #dash .show-apps,
+#dashtodockContainer.shrink #dash .overview-tile,
+#dashtodockContainer.shrink #dash .grid-search-result,
+#dashtodockContainer.shrink #dash .search-provider-icon,
+#dashtodockContainer.shrink #dash .list-search-result {
   margin: 0 !important;
-  padding: 0 0 0 !important;
+  padding: 0 !important;
 }
 
-#dashtodockContainer.left #dash .dash-item-container .app-well-app, #dashtodockContainer.right #dash .dash-item-container .app-well-app {
+#dashtodockContainer.left #dash .overview-tile, #dashtodockContainer.left #dash .grid-search-result, #dashtodockContainer.left #dash .search-provider-icon, #dashtodockContainer.left #dash .list-search-result, #dashtodockContainer.right #dash .overview-tile, #dashtodockContainer.right #dash .grid-search-result, #dashtodockContainer.right #dash .search-provider-icon, #dashtodockContainer.right #dash .list-search-result {
   padding: 1px 4px !important;
 }
 
@@ -4334,12 +4378,36 @@ StWidget.focused .app-grid-running-dot {
   padding-bottom: 4px !important;
 }
 
-#dashtodockContainer.left.shrink #dash .dash-item-container .app-well-app, #dashtodockContainer.left.shrink #dash .show-apps, #dashtodockContainer.right.shrink #dash .dash-item-container .app-well-app, #dashtodockContainer.right.shrink #dash .show-apps {
+#dashtodockContainer.left.shrink #dash .show-apps,
+#dashtodockContainer.left.shrink #dash .overview-tile,
+#dashtodockContainer.left.shrink #dash .grid-search-result,
+#dashtodockContainer.left.shrink #dash .search-provider-icon,
+#dashtodockContainer.left.shrink #dash .list-search-result, #dashtodockContainer.right.shrink #dash .show-apps,
+#dashtodockContainer.right.shrink #dash .overview-tile,
+#dashtodockContainer.right.shrink #dash .grid-search-result,
+#dashtodockContainer.right.shrink #dash .search-provider-icon,
+#dashtodockContainer.right.shrink #dash .list-search-result {
   margin: 0 !important;
-  padding: 0 0 0 !important;
+  padding: 0 !important;
 }
 
-#dashtodockContainer.left.extended #dash .dash-item-container .app-well-app, #dashtodockContainer.left.extended #dash .show-apps, #dashtodockContainer.left.straight-corner #dash .dash-item-container .app-well-app, #dashtodockContainer.left.straight-corner #dash .show-apps, #dashtodockContainer.right.extended #dash .dash-item-container .app-well-app, #dashtodockContainer.right.extended #dash .show-apps, #dashtodockContainer.right.straight-corner #dash .dash-item-container .app-well-app, #dashtodockContainer.right.straight-corner #dash .show-apps {
+#dashtodockContainer.left.extended #dash .show-apps,
+#dashtodockContainer.left.extended #dash .overview-tile,
+#dashtodockContainer.left.extended #dash .grid-search-result,
+#dashtodockContainer.left.extended #dash .search-provider-icon,
+#dashtodockContainer.left.extended #dash .list-search-result, #dashtodockContainer.left.straight-corner #dash .show-apps,
+#dashtodockContainer.left.straight-corner #dash .overview-tile,
+#dashtodockContainer.left.straight-corner #dash .grid-search-result,
+#dashtodockContainer.left.straight-corner #dash .search-provider-icon,
+#dashtodockContainer.left.straight-corner #dash .list-search-result, #dashtodockContainer.right.extended #dash .show-apps,
+#dashtodockContainer.right.extended #dash .overview-tile,
+#dashtodockContainer.right.extended #dash .grid-search-result,
+#dashtodockContainer.right.extended #dash .search-provider-icon,
+#dashtodockContainer.right.extended #dash .list-search-result, #dashtodockContainer.right.straight-corner #dash .show-apps,
+#dashtodockContainer.right.straight-corner #dash .overview-tile,
+#dashtodockContainer.right.straight-corner #dash .grid-search-result,
+#dashtodockContainer.right.straight-corner #dash .search-provider-icon,
+#dashtodockContainer.right.straight-corner #dash .list-search-result {
   padding: 1px 8px !important;
 }
 
@@ -4348,10 +4416,18 @@ StWidget.focused .app-grid-running-dot {
 }
 
 #dashtodockContainer.top.shrink #dash .dash-background, #dashtodockContainer.bottom.shrink #dash .dash-background {
-  padding: 0 0 !important;
+  padding: 0 !important;
 }
 
-#dashtodockContainer.top.shrink #dash .dash-item-container .app-well-app, #dashtodockContainer.top.shrink #dash .show-apps, #dashtodockContainer.bottom.shrink #dash .dash-item-container .app-well-app, #dashtodockContainer.bottom.shrink #dash .show-apps {
+#dashtodockContainer.top.shrink #dash .show-apps,
+#dashtodockContainer.top.shrink #dash .overview-tile,
+#dashtodockContainer.top.shrink #dash .grid-search-result,
+#dashtodockContainer.top.shrink #dash .search-provider-icon,
+#dashtodockContainer.top.shrink #dash .list-search-result, #dashtodockContainer.bottom.shrink #dash .show-apps,
+#dashtodockContainer.bottom.shrink #dash .overview-tile,
+#dashtodockContainer.bottom.shrink #dash .grid-search-result,
+#dashtodockContainer.bottom.shrink #dash .search-provider-icon,
+#dashtodockContainer.bottom.shrink #dash .list-search-result {
   margin: 0 !important;
   padding: 0 0 18px !important;
 }
@@ -4360,7 +4436,23 @@ StWidget.focused .app-grid-running-dot {
   margin: 0 5px !important;
 }
 
-#dashtodockContainer.top.extended #dash .dash-item-container .app-well-app, #dashtodockContainer.top.extended #dash .show-apps, #dashtodockContainer.top.straight-corner #dash .dash-item-container .app-well-app, #dashtodockContainer.top.straight-corner #dash .show-apps, #dashtodockContainer.bottom.extended #dash .dash-item-container .app-well-app, #dashtodockContainer.bottom.extended #dash .show-apps, #dashtodockContainer.bottom.straight-corner #dash .dash-item-container .app-well-app, #dashtodockContainer.bottom.straight-corner #dash .show-apps {
+#dashtodockContainer.top.extended #dash .show-apps,
+#dashtodockContainer.top.extended #dash .overview-tile,
+#dashtodockContainer.top.extended #dash .grid-search-result,
+#dashtodockContainer.top.extended #dash .search-provider-icon,
+#dashtodockContainer.top.extended #dash .list-search-result, #dashtodockContainer.top.straight-corner #dash .show-apps,
+#dashtodockContainer.top.straight-corner #dash .overview-tile,
+#dashtodockContainer.top.straight-corner #dash .grid-search-result,
+#dashtodockContainer.top.straight-corner #dash .search-provider-icon,
+#dashtodockContainer.top.straight-corner #dash .list-search-result, #dashtodockContainer.bottom.extended #dash .show-apps,
+#dashtodockContainer.bottom.extended #dash .overview-tile,
+#dashtodockContainer.bottom.extended #dash .grid-search-result,
+#dashtodockContainer.bottom.extended #dash .search-provider-icon,
+#dashtodockContainer.bottom.extended #dash .list-search-result, #dashtodockContainer.bottom.straight-corner #dash .show-apps,
+#dashtodockContainer.bottom.straight-corner #dash .overview-tile,
+#dashtodockContainer.bottom.straight-corner #dash .grid-search-result,
+#dashtodockContainer.bottom.straight-corner #dash .search-provider-icon,
+#dashtodockContainer.bottom.straight-corner #dash .list-search-result {
   padding: 8px 1px !important;
 }
 
@@ -4374,30 +4466,43 @@ StWidget.focused .app-grid-running-dot {
   background-clip: padding-box;
 }
 
-#dashtodockContainer #dash .app-well-app-running-dot {
+#dashtodockContainer #dash .app-grid-running-dot {
   background-color: rgba(0, 0, 0, 0.55) !important;
 }
 
-#dashtodockContainer #dash StWidget.focused .app-well-app-running-dot {
+#dashtodockContainer #dash StWidget.focused .app-grid-running-dot {
   background-color: #1A73E8;
 }
 
 #dashtodockContainer #dash .show-apps .overview-icon,
-#dashtodockContainer #dash .app-well-app .overview-icon {
+#dashtodockContainer #dash .overview-tile .overview-icon,
+#dashtodockContainer #dash .grid-search-result .overview-icon,
+#dashtodockContainer #dash .search-provider-icon .overview-icon,
+#dashtodockContainer #dash .list-search-result .overview-icon {
   color: rgba(0, 0, 0, 0.75) !important;
 }
 
-#dashtodockContainer #dash .show-apps:hover .overview-icon, #dashtodockContainer #dash .show-apps:focus .overview-icon, #dashtodockContainer #dash .show-apps:selected .overview-icon,
-#dashtodockContainer #dash .app-well-app:hover .overview-icon,
-#dashtodockContainer #dash .app-well-app:focus .overview-icon,
-#dashtodockContainer #dash .app-well-app:selected .overview-icon {
-  background-color: rgba(255, 255, 255, 0.35) !important;
-  color: rgba(0, 0, 0, 0.88) !important;
-}
-
-#dashtodockContainer #dash .show-apps:active .overview-icon, #dashtodockContainer #dash .show-apps:checked .overview-icon,
-#dashtodockContainer #dash .app-well-app:active .overview-icon,
-#dashtodockContainer #dash .app-well-app:checked .overview-icon {
+#dashtodockContainer #dash .show-apps:hover .overview-icon, #dashtodockContainer #dash .show-apps:focus .overview-icon, #dashtodockContainer #dash .show-apps:selected .overview-icon, #dashtodockContainer #dash .show-apps:active .overview-icon, #dashtodockContainer #dash .show-apps:checked .overview-icon,
+#dashtodockContainer #dash .overview-tile:hover .overview-icon,
+#dashtodockContainer #dash .grid-search-result:hover .overview-icon,
+#dashtodockContainer #dash .search-provider-icon:hover .overview-icon,
+#dashtodockContainer #dash .list-search-result:hover .overview-icon,
+#dashtodockContainer #dash .overview-tile:focus .overview-icon,
+#dashtodockContainer #dash .grid-search-result:focus .overview-icon,
+#dashtodockContainer #dash .search-provider-icon:focus .overview-icon,
+#dashtodockContainer #dash .list-search-result:focus .overview-icon,
+#dashtodockContainer #dash .overview-tile:selected .overview-icon,
+#dashtodockContainer #dash .grid-search-result:selected .overview-icon,
+#dashtodockContainer #dash .search-provider-icon:selected .overview-icon,
+#dashtodockContainer #dash .list-search-result:selected .overview-icon,
+#dashtodockContainer #dash .overview-tile:active .overview-icon,
+#dashtodockContainer #dash .grid-search-result:active .overview-icon,
+#dashtodockContainer #dash .search-provider-icon:active .overview-icon,
+#dashtodockContainer #dash .list-search-result:active .overview-icon,
+#dashtodockContainer #dash .overview-tile:checked .overview-icon,
+#dashtodockContainer #dash .grid-search-result:checked .overview-icon,
+#dashtodockContainer #dash .search-provider-icon:checked .overview-icon,
+#dashtodockContainer #dash .list-search-result:checked .overview-icon {
   background-color: rgba(255, 255, 255, 0.35) !important;
   color: rgba(0, 0, 0, 0.88) !important;
 }
@@ -4414,7 +4519,7 @@ StWidget.focused .app-grid-running-dot {
   background-color: rgba(255, 255, 255, 0.5) !important;
 }
 
-#dashtodockContainer StWidget.focused .app-well-app-running-dot {
+#dashtodockContainer StWidget.focused .app-grid-running-dot {
   background-color: #1A73E8 !important;
 }
 
@@ -4431,26 +4536,44 @@ StWidget.focused .app-grid-running-dot {
 }
 
 #dashtodockContainer:overview #dash .show-apps .overview-icon,
-#dashtodockContainer:overview #dash .app-well-app .overview-icon {
+#dashtodockContainer:overview #dash .overview-tile .overview-icon,
+#dashtodockContainer:overview #dash .grid-search-result .overview-icon,
+#dashtodockContainer:overview #dash .search-provider-icon .overview-icon,
+#dashtodockContainer:overview #dash .list-search-result .overview-icon {
   color: rgba(255, 255, 255, 0.7) !important;
 }
 
 #dashtodockContainer:overview #dash .show-apps:hover .overview-icon, #dashtodockContainer:overview #dash .show-apps:focus .overview-icon, #dashtodockContainer:overview #dash .show-apps:selected .overview-icon,
-#dashtodockContainer:overview #dash .app-well-app:hover .overview-icon,
-#dashtodockContainer:overview #dash .app-well-app:focus .overview-icon,
-#dashtodockContainer:overview #dash .app-well-app:selected .overview-icon {
+#dashtodockContainer:overview #dash .overview-tile:hover .overview-icon,
+#dashtodockContainer:overview #dash .grid-search-result:hover .overview-icon,
+#dashtodockContainer:overview #dash .search-provider-icon:hover .overview-icon,
+#dashtodockContainer:overview #dash .list-search-result:hover .overview-icon,
+#dashtodockContainer:overview #dash .overview-tile:focus .overview-icon,
+#dashtodockContainer:overview #dash .grid-search-result:focus .overview-icon,
+#dashtodockContainer:overview #dash .search-provider-icon:focus .overview-icon,
+#dashtodockContainer:overview #dash .list-search-result:focus .overview-icon,
+#dashtodockContainer:overview #dash .overview-tile:selected .overview-icon,
+#dashtodockContainer:overview #dash .grid-search-result:selected .overview-icon,
+#dashtodockContainer:overview #dash .search-provider-icon:selected .overview-icon,
+#dashtodockContainer:overview #dash .list-search-result:selected .overview-icon {
   background-color: rgba(255, 255, 255, 0.35) !important;
   color: rgba(255, 255, 255, 0.85) !important;
 }
 
 #dashtodockContainer:overview #dash .show-apps:active .overview-icon, #dashtodockContainer:overview #dash .show-apps:checked .overview-icon,
-#dashtodockContainer:overview #dash .app-well-app:active .overview-icon,
-#dashtodockContainer:overview #dash .app-well-app:checked .overview-icon {
+#dashtodockContainer:overview #dash .overview-tile:active .overview-icon,
+#dashtodockContainer:overview #dash .grid-search-result:active .overview-icon,
+#dashtodockContainer:overview #dash .search-provider-icon:active .overview-icon,
+#dashtodockContainer:overview #dash .list-search-result:active .overview-icon,
+#dashtodockContainer:overview #dash .overview-tile:checked .overview-icon,
+#dashtodockContainer:overview #dash .grid-search-result:checked .overview-icon,
+#dashtodockContainer:overview #dash .search-provider-icon:checked .overview-icon,
+#dashtodockContainer:overview #dash .list-search-result:checked .overview-icon {
   background-color: rgba(255, 255, 255, 0.35) !important;
   color: rgba(255, 255, 255, 0.85) !important;
 }
 
-#dashtodockContainer:overview #dash .app-well-app-running-dot {
+#dashtodockContainer:overview #dash .app-grid-running-dot {
   background-color: rgba(0, 0, 0, 0.55) !important;
 }
 
@@ -4462,15 +4585,15 @@ StWidget.focused .app-grid-running-dot {
   background-color: rgba(255, 255, 255, 0.3) !important;
 }
 
-#dashtodockContainer:overview #dash StWidget.focused .app-well-app-running-dot {
+#dashtodockContainer:overview #dash StWidget.focused .app-grid-running-dot {
   background-color: #1A73E8 !important;
 }
 
-#dashtodockContainer:overview #dash .app-well-app-running-dot {
+#dashtodockContainer:overview #dash .app-grid-running-dot {
   background-color: rgba(255, 255, 255, 0.5) !important;
 }
 
-#dashtodockContainer:overview #dash StWidget.focused .app-well-app-running-dot {
+#dashtodockContainer:overview #dash StWidget.focused .app-grid-running-dot {
   background-color: #1A73E8 !important;
 }
 
@@ -4498,9 +4621,12 @@ StWidget.focused .app-grid-running-dot {
   background-size: contain;
 }
 
-#dashtodockContainer.extended .app-well-app .overview-icon,
-#dashtodockContainer.extended .show-apps .overview-icon, #dashtodockContainer.extended:overview .app-well-app .overview-icon,
-#dashtodockContainer.extended:overview .show-apps .overview-icon {
+#dashtodockContainer.extended .show-apps .overview-icon,
+#dashtodockContainer.extended .overview-tile .overview-icon,
+#dashtodockContainer.extended .grid-search-result .overview-icon,
+#dashtodockContainer.extended .search-provider-icon .overview-icon,
+#dashtodockContainer.extended .list-search-result .overview-icon, #dashtodockContainer.extended:overview .show-apps .overview-icon,
+#dashtodockContainer.extended:overview .overview-tile .overview-icon {
   border-radius: 3px;
 }
 
