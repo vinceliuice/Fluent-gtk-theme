@@ -2246,7 +2246,7 @@ popover.background:backdrop {
 popover, .csd popover,
 popover.background, .csd popover.background {
   border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
+  border-radius: 6px;
 }
 
 popover > stack,
