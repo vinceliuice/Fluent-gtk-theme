@@ -540,7 +540,7 @@ button:drop(active) {
 }
 
 .category-tile.card.category-tile-iconless, placessidebar .navigation-sidebar > row button.sidebar-button, calendar > header > button, check,
-radio, scrollbar button, notebook > header > tabs > arrow, popover.menu modelbutton, spinbutton.vertical > button, spinbutton:not(.vertical) > button,
+radio, scrollbar button, notebook > header > tabs > arrow, popover.background modelbutton, spinbutton.vertical > button, spinbutton:not(.vertical) > button,
 list > row button.image-button:not(.flat), tabbar tab button.image-button,
 dnd tab button.image-button, splitbutton.flat > button,
 splitbutton.flat > menubutton > button, menubutton.flat > button, filechooser #pathbarbox > stack > box > button, window.dialog.message.csd .dialog-action-area > button, .app-notification button, popover.background.menu button,
@@ -557,8 +557,8 @@ combobox > .linked:not(.vertical) > button:not(:only-child), toast button, menub
 }
 
 .category-tile.card.category-tile-iconless:focus, placessidebar .navigation-sidebar > row button.sidebar-button:focus, calendar > header > button:focus, check:focus,
-radio:focus, scrollbar button:focus, notebook > header > tabs > arrow:focus, popover.menu modelbutton:focus, spinbutton.vertical > button:focus, spinbutton:not(.vertical) > button:focus,
-list > row button.image-button:focus:not(.flat), popover.menu modelbutton:checked:focus, tabbar tab button.image-button:focus,
+radio:focus, scrollbar button:focus, notebook > header > tabs > arrow:focus, popover.background modelbutton:focus, spinbutton.vertical > button:focus, spinbutton:not(.vertical) > button:focus,
+list > row button.image-button:focus:not(.flat), tabbar tab button.image-button:focus,
 dnd tab button.image-button:focus, splitbutton.flat > button:focus,
 splitbutton.flat > menubutton > button:focus, menubutton.flat > button:focus, filechooser #pathbarbox > stack > box > button:focus, window.dialog.message.csd .dialog-action-area > button:focus, .app-notification button:focus, popover.background.menu button:focus,
 popover.background button.model:focus,
@@ -572,7 +572,7 @@ combobox > .linked:not(.vertical) > button:focus:not(:only-child), toast button:
 }
 
 .category-tile.card.category-tile-iconless:hover, placessidebar .navigation-sidebar > row button.sidebar-button:hover, calendar > header > button:hover, check:hover,
-radio:hover, scrollbar button:hover, notebook > header > tabs > arrow:hover, popover.menu modelbutton:hover, spinbutton.vertical > button:hover, spinbutton:not(.vertical) > button:hover,
+radio:hover, scrollbar button:hover, notebook > header > tabs > arrow:hover, popover.background modelbutton:hover, spinbutton.vertical > button:hover, spinbutton:not(.vertical) > button:hover,
 list > row button.image-button:hover:not(.flat), tabbar tab button.image-button:hover,
 dnd tab button.image-button:hover, splitbutton.flat > button:hover,
 splitbutton.flat > menubutton > button:hover, menubutton.flat > button:hover, filechooser #pathbarbox > stack > box > button:hover, window.dialog.message.csd .dialog-action-area > button:hover, .app-notification button:hover, popover.background.menu button:hover,
@@ -587,7 +587,7 @@ combobox > .linked:not(.vertical) > button:hover:not(:only-child), toast button:
 }
 
 .category-tile.card.category-tile-iconless:active, placessidebar .navigation-sidebar > row button.sidebar-button:active, calendar > header > button:active, check:active,
-radio:active, scrollbar button:active, notebook > header > tabs > arrow:active, popover.menu modelbutton:active, spinbutton.vertical > button:active, spinbutton:not(.vertical) > button:active,
+radio:active, scrollbar button:active, notebook > header > tabs > arrow:active, popover.background modelbutton:active, spinbutton.vertical > button:active, spinbutton:not(.vertical) > button:active,
 list > row button.image-button:active:not(.flat), tabbar tab button.image-button:active,
 dnd tab button.image-button:active, splitbutton.flat > button:active,
 splitbutton.flat > menubutton > button:active, menubutton.flat > button:active, filechooser #pathbarbox > stack > box > button:active, window.dialog.message.csd .dialog-action-area > button:active, .app-notification button:active, popover.background.menu button:active,
@@ -603,7 +603,7 @@ combobox > .linked:not(.vertical) > button:active:not(:only-child), toast button
 }
 
 .category-tile.card.category-tile-iconless:disabled, placessidebar .navigation-sidebar > row button.sidebar-button:disabled, calendar > header > button:disabled, check:disabled,
-radio:disabled, scrollbar button:disabled, notebook > header > tabs > arrow:disabled, popover.menu modelbutton:disabled, spinbutton.vertical > button:disabled, spinbutton:not(.vertical) > button:disabled,
+radio:disabled, scrollbar button:disabled, notebook > header > tabs > arrow:disabled, popover.background modelbutton:disabled, spinbutton.vertical > button:disabled, spinbutton:not(.vertical) > button:disabled,
 list > row button.image-button:disabled:not(.flat), tabbar tab button.image-button:disabled,
 dnd tab button.image-button:disabled, splitbutton.flat > button:disabled,
 splitbutton.flat > menubutton > button:disabled, menubutton.flat > button:disabled, filechooser #pathbarbox > stack > box > button:disabled, window.dialog.message.csd .dialog-action-area > button:disabled, .app-notification button:disabled, popover.background.menu button:disabled,
@@ -2435,42 +2435,6 @@ popover.menu check.right {
   margin-right: 0;
 }
 
-popover.menu modelbutton {
-  transition: background-color 75ms cubic-bezier(0, 0, 0.2, 1);
-  min-height: 20px;
-  min-width: 40px;
-  padding: 4px 8px;
-  color: white;
-  font: initial;
-  text-shadow: none;
-}
-
-popover.menu modelbutton:hover {
-  transition: none;
-  background-color: alpha(currentColor, 0.08);
-}
-
-popover.menu modelbutton:active {
-  background-color: alpha(currentColor, 0.16);
-}
-
-popover.menu modelbutton:focus {
-  box-shadow: none;
-  outline: none;
-}
-
-popover.menu modelbutton:disabled {
-  color: rgba(255, 255, 255, 0.5);
-}
-
-popover.menu modelbutton arrow.left {
-  -gtk-icon-source: -gtk-icontheme("go-previous-symbolic");
-}
-
-popover.menu modelbutton arrow.right {
-  -gtk-icon-source: -gtk-icontheme("go-next-symbolic");
-}
-
 /************
  * Popovers *
  ************/
@@ -2488,7 +2452,7 @@ popover.background > contents {
   padding: 6px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 4px 5px rgba(0, 0, 0, 0.16), 0 1px 6px rgba(0, 0, 0, 0.1);
   background-color: rgba(60, 60, 60, 0.98);
-  border-radius: 3px;
+  border-radius: 8px;
   color: white;
   border: 1px solid rgba(255, 255, 255, 0.12);
   background-clip: border-box;
@@ -2577,6 +2541,32 @@ popover.background.menu button:focus,
 popover.background button.model:focus {
   box-shadow: none;
   outline: none;
+}
+
+popover.background modelbutton {
+  transition: background-color 75ms cubic-bezier(0, 0, 0.2, 1);
+  min-height: 20px;
+  min-width: 40px;
+  padding: 4px 8px;
+  font: initial;
+  text-shadow: none;
+}
+
+popover.background modelbutton:hover {
+  transition: none;
+}
+
+popover.background modelbutton:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+popover.background modelbutton arrow.left {
+  -gtk-icon-source: -gtk-icontheme("go-previous-symbolic");
+}
+
+popover.background modelbutton arrow.right {
+  -gtk-icon-source: -gtk-icontheme("go-next-symbolic");
 }
 
 .osd popover.background, popover.background.touch-selection, popover.background.magnifier {
@@ -4564,43 +4554,43 @@ tooltip > box {
  * Color Chooser *
  *****************/
 colorswatch.top {
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 colorswatch.top overlay {
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 colorswatch.bottom {
-  border-bottom-left-radius: 3px;
-  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 colorswatch.bottom overlay {
-  border-bottom-left-radius: 3px;
-  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 colorswatch.left, colorswatch:first-child:not(.top) {
-  border-top-left-radius: 3px;
-  border-bottom-left-radius: 3px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
 
 colorswatch.left overlay, colorswatch:first-child:not(.top) overlay {
-  border-top-left-radius: 3px;
-  border-bottom-left-radius: 3px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
 
 colorswatch.right, colorswatch:last-child:not(.bottom) {
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 colorswatch.right overlay, colorswatch:last-child:not(.bottom) overlay {
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 colorswatch.dark {
@@ -4612,12 +4602,12 @@ colorswatch.light {
 }
 
 colorswatch#add-color-button {
-  border-radius: 3px 3px 0 0;
+  border-radius: 5px 5px 0 0;
   color: white;
 }
 
 colorswatch#add-color-button:only-child {
-  border-radius: 3px;
+  border-radius: 5px;
 }
 
 colorswatch#add-color-button overlay {
@@ -4633,11 +4623,11 @@ colorswatch:disabled overlay {
 }
 
 colorswatch#editor-color-sample {
-  border-radius: 3px;
+  border-radius: 5px;
 }
 
 colorswatch#editor-color-sample overlay {
-  border-radius: 3px;
+  border-radius: 5px;
 }
 
 colorchooser .popover.osd {
@@ -4717,7 +4707,7 @@ window.ssd {
   box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.12);
 }
 
-.view:selected, iconview:selected, gridview > child:selected, popover.menu modelbutton:selected, row:selected, calendar:selected, calendar > grid > label.day-number:selected {
+.view:selected, iconview:selected, gridview > child:selected, row:selected, calendar:selected, calendar > grid > label.day-number:selected {
   background-color: alpha(currentColor, 0.06);
 }
 

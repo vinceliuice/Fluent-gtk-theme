@@ -301,7 +301,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   padding: 4px 0;
   color: white;
   background-color: rgba(60, 60, 60, 0.98);
-  border-radius: 3px;
+  border-radius: 5px;
   margin: 4px;
   box-shadow: 0 5px 12px rgba(0, 0, 0, 0.35);
 }
@@ -1831,7 +1831,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   padding: 4px;
   color: white;
   background-color: rgba(60, 60, 60, 0.98);
-  border-radius: 3px;
+  border-radius: 5px;
   margin: 4px;
   box-shadow: 0 5px 12px rgba(0, 0, 0, 0.35);
 }

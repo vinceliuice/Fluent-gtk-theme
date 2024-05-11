@@ -1993,40 +1993,6 @@ popover.menu {
     margin-left: 0;
     margin-right: 0;
   }
-
-  modelbutton {
-    transition: background-color $duration $ease-out;
-    min-height: 8px + $space-size * 2;
-    min-width: 40px;
-    padding: ($space-size - 2px) ($space-size + 2px);
-    color: $text;
-    font: initial;
-    text-shadow: none;
-    @extend %button-flat-simple;
-
-    &:hover {
-      transition: none;
-      background-color: $overlay-hover;
-    }
-
-    &:active {
-      background-color: $overlay-active;
-    }
-
-    &:selected { @extend %selected_items; }
-
-    &:focus {
-      box-shadow: none;
-      outline: none;
-    }
-
-    &:disabled { color: $text-disabled; }
-
-    arrow {
-      &.left { -gtk-icon-source: -gtk-icontheme("go-previous-symbolic"); }
-      &.right { -gtk-icon-source: -gtk-icontheme("go-next-symbolic"); }
-    }
-  }
 }
 
 
@@ -2134,6 +2100,30 @@ popover.background {
     }
 
     // &:checked { color: $primary; }
+  }
+
+  modelbutton {
+    transition: background-color $duration $ease-out;
+    min-height: 8px + $space-size * 2;
+    min-width: 40px;
+    padding: ($space-size - 2px) ($space-size + 2px);
+    font: initial;
+    text-shadow: none;
+    @extend %button-flat-simple;
+
+    &:hover {
+      transition: none;
+    }
+
+    &:focus {
+      box-shadow: none;
+      outline: none;
+    }
+
+    arrow {
+      &.left { -gtk-icon-source: -gtk-icontheme("go-previous-symbolic"); }
+      &.right { -gtk-icon-source: -gtk-icontheme("go-next-symbolic"); }
+    }
   }
 
   .osd &,
