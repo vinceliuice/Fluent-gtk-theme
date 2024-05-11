@@ -2018,12 +2018,29 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   color: rgba(255, 255, 255, 0.75);
   transition-duration: 150ms;
   text-shadow: none;
-  border: none;
   border-radius: 0;
+  border: none !important;
+  box-shadow: none !important;
 }
 
 #panel .panel-button StLabel {
   padding: 0;
+}
+
+#panel .panel-button:hover {
+  color: rgba(255, 255, 255, 0.75);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+#panel .panel-button:active, #panel .panel-button:checked, #panel .panel-button:focus {
+  color: #FFFFFF;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+#panel .panel-button:hover, #panel .panel-button:active, #panel .panel-button:overview, #panel .panel-button:focus, #panel .panel-button:checked {
+  text-shadow: none;
+  border: none !important;
+  box-shadow: none !important;
 }
 
 #panel .panel-button.clock-display {
@@ -2041,6 +2058,17 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   background-color: rgba(255, 255, 255, 0.15) !important;
 }
 
+#panel .panel-button.clock-display:active .clock, #panel .panel-button.clock-display:checked .clock, #panel .panel-button.clock-display:focus .clock {
+  box-shadow: none;
+  background: none;
+  color: #FFFFFF;
+}
+
+#panel .panel-button.clock-display:hover, #panel .panel-button.clock-display:active, #panel .panel-button.clock-display:checked, #panel .panel-button.clock-display:focus {
+  border: none !important;
+  box-shadow: none !important;
+}
+
 #panel .panel-button.clock-display .clock {
   color: rgba(255, 255, 255, 0.75);
   transition-duration: 150ms;
@@ -2050,31 +2078,6 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 #panel .panel-button.clock-display .messages-indicator {
   icon-size: 1.091em;
-}
-
-#panel .panel-button:hover {
-  color: rgba(255, 255, 255, 0.75);
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-#panel .panel-button:active, #panel .panel-button:checked, #panel .panel-button:focus {
-  color: #FFFFFF;
-  background-color: rgba(255, 255, 255, 0.15);
-}
-
-#panel .panel-button:hover, #panel .panel-button:active, #panel .panel-button:overview, #panel .panel-button:focus, #panel .panel-button:checked {
-  text-shadow: none;
-  box-shadow: none;
-}
-
-#panel .panel-button:hover.clock-display, #panel .panel-button:active.clock-display, #panel .panel-button:overview.clock-display, #panel .panel-button:focus.clock-display, #panel .panel-button:checked.clock-display {
-  box-shadow: none;
-}
-
-#panel .panel-button:hover.clock-display .clock, #panel .panel-button:active.clock-display .clock, #panel .panel-button:overview.clock-display .clock, #panel .panel-button:focus.clock-display .clock, #panel .panel-button:checked.clock-display .clock {
-  box-shadow: none;
-  background: none;
-  color: #FFFFFF;
 }
 
 #panel .panel-button .system-status-icon {
