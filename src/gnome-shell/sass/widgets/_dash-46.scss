@@ -45,6 +45,21 @@ $dash_border_radius: $menu_radius + $dash_padding;
       .overview-icon {
         @extend %tile;
         background-color: transparent;
+
+        @if $window == 'round' {
+          border: 1px solid transparent;
+          box-shadow: inset 0 1px transparent;
+        }
+      }
+
+      &:focus .overview-icon,
+      &:hover .overview-icon,
+      &:active .overview-icon,
+      &:checked .overview-icon {
+        @if $window == 'round' {
+          border: 1px solid $icon_border_color;
+          box-shadow: inset 0 1px $icon_highlight_color;
+        }
       }
 
       &:focus .overview-icon { background-color: $inverse_divider_color; }

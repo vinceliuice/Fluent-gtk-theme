@@ -87,16 +87,39 @@ $panel_transition_duration: 250ms; // same as the overview transition duration
     text-shadow: none;
 
     @if $window == 'round' {
-      border: 1px solid transparent;
+      border: 1px solid transparent !important;
+      box-shadow: inset 0 1px transparent !important;
       border-radius: $buttons_radius;
-      box-shadow: inset 0 1px transparent;
       margin: 2px 1px;
     } @else {
-      border: none;
       border-radius: 0;
+      border: none !important;
+      box-shadow: none !important;
     }
 
     StLabel { padding: 0; }
+
+    &:hover {
+      color: $panel_secondary_fg_color;
+      background-color: $panel_divider_color;
+    }
+
+    &:active, &:checked, &:focus {
+      color: $panel_fg_color;
+      background-color: $panel_track_color;
+    }
+
+    &:hover, &:active, &:overview, &:focus, &:checked {
+      text-shadow: none;
+
+      @if $window == 'round' {
+        border: 1px solid $panel_border_color !important;
+        box-shadow: inset 0 1px $panel_highlight_color !important;
+      } @else {
+        border: none !important;
+        box-shadow: none !important;
+      }
+    }
 
     &.clock-display {
       @if $window == 'round' {
@@ -115,6 +138,22 @@ $panel_transition_duration: 250ms; // same as the overview transition duration
       &:active, &:checked, &:focus {
         color: $panel_fg_color;
         background-color: $panel_track_color !important;
+
+        .clock {
+          box-shadow: none;
+          background: none;
+          color: $panel_fg_color;
+        }
+      }
+
+      &:hover, &:active, &:checked, &:focus {
+        @if $window == 'round' {
+          border: 1px solid $panel_border_color !important;
+          box-shadow: inset 0 1px $panel_highlight_color !important;
+        } @else {
+          border: none !important;
+          box-shadow: none !important;
+        }
       }
 
       .clock {
@@ -126,37 +165,6 @@ $panel_transition_duration: 250ms; // same as the overview transition duration
 
       .messages-indicator {
         icon-size: $scalable_icon_size;
-      }
-    }
-
-    &:hover {
-      color: $panel_secondary_fg_color;
-      background-color: $panel_divider_color;
-    }
-
-    &:active, &:checked, &:focus {
-      color: $panel_fg_color;
-      background-color: $panel_track_color;
-    }
-
-    &:hover, &:active, &:overview, &:focus, &:checked {
-      text-shadow: none;
-
-      @if $window == 'round' {
-        border: 1px solid $panel_border_color;
-        box-shadow: inset 0 1px $panel_highlight_color;
-      } @else {
-        box-shadow: none;
-      }
-
-      // The clock display needs to have the background on .clock because
-      // we want to exclude the do-not-disturb indicator from the background
-      &.clock-display {
-        .clock {
-          box-shadow: none;
-          background: none;
-          color: $panel_fg_color;
-        }
       }
     }
 
@@ -216,8 +224,8 @@ $panel_transition_duration: 250ms; // same as the overview transition duration
 
       @if $window == 'round' {
         &:hover, &:active, &:overview, &:focus, &:checked {
-          border: 1px solid $icon_border_color;
-          box-shadow: inset 0 1px $icon_highlight_color;
+          border: 1px solid $icon_border_color !important;
+          box-shadow: inset 0 1px $icon_highlight_color !important;
         }
       }
 
