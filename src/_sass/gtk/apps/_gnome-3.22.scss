@@ -454,38 +454,6 @@ frame.gedit-map-frame > border {
  * Tweaks *
  **********/
 
- %circular_list {
-   border-radius: $corner-radius + 1px;
-   box-shadow: none;
-   border: 1px solid $divider;
- }
-
- %circular_row {
-   &:first-child {
-     border-top-left-radius: $corner-radius;
-     border-top-right-radius: $corner-radius;
-   }
-
-   &:last-child { // Not use ?
-     border-bottom-left-radius: $corner-radius;
-     border-bottom-right-radius: $corner-radius;
-   }
-
-   &:only-child {
-     border-radius: $corner-radius;
-   }
-
-   &:focus {
-     box-shadow: inset 0 0 0 2px $overlay-focus;
-   }
- }
-
- %sidebar_row {
-   margin: 0 ($space-size / 2);
-   border-radius: $corner-radius;
-   padding: $space-size * 2 - 2px;
- }
-
 // the sidebar
 .tweak-categories,
 leaflet > box > scrolledwindow > viewport > list.navigation-sidebar {

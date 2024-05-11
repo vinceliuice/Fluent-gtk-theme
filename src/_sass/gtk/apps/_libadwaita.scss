@@ -192,8 +192,8 @@ menubutton {
 
   &.image-button > button {
     min-width: 24px;
-    padding-left: $space-size;
-    padding-right: $space-size;
+    padding-left: ($medium-size - 24px) / 2;
+    padding-right: ($medium-size - 24px) / 2;
   }
 
   arrow {
@@ -237,8 +237,8 @@ splitbutton {
   // we have to add them manually
   &.image-button > button {
     min-width: 24px;
-    padding-left: $space-size;
-    padding-right: $space-size;
+    padding-left: ($medium-size - 24px) / 2;
+    padding-right: ($medium-size - 24px) / 2;
   }
 
   &.text-button.image-button > button,
@@ -256,14 +256,14 @@ splitbutton {
   > menubutton > button:dir(rtl) {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
-    margin-right: -1px;
+    margin-right: 0;
   }
 
   > button:dir(rtl),
   > menubutton > button:dir(ltr) {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
-    margin-left: -1px;
+    margin-left: 0;
   }
 
   @at-root %flat_split_button,

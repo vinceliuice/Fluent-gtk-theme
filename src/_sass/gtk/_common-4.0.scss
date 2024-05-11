@@ -434,8 +434,8 @@ treeview entry {
  ***********/
 // stuff for .needs-attention
 @keyframes needs-attention {
-  from { background-image: radial-gradient(farthest-side, $primary 0%, transparentize($primary, 1) 0%); }
-  to { background-image: radial-gradient(farthest-side, $primary 95%, transparentize($primary, 1)); }
+  from { background-image: radial-gradient(farthest-side, $primary 0%, transparent 0%); }
+  to { background-image: radial-gradient(farthest-side, $primary 95%, transparent); }
 }
 
 %button-on-dark {
@@ -567,9 +567,9 @@ button {
     color: white;
 
     &, &.image-button {
-      min-height: $medium-size;
-      min-width: $medium-size;
-      padding: 4px;
+      min-height: 28px;
+      min-width: 28px;
+      padding: $space-size;
     }
 
     > image {
@@ -706,12 +706,15 @@ button {
 }
 
 %needs-attention {
-  animation: needs-attention $ripple-fade-in-duration $ease-out forwards;
+  animation: needs-attention 150ms ease-in;
+  background-image: radial-gradient(farthest-side, $primary 96%, transparent);
+  background-size: 6px 6px;
   background-repeat: no-repeat;
   background-position: right 3px;
-  background-size: 6px 6px;
 
-  &:dir(rtl) { background-position: left 3px; }
+  &:dir(rtl) {
+    background-position: left 3px;
+  }
 }
 
 %linked-solid {
@@ -870,21 +873,55 @@ button {
 
 .linked.vertical { @include linking_rules($vert:'true'); }
 
-// menu buttons
-modelbutton.flat {
-  min-height: $menuitem-size;
-  padding: 0 $space-size * 1.5;
-  border-radius: $corner-radius;
-  color: $text;
+// .linked >                  element            child
+$deprecated_linked_widgets: ("combobox",         "> box > button.combo"),
+                            ("appchooserbutton", "> combobox > box > button.combo");
 
-  @extend %button-flat-simple;
+// .linked >        element       child
+$_linked_widgets: ("%button",     ""),
+                  ("button",      ""),
+                  ("menubutton",  "> button"),
+                  ("dropdown",    "> button"),
+                  ("colorbutton", "> button"),
+                  ("fontbutton",  "> button"),
+                  ("tabbutton",   "> button"),
+                  ("%entry",      ""),
+                  ("entry",       "");
 
-  &:selected { @extend %selected_items; }
-}
+$_linked_widgets: join($_linked_widgets, $deprecated_linked_widgets);
 
-modelbutton.flat arrow {
-  &.left { -gtk-icon-source: -gtk-icontheme("go-previous-symbolic"); }
-  &.right { -gtk-icon-source: -gtk-icontheme("go-next-symbolic"); }
+@each $widget, $child in $_linked_widgets {
+  .linked:not(.vertical) > {
+    #{$widget} {
+      &:dir(ltr):not(:first-child) #{$child},
+      &:dir(rtl):not(:last-child) #{$child} {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        margin-left: 0;
+      }
+
+      &:dir(ltr):not(:last-child) #{$child},
+      &:dir(rtl):not(:first-child) #{$child} {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+    }
+  }
+
+  .linked.vertical {
+    #{$widget} {
+      &:not(:first-child) #{$child} {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        margin-top: 0;
+      }
+
+      &:not(:last-child) #{$child} {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+    }
+  }
 }
 
 button.color {
@@ -1182,11 +1219,11 @@ combobox {
  ************/
 .toolbar,
 toolbar {
-  padding: $space-size / 2 $space-size;
+  padding: $space-size;
   background-color: $background;
   border-spacing: $space-size;
 
-  button { @extend %button-flat; }
+  > button { @extend %button-flat; }
 
   // on OSD
   .osd & { background-color: transparent; }
@@ -1224,37 +1261,14 @@ toolbar {
   &.vertical > separator { margin: 2px; }
 
   &:not(.inline-toolbar):not(.osd):not(.primary-toolbar) {
-    scale,
-    entry,
-    spinbutton,
-    button { margin: 2px; }
-
-    .linked entry,
-    .linked spinbutton,
-    .linked button {
-      &:not(:first-child) { margin-left: 0; }
-      &:not(:last-child) { margin-right: 0; }
-    }
-
-    spinbutton {
-      entry,
-      button { margin: 0; }
-    }
-
     switch { margin: 2px + $space-size 2px; }
   }
-}
-
-// oldstyle toolbar buttons
-.toolbar button {
-  margin: 1px;
-  @extend %button-flat;
 }
 
 // searchbar
 searchbar > revealer > box {
   padding: $space-size;
-  border-spacing: $space-size;
+  border-spacing: 0;
   border-style: solid;
   border-width: 0 0 1px;
   border-color: $divider;
@@ -1777,6 +1791,7 @@ columnview.view,
 treeview.view {
   border-left-color: $solid-border; // this is actually the tree lines color,
   border-top-color: $solid-border; // while this is the grid lines color, better then nothing
+  padding: 0;
 
   // FIXME: Avoid transparency background-color being slightly darker
   &:selected {
@@ -1792,7 +1807,7 @@ treeview.view {
   > rubberband { @extend rubberband; } // to avoid borders being overridden by the previously set props
 
   &.separator {
-    min-height: 1px + 2px * 2;
+    min-height: $space-size;
     color: $divider;
   }
 
@@ -1987,6 +2002,7 @@ popover.menu {
     color: $text;
     font: initial;
     text-shadow: none;
+    @extend %button-flat-simple;
 
     &:hover {
       transition: none;
@@ -1997,12 +2013,19 @@ popover.menu {
       background-color: $overlay-active;
     }
 
+    &:selected { @extend %selected_items; }
+
     &:focus {
       box-shadow: none;
       outline: none;
     }
 
     &:disabled { color: $text-disabled; }
+
+    arrow {
+      &.left { -gtk-icon-source: -gtk-icontheme("go-previous-symbolic"); }
+      &.right { -gtk-icon-source: -gtk-icontheme("go-next-symbolic"); }
+    }
   }
 }
 
@@ -3311,10 +3334,10 @@ list {
   color: $text;
   box-shadow: none;
 
-  row { padding: 2px; }
+  row { padding: $space-size / 2; }
 
   > row.expander { padding: 0px; }
-  > row.expander .row-header { padding: 2px; }
+  > row.expander .row-header { padding: $space-size / 2; }
 }
 
 row {

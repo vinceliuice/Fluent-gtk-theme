@@ -320,7 +320,7 @@
   
   #{$_selector} undershoot.#{$p} {
     box-shadow: inset $_border_pos $border;
-    background: linear-gradient(to $_direction, gtkalpha($c, .75), transparent 4px);
+    background: linear-gradient(to $_direction, gtkalpha($c, .75), transparent 6px);
   }
 }
 
