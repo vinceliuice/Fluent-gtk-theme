@@ -22,7 +22,8 @@ $menuitem-size: 28px;
 
 $window-radius: if($window == 'round', 8px, 3px);
 $corner-radius: if($window == 'round', 4px, 2px);
-$menu-radius: if($window == 'round', 6px, 3px);
+$menu-radius: $corner-radius + 3px;
+$popover-radius: $corner-radius + $space-size;
 $circular-radius: 9999px;
 
 //

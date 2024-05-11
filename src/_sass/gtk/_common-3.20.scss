@@ -2083,10 +2083,10 @@ popover.background {
     @if $outline == 'true' {
       border: 1px solid if($variant == 'light', rgba(black, 0.2), rgba(white, 0.12));
     }
-    border-radius: $menu-radius;
+    border-radius: $popover-radius;
   }
 
-  > stack { margin: -4px; } // remove extra padding from menu style popovers
+  > stack { margin: -6px; } // remove extra padding from menu style popovers
 
   > toolbar { margin: -2px; }
 
@@ -4198,6 +4198,7 @@ popover.emoji-picker {
     border-radius: 0;
     box-shadow: none;
     background-color: transparent;
+    padding: $space-size / 2 $space-size;
   }
 
   scrolledwindow { border-bottom: 1px solid $divider; }

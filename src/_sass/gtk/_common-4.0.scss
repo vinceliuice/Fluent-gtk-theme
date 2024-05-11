@@ -2046,7 +2046,7 @@ popover.background {
     padding: $space-size;
     box-shadow: $shadow-z6; // TODO: this should really have a highlight
     background-color: $menu;
-    border-radius: $menu-radius;
+    border-radius: $popover-radius;
     color: on($menu);
 
     @if $outline == 'true' {
