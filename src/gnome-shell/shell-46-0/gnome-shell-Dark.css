@@ -4634,23 +4634,38 @@ StWidget.focused .app-grid-running-dot {
   margin: 32px 0;
 }
 
+.dashtopanelMainPanel .show-apps,
+.dashtopanelMainPanel .overview-tile,
+.dashtopanelMainPanel .grid-search-result,
+.dashtopanelMainPanel .search-provider-icon,
+.dashtopanelMainPanel .list-search-result {
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+}
+
 .dashtopanelMainPanel .show-apps .overview-icon,
-.dashtopanelMainPanel .app-well-app .overview-icon {
+.dashtopanelMainPanel .overview-tile .overview-icon,
+.dashtopanelMainPanel .grid-search-result .overview-icon,
+.dashtopanelMainPanel .search-provider-icon .overview-icon,
+.dashtopanelMainPanel .list-search-result .overview-icon {
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+}
+
+.dashtopanelMainPanel .show-apps .overview-icon {
+  border-radius: 3px !important;
   color: rgba(255, 255, 255, 0.75) !important;
 }
 
-.dashtopanelMainPanel .show-apps:hover .overview-icon, .dashtopanelMainPanel .show-apps:focus .overview-icon, .dashtopanelMainPanel .show-apps:selected .overview-icon,
-.dashtopanelMainPanel .app-well-app:hover .overview-icon,
-.dashtopanelMainPanel .app-well-app:focus .overview-icon,
-.dashtopanelMainPanel .app-well-app:selected .overview-icon {
+.dashtopanelMainPanel .show-apps:hover .overview-icon, .dashtopanelMainPanel .show-apps:focus .overview-icon, .dashtopanelMainPanel .show-apps:selected .overview-icon {
   background-color: rgba(255, 255, 255, 0.1) !important;
   color: #FFFFFF !important;
   box-shadow: none !important;
 }
 
-.dashtopanelMainPanel .show-apps:active .overview-icon, .dashtopanelMainPanel .show-apps:checked .overview-icon,
-.dashtopanelMainPanel .app-well-app:active .overview-icon,
-.dashtopanelMainPanel .app-well-app:checked .overview-icon {
+.dashtopanelMainPanel .show-apps:active .overview-icon, .dashtopanelMainPanel .show-apps:checked .overview-icon {
   background-color: rgba(255, 255, 255, 0.15) !important;
   color: #FFFFFF !important;
   box-shadow: none !important;

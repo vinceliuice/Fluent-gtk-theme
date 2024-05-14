@@ -317,8 +317,21 @@
 
 .dashtopanelMainPanel {
   .show-apps,
-  .app-well-app {
+  .overview-tile {
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+
     .overview-icon {
+      padding: 0 !important;
+      margin: 0 !important;
+      border: none !important;
+    }
+  }
+
+  .show-apps {
+    .overview-icon {
+      border-radius: 3px !important;
       color: $panel_secondary_fg_color !important;
     }
 
