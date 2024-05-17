@@ -3,9 +3,9 @@
   margin-top: $container_padding !important;
 
   @if $laptop == 'false' {
-    padding: 10px + $container_padding 6px + $container_padding * 2 14px + $container_padding !important;
+    padding: 10px 6px + $container_padding 14px !important;
   } @else {
-    padding: 8px + $container_padding 6px + $container_padding * 2 12px + $container_padding !important;
+    padding: 8px 6px + $container_padding 12px !important;
   }
 
   .icon-button, .button {

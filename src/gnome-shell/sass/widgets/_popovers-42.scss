@@ -2,23 +2,24 @@
 
 //.the popover itself
 .popup-menu-boxpointer {
-  -arrow-border-radius: 3px;
+  -arrow-border-radius: $menu_radius;
   -arrow-background-color: transparent;
   -arrow-border-width: 0;
   -arrow-border-color: transparent;
-  -arrow-base: 28px;
+  -arrow-base: 30px - $menu_radius;
   -arrow-rise: 0;
   -arrow-box-shadow: none; //dreaming. bug #689995
   background: none;
-  margin: 0;
 }
 
 // container of the popover menu
 .popup-menu {
   min-width: 15em;
   color: $fg_color;
-  padding: 0;
-  margin: 0;
+  margin: 0 !important;
+  padding: 0 !important;
+  border-image: url("assets/menu.svg") 24 32 28 28;
+  border-radius: $menu_radius;
 
   //.popup-status-menu-item { font-weight: normal;  color: pink; } //dunno what that is
   &.panel-menu {
@@ -28,18 +29,16 @@
 }
 
 .popup-menu-content {
-  border-image: url("assets/menu.svg") 24 32 28 28;
-
   @if $laptop == 'false' {
-    padding: 10px (6px + $container_padding) 14px !important;
+    margin: 10px - $container_padding 6px 14px - $container_padding !important;
   } @else {
-    padding: 8px (6px + $container_padding) 12px !important;
+    margin: 8px - $container_padding 6px 12px - $container_padding !important;
   }
-
-  margin: 2px !important;
+  padding: $container_padding !important;
   border: none;
   background-color: transparent;
   box-shadow: none;
+  border-radius: $menu_radius;
 }
 
 // menu items
