@@ -3020,7 +3020,7 @@ StWidget.focused .app-well-app-running-dot {
 }
 
 .candidate-popup-content {
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: rgba(255, 255, 255, 0.97);
   border-radius: 3px;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.35);
   margin: 3px 10px;

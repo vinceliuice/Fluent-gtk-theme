@@ -90,7 +90,7 @@ $accent_color:                        lighten($primary_color, 3%);
 
 $panel_bg:                            if($panel == 'light', #f3f3f3, #202020);
 $panel_bg_color:                      if($opacity == 'default', if($panel == 'light', rgba(white, 0.75), rgba(black, 0.5)), $panel_bg);
-$menu_bg_color:                       if($opacity == 'default', rgba($base_color, 0.95), $base_color);
+$menu_bg_color:                       if($opacity == 'default', rgba($base_color, 0.97), $base_color);
 $system_bg_color:                     #222222;
 
 $link_color:                          $primary_color;
