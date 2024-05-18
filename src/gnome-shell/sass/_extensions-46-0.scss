@@ -479,3 +479,24 @@
     color: rgba(white, 0.35) !important;
   }
 }
+
+//
+// Arc Menu
+//
+
+.arcmenu-menu {
+  border-image: none !important;
+  border-radius: $menu_radius !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+
+  .popup-menu-content {
+    padding: $container_padding !important;
+    margin: $container_padding !important;
+    border: none !important;
+    background-color: $menu_bg_color;
+    box-shadow: 0 2px 3px 0 rgba(black, 0.1) !important;
+    border-radius: $menu_radius !important;
+  }
+}

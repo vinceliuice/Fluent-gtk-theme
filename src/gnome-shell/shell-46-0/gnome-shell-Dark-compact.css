@@ -522,16 +522,16 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   -arrow-base: 27px;
   -arrow-rise: 0;
   -arrow-box-shadow: none;
-  background: none;
 }
 
 .popup-menu {
   min-width: 15em;
   color: rgba(255, 255, 255, 0.9);
-  margin: 0 !important;
-  padding: 0 !important;
+  border-radius: 3px;
   border-image: url("assets/menu.svg") 24 32 28 28;
   border-radius: 3px;
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
 .popup-menu.panel-menu {
@@ -540,8 +540,8 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .popup-menu-content {
-  margin: 4px 6px 8px !important;
-  padding: 4px !important;
+  padding: 0 !important;
+  margin: 8px 10px 12px !important;
   border: none;
   background-color: transparent;
   box-shadow: none;
@@ -3287,7 +3287,7 @@ StWidget.focused .app-grid-running-dot {
 
 .quick-settings {
   border-radius: 3px !important;
-  margin-top: 4px !important;
+  margin: 4px !important;
   padding: 8px 10px 12px !important;
 }
 
@@ -4809,4 +4809,21 @@ StWidget.focused .app-grid-running-dot {
 .overview-components-light .search-entry StLabel.hint-text,
 .overview-components-dark .search-entry StLabel.hint-text {
   color: rgba(255, 255, 255, 0.35) !important;
+}
+
+.arcmenu-menu {
+  border-image: none !important;
+  border-radius: 3px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+}
+
+.arcmenu-menu .popup-menu-content {
+  padding: 4px !important;
+  margin: 4px !important;
+  border: none !important;
+  background-color: rgba(32, 32, 32, 0.95);
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1) !important;
+  border-radius: 3px !important;
 }

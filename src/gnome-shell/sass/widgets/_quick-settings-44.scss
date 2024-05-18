@@ -1,6 +1,6 @@
 .quick-settings {
   border-radius: $menu_radius !important;
-  margin-top: $container_padding !important;
+  margin: $container_padding !important;
 
   @if $laptop == 'false' {
     padding: 10px 6px + $container_padding 14px !important;
