@@ -2633,24 +2633,24 @@ scrollbar slider:disabled {
 }
 
 scrollbar.horizontal slider {
-  margin: 2px 0;
+  margin: 6px 0;
 }
 
 scrollbar.vertical slider {
-  margin: 0 2px;
+  margin: 0 6px;
 }
 
 scrollbar.fine-tune slider {
-  min-width: 4px;
-  min-height: 4px;
+  min-width: 6px;
+  min-height: 6px;
 }
 
 scrollbar.fine-tune.horizontal slider {
-  margin: 2px 0;
+  margin: 3px 0;
 }
 
 scrollbar.fine-tune.vertical slider {
-  margin: 0 2px;
+  margin: 0 3px;
 }
 
 scrollbar.overlay-indicator:not(.fine-tune) slider {
@@ -2663,15 +2663,15 @@ scrollbar.overlay-indicator:not(.dragging):not(.hovering) {
 }
 
 scrollbar.overlay-indicator:not(.dragging):not(.hovering) slider {
-  min-width: 4px;
-  min-height: 4px;
+  min-width: 6px;
+  min-height: 6px;
   margin: 3px;
   border: 1px solid rgba(43, 43, 43, 0.3);
 }
 
 scrollbar.overlay-indicator:not(.dragging):not(.hovering) button {
-  min-width: 4px;
-  min-height: 4px;
+  min-width: 6px;
+  min-height: 6px;
   margin: 3px;
   border: 1px solid rgba(43, 43, 43, 0.3);
   border-radius: 9999px;
@@ -2689,7 +2689,7 @@ scrollbar.overlay-indicator:not(.dragging):not(.hovering).horizontal slider {
 }
 
 scrollbar.overlay-indicator:not(.dragging):not(.hovering).horizontal button {
-  min-width: 8px;
+  min-width: 6px;
 }
 
 scrollbar.overlay-indicator:not(.dragging):not(.hovering).vertical slider {
@@ -2697,7 +2697,7 @@ scrollbar.overlay-indicator:not(.dragging):not(.hovering).vertical slider {
 }
 
 scrollbar.overlay-indicator:not(.dragging):not(.hovering).vertical button {
-  min-height: 8px;
+  min-height: 6px;
 }
 
 scrollbar.overlay-indicator.dragging, scrollbar.overlay-indicator.hovering {

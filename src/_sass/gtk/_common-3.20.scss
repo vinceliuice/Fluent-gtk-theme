@@ -2441,19 +2441,19 @@ scrollbar {
     &:disabled { background-color: $track-disabled; }
   }
 
-  &.horizontal slider { margin: 2px 0; }
+  &.horizontal slider { margin: if($window == 'round', $space-size, $space-size 0); }
 
-  &.vertical slider { margin: 0 2px; }
+  &.vertical slider { margin: if($window == 'round', $space-size, 0 $space-size); }
 
   &.fine-tune {
     slider {
-      min-width: 4px;
-      min-height: 4px;
+      min-width: $space-size;
+      min-height: $space-size;
     }
 
-    &.horizontal slider { margin: 2px 0; }
+    &.horizontal slider { margin: if($window == 'round', $space-size / 2, $space-size / 2 0); }
 
-    &.vertical slider { margin: 0 2px; }
+    &.vertical slider { margin: if($window == 'round', $space-size / 2, 0 $space-size / 2); }
   }
 
   &.overlay-indicator {
@@ -2466,16 +2466,16 @@ scrollbar {
       background-color: transparent;
 
       slider {
-        min-width: 4px;
-        min-height: 4px;
-        margin: if($window == 'round', 0, $space-size / 2);
+        min-width: $space-size;
+        min-height: $space-size;
+        margin: $space-size / 2;
         border: 1px solid rgba($base, 0.3);
       }
 
       button {
-        min-width: 4px;
-        min-height: 4px;
-        margin: 4px - 1px;
+        min-width: $space-size;
+        min-height: $space-size;
+        margin: $space-size / 2;
         border: 1px solid rgba($base, 0.3);
         border-radius: $circular-radius;
         background-color: $text-disabled;
@@ -2488,13 +2488,13 @@ scrollbar {
       &.horizontal {
         slider { min-width: $_slider_min_length; }
 
-        button { min-width: 8px; }
+        button { min-width: $space-size; }
       }
 
       &.vertical {
         slider { min-height: $_slider_min_length; }
 
-        button { min-height: 8px; }
+        button { min-height: $space-size; }
       }
     }
 
