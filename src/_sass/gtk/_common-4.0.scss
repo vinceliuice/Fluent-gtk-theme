@@ -447,10 +447,7 @@ treeview entry {
   &:checked:disabled { color: on(dark, disabled); }
 }
 
-button {
-  min-height: 24px;
-  min-width: 16px;
-  padding: ($medium-size - 24px) / 2 ($medium-size - 16px) / 2;
+%button-basic {
   border-radius: $corner-radius;
   font-weight: 500;
   border: 1px solid $border;
@@ -472,6 +469,13 @@ button {
   &:checked:disabled { @include button(checked-disabled); }
 
   &:drop(active) { @include button(hover); }
+}
+
+button {
+  min-height: 24px;
+  min-width: 16px;
+  padding: ($medium-size - 24px) / 2 ($medium-size - 16px) / 2;
+  @extend %button-basic;
 
   @at-root %button-flat, &.flat {
     @at-root %button-flat-simple, & {
@@ -3569,11 +3573,11 @@ window.dialog.message { // Message Dialog styling
     }
 
     .dialog-action-area {
-      margin-top: -$space-size;
-      // padding: $space-size;
+      background-color: $fill;
+      padding: $space-size;
 
       > button {
-        @extend %button-flat;
+        @extend %button-basic;
 
         &, &:first-child, &:last-child { border-radius: $corner-radius; }
 
@@ -3583,6 +3587,31 @@ window.dialog.message { // Message Dialog styling
 
         &.destructive-action:not(:disabled) { color: $destructive; }
       }
+    }
+  }
+}
+
+window.messagedialog {
+  &.background { background-color: $surface; }
+
+  .response-area {
+    background-color: $fill;
+    padding: $space-size;
+
+    > separator {
+      background-color: transparent;
+    }
+
+    > button {
+      @extend %button-basic;
+
+      &, &:first-child, &:last-child { border-radius: $corner-radius; }
+
+      &:not(:last-child) { margin-right: $space-size; }
+
+      &.suggested-action:not(:disabled) { color: $suggested; }
+
+      &.destructive-action:not(:disabled) { color: $destructive; }
     }
   }
 }

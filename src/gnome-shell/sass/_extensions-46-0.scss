@@ -151,10 +151,18 @@
 
       &:hover .overview-icon,
       &:focus .overview-icon,
-      &:selected .overview-icon,
+      &:selected .overview-icon {
+        background-color: $panel_divider_color !important;
+        color: $panel_fg_color !important;
+
+        @if $window == 'round' {
+          border: 1px solid $panel_border_color !important;
+        }
+      }
+
       &:active .overview-icon,
       &:checked .overview-icon {
-        background-color: $panel_divider_color !important;
+        background-color: $panel_track_color !important;
         color: $panel_fg_color !important;
 
         @if $window == 'round' {

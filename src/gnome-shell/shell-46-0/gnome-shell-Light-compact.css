@@ -4471,7 +4471,7 @@ StWidget.focused .app-grid-running-dot {
   color: rgba(0, 0, 0, 0.75) !important;
 }
 
-#dashtodockContainer #dash .show-apps:hover .overview-icon, #dashtodockContainer #dash .show-apps:focus .overview-icon, #dashtodockContainer #dash .show-apps:selected .overview-icon, #dashtodockContainer #dash .show-apps:active .overview-icon, #dashtodockContainer #dash .show-apps:checked .overview-icon,
+#dashtodockContainer #dash .show-apps:hover .overview-icon, #dashtodockContainer #dash .show-apps:focus .overview-icon, #dashtodockContainer #dash .show-apps:selected .overview-icon,
 #dashtodockContainer #dash .overview-tile:hover .overview-icon,
 #dashtodockContainer #dash .grid-search-result:hover .overview-icon,
 #dashtodockContainer #dash .search-provider-icon:hover .overview-icon,
@@ -4483,7 +4483,12 @@ StWidget.focused .app-grid-running-dot {
 #dashtodockContainer #dash .overview-tile:selected .overview-icon,
 #dashtodockContainer #dash .grid-search-result:selected .overview-icon,
 #dashtodockContainer #dash .search-provider-icon:selected .overview-icon,
-#dashtodockContainer #dash .list-search-result:selected .overview-icon,
+#dashtodockContainer #dash .list-search-result:selected .overview-icon {
+  background-color: rgba(255, 255, 255, 0.35) !important;
+  color: rgba(0, 0, 0, 0.88) !important;
+}
+
+#dashtodockContainer #dash .show-apps:active .overview-icon, #dashtodockContainer #dash .show-apps:checked .overview-icon,
 #dashtodockContainer #dash .overview-tile:active .overview-icon,
 #dashtodockContainer #dash .grid-search-result:active .overview-icon,
 #dashtodockContainer #dash .search-provider-icon:active .overview-icon,
@@ -4492,7 +4497,7 @@ StWidget.focused .app-grid-running-dot {
 #dashtodockContainer #dash .grid-search-result:checked .overview-icon,
 #dashtodockContainer #dash .search-provider-icon:checked .overview-icon,
 #dashtodockContainer #dash .list-search-result:checked .overview-icon {
-  background-color: rgba(255, 255, 255, 0.35) !important;
+  background-color: rgba(255, 255, 255, 0.5) !important;
   color: rgba(0, 0, 0, 0.88) !important;
 }
 
