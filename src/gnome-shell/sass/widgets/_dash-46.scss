@@ -8,7 +8,9 @@ $dash_edge_offset: $container_margin * 3;
 $dash_border_radius: $menu_radius + $dash_padding;
 
 #dash {
-  margin-top: $dash_edge_offset;
+  // a bit of spacing so that dash doesn't touch the screen edges
+  padding-left: $container_padding;
+  padding-right: $container_padding;
 
   // background behind item container
   .dash-background {
@@ -72,15 +74,15 @@ $dash_border_radius: $menu_radius + $dash_padding;
     // running app dot
     .app-grid-running-dot {
       // manually position the dot within the dash item
-      margin-bottom: $dash_padding + $dash_edge_offset - 3px; // 3px = size of dot (5px) subtracted from its translationY from appDisplay.js
+      offset-y: -$dash_padding;
     }
   }
 
   // separator between pinned and running apps
   .dash-separator {
     width: 1px;
-    margin-left:$container_margin;
-    margin-right:$container_margin;
+    margin-left: $container_margin;
+    margin-right: $container_margin;
     background-color: rgba(white, 0.15);
   }
 
