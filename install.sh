@@ -43,13 +43,9 @@ if [[ "$(command -v gnome-shell)" ]]; then
   else
     GS_VERSION="3-28"
   fi
-
-  if [[ "${SHELL_VERSION:-}" -ge "45" ]]; then
-    activities="default"
-  fi
 else
   echo "'gnome-shell' not found, using styles for last gnome-shell version available."
-  GS_VERSION="44-0"
+  GS_VERSION="46-0"
 fi
 
 usage() {
@@ -385,6 +381,7 @@ while [[ "$#" -gt 0 ]]; do
       done
       ;;
     -i|--icon)
+      activities='icon'
       shift
       for icons in "$@"; do
         case "$icons" in
@@ -608,7 +605,7 @@ install_square() {
 }
 
 activities_style() {
-  sed -i "/\$activities:/s/icon/default/" ${SRC_DIR}/gnome-shell/sass/_tweaks-temp.scss
+  sed -i "/\$activities:/s/default/icon/" ${SRC_DIR}/gnome-shell/sass/_tweaks-temp.scss
 }
 
 install_theme_color() {
@@ -645,7 +642,7 @@ install_theme_color() {
 }
 
 theme_tweaks() {
-  if [[ "$panel" = "float" || "$opacity" == 'solid' || "$window" == 'round' || "$accent" == 'true' || "$blur" == 'true' || "$outline" == 'false' || "$titlebutton" == 'square' ]]; then
+  if [[ "$panel" = "float" || "$opacity" == 'solid' || "$window" == 'round' || "$accent" == 'true' || "$blur" == 'true' || "$outline" == 'false' || "$titlebutton" == 'square' || "$activities" = "icon" ]]; then
     tweaks='true'
     install_package; tweaks_temp
   fi
@@ -674,7 +671,7 @@ theme_tweaks() {
     install_square
   fi
 
-  if [[ "$activities" = "default" ]] ; then
+  if [[ "$activities" = "icon" ]] ; then
     activities_style
   fi
 }

@@ -2479,7 +2479,8 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 /* Dash */
 #dash {
-  margin-top: 12px;
+  padding-left: 6px;
+  padding-right: 6px;
 }
 
 #dash .dash-background {
@@ -2560,7 +2561,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 #dash .dash-item-container .app-grid-running-dot {
-  margin-bottom: 21px;
+  offset-y: -12px;
 }
 
 #dash .dash-separator {
@@ -4507,7 +4508,8 @@ StWidget.focused .app-grid-running-dot {
 
 #dashtodockContainer .app-grid-running-dot {
   background-color: rgba(255, 255, 255, 0.55) !important;
-  margin: 0 0 6px !important;
+  margin: 0 0 3px !important;
+  offset-y: 0 !important;
 }
 
 #dashtodockContainer StWidget.focused .overview-icon {
