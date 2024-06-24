@@ -1199,6 +1199,8 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   box-shadow: 0 3px 8px -2px rgba(0, 0, 0, 0.15);
   background-color: rgba(255, 255, 255, 0.95);
   border: 1px solid transparent;
+  border-left: none;
+  border-bottom: none;
 }
 
 .message:hover, .message:focus, .message:active {
@@ -2065,7 +2067,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   transition-duration: 250ms;
   border: none;
   box-shadow: none;
-  background-color: rgba(255, 255, 255, 0.75);
+  background-color: rgba(255, 255, 255, 0.5);
   margin: 0;
   border-radius: 0;
   height: 34px;
@@ -2077,7 +2079,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 #panel .panel-corner {
   -panel-corner-radius: 0;
-  -panel-corner-background-color: rgba(255, 255, 255, 0.75);
+  -panel-corner-background-color: rgba(255, 255, 255, 0.5);
   -panel-corner-border-width: 0;
   -panel-corner-border-color: transparent;
   -panel-corner-opacity: 0;
@@ -2295,7 +2297,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .window-close, .screenshot-ui-close-button {
   background-color: #1A73E8;
   color: white;
-  border-radius: 21px;
+  border-radius: 9999px;
   padding: 3px;
   height: 30px;
   width: 30px;
@@ -4460,7 +4462,7 @@ StWidget.focused .app-grid-running-dot {
 }
 
 #dashtodockContainer #dash .dash-background {
-  background-color: rgba(255, 255, 255, 0.75);
+  background-color: rgba(255, 255, 255, 0.5);
   background-clip: padding-box;
 }
 
@@ -4529,7 +4531,7 @@ StWidget.focused .app-grid-running-dot {
 }
 
 #dashtodockContainer.transparent #dash .dash-background {
-  background-color: rgba(255, 255, 255, 0.75);
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 #dashtodockContainer:overview #dash .dash-background {

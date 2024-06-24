@@ -84,6 +84,8 @@
   box-shadow: 0 3px 8px -2px rgba(black, 0.15);
   background-color: rgba($base_color, 0.95);
   border: 1px solid transparent;
+  border-left: none;
+  border-bottom: none;
 
   &:hover, &:focus, &:active { background-color: $base_color; }
 

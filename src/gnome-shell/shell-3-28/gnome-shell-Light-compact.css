@@ -1207,7 +1207,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   font-weight: normal;
   font-feature-settings: "tnum";
   transition-duration: 250ms;
-  background-color: rgba(255, 255, 255, 0.75);
+  background-color: rgba(255, 255, 255, 0.5);
   margin: 0;
   border-radius: 0;
   height: 30px;
@@ -1219,7 +1219,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 #panel .panel-corner {
   -panel-corner-radius: 0;
-  -panel-corner-background-color: rgba(255, 255, 255, 0.75);
+  -panel-corner-background-color: rgba(255, 255, 255, 0.5);
   -panel-corner-border-width: 0;
   -panel-corner-border-color: transparent;
   -panel-corner-opacity: 0;
@@ -3703,11 +3703,11 @@ StWidget.focused .app-well-app-running-dot {
 }
 
 #dashtodockContainer.dashtodock #dash {
-  background-color: rgba(255, 255, 255, 0.75);
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 #dashtodockContainer #dash {
-  background-color: rgba(255, 255, 255, 0.75);
+  background-color: rgba(255, 255, 255, 0.5);
   box-shadow: none;
 }
 
@@ -3716,7 +3716,7 @@ StWidget.focused .app-well-app-running-dot {
 }
 
 #dashtodockContainer.transparent #dash {
-  background-color: rgba(255, 255, 255, 0.75);
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 #dashtodockContainer:overview #dash {
@@ -3729,7 +3729,7 @@ StWidget.focused .app-well-app-running-dot {
 }
 
 #dashtodockContainer.extended:overview #dash, #dashtodockContainer.opaque.extended:overview #dash, #dashtodockContainer.transparent.extended:overview #dash {
-  background-color: rgba(255, 255, 255, 0.75);
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 #dashtodockContainer .app-well-app .overview-icon,
@@ -3739,7 +3739,7 @@ StWidget.focused .app-well-app-running-dot {
 }
 
 #dash:desktop {
-  background-color: rgba(255, 255, 255, 0.75);
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .openweather-button, .openweather-button-action, .openweather-menu-button-container, .openweather-button-box {
