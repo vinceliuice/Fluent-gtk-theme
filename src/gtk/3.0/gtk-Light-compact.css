@@ -235,10 +235,10 @@ spinner:checked:disabled {
 spinbutton.vertical, spinbutton:not(.vertical),
 entry {
   min-height: 24px;
-  padding: 0 8px;
+  padding: 2px 8px;
   border-radius: 2px;
   caret-color: currentColor;
-  border: 1px solid rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(0, 0, 0, 0.08);
   transition: all 75ms cubic-bezier(0, 0, 0.2, 1), border 300ms cubic-bezier(0, 0, 0.2, 1), box-shadow 300ms cubic-bezier(0, 0, 0.2, 1);
   box-shadow: inset 0 0 0 1px transparent;
   background-color: #FFFFFF;
@@ -273,7 +273,7 @@ entry:disabled {
 spinbutton.flat.vertical, spinbutton.flat:not(.vertical),
 entry.flat {
   min-height: 0;
-  padding: 2px;
+  padding: 2px 8px;
   border-radius: 0;
   background-color: transparent;
 }
@@ -1506,7 +1506,7 @@ searchbar > revealer > box {
   background-color: #FFFFFF;
   color: rgba(0, 0, 0, 0.87);
   border: none;
-  border-radius: 4px;
+  padding: 3px 9px;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.06);
   border-image: none;
 }
@@ -1524,6 +1524,7 @@ searchbar > revealer > box {
   background-color: rgba(0, 0, 0, 0.04);
   color: rgba(0, 0, 0, 0.38);
   border-image: none;
+  box-shadow: none;
 }
 
 .nemo-window.background .primary-toolbar entry image, .thunar toolbar entry image, .titlebar entry image {
@@ -1626,6 +1627,7 @@ headerbar button.titlebutton:not(.suggested-action):not(.destructive-action) {
 
 .titlebar stackswitcher {
   border-radius: 2px;
+  margin: 4px 0;
 }
 
 .titlebar stackswitcher.linked:not(.vertical) > button:not(.suggested-action):not(.destructive-action).text-button {
@@ -4243,6 +4245,7 @@ messagedialog.csd decoration {
 
 XfdesktopIconView.view:active, calendar.raven-calendar:selected, .budgie-popover.budgie-menu row.activatable > button.flat:checked, box.vertical > widget > widget:selected, .background.csd .view:selected, modelbutton.flat:selected,
 .menuitem.button.flat:selected, row:selected, calendar:selected {
+  color: rgba(0, 0, 0, 0.87);
   background-color: alpha(currentColor, 0.06);
 }
 
@@ -4251,7 +4254,7 @@ XfdesktopIconView.view:active, calendar.raven-calendar:selected, .budgie-popover
   background-color: rgba(26, 115, 232, 0.2);
 }
 
-.nemo-window.background .nemo-window-pane widget.entry:selected, #MozillaGtkWidget > widget text:selected, #MozillaGtkWidget > widget text selection, #MozillaGtkWidget > widget text selection:focus, window.background.chromium > textview.view selection, window.background.chromium textview selection, window.background.csd evview.view.content-view:selected, window.background.csd evview.view.content-view:selected:backdrop, .nautilus-window notebook .view:not(treeview) selection, .nautilus-window notebook .view:not(treeview):selected, .nautilus-window flowboxchild:selected .icon-item-background, .view:selected, widget.view:selected, .background.csd textview text selection, .background.csd textview text selection:focus, label selection,
+.nemo-window.background .nemo-window-pane widget.entry:selected, #MozillaGtkWidget > widget text:selected, #MozillaGtkWidget > widget text selection, #MozillaGtkWidget > widget text selection:focus, window.background.chromium > textview.view selection, window.background.chromium textview selection, window.background.csd evview.view.content-view:selected, window.background.csd evview.view.content-view:selected:backdrop, .nautilus-window notebook .view:not(treeview) selection, .nautilus-window notebook .view:not(treeview):selected, .nautilus-window flowboxchild:selected .icon-item-background, .view:selected, widget.view:selected, .background.csd textview text selection, .background.csd textview text selection:focus, .background.csd iconview.view:selected, label selection,
 entry selection, spinbutton:not(.vertical) selection, spinbutton.vertical selection {
   color: white;
   background-color: #1A73E8;
@@ -4308,7 +4311,6 @@ cursor-handle.insertion-cursor:dir(ltr), cursor-handle.insertion-cursor:dir(rtl)
 stackswitcher {
   min-height: 0;
   padding: 0;
-  margin: 4px 0;
   border-radius: 2px;
   background-color: alpha(currentColor, 0.05);
 }
@@ -4326,6 +4328,10 @@ stackswitcher.linked:not(.vertical) > button:not(.suggested-action):not(.destruc
 
 stackswitcher.linked:not(.vertical) > button:not(.suggested-action):not(.destructive-action):focus {
   box-shadow: inset 0 0 0 2px alpha(currentColor, 0.08);
+}
+
+stackswitcher.linked:not(.vertical) > button:not(.suggested-action):not(.destructive-action):hover {
+  box-shadow: inset 0 0 0 9999px alpha(currentColor, 0.08);
 }
 
 stackswitcher.linked:not(.vertical) > button:not(.suggested-action):not(.destructive-action):active {
