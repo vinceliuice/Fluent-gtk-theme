@@ -709,6 +709,57 @@ button {
   }
 }
 
+stackswitcher {
+  min-height: 0;
+  padding: 0 $space-size / 2;
+  margin: $space-size 0;
+  border-radius: $corner-radius;
+  background-color: $overlay-normal;
+
+  &.linked:not(.vertical) > button:not(.suggested-action):not(.destructive-action) {
+    border-radius: 0;
+    margin: 0;
+    background-color: transparent;
+    border: none;
+
+    &.text-button { min-width: 100px; }
+
+    &:focus { box-shadow: inset 0 0 0 2px $overlay-focus; }
+
+    &:hover {
+      background-color: transparent;
+      box-shadow: inset 0 -2px $titlebar-track;
+    }
+
+    &:active, &:checked {
+      color: $titlebar-text;
+      background-color: transparent;
+      box-shadow: inset 0 -2px $primary;
+
+      &:hover {
+        box-shadow: inset 0 -2px lighten($primary, 15%);
+      }
+    }
+
+    &:disabled {
+      background-color: transparent;
+    }
+  }
+
+  button.text-button { min-width: 100px; } // FIXME aggregate with buttons
+
+  &.circular {
+    border-spacing: $space-size * 2;
+
+    button.circular,
+    button.text-button.circular { // FIXME aggregate with buttons
+      min-width: $medium-size;
+      min-height: $medium-size;
+      padding: 0;
+    }
+  }
+}
+
 %needs-attention {
   animation: needs-attention 150ms ease-in;
   background-image: radial-gradient(farthest-side, $primary 96%, transparent);
@@ -1521,11 +1572,16 @@ headerbar {
   }
 
   stackswitcher { // reset
-    border-radius: $corner-radius;
+    &.linked:not(.vertical) > button:not(.suggested-action):not(.destructive-action) {
+      border-radius: 0;
 
-    &.linked:not(.vertical) > button:not(.suggested-action):not(.destructive-action).text-button {
-      border-radius: $corner-radius;
-      margin: 0 0;
+      &:hover {
+        box-shadow: inset 0 -2px $titlebar-track;
+      }
+
+      &:active, &:checked {
+        color: $titlebar-text;
+      }
     }
   }
 
@@ -3329,10 +3385,10 @@ list {
   color: $text;
   box-shadow: none;
 
-  row { padding: $space-size / 2; }
+  row { padding: 2px; }
 
   > row.expander { padding: 0px; }
-  > row.expander .row-header { padding: $space-size / 2; }
+  > row.expander .row-header { padding: 2px; }
 }
 
 row {
@@ -4332,48 +4388,6 @@ shortcut > .keycap {
   caret-color: $primary;
 }
 
-stackswitcher {
-  min-height: 0;
-  padding: 0;
-  margin: $space-size 0;
-  border-radius: $corner-radius;
-  background-color: $overlay-normal;
-
-  &.linked:not(.vertical) > button:not(.suggested-action):not(.destructive-action) {
-    margin: 0 0;
-    border-radius: $corner-radius;
-    background-color: transparent;
-    border: none;
-
-    &.text-button { min-width: 100px; }
-
-    &:focus { box-shadow: inset 0 0 0 2px $overlay-focus; }
-
-    &:active {
-      box-shadow: inset 0 0 0 9999px gtkalpha($primary, 0.08);
-      background-image: radial-gradient(circle, gtkalpha($primary, 0.08) 10%, transparent 0%);
-    }
-
-    &:checked {
-      background-color: $primary;
-      color: on($primary);
-    }
-  }
-
-  button.text-button { min-width: 100px; } // FIXME aggregate with buttons
-
-  &.circular {
-    border-spacing: $space-size * 2;
-
-    button.circular,
-    button.text-button.circular { // FIXME aggregate with buttons
-      min-width: $medium-size;
-      min-height: $medium-size;
-      padding: 0;
-    }
-  }
-}
-
 
 /*************
  * App Icons *
@@ -4403,7 +4417,6 @@ popover.emoji-picker {
 .emoji-searchbar {
   padding: $space-size;
   border-spacing: $space-size;
-  border-bottom: 1px solid $divider;
   background: none;
 
   entry {
@@ -4416,8 +4429,7 @@ popover.emoji-picker {
 
 .emoji-toolbar {
   padding: 0;
-  border-spacing: $space-size/2;
-  border-top: 1px solid $divider;
+  border-spacing: $space-size / 2;
   background: none;
 }
 
@@ -4445,7 +4457,7 @@ popover.emoji-picker emoji {
 
 emoji-completion-row {
   min-height: $menuitem-size;
-  padding: 0 $space-size*2;
+  padding: 0 $space-size * 2;
 
   > box {
     border-spacing: $space-size;

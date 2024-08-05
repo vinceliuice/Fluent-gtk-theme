@@ -286,7 +286,7 @@
 }
 
 
-@mixin undershoot($p, $c: $frame, $neighbor: false) {
+@mixin undershoot($p, $c: $frame, $neighbor: false, $style: compact) {
 //
 // undershoot
 //
@@ -317,9 +317,14 @@
   } @else {
     @error "Unknown position #{$p}"
   }
-  
+
   #{$_selector} undershoot.#{$p} {
-    box-shadow: inset $_border_pos $border;
+    @if $style == 'compact' {
+      box-shadow: none;
+    } @else {
+      box-shadow: inset $_border_pos $border;
+    }
+
     background: linear-gradient(to $_direction, gtkalpha($c, .75), transparent 6px);
   }
 }
