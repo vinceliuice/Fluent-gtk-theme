@@ -239,8 +239,7 @@ spinner:checked:disabled {
 /****************
  * Text Entries *
  ****************/
-spinbutton.vertical, spinbutton:not(.vertical),
-entry {
+headerbar popover entry, spinbutton.vertical, spinbutton:not(.vertical), entry {
   min-height: 28px;
   padding: 0 8px;
   border-spacing: 4px;
@@ -256,31 +255,26 @@ entry {
   border-bottom-color: rgba(0, 0, 0, 0.18);
 }
 
-spinbutton.vertical:hover, spinbutton:hover:not(.vertical), spinbutton.vertical:drop(active), spinbutton:drop(active):not(.vertical),
-entry:hover,
-entry:drop(active) {
+headerbar popover entry:hover, spinbutton.vertical:hover, spinbutton:hover:not(.vertical), entry:hover, headerbar popover entry:drop(active), spinbutton.vertical:drop(active), spinbutton:drop(active):not(.vertical), entry:drop(active) {
   background-color: #FFFFFF;
   box-shadow: inset 0 0 0 1px transparent;
   border-color: rgba(0, 0, 0, 0.38);
 }
 
-spinbutton.vertical:focus-within, spinbutton:focus-within:not(.vertical),
-entry:focus-within {
+headerbar popover entry:focus-within, spinbutton.vertical:focus-within, spinbutton:focus-within:not(.vertical), entry:focus-within {
   background-color: #FFFFFF;
   box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.38);
   border-color: rgba(0, 0, 0, 0.38);
   outline: none;
 }
 
-spinbutton.vertical:disabled, spinbutton:disabled:not(.vertical),
-entry:disabled {
+headerbar popover entry:disabled, spinbutton.vertical:disabled, spinbutton:disabled:not(.vertical), entry:disabled {
   box-shadow: inset 0 0 0 1px transparent;
   background-color: #FAFAFA;
   color: rgba(0, 0, 0, 0.38);
   border-color: rgba(0, 0, 0, 0.04);
 }
 
-spinbutton.flat.vertical, spinbutton.flat:not(.vertical),
 entry.flat {
   min-height: 0;
   padding: 2px;
@@ -288,47 +282,38 @@ entry.flat {
   background-color: transparent;
 }
 
-spinbutton.vertical image, spinbutton:not(.vertical) image,
 entry image {
   color: rgba(0, 0, 0, 0.6);
 }
 
-spinbutton.vertical image:hover, spinbutton:not(.vertical) image:hover, spinbutton.vertical image:active, spinbutton:not(.vertical) image:active,
-entry image:hover,
-entry image:active {
+entry image:hover, entry image:active {
   color: rgba(0, 0, 0, 0.87);
 }
 
-spinbutton.vertical image:disabled, spinbutton:not(.vertical) image:disabled,
 entry image:disabled {
   color: rgba(0, 0, 0, 0.38);
 }
 
-spinbutton.vertical image.left, spinbutton:not(.vertical) image.left,
 entry image.left {
   margin-left: -2px;
   margin-right: 6px;
 }
 
-spinbutton.vertical image.right, spinbutton:not(.vertical) image.right,
 entry image.right {
   margin-left: 6px;
   margin-right: -2px;
 }
 
-spinbutton.vertical undershoot.left > undershoot.left, spinbutton:not(.vertical) undershoot.left > undershoot.left,
 entry undershoot.left > undershoot.left {
   box-shadow: none;
   background: linear-gradient(to right, alpha(rgba(0, 0, 0, 0.08), 0.75), transparent 6px);
 }
 
-spinbutton.vertical undershoot.right > undershoot.right, spinbutton:not(.vertical) undershoot.right > undershoot.right,
 entry undershoot.right > undershoot.right {
   box-shadow: none;
   background: linear-gradient(to left, alpha(rgba(0, 0, 0, 0.08), 0.75), transparent 6px);
 }
 
-spinbutton.error.vertical, spinbutton.error:not(.vertical),
 entry.error {
   transition: all 75ms cubic-bezier(0, 0, 0.2, 1), border 300ms cubic-bezier(0, 0, 0.2, 1), box-shadow 300ms cubic-bezier(0, 0, 0.2, 1);
   box-shadow: inset 0 0 0 1px transparent;
@@ -338,7 +323,6 @@ entry.error {
   border-bottom-color: rgba(0, 0, 0, 0.18);
 }
 
-spinbutton.error.vertical:disabled, spinbutton.error:disabled:not(.vertical),
 entry.error:disabled {
   box-shadow: inset 0 0 0 1px transparent;
   background-color: #FAFAFA;
@@ -346,7 +330,6 @@ entry.error:disabled {
   border-color: rgba(0, 0, 0, 0.04);
 }
 
-spinbutton.warning.vertical, spinbutton.warning:not(.vertical),
 entry.warning {
   transition: all 75ms cubic-bezier(0, 0, 0.2, 1), border 300ms cubic-bezier(0, 0, 0.2, 1), box-shadow 300ms cubic-bezier(0, 0, 0.2, 1);
   box-shadow: inset 0 0 0 1px transparent;
@@ -356,7 +339,6 @@ entry.warning {
   border-bottom-color: rgba(0, 0, 0, 0.18);
 }
 
-spinbutton.warning.vertical:disabled, spinbutton.warning:disabled:not(.vertical),
 entry.warning:disabled {
   box-shadow: inset 0 0 0 1px transparent;
   background-color: #FAFAFA;
@@ -364,7 +346,6 @@ entry.warning:disabled {
   border-color: rgba(0, 0, 0, 0.04);
 }
 
-spinbutton.success.vertical, spinbutton.success:not(.vertical),
 entry.success {
   transition: all 75ms cubic-bezier(0, 0, 0.2, 1), border 300ms cubic-bezier(0, 0, 0.2, 1), box-shadow 300ms cubic-bezier(0, 0, 0.2, 1);
   box-shadow: inset 0 0 0 1px transparent;
@@ -374,7 +355,6 @@ entry.success {
   border-bottom-color: rgba(0, 0, 0, 0.18);
 }
 
-spinbutton.success.vertical:disabled, spinbutton.success:disabled:not(.vertical),
 entry.success:disabled {
   box-shadow: inset 0 0 0 1px transparent;
   background-color: #FAFAFA;
@@ -382,9 +362,6 @@ entry.success:disabled {
   border-color: rgba(0, 0, 0, 0.04);
 }
 
-spinbutton.vertical > progress, spinbutton:not(.vertical) > progress,
-spinbutton.vertical progress > trough > progress,
-spinbutton:not(.vertical) progress > trough > progress,
 entry > progress,
 entry progress > trough > progress {
   margin: 2px -8px;
@@ -468,7 +445,7 @@ toast button:checked:disabled, menubutton.osd > button:checked:disabled, infobar
   color: rgba(255, 255, 255, 0.5);
 }
 
-window.messagedialog .response-area > button, window.dialog.message.csd .dialog-action-area > button, button {
+window.messagedialog .response-area > button, window.dialog.message.csd .dialog-action-area > button, headerbar popover button:not(.suggested-action):not(.destructive-action), button {
   border-radius: 2px;
   font-weight: 500;
   border: 1px solid rgba(0, 0, 0, 0.08);
@@ -482,33 +459,37 @@ window.messagedialog .response-area > button, window.dialog.message.csd .dialog-
   border-bottom-color: rgba(0, 0, 0, 0.18);
 }
 
-window.messagedialog .response-area > button:focus, window.dialog.message.csd .dialog-action-area > button:focus, button:focus {
+window.messagedialog .response-area > button:focus, window.dialog.message.csd .dialog-action-area > button:focus, headerbar popover button:focus:not(.suggested-action):not(.destructive-action), button:focus {
   box-shadow: inset 0 0 0 1px transparent, 0 0 0 2px rgba(0, 0, 0, 0.6);
   border-color: transparent;
   background-clip: padding-box;
   outline: none;
 }
 
-window.messagedialog .response-area > button:hover, window.dialog.message.csd .dialog-action-area > button:hover, button:hover {
+window.messagedialog .response-area > button:hover, window.dialog.message.csd .dialog-action-area > button:hover, headerbar popover button:hover:not(.suggested-action):not(.destructive-action), button:hover {
   box-shadow: inset 0 0 0 1px transparent, 0 0 0 2px transparent;
+  background-color: #FFFFFF;
   border-color: rgba(0, 0, 0, 0.26);
   outline: none;
 }
 
-window.messagedialog .response-area > button:active, window.dialog.message.csd .dialog-action-area > button:active, button:active {
+window.messagedialog .response-area > button:active, window.dialog.message.csd .dialog-action-area > button:active, headerbar popover button:active:not(.suggested-action):not(.destructive-action), button:active {
   animation: none;
   transition: all 75ms cubic-bezier(0, 0, 0.2, 1), border 300ms cubic-bezier(0, 0, 0.2, 1), box-shadow 300ms cubic-bezier(0, 0, 0.2, 1);
   box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.26), 0 0 0 2px transparent;
+  background-color: #FFFFFF;
+  border-color: rgba(0, 0, 0, 0.26);
+  background-clip: border-box;
 }
 
-window.messagedialog .response-area > button:disabled, window.dialog.message.csd .dialog-action-area > button:disabled, button:disabled {
+window.messagedialog .response-area > button:disabled, window.dialog.message.csd .dialog-action-area > button:disabled, headerbar popover button:disabled:not(.suggested-action):not(.destructive-action), button:disabled {
   box-shadow: none;
   background-color: #FAFAFA;
   color: rgba(0, 0, 0, 0.38);
   border-color: rgba(0, 0, 0, 0.04);
 }
 
-window.messagedialog .response-area > button:checked, window.dialog.message.csd .dialog-action-area > button:checked, button:checked {
+window.messagedialog .response-area > button:checked, window.dialog.message.csd .dialog-action-area > button:checked, headerbar popover button:checked:not(.suggested-action):not(.destructive-action), button:checked {
   box-shadow: inset 0 0 0 1px transparent, 0 0 0 2px transparent;
   background-clip: border-box;
   background-color: #1A73E8;
@@ -518,11 +499,11 @@ window.messagedialog .response-area > button:checked, window.dialog.message.csd 
   transition: all 75ms cubic-bezier(0, 0, 0.2, 1), background-color 300ms cubic-bezier(0, 0, 0.2, 1);
 }
 
-window.messagedialog .response-area > button:checked:hover, window.dialog.message.csd .dialog-action-area > button:checked:hover, button:checked:hover {
+window.messagedialog .response-area > button:checked:hover, window.dialog.message.csd .dialog-action-area > button:checked:hover, headerbar popover button:checked:hover:not(.suggested-action):not(.destructive-action), button:checked:hover {
   box-shadow: inset 0 0 0 9999px transparent;
 }
 
-window.messagedialog .response-area > button:checked:disabled, window.dialog.message.csd .dialog-action-area > button:checked:disabled, button:checked:disabled {
+window.messagedialog .response-area > button:checked:disabled, window.dialog.message.csd .dialog-action-area > button:checked:disabled, headerbar popover button:checked:disabled:not(.suggested-action):not(.destructive-action), button:checked:disabled {
   box-shadow: none;
   background-color: rgba(26, 115, 232, 0.35);
   border-color: rgba(26, 115, 232, 0.35);
@@ -530,8 +511,9 @@ window.messagedialog .response-area > button:checked:disabled, window.dialog.mes
   color: rgba(255, 255, 255, 0.5);
 }
 
-window.messagedialog .response-area > button:drop(active), window.dialog.message.csd .dialog-action-area > button:drop(active), button:drop(active) {
+window.messagedialog .response-area > button:drop(active), window.dialog.message.csd .dialog-action-area > button:drop(active), headerbar popover button:drop(active):not(.suggested-action):not(.destructive-action), button:drop(active) {
   box-shadow: inset 0 0 0 1px transparent, 0 0 0 2px transparent;
+  background-color: #FFFFFF;
   border-color: rgba(0, 0, 0, 0.26);
   outline: none;
 }
@@ -548,7 +530,7 @@ list > row button.image-button:not(.flat), tabbar tab button.image-button,
 dnd tab button.image-button, splitbutton.flat > button,
 splitbutton.flat > menubutton > button, menubutton.flat > button, filechooser #pathbarbox > stack > box > button, .app-notification button, popover.background.menu button,
 popover.background button.model,
-pathbar > button, headerbar button:not(.suggested-action):not(.destructive-action), .toolbar > button,
+pathbar > button, headerbar popover button.flat:not(.suggested-action):not(.destructive-action), headerbar button:not(.suggested-action):not(.destructive-action), .toolbar > button,
 toolbar > button, dropdown > .linked:not(.vertical) > button:not(:only-child),
 combobox > .linked:not(.vertical) > button:not(:only-child), toast button, menubutton.osd > button, infobar.error > revealer > box button, infobar.error:backdrop > revealer > box button, infobar.warning > revealer > box button, infobar.warning:backdrop > revealer > box button, infobar.action > revealer > box button, infobar.action:backdrop > revealer > box button, infobar.question > revealer > box button, infobar.question:backdrop > revealer > box button, popover.background.touch-selection button, popover.background.magnifier button, .selection-mode headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action), headerbar.selection-mode button:not(.suggested-action):not(.destructive-action), button.flat {
   transition: all 75ms cubic-bezier(0, 0, 0.2, 1), box-shadow 300ms cubic-bezier(0, 0, 0.2, 1);
@@ -565,7 +547,7 @@ list > row button.image-button:focus:not(.flat), tabbar tab button.image-button:
 dnd tab button.image-button:focus, splitbutton.flat > button:focus,
 splitbutton.flat > menubutton > button:focus, menubutton.flat > button:focus, filechooser #pathbarbox > stack > box > button:focus, .app-notification button:focus, popover.background.menu button:focus,
 popover.background button.model:focus,
-pathbar > button:focus, headerbar button:focus:not(.suggested-action):not(.destructive-action), .toolbar > button:focus,
+pathbar > button:focus, headerbar popover button.flat:focus:not(.suggested-action):not(.destructive-action), headerbar button:focus:not(.suggested-action):not(.destructive-action), .toolbar > button:focus,
 toolbar > button:focus, dropdown > .linked:not(.vertical) > button:focus:not(:only-child),
 combobox > .linked:not(.vertical) > button:focus:not(:only-child), toast button:focus, menubutton.osd > button:focus, infobar.error > revealer > box button:focus, infobar.warning > revealer > box button:focus, infobar.action > revealer > box button:focus, infobar.question > revealer > box button:focus, popover.background.touch-selection button:focus, popover.background.magnifier button:focus, .selection-mode headerbar windowcontrols > button:focus:not(.suggested-action):not(.destructive-action), button.flat:focus, button.flat:checked:focus {
   box-shadow: inset 0 0 0 2px alpha(currentColor, 0.08);
@@ -580,7 +562,7 @@ list > row button.image-button:hover:not(.flat), tabbar tab button.image-button:
 dnd tab button.image-button:hover, splitbutton.flat > button:hover,
 splitbutton.flat > menubutton > button:hover, menubutton.flat > button:hover, filechooser #pathbarbox > stack > box > button:hover, .app-notification button:hover, popover.background.menu button:hover,
 popover.background button.model:hover,
-pathbar > button:hover, headerbar button:hover:not(.suggested-action):not(.destructive-action), .toolbar > button:hover,
+pathbar > button:hover, headerbar popover button.flat:hover:not(.suggested-action):not(.destructive-action), headerbar button:hover:not(.suggested-action):not(.destructive-action), .toolbar > button:hover,
 toolbar > button:hover, dropdown > .linked:not(.vertical) > button:hover:not(:only-child),
 combobox > .linked:not(.vertical) > button:hover:not(:only-child), toast button:hover, menubutton.osd > button:hover, infobar.error > revealer > box button:hover, infobar.warning > revealer > box button:hover, infobar.action > revealer > box button:hover, infobar.question > revealer > box button:hover, popover.background.touch-selection button:hover, popover.background.magnifier button:hover, .selection-mode headerbar windowcontrols > button:hover:not(.suggested-action):not(.destructive-action), button.flat:hover {
   background-color: alpha(currentColor, 0.08);
@@ -595,7 +577,7 @@ list > row button.image-button:active:not(.flat), tabbar tab button.image-button
 dnd tab button.image-button:active, splitbutton.flat > button:active,
 splitbutton.flat > menubutton > button:active, menubutton.flat > button:active, filechooser #pathbarbox > stack > box > button:active, .app-notification button:active, popover.background.menu button:active,
 popover.background button.model:active,
-pathbar > button:active, headerbar button:active:not(.suggested-action):not(.destructive-action), .toolbar > button:active,
+pathbar > button:active, headerbar popover button.flat:active:not(.suggested-action):not(.destructive-action), headerbar button:active:not(.suggested-action):not(.destructive-action), .toolbar > button:active,
 toolbar > button:active, dropdown > .linked:not(.vertical) > button:active:not(:only-child),
 combobox > .linked:not(.vertical) > button:active:not(:only-child), toast button:active, menubutton.osd > button:active, infobar.error > revealer > box button:active, infobar.warning > revealer > box button:active, infobar.action > revealer > box button:active, infobar.question > revealer > box button:active, popover.background.touch-selection button:active, popover.background.magnifier button:active, .selection-mode headerbar windowcontrols > button:active:not(.suggested-action):not(.destructive-action), button.flat:active {
   animation: none;
@@ -611,7 +593,7 @@ list > row button.image-button:disabled:not(.flat), tabbar tab button.image-butt
 dnd tab button.image-button:disabled, splitbutton.flat > button:disabled,
 splitbutton.flat > menubutton > button:disabled, menubutton.flat > button:disabled, filechooser #pathbarbox > stack > box > button:disabled, .app-notification button:disabled, popover.background.menu button:disabled,
 popover.background button.model:disabled,
-pathbar > button:disabled, headerbar button:disabled:not(.suggested-action):not(.destructive-action), .toolbar > button:disabled,
+pathbar > button:disabled, headerbar popover button.flat:disabled:not(.suggested-action):not(.destructive-action), headerbar button:disabled:not(.suggested-action):not(.destructive-action), .toolbar > button:disabled,
 toolbar > button:disabled, dropdown > .linked:not(.vertical) > button:disabled:not(:only-child),
 combobox > .linked:not(.vertical) > button:disabled:not(:only-child), toast button:disabled, menubutton.osd > button:disabled, infobar.error > revealer > box button:disabled, infobar.warning > revealer > box button:disabled, infobar.action > revealer > box button:disabled, infobar.question > revealer > box button:disabled, popover.background.touch-selection button:disabled, popover.background.magnifier button:disabled, .selection-mode headerbar windowcontrols > button:disabled:not(.suggested-action):not(.destructive-action), button.flat:disabled {
   box-shadow: none;
@@ -623,7 +605,7 @@ tabbar tab button.image-button:checked,
 dnd tab button.image-button:checked, splitbutton.flat > button:checked,
 splitbutton.flat > menubutton > button:checked, menubutton.flat > button:checked, filechooser #pathbarbox > stack > box > button:checked, .app-notification button:checked, popover.background.menu button:checked,
 popover.background button.model:checked,
-pathbar > button:checked, headerbar button:checked:not(.suggested-action):not(.destructive-action), .toolbar > button:checked,
+pathbar > button:checked, headerbar popover button.flat:checked:not(.suggested-action):not(.destructive-action), headerbar button:checked:not(.suggested-action):not(.destructive-action), .toolbar > button:checked,
 toolbar > button:checked, dropdown > .linked:not(.vertical) > button:checked:not(:only-child),
 combobox > .linked:not(.vertical) > button:checked:not(:only-child), toast button:checked, menubutton.osd > button:checked, infobar.error > revealer > box button:checked, infobar.warning > revealer > box button:checked, infobar.action > revealer > box button:checked, infobar.question > revealer > box button:checked, popover.background.touch-selection button:checked, popover.background.magnifier button:checked, .selection-mode headerbar windowcontrols > button:checked:not(.suggested-action):not(.destructive-action), button.flat:checked, button.flat:checked:hover {
   background-color: alpha(currentColor, 0.1);
@@ -964,46 +946,46 @@ stackswitcher > button.needs-attention > image:dir(rtl) {
   background-position: left 3px;
 }
 
-.linked:not(.vertical) > spinbutton.vertical, .linked:not(.vertical) > spinbutton:not(.vertical), .linked:not(.vertical) > entry {
+.linked:not(.vertical) > entry {
   border-radius: 0;
   border-right-width: 0;
 }
 
-.linked:not(.vertical) > spinbutton.vertical:first-child, .linked:not(.vertical) > spinbutton:first-child:not(.vertical), .linked:not(.vertical) > entry:first-child {
+.linked:not(.vertical) > entry:first-child {
   border-top-left-radius: 2px;
   border-bottom-left-radius: 2px;
 }
 
-.linked:not(.vertical) > spinbutton.vertical:last-child, .linked:not(.vertical) > spinbutton:last-child:not(.vertical), .linked:not(.vertical) > entry:last-child {
+.linked:not(.vertical) > entry:last-child {
   border-top-right-radius: 2px;
   border-bottom-right-radius: 2px;
   border-right-width: 1px;
 }
 
-.linked:not(.vertical) > spinbutton.vertical:only-child, .linked:not(.vertical) > spinbutton:only-child:not(.vertical), .linked:not(.vertical) > entry:only-child {
+.linked:not(.vertical) > entry:only-child {
   border-radius: 2px;
   border-right-width: 1px;
 }
 
-.linked:not(.vertical) > button {
+headerbar popover .linked:not(.vertical) > button:not(.suggested-action):not(.destructive-action), .linked:not(.vertical) > button {
   border-radius: 0;
   border-left-width: 0;
   border-right-width: 0;
 }
 
-.linked:not(.vertical) > button:first-child {
+headerbar popover .linked:not(.vertical) > button:first-child:not(.suggested-action):not(.destructive-action), .linked:not(.vertical) > button:first-child {
   border-top-left-radius: 2px;
   border-bottom-left-radius: 2px;
   border-left-width: 1px;
 }
 
-.linked:not(.vertical) > button:last-child {
+headerbar popover .linked:not(.vertical) > button:last-child:not(.suggested-action):not(.destructive-action), .linked:not(.vertical) > button:last-child {
   border-top-right-radius: 2px;
   border-bottom-right-radius: 2px;
   border-right-width: 1px;
 }
 
-.linked:not(.vertical) > button:only-child {
+headerbar popover .linked:not(.vertical) > button:only-child:not(.suggested-action):not(.destructive-action), .linked:not(.vertical) > button:only-child {
   border-radius: 2px;
   border-left-width: 1px;
   border-right-width: 1px;
@@ -1355,28 +1337,6 @@ stackswitcher > button.needs-attention > image:dir(rtl) {
 }
 
 .linked.vertical tabbutton:not(:last-child) > button {
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-}
-
-.linked:not(.vertical) > spinbutton.vertical:dir(ltr):not(:first-child), .linked:not(.vertical) > spinbutton:dir(ltr):not(:first-child):not(.vertical), .linked:not(.vertical) > spinbutton.vertical:dir(rtl):not(:last-child), .linked:not(.vertical) > spinbutton:dir(rtl):not(:last-child):not(.vertical) {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  margin-left: 0;
-}
-
-.linked:not(.vertical) > spinbutton.vertical:dir(ltr):not(:last-child), .linked:not(.vertical) > spinbutton:dir(ltr):not(:last-child):not(.vertical), .linked:not(.vertical) > spinbutton.vertical:dir(rtl):not(:first-child), .linked:not(.vertical) > spinbutton:dir(rtl):not(:first-child):not(.vertical) {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-}
-
-.linked.vertical spinbutton.vertical:not(:first-child), .linked.vertical spinbutton:not(:first-child):not(.vertical) {
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-  margin-top: 0;
-}
-
-.linked.vertical spinbutton.vertical:not(:last-child), .linked.vertical spinbutton:not(:last-child):not(.vertical) {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
@@ -1980,15 +1940,6 @@ headerbar entry > menubutton {
   margin-bottom: 0;
 }
 
-headerbar popover entry,
-headerbar popover spinbutton,
-headerbar popover button,
-headerbar popover menubutton,
-headerbar popover stackswitcher {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
 headerbar separator:not(.sidebar) {
   background-color: rgba(0, 0, 0, 0.12);
 }
@@ -2048,6 +1999,20 @@ headerbar stackswitcher.linked:not(.vertical) > button:not(.suggested-action):no
 
 headerbar stackswitcher.linked:not(.vertical) > button:not(.suggested-action):not(.destructive-action):active, headerbar stackswitcher.linked:not(.vertical) > button:not(.suggested-action):not(.destructive-action):checked {
   color: rgba(0, 0, 0, 0.87);
+}
+
+headerbar popover entry,
+headerbar popover spinbutton,
+headerbar popover button,
+headerbar popover menubutton,
+headerbar popover stackswitcher {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+headerbar popover entry {
+  margin-left: 0;
+  margin-right: 0;
 }
 
 headerbar.selection-mode {
@@ -2509,7 +2474,12 @@ popover.background, popover.background:backdrop {
   background-color: transparent;
 }
 
-popover.background > arrow,
+popover.background > arrow {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 4px 5px rgba(0, 0, 0, 0.16), 0 1px 6px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.98);
+}
+
 popover.background > contents {
   transition: box-shadow 75ms cubic-bezier(0, 0, 0.2, 1);
   padding: 4px;
@@ -4805,7 +4775,7 @@ window.ssd {
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.12);
 }
 
-.view:selected, iconview:selected, gridview > child:selected, row:selected, calendar:selected, calendar > grid > label.day-number:selected {
+.view:selected, iconview:selected, gridview > child:selected, row:selected, calendar > grid > label.day-number:selected {
   background-color: alpha(currentColor, 0.06);
 }
 
@@ -4814,8 +4784,7 @@ flowbox > flowboxchild:selected, calendar > grid > label.today {
   background-color: rgba(26, 115, 232, 0.2);
 }
 
-textview text selection:focus, textview text selection, label > selection,
-entry > text > selection, spinbutton:not(.vertical) > text > selection, spinbutton.vertical > text > selection, calendar > grid > label.today:selected {
+textview text selection:focus, textview text selection, label > selection, entry > text > selection, calendar:selected, calendar > grid > label.today:selected {
   color: white;
   background-color: #1A73E8;
 }
@@ -6292,6 +6261,7 @@ button.card {
 
 button.card:hover {
   box-shadow: inset 0 0 0 1px transparent, 0 0 0 2px transparent;
+  background-color: #FFFFFF;
   border-color: rgba(0, 0, 0, 0.26);
   outline: none;
 }
@@ -6300,6 +6270,8 @@ button.card.keyboard-activating, button.card:active {
   animation: none;
   transition: all 75ms cubic-bezier(0, 0, 0.2, 1), border 300ms cubic-bezier(0, 0, 0.2, 1), box-shadow 300ms cubic-bezier(0, 0, 0.2, 1);
   box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.26), 0 0 0 2px transparent;
+  background-color: #FFFFFF;
+  border-color: rgba(0, 0, 0, 0.26);
 }
 
 button.card:checked {

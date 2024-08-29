@@ -294,8 +294,7 @@ spinner {
   }
 }
 
-%entry,
-entry {
+%entry-basic {
   min-height: $medium-size;
   padding: 0 8px;
   border-spacing: $space-size;
@@ -315,6 +314,11 @@ entry {
     &:focus-within { @include entry(focus); }
     &:disabled { @include entry(disabled); }
   }
+}
+
+
+entry {
+  @extend %entry-basic;
 
   &.flat {
     min-height: 0;
@@ -458,7 +462,7 @@ treeview entry {
 
   &:hover { @include button(hover); }
 
-  &:active { @include button(active); }
+  &:active { @include button(active); background-clip: border-box; }
 
   &:disabled { @include button(disabled); }
 
@@ -1029,7 +1033,7 @@ spinbutton {
     // in this horizontal configuration, the whole spinbutton
     // behaves as the entry, so we extend the entry styling
     // and nuke the style on the internal entry
-    @extend %entry;
+    @extend %entry-basic;
 
     padding: 0;
     border-spacing: 0;
@@ -1069,8 +1073,7 @@ spinbutton {
 
   // Vertical
   &.vertical {
-    @extend %entry;
-
+    @extend %entry-basic;
     padding: 0;
 
     &:disabled { color: $text-disabled; }
@@ -1510,17 +1513,6 @@ headerbar {
     margin-bottom: 0;
   }
 
-  popover {
-    entry,
-    spinbutton,
-    button,
-    menubutton,
-    stackswitcher {
-      margin-top: 0;
-      margin-bottom: 0;
-    }
-  }
-
   separator:not(.sidebar) {
     background-color: $titlebar-divider;
   }
@@ -1582,6 +1574,35 @@ headerbar {
       &:active, &:checked {
         color: $titlebar-text;
       }
+    }
+  }
+
+  popover {
+    entry,
+    spinbutton,
+    button,
+    menubutton,
+    stackswitcher {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    button:not(.suggested-action):not(.destructive-action) {
+      @extend %button-basic;
+
+      &.flat {
+        @extend %button-flat;
+      }
+    }
+
+    .linked:not(.vertical) > button:not(.suggested-action):not(.destructive-action) {
+      @extend %linked;
+    }
+
+    entry {
+      @extend %entry-basic;
+      margin-left: 0;
+      margin-right: 0;
     }
   }
 
@@ -2066,7 +2087,12 @@ popover.background {
     background-color: transparent;
   }
 
-  > arrow,
+  > arrow {
+    border: 1px solid $divider;
+    box-shadow: $shadow-z6;
+    background-color: $menu;
+  }
+
   > contents {
     transition: $transition-shadow;
     padding: $space-size;
@@ -3556,7 +3582,7 @@ calendar {
   &:disabled { color: $text-disabled; }
 
   &:selected {
-    @extend %selected_items;
+    @extend %selected_items_primary;
 
     border-radius: $corner-radius;
   }
@@ -3594,7 +3620,7 @@ calendar {
     }
 
     > label.day-number {
-      padding: $space-size*1.5;
+      padding: $space-size * 1.5;
 
       &:selected {
         @extend %selected_items;
