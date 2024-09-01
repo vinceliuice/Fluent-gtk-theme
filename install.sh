@@ -16,9 +16,13 @@ titlebutton=
 icon='-default'
 
 # Destination directory
-if [ "$UID" -eq "$ROOT_UID" ]; then
+if [[ "$UID" -eq "$ROOT_UID" ]]; then
   DEST_DIR="/usr/share/themes"
-elif [ -n "$HOME/.local/share/themes" ]; then
+elif [[ -n "$XDG_DATA_HOME" ]]; then
+  DEST_DIR="$XDG_DATA_HOME/themes"
+elif [[ -d "$HOME/.themes" ]]; then
+  DEST_DIR="$HOME/.themes"
+elif [[ -d "$HOME/.local/share/themes" ]]; then
   DEST_DIR="$HOME/.local/share/themes"
 else
   DEST_DIR="$HOME/.themes"
@@ -749,6 +753,14 @@ clean_theme() {
         for size in "${SIZE_VARIANTS[@]}"; do
           clean "${dest:-$DEST_DIR}" "${_name:-$THEME_NAME}" "$round" "$theme" "$color" "$size"
         done
+      done
+    done
+  done
+
+  for theme in "${THEME_VARIANTS[@]}"; do
+    for color in "${COLOR_VARIANTS[@]}"; do
+      for size in "${SIZE_VARIANTS[@]}"; do
+        uninstall "${dest:-$HOME/.local/share/themes}" "${_name:-$THEME_NAME}" "$theme" "$color" "$size"
       done
     done
   done
