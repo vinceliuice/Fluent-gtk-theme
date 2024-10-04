@@ -1686,9 +1686,13 @@ preferencesgroup, .geary-accounts-editor-pane {
   list {
     @extend %circular_list;
 
-    row.activatable { @extend %circular_row; }
+    > row.activatable {
+      @extend %circular_row;
+    }
   }
 }
+
+.geary-settings > box > box { margin: $space-size $space-size * 2; }
 
 .geary-accounts-editor-pane {
   frame:not(.geary-signature) > border,
