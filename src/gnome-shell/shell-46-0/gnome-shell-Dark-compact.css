@@ -233,6 +233,10 @@ StEntry StLabel.hint-text {
   box-shadow: none;
 }
 
+.screenshot-ui-show-pointer-button:checked:hover, .screenshot-ui-type-button:checked:hover, .screenshot-ui-show-pointer-button:checked:focus, .screenshot-ui-type-button:checked:focus {
+  background-color: #3281ea;
+}
+
 .screenshot-ui-show-pointer-button:insensitive, .screenshot-ui-type-button:insensitive {
   color: rgba(255, 255, 255, 0.3);
   background-color: transparent;
@@ -292,12 +296,14 @@ StEntry StLabel.hint-text {
 .icon-button.default:focus, .background-app-item .default.close-button:focus, .message .message-header .default.message-expand-button:focus,
 .message .message-header .default.message-close-button:focus, .button.default:focus {
   color: #3281ea;
-  box-shadow: none;
+  box-shadow: none !important;
+  outline: none !important;
 }
 
-.icon-button.default:focus:active, .background-app-item .default.close-button:focus:active, .message .message-header .default.message-expand-button:focus:active,
+.icon-button.default:focus:hover, .background-app-item .default.close-button:focus:hover, .message .message-header .default.message-expand-button:focus:hover,
+.message .message-header .default.message-close-button:focus:hover, .button.default:focus:hover, .icon-button.default:focus:active, .background-app-item .default.close-button:focus:active, .message .message-header .default.message-expand-button:focus:active,
 .message .message-header .default.message-close-button:focus:active, .button.default:focus:active {
-  color: white;
+  color: #3281ea;
 }
 
 .icon-button.default:hover, .background-app-item .default.close-button:hover, .message .message-header .default.message-expand-button:hover,
@@ -319,9 +325,15 @@ StEntry StLabel.hint-text {
 .icon-button.default:active, .background-app-item .default.close-button:active, .message .message-header .default.message-expand-button:active,
 .message .message-header .default.message-close-button:active, .button.default:active {
   color: #FFFFFF;
-  background-color: #1b73e8;
+  background-color: #498fec;
   border-color: rgba(255, 255, 255, 0.15);
   box-shadow: none;
+}
+
+.icon-button.default:active:hover, .background-app-item .default.close-button:active:hover, .message .message-header .default.message-expand-button:active:hover,
+.message .message-header .default.message-close-button:active:hover, .button.default:active:hover, .icon-button.default:active:focus, .background-app-item .default.close-button:active:focus, .message .message-header .default.message-expand-button:active:focus,
+.message .message-header .default.message-close-button:active:focus, .button.default:active:focus {
+  background-color: #498fec;
 }
 
 .icon-button, .background-app-item .close-button, .message .message-header .message-expand-button,
@@ -363,6 +375,12 @@ StEntry StLabel.hint-text {
   background-color: #3281ea;
   border-color: #3281ea;
   box-shadow: none;
+}
+
+.icon-button:checked:hover, .background-app-item .close-button:checked:hover, .message .message-header .message-expand-button:checked:hover,
+.message .message-header .message-close-button:checked:hover, .button:checked:hover, .icon-button:checked:focus, .background-app-item .close-button:checked:focus, .message .message-header .message-expand-button:checked:focus,
+.message .message-header .message-close-button:checked:focus, .button:checked:focus {
+  background-color: #3281ea;
 }
 
 .icon-button:insensitive, .background-app-item .close-button:insensitive, .message .message-header .message-expand-button:insensitive,
@@ -2739,7 +2757,7 @@ StWidget.focused .app-grid-running-dot {
 .app-folder-dialog .folder-name-container .icon-button, .app-folder-dialog .folder-name-container .background-app-item .close-button, .background-app-item .app-folder-dialog .folder-name-container .close-button, .app-folder-dialog .folder-name-container .message .message-header .message-expand-button, .message .message-header .app-folder-dialog .folder-name-container .message-expand-button,
 .app-folder-dialog .folder-name-container .message .message-header .message-close-button,
 .message .message-header .app-folder-dialog .folder-name-container .message-close-button {
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: rgba(255, 255, 255, 0.08);
   color: rgba(255, 255, 255, 0.7);
   border: none;
   padding: 0;
@@ -2758,6 +2776,14 @@ StWidget.focused .app-grid-running-dot {
 .app-folder-dialog .folder-name-container .message .message-header .message-close-button:hover,
 .message .message-header .app-folder-dialog .folder-name-container .message-close-button:hover {
   background-color: rgba(255, 255, 255, 0.15);
+}
+
+.app-folder-dialog .folder-name-container .icon-button:focus, .app-folder-dialog .folder-name-container .background-app-item .close-button:focus, .background-app-item .app-folder-dialog .folder-name-container .close-button:focus, .app-folder-dialog .folder-name-container .message .message-header .message-expand-button:focus, .message .message-header .app-folder-dialog .folder-name-container .message-expand-button:focus,
+.app-folder-dialog .folder-name-container .message .message-header .message-close-button:focus,
+.message .message-header .app-folder-dialog .folder-name-container .message-close-button:focus {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
 }
 
 .app-folder-dialog .folder-name-container .icon-button:checked, .app-folder-dialog .folder-name-container .background-app-item .close-button:checked, .background-app-item .app-folder-dialog .folder-name-container .close-button:checked, .app-folder-dialog .folder-name-container .message .message-header .message-expand-button:checked, .message .message-header .app-folder-dialog .folder-name-container .message-expand-button:checked,
@@ -3474,11 +3500,12 @@ StWidget.focused .app-grid-running-dot {
 
 .quick-slider .slider-bin:focus {
   color: #3281ea;
-  box-shadow: none;
+  box-shadow: none !important;
+  outline: none !important;
 }
 
-.quick-slider .slider-bin:focus:active {
-  color: white;
+.quick-slider .slider-bin:focus:hover, .quick-slider .slider-bin:focus:active {
+  color: #3281ea;
 }
 
 .quick-slider .quick-toggle-icon {
@@ -3591,7 +3618,7 @@ StWidget.focused .app-grid-running-dot {
 
 .quick-settings-system-item .power-item:insensitive {
   color: rgba(255, 255, 255, 0.8);
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: #343434;
   border-color: rgba(255, 255, 255, 0.08);
   box-shadow: none;
   background-color: transparent;
@@ -3935,9 +3962,15 @@ StWidget.focused .app-grid-running-dot {
 .login-dialog .modal-dialog-button:default:active,
 .unlock-dialog .modal-dialog-button:default:active {
   color: rgba(255, 255, 255, 0.85);
-  background-color: #297be9;
+  background-color: #5798ee;
   border-color: rgba(255, 255, 255, 0.15);
   box-shadow: none;
+}
+
+.login-dialog .modal-dialog-button:default:active:hover, .login-dialog .modal-dialog-button:default:active:focus,
+.unlock-dialog .modal-dialog-button:default:active:hover,
+.unlock-dialog .modal-dialog-button:default:active:focus {
+  background-color: #5798ee;
 }
 
 .login-dialog .modal-dialog-button:default:insensitive,

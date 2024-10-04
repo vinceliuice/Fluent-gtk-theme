@@ -200,9 +200,11 @@
 
   @if $t == focus {
     color: $primary_color;
-    box-shadow: none;
-    &:active {
-      color: white;
+    box-shadow: none !important;
+    outline: none !important;
+
+    &:hover, &:active {
+      color: $primary_color;
     }
   }
 
@@ -215,9 +217,13 @@
 
   @if $t == active {
     color: $tc;
-    background-color: darken($c, 5%);
+    background-color: if($variant == 'light', darken($c, 5%), lighten($c, 5%));
     border-color: if($variant == 'light', darken($c, 20%), rgba(white, 0.15));
     box-shadow: none;
+
+    &:hover, &:focus {
+      background-color: if($variant == 'light', darken($c, 5%), lighten($c, 5%));
+    }
   }
 
   @if $t == checked {
@@ -225,6 +231,10 @@
     background-color: $primary_color;
     border-color: $primary_color;
     box-shadow: none;
+
+    &:hover, &:focus {
+      background-color: $primary_color;
+    }
   }
 
   @if $t == insensitive {

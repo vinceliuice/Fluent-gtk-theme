@@ -3198,6 +3198,12 @@ StWidget.focused .app-well-app-running-dot {
   box-shadow: none;
 }
 
+.login-dialog .modal-dialog-button:default:active:hover, .login-dialog .modal-dialog-button:default:active:focus,
+.unlock-dialog .modal-dialog-button:default:active:hover,
+.unlock-dialog .modal-dialog-button:default:active:focus {
+  background-color: #176ee1;
+}
+
 .login-dialog .modal-dialog-button:default:insensitive,
 .unlock-dialog .modal-dialog-button:default:insensitive {
   color: rgba(255, 255, 255, 0.5);

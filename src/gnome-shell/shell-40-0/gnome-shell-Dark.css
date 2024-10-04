@@ -197,11 +197,12 @@ StEntry StLabel.hint-text {
 
 .icon-button.default:focus, .button.default:focus {
   color: #3281ea;
-  box-shadow: none;
+  box-shadow: none !important;
+  outline: none !important;
 }
 
-.icon-button.default:focus:active, .button.default:focus:active {
-  color: white;
+.icon-button.default:focus:hover, .button.default:focus:hover, .icon-button.default:focus:active, .button.default:focus:active {
+  color: #3281ea;
 }
 
 .icon-button.default:hover, .button.default:hover {
@@ -220,9 +221,13 @@ StEntry StLabel.hint-text {
 
 .icon-button.default:active, .button.default:active {
   color: #FFFFFF;
-  background-color: #1b73e8;
+  background-color: #498fec;
   border-color: rgba(255, 255, 255, 0.15);
   box-shadow: none;
+}
+
+.icon-button.default:active:hover, .button.default:active:hover, .icon-button.default:active:focus, .button.default:active:focus {
+  background-color: #498fec;
 }
 
 .icon-button, .button {
@@ -258,6 +263,10 @@ StEntry StLabel.hint-text {
   background-color: #3281ea;
   border-color: #3281ea;
   box-shadow: none;
+}
+
+.icon-button:checked:hover, .button:checked:hover, .icon-button:checked:focus, .button:checked:focus {
+  background-color: #3281ea;
 }
 
 .icon-button:insensitive, .button:insensitive {
@@ -3195,9 +3204,15 @@ StWidget.focused .app-well-app-running-dot {
 .login-dialog .modal-dialog-button:default:active,
 .unlock-dialog .modal-dialog-button:default:active {
   color: rgba(255, 255, 255, 0.85);
-  background-color: #297be9;
+  background-color: #5798ee;
   border-color: rgba(255, 255, 255, 0.15);
   box-shadow: none;
+}
+
+.login-dialog .modal-dialog-button:default:active:hover, .login-dialog .modal-dialog-button:default:active:focus,
+.unlock-dialog .modal-dialog-button:default:active:hover,
+.unlock-dialog .modal-dialog-button:default:active:focus {
+  background-color: #5798ee;
 }
 
 .login-dialog .modal-dialog-button:default:insensitive,

@@ -208,6 +208,10 @@ StEntry StLabel.hint-text {
   box-shadow: none;
 }
 
+.screenshot-ui-show-pointer-button:checked:hover, .screenshot-ui-type-button:checked:hover, .screenshot-ui-show-pointer-button:checked:focus, .screenshot-ui-type-button:checked:focus {
+  background-color: #1A73E8;
+}
+
 .screenshot-ui-show-pointer-button:insensitive, .screenshot-ui-type-button:insensitive {
   color: rgba(0, 0, 0, 0.26);
   background-color: transparent;
@@ -258,11 +262,12 @@ StEntry StLabel.hint-text {
 
 .icon-button.default:focus, .background-app-item .default.close-button:focus, .button.default:focus {
   color: #1A73E8;
-  box-shadow: none;
+  box-shadow: none !important;
+  outline: none !important;
 }
 
-.icon-button.default:focus:active, .background-app-item .default.close-button:focus:active, .button.default:focus:active {
-  color: white;
+.icon-button.default:focus:hover, .background-app-item .default.close-button:focus:hover, .button.default:focus:hover, .icon-button.default:focus:active, .background-app-item .default.close-button:focus:active, .button.default:focus:active {
+  color: #1A73E8;
 }
 
 .icon-button.default:hover, .background-app-item .default.close-button:hover, .button.default:hover {
@@ -284,6 +289,10 @@ StEntry StLabel.hint-text {
   background-color: #1567d3;
   border-color: #0e458e;
   box-shadow: none;
+}
+
+.icon-button.default:active:hover, .background-app-item .default.close-button:active:hover, .button.default:active:hover, .icon-button.default:active:focus, .background-app-item .default.close-button:active:focus, .button.default:active:focus {
+  background-color: #1567d3;
 }
 
 .icon-button, .background-app-item .close-button, .button {
@@ -319,6 +328,10 @@ StEntry StLabel.hint-text {
   background-color: #1A73E8;
   border-color: #1A73E8;
   box-shadow: none;
+}
+
+.icon-button:checked:hover, .background-app-item .close-button:checked:hover, .button:checked:hover, .icon-button:checked:focus, .background-app-item .close-button:checked:focus, .button:checked:focus {
+  background-color: #1A73E8;
 }
 
 .icon-button:insensitive, .background-app-item .close-button:insensitive, .button:insensitive {
@@ -3365,11 +3378,12 @@ StWidget.focused .app-well-app-running-dot {
 
 .quick-slider .slider-bin:focus {
   color: #1A73E8;
-  box-shadow: none;
+  box-shadow: none !important;
+  outline: none !important;
 }
 
-.quick-slider .slider-bin:focus:active {
-  color: white;
+.quick-slider .slider-bin:focus:hover, .quick-slider .slider-bin:focus:active {
+  color: #1A73E8;
 }
 
 .quick-slider .quick-toggle-icon {
@@ -3468,7 +3482,7 @@ StWidget.focused .app-well-app-running-dot {
 
 .quick-settings-system-item .power-item:insensitive {
   color: rgba(0, 0, 0, 0.62);
-  background-color: white;
+  background-color: #ffffff;
   border-color: #d9d9d9;
   box-shadow: none;
   background-color: transparent;
@@ -3815,6 +3829,12 @@ StWidget.focused .app-well-app-running-dot {
   background-color: #176ee1;
   border-color: #104c9c;
   box-shadow: none;
+}
+
+.login-dialog .modal-dialog-button:default:active:hover, .login-dialog .modal-dialog-button:default:active:focus,
+.unlock-dialog .modal-dialog-button:default:active:hover,
+.unlock-dialog .modal-dialog-button:default:active:focus {
+  background-color: #176ee1;
 }
 
 .login-dialog .modal-dialog-button:default:insensitive,

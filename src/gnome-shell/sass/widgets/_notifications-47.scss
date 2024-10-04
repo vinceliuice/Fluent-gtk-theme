@@ -1,0 +1,27 @@
+/* Notifications & Message Tray */
+
+$notification_banner_height: 64px;
+$notification_banner_width: 34em;
+
+// Banner notifications
+.notification-banner {
+  min-height: $notification_banner_height;
+  width: $notification_banner_width;
+  margin: $container_padding;
+  border-radius: $material_radius;
+  // box-shadow: 0 3px 8px 0 rgba(black, 0.15);
+}
+
+.notification-buttons-bin {
+  spacing: 0;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+.notification-button {
+  min-height: $small_size;
+  padding: $container_padding $container_padding * 2;
+  font-weight: bold;
+  @extend %dialog_button;
+}

@@ -1,0 +1,45 @@
+/* Switches */
+
+.toggle-switch {
+  width: $medium_size + 4px;
+  height: $container_padding + 14px;
+  background: transparent;
+  color: $fg_color;
+  border: 1px solid $disabled_fg_color;
+
+  &:hover {
+    background: transparent;
+    color: $fg_color;
+    border: 1px solid $secondary_fg_color;
+  }
+
+  StIcon {
+    icon-size: 10px;
+  }
+
+  .handle {
+    margin: 4px;
+    width: $container_padding + 6px;
+    height: $container_padding + 6px;
+    border-radius: $circular_radius;
+    background: $secondary_fg_color;
+    box-shadow: none;
+    transition-duration: 100ms;
+  }
+
+  &:checked {
+    background: $primary_color;
+    color: white;
+    border-color: $primary_color;
+
+    &:hover {
+      background-color: lighten($primary_color, 5%);
+      color: white;
+      border-color: lighten($primary_color, 5%);
+    }
+
+    .handle {
+      background: white;
+    }
+  }
+}

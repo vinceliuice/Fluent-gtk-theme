@@ -39,6 +39,18 @@
   &:insensitive { @include button(flat-insensitive); }
 }
 
+%dialog_button {
+  border-radius: $buttons_radius;
+  border: 1px solid;
+
+  @include button(normal);
+  &:focus { @include button(focus); }
+  &:hover { @include button(hover); }
+  &:selected, &:active { @include button(active); }
+  &:checked { @include button(checked); }
+  &:insensitive { @include button(insensitive); }
+}
+
 .button {
   @extend %button;
   min-height: to_em(22px);
