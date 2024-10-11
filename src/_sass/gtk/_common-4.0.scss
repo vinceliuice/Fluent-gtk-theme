@@ -2585,7 +2585,7 @@ scrollbar {
     background: none;
     border: none;
     outline: none;
-    padding: 0;
+    padding: if($window == 'round', $space-size / 2, 0);
     margin: 0;
 
     > slider {

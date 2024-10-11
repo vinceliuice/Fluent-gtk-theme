@@ -503,7 +503,7 @@ button {
       &:disabled { @include button(flat-disabled); }
     }
 
-    &:checked, &:checked:hover { @include button(flat-checked); }
+    &:checked, &:checked:hover, &:checked:focus { @include button(flat-checked); }
 
     &:checked:disabled { @include button(flat-checked-disabled); }
   }
@@ -1292,6 +1292,8 @@ searchbar > revealer > box {
   &:disabled { color: $titlebar-text-secondary-disabled; }
 
   &:checked {
+    &:focus { color: $titlebar-text; }
+
     &:disabled {
       background-color: transparent;
       color: $titlebar-text-disabled;
@@ -1422,7 +1424,7 @@ searchbar > revealer > box {
     margin-right: $space-size / 2;
   }
 
-  .linked:not(.vertical) > entry:not(:only-child) {
+  .linked > entry:not(:only-child) {
     border-radius: $corner-radius;
 
     @if $window == 'round' {
@@ -1442,9 +1444,14 @@ searchbar > revealer > box {
       border-radius: $corner-radius;
       padding: ($medium-size - 24px) / 2 ($medium-size - 16px) / 2;
     }
+  }
 
-    .linked:not(.vertical) > & {
-      border-radius: $corner-radius;
+  .linked > button:not(.suggested-action):not(.destructive-action):not(:only-child) {
+    border-radius: $corner-radius;
+
+    &:checked:focus {
+      background-color: $overlay-checked;
+      color: $titlebar-text;
     }
   }
 
@@ -1458,12 +1465,9 @@ searchbar > revealer > box {
   }
 
   stackswitcher { // reset
-    border-radius: $corner-radius;
     margin: $space-size 0;
 
-    &.linked:not(.vertical) > button:not(.suggested-action):not(.destructive-action).text-button {
-      border-radius: $corner-radius;
-    }
+    > button { margin: 0; }
   }
 
   // FIXME: Ugly overriding
@@ -4113,33 +4117,51 @@ cursor-handle {
 
 stackswitcher {
   min-height: 0;
-  padding: 0;
+  padding: 0 $space-size;
   // margin: $space-size 0;
   border-radius: $corner-radius;
   background-color: $overlay-normal;
 
   &.linked:not(.vertical) > button:not(.suggested-action):not(.destructive-action) {
-    margin: 0 0;
-    border-radius: $corner-radius;
+    margin: 0;
     background-color: transparent;
+    background-image: none;
     border: none;
+    animation: none;
+    box-shadow: none;
+    transition: box-shadow $ripple-fade-in-duration $ease-out;
+
+    &, &:first-child, &:last-child {
+      border-radius: 0;
+    }
 
     &.text-button { min-width: 100px; }
 
-    &:focus { box-shadow: inset 0 0 0 2px $overlay-focus; }
+    &:focus {
+      box-shadow: inset 0 -2px $overlay-focus;
+      background-color: transparent;
+      background-image: none;
+    }
 
     &:hover {
-      box-shadow: inset 0 0 0 9999px $overlay-hover;
+      box-shadow: inset 0 -2px $track;
+      background-color: transparent;
+      background-image: none;
     }
 
     &:active {
-      box-shadow: inset 0 0 0 9999px gtkalpha($primary, 0.08);
-      background-image: radial-gradient(circle, gtkalpha($primary, 0.08) 10%, transparent 0%);
+      box-shadow: inset 0 -2px gtkalpha($primary, 0.65);
+      background-color: transparent;
+      background-image: none;
+      transition: box-shadow $ripple-fade-in-duration $ease-out;
     }
 
     &:checked {
-      background-color: $primary;
-      color: on($primary);
+      box-shadow: inset 0 -2px $primary;
+      background-color: transparent;
+      background-image: none;
+      color: $text;
+      transition: box-shadow $ripple-fade-in-duration $ease-out;
     }
   }
 
