@@ -10,23 +10,23 @@
   child.activatable {
     border-radius: $corner-radius * 2;
   }
+}
 
-  .floating-bar {
-    min-height: 32px;
-    padding: 0;
-    margin: $space-size;
-    border-style: none;
-    border-radius: $corner-radius;
-    background-color: $primary;
+.floating-bar {
+  min-height: 32px;
+  padding: 0;
+  margin: $space-size;
+  border-style: none;
+  border-radius: $corner-radius;
+  background-color: $primary;
+  color: on($primary);
+  box-shadow: $shadow-z3;
+
+  button {
+    margin: (32px - $small-size) / 2;
     color: on($primary);
-    box-shadow: $shadow-z3;
 
-    button {
-      margin: (32px - $small-size) / 2;
-      color: on($primary);
-
-      @extend %small-button;
-    }
+    @extend %small-button;
   }
 }
 
@@ -56,7 +56,6 @@
 #NautilusPathBar {
   background-color: $titlebar-fill;
   border-radius: $corner-radius;
-  margin: $space-size 0;
 
   #NautilusPathButton {
     margin: 0 $space-size / 2;

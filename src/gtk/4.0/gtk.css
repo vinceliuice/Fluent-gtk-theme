@@ -70,9 +70,7 @@ iconview:hover, iconview:selected {
   border-radius: 2px;
 }
 
-rubberband, .content-view rubberband, .content-view columnview.view > rubberband,
-.content-view treeview.view > rubberband, .content-view .rubberband, columnview.view > rubberband,
-treeview.view > rubberband, gridview > rubberband, flowbox > rubberband {
+rubberband, .content-view rubberband, .content-view treeview.view > rubberband, .content-view .rubberband, treeview.view > rubberband, gridview > rubberband, flowbox > rubberband {
   border: 1px solid #1A73E8;
   background-color: rgba(26, 115, 232, 0.3);
 }
@@ -868,7 +866,7 @@ menubutton.circular > button label, filechooser #pathbarbox > stack > box > butt
   padding: 0;
 }
 
-.nautilus-window .floating-bar button, placessidebar .navigation-sidebar > row button.sidebar-button, popover.menu box.circular-buttons button.circular.image-button.model, spinbutton.vertical > button, spinbutton:not(.vertical) > button {
+.floating-bar button, placessidebar .navigation-sidebar > row button.sidebar-button, popover.menu box.circular-buttons button.circular.image-button.model, spinbutton.vertical > button, spinbutton:not(.vertical) > button {
   min-height: 22px;
   min-width: 22px;
   padding: 0;
@@ -878,7 +876,6 @@ menubutton.circular > button label, filechooser #pathbarbox > stack > box > butt
 stackswitcher {
   min-height: 0;
   padding: 0 3px;
-  margin: 6px 0;
   border-radius: 2px;
   background-color: alpha(currentColor, 0.05);
 }
@@ -1912,7 +1909,7 @@ headerbar .titlebar {
 }
 
 headerbar > windowhandle > box {
-  padding: 0 6px;
+  padding: 6px;
 }
 
 headerbar > windowhandle > box,
@@ -1921,24 +1918,16 @@ headerbar > windowhandle > box > box.end {
   border-spacing: 6px;
 }
 
-headerbar entry,
-headerbar spinbutton,
-headerbar button,
-headerbar menubutton,
-headerbar stackswitcher,
-headerbar separator:not(.sidebar) {
-  margin-top: 6px;
-  margin-bottom: 6px;
+headerbar > windowhandle > box > box.start:dir(ltr),
+headerbar > windowhandle > box > box.end:dir(rtl), headerbar > windowhandle > box > widget > box.start:dir(ltr),
+headerbar > windowhandle > box > widget > box.end:dir(rtl) {
+  margin-right: 6px;
 }
 
-headerbar menubutton > button,
-headerbar spinbutton > button,
-headerbar splitbutton > button,
-headerbar splitbutton > menubutton,
-headerbar .linked > menubutton,
-headerbar entry > menubutton {
-  margin-top: 0;
-  margin-bottom: 0;
+headerbar > windowhandle > box > box.start:dir(rtl),
+headerbar > windowhandle > box > box.end:dir(ltr), headerbar > windowhandle > box > widget > box.start:dir(rtl),
+headerbar > windowhandle > box > widget > box.end:dir(ltr) {
+  margin-left: 6px;
 }
 
 headerbar separator:not(.sidebar) {
@@ -2000,15 +1989,6 @@ headerbar stackswitcher.linked:not(.vertical) > button:not(.suggested-action):no
 
 headerbar stackswitcher.linked:not(.vertical) > button:not(.suggested-action):not(.destructive-action):active, headerbar stackswitcher.linked:not(.vertical) > button:not(.suggested-action):not(.destructive-action):checked {
   color: white;
-}
-
-headerbar popover entry,
-headerbar popover spinbutton,
-headerbar popover button,
-headerbar popover menubutton,
-headerbar popover stackswitcher {
-  margin-top: 0;
-  margin-bottom: 0;
 }
 
 headerbar popover entry {
@@ -2101,6 +2081,10 @@ headerbar.default-decoration {
 
 headerbar.default-decoration:backdrop {
   background-color: #3c3c3c;
+}
+
+headerbar.default-decoration > windowhandle > box {
+  padding: 3px;
 }
 
 .tiled headerbar.default-decoration, .maximized headerbar.default-decoration, .fullscreen headerbar.default-decoration {
@@ -2206,67 +2190,55 @@ headerbar .pathbar {
 /**************
  * Tree Views *
  **************/
-columnview.view,
 treeview.view {
   border-left-color: #d9d9d9;
   border-top-color: #d9d9d9;
   padding: 0;
 }
 
-columnview.view:selected,
 treeview.view:selected {
   background-color: alpha(currentColor, 0.1);
   color: rgba(0, 0, 0, 0.87);
 }
 
-columnview.view:hover, columnview.view:selected,
-treeview.view:hover,
-treeview.view:selected {
+treeview.view:hover, treeview.view:selected {
   border-radius: 0;
   box-shadow: none;
 }
 
-columnview.view.separator,
 treeview.view.separator {
   min-height: 6px;
   color: rgba(0, 0, 0, 0.12);
 }
 
-columnview.view:drop(active),
 treeview.view:drop(active) {
   border-style: solid none;
   border-width: 1px;
   border-color: rgba(15, 65, 131, 0.935);
 }
 
-columnview.view:drop(active).after,
 treeview.view:drop(active).after {
   border-top-style: none;
 }
 
-columnview.view:drop(active).before,
 treeview.view:drop(active).before {
   border-bottom-style: none;
 }
 
-columnview.view > dndtarget:drop(active),
 treeview.view > dndtarget:drop(active) {
   border-style: solid none;
   border-width: 1px;
   border-color: alpha(currentColor, 0.06);
 }
 
-columnview.view > dndtarget:drop(active).after,
 treeview.view > dndtarget:drop(active).after {
   border-top-style: none;
 }
 
-columnview.view > dndtarget:drop(active).before,
 treeview.view > dndtarget:drop(active).before {
   border-bottom-style: none;
 }
 
-columnview.view.expander,
 treeview.view.expander {
   min-width: 16px;
   min-height: 16px;
@@ -2274,28 +2246,22 @@ treeview.view.expander {
   -gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
 }
 
-columnview.view.expander:dir(rtl),
 treeview.view.expander:dir(rtl) {
   -gtk-icon-source: -gtk-icontheme("pan-end-symbolic-rtl");
 }
 
-columnview.view.expander:checked,
 treeview.view.expander:checked {
   -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
 }
 
-columnview.view.expander:hover, columnview.view.expander:active,
-treeview.view.expander:hover,
-treeview.view.expander:active {
+treeview.view.expander:hover, treeview.view.expander:active {
   color: rgba(0, 0, 0, 0.87);
 }
 
-columnview.view.expander:disabled,
 treeview.view.expander:disabled {
   color: rgba(0, 0, 0, 0.26);
 }
 
-columnview.view.progressbar,
 treeview.view.progressbar {
   border-bottom: 3px solid #1A73E8;
   box-shadow: none;
@@ -2303,12 +2269,10 @@ treeview.view.progressbar {
   background-image: none;
 }
 
-columnview.view.progressbar:selected:hover,
 treeview.view.progressbar:selected:hover {
   box-shadow: none;
 }
 
-columnview.view.trough,
 treeview.view.trough {
   border-bottom: 3px solid rgba(0, 0, 0, 0.12);
   box-shadow: none;
@@ -2316,39 +2280,25 @@ treeview.view.trough {
   background-image: none;
 }
 
-columnview.view.trough:selected:hover,
 treeview.view.trough:selected:hover {
   box-shadow: none;
 }
 
-columnview.view > header > button,
 treeview.view > header > button {
-  padding: 2px 6px;
-  border-style: none solid solid none;
-  border-width: 1px;
-  border-color: rgba(0, 0, 0, 0.12);
+  background-color: transparent;
+  padding: 3px 6px;
   border-radius: 0;
-  background-clip: border-box;
+  box-shadow: none;
+  border: none;
+  border-left: 1px solid transparent;
+  border-image: linear-gradient(to bottom, transparent 20%, rgba(0, 0, 0, 0.08) 20%, rgba(0, 0, 0, 0.08) 80%, transparent 80%) 0 0 0 1/0 0 0 1px stretch;
 }
 
-columnview.view > header > button:not(:focus):not(:hover):not(:active),
-treeview.view > header > button:not(:focus):not(:hover):not(:active) {
-  color: rgba(0, 0, 0, 0.6);
+treeview.view > header > button:first-child {
+  border-left: none;
+  border-image: none;
 }
 
-columnview.view > header > button, columnview.view > header > button:disabled,
-treeview.view > header > button,
-treeview.view > header > button:disabled {
-  background-color: #FFFFFF;
-}
-
-columnview.view > header > button:last-child,
-treeview.view > header > button:last-child {
-  border-right-style: none;
-}
-
-columnview.view button.dnd,
-columnview.view header.button.dnd,
 treeview.view button.dnd,
 treeview.view header.button.dnd {
   padding: 2px 6px;
@@ -2362,9 +2312,120 @@ treeview.view header.button.dnd {
   color: #1A73E8;
 }
 
-columnview.view acceleditor > label,
 treeview.view acceleditor > label {
   background-color: #1A73E8;
+}
+
+treeview.view ~ undershoot.top {
+  box-shadow: none;
+  background: none;
+}
+
+columnview:drop(active) {
+  box-shadow: none;
+}
+
+columnview > header > button {
+  background-color: transparent;
+  padding: 3px 6px;
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
+  line-height: 100%;
+  border-left: 1px solid transparent;
+  border-image: linear-gradient(to bottom, transparent 20%, rgba(0, 0, 0, 0.08) 20%, rgba(0, 0, 0, 0.08) 80%, transparent 80%) 0 0 0 1/0 0 0 1px stretch;
+}
+
+columnview > header > button:first-child {
+  border-left: none;
+  border-image: none;
+}
+
+columnview > header > button > box {
+  color: rgba(0, 0, 0, 0.38);
+  border-spacing: 6px;
+}
+
+columnview > header > button:hover > box {
+  color: rgba(0, 0, 0, 0.6);
+  box-shadow: none;
+}
+
+columnview > header > button:active > box {
+  color: currentColor;
+}
+
+columnview > header > button sort-indicator {
+  color: rgba(0, 0, 0, 0.6);
+  min-height: 16px;
+  min-width: 16px;
+}
+
+columnview > header > button sort-indicator.ascending {
+  -gtk-icon-source: -gtk-icontheme("pan-up-symbolic");
+}
+
+columnview > header > button sort-indicator.descending {
+  -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
+}
+
+columnview button.dnd:active, columnview button.dnd:selected, columnview button.dnd:hover, columnview button.dnd,
+columnview header.button.dnd:active,
+columnview header.button.dnd:selected,
+columnview header.button.dnd:hover,
+columnview header.button.dnd {
+  color: white;
+  background-color: #1A73E8;
+  transition: none;
+}
+
+columnview.view > listview.view {
+  background: none;
+  color: inherit;
+}
+
+columnview > listview > row {
+  padding: 0;
+}
+
+columnview > listview > row > cell {
+  padding: 8px 6px;
+}
+
+columnview > listview > row > cell:not(:first-child) {
+  border-left: 1px solid transparent;
+}
+
+columnview.column-separators > listview > row > cell,
+columnview.column-separators > header > button {
+  border-left-color: rgba(0, 0, 0, 0.08);
+}
+
+columnview > listview:not(.horizontal).separators > row:not(.separator) {
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  border-bottom: none;
+}
+
+columnview.data-table > listview > row > cell {
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+columnview ~ undershoot.top {
+  box-shadow: inset 0 1px rgba(0, 0, 0, 0.08);
+  background: linear-gradient(to bottom, alpha(rgba(0, 0, 0, 0.08), 0.75), transparent 6px);
+}
+
+columnview row:not(:selected) cell editablelabel:not(.editing):focus-within {
+  outline: 2px solid rgba(0, 0, 0, 0.04);
+}
+
+columnview row:not(:selected) cell editablelabel.editing:focus-within {
+  outline: 2px solid #1A73E8;
+}
+
+treeexpander {
+  border-spacing: 4px;
 }
 
 /*********
@@ -2629,7 +2690,6 @@ tabbar tabbox tab, notebook > header tab {
   min-width: 22px;
   padding: 3px 12px;
   border: 1px solid transparent;
-  border-bottom: 0;
   outline: none;
   background-clip: padding-box;
   color: rgba(0, 0, 0, 0.6);
@@ -3684,18 +3744,24 @@ progressbar.osd {
   min-width: 3px;
   min-height: 3px;
   background-color: transparent;
-}
-
-progressbar.osd > trough {
-  border-style: none;
-  border-radius: 0;
-  background-color: transparent;
+  padding: 0;
+  margin: 0;
   box-shadow: none;
 }
 
-progressbar.osd > trough > progress {
-  border-style: none;
+progressbar.osd > trough {
+  border: none;
   border-radius: 0;
+  background-color: transparent;
+  box-shadow: none;
+  padding: 0;
+  margin: 0;
+}
+
+progressbar.osd > trough > progress {
+  border: none;
+  border-radius: 0;
+  margin: 0;
 }
 
 progressbar trough.empty progress {
@@ -4208,6 +4274,7 @@ window.messagedialog.background {
 window.messagedialog .response-area {
   background-color: rgba(0, 0, 0, 0.04);
   padding: 6px;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 window.messagedialog .response-area > separator {
@@ -4264,37 +4331,14 @@ window.aboutdialog .large-icons {
 /***********
  * Sidebar *
  ***********/
-.sidebar {
-  border-style: none;
-  background-color: #FAFAFA;
-}
-
-.sidebar:not(separator):dir(ltr), .sidebar:not(separator).left, .sidebar:not(separator).left:dir(rtl) {
-  border-right: 1px solid rgba(0, 0, 0, 0.12);
-  border-left-style: none;
-}
-
-.sidebar:not(separator):dir(rtl), .sidebar:not(separator).right {
-  border-left: 1px solid rgba(0, 0, 0, 0.12);
-  border-right-style: none;
-}
-
-.sidebar list {
-  background-color: transparent;
-}
-
-paned .sidebar.left, paned .sidebar.right, paned .sidebar.left:dir(rtl), paned .sidebar:dir(rtl), paned .sidebar:dir(ltr), paned .sidebar {
-  border-style: none;
-}
-
 stacksidebar list {
   padding: 0;
   background-color: #FAFAFA;
 }
 
 stacksidebar row {
-  min-height: 32px;
-  padding: 0 2px;
+  min-height: 22px;
+  padding: 0 6px;
   border-radius: 3px;
 }
 
@@ -4305,7 +4349,7 @@ stacksidebar row:selected {
 }
 
 stacksidebar row + row {
-  margin-top: 4px;
+  margin-top: 3px;
 }
 
 stacksidebar row > label {
@@ -4314,23 +4358,23 @@ stacksidebar row > label {
   color: inherit;
 }
 
-separator.sidebar {
-  background-color: rgba(0, 0, 0, 0.12);
-}
-
 /**********************
  * Navigation Sidebar *
  **********************/
 .navigation-sidebar {
-  padding: 6px 0;
+  padding: 6px;
   border-right: none;
 }
 
 .navigation-sidebar > row {
   min-height: 32px;
-  padding: 6px 9px;
+  padding: 0 9px;
   border-radius: 2px;
-  margin: 2px 6px;
+  margin: 0;
+}
+
+.navigation-sidebar > row + row {
+  margin-top: 3px;
 }
 
 .navigation-sidebar > row:selected {
@@ -4388,13 +4432,13 @@ placessidebar list {
 placessidebar .navigation-sidebar > row {
   min-height: 32px;
   margin: 0 6px;
-  padding: 0;
+  padding: 0 6px;
   border-radius: 2px;
   transition: background-image 0, box-shadow 0;
 }
 
 placessidebar .navigation-sidebar > row > revealer {
-  padding: 0 8px 0 16px;
+  padding: 0 0 0 6px;
 }
 
 placessidebar .navigation-sidebar > row:selected {
@@ -4413,11 +4457,11 @@ placessidebar .navigation-sidebar > row:disabled {
 }
 
 placessidebar .navigation-sidebar > row image.sidebar-icon:dir(ltr) {
-  padding-right: 8px;
+  padding-right: 6px;
 }
 
 placessidebar .navigation-sidebar > row image.sidebar-icon:dir(rtl) {
-  padding-left: 8px;
+  padding-left: 6px;
 }
 
 placessidebar .navigation-sidebar > row label.sidebar-label {
@@ -4425,11 +4469,11 @@ placessidebar .navigation-sidebar > row label.sidebar-label {
 }
 
 placessidebar .navigation-sidebar > row label.sidebar-label:dir(ltr) {
-  padding-right: 2px;
+  padding-right: 3px;
 }
 
 placessidebar .navigation-sidebar > row label.sidebar-label:dir(rtl) {
-  padding-left: 2px;
+  padding-left: 3px;
 }
 
 placessidebar .navigation-sidebar > row.sidebar-placeholder-row {
@@ -4934,7 +4978,7 @@ statusbar {
   border-radius: 4px;
 }
 
-.nautilus-window .floating-bar {
+.floating-bar {
   min-height: 32px;
   padding: 0;
   margin: 6px;
@@ -4945,7 +4989,7 @@ statusbar {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 0 2px 3px rgba(0, 0, 0, 0.14), 0 1px 3px rgba(0, 0, 0, 0.12);
 }
 
-.nautilus-window .floating-bar button {
+.floating-bar button {
   margin: 5px;
   color: white;
 }
@@ -4976,7 +5020,6 @@ statusbar {
 #NautilusPathBar {
   background-color: rgba(255, 255, 255, 0.04);
   border-radius: 2px;
-  margin: 6px 0;
 }
 
 #NautilusPathBar #NautilusPathButton {
@@ -6626,8 +6669,6 @@ viewswitcher.wide {
   border-spacing: 0;
   border-radius: 2px;
   background-color: rgba(0, 0, 0, 0.04);
-  margin-top: 6px;
-  margin-bottom: 6px;
 }
 
 viewswitcher.wide > button.toggle, viewswitcher.wide > button.toggle.flat {
@@ -7234,14 +7275,216 @@ toolbarview.undershoot-bottom scrolledwindow > undershoot.bottom {
   background: linear-gradient(to right, alpha(rgba(0, 0, 0, 0.08), 0.75), transparent 6px);
 }
 
-.top-bar {
-  border: none;
+toolbarview > .top-bar headerbar,
+toolbarview > .bottom-bar headerbar {
+  background: none;
   box-shadow: none;
+  color: inherit;
+  min-height: 44px;
+}
+
+toolbarview > .top-bar headerbar > windowhandle > box,
+toolbarview > .bottom-bar headerbar > windowhandle > box {
+  padding: 6px;
+}
+
+toolbarview > .top-bar headerbar.default-decoration,
+toolbarview > .bottom-bar headerbar.default-decoration {
+  min-height: 32px;
+}
+
+toolbarview > .top-bar headerbar.default-decoration > windowhandle > box,
+toolbarview > .bottom-bar headerbar.default-decoration > windowhandle > box {
+  padding: 3px;
+}
+
+toolbarview > .top-bar headerbar:backdrop,
+toolbarview > .bottom-bar headerbar:backdrop {
+  transition: none;
+}
+
+toolbarview > .top-bar headerbar:backdrop > windowhandle,
+toolbarview > .bottom-bar headerbar:backdrop > windowhandle {
+  filter: none;
+  transition: none;
+}
+
+window.devel toolbarview > .top-bar headerbar > windowhandle, window.devel toolbarview > .bottom-bar headerbar > windowhandle {
+  background-image: none;
+}
+
+toolbarview > .top-bar searchbar > revealer > box,
+toolbarview > .top-bar actionbar > revealer > box,
+toolbarview > .bottom-bar searchbar > revealer > box,
+toolbarview > .bottom-bar actionbar > revealer > box {
+  background-color: transparent;
+  color: inherit;
+  box-shadow: none;
+  border: none;
+  padding: 3px;
+}
+
+toolbarview > .top-bar searchbar > revealer > box:backdrop,
+toolbarview > .top-bar actionbar > revealer > box:backdrop,
+toolbarview > .bottom-bar searchbar > revealer > box:backdrop,
+toolbarview > .bottom-bar actionbar > revealer > box:backdrop {
+  background-color: transparent;
+  transition: none;
+}
+
+toolbarview > .top-bar searchbar > revealer > box:backdrop > *,
+toolbarview > .top-bar actionbar > revealer > box:backdrop > *,
+toolbarview > .bottom-bar searchbar > revealer > box:backdrop > *,
+toolbarview > .bottom-bar actionbar > revealer > box:backdrop > * {
+  filter: none;
+  transition: none;
+}
+
+toolbarview > .top-bar menubar,
+toolbarview > .bottom-bar menubar {
+  box-shadow: none;
+  padding-bottom: 0;
+}
+
+toolbarview > .top-bar tabbar .box,
+toolbarview > .bottom-bar tabbar .box {
+  background-color: transparent;
+  color: inherit;
+  box-shadow: none;
+  border: none;
+  padding-bottom: 0;
+}
+
+toolbarview > .top-bar tabbar .box:backdrop,
+toolbarview > .bottom-bar tabbar .box:backdrop {
+  background-color: transparent;
+  transition: none;
+}
+
+toolbarview > .top-bar tabbar .box:backdrop > scrolledwindow,
+toolbarview > .top-bar tabbar .box:backdrop > .start-action,
+toolbarview > .top-bar tabbar .box:backdrop > .end-action,
+toolbarview > .bottom-bar tabbar .box:backdrop > scrolledwindow,
+toolbarview > .bottom-bar tabbar .box:backdrop > .start-action,
+toolbarview > .bottom-bar tabbar .box:backdrop > .end-action {
+  filter: none;
+  transition: none;
+}
+
+toolbarview > .top-bar .toolbar,
+toolbarview > .bottom-bar .toolbar {
+  padding: 3px;
   background-color: transparent;
 }
 
-.top-bar .collapse-spacing {
-  padding: 0;
+toolbarview > .top-bar .toolbar button.pill,
+toolbarview > .bottom-bar .toolbar button.pill {
+  min-height: 24px;
+  min-width: 24px;
+  padding: 4px 15px;
+}
+
+toolbarview > .top-bar .collapse-spacing,
+toolbarview > .bottom-bar .collapse-spacing {
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+toolbarview > .top-bar .collapse-spacing headerbar,
+toolbarview > .bottom-bar .collapse-spacing headerbar {
+  min-height: 38px;
+}
+
+toolbarview > .top-bar .collapse-spacing headerbar > windowhandle > box,
+toolbarview > .bottom-bar .collapse-spacing headerbar > windowhandle > box {
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+toolbarview > .top-bar .collapse-spacing headerbar.default-decoration,
+toolbarview > .bottom-bar .collapse-spacing headerbar.default-decoration {
+  min-height: 26px;
+}
+
+toolbarview > .top-bar .collapse-spacing headerbar.default-decoration > windowhandle > box,
+toolbarview > .bottom-bar .collapse-spacing headerbar.default-decoration > windowhandle > box {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+toolbarview > .top-bar .collapse-spacing searchbar > revealer > box,
+toolbarview > .top-bar .collapse-spacing actionbar > revealer > box,
+toolbarview > .bottom-bar .collapse-spacing searchbar > revealer > box,
+toolbarview > .bottom-bar .collapse-spacing actionbar > revealer > box {
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+toolbarview > .top-bar .collapse-spacing .toolbar,
+toolbarview > .bottom-bar .collapse-spacing .toolbar {
+  padding: 0 3px;
+}
+
+toolbarview > .top-bar .collapse-spacing tabbar,
+toolbarview > .bottom-bar .collapse-spacing tabbar {
+  margin-bottom: -3px;
+}
+
+toolbarview > .top-bar .collapse-spacing tabbar tabbox,
+toolbarview > .top-bar .collapse-spacing tabbar .start-action,
+toolbarview > .top-bar .collapse-spacing tabbar .end-action,
+toolbarview > .bottom-bar .collapse-spacing tabbar tabbox,
+toolbarview > .bottom-bar .collapse-spacing tabbar .start-action,
+toolbarview > .bottom-bar .collapse-spacing tabbar .end-action {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+toolbarview > .top-bar .collapse-spacing viewswitcherbar actionbar > revealer > box,
+toolbarview > .bottom-bar .collapse-spacing viewswitcherbar actionbar > revealer > box {
+  padding-top: 6px;
+}
+
+toolbarview > .top-bar.raised,
+toolbarview > .bottom-bar.raised {
+  background-color: #2C2C2C;
+  color: white;
+}
+
+toolbarview > .top-bar.raised:backdrop,
+toolbarview > .bottom-bar.raised:backdrop {
+  background-color: #3c3c3c;
+}
+
+toolbarview > .top-bar:backdrop > windowhandle,
+toolbarview > .bottom-bar:backdrop > windowhandle {
+  filter: opacity(0.5);
+}
+
+toolbarview > .top-bar.raised {
+  box-shadow: 0 1px rgba(0, 0, 0, 0.08), 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+toolbarview > .top-bar.raised.border {
+  box-shadow: 0 1px rgba(0, 0, 0, 0.08);
+}
+
+toolbarview > .bottom-bar.raised {
+  box-shadow: 0 -1px rgba(0, 0, 0, 0.08), 0 -3px 6px rgba(0, 0, 0, 0.1);
+}
+
+toolbarview > .bottom-bar.raised.border {
+  box-shadow: 0 -1px rgba(0, 0, 0, 0.08);
+}
+
+toolbarview.undershoot-top scrolledwindow > undershoot.top {
+  box-shadow: inset 0 1px rgba(0, 0, 0, 0.08);
+  background: linear-gradient(to bottom, alpha(rgba(0, 0, 0, 0.08), 0.75), transparent 6px);
+}
+
+toolbarview.undershoot-bottom scrolledwindow > undershoot.bottom {
+  box-shadow: inset 0 -1px rgba(0, 0, 0, 0.08);
+  background: linear-gradient(to top, alpha(rgba(0, 0, 0, 0.08), 0.75), transparent 6px);
 }
 
 leaflet > box > scrolledwindow > viewport > widget > stack {
@@ -7376,9 +7619,9 @@ tabbar tab button.image-button,
 dnd tab button.image-button {
   padding: 0;
   margin: 0;
-  min-width: 20px;
-  min-height: 20px;
-  border-radius: 9999px;
+  min-width: 16px;
+  min-height: 16px;
+  border-radius: 2px;
   border: none;
 }
 

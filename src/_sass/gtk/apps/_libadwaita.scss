@@ -529,8 +529,6 @@ viewswitcher {
     border-spacing: 0;
     border-radius: $corner-radius;
     background-color: $fill;
-    margin-top: $space-size;
-    margin-bottom: $space-size;
 
     > button.toggle, > button.toggle.flat {
       padding: 0 $space-size;
@@ -997,14 +995,193 @@ toolbarview.undershoot-bottom scrolledwindow {
   }
 }
 
-.top-bar {
-  border: none;
-  box-shadow: none;
-  background-color: transparent;
+//
+// AdwToolbarView
+//
 
-  .collapse-spacing {
-    padding: 0;
+ toolbarview {
+  > .top-bar,
+  > .bottom-bar {
+    headerbar {
+      background: none;
+      box-shadow: none;
+      color: inherit;
+      min-height: $large-size;
+    
+      > windowhandle > box {
+        padding: $space-size;
+      }
+
+      &.default-decoration {
+        min-height: $medium-size;
+
+        > windowhandle > box {
+          padding: $space-size / 2;
+        }
+      }
+
+      &:backdrop {
+        transition: none;
+
+        > windowhandle {
+          filter: none;
+          transition: none;
+        }
+      }
+
+      window.devel & > windowhandle {
+        background-image: none;
+      }
+    }
+
+    searchbar,
+    actionbar {
+      > revealer > box {
+        background-color: transparent;
+        color: inherit;
+        box-shadow: none;
+        border: none;
+        padding: $space-size / 2;
+
+        &:backdrop {
+          background-color: transparent;
+          transition: none;
+
+          > * {
+            filter: none;
+            transition: none;
+          }
+        }
+      }
+    }
+
+    menubar   {
+      box-shadow: none;
+      padding-bottom: 0;
+    }
+
+    tabbar {
+      .box {
+        background-color: transparent;
+        color: inherit;
+        box-shadow: none;
+        border: none;
+        padding-bottom: 0;
+
+        &:backdrop {
+          background-color: transparent;
+          transition: none;
+      
+          > scrolledwindow,
+          > .start-action,
+          > .end-action {
+            filter: none;
+            transition: none;
+          }
+        }
+      }
+    }
+
+    .toolbar {
+      padding: $space-size / 2;
+      background-color: transparent;
+
+      button.pill {
+        min-height: 24px;
+        min-width: 24px;
+        padding: ($medium-size - 24px) / 2 $space-size * 2.5;
+      }
+    }
+
+    .collapse-spacing {
+      padding-top: $space-size / 2;
+      padding-bottom: $space-size / 2;
+
+      headerbar {
+        min-height: $large-size - $space-size;
+
+        > windowhandle > box {
+          padding-top: $space-size / 2;
+          padding-bottom: $space-size / 2;
+        }
+      
+        &.default-decoration {
+          min-height: $medium-size - $space-size;
+
+          > windowhandle > box {
+            padding-top: 0;
+            padding-bottom: 0;
+          }
+        }
+      }
+
+      searchbar,
+      actionbar {
+        > revealer > box {
+          padding-top: $space-size / 2;
+          padding-bottom: $space-size / 2;
+        }
+      }
+
+      // menubar {}
+
+      .toolbar {
+        padding: 0 $space-size / 2;
+      }
+
+      tabbar {
+        margin-bottom: -$space-size / 2;
+
+        tabbox,
+        .start-action,
+        .end-action {
+          padding-top: 0;
+          padding-bottom: 0;
+        }
+      }
+
+      viewswitcherbar {
+        actionbar > revealer > box {
+          // Not 0px because view switcher has negative margin
+          padding-top: $space-size;
+        }
+      }
+    }
+
+    &.raised {
+      background-color: $titlebar;
+      color: $titlebar-text;
+
+      &:backdrop {
+        background-color: $titlebar-backdrop;
+      }
+    }
+
+    &:backdrop > windowhandle {
+      filter: opacity(.5);
+    }
   }
+
+  > .top-bar.raised {
+    box-shadow: 0 1px $border,
+                0 3px 6px rgba(black, 0.1);
+
+    &.border {
+      box-shadow: 0 1px $border;
+    }
+  }
+
+  > .bottom-bar.raised {
+    box-shadow: 0 -1px $border,
+                0 -3px 6px rgba(black, 0.1);
+
+    &.border {
+      box-shadow: 0 -1px $border;
+    }
+  }
+
+  &.undershoot-top    scrolledwindow { @include undershoot(top, $style: solid); }
+  &.undershoot-bottom scrolledwindow { @include undershoot(bottom, $style: solid); }
 }
 
 
@@ -1157,9 +1334,9 @@ dnd {
     button.image-button {
       padding: 0;
       margin: 0;
-      min-width: 20px;
-      min-height: 20px;
-      border-radius: $circular-radius;
+      min-width: 16px;
+      min-height: 16px;
+      border-radius: $corner-radius;
       border: none;
       @extend %button-flat;
     }

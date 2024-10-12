@@ -716,7 +716,6 @@ button {
 stackswitcher {
   min-height: 0;
   padding: 0 $space-size / 2;
-  margin: $space-size 0;
   border-radius: $corner-radius;
   background-color: $overlay-normal;
 
@@ -1483,34 +1482,25 @@ headerbar {
   }
 
   > windowhandle > box {
-    padding: 0 $space-size;
+    padding: $space-size;
 
     &,
     > box.start,
     > box.end {
       border-spacing: $space-size;
     }
-  }
 
-  // add vertical margins to common widget on the headerbar to avoid them spanning the whole height
-  entry,
-  spinbutton,
-  button,
-  menubutton,
-  stackswitcher,
-  separator:not(.sidebar) {
-    margin-top: $space-size;
-    margin-bottom: $space-size;
-  }
+    &, > widget {
+      > box.start:dir(ltr),
+      > box.end:dir(rtl) {
+        margin-right: $space-size;
+      }
 
-  menubutton > button,
-  spinbutton > button,
-  splitbutton > button,
-  splitbutton > menubutton,
-  .linked > menubutton,
-  entry > menubutton {
-    margin-top: 0;
-    margin-bottom: 0;
+      > box.start:dir(rtl),
+      > box.end:dir(ltr) {
+        margin-left: $space-size;
+      }
+    }
   }
 
   separator:not(.sidebar) {
@@ -1578,15 +1568,6 @@ headerbar {
   }
 
   popover {
-    entry,
-    spinbutton,
-    button,
-    menubutton,
-    stackswitcher {
-      margin-top: 0;
-      margin-bottom: 0;
-    }
-
     button:not(.suggested-action):not(.destructive-action) {
       @extend %button-basic;
 
@@ -1741,6 +1722,10 @@ headerbar {
       background-color: $titlebar-backdrop;
     }
 
+    > windowhandle > box {
+      padding: $space-size / 2;
+    }
+
     .tiled &,
     .maximized &,
     .fullscreen & {
@@ -1868,7 +1853,7 @@ pathbar > button {
 /**************
  * Tree Views *
  **************/
-columnview.view,
+
 treeview.view {
   border-left-color: $solid-border; // this is actually the tree lines color,
   border-top-color: $solid-border; // while this is the grid lines color, better then nothing
@@ -1946,22 +1931,21 @@ treeview.view {
     &:selected:hover { box-shadow: none; }
   }
 
-  > header {
-    > button {
-      // @extend %row_activatable;
+  > header > button {
+    background-color: transparent;
+    padding: $space-size / 2 $space-size;
+    border-radius: 0;
+    box-shadow: none;
+    border: none;
+    border-left: 1px solid transparent;
+    border-image: linear-gradient(to bottom, transparent 20%,
+                                             $border 20%,
+                                             $border 80%,
+                                             transparent 80%) 0 0 0 1 / 0 0 0 1px stretch;
 
-      padding: 2px 6px;
-      border-style: none solid solid none;
-      border-width: 1px;
-      border-color: $divider;
-      border-radius: 0;
-      background-clip: border-box;
-
-      &:not(:focus):not(:hover):not(:active) { color: $text-secondary; }
-
-      &, &:disabled { background-color: $base; }
-
-      &:last-child { border-right-style: none; }
+    &:first-child {
+      border-left: none;
+      border-image: none;
     }
   }
 
@@ -1979,6 +1963,129 @@ treeview.view {
   }
 
   acceleditor > label { background-color: $primary; } // see tests/testaccel to test
+
+  ~ undershoot.top {
+    box-shadow: none;
+    background: none;
+  }
+}
+
+columnview {
+  &:drop(active) {
+    box-shadow: none;
+  }
+
+  > header > button {
+    background-color: transparent;
+    padding: $space-size / 2 $space-size;
+    border-radius: 0;
+    box-shadow: none;
+    border: none;
+    line-height: 100%;
+    border-left: 1px solid transparent;
+    border-image: linear-gradient(to bottom, transparent 20%,
+                                             $border 20%,
+                                             $border 80%,
+                                             transparent 80%) 0 0 0 1 / 0 0 0 1px stretch;
+
+    &:first-child {
+      border-left: none;
+      border-image: none;
+    }
+
+    > box {
+      color: $text-disabled;
+      border-spacing: 6px;
+    }
+
+    &:hover > box {
+      color: $text-secondary;
+      box-shadow: none;
+    }
+
+    &:active > box {
+      color: currentColor;
+    }
+
+    sort-indicator {
+      color: $text-secondary;
+
+      &.ascending {
+        -gtk-icon-source: -gtk-icontheme('pan-up-symbolic');
+      }
+
+      &.descending {
+        -gtk-icon-source: -gtk-icontheme('pan-down-symbolic');
+      }
+
+      min-height: 16px;
+      min-width: 16px;
+    }
+  }
+
+  button.dnd,
+  header.button.dnd { // for treeview-like derive widgets
+    &:active, &:selected, &:hover, & {
+      color: on($primary);
+      background-color: $primary;
+      transition: none;
+    }
+  }
+
+  // Remove the default background of the internal list view
+  // since we already apply a background to the column view
+  // with the .view class. Doing this will avoid overdraw.
+  &.view > listview.view {
+    background: none;
+    color: inherit;
+  }
+
+  // move padding to child cells
+  > listview > row {
+    padding: 0;
+
+    // align horizontal sizing with header buttons
+    > cell {
+      padding: 8px 6px;
+
+      &:not(:first-child) {
+        border-left: 1px solid transparent;
+      }
+    }
+  }
+
+  // make column separators visible when :show-column-separators is true
+  &.column-separators {
+    > listview > row > cell,
+    > header > button {
+      border-left-color: $border;
+    }
+  }
+
+  > listview:not(.horizontal).separators > row:not(.separator) {
+    border-top: 1px solid $border;
+    border-bottom: none;
+  }
+
+  // shrink vertically for .data-table
+  &.data-table > listview > row > cell {
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+
+  @include undershoot(top, $neighbor: true, $style: solid);
+}
+
+columnview row:not(:selected) cell editablelabel:not(.editing):focus-within {
+  outline: 2px solid $fill;
+}
+
+columnview row:not(:selected) cell editablelabel.editing:focus-within {
+  outline: 2px solid $primary;
+}
+
+treeexpander {
+  border-spacing: 4px;
 }
 
 
@@ -2251,7 +2358,6 @@ $tab-radius: $corner-radius;
   min-width: $small-size;
   padding: ($space-size / 2) $space-size * 2;
   border: 1px solid transparent;
-  border-bottom: 0;
   outline: none;
   background-clip: padding-box;
   color: $text-secondary;
@@ -3198,16 +3304,22 @@ progressbar {
     min-width: 3px;
     min-height: 3px;
     background-color: transparent;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
 
     > trough {
-      border-style: none;
+      border: none;
       border-radius: 0;
       background-color: transparent;
       box-shadow: none;
+      padding: 0;
+      margin: 0;
 
       > progress {
-        border-style: none;
+        border: none;
         border-radius: 0;
+        margin: 0;
       }
     }
   }
@@ -3690,6 +3802,7 @@ window.messagedialog {
   .response-area {
     background-color: $fill;
     padding: $space-size;
+    border-top: 1px solid $border;
 
     > separator {
       background-color: transparent;
@@ -3756,32 +3869,6 @@ window.aboutdialog {
  * Sidebar *
  ***********/
 
-.sidebar {
-  border-style: none;
-  background-color: $base-alt;
-
-  &:not(separator) {
-    @at-root %sidebar_left,
-    &:dir(ltr),
-    &.left,
-    &.left:dir(rtl) {
-      border-right: 1px solid $divider;
-      border-left-style: none;
-    }
-
-    @at-root %sidebar_right,
-    &:dir(rtl),
-    &.right {
-      border-left: 1px solid $divider;
-      border-right-style: none;
-    }
-  }
-
-  list { background-color: transparent; }
-
-  paned & { &.left, &.right, &.left:dir(rtl), &:dir(rtl), &:dir(ltr), & { border-style: none; }}
-}
-
 stacksidebar {
   + separator.vertical,
   separator.horizontal { @extend %hide_separators; }
@@ -3792,8 +3879,8 @@ stacksidebar {
   }
 
   row {
-    min-height: 32px;
-    padding: 0 8px - 6px;
+    min-height: $small-size;
+    padding: 0 $space-size;
     border-radius: $bar-size;
 
     &:selected {
@@ -3802,11 +3889,11 @@ stacksidebar {
       font-weight: 500;
     }
 
-    + row { margin-top: 4px; }
+    + row { margin-top: $space-size / 2; }
 
     > label {
-      padding-left: 6px;
-      padding-right: 6px;
+      padding-left: $space-size;
+      padding-right: $space-size;
       color: inherit;
     }
 
@@ -3814,23 +3901,21 @@ stacksidebar {
   }
 }
 
-separator.sidebar {
-  background-color: $divider;
-}
-
 /**********************
  * Navigation Sidebar *
  **********************/
 
 .navigation-sidebar {
-  padding: $space-size 0; //only vertical padding. horizontal row size would clip
+  padding: $space-size; //only vertical padding. horizontal row size would clip
   border-right: none;
 
   > row {
     min-height: $medium-size;
-    padding: $space-size $space-size * 1.5;
+    padding: 0 $space-size * 1.5;
     border-radius: $corner-radius;
-    margin: 2px $space-size;
+    margin: 0;
+
+    + row { margin-top: $space-size / 2; }
 
     &:selected {
       background-color: $overlay-checked;
@@ -3882,13 +3967,13 @@ placessidebar {
     // Needs overriding of the GtkListBoxRow padding
     min-height: $medium-size;
     margin: 0 $space-size; // Remove unwanted hard-coded vertical margins with -1px
-    padding: 0;
+    padding: 0 $space-size;
     border-radius: $corner-radius;
     transition: background-image 0, box-shadow 0;
 
     // Using margins/padding directly in the SidebarRow
     // will make the animation of the new bookmark row jump
-    > revealer { padding: 0 8px 0 16px; }
+    > revealer { padding: 0 0 0 $space-size; }
 
     &:selected {
       background-color: $overlay-checked;
@@ -3904,15 +3989,15 @@ placessidebar {
     &:disabled { color: $text-disabled; }
 
     image.sidebar-icon {
-      &:dir(ltr) { padding-right: 8px; }
-      &:dir(rtl) { padding-left: 8px; }
+      &:dir(ltr) { padding-right: $space-size; }
+      &:dir(rtl) { padding-left: $space-size; }
     }
 
     label.sidebar-label {
       color: inherit;
 
-      &:dir(ltr) { padding-right: 2px; }
-      &:dir(rtl) { padding-left: 2px; }
+      &:dir(ltr) { padding-right: $space-size / 2; }
+      &:dir(rtl) { padding-left: $space-size / 2; }
     }
 
     button.sidebar-button {

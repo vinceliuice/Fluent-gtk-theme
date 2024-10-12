@@ -582,7 +582,7 @@ popover button.model:disabled, .caja-pathbar button:disabled,
 .nemo-window.background .toolbar button:checked, #buttonbox_frame button:checked, .thunar toolbar > toolitem > widget > widget.linked.path-bar > button.path-bar-button:checked:not(.flat), .raven stackswitcher.linked > button:checked, .lock-dialog button:checked, .mate-panel-menu-bar button:checked, window.background.csd.geary-main-window stack#conversation_viewer .geary-expanded > .geary-composer-embed headerbar button:checked,
 window#GearyMainWindow.background.csd stack#conversation_viewer .geary-expanded > .geary-composer-embed headerbar button:checked, layouttabbar button:checked, filechooser #pathbarbox > stack > box > button:checked, messagedialog .dialog-action-box > .linked > button:checked, .app-notification button:checked, popover.menu button:checked,
 popover button.model:checked, .caja-pathbar button:checked,
-.path-bar.linked:not(.vertical) > button:checked, .nemo-window.background .primary-toolbar button:checked:not(.text-button):not(.suggested-action):not(.destructive-action), .xfce4-panel.background button:checked, .titlebar button:checked:not(.suggested-action):not(.destructive-action), toolbar button:checked, combobox > .linked:not(.vertical) > button:checked:not(:only-child), .raven-mpris button.image-button:checked, infobar.error > revealer > box button:checked, infobar.warning > revealer > box button:checked, infobar.action > revealer > box button:checked, infobar.question > revealer > box button:checked, .selection-mode headerbar button.titlebutton:checked:not(.suggested-action):not(.destructive-action), button.flat:checked, button.flat:checked:hover {
+.path-bar.linked:not(.vertical) > button:checked, .nemo-window.background .primary-toolbar button:checked:not(.text-button):not(.suggested-action):not(.destructive-action), .xfce4-panel.background button:checked, .titlebar button:checked:not(.suggested-action):not(.destructive-action), toolbar button:checked, combobox > .linked:not(.vertical) > button:checked:not(:only-child), .raven-mpris button.image-button:checked, infobar.error > revealer > box button:checked, infobar.warning > revealer > box button:checked, infobar.action > revealer > box button:checked, infobar.question > revealer > box button:checked, .selection-mode headerbar button.titlebutton:checked:not(.suggested-action):not(.destructive-action), button.flat:checked, button.flat:checked:hover, button.flat:checked:focus {
   background-color: alpha(currentColor, 0.1);
   color: rgba(0, 0, 0, 0.87);
 }
@@ -1477,6 +1477,10 @@ searchbar > revealer > box {
   color: rgba(255, 255, 255, 0.3);
 }
 
+.nemo-window.background .primary-toolbar button:checked:focus:not(.text-button):not(.suggested-action):not(.destructive-action), .thunar toolbar button:checked:focus, .xfce4-panel.background button:checked:focus, .titlebar button:checked:focus:not(.suggested-action):not(.destructive-action) {
+  color: white;
+}
+
 .nemo-window.background .primary-toolbar button:checked:disabled:not(.text-button):not(.suggested-action):not(.destructive-action), .thunar toolbar button:checked:disabled, .xfce4-panel.background button:checked:disabled, .titlebar button:checked:disabled:not(.suggested-action):not(.destructive-action) {
   background-color: transparent;
   color: rgba(255, 255, 255, 0.5);
@@ -1604,7 +1608,7 @@ headerbar button.titlebutton:not(.suggested-action):not(.destructive-action) {
   margin-right: 3px;
 }
 
-.titlebar .linked:not(.vertical) > entry:not(:only-child) {
+.titlebar .linked > entry:not(:only-child) {
   border-radius: 2px;
 }
 
@@ -1613,8 +1617,13 @@ headerbar button.titlebutton:not(.suggested-action):not(.destructive-action) {
   padding: 4px 8px;
 }
 
-.linked:not(.vertical) > .titlebar button:not(.suggested-action):not(.destructive-action) {
+.titlebar .linked > button:not(.suggested-action):not(.destructive-action):not(:only-child) {
   border-radius: 2px;
+}
+
+.titlebar .linked > button:not(.suggested-action):not(.destructive-action):not(:only-child):checked:focus {
+  background-color: alpha(currentColor, 0.1);
+  color: white;
 }
 
 .titlebar button.suggested-action, .titlebar button.destructive-action {
@@ -2530,7 +2539,7 @@ notebook > header tab > box:drop(active) {
 notebook > header tab button.flat {
   min-width: 18px;
   min-height: 18px;
-  padding: 0 0;
+  padding: 0;
   margin: 2px 0;
 }
 
