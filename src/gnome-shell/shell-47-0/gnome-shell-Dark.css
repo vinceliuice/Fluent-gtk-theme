@@ -37,6 +37,20 @@ stage {
   color: rgba(255, 255, 255, 0.5);
 }
 
+.popup-menu-content {
+  background: rgba(32, 32, 32, 0.97);
+  color: rgba(255, 255, 255, 0.9);
+  border-radius: 3px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.modal-dialog {
+  background: rgba(32, 32, 32, 0.97);
+  color: rgba(255, 255, 255, 0.9);
+  border-radius: 6px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
 /* General Typography */
 .message-list .message-list-placeholder {
   font-weight: 800;
@@ -330,7 +344,7 @@ StEntry StLabel.hint-text {
   box-shadow: none;
 }
 
-.modal-dialog .modal-dialog-linked-button, .notification-button {
+.modal-dialog .modal-dialog-button, .notification-button {
   border-radius: 3px;
   border: 1px solid;
   color: rgba(255, 255, 255, 0.8);
@@ -339,46 +353,46 @@ StEntry StLabel.hint-text {
   box-shadow: none;
 }
 
-.modal-dialog .modal-dialog-linked-button:focus, .notification-button:focus {
+.modal-dialog .modal-dialog-button:focus, .notification-button:focus {
   color: #3281ea;
   box-shadow: none !important;
   outline: none !important;
 }
 
-.modal-dialog .modal-dialog-linked-button:focus:hover, .notification-button:focus:hover, .modal-dialog .modal-dialog-linked-button:focus:active, .notification-button:focus:active {
+.modal-dialog .modal-dialog-button:focus:hover, .notification-button:focus:hover, .modal-dialog .modal-dialog-button:focus:active, .notification-button:focus:active {
   color: #3281ea;
 }
 
-.modal-dialog .modal-dialog-linked-button:hover, .notification-button:hover {
+.modal-dialog .modal-dialog-button:hover, .notification-button:hover {
   color: rgba(255, 255, 255, 0.9);
   background-color: #343434;
   border-color: rgba(255, 255, 255, 0.15);
   box-shadow: none;
 }
 
-.modal-dialog .modal-dialog-linked-button:selected, .notification-button:selected, .modal-dialog .modal-dialog-linked-button:active, .notification-button:active {
+.modal-dialog .modal-dialog-button:selected, .notification-button:selected, .modal-dialog .modal-dialog-button:active, .notification-button:active {
   color: rgba(255, 255, 255, 0.9);
   background-color: #414141;
   border-color: rgba(255, 255, 255, 0.15);
   box-shadow: none;
 }
 
-.modal-dialog .modal-dialog-linked-button:selected:hover, .notification-button:selected:hover, .modal-dialog .modal-dialog-linked-button:selected:focus, .notification-button:selected:focus, .modal-dialog .modal-dialog-linked-button:active:hover, .notification-button:active:hover, .modal-dialog .modal-dialog-linked-button:active:focus, .notification-button:active:focus {
+.modal-dialog .modal-dialog-button:selected:hover, .notification-button:selected:hover, .modal-dialog .modal-dialog-button:selected:focus, .notification-button:selected:focus, .modal-dialog .modal-dialog-button:active:hover, .notification-button:active:hover, .modal-dialog .modal-dialog-button:active:focus, .notification-button:active:focus {
   background-color: #414141;
 }
 
-.modal-dialog .modal-dialog-linked-button:checked, .notification-button:checked {
+.modal-dialog .modal-dialog-button:checked, .notification-button:checked {
   color: rgba(255, 255, 255, 0.85);
   background-color: #3281ea;
   border-color: #3281ea;
   box-shadow: none;
 }
 
-.modal-dialog .modal-dialog-linked-button:checked:hover, .notification-button:checked:hover, .modal-dialog .modal-dialog-linked-button:checked:focus, .notification-button:checked:focus {
+.modal-dialog .modal-dialog-button:checked:hover, .notification-button:checked:hover, .modal-dialog .modal-dialog-button:checked:focus, .notification-button:checked:focus {
   background-color: #3281ea;
 }
 
-.modal-dialog .modal-dialog-linked-button:insensitive, .notification-button:insensitive {
+.modal-dialog .modal-dialog-button:insensitive, .notification-button:insensitive {
   color: rgba(255, 255, 255, 0.3);
   background-color: #343434;
   border-color: transparent;
@@ -417,6 +431,8 @@ StEntry StLabel.hint-text {
 
 .check-box:focus StBin {
   background-image: url("assets/checkbox-off.svg");
+  background-color: transparent;
+  box-shadow: none;
 }
 
 .check-box:hover StBin {
@@ -441,6 +457,29 @@ StEntry StLabel.hint-text {
 
 .check-box:active:checked StBin {
   background-color: rgba(64, 138, 235, 0.3);
+}
+
+.check-box StIcon {
+  icon-size: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  color: transparent;
+}
+
+.check-box:checked StIcon {
+  background-color: transparent;
+  color: transparent;
+}
+
+.check-box:checked:hover StIcon {
+  background-color: transparent;
+  color: transparent;
+}
+
+.check-box:checked:active StIcon {
+  background-color: transparent;
+  color: transparent;
 }
 
 /* Switches */
@@ -559,9 +598,6 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .popup-menu {
   min-width: 15em;
   color: rgba(255, 255, 255, 0.9);
-  border-radius: 3px;
-  border-image: url("assets/menu.svg") 24 32 28 28;
-  border-radius: 3px;
   padding: 0 !important;
   margin: 0 !important;
 }
@@ -572,12 +608,9 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .popup-menu-content {
-  padding: 0 !important;
-  margin: 10px 12px 14px !important;
+  padding: 6px;
+  margin: 2px 6px 10px;
   border: none;
-  background-color: transparent;
-  box-shadow: none;
-  border-radius: 3px;
 }
 
 .popup-menu-item {
@@ -765,7 +798,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .datemenu-popover {
-  border-radius: 22.5px;
+  border-radius: 9px !important;
 }
 
 .calendar {
@@ -1045,6 +1078,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   color: rgba(255, 255, 255, 0.9);
   background-color: rgba(255, 255, 255, 0.08) !important;
   border-color: rgba(255, 255, 255, 0.06);
+  box-shadow: none;
 }
 
 .world-clocks-button:active,
@@ -1052,6 +1086,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .events-button:active {
   color: rgba(255, 255, 255, 0.9);
   background-color: rgba(255, 255, 255, 0.12) !important;
+  box-shadow: none;
 }
 
 .world-clocks-header,
@@ -1565,13 +1600,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .modal-dialog {
-  color: rgba(255, 255, 255, 0.9);
-  background-color: transparent;
-  border: none;
-  box-shadow: none;
-  padding: 12px 18px 20px !important;
-  margin: 0 !important;
-  border-image: url("assets/menu.svg") 24 32 28 28;
+  padding: 0;
 }
 
 .modal-dialog .modal-dialog-content-box {
@@ -1580,7 +1609,14 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   max-width: 28em;
 }
 
-.modal-dialog .modal-dialog-linked-button {
+.modal-dialog .modal-dialog-button-box {
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 0 0 6px 6px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.modal-dialog .modal-dialog-button {
   font-weight: bold;
   background-gradient-direction: none !important;
   margin: 0 !important;

@@ -751,7 +751,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .datemenu-popover {
-  border-radius: 16.5px;
+  border-radius: 7px !important;
 }
 
 .calendar {
@@ -1031,6 +1031,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   color: rgba(255, 255, 255, 0.9);
   background-color: rgba(255, 255, 255, 0.08) !important;
   border-color: rgba(255, 255, 255, 0.06);
+  box-shadow: none;
 }
 
 .world-clocks-button:active,
@@ -1038,6 +1039,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .events-button:active {
   color: rgba(255, 255, 255, 0.9);
   background-color: rgba(255, 255, 255, 0.12) !important;
+  box-shadow: none;
 }
 
 .world-clocks-header,

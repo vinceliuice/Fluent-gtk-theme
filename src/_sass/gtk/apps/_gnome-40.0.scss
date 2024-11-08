@@ -13,9 +13,9 @@
 }
 
 .floating-bar {
-  min-height: 32px;
+  min-height: $medium-size;
   padding: 0;
-  margin: $space-size;
+  margin: $space-size / 2;
   border-style: none;
   border-radius: $corner-radius;
   background-color: $primary;

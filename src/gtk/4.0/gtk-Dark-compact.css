@@ -4978,9 +4978,9 @@ statusbar {
 }
 
 .floating-bar {
-  min-height: 32px;
+  min-height: 28px;
   padding: 0;
-  margin: 4px;
+  margin: 2px;
   border-style: none;
   border-radius: 2px;
   background-color: #3281EA;

@@ -6,7 +6,7 @@
 }
 
 .datemenu-popover {
-  border-radius: $buttons_radius * 1.5 + $container_padding * 3;
+  border-radius: $buttons_radius + $container_padding !important;
 }
 
 .calendar {
@@ -268,11 +268,13 @@
     color: $fg_color;
     background-color: $popover_button_hover !important;
     border-color: if($variant == 'light', rgba(black, 0.15), rgba(white, 0.06));
+    box-shadow: none;
   }
 
   &:active {
     color: $fg_color;
     background-color: $popover_button_active !important;
+    box-shadow: none;
   }
 }
 

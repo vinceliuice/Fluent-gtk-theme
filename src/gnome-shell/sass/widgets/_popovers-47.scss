@@ -1,0 +1,194 @@
+/* Popovers/Menus */
+
+//.the popover itself
+.popup-menu-boxpointer {
+  -arrow-border-radius: $menu_radius;
+  -arrow-background-color: transparent;
+  -arrow-border-width: 0;
+  -arrow-border-color: transparent;
+  -arrow-base: 30px - $menu_radius;
+  -arrow-rise: 0;
+  -arrow-box-shadow: none; //dreaming. bug #689995
+}
+
+// container of the popover menu
+.popup-menu {
+  min-width: 15em;
+  color: $fg_color;
+  padding: 0 !important;
+  margin: 0 !important;
+
+  //.popup-status-menu-item { font-weight: normal;  color: pink; } //dunno what that is
+  &.panel-menu {
+    -boxpointer-gap: $container_margin; // distance from the panel
+    margin-bottom: 1.75em;
+  }
+}
+
+.popup-menu-content {
+  padding: $container_padding;
+  margin: 2px $container_padding 10px;
+  border: none;
+  @extend %popups;
+}
+
+// menu items
+.popup-menu-item {
+  spacing: $container_padding;
+  padding: $container_padding $container_padding * 2;
+  margin: 0;
+  color: $fg_color;
+  transition-duration: $shorter_duration;
+  border-radius: $buttons_radius;
+  background-image: none;
+  background-gradient-direction: none !important;
+
+  &:ltr { padding-right: $container_padding * 2; padding-left: $container_padding * 2; }
+  &:rtl { padding-right: $container_padding * 2; padding-left: $container_padding * 2; }
+
+  &:checked {
+    background-color: if($variant == 'light', rgba(black, 0.08), rgba(white, 0.06)) !important;
+    font-weight: normal;
+    border-radius: $buttons_radius $buttons_radius 0 0 !important;
+    border: none;
+    box-shadow: none;
+    color: $fg_color !important;
+    background-gradient-direction: none !important;
+
+    &.selected, &:hover, &:focus {
+      background-color: if($variant == 'light', rgba(black, 0.1), rgba(white, 0.08)) !important;
+      color: $fg_color !important;
+    }
+
+    &:active, &.selected:active {
+      background-color: if($variant == 'light', rgba(black, 0.08), rgba(white, 0.06)) !important;
+      color: $fg_color !important;
+    }
+
+    &:insensitive { color: $disabled_fg_color !important; }
+  }
+
+  &.selected, &:hover, &:focus {
+    background-color: $divider_color !important;
+    color: $fg_color !important;
+    transition-duration: 0ms;
+    background-gradient-direction: none !important;
+  }
+
+  &:active {
+    background-color: $track_color !important;
+    color: $fg_color !important;
+    transition-duration: $longer_duration;
+    background-gradient-direction: none !important;
+  }
+
+  &.selected:active { color: $fg_color !important; }
+
+  &:insensitive { color: $disabled_fg_color !important; }
+}
+
+// all icons and other graphical elements
+.popup-inactive-menu-item {
+  color: $fg_color !important;
+
+  &:insensitive { color: $hint_fg_color !important; }
+}
+
+// symbolic icons in popover
+.popup-menu-arrow,
+.popup-menu-icon { icon-size: 16px; }
+
+// popover submenus
+.popup-sub-menu {
+  margin: 0;
+  background-color: if($variant == 'light', rgba(black, 0.08), rgba(white, 0.06)) !important;
+  border-radius: 0 0 $buttons_radius $buttons_radius !important;
+  border: none;
+  box-shadow: none;
+  background-image: none !important;
+
+  .popup-menu-item {
+    margin: 0;
+    border-radius: 0;
+    background-image: none !important;
+    background-color: transparent !important;
+
+    &.selected, &:hover, &:focus {
+      background-color: $divider_color !important;
+    }
+
+    &:active {
+      background-color: $track_color !important;
+    }
+
+    &:last-child {
+      border-radius: 0 0 $buttons_radius $buttons_radius !important;
+      border-bottom-width: 0;
+    }
+  }
+
+  .popup-menu-section {
+    .popup-menu-item:last-child {
+      &:hover, &:focus { border-radius: 0;}
+    }
+
+    &:last-child .popup-menu-item:last-child {
+      border-radius: 0 0 $buttons_radius $buttons_radius !important;
+    }
+  }
+}
+
+// container for radio and check boxes
+.popup-menu-ornament {
+  width: 1.2em;
+
+  &:ltr { text-align: right };
+  &:rtl { text-align: left };
+}
+
+// separator
+.popup-separator-menu-item {
+  background: none;
+  border: none;
+  padding: 0 0;
+  margin: 0 0;
+  height: $container_padding - 2px;
+
+  .popup-separator-menu-item-separator {
+    //-margin-horizontal: 24px;
+    height: 1px; //not really the whole box
+    margin: 0 0;
+    padding: 0 0;
+    background: none;
+
+    .popup-sub-menu & { //submenu separators
+      margin: 0 0;
+      padding: 0 0;
+      background: none;
+    }
+  }
+}
+
+// desktop background menu
+.background-menu {
+  -boxpointer-gap: $container_margin;
+  -arrow-rise: 0px; // hide the beak on the menu
+}
+
+// system status menu
+.aggregate-menu {
+  min-width: if($laptop == 'true', 19em, 21em);
+
+  .popup-menu-icon {
+    padding: 0;
+    margin: 0;
+    -st-icon-style: symbolic;
+
+    &:ltr { margin-right: $container_margin; }
+  }
+
+  .popup-sub-menu .popup-menu-item > :first-child {
+    &:ltr { padding-left: $container_padding * 2 !important; margin-left: 0 !important; }
+    &:rtl { padding-right: $container_padding * 2 !important; margin-right: 0 !important; }
+  }
+}

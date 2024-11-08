@@ -60,6 +60,7 @@ $large_scalable_icon_size: $scalable_icon_size * 2;
 $material_radius: if($window == 'round', 12px, 6px);
 $menu_radius: if($window == 'round', 8px, 3px);
 $buttons_radius: if($window == 'round', 5px, 3px);
+$dialog_radius: if($window == 'round', $buttons_radius + $container_padding * 2, 6px);
 $circular_radius: 9999px;
 
 // durations
