@@ -3780,13 +3780,13 @@ window.dialog.message { // Message Dialog styling
     .dialog-action-area {
       background-color: $fill;
       padding: $space-size;
+      border-top: 1px solid $border;
+      border-spacing: $space-size;
 
       > button {
         @extend %button-basic;
 
         &, &:first-child, &:last-child { border-radius: $corner-radius; }
-
-        &:not(:last-child) { margin-right: $space-size; }
 
         &.suggested-action:not(:disabled) { color: $suggested; }
 

@@ -4249,14 +4249,12 @@ window.dialog.message.csd.background {
 window.dialog.message.csd .dialog-action-area {
   background-color: rgba(0, 0, 0, 0.04);
   padding: 4px;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  border-spacing: 4px;
 }
 
 window.dialog.message.csd .dialog-action-area > button, window.dialog.message.csd .dialog-action-area > button:first-child, window.dialog.message.csd .dialog-action-area > button:last-child {
   border-radius: 2px;
-}
-
-window.dialog.message.csd .dialog-action-area > button:not(:last-child) {
-  margin-right: 4px;
 }
 
 window.dialog.message.csd .dialog-action-area > button.suggested-action:not(:disabled) {
