@@ -1464,10 +1464,20 @@ searchbar > revealer > box {
     }
   }
 
-  stackswitcher { // reset
+  stackswitcher.linked { // reset
     margin: $space-size 0;
 
-    > button { margin: 0; }
+    > button {
+      margin: 0;
+
+      &:not(.suggested-action):not(.destructive-action):not(:only-child) {
+        border-radius: 0;
+
+        &:checked:focus {
+          background-color: transparent;
+        }
+      }
+    }
   }
 
   // FIXME: Ugly overriding

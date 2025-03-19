@@ -1635,12 +1635,20 @@ headerbar button.titlebutton:not(.suggested-action):not(.destructive-action) {
   color: rgba(255, 255, 255, 0.5);
 }
 
-.titlebar stackswitcher {
+.titlebar stackswitcher.linked {
   margin: 4px 0;
 }
 
-.titlebar stackswitcher > button {
+.titlebar stackswitcher.linked > button {
   margin: 0;
+}
+
+.titlebar stackswitcher.linked > button:not(.suggested-action):not(.destructive-action):not(:only-child) {
+  border-radius: 0;
+}
+
+.titlebar stackswitcher.linked > button:not(.suggested-action):not(.destructive-action):not(:only-child):checked:focus {
+  background-color: transparent;
 }
 
 .titlebar .path-bar button:not(.suggested-action):not(.destructive-action).text-button {

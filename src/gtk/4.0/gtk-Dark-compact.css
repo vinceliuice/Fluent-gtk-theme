@@ -6660,52 +6660,52 @@ statuspage.compact > scrolledwindow > viewport > box > clamp > box > .title {
 
 viewswitcher {
   margin: 0;
-}
-
-viewswitcher.wide {
   border-spacing: 0;
   border-radius: 2px;
   background-color: rgba(255, 255, 255, 0.04);
+  padding: 0 2px;
 }
 
-viewswitcher.wide > button.toggle, viewswitcher.wide > button.toggle.flat {
+viewswitcher.wide button.toggle {
   padding: 0 4px;
 }
 
-viewswitcher.wide button.toggle:checked, viewswitcher.wide button.toggle.flat:checked {
-  background-color: #3281EA;
-  color: white;
-}
-
-viewswitcher.wide button.toggle:checked:backdrop, viewswitcher.wide button.toggle.flat:checked:backdrop {
-  color: rgba(255, 255, 255, 0.5);
-}
-
-viewswitcher.wide button.toggle:checked indicatorbin.needs-attention > indicator, viewswitcher.wide button.toggle.flat:checked indicatorbin.needs-attention > indicator {
-  background-color: white;
-}
-
-viewswitcher.wide button.toggle:checked indicatorbin.needs-attention > indicator > label, viewswitcher.wide button.toggle.flat:checked indicatorbin.needs-attention > indicator > label {
-  color: #3281EA;
-}
-
-viewswitcher.narrow button.toggle {
+viewswitcher button.toggle.flat {
   border-radius: 0;
-  margin: 0;
-  border: none;
+}
+
+viewswitcher button.toggle.flat:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+viewswitcher button.toggle.flat:hover {
+  background-color: transparent;
+  box-shadow: inset 0 -2px rgba(255, 255, 255, 0.3);
+}
+
+viewswitcher button.toggle.flat:active, viewswitcher button.toggle.flat:checked {
+  color: white;
+  background-color: transparent;
+  box-shadow: inset 0 -2px #3281EA;
+}
+
+viewswitcher button.toggle.flat:active:hover, viewswitcher button.toggle.flat:checked:hover {
+  box-shadow: inset 0 -2px #77acf1;
 }
 
 viewswitcher button.toggle {
   font-weight: bold;
-  padding: 0;
   min-height: 0;
+  padding: 0;
   margin: 0;
+  border: none;
 }
 
 viewswitcher button.toggle > stack > box.narrow {
   font-size: 0.75rem;
   padding-top: 5px;
-  padding-bottom: 3px;
+  padding-bottom: 2px;
   border-spacing: 2px;
 }
 
@@ -6721,6 +6721,18 @@ viewswitcher button.toggle > stack > box.wide {
 
 viewswitcherbar actionbar > revealer > box {
   padding: 0;
+}
+
+viewswitcherbar actionbar > revealer > box viewswitcher button.toggle.flat:hover {
+  box-shadow: inset 0 2px rgba(255, 255, 255, 0.3);
+}
+
+viewswitcherbar actionbar > revealer > box viewswitcher button.toggle.flat:active, viewswitcherbar actionbar > revealer > box viewswitcher button.toggle.flat:checked {
+  box-shadow: inset 0 2px #3281EA;
+}
+
+viewswitcherbar actionbar > revealer > box viewswitcher button.toggle.flat:active:hover, viewswitcherbar actionbar > revealer > box viewswitcher button.toggle.flat:checked:hover {
+  box-shadow: inset 0 2px #77acf1;
 }
 
 viewswitchertitle {
