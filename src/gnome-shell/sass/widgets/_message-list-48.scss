@@ -14,14 +14,14 @@
   &:ltr {
     margin-left: $container_padding;
     margin-right: 0;
-    padding-right: $container_padding * 2;
+    padding-right: $container_margin;
     border-right-width: 1px;
   }
 
   &:rtl {
     margin-right: $container_padding;
     margin-left: 0;
-    padding-left: $container_padding * 2;
+    padding-left: $container_margin;
     border-left-width: 1px;
   }
 
@@ -40,8 +40,8 @@
 
 .message-view {
   // to account for scrollbar
-  &:ltr { margin-right: 0; }
-  &:rtl { margin-left: 0; }
+  &:ltr { margin-right: $container_padding * 2; }
+  &:rtl { margin-left: $container_padding * 2; }
 
   -st-vfade-offset: 68px;
 
@@ -97,7 +97,7 @@
 
 // message bubbles
 .message {
-  background-color: $popover_button_bg;
+  background-color: $base_color;
   border-radius: $buttons_radius;
   color: $secondary_fg_color;
   text-shadow: none;
@@ -114,26 +114,32 @@
   .popup-menu & {
     margin: 0 0 $container_margin;
     box-shadow: none;
-    background-color: $popover_button_bg;
+    background-color: $card_bg_color;
     border-radius: $buttons_radius;
     color: $secondary_fg_color;
     border: 1px solid $popover_button_border;
 
     &:hover, &:focus {
-      background-color: $popover_button_hover;
+      background-color: $card_hover_color;
       border-color: if($variant == 'light', rgba(black, 0.15), rgba(white, 0.08));
+      box-shadow: none;
     }
   
-    &:active { background-color: $popover_button_active; }
+    &:active {
+      background-color: $card_active_color;
+      box-shadow: none;
+    }
   }
 
   &:second-in-stack {
-    box-shadow: 0 1px 3px rgba(black, 0.05);
+    background-color: if($variant == 'light', darken($card_bg_color, 4%), lighten($card_bg_color, 2%));
+    box-shadow: none;
   }
 
   &:lower-in-stack {
+    background-color: if($variant == 'light', darken($card_bg_color, 7%), lighten($card_bg_color, 4%));
     box-shadow: none;
-    // border-color: if($variant == 'light', darken($card_bg_color, 10%), transparent); // a not ideal workaround for light theme
+    border-color: $popover_button_border; // a not ideal workaround for light theme
   }
 
   // message header
@@ -189,9 +195,9 @@
     }
 
     .message-expand-button {
-      padding: 6px;
-      &:ltr { margin-right: $container_padding; }
-      &:rtl { margin-left: $container_padding; }
+      padding: 4px;
+      &:ltr { margin-right: 0; }
+      &:rtl { margin-left: 0; }
     }
   }
 

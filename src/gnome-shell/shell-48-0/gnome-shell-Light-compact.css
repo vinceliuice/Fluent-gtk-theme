@@ -1208,14 +1208,14 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .message-list:ltr {
   margin-left: 4px;
   margin-right: 0;
-  padding-right: 8px;
+  padding-right: 2px;
   border-right-width: 1px;
 }
 
 .message-list:rtl {
   margin-right: 4px;
   margin-left: 0;
-  padding-left: 8px;
+  padding-left: 2px;
   border-left-width: 1px;
 }
 
@@ -1234,11 +1234,11 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .message-view:ltr {
-  margin-right: 0;
+  margin-right: 8px;
 }
 
 .message-view:rtl {
-  margin-left: 0;
+  margin-left: 8px;
 }
 
 .message-view .message {
@@ -1289,7 +1289,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .message {
-  background-color: rgba(255, 255, 255, 0.35);
+  background-color: #ffffff;
   border-radius: 3px;
   color: rgba(0, 0, 0, 0.54);
   text-shadow: none;
@@ -1309,27 +1309,32 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .popup-menu .message {
   margin: 0 0 2px;
   box-shadow: none;
-  background-color: rgba(255, 255, 255, 0.35);
+  background-color: white;
   border-radius: 3px;
   color: rgba(0, 0, 0, 0.54);
   border: 1px solid rgba(0, 0, 0, 0.12);
 }
 
 .popup-menu .message:hover, .popup-menu .message:focus {
-  background-color: rgba(0, 0, 0, 0.06);
+  background-color: #f0f0f0;
   border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: none;
 }
 
 .popup-menu .message:active {
-  background-color: rgba(0, 0, 0, 0.08);
+  background-color: #ebebeb;
+  box-shadow: none;
 }
 
 .message:second-in-stack {
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  background-color: whitesmoke;
+  box-shadow: none;
 }
 
 .message:lower-in-stack {
+  background-color: #ededed;
   box-shadow: none;
+  border-color: rgba(0, 0, 0, 0.12);
 }
 
 .message .message-header {
@@ -1398,15 +1403,15 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .message .message-header .message-expand-button {
-  padding: 6px;
+  padding: 4px;
 }
 
 .message .message-header .message-expand-button:ltr {
-  margin-right: 4px;
+  margin-right: 0;
 }
 
 .message .message-header .message-expand-button:rtl {
-  margin-left: 4px;
+  margin-left: 0;
 }
 
 .message .message-box {
@@ -3398,7 +3403,7 @@ StWidget.focused .app-grid-running-dot {
   spacing-columns: 8px;
 }
 
-.quick-toggle, .quick-menu-toggle {
+.quick-toggle, .quick-toggle-has-menu {
   border-radius: 3px;
   min-width: 12em;
   max-width: 12em;
@@ -3410,7 +3415,7 @@ StWidget.focused .app-grid-running-dot {
 .quick-toggle {
   background-color: rgba(0, 0, 0, 0.06) !important;
   /* Move padding into the box; this is to allow menu arrows
-       to extend to the border */
+     to extend to the border */
 }
 
 .quick-toggle:hover {
@@ -3590,8 +3595,8 @@ StWidget.focused .app-grid-running-dot {
   background-color: white !important;
   color: rgba(0, 0, 0, 0.87) !important;
   border-radius: 3px !important;
-  padding: 12px;
-  margin: 8px 24px 0;
+  padding: 8px;
+  margin: 8px 14px 0 !important;
   border: none !important;
 }
 

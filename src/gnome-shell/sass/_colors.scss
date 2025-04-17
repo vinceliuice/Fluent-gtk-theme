@@ -85,6 +85,16 @@ $popover_button_active:               if($variant == 'light', rgba(black, 0.08),
   $popover_button_active:             if($variant == 'light', rgba(black, 0.16), rgba(white, 0.15));
 }
 
+$card_bg_color:                       if($variant == 'light', mix(white, $base_color, 35%), mix(white, $base_color, 3%));
+$card_hover_color:                    if($variant == 'light', mix(black, $base_color, 6%), mix(white, $base_color, 8%));
+$card_active_color:                   if($variant == 'light', mix(black, $base_color, 8%), mix(white, $base_color, 12%));
+
+@if $outline == 'false' {
+  $card_bg_color:                     if($variant == 'light', mix(black, $base_color, 6%), mix(white, $base_color, 5%));
+  $card_hover_color:                  if($variant == 'light', mix(black, $base_color, 10%), mix(white, $base_color, 12%));
+  $card_active_color:                 if($variant == 'light', mix(black, $base_color, 16%), mix(white, $base_color, 15%));
+}
+
 // Misc colors
 $primary_color:                       theme(color);
 $alt_primary_color:                   darken($primary_color, 3%);
