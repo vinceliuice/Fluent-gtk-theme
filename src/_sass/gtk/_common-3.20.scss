@@ -2184,7 +2184,7 @@ $tab-radius: $corner-radius;
 
   &:checked {
     transition: $transition;
-    background-color: $base;
+    background-color: $background;
     background-clip: padding-box;
     border-color: $solid-border;
     color: $text;
@@ -2202,7 +2202,7 @@ notebook {
   &.frame > header { background-color: $base-alt; }
 
   &, &.frame {
-    background-color: $base;
+    background-color: $background;
     border-radius: $corner-radius;
   }
 
@@ -3258,7 +3258,7 @@ separator {
 
 list {
   border-color: $divider;
-  background-color: $base;
+  background-color: $background;
 
   row { padding: $space-size / 2 $space-size; }
 

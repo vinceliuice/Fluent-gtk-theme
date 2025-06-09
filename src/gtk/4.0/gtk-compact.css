@@ -2716,7 +2716,7 @@ tabbar tabbox tab:checked, notebook > header tab:checked, tabbar tabbox tab:sele
 }
 
 tabbar tabbox tab:checked, notebook > header tab:checked, notebook > header tab:checked:hover, tabbar tabbox tab:selected, notebook > header tab:selected, notebook > header tab:selected:hover {
-  background-color: #FFFFFF;
+  background-color: #F2F2F2;
 }
 
 tabbar tabbox tab:checked:disabled, notebook > header tab:checked:disabled, tabbar tabbox tab:selected:disabled, notebook > header tab:selected:disabled {
@@ -2732,7 +2732,7 @@ frame > paned > notebook > header, notebook.frame > header {
 }
 
 notebook, notebook.frame {
-  background-color: #FFFFFF;
+  background-color: #F2F2F2;
   border-radius: 2px;
 }
 
@@ -3992,7 +3992,7 @@ stacksidebar separator.horizontal, button.font separator, button.file separator 
 listview,
 list {
   border-color: rgba(0, 0, 0, 0.12);
-  background-color: #FFFFFF;
+  background-color: #F2F2F2;
   color: rgba(0, 0, 0, 0.87);
   box-shadow: none;
 }

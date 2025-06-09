@@ -2377,7 +2377,7 @@ tabbox > tab:disabled, notebook > header tab:disabled {
 
 tabbox > tab:checked, notebook > header tab:checked {
   transition: all 75ms cubic-bezier(0, 0, 0.2, 1);
-  background-color: #2B2B2B;
+  background-color: #333333;
   background-clip: padding-box;
   border-color: #4d4d4d;
   color: white;
@@ -2396,7 +2396,7 @@ frame > paned > notebook > header, notebook.frame > header {
 }
 
 notebook, notebook.frame {
-  background-color: #2B2B2B;
+  background-color: #333333;
   border-radius: 2px;
 }
 
@@ -3572,7 +3572,7 @@ window.background.csd > box.vertical > overlay > stack > box.vertical > box.hori
 
 list {
   border-color: rgba(255, 255, 255, 0.12);
-  background-color: #2B2B2B;
+  background-color: #333333;
 }
 
 list row {
