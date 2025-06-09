@@ -55,7 +55,7 @@ if [[ "$(command -v gnome-shell)" ]]; then
   fi
 else
   echo "'gnome-shell' not found, using styles for last gnome-shell version available."
-  GS_VERSION="47-0"
+  GS_VERSION="48-0"
 fi
 
 usage() {
