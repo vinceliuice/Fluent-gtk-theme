@@ -2395,7 +2395,7 @@ frame > paned > notebook > header, notebook.frame > header {
   background-color: #303030;
 }
 
-notebook, notebook.frame {
+notebook.frame {
   background-color: #2B2B2B;
   border-radius: 2px;
 }
@@ -3572,7 +3572,7 @@ window.background.csd > box.vertical > overlay > stack > box.vertical > box.hori
 
 list {
   border-color: rgba(255, 255, 255, 0.12);
-  background-color: #2B2B2B;
+  background-color: #333333;
 }
 
 list row {

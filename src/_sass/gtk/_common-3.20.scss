@@ -2201,7 +2201,7 @@ notebook {
   frame > paned > & > header,
   &.frame > header { background-color: $base-alt; }
 
-  &, &.frame {
+  &.frame {
     background-color: $base;
     border-radius: $corner-radius;
   }
@@ -3258,7 +3258,7 @@ separator {
 
 list {
   border-color: $divider;
-  background-color: $base;
+  background-color: $background;
 
   row { padding: $space-size / 2 $space-size; }
 

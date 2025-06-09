@@ -2730,7 +2730,7 @@ frame > paned > notebook > header, notebook.frame > header {
   background-color: #FAFAFA;
 }
 
-notebook, notebook.frame {
+notebook.frame {
   background-color: #FFFFFF;
   border-radius: 2px;
 }
@@ -3991,7 +3991,7 @@ stacksidebar separator.horizontal, button.font separator, button.file separator 
 listview,
 list {
   border-color: rgba(0, 0, 0, 0.12);
-  background-color: #FFFFFF;
+  background-color: #F2F2F2;
   color: rgba(0, 0, 0, 0.87);
   box-shadow: none;
 }
