@@ -7916,3 +7916,83 @@ FIXME this is really an API */
 @define-color BLACK_500 #393634;
 @define-color BLACK_700 #33302F;
 @define-color BLACK_900 #2B2928;
+
+/* LIBADWAITA NAMED COLORS
+   -----------------------
+       use responsibly!    */
+/*
+important/interactive/active widget accent colors */
+@define-color accent_color #1A73E8;
+@define-color accent_bg_color #1A73E8;
+@define-color accent_fg_color white;
+/*
+dangerous action colors */
+@define-color destructive_color #D93025;
+@define-color destructive_bg_color #D93025;
+@define-color destructive_fg_color white;
+/*
+success colors */
+@define-color success_bg_color #0F9D58;
+@define-color success_fg_color white;
+/*
+warning colors */
+@define-color warning_bg_color #F4B400;
+@define-color warning_fg_color rgba(0, 0, 0, 0.87);
+/*
+error colors */
+@define-color error_bg_color #D93025;
+@define-color error_fg_color white;
+/*
+window colors */
+@define-color window_bg_color #F2F2F2;
+@define-color window_fg_color rgba(0, 0, 0, 0.87);
+/*
+view colors */
+@define-color view_bg_color #FFFFFF;
+@define-color view_fg_color rgba(0, 0, 0, 0.87);
+/*
+headerbar colors */
+@define-color headerbar_bg_color #F7F7F7;
+@define-color headerbar_fg_color rgba(0, 0, 0, 0.87);
+@define-color headerbar_border_color rgba(0, 0, 0, 0.12);
+@define-color headerbar_backdrop_color #F2F2F2;
+@define-color headerbar_shade_color #e8e8e8;
+@define-color headerbar_darker_shade_color #d8d8d8;
+/*
+sidebar colors */
+@define-color sidebar_bg_color #FFFFFF;
+@define-color sidebar_fg_color rgba(0, 0, 0, 0.87);
+@define-color sidebar_backdrop_color #FAFAFA;
+@define-color sidebar_border_color rgba(0, 0, 0, 0.12);
+@define-color sidebar_shade_color #f0f0f0;
+/*
+secondary sidebar colors */
+@define-color secondary_sidebar_bg_color #FAFAFA;
+@define-color secondary_sidebar_fg_color rgba(0, 0, 0, 0.87);
+@define-color secondary_sidebar_backdrop_color #f0f0f0;
+@define-color secondary_sidebar_border_color rgba(0, 0, 0, 0.12);
+@define-color secondary_sidebar_shade_color #e6e6e6;
+/*
+card and boxes list colors */
+@define-color card_bg_color #FFFFFF;
+@define-color card_fg_color rgba(0, 0, 0, 0.87);
+@define-color card_shade_color #f0f0f0;
+/*
+tab overview colors */
+@define-color thumbnail_bg_color #FAFAFA;
+@define-color thumbnail_fg_color rgba(0, 0, 0, 0.87);
+/*
+dialog colors */
+@define-color dialog_bg_color #FFFFFF;
+@define-color dialog_fg_color rgba(0, 0, 0, 0.87);
+/*
+three dots menu colors */
+@define-color popover_bg_color #FFFFFF;
+@define-color popover_fg_color rgba(0, 0, 0, 0.87);
+@define-color popover_shade_color #f0f0f0;
+/*
+scroll undershoot and transition color */
+@define-color shade_color rgba(0, 0, 0, 0.06);
+/*
+scroll bar outine color */
+@define-color scrollbar_outline_color rgba(0, 0, 0, 0.1);

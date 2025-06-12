@@ -1,0 +1,101 @@
+// apps rely on some named colors to be exported
+/* LIBADWAITA NAMED COLORS
+   -----------------------
+       use responsibly!    */
+
+// Sass thinks we're using the colors in the variables as strings and may shoot
+// warning, it's innocuous and can be defeated by using "" + $var
+/*
+important/interactive/active widget accent colors */
+@define-color accent_color #{"" + $primary};
+@define-color accent_bg_color #{"" + $primary};
+@define-color accent_fg_color #{"" + on($primary)};
+
+/*
+dangerous action colors */
+@define-color destructive_color #{"" + $error};
+@define-color destructive_bg_color #{"" + $error};
+@define-color destructive_fg_color #{"" + on($error)};
+
+/*
+success colors */
+// @define-color success_color #{"" + $success};
+@define-color success_bg_color #{"" + $success};
+@define-color success_fg_color #{"" + on($success)};
+
+/*
+warning colors */
+// @define-color warning_color #{"" + $warning};
+@define-color warning_bg_color #{"" + $warning};
+@define-color warning_fg_color #{"" + on($warning)};
+
+/*
+error colors */
+// @define-color error_color #{"" + $error};
+@define-color error_bg_color #{"" + $error};
+@define-color error_fg_color #{"" + on($error)};
+
+/*
+window colors */
+@define-color window_bg_color #{"" + $background};
+@define-color window_fg_color #{"" + $text};
+
+/*
+view colors */
+@define-color view_bg_color #{"" + $base};
+@define-color view_fg_color #{"" + $text};
+
+/*
+headerbar colors */
+@define-color headerbar_bg_color #{"" + $titlebar};
+@define-color headerbar_fg_color #{"" + $titlebar-text};
+@define-color headerbar_border_color #{"" + $divider};
+@define-color headerbar_backdrop_color #{"" + $titlebar-backdrop};
+@define-color headerbar_shade_color #{"" + darken($titlebar, 6%)};
+@define-color headerbar_darker_shade_color #{"" + darken($titlebar, 12%)};
+
+/*
+sidebar colors */
+@define-color sidebar_bg_color #{"" + $base};
+@define-color sidebar_fg_color #{"" + $text};
+@define-color sidebar_backdrop_color #{"" + $base-alt};
+@define-color sidebar_border_color #{"" + $divider};
+@define-color sidebar_shade_color #{"" + darken($base, 6%)};
+
+/*
+secondary sidebar colors */
+@define-color secondary_sidebar_bg_color #{"" + $base-alt};
+@define-color secondary_sidebar_fg_color #{"" + $text};
+@define-color secondary_sidebar_backdrop_color #{"" + darken($base-alt, 4%)};
+@define-color secondary_sidebar_border_color #{"" + $divider};
+@define-color secondary_sidebar_shade_color #{"" + darken($base-alt, 8%)};
+
+/*
+card and boxes list colors */
+@define-color card_bg_color #{"" + $base};
+@define-color card_fg_color #{"" + $text};
+@define-color card_shade_color #{"" + darken($base, 6%)};
+
+/*
+tab overview colors */
+@define-color thumbnail_bg_color #{"" + $base-alt};
+@define-color thumbnail_fg_color #{"" + $text};
+
+/*
+dialog colors */
+@define-color dialog_bg_color #{"" + $base};
+@define-color dialog_fg_color #{"" + $text};
+
+/*
+three dots menu colors */
+@define-color popover_bg_color #{"" + $base};
+@define-color popover_fg_color #{"" + $text};
+@define-color popover_shade_color #{"" + darken($base, 6%)};
+
+/*
+scroll undershoot and transition color */
+@define-color shade_color #{"" + rgba(black, 0.06)};
+
+/*
+scroll bar outine color */
+@define-color scrollbar_outline_color #{"" + rgba($text, 0.1)};
