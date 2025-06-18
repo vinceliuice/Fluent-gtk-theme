@@ -6937,6 +6937,10 @@ list.boxed-list > row:last-child.expander:checked list.nested > row:last-child {
   border-bottom-width: 0;
 }
 
+list.boxed-list-separate, list.providers-list {
+  background: #F2F2F2;
+}
+
 flap > dimming,
 leaflet > dimming,
 navigation-view > dimming,
@@ -7783,6 +7787,10 @@ floating-sheet > sheet.background {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 16px 18px rgba(0, 0, 0, 0.15), 0 11px 23px rgba(0, 0, 0, 0.13), 0 0 0 1px rgba(0, 0, 0, 0.12), 0 0 0 36px transparent;
 }
 
+sheet.top-bar > stack > button > box.toolbar, sheet.bottom-bar > stack > button > box.toolbar {
+  background: #FFFFFF;
+}
+
 /* GTK NAMED COLORS
    ----------------
    use responsibly! */
@@ -7916,7 +7924,6 @@ FIXME this is really an API */
 @define-color BLACK_500 #393634;
 @define-color BLACK_700 #33302F;
 @define-color BLACK_900 #2B2928;
-
 /* LIBADWAITA NAMED COLORS
    -----------------------
        use responsibly!    */
