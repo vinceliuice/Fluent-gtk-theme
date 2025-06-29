@@ -1,0 +1,21 @@
+window.titlebar.padding.height: 6
+window.titlebar.padding.width: 6
+window.active.title.bg.color: #2C2C2C
+window.inactive.title.bg.color: #3c3c3c
+window.active.label.text.color: #FFFFFF
+window.inactive.label.text.color: #FFFFFF99
+window.active.border.color: #2C2C2C
+window.inactive.border.color: #3c3c3c
+menu.items.bg.color: #2C2C2C
+menu.items.text.color: #FFFFFF
+menu.items.active.bg.color: #FFFFFF
+menu.items.active.text.color: #2C2C2C
+osd.bg.color: #2C2C2C
+osd.border.color: #FFFFFF
+osd.label.text.color: #FFFFFF
+window.button.hover.bg.corner-radius: 50
+window.button.width: 22
+window.button.height: 22
+window.button.spacing: 6
+
+
