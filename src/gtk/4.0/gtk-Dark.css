@@ -7325,7 +7325,6 @@ toolbarview > .bottom-bar tabbar .box {
   color: inherit;
   border: none;
   padding-bottom: 0;
-  box-shadow: inset 0 -1px #4d4d4d;
 }
 
 toolbarview > .top-bar tabbar .box:backdrop,
@@ -7342,6 +7341,11 @@ toolbarview > .bottom-bar tabbar .box:backdrop > .start-action,
 toolbarview > .bottom-bar tabbar .box:backdrop > .end-action {
   filter: none;
   transition: none;
+}
+
+toolbarview > .top-bar:not(.raised) tabbar .box,
+toolbarview > .bottom-bar:not(.raised) tabbar .box {
+  box-shadow: inset 0 -1px #4d4d4d;
 }
 
 toolbarview > .top-bar .toolbar,
