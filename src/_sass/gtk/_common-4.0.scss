@@ -2356,18 +2356,19 @@ $tab-radius: $corner-radius;
   transition: $transition,
               background-size 0ms,
               background-image 0ms;
-  min-height: $small-size;
-  min-width: $small-size;
+  min-height: 24px;
+  min-width: 24px;
   padding: ($space-size / 2) $space-size * 2;
   border: 1px solid transparent;
   outline: none;
   background-clip: padding-box;
   color: $text-secondary;
+  background-color: transparent;
   font-weight: 500;
   box-shadow: none;
 
   &:hover {
-    background-color: if($variant == 'light', $divider, $fill);
+    background-color: $fill;
     color: $text;
     box-shadow: none;
   }
@@ -2615,59 +2616,6 @@ notebook {
   > stack:not(:only-child) { // the :not(:only-child) is for "hidden" notebooks
     background-color: transparent;
     border-radius: $corner-radius;
-  }
-}
-
-tabbar {
-  .box {
-    min-height: $medium-size;
-    border-bottom: none;
-    background-color: $background;
-    background-clip: border-box;
-    box-shadow: inset 0 -1px $divider;
-    padding: 0;
-  }
-
-  &:backdrop .box {
-    background-color: $background;
-
-    > scrolledwindow,
-    > .start-action,
-    > .end-action {
-      filter: opacity(0.5);
-    }
-  }
-
-  tabbox {
-    padding: 0;
-    margin: 0;
-
-    > tabboxchild {
-      padding: 0;
-      margin: 0;
-    }
-
-    tab {
-      @extend %tabs_tab;
-      padding: $space-size / 2 $space-size;
-      border-bottom: none;
-      margin-bottom: -1px;
-    }
-
-    .start-action,
-    .end-action {
-      padding: $space-size;
-    }
-
-    .start-action:dir(ltr),
-    .end-action:dir(rtl) {
-      padding-right: 0;
-    }
-
-    .start-action:dir(rtl),
-    .end-action:dir(ltr) {
-      padding-left: 0;
-    }
   }
 }
 

@@ -1019,7 +1019,7 @@ toolbarview.undershoot-bottom scrolledwindow {
 // AdwToolbarView
 //
 
- toolbarview {
+toolbarview {
   > .top-bar,
   > .bottom-bar {
     headerbar {
@@ -1248,12 +1248,29 @@ preferencesgroup > box {
 
 tabbar {
   .box {
-    min-height: $menuitem-size;
+    min-height: $medium-size;
+    background-color: $background;
+    box-shadow: none;
+    border: none;
+  }
+
+  &:backdrop .box {
+    background-color: $background;
+
+    > scrolledwindow,
+    > .start-action,
+    > .end-action {
+      filter: opacity(0.5);
+    }
   }
 
   tabbox {
+    padding: 0;
+    margin: 0;
+
     > tabboxchild {
       border-radius: 0;
+      padding: 0;
       margin: 0;
     }
 
@@ -1275,35 +1292,9 @@ tabbar {
     }
   }
 
-  tab {
-    transition: background 150ms ease-in-out;
-    border-width: 1px;
-    border-color: transparent;
-    border-style: solid;
-    min-height: $small-size;
-    min-width: $small-size;
-    padding: ($space-size / 2) 12px;
-    background-clip: padding-box;
-    color: $text-secondary;
-    background-color: transparent;
-
-    &:selected, &:checked, &:active, &:active:hover, &:checked:hover {
-      background-color: $base;
-      background-clip: padding-box;
-      border-color: $solid-border;
-      color: $text;
-    }
-
-    &:hover {
-      background-color: $fill;
-      box-shadow: none;
-      color: $text;
-    }
-  }
-
   .start-action,
   .end-action {
-    padding: 5px;
+    padding: $space-size;
   }
 
   .start-action:dir(ltr),
@@ -1345,11 +1336,12 @@ dnd tab {
 tabbar,
 dnd {
   tab {
-    min-height: $menuitem-size;
-    padding: $space-size / 2 $space-size;
     border-radius: $tab-radius $tab-radius 0 0;
     margin-top: $space-size / 2;
-    margin-bottom: -1px;
+    transition: background-color 150ms ease-in-out;
+    @extend %tabs_tab;
+    border-bottom: none;
+    padding: $space-size / 2 $space-size * 1.5;
 
     button.image-button {
       padding: 0;

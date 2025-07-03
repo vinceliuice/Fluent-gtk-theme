@@ -2684,30 +2684,36 @@ magnifier {
 /*************
  * Notebooks *
  *************/
-tabbar tabbox tab, notebook > header tab {
+tabbar tab,
+dnd tab, notebook > header tab {
   transition: all 75ms cubic-bezier(0, 0, 0.2, 1), background-size 0ms, background-image 0ms;
-  min-height: 20px;
-  min-width: 20px;
+  min-height: 24px;
+  min-width: 24px;
   padding: 2px 8px;
   border: 1px solid transparent;
   outline: none;
   background-clip: padding-box;
   color: rgba(0, 0, 0, 0.6);
+  background-color: transparent;
   font-weight: 500;
   box-shadow: none;
 }
 
-tabbar tabbox tab:hover, notebook > header tab:hover {
-  background-color: rgba(0, 0, 0, 0.12);
+tabbar tab:hover,
+dnd tab:hover, notebook > header tab:hover {
+  background-color: rgba(0, 0, 0, 0.04);
   color: rgba(0, 0, 0, 0.87);
   box-shadow: none;
 }
 
-tabbar tabbox tab:disabled, notebook > header tab:disabled {
+tabbar tab:disabled,
+dnd tab:disabled, notebook > header tab:disabled {
   color: rgba(0, 0, 0, 0.26);
 }
 
-tabbar tabbox tab:checked, notebook > header tab:checked, tabbar tabbox tab:selected, notebook > header tab:selected {
+tabbar tab:checked,
+dnd tab:checked, notebook > header tab:checked, tabbar tab:selected,
+dnd tab:selected, notebook > header tab:selected {
   transition: all 75ms cubic-bezier(0, 0, 0.2, 1);
   background-clip: padding-box;
   border-color: #d9d9d9;
@@ -2715,15 +2721,21 @@ tabbar tabbox tab:checked, notebook > header tab:checked, tabbar tabbox tab:sele
   box-shadow: none;
 }
 
-tabbar tabbox tab:checked, notebook > header tab:checked, notebook > header tab:checked:hover, tabbar tabbox tab:selected, notebook > header tab:selected, notebook > header tab:selected:hover {
+tabbar tab:checked,
+dnd tab:checked, notebook > header tab:checked, notebook > header tab:checked:hover, tabbar tab:selected,
+dnd tab:selected, notebook > header tab:selected, notebook > header tab:selected:hover {
   background-color: #FFFFFF;
 }
 
-tabbar tabbox tab:checked:disabled, notebook > header tab:checked:disabled, tabbar tabbox tab:selected:disabled, notebook > header tab:selected:disabled {
+tabbar tab:checked:disabled,
+dnd tab:checked:disabled, notebook > header tab:checked:disabled, tabbar tab:selected:disabled,
+dnd tab:selected:disabled, notebook > header tab:selected:disabled {
   color: rgba(0, 0, 0, 0.38);
 }
 
-tabbar tabbox tab:checked.reorderable-page, notebook > header tab:checked.reorderable-page, tabbar tabbox tab:selected.reorderable-page, notebook > header tab:selected.reorderable-page {
+tabbar tab:checked.reorderable-page,
+dnd tab:checked.reorderable-page, notebook > header tab:checked.reorderable-page, tabbar tab:selected.reorderable-page,
+dnd tab:selected.reorderable-page, notebook > header tab:selected.reorderable-page {
   background-color: #FFFFFF;
 }
 
@@ -2933,56 +2945,6 @@ notebook > header.left tabs tab.reorderable-page, notebook > header.right tabs t
 notebook > stack:not(:only-child) {
   background-color: transparent;
   border-radius: 2px;
-}
-
-tabbar .box {
-  min-height: 28px;
-  border-bottom: none;
-  background-color: #F2F2F2;
-  background-clip: border-box;
-  box-shadow: inset 0 -1px rgba(0, 0, 0, 0.12);
-  padding: 0;
-}
-
-tabbar:backdrop .box {
-  background-color: #F2F2F2;
-}
-
-tabbar:backdrop .box > scrolledwindow,
-tabbar:backdrop .box > .start-action,
-tabbar:backdrop .box > .end-action {
-  filter: opacity(0.5);
-}
-
-tabbar tabbox {
-  padding: 0;
-  margin: 0;
-}
-
-tabbar tabbox > tabboxchild {
-  padding: 0;
-  margin: 0;
-}
-
-tabbar tabbox tab {
-  padding: 2px 4px;
-  border-bottom: none;
-  margin-bottom: -1px;
-}
-
-tabbar tabbox .start-action,
-tabbar tabbox .end-action {
-  padding: 4px;
-}
-
-tabbar tabbox .start-action:dir(ltr),
-tabbar tabbox .end-action:dir(rtl) {
-  padding-right: 0;
-}
-
-tabbar tabbox .start-action:dir(rtl),
-tabbar tabbox .end-action:dir(ltr) {
-  padding-left: 0;
 }
 
 /**************
@@ -7531,10 +7493,29 @@ preferencesgroup > box button.background-preview-button.toggle:checked {
 
 tabbar .box {
   min-height: 28px;
+  background-color: #F2F2F2;
+  box-shadow: none;
+  border: none;
+}
+
+tabbar:backdrop .box {
+  background-color: #F2F2F2;
+}
+
+tabbar:backdrop .box > scrolledwindow,
+tabbar:backdrop .box > .start-action,
+tabbar:backdrop .box > .end-action {
+  filter: opacity(0.5);
+}
+
+tabbar tabbox {
+  padding: 0;
+  margin: 0;
 }
 
 tabbar tabbox > tabboxchild {
   border-radius: 0;
+  padding: 0;
   margin: 0;
 }
 
@@ -7555,35 +7536,9 @@ tabbar tabbox > revealer > indicator {
   background: alpha(#1A73E8, 0.5);
 }
 
-tabbar tab {
-  transition: background 150ms ease-in-out;
-  border-width: 1px;
-  border-color: transparent;
-  border-style: solid;
-  min-height: 20px;
-  min-width: 20px;
-  padding: 2px 12px;
-  background-clip: padding-box;
-  color: rgba(0, 0, 0, 0.6);
-  background-color: transparent;
-}
-
-tabbar tab:selected, tabbar tab:checked, tabbar tab:active, tabbar tab:active:hover, tabbar tab:checked:hover {
-  background-color: #FFFFFF;
-  background-clip: padding-box;
-  border-color: #d9d9d9;
-  color: rgba(0, 0, 0, 0.87);
-}
-
-tabbar tab:hover {
-  background-color: rgba(0, 0, 0, 0.04);
-  box-shadow: none;
-  color: rgba(0, 0, 0, 0.87);
-}
-
 tabbar .start-action,
 tabbar .end-action {
-  padding: 5px;
+  padding: 4px;
 }
 
 tabbar .start-action:dir(ltr),
@@ -7619,11 +7574,11 @@ dnd tab {
 
 tabbar tab,
 dnd tab {
-  min-height: 28px;
-  padding: 2px 4px;
   border-radius: 2px 2px 0 0;
   margin-top: 2px;
-  margin-bottom: -1px;
+  transition: background-color 150ms ease-in-out;
+  border-bottom: none;
+  padding: 2px 6px;
 }
 
 tabbar tab button.image-button,
