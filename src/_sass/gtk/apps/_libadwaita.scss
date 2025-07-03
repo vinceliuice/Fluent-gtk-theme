@@ -528,6 +528,7 @@ viewswitcher {
   border-radius: $corner-radius;
   background-color: $fill;
   padding: 0 $space-size / 2;
+  min-height: $medium-size;
 
   &.wide button.toggle {
     padding: 0 $space-size;

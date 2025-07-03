@@ -1406,7 +1406,7 @@ searchbar > revealer > box {
 %circular_titlebutton {
   min-height: $medium-size - 6px;
   min-width: $medium-size - 6px;
-  padding: 3px 0;
+  padding: 0;
   margin-left: $space-size / 2;
   margin-right: $space-size / 2;
   @extend %circular-button;
@@ -1631,6 +1631,7 @@ headerbar {
   windowcontrols {
     @if $titlebutton == "circular" {
       border-spacing: $space-size;
+      margin: 3px 0;
 
       &:not(.empty) {
         &.start:dir(ltr),
@@ -1645,6 +1646,7 @@ headerbar {
       }
     } @else {
       border-spacing: 0;
+      margin: -$space-size 0;
 
       &:not(.empty) {
         &.start:dir(ltr),
@@ -1682,24 +1684,24 @@ headerbar {
 
       &.minimize,
       &.maximize {
-        &:hover > image {
+        &:hover {
           background-color: $overlay-hover;
           color: $titlebar-text;
         }
 
-        &:active > image {
+        &:active {
           background-color: $overlay-active;
           color: $titlebar-text;
         }
       }
 
       &.close {
-        &:hover > image {
+        &:hover {
           background-color: $red-300;
           color: on($red-300);
         }
 
-        &:active > image {
+        &:active {
           background-color: $red-600;
           color: on($red-600);
         }

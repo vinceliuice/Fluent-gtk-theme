@@ -1837,7 +1837,7 @@ headerbar entry image:disabled {
 headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action) {
   min-height: 22px;
   min-width: 22px;
-  padding: 3px 0;
+  padding: 0;
   margin-left: 2px;
   margin-right: 2px;
 }
@@ -2030,6 +2030,7 @@ headerbar .selection-mode {
 
 headerbar windowcontrols {
   border-spacing: 4px;
+  margin: 3px 0;
 }
 
 headerbar windowcontrols:not(.empty).start:dir(ltr), headerbar windowcontrols:not(.empty).end:dir(rtl) {
@@ -2051,22 +2052,22 @@ headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action
   background-color: transparent;
 }
 
-headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action).minimize:hover > image, headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action).maximize:hover > image {
+headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action).minimize:hover, headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action).maximize:hover {
   background-color: alpha(currentColor, 0.08);
   color: rgba(0, 0, 0, 0.87);
 }
 
-headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action).minimize:active > image, headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action).maximize:active > image {
+headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action).minimize:active, headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action).maximize:active {
   background-color: alpha(currentColor, 0.16);
   color: rgba(0, 0, 0, 0.87);
 }
 
-headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action).close:hover > image {
+headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action).close:hover {
   background-color: #E57373;
   color: white;
 }
 
-headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action).close:active > image {
+headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action).close:active {
   background-color: #E53935;
   color: white;
 }
@@ -6664,6 +6665,7 @@ viewswitcher {
   border-radius: 2px;
   background-color: rgba(0, 0, 0, 0.04);
   padding: 0 2px;
+  min-height: 28px;
 }
 
 viewswitcher.wide button.toggle {
@@ -7916,7 +7918,6 @@ FIXME this is really an API */
 @define-color BLACK_500 #393634;
 @define-color BLACK_700 #33302F;
 @define-color BLACK_900 #2B2928;
-
 /* LIBADWAITA NAMED COLORS
    -----------------------
        use responsibly!    */
