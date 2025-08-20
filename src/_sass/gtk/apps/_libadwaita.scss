@@ -148,8 +148,12 @@ menubutton {
   &.osd {
     background: none;
     color: inherit;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+    border: none;
 
-    > button { @extend %button-on-dark; }
+    > button:not(.osd) { @extend %button-on-dark; }
   }
 
   &.circular > button { @extend %circular-button; }
@@ -1107,7 +1111,7 @@ toolbarview {
       }
     }
 
-    .toolbar {
+    .toolbar:not(.osd) {
       padding: $space-size / 2;
       background-color: transparent;
 
