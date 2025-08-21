@@ -2357,6 +2357,7 @@ menu,
     color: $text;
     font: initial;
     text-shadow: none;
+    -gtk-icon-style: symbolic;
 
     &:hover {
       transition: none;

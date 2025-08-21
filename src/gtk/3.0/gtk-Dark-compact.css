@@ -2158,6 +2158,7 @@ menu menuitem,
   color: white;
   font: initial;
   text-shadow: none;
+  -gtk-icon-style: symbolic;
 }
 
 menu menuitem:hover,
@@ -8040,21 +8041,12 @@ XfdesktopIconView.view .rubberband {
 /**********
  * Thunar *
  **********/
-.thunar paned > scrolledwindow {
-  padding: 2px;
-}
-
-.thunar paned > scrolledwindow treeview.view {
-  border-radius: 2px;
-  min-height: 24px;
-}
-
-.thunar paned > scrolledwindow treeview.view:not(:hover):not(:selected) {
+.thunar .sidebar treeview.view:not(:hover):not(:selected) {
   background-color: transparent;
   background-image: none;
 }
 
-.thunar paned > scrolledwindow treeview.view:selected {
+.thunar .sidebar treeview.view:selected {
   border-left: 2px solid #3281EA;
   transition: background-color 1200ms cubic-bezier(0, 0, 0.2, 1);
 }
@@ -8081,16 +8073,20 @@ XfdesktopIconView.view .rubberband {
   color: rgba(255, 255, 255, 0.5);
 }
 
+.thunar headerbar toolbar {
+  border-bottom: none;
+}
+
 .thunar #location-toolbar {
   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .thunar .standard-view.frame {
-  border-style: none;
+  border: none;
 }
 
-.thunar .sidebar .view:not(:selected) {
-  background-color: transparent;
+.thunar .standard-view.frame widget.view {
+  border-radius: 2px;
 }
 
 .thunar statusbar {
@@ -8105,10 +8101,6 @@ XfdesktopIconView.view .rubberband {
 
 window.background.csd.thunar scrolledwindow.frame.sidebar.shortcuts-pane {
   border-bottom-left-radius: 3px;
-}
-
-window.background.csd.thunar scrolledwindow.frame.sidebar.shortcuts-pane treeview.view:not(:hover):not(:selected) {
-  background: none;
 }
 
 .xfsm-logout-dialog {

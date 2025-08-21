@@ -104,13 +104,8 @@ XfdesktopIconView.view {
  * Thunar *
  **********/
 .thunar {
-  paned > scrolledwindow {
-    padding: $space-size / 2;
-
+  .sidebar {
     treeview.view {
-      border-radius: $corner-radius;
-      min-height: 24px;
-
       &:not(:hover):not(:selected) {
         background-color: transparent;
         background-image: none;
@@ -151,11 +146,15 @@ XfdesktopIconView.view {
     // }
   }
 
+  headerbar toolbar { border-bottom: none; }
+
   #location-toolbar { border-bottom: 1px solid $divider; }
 
-  .standard-view.frame { border-style: none; }
+  .standard-view.frame {
+    border: none;
 
-  .sidebar .view:not(:selected) { background-color: transparent; }
+    widget.view { border-radius: $corner-radius; }
+  }
 
   statusbar {
     margin: 0 -10px;
@@ -171,10 +170,6 @@ XfdesktopIconView.view {
 window.background.csd.thunar {
   scrolledwindow.frame.sidebar.shortcuts-pane {
     border-bottom-left-radius: $window-radius;
-
-    treeview.view:not(:hover):not(:selected) {
-      background: none;
-    }
   }
 }
 
