@@ -144,11 +144,11 @@ XfdesktopIconView.view {
       }
     }
 
-    > toolitem > widget > widget.linked.path-bar > button.path-bar-button:not(.flat) {
-      @extend %button-flat;
-      border-image: none;
-      margin: 0 2px;
-    }
+    // > toolitem > widget > widget.linked.path-bar > button.path-bar-button:not(.flat) {
+    //   @extend %button-flat;
+    //   border-image: none;
+    //   margin: 0 2px;
+    // }
   }
 
   #location-toolbar { border-bottom: 1px solid $divider; }
