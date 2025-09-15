@@ -228,7 +228,7 @@ spinner:checked:disabled {
 /****************
  * Text Entries *
  ****************/
-headerbar popover entry, spinbutton.vertical, spinbutton:not(.vertical), entry {
+spinbutton.vertical, spinbutton:not(.vertical), entry {
   min-height: 32px;
   padding: 0 8px;
   border-spacing: 6px;
@@ -244,20 +244,20 @@ headerbar popover entry, spinbutton.vertical, spinbutton:not(.vertical), entry {
   border-bottom-color: rgba(0, 0, 0, 0.18);
 }
 
-headerbar popover entry:hover, spinbutton.vertical:hover, spinbutton:hover:not(.vertical), entry:hover, headerbar popover entry:drop(active), spinbutton.vertical:drop(active), spinbutton:drop(active):not(.vertical), entry:drop(active) {
+spinbutton.vertical:hover, spinbutton:hover:not(.vertical), entry:hover, spinbutton.vertical:drop(active), spinbutton:drop(active):not(.vertical), entry:drop(active) {
   background-color: #FFFFFF;
   box-shadow: inset 0 0 0 1px transparent;
   border-color: rgba(0, 0, 0, 0.38);
 }
 
-headerbar popover entry:focus-within, spinbutton.vertical:focus-within, spinbutton:focus-within:not(.vertical), entry:focus-within {
+spinbutton.vertical:focus-within, spinbutton:focus-within:not(.vertical), entry:focus-within {
   background-color: #FFFFFF;
   box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.38);
   border-color: rgba(0, 0, 0, 0.38);
   outline: none;
 }
 
-headerbar popover entry:disabled, spinbutton.vertical:disabled, spinbutton:disabled:not(.vertical), entry:disabled {
+spinbutton.vertical:disabled, spinbutton:disabled:not(.vertical), entry:disabled {
   box-shadow: inset 0 0 0 1px transparent;
   background-color: #FAFAFA;
   color: rgba(0, 0, 0, 0.38);
@@ -1874,6 +1874,42 @@ headerbar button:backdrop:checked:disabled:not(.suggested-action):not(.destructi
   color: rgba(0, 0, 0, 0.26);
 }
 
+headerbar popover button:not(.suggested-action):not(.destructive-action) {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+headerbar popover button:focus:not(.suggested-action):not(.destructive-action), headerbar popover button:hover:not(.suggested-action):not(.destructive-action), headerbar popover button:active:not(.suggested-action):not(.destructive-action), headerbar popover button:checked:not(.suggested-action):not(.destructive-action) {
+  color: rgba(0, 0, 0, 0.87);
+}
+
+headerbar popover button:disabled:not(.suggested-action):not(.destructive-action) {
+  color: rgba(0, 0, 0, 0.26);
+}
+
+headerbar popover button:checked:disabled:not(.suggested-action):not(.destructive-action) {
+  color: rgba(0, 0, 0, 0.38);
+}
+
+headerbar popover button:backdrop:not(.suggested-action):not(.destructive-action) {
+  color: rgba(0, 0, 0, 0.38);
+}
+
+headerbar popover button:backdrop:focus:not(.suggested-action):not(.destructive-action), headerbar popover button:backdrop:hover:not(.suggested-action):not(.destructive-action), headerbar popover button:backdrop:active:not(.suggested-action):not(.destructive-action) {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+headerbar popover button:backdrop:disabled:not(.suggested-action):not(.destructive-action) {
+  color: rgba(0, 0, 0, 0.26);
+}
+
+headerbar popover button:backdrop:checked:not(.suggested-action):not(.destructive-action) {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+headerbar popover button:backdrop:checked:disabled:not(.suggested-action):not(.destructive-action) {
+  color: rgba(0, 0, 0, 0.26);
+}
+
 headerbar entry {
   background-color: #FFFFFF;
   color: rgba(0, 0, 0, 0.87);
@@ -1884,14 +1920,16 @@ headerbar entry {
 
 headerbar entry:hover {
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.08), inset 0 0 0 1px rgba(0, 0, 0, 0.12);
+  background-color: #FFFFFF;
 }
 
 headerbar entry:focus-within {
   box-shadow: inset 0 0 0 2px #8ebaf4;
+  background-color: #FFFFFF;
 }
 
 headerbar entry:disabled {
-  background-color: rgba(0, 0, 0, 0.04);
+  background-color: #FFFFFF;
   color: rgba(0, 0, 0, 0.38);
 }
 
@@ -1904,6 +1942,38 @@ headerbar entry image:hover, headerbar entry image:active {
 }
 
 headerbar entry image:disabled {
+  color: rgba(0, 0, 0, 0.38);
+}
+
+headerbar popover entry {
+  background-color: #FFFFFF;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+headerbar popover entry:hover {
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.08), inset 0 0 0 1px rgba(0, 0, 0, 0.12);
+  background-color: #FFFFFF;
+}
+
+headerbar popover entry:focus-within {
+  box-shadow: inset 0 0 0 2px #8ebaf4;
+  background-color: #FFFFFF;
+}
+
+headerbar popover entry:disabled {
+  background-color: #FFFFFF;
+  color: rgba(0, 0, 0, 0.38);
+}
+
+headerbar popover entry image {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+headerbar popover entry image:hover, headerbar popover entry image:active {
+  color: rgba(0, 0, 0, 0.87);
+}
+
+headerbar popover entry image:disabled {
   color: rgba(0, 0, 0, 0.38);
 }
 
@@ -2060,6 +2130,10 @@ headerbar stackswitcher.linked:not(.vertical) > button:not(.suggested-action):no
 }
 
 headerbar stackswitcher.linked:not(.vertical) > button:not(.suggested-action):not(.destructive-action):active, headerbar stackswitcher.linked:not(.vertical) > button:not(.suggested-action):not(.destructive-action):checked {
+  color: rgba(0, 0, 0, 0.87);
+}
+
+headerbar popover {
   color: rgba(0, 0, 0, 0.87);
 }
 

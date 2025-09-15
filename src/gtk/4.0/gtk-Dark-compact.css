@@ -228,7 +228,7 @@ spinner:checked:disabled {
 /****************
  * Text Entries *
  ****************/
-headerbar popover entry, spinbutton.vertical, spinbutton:not(.vertical), entry {
+spinbutton.vertical, spinbutton:not(.vertical), entry {
   min-height: 28px;
   padding: 0 8px;
   border-spacing: 4px;
@@ -244,20 +244,20 @@ headerbar popover entry, spinbutton.vertical, spinbutton:not(.vertical), entry {
   border-top-color: rgba(255, 255, 255, 0.12);
 }
 
-headerbar popover entry:hover, spinbutton.vertical:hover, spinbutton:hover:not(.vertical), entry:hover, headerbar popover entry:drop(active), spinbutton.vertical:drop(active), spinbutton:drop(active):not(.vertical), entry:drop(active) {
+spinbutton.vertical:hover, spinbutton:hover:not(.vertical), entry:hover, spinbutton.vertical:drop(active), spinbutton:drop(active):not(.vertical), entry:drop(active) {
   background-color: #2B2B2B;
   box-shadow: inset 0 0 0 1px transparent;
   border-color: rgba(255, 255, 255, 0.5);
 }
 
-headerbar popover entry:focus-within, spinbutton.vertical:focus-within, spinbutton:focus-within:not(.vertical), entry:focus-within {
+spinbutton.vertical:focus-within, spinbutton:focus-within:not(.vertical), entry:focus-within {
   background-color: #2B2B2B;
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.5);
   border-color: rgba(255, 255, 255, 0.5);
   outline: none;
 }
 
-headerbar popover entry:disabled, spinbutton.vertical:disabled, spinbutton:disabled:not(.vertical), entry:disabled {
+spinbutton.vertical:disabled, spinbutton:disabled:not(.vertical), entry:disabled {
   box-shadow: inset 0 0 0 1px transparent;
   background-color: #303030;
   color: rgba(255, 255, 255, 0.5);
@@ -1874,8 +1874,44 @@ headerbar button:backdrop:checked:disabled:not(.suggested-action):not(.destructi
   color: rgba(255, 255, 255, 0.3);
 }
 
+headerbar popover button:not(.suggested-action):not(.destructive-action) {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+headerbar popover button:focus:not(.suggested-action):not(.destructive-action), headerbar popover button:hover:not(.suggested-action):not(.destructive-action), headerbar popover button:active:not(.suggested-action):not(.destructive-action), headerbar popover button:checked:not(.suggested-action):not(.destructive-action) {
+  color: white;
+}
+
+headerbar popover button:disabled:not(.suggested-action):not(.destructive-action) {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+headerbar popover button:checked:disabled:not(.suggested-action):not(.destructive-action) {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+headerbar popover button:backdrop:not(.suggested-action):not(.destructive-action) {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+headerbar popover button:backdrop:focus:not(.suggested-action):not(.destructive-action), headerbar popover button:backdrop:hover:not(.suggested-action):not(.destructive-action), headerbar popover button:backdrop:active:not(.suggested-action):not(.destructive-action) {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+headerbar popover button:backdrop:disabled:not(.suggested-action):not(.destructive-action) {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+headerbar popover button:backdrop:checked:not(.suggested-action):not(.destructive-action) {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+headerbar popover button:backdrop:checked:disabled:not(.suggested-action):not(.destructive-action) {
+  color: rgba(255, 255, 255, 0.3);
+}
+
 headerbar entry {
-  background-color: rgba(255, 255, 255, 0.12);
+  background-color: #363636;
   color: white;
   border: none;
   border-radius: 4px;
@@ -1884,14 +1920,16 @@ headerbar entry {
 
 headerbar entry:hover {
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.08), inset 0 0 0 1px rgba(255, 255, 255, 0.12);
+  background-color: #363636;
 }
 
 headerbar entry:focus-within {
   box-shadow: inset 0 0 0 2px #a6c8f6;
+  background-color: #363636;
 }
 
 headerbar entry:disabled {
-  background-color: rgba(255, 255, 255, 0.04);
+  background-color: #2b2b2b;
   color: rgba(255, 255, 255, 0.5);
 }
 
@@ -1904,6 +1942,38 @@ headerbar entry image:hover, headerbar entry image:active {
 }
 
 headerbar entry image:disabled {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+headerbar popover entry {
+  background-color: rgba(255, 255, 255, 0.12);
+  color: white;
+}
+
+headerbar popover entry:hover {
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.08), inset 0 0 0 1px rgba(255, 255, 255, 0.12);
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+headerbar popover entry:focus-within {
+  box-shadow: inset 0 0 0 2px #a6c8f6;
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+headerbar popover entry:disabled {
+  background-color: rgba(255, 255, 255, 0.04);
+  color: rgba(255, 255, 255, 0.5);
+}
+
+headerbar popover entry image {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+headerbar popover entry image:hover, headerbar popover entry image:active {
+  color: white;
+}
+
+headerbar popover entry image:disabled {
   color: rgba(255, 255, 255, 0.5);
 }
 
@@ -2060,6 +2130,10 @@ headerbar stackswitcher.linked:not(.vertical) > button:not(.suggested-action):no
 }
 
 headerbar stackswitcher.linked:not(.vertical) > button:not(.suggested-action):not(.destructive-action):active, headerbar stackswitcher.linked:not(.vertical) > button:not(.suggested-action):not(.destructive-action):checked {
+  color: white;
+}
+
+headerbar popover {
   color: white;
 }
 
