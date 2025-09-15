@@ -1926,7 +1926,7 @@ headerbar {
   min-height: 36px;
   margin: 0;
   padding: 0;
-  background-color: rgba(32, 32, 32, 0.98);
+  background-color: #202020;
 }
 
 headerbar:disabled {
@@ -2097,10 +2097,6 @@ headerbar .selection-mode {
   background-color: #3281EA;
 }
 
-.tiled headerbar, .tiled-top headerbar, .tiled-right headerbar, .tiled-bottom headerbar, .tiled-left headerbar, .maximized headerbar, .fullscreen headerbar {
-  border-radius: 0;
-}
-
 headerbar windowcontrols {
   border-spacing: 4px;
   margin: 3px 0;
@@ -2171,11 +2167,6 @@ headerbar.default-decoration windowcontrols > menubutton {
   min-height: 20px;
   min-width: 20px;
   margin: 0 3px;
-}
-
-.solid-csd headerbar:dir(rtl), .solid-csd headerbar:dir(ltr) {
-  border-radius: 0;
-  box-shadow: none;
 }
 
 window.devel headerbar.titlebar {
@@ -6726,7 +6717,7 @@ viewswitcher button.toggle.flat:hover {
 }
 
 viewswitcher button.toggle.flat:active, viewswitcher button.toggle.flat:checked {
-  color: white;
+  color: inherit;
   background-color: transparent;
   box-shadow: inset 0 -2px #3281EA;
 }
@@ -7065,6 +7056,14 @@ toolbarview.undershoot-bottom scrolledwindow > undershoot.bottom {
   border: none;
 }
 
+.sidebar-pane scrollbar.right:dir(ltr) {
+  margin-right: 1px;
+}
+
+.sidebar-pane scrollbar.right:dir(rtl) {
+  margin-left: 1px;
+}
+
 .sidebar-pane flap > dimming,
 .sidebar-pane leaflet > dimming,
 .sidebar-pane navigation-view > dimming,
@@ -7125,13 +7124,13 @@ toolbarview.undershoot-bottom scrolledwindow > undershoot.bottom {
 }
 
 .sidebar-pane:dir(ltr), .sidebar-pane:dir(ltr) banner > revealer > widget, .sidebar-pane.end:dir(rtl), .sidebar-pane.end:dir(rtl) banner > revealer > widget {
-  box-shadow: none;
-  border-right: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: inset -1px 0 rgba(255, 255, 255, 0.12);
+  border-right: none;
 }
 
 .sidebar-pane:dir(rtl), .sidebar-pane:dir(rtl) banner > revealer > widget, .sidebar-pane.end:dir(ltr), .sidebar-pane.end:dir(ltr) banner > revealer > widget {
-  box-shadow: none;
-  border-left: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: inset 1px 0 rgba(255, 255, 255, 0.12);
+  border-left: none;
 }
 
 /* Middle pane in three-pane setups */
@@ -7241,8 +7240,8 @@ toolbarview.undershoot-bottom scrolledwindow > undershoot.bottom {
 .sidebar-pane .content-pane:dir(ltr) banner > revealer > widget,
 .sidebar-pane .content-pane.end:dir(rtl),
 .sidebar-pane .content-pane.end:dir(rtl) banner > revealer > widget {
-  box-shadow: none;
-  border-right: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: inset -1px 0 rgba(255, 255, 255, 0.12);
+  border-right: none;
 }
 
 .content-pane .sidebar-pane:dir(rtl), .content-pane .sidebar-pane:dir(rtl) banner > revealer > widget, .content-pane .sidebar-pane.end:dir(ltr), .content-pane .sidebar-pane.end:dir(ltr) banner > revealer > widget,
@@ -7250,15 +7249,8 @@ toolbarview.undershoot-bottom scrolledwindow > undershoot.bottom {
 .sidebar-pane .content-pane:dir(rtl) banner > revealer > widget,
 .sidebar-pane .content-pane.end:dir(ltr),
 .sidebar-pane .content-pane.end:dir(ltr) banner > revealer > widget {
-  box-shadow: none;
-  border-left: 1px solid rgba(255, 255, 255, 0.12);
-}
-
-.sidebar-pane headerbar, .sidebar-pane headerbar:backdrop,
-.content-pane headerbar,
-.content-pane headerbar:backdrop {
-  background-color: transparent;
-  box-shadow: none;
+  box-shadow: inset 1px 0 rgba(255, 255, 255, 0.12);
+  border-left: none;
 }
 
 .sidebar-pane toolbarview.undershoot-top scrolledwindow > undershoot.top,
@@ -7327,10 +7319,11 @@ toolbarview.undershoot-bottom scrolledwindow > undershoot.bottom {
 
 toolbarview > .top-bar headerbar,
 toolbarview > .bottom-bar headerbar {
-  background: none;
-  box-shadow: none;
-  color: inherit;
   min-height: 36px;
+  background-color: transparent;
+  box-shadow: none;
+  border: none;
+  color: inherit;
 }
 
 toolbarview > .top-bar headerbar > windowhandle > box,
@@ -7440,24 +7433,24 @@ toolbarview > .bottom-bar .toolbar:not(.osd) button.pill {
 
 toolbarview > .top-bar .collapse-spacing,
 toolbarview > .bottom-bar .collapse-spacing {
-  padding-top: 2px;
-  padding-bottom: 2px;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 toolbarview > .top-bar .collapse-spacing headerbar,
 toolbarview > .bottom-bar .collapse-spacing headerbar {
-  min-height: 32px;
+  min-height: 36px;
 }
 
 toolbarview > .top-bar .collapse-spacing headerbar > windowhandle > box,
 toolbarview > .bottom-bar .collapse-spacing headerbar > windowhandle > box {
-  padding-top: 2px;
-  padding-bottom: 2px;
+  padding-top: 4px;
+  padding-bottom: 4px;
 }
 
 toolbarview > .top-bar .collapse-spacing headerbar.default-decoration,
 toolbarview > .bottom-bar .collapse-spacing headerbar.default-decoration {
-  min-height: 24px;
+  min-height: 28px;
 }
 
 toolbarview > .top-bar .collapse-spacing headerbar.default-decoration > windowhandle > box,
@@ -7470,8 +7463,8 @@ toolbarview > .top-bar .collapse-spacing searchbar > revealer > box,
 toolbarview > .top-bar .collapse-spacing actionbar > revealer > box,
 toolbarview > .bottom-bar .collapse-spacing searchbar > revealer > box,
 toolbarview > .bottom-bar .collapse-spacing actionbar > revealer > box {
-  padding-top: 2px;
-  padding-bottom: 2px;
+  padding-top: 4px;
+  padding-bottom: 4px;
 }
 
 toolbarview > .top-bar .collapse-spacing .toolbar,

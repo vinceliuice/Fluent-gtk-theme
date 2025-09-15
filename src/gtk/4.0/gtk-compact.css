@@ -1926,8 +1926,9 @@ headerbar {
   min-height: 36px;
   margin: 0;
   padding: 0;
+  background-color: #2C2C2C;
   box-shadow: inset 0 -1px rgba(0, 0, 0, 0.12), inset 0 1px rgba(255, 255, 255, 0.1);
-  background-color: rgba(44, 44, 44, 0.98);
+  border: none;
 }
 
 headerbar:disabled {
@@ -1941,12 +1942,6 @@ headerbar:backdrop {
 
 headerbar:backdrop:disabled {
   color: rgba(255, 255, 255, 0.3);
-}
-
-headerbar.flat, headerbar.flat:backdrop {
-  background: none;
-  box-shadow: none;
-  transition: none;
 }
 
 headerbar .title {
@@ -2098,10 +2093,6 @@ headerbar .selection-mode {
   background-color: #1A73E8;
 }
 
-.tiled headerbar, .tiled-top headerbar, .tiled-right headerbar, .tiled-bottom headerbar, .tiled-left headerbar, .maximized headerbar, .fullscreen headerbar {
-  border-radius: 0;
-}
-
 headerbar windowcontrols {
   border-spacing: 4px;
   margin: 3px 0;
@@ -2172,11 +2163,6 @@ headerbar.default-decoration windowcontrols > menubutton {
   min-height: 20px;
   min-width: 20px;
   margin: 0 3px;
-}
-
-.solid-csd headerbar:dir(rtl), .solid-csd headerbar:dir(ltr) {
-  border-radius: 0;
-  box-shadow: none;
 }
 
 window.devel headerbar.titlebar {
@@ -6727,7 +6713,7 @@ viewswitcher button.toggle.flat:hover {
 }
 
 viewswitcher button.toggle.flat:active, viewswitcher button.toggle.flat:checked {
-  color: rgba(0, 0, 0, 0.87);
+  color: inherit;
   background-color: transparent;
   box-shadow: inset 0 -2px #1A73E8;
 }
@@ -7059,11 +7045,18 @@ toolbarview.undershoot-bottom scrolledwindow > undershoot.bottom {
 }
 
 .sidebar-pane .navigation-sidebar,
-.sidebar-pane headerbar,
 .sidebar-pane searchbar > revealer > box {
   background-color: transparent;
   box-shadow: none;
   border: none;
+}
+
+.sidebar-pane scrollbar.right:dir(ltr) {
+  margin-right: 1px;
+}
+
+.sidebar-pane scrollbar.right:dir(rtl) {
+  margin-left: 1px;
 }
 
 .sidebar-pane flap > dimming,
@@ -7126,13 +7119,13 @@ toolbarview.undershoot-bottom scrolledwindow > undershoot.bottom {
 }
 
 .sidebar-pane:dir(ltr), .sidebar-pane:dir(ltr) banner > revealer > widget, .sidebar-pane.end:dir(rtl), .sidebar-pane.end:dir(rtl) banner > revealer > widget {
-  box-shadow: none;
-  border-right: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: inset -1px 0 rgba(0, 0, 0, 0.08);
+  border-right: none;
 }
 
 .sidebar-pane:dir(rtl), .sidebar-pane:dir(rtl) banner > revealer > widget, .sidebar-pane.end:dir(ltr), .sidebar-pane.end:dir(ltr) banner > revealer > widget {
-  box-shadow: none;
-  border-left: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: inset 1px 0 rgba(0, 0, 0, 0.08);
+  border-left: none;
 }
 
 /* Middle pane in three-pane setups */
@@ -7242,8 +7235,8 @@ toolbarview.undershoot-bottom scrolledwindow > undershoot.bottom {
 .sidebar-pane .content-pane:dir(ltr) banner > revealer > widget,
 .sidebar-pane .content-pane.end:dir(rtl),
 .sidebar-pane .content-pane.end:dir(rtl) banner > revealer > widget {
-  box-shadow: none;
-  border-right: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: inset -1px 0 rgba(0, 0, 0, 0.08);
+  border-right: none;
 }
 
 .content-pane .sidebar-pane:dir(rtl), .content-pane .sidebar-pane:dir(rtl) banner > revealer > widget, .content-pane .sidebar-pane.end:dir(ltr), .content-pane .sidebar-pane.end:dir(ltr) banner > revealer > widget,
@@ -7251,15 +7244,8 @@ toolbarview.undershoot-bottom scrolledwindow > undershoot.bottom {
 .sidebar-pane .content-pane:dir(rtl) banner > revealer > widget,
 .sidebar-pane .content-pane.end:dir(ltr),
 .sidebar-pane .content-pane.end:dir(ltr) banner > revealer > widget {
-  box-shadow: none;
-  border-left: 1px solid rgba(0, 0, 0, 0.08);
-}
-
-.sidebar-pane headerbar, .sidebar-pane headerbar:backdrop,
-.content-pane headerbar,
-.content-pane headerbar:backdrop {
-  background-color: transparent;
-  box-shadow: none;
+  box-shadow: inset 1px 0 rgba(0, 0, 0, 0.08);
+  border-left: none;
 }
 
 .sidebar-pane toolbarview.undershoot-top scrolledwindow > undershoot.top,
@@ -7328,10 +7314,8 @@ toolbarview.undershoot-bottom scrolledwindow > undershoot.bottom {
 
 toolbarview > .top-bar headerbar,
 toolbarview > .bottom-bar headerbar {
-  background: none;
-  box-shadow: none;
-  color: inherit;
   min-height: 36px;
+  color: white;
 }
 
 toolbarview > .top-bar headerbar > windowhandle > box,
@@ -7441,24 +7425,24 @@ toolbarview > .bottom-bar .toolbar:not(.osd) button.pill {
 
 toolbarview > .top-bar .collapse-spacing,
 toolbarview > .bottom-bar .collapse-spacing {
-  padding-top: 2px;
-  padding-bottom: 2px;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 toolbarview > .top-bar .collapse-spacing headerbar,
 toolbarview > .bottom-bar .collapse-spacing headerbar {
-  min-height: 32px;
+  min-height: 36px;
 }
 
 toolbarview > .top-bar .collapse-spacing headerbar > windowhandle > box,
 toolbarview > .bottom-bar .collapse-spacing headerbar > windowhandle > box {
-  padding-top: 2px;
-  padding-bottom: 2px;
+  padding-top: 4px;
+  padding-bottom: 4px;
 }
 
 toolbarview > .top-bar .collapse-spacing headerbar.default-decoration,
 toolbarview > .bottom-bar .collapse-spacing headerbar.default-decoration {
-  min-height: 24px;
+  min-height: 28px;
 }
 
 toolbarview > .top-bar .collapse-spacing headerbar.default-decoration > windowhandle > box,
@@ -7471,8 +7455,8 @@ toolbarview > .top-bar .collapse-spacing searchbar > revealer > box,
 toolbarview > .top-bar .collapse-spacing actionbar > revealer > box,
 toolbarview > .bottom-bar .collapse-spacing searchbar > revealer > box,
 toolbarview > .bottom-bar .collapse-spacing actionbar > revealer > box {
-  padding-top: 2px;
-  padding-bottom: 2px;
+  padding-top: 4px;
+  padding-bottom: 4px;
 }
 
 toolbarview > .top-bar .collapse-spacing .toolbar,

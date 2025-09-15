@@ -1763,17 +1763,10 @@ headerbar {
   min-height: $large-size;
   margin: 0;
   padding: 0;
+  background-color: $titlebar;
 
   @if $outline =='true' and $topbar =='dark' and $variant =='light' {
     box-shadow: inset 0 -1px $divider, inset 0 1px highlight($titlebar);
-  }
-
-  @if $opacity =='solid' or $blur =='true' {
-    background-color: $titlebar;
-  }
-
-  @else {
-    background-color: rgba($titlebar, 0.98);
   }
 
   &:disabled {
@@ -1789,10 +1782,14 @@ headerbar {
     }
   }
 
-  &.flat, &.flat:backdrop {
-    background: none;
-    box-shadow: none;
-    transition: none;
+  @if $variant == 'light' and $topbar == 'dark' {
+    border: none;
+  } @else {
+    &.flat, &.flat:backdrop {
+      background: none;
+      box-shadow: none;
+      transition: none;
+    }
   }
 
   .title {
@@ -1831,7 +1828,6 @@ headerbar {
     }
 
     &, > widget {
-
       > box.start:dir(ltr),
       > box.end:dir(rtl) {
         margin-right: $space-size;
@@ -1907,7 +1903,6 @@ headerbar {
   }
 
   stackswitcher {
-
     // reset
     &.linked:not(.vertical) > button:not(.suggested-action):not(.destructive-action) {
       border-radius: 0;
@@ -1973,17 +1968,6 @@ headerbar {
   .selection-mode {
     box-shadow: none; // Avoid double shadows
     background-color: $primary;
-  }
-
-  // squared corners when the window is maximized, tiled, or fullscreen
-  .tiled &,
-  .tiled-top &,
-  .tiled-right &,
-  .tiled-bottom &,
-  .tiled-left &,
-  .maximized &,
-  .fullscreen & {
-    border-radius: 0;
   }
 
   // Window button
@@ -2124,14 +2108,6 @@ headerbar {
           margin: 0;
         }
       }
-    }
-  }
-
-  .solid-csd & {
-    &:dir(rtl), &:dir(ltr) {
-      // specificity bump
-      border-radius: 0;
-      box-shadow: none; // just remove the highlight
     }
   }
 }
