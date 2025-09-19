@@ -862,6 +862,11 @@ list.boxed-list {
   }
 }
 
+// Separate and provider lists background
+list.boxed-list-separate, list.providers-list {
+  background: $background;
+}
+
 // Transition shadows
 flap,
 leaflet,
@@ -1521,5 +1526,15 @@ floating-sheet {
     } @else {
       box-shadow: $shadow-z16, 0 0 0 1px $divider, 0 0 0 36px transparent;
     }
+  }
+}
+
+//
+// AdwGizmo
+//
+
+sheet.top-bar, sheet.bottom-bar {
+  > stack > button > box.toolbar {
+    background: $base;
   }
 }
