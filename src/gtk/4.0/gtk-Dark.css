@@ -7438,7 +7438,6 @@ toolbarview > .bottom-bar actionbar > revealer > box {
   color: inherit;
   box-shadow: none;
   border: none;
-  padding: 3px;
 }
 
 toolbarview > .top-bar searchbar > revealer > box:backdrop,
