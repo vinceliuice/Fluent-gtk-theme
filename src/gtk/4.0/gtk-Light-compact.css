@@ -5068,12 +5068,64 @@ statusbar {
   padding: 4px 8px;
 }
 
-.nautilus-window placesview label {
+placesview label {
   color: rgba(0, 0, 0, 0.6);
 }
 
-.nautilus-window child.activatable {
+.nautilus-grid-view child.activatable {
+  padding: 0;
   border-radius: 4px;
+}
+
+.nautilus-grid-view child.activatable:selected {
+  background-color: alpha(#1A73E8, 0.1);
+}
+
+.nautilus-grid-view child.activatable #NautilusViewCell {
+  padding: 0;
+}
+
+.nautilus-grid-view child.activatable #NautilusViewCell .icon-ui-labels-box {
+  margin: 0 0 8px;
+  border-spacing: 0;
+}
+
+.nautilus-grid-view child.activatable #NautilusViewCell .dim-label, .nautilus-grid-view child.activatable #NautilusViewCell row.expander:not(:checked) image.expander-row-arrow, row.expander:not(:checked) .nautilus-grid-view child.activatable #NautilusViewCell image.expander-row-arrow, .nautilus-grid-view child.activatable #NautilusViewCell row label.subtitle, row .nautilus-grid-view child.activatable #NautilusViewCell label.subtitle {
+  border-spacing: 0;
+}
+
+.nautilus-list-view {
+  padding: 0;
+  margin: 0;
+  border-spacing: 0;
+}
+
+.nautilus-list-view listview.view {
+  padding: 0;
+  margin: 0;
+  border-spacing: 2px;
+}
+
+.nautilus-list-view listview.view > row.activatable {
+  padding: 0;
+  margin: 0;
+  border-radius: 2px;
+}
+
+.nautilus-list-view listview.view > row.activatable:selected {
+  background-color: alpha(#1A73E8, 0.15);
+}
+
+.nautilus-list-view listview.view > row.activatable > cell {
+  padding: 0;
+}
+
+.nautilus-list-view listview.view > row.activatable > cell > widget#NautilusViewCell {
+  padding: 2px 6px;
+}
+
+.nautilus-list-view listview.view > row.activatable:nth-child(odd):not(:disabled) {
+  background-image: image(alpha(currentColor, 0.03));
 }
 
 .floating-bar {
