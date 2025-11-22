@@ -148,8 +148,12 @@ menubutton {
   &.osd {
     background: none;
     color: inherit;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+    border: none;
 
-    > button { @extend %button-on-dark; }
+    > button:not(.osd) { @extend %button-on-dark; }
   }
 
   &.circular > button { @extend %circular-button; }
@@ -528,6 +532,7 @@ viewswitcher {
   border-radius: $corner-radius;
   background-color: $fill;
   padding: 0 $space-size / 2;
+  min-height: $medium-size;
 
   &.wide button.toggle {
     padding: 0 $space-size;
@@ -547,7 +552,7 @@ viewswitcher {
     }
 
     &:active, &:checked {
-      color: $text;
+      color: inherit;
       background-color: transparent;
       box-shadow: inset 0 -2px $primary;
 
@@ -895,12 +900,26 @@ toolbarview.undershoot-bottom scrolledwindow {
     color: inherit;
   }
 
-  .navigation-sidebar,
-  headerbar,
-  searchbar > revealer > box {
-    background-color: transparent;
-    box-shadow: none;
-    border: none;
+  @if $variant == 'light' and $topbar == 'dark' {
+    .navigation-sidebar,
+    searchbar > revealer > box {
+      background-color: transparent;
+      box-shadow: none;
+      border: none;
+    }
+  } @else {
+    .navigation-sidebar,
+    headerbar,
+    searchbar > revealer > box {
+      background-color: transparent;
+      box-shadow: none;
+      border: none;
+    }
+  }
+
+  scrollbar.right {
+    &:dir(ltr) { margin-right: 1px; }
+    &:dir(rtl) { margin-left: 1px; }
   }
 
   flap,
@@ -921,15 +940,15 @@ toolbarview.undershoot-bottom scrolledwindow {
 
   &:dir(ltr), &.end:dir(rtl) {
     &, banner > revealer > widget {
-      box-shadow: none;
-      border-right: 1px solid $border;
+      box-shadow: inset -1px 0 $border;
+      border-right: none;
     }
   }
 
   &:dir(rtl), &.end:dir(ltr) {
     &, banner > revealer > widget {
-      box-shadow: none;
-      border-left: 1px solid $border;
+      box-shadow: inset 1px 0 $border;
+      border-left: none;
     }
   }
 }
@@ -963,25 +982,15 @@ toolbarview.undershoot-bottom scrolledwindow {
 
   &:dir(ltr), &.end:dir(rtl) {
     &, banner > revealer > widget {
-      box-shadow: none;
-      border-right: 1px solid $border;
+      box-shadow: inset -1px 0 $border;
+      border-right: none;
     }
   }
 
   &:dir(rtl), &.end:dir(ltr) {
     &, banner > revealer > widget {
-      box-shadow: none;
-      border-left: 1px solid $border;
-    }
-  }
-}
-
-.sidebar-pane,
-.content-pane {
-  headerbar {
-    &, &:backdrop {
-      background-color: transparent;
-      box-shadow: none;
+      box-shadow: inset 1px 0 $border;
+      border-left: none;
     }
   }
 }
@@ -1023,14 +1032,20 @@ toolbarview.undershoot-bottom scrolledwindow {
 // AdwToolbarView
 //
 
- toolbarview {
+toolbarview {
   > .top-bar,
   > .bottom-bar {
     headerbar {
-      background: none;
-      box-shadow: none;
-      color: inherit;
       min-height: $large-size;
+
+      @if $variant == 'light' and $topbar == 'dark' {
+        color: $titlebar-text;
+      } @else {
+        background-color: transparent;
+        box-shadow: none;
+        border: none;
+        color: inherit;
+      }
     
       > windowhandle > box {
         padding: $space-size;
@@ -1065,7 +1080,7 @@ toolbarview.undershoot-bottom scrolledwindow {
         color: inherit;
         box-shadow: none;
         border: none;
-        padding: $space-size / 2;
+        // padding: $space-size;
 
         &:backdrop {
           background-color: transparent;
@@ -1079,7 +1094,7 @@ toolbarview.undershoot-bottom scrolledwindow {
       }
     }
 
-    menubar   {
+    menubar {
       box-shadow: none;
       padding-bottom: 0;
     }
@@ -1088,7 +1103,6 @@ toolbarview.undershoot-bottom scrolledwindow {
       .box {
         background-color: transparent;
         color: inherit;
-        box-shadow: none;
         border: none;
         padding-bottom: 0;
 
@@ -1106,7 +1120,13 @@ toolbarview.undershoot-bottom scrolledwindow {
       }
     }
 
-    .toolbar {
+    &:not(.raised) tabbar {
+      .box {
+        box-shadow: inset 0 -1px $solid-border;
+      }
+    }
+
+    .toolbar:not(.osd) {
       padding: $space-size / 2;
       background-color: transparent;
 
@@ -1118,19 +1138,19 @@ toolbarview.undershoot-bottom scrolledwindow {
     }
 
     .collapse-spacing {
-      padding-top: $space-size / 2;
-      padding-bottom: $space-size / 2;
+      padding-top: 0;
+      padding-bottom: 0;
 
       headerbar {
-        min-height: $large-size - $space-size;
+        min-height: $large-size;
 
         > windowhandle > box {
-          padding-top: $space-size / 2;
-          padding-bottom: $space-size / 2;
+          padding-top: $space-size;
+          padding-bottom: $space-size;
         }
-      
+
         &.default-decoration {
-          min-height: $medium-size - $space-size;
+          min-height: $medium-size;
 
           > windowhandle > box {
             padding-top: 0;
@@ -1142,8 +1162,8 @@ toolbarview.undershoot-bottom scrolledwindow {
       searchbar,
       actionbar {
         > revealer > box {
-          padding-top: $space-size / 2;
-          padding-bottom: $space-size / 2;
+          padding-top: $space-size;
+          padding-bottom: $space-size;
         }
       }
 
@@ -1252,12 +1272,29 @@ preferencesgroup > box {
 
 tabbar {
   .box {
-    min-height: $menuitem-size;
+    min-height: $medium-size;
+    background-color: $background;
+    box-shadow: none;
+    border: none;
+  }
+
+  &:backdrop .box {
+    background-color: $background;
+
+    > scrolledwindow,
+    > .start-action,
+    > .end-action {
+      filter: opacity(0.5);
+    }
   }
 
   tabbox {
+    padding: 0;
+    margin: 0;
+
     > tabboxchild {
       border-radius: 0;
+      padding: 0;
       margin: 0;
     }
 
@@ -1279,35 +1316,9 @@ tabbar {
     }
   }
 
-  tab {
-    transition: background 150ms ease-in-out;
-    border-width: 1px;
-    border-color: transparent;
-    border-style: solid;
-    min-height: $small-size;
-    min-width: $small-size;
-    padding: ($space-size / 2) 12px;
-    background-clip: padding-box;
-    color: $text-secondary;
-    background-color: transparent;
-
-    &:selected, &:checked, &:active, &:active:hover, &:checked:hover {
-      background-color: $base;
-      background-clip: padding-box;
-      border-color: $solid-border;
-      color: $text;
-    }
-
-    &:hover {
-      background-color: $fill;
-      box-shadow: none;
-      color: $text;
-    }
-  }
-
   .start-action,
   .end-action {
-    padding: 5px;
+    padding: $space-size;
   }
 
   .start-action:dir(ltr),
@@ -1349,11 +1360,12 @@ dnd tab {
 tabbar,
 dnd {
   tab {
-    min-height: $menuitem-size;
-    padding: $space-size / 2 $space-size;
     border-radius: $tab-radius $tab-radius 0 0;
     margin-top: $space-size / 2;
-    margin-bottom: -1px;
+    transition: background-color 150ms ease-in-out;
+    @extend %tabs_tab;
+    border-bottom: none;
+    padding: $space-size / 2 $space-size * 1.5;
 
     button.image-button {
       padding: 0;

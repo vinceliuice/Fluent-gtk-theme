@@ -6,10 +6,15 @@ THEME_NAME=Fluent
 
 _COLOR_VARIANTS=('' '-Light' '-Dark')
 _COMPA_VARIANTS=('' '-compact')
+_ROUND_VARIANTS=('' '-round')
 _THEME_VARIANTS=('' '-purple' '-pink' '-red' '-orange' '-yellow' '-green' '-grey' '-teal')
 
 if [ ! -z "${COMPA_VARIANTS:-}" ]; then
   IFS=', ' read -r -a _COMPA_VARIANTS <<< "${COMPA_VARIANTS:-}"
+fi
+
+if [ ! -z "${ROUND_VARIANTS:-}" ]; then
+  IFS=', ' read -r -a _ROUND_VARIANTS <<< "${ROUND_VARIANTS:-}"
 fi
 
 if [ ! -z "${COLOR_VARIANTS:-}" ]; then
@@ -21,26 +26,32 @@ if [ ! -z "${THEME_VARIANTS:-}" ]; then
 fi
 
 Tar_themes() {
-for theme in "${_THEME_VARIANTS[@]}"; do
-  rm -rf ${THEME_NAME}${theme}.tar.xz
+for round in "${_ROUND_VARIANTS[@]}"; do
+  for theme in "${_THEME_VARIANTS[@]}"; do
+    rm -rf ${THEME_NAME}${round}${theme}.tar.xz
+  done
 done
 
-for theme in "${_THEME_VARIANTS[@]}"; do
-  tar -Jcvf ${THEME_NAME}${theme}.tar.xz ${THEME_NAME}${theme}{'','-Light','-Dark'}{'','-compact'}
+for round in "${_ROUND_VARIANTS[@]}"; do
+  for theme in "${_THEME_VARIANTS[@]}"; do
+    tar -Jcvf ${THEME_NAME}${round}${theme}.tar.xz ${THEME_NAME}${round}${theme}{'','-Light','-Dark'}{'','-compact'}
+  done
 done
 }
 
 Clear_theme() {
-for theme in "${_THEME_VARIANTS[@]}"; do
-  for color in "${_COLOR_VARIANTS[@]}"; do
-    for compact in "${_COMPA_VARIANTS[@]}"; do
-      [[ -d "${THEME_NAME}${theme}${color}${compact}" ]] && rm -rf "${THEME_NAME}${theme}${color}${compact}"
+for round in "${_ROUND_VARIANTS[@]}"; do
+  for theme in "${_THEME_VARIANTS[@]}"; do
+    for color in "${_COLOR_VARIANTS[@]}"; do
+      for compact in "${_COMPA_VARIANTS[@]}"; do
+        [[ -d "${THEME_NAME}${round}${theme}${color}${compact}" ]] && rm -rf "${THEME_NAME}${round}${theme}${color}${compact}"
+      done
     done
   done
 done
 }
 
-cd .. && ./install.sh -d $THEME_DIR -t all
+cd .. && ./install.sh -d $THEME_DIR -t all && ./install.sh -d $THEME_DIR -t all --tweaks round
 
 cd $THEME_DIR && Tar_themes && Clear_theme
 

@@ -12,14 +12,15 @@
   border-image: url("assets/menu.svg") 24 32 28 28;
 
   .modal-dialog-content-box {
-    margin: 32px 40px;
-    spacing: 32px;
+    margin: $container_padding * 4 $container_padding * 5 $container_padding * 6;
+    spacing: $container_padding * 4;
     max-width: 28em;
   }
 
   .modal-dialog-linked-button {
-    min-height: 32px;
     @extend %bubble_button;
+    min-height: $small_size;
+    padding: $container_padding $container_padding * 2;
     background-gradient-direction: none !important;
   }
 }
@@ -96,7 +97,7 @@
   width: 28em;
 
   .modal-dialog-content-box {
-    margin-bottom: 24px;
+    margin-bottom: $container_padding;
   }
 
   .modal-dialog-linked-button {

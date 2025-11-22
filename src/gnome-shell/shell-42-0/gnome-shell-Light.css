@@ -1550,13 +1550,14 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .modal-dialog .modal-dialog-content-box {
-  margin: 32px 40px;
-  spacing: 32px;
+  margin: 24px 30px 36px;
+  spacing: 24px;
   max-width: 28em;
 }
 
 .modal-dialog .modal-dialog-linked-button {
-  min-height: 32px;
+  min-height: 24px;
+  padding: 6px 12px;
   background-gradient-direction: none !important;
 }
 
@@ -1645,7 +1646,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .prompt-dialog .modal-dialog-content-box {
-  margin-bottom: 24px;
+  margin-bottom: 6px;
 }
 
 .prompt-dialog .modal-dialog-linked-button:last-child {
