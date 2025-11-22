@@ -7,8 +7,8 @@
   @extend %dialogs;
 
   .modal-dialog-content-box {
-    margin: 32px 40px 42px;
-    spacing: 32px;
+    margin: $container_padding * 4 $container_padding * 5 $container_padding * 6;
+    spacing: $container_padding * 4;
     max-width: 28em;
   }
 
@@ -24,6 +24,8 @@
     background-gradient-direction: none !important;
     margin: 0 !important;
     @extend %dialog_button;
+    min-height: $small_size;
+    padding: $container_padding $container_padding * 2;
   }
 }
 
