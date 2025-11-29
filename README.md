@@ -1,6 +1,6 @@
 # Fluent gtk theme
 
-Fluent is a Fluent design theme for GNOME/GTK based desktop environments. See also [Fluent Icon theme](https://github.com/vinceliuice/Fluent-icon-theme).
+Fluent gtk theme is a Fluent design theme for GNOME/GTK based desktop environments. See also [Fluent Icon theme](https://github.com/vinceliuice/Fluent-icon-theme).
 
 ### Normal version
 ![screenshot01](https://github.com/vinceliuice/Fluent-gtk-theme/blob/Images/screenshot01.png?raw=true)
