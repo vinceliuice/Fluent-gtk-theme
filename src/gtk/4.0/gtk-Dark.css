@@ -5253,7 +5253,7 @@ navigation-view-page > toolbarview > scrolledwindow > viewport > clamp > box > b
 
 .forecast-temperature-label {
   font-weight: bold;
-  color: #ae7b03;
+  color: #fdd835;
 }
 
 WeatherThermometer {
