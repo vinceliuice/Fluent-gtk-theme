@@ -248,6 +248,7 @@ window.background:not(.csd) {
   }
 }
 
+
 /************
  * Inkscape *
  ************/
@@ -384,14 +385,17 @@ entry.search > window.background {
   }
 }
 
+
 /****************
  * Libre-Office *
  ****************/
 window.background:not(.solid-csd):not(.csd) {
   // reserved area at the most-right side of GtkMenuBar
   > grid.horizontal > grid.horizontal {
+    // FIXME: Breaks DroidCam style and does not change anything in LibreOffice
+    /*
     background-color: $titlebar;
-    box-shadow: inset 0 -1px $divider;
+    box-shadow: inset 0 -1px $divider;*/
 
     > button.flat.small-button {
       // 'close' button
@@ -433,4 +437,52 @@ window.background:not(.solid-csd):not(.csd) {
       label { color: on($primary); }
     }
   }
+}
+
+
+/************
+ * DroidCam *
+ ************/
+window.background > grid.horizontal > grid.horizontal {
+  // fixes radio/checkbox button backgrounds
+  box-shadow: none;
+  background-color: transparent;
+}
+
+
+/******************
+ * SoundConverter *
+ ******************/
+//dialog.background > box.dialog-vbox.vertical > box.vertical > frame > widget > box.vertical > notebook > stack
+frame > widget > box.vertical > notebook > stack {
+  // make stack color match background one in settings dialog window
+  background-color: $background;
+}
+
+
+/***********
+ * xreader *
+ ***********/
+.xreader-window.background .primary-toolbar {
+  // add border under toolbar
+  border-bottom: 1px solid $border;
+  padding: 4px 2px;
+
+  // set titlebar color for toolbar, as that is done in Nemo
+  background-color: $titlebar;
+
+  &:backdrop {
+    // same on unfocus
+    background-color: $titlebar-backdrop;
+  }
+}
+
+
+/**********
+ * Lutris *
+ **********/
+// dialog.background.csd > box.dialog-vbox.vertical > box.horizontal > list
+box.dialog-vbox.vertical > box.horizontal > list {
+  // border right after list in settings window
+  border-right: 1px solid $border;
 }
