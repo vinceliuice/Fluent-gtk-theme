@@ -17,7 +17,7 @@ placesview {
     }
 
     #NautilusViewCell {
-      padding: 0;
+      padding: $space-size;
 
       .icon-ui-labels-box {
         margin: 0 0 $space-size * 2;

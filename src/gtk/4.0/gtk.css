@@ -92,11 +92,6 @@ gridview > child:selected {
   outline-color: alpha(currentColor, 0.06);
 }
 
-gridview > child box {
-  border-spacing: 8px;
-  margin: 12px;
-}
-
 coverflow cover {
   color: rgba(0, 0, 0, 0.87);
   background-color: #FFFFFF;
@@ -1080,85 +1075,85 @@ headerbar popover .linked:not(.vertical) > button:only-child:not(.suggested-acti
   border-bottom-width: 1px;
 }
 
-.linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar) > entry.error + entry,
-.linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar) > entry + entry.error {
+.linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar):not(.stack-switcher) > entry.error + entry,
+.linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar):not(.stack-switcher) > entry + entry.error {
   border-left-color: #D93025;
 }
 
-.linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar) > entry.warning + entry,
-.linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar) > entry + entry.warning {
+.linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar):not(.stack-switcher) > entry.warning + entry,
+.linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar):not(.stack-switcher) > entry + entry.warning {
   border-left-color: #F4B400;
 }
 
-.linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar) > entry.error + entry.warning,
-.linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar) > entry.warning + entry.error {
+.linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar):not(.stack-switcher) > entry.error + entry.warning,
+.linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar):not(.stack-switcher) > entry.warning + entry.error {
   border-left-color: #e77213;
 }
 
-.linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar) > entry:not(:only-child) + button:not(.combo) {
+.linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar):not(.stack-switcher) > entry:not(:only-child) + button:not(.combo) {
   border-left: 1px solid rgba(0, 0, 0, 0.12);
 }
 
-.linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar) > entry:focus-within + entry {
+.linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar):not(.stack-switcher) > entry:focus-within + entry {
   border-left-color: rgba(0, 0, 0, 0.26);
 }
 
-.linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar) > entry:focus-within:not(:only-child) + button:not(.combo) {
+.linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar):not(.stack-switcher) > entry:focus-within:not(:only-child) + button:not(.combo) {
   border-left: 1px solid rgba(0, 0, 0, 0.26);
 }
 
-.linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar) > entry:hover + entry {
+.linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar):not(.stack-switcher) > entry:hover + entry {
   border-left-color: rgba(0, 0, 0, 0.26);
 }
 
-.linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar) > entry:hover:not(:only-child) + button:not(.combo) {
+.linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar):not(.stack-switcher) > entry:hover:not(:only-child) + button:not(.combo) {
   border-left: 1px solid rgba(0, 0, 0, 0.26);
 }
 
-.linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar) > entry:drop(active) + entry {
+.linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar):not(.stack-switcher) > entry:drop(active) + entry {
   border-left-color: #FF7043;
 }
 
-.linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar) > entry:drop(active):not(:only-child) + button:not(.combo) {
+.linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar):not(.stack-switcher) > entry:drop(active):not(:only-child) + button:not(.combo) {
   border-left: 1px solid #FF7043;
 }
 
-.linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar) > entry.warning:focus-within + entry {
+.linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar):not(.stack-switcher) > entry.warning:focus-within + entry {
   border-left-color: #F4B400;
 }
 
-.linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar) > entry.warning:focus-within:not(:only-child) + button:not(.combo) {
+.linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar):not(.stack-switcher) > entry.warning:focus-within:not(:only-child) + button:not(.combo) {
   border-left: 1px solid #F4B400;
 }
 
-.linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar) > entry.error:focus-within + entry {
+.linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar):not(.stack-switcher) > entry.error:focus-within + entry {
   border-left-color: #D93025;
 }
 
-.linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar) > entry.error:focus-within:not(:only-child) + button:not(.combo) {
+.linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar):not(.stack-switcher) > entry.error:focus-within:not(:only-child) + button:not(.combo) {
   border-left: 1px solid #D93025;
 }
 
-.linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar) > spinbutton + spinbutton,
-.linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar) > spinbutton + button {
+.linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar):not(.stack-switcher) > spinbutton + spinbutton,
+.linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar):not(.stack-switcher) > spinbutton + button {
   border-left: 1px solid rgba(0, 0, 0, 0.12);
 }
 
-.linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar) > spinbutton:focus-within + spinbutton,
-.linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar) > spinbutton:focus-within + button {
+.linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar):not(.stack-switcher) > spinbutton:focus-within + spinbutton,
+.linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar):not(.stack-switcher) > spinbutton:focus-within + button {
   border-left: 1px solid rgba(0, 0, 0, 0.26);
 }
 
-.linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar) > spinbutton + spinbutton:focus {
+.linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar):not(.stack-switcher) > spinbutton + spinbutton:focus {
   border-left: 1px solid rgba(0, 0, 0, 0.26);
 }
 
-.linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar) > spinbutton + button:checked {
+.linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar):not(.stack-switcher) > spinbutton + button:checked {
   border-left: 1px solid #1A73E8;
 }
 
-.linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar) > button:active + entry,
-.linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar) > button:checked + entry {
+.linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar):not(.stack-switcher) > button:active + entry,
+.linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar):not(.stack-switcher) > button:checked + entry {
   border-left-color: #1A73E8;
 }
 
@@ -1166,30 +1161,111 @@ headerbar popover .linked:not(.vertical) > button:only-child:not(.suggested-acti
   margin: 0;
 }
 
-.linked:not(.vertical) headerbar:not(.path-bar):not(.nautilus-path-bar):not(.stack-switcher) > entry:not(:only-child) + button:not(.combo), .titlebar .linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar):not(.stack-switcher) > entry:not(:only-child) + button:not(.combo) {
+headerbar .linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar):not(.stack-switcher) > entry:not(:only-child) + button:not(.combo) {
   border-left: none;
 }
 
-.linked:not(.vertical) headerbar:not(.path-bar):not(.nautilus-path-bar):not(.stack-switcher) > entry:focus-within:not(:only-child) + button:not(.combo), .titlebar .linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar):not(.stack-switcher) > entry:focus-within:not(:only-child) + button:not(.combo) {
+headerbar .linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar):not(.stack-switcher) > entry:focus-within:not(:only-child) + button:not(.combo) {
   border-left: none;
 }
 
-.linked:not(.vertical) headerbar:not(.path-bar):not(.nautilus-path-bar):not(.stack-switcher) > entry:drop(active):not(:only-child) + button:not(.combo), .titlebar .linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar):not(.stack-switcher) > entry:drop(active):not(:only-child) + button:not(.combo) {
+headerbar .linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar):not(.stack-switcher) > entry:drop(active):not(:only-child) + button:not(.combo) {
   border-left: none;
 }
 
-.linked:not(.vertical) headerbar:not(.path-bar):not(.nautilus-path-bar):not(.stack-switcher) > entry.warning:focus-within:not(:only-child) + button:not(.combo), .titlebar .linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar):not(.stack-switcher) > entry.warning:focus-within:not(:only-child) + button:not(.combo) {
+headerbar .linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar):not(.stack-switcher) > entry.warning:focus-within:not(:only-child) + button:not(.combo) {
   border-left: none;
 }
 
-.linked:not(.vertical) headerbar:not(.path-bar):not(.nautilus-path-bar):not(.stack-switcher) > entry.error:focus-within:not(:only-child) + button:not(.combo), .titlebar .linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar):not(.stack-switcher) > entry.error:focus-within:not(:only-child) + button:not(.combo) {
+headerbar .linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar):not(.stack-switcher) > entry.error:focus-within:not(:only-child) + button:not(.combo) {
   border-left: none;
 }
 
-.linked:not(.vertical) headerbar:not(.path-bar):not(.nautilus-path-bar):not(.stack-switcher) > button:active + entry,
-.linked:not(.vertical) headerbar:not(.path-bar):not(.nautilus-path-bar):not(.stack-switcher) > button:checked + entry, .titlebar .linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar):not(.stack-switcher) > button:active + entry,
-.titlebar .linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar):not(.stack-switcher) > button:checked + entry {
-  border-left-color: rgba(0, 0, 0, 0.12);
+headerbar .linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar):not(.stack-switcher) > button:active + entry,
+headerbar .linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar):not(.stack-switcher) > button:checked + entry {
+  border-left-color: transparent;
+}
+
+headerbar .linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar):not(.stack-switcher) > entry.error + entry,
+headerbar .linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar):not(.stack-switcher) > entry + entry.error {
+  border-left-color: transparent;
+}
+
+headerbar .linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar):not(.stack-switcher) > entry.warning + entry,
+headerbar .linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar):not(.stack-switcher) > entry + entry.warning {
+  border-left-color: transparent;
+}
+
+headerbar .linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar):not(.stack-switcher) > entry.error + entry.warning,
+headerbar .linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar):not(.stack-switcher) > entry.warning + entry.error {
+  border-left-color: transparent;
+}
+
+headerbar .linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar):not(.stack-switcher) > entry:not(:only-child) + button:not(.combo) {
+  border-left: none;
+}
+
+headerbar .linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar):not(.stack-switcher) > entry:focus-within + entry {
+  border-left-color: transparent;
+}
+
+headerbar .linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar):not(.stack-switcher) > entry:focus-within:not(:only-child) + button:not(.combo) {
+  border-left: none;
+}
+
+headerbar .linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar):not(.stack-switcher) > entry:hover + entry {
+  border-left-color: transparent;
+}
+
+headerbar .linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar):not(.stack-switcher) > entry:hover:not(:only-child) + button:not(.combo) {
+  border-left: none;
+}
+
+headerbar .linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar):not(.stack-switcher) > entry:drop(active) + entry {
+  border-left-color: transparent;
+}
+
+headerbar .linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar):not(.stack-switcher) > entry:drop(active):not(:only-child) + button:not(.combo) {
+  border-left: none;
+}
+
+headerbar .linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar):not(.stack-switcher) > entry.warning:focus-within + entry {
+  border-left-color: transparent;
+}
+
+headerbar .linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar):not(.stack-switcher) > entry.warning:focus-within:not(:only-child) + button:not(.combo) {
+  border-left: none;
+}
+
+headerbar .linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar):not(.stack-switcher) > entry.error:focus-within + entry {
+  border-left-color: transparent;
+}
+
+headerbar .linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar):not(.stack-switcher) > entry.error:focus-within:not(:only-child) + button:not(.combo) {
+  border-left: none;
+}
+
+headerbar .linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar):not(.stack-switcher) > spinbutton + spinbutton,
+headerbar .linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar):not(.stack-switcher) > spinbutton + button {
+  border-left: none;
+}
+
+headerbar .linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar):not(.stack-switcher) > spinbutton:focus-within + spinbutton,
+headerbar .linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar):not(.stack-switcher) > spinbutton:focus-within + button {
+  border-left: none;
+}
+
+headerbar .linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar):not(.stack-switcher) > spinbutton + spinbutton:focus {
+  border-left: none;
+}
+
+headerbar .linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar):not(.stack-switcher) > spinbutton + button:checked {
+  border-left: none;
+}
+
+headerbar .linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar):not(.stack-switcher) > button:active + entry,
+headerbar .linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar):not(.stack-switcher) > button:checked + entry {
+  border-left-color: transparent;
 }
 
 .linked.vertical > entry.error + entry,
@@ -1285,6 +1361,16 @@ headerbar popover .linked:not(.vertical) > button:only-child:not(.suggested-acti
   border-bottom-right-radius: 0;
 }
 
+headerbar .linked:not(.vertical) > button:dir(ltr):not(:first-child), headerbar .linked:not(.vertical) > button:dir(rtl):not(:last-child) {
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+
+headerbar .linked:not(.vertical) > button:dir(ltr):not(:last-child), headerbar .linked:not(.vertical) > button:dir(rtl):not(:first-child) {
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
 .linked.vertical button:not(:first-child) {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
@@ -1305,6 +1391,16 @@ headerbar popover .linked:not(.vertical) > button:only-child:not(.suggested-acti
 .linked:not(.vertical) > menubutton:dir(ltr):not(:last-child) > button, .linked:not(.vertical) > menubutton:dir(rtl):not(:first-child) > button {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
+}
+
+headerbar .linked:not(.vertical) > menubutton:dir(ltr):not(:first-child) > button, headerbar .linked:not(.vertical) > menubutton:dir(rtl):not(:last-child) > button {
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+
+headerbar .linked:not(.vertical) > menubutton:dir(ltr):not(:last-child) > button, headerbar .linked:not(.vertical) > menubutton:dir(rtl):not(:first-child) > button {
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
 }
 
 .linked.vertical menubutton:not(:first-child) > button {
@@ -1329,6 +1425,16 @@ headerbar popover .linked:not(.vertical) > button:only-child:not(.suggested-acti
   border-bottom-right-radius: 0;
 }
 
+headerbar .linked:not(.vertical) > dropdown:dir(ltr):not(:first-child) > button, headerbar .linked:not(.vertical) > dropdown:dir(rtl):not(:last-child) > button {
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+
+headerbar .linked:not(.vertical) > dropdown:dir(ltr):not(:last-child) > button, headerbar .linked:not(.vertical) > dropdown:dir(rtl):not(:first-child) > button {
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
 .linked.vertical dropdown:not(:first-child) > button {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
@@ -1349,6 +1455,16 @@ headerbar popover .linked:not(.vertical) > button:only-child:not(.suggested-acti
 .linked:not(.vertical) > colorbutton:dir(ltr):not(:last-child) > button, .linked:not(.vertical) > colorbutton:dir(rtl):not(:first-child) > button {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
+}
+
+headerbar .linked:not(.vertical) > colorbutton:dir(ltr):not(:first-child) > button, headerbar .linked:not(.vertical) > colorbutton:dir(rtl):not(:last-child) > button {
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+
+headerbar .linked:not(.vertical) > colorbutton:dir(ltr):not(:last-child) > button, headerbar .linked:not(.vertical) > colorbutton:dir(rtl):not(:first-child) > button {
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
 }
 
 .linked.vertical colorbutton:not(:first-child) > button {
@@ -1373,6 +1489,16 @@ headerbar popover .linked:not(.vertical) > button:only-child:not(.suggested-acti
   border-bottom-right-radius: 0;
 }
 
+headerbar .linked:not(.vertical) > fontbutton:dir(ltr):not(:first-child) > button, headerbar .linked:not(.vertical) > fontbutton:dir(rtl):not(:last-child) > button {
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+
+headerbar .linked:not(.vertical) > fontbutton:dir(ltr):not(:last-child) > button, headerbar .linked:not(.vertical) > fontbutton:dir(rtl):not(:first-child) > button {
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
 .linked.vertical fontbutton:not(:first-child) > button {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
@@ -1393,6 +1519,16 @@ headerbar popover .linked:not(.vertical) > button:only-child:not(.suggested-acti
 .linked:not(.vertical) > tabbutton:dir(ltr):not(:last-child) > button, .linked:not(.vertical) > tabbutton:dir(rtl):not(:first-child) > button {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
+}
+
+headerbar .linked:not(.vertical) > tabbutton:dir(ltr):not(:first-child) > button, headerbar .linked:not(.vertical) > tabbutton:dir(rtl):not(:last-child) > button {
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+
+headerbar .linked:not(.vertical) > tabbutton:dir(ltr):not(:last-child) > button, headerbar .linked:not(.vertical) > tabbutton:dir(rtl):not(:first-child) > button {
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
 }
 
 .linked.vertical tabbutton:not(:first-child) > button {
@@ -1417,6 +1553,16 @@ headerbar popover .linked:not(.vertical) > button:only-child:not(.suggested-acti
   border-bottom-right-radius: 0;
 }
 
+headerbar .linked:not(.vertical) > entry:dir(ltr):not(:first-child), headerbar .linked:not(.vertical) > entry:dir(rtl):not(:last-child) {
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+
+headerbar .linked:not(.vertical) > entry:dir(ltr):not(:last-child), headerbar .linked:not(.vertical) > entry:dir(rtl):not(:first-child) {
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
 .linked.vertical entry:not(:first-child) {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
@@ -1439,6 +1585,16 @@ headerbar popover .linked:not(.vertical) > button:only-child:not(.suggested-acti
   border-bottom-right-radius: 0;
 }
 
+headerbar .linked:not(.vertical) > combobox:dir(ltr):not(:first-child) > box > button.combo, headerbar .linked:not(.vertical) > combobox:dir(rtl):not(:last-child) > box > button.combo {
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+
+headerbar .linked:not(.vertical) > combobox:dir(ltr):not(:last-child) > box > button.combo, headerbar .linked:not(.vertical) > combobox:dir(rtl):not(:first-child) > box > button.combo {
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
 .linked.vertical combobox:not(:first-child) > box > button.combo {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
@@ -1459,6 +1615,16 @@ headerbar popover .linked:not(.vertical) > button:only-child:not(.suggested-acti
 .linked:not(.vertical) > appchooserbutton:dir(ltr):not(:last-child) > combobox > box > button.combo, .linked:not(.vertical) > appchooserbutton:dir(rtl):not(:first-child) > combobox > box > button.combo {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
+}
+
+headerbar .linked:not(.vertical) > appchooserbutton:dir(ltr):not(:first-child) > combobox > box > button.combo, headerbar .linked:not(.vertical) > appchooserbutton:dir(rtl):not(:last-child) > combobox > box > button.combo {
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+
+headerbar .linked:not(.vertical) > appchooserbutton:dir(ltr):not(:last-child) > combobox > box > button.combo, headerbar .linked:not(.vertical) > appchooserbutton:dir(rtl):not(:first-child) > combobox > box > button.combo {
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
 }
 
 .linked.vertical appchooserbutton:not(:first-child) > combobox > box > button.combo {
@@ -2102,10 +2268,6 @@ headerbar headerbar + separator {
 headerbar entry {
   margin-left: 3px;
   margin-right: 3px;
-}
-
-headerbar .linked:not(.vertical) > entry:not(:only-child) {
-  border-radius: 4px;
 }
 
 headerbar button.suggested-action, headerbar button.destructive-action {
@@ -5078,7 +5240,7 @@ placesview label {
 }
 
 .nautilus-grid-view child.activatable #NautilusViewCell {
-  padding: 0;
+  padding: 6px;
 }
 
 .nautilus-grid-view child.activatable #NautilusViewCell .icon-ui-labels-box {

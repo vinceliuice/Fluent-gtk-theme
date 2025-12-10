@@ -126,12 +126,6 @@ gridview {
 
       @extend %selected_items;
     }
-
-    box {
-      //cells
-      border-spacing: 8px; //label separation
-      margin: 12px;
-    }
   }
 }
 
@@ -1138,14 +1132,68 @@ stackswitcher {
 
     > button:active + entry,
     > button:checked + entry {
-      border-#{$_border}-color: $divider;
+      border-#{$_border}-color: transparent;
+    }
+
+    > entry.error + entry,
+    > entry + entry.error {
+      border-#{$_border}-color: transparent;
+    }
+
+    > entry.warning + entry,
+    > entry + entry.warning {
+      border-#{$_border}-color: transparent;
+    }
+
+    > entry.error + entry.warning,
+    > entry.warning + entry.error {
+      border-#{$_border}-color: transparent;
+    }
+
+    > entry:not(:only-child) + button:not(.combo) {
+      border-#{$_border}: none;
+    }
+
+    @each $e_type, $e_color in (':focus-within', $track),
+    (':hover', $track),
+    (':drop(active)', $drop_target_color),
+    ('.warning:focus-within', $warning),
+    ('.error:focus-within', $error) {
+      > entry#{$e_type} + entry {
+        border-#{$_border}-color: transparent;
+      }
+
+      > entry#{$e_type}:not(:only-child) + button:not(.combo) {
+        border-#{$_border}: none;
+      }
+    }
+
+    @each $e_type, $e_color in ('', $divider), (':focus-within', $track) {
+
+      > spinbutton#{$e_type} + spinbutton,
+      > spinbutton#{$e_type} + button {
+        border-#{$_border}: none;
+      }
+    }
+
+    > spinbutton + spinbutton:focus {
+      border-#{$_border}: none;
+    }
+
+    > spinbutton + button:checked {
+      border-#{$_border}: none;
+    }
+
+    > button:active + entry,
+    > button:checked + entry {
+      border-#{$_border}-color: transparent;
     }
   }
 }
 
 // Apply the rules defined above
 .linked:not(.vertical) {
-  &:not(.path-bar):not(.nautilus-path-bar) {
+  &:not(.path-bar):not(.nautilus-path-bar):not(.stack-switcher) {
     @include linking_rules($entry_rules: 'true');
   }
 
@@ -1153,10 +1201,8 @@ stackswitcher {
     margin: 0;
   }
 
-  headerbar, .titlebar & {
-    &:not(.path-bar):not(.nautilus-path-bar):not(.stack-switcher) {
-      @include linking_rules($entry_rules: 'false');
-    }
+  headerbar &:not(.path-bar):not(.nautilus-path-bar):not(.stack-switcher) {
+    @include linking_rules($entry_rules: 'false');
   }
 }
 
@@ -1196,6 +1242,23 @@ $_linked_widgets: join($_linked_widgets, $deprecated_linked_widgets);
       &:dir(rtl):not(:first-child) #{$child} {
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
+      }
+    }
+  }
+
+  headerbar .linked:not(.vertical) > { // reset for headerbars
+    #{$widget} {
+
+      &:dir(ltr):not(:first-child) #{$child},
+      &:dir(rtl):not(:last-child) #{$child} {
+        border-top-left-radius: $corner-radius;
+        border-bottom-left-radius: $corner-radius;
+      }
+
+      &:dir(ltr):not(:last-child) #{$child},
+      &:dir(rtl):not(:first-child) #{$child} {
+        border-top-right-radius: $corner-radius;
+        border-bottom-right-radius: $corner-radius;
       }
     }
   }
@@ -1737,7 +1800,7 @@ searchbar > revealer > box {
 }
 
 %titlebar-entry {
-  background-color: if($topbar == 'light' and $variant == 'light', $base, mix($titlebar-text, $titlebar, 10%));
+  background-color: if($topbar =='light' and $variant =='light', $base, mix($titlebar-text, $titlebar, 10%));
   color: $titlebar-text;
   border: none;
   border-radius: 4px;
@@ -1745,16 +1808,16 @@ searchbar > revealer > box {
 
   &:hover {
     box-shadow: 0 2px 3px rgba(black, 0.08), inset 0 0 0 1px $titlebar-divider;
-    background-color: if($topbar == 'light' and $variant == 'light', $base, mix($titlebar-text, $titlebar, 10%));
+    background-color: if($topbar =='light' and $variant =='light', $base, mix($titlebar-text, $titlebar, 10%));
   }
 
   &:focus-within {
     box-shadow: inset 0 0 0 2px $entry-highlight;
-    background-color: if($topbar == 'light' and $variant == 'light', $base, mix($titlebar-text, $titlebar, 10%));
+    background-color: if($topbar =='light' and $variant =='light', $base, mix($titlebar-text, $titlebar, 10%));
   }
 
   &:disabled {
-    background-color: if($topbar == 'light' and $variant == 'light', $base, mix($titlebar-text, $titlebar, 5%));
+    background-color: if($topbar =='light' and $variant =='light', $base, mix($titlebar-text, $titlebar, 5%));
     color: $titlebar-text-disabled;
   }
 
@@ -1854,9 +1917,11 @@ headerbar {
     }
   }
 
-  @if $variant == 'light' and $topbar == 'dark' {
+  @if $variant =='light' and $topbar =='dark' {
     border: none;
-  } @else {
+  }
+
+  @else {
     &.flat, &.flat:backdrop {
       background: none;
       box-shadow: none;
@@ -1900,6 +1965,7 @@ headerbar {
     }
 
     &, > widget {
+
       > box.start:dir(ltr),
       > box.end:dir(rtl) {
         margin-right: $space-size;
@@ -1952,9 +2018,9 @@ headerbar {
     margin-right: 3px;
   }
 
-  .linked:not(.vertical) > entry:not(:only-child) {
-    border-radius: 4px;
-  }
+  // .linked:not(.vertical) > entry:not(:only-child) {
+  //   border-radius: 4px;
+  // }
 
   // Titlebar Buttons
   button:not(.suggested-action):not(.destructive-action) {
@@ -1975,6 +2041,7 @@ headerbar {
   }
 
   stackswitcher {
+
     // reset
     &.linked:not(.vertical) > button:not(.suggested-action):not(.destructive-action) {
       border-radius: 0;
