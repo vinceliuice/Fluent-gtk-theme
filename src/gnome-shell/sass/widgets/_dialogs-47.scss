@@ -185,6 +185,11 @@
   color: $warning_color;
 }
 
+.prompt-dialog-info-label {
+  color: $primary_color;
+  background-color: transparentize($fg_color, 0.9);
+}
+
 /* Polkit Dialog */
 .polkit-dialog-user-layout {
   text-align: center;
