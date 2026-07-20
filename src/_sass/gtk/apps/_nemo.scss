@@ -98,3 +98,8 @@
 .nemo-desktop.nemo-canvas-item {
   @extend %desktop-canvas-item;
 }
+
+// Fix solid color background displayed over wallpaper if theme is applied as "~/.config/gtk-3.0/{assets,gtk.css}"
+.nemo-desktop-window {
+  opacity: 0;
+}

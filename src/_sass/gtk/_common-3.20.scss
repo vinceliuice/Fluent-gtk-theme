@@ -2580,14 +2580,17 @@ $tab-radius: $corner-radius;
   }
 }
 
-notebook {
+frame notebook:not(.frame) {
+  background-color: $base;
+}
 
-  frame > paned > & > header,
+notebook {
+  frame > paned > &.frame > header,
   &.frame > header {
     background-color: $base-alt;
   }
 
-  &, &.frame {
+  &.frame {
     background-color: $base;
     border-radius: $corner-radius;
   }
@@ -2605,6 +2608,11 @@ notebook {
         border-radius: $corner-radius;
       }
     }
+  }
+
+  // in the hope 1st child of 'notebook' is 'header' and 2nd one - 'stack'
+  &:not(.frame):nth-child(1) > stack:nth-child(2) {
+    background-color: $base;
   }
 
   &:focus tab:checked {
@@ -3677,13 +3685,17 @@ actionbar > revealer > box {
 }
 
 scrolledwindow {
+  &.frame {
+    // just transparent without this
+    background-color: $base;
+  }
+
   viewport.frame {
     // avoid double borders when viewport inside scrolled window
     border: none;
   }
 
   stack &.frame {
-
     // border-radius: $corner-radius;
     viewport.frame list {
       border: none;
@@ -4795,51 +4807,64 @@ stackswitcher {
   min-height: 0;
   padding: 0 $space-size;
   // margin: $space-size 0;
-  border-radius: $corner-radius;
-  background-color: $overlay-normal;
 
   &.linked:not(.vertical) > button:not(.suggested-action):not(.destructive-action) {
     margin: 0;
-    background-color: transparent;
+    background-color: gtkalpha($text, 0.05);
     background-image: none;
-    border: none;
     animation: none;
     box-shadow: none;
     transition: box-shadow $ripple-fade-in-duration $ease-out;
-
-    &, &:first-child, &:last-child {
-      border-radius: 0;
-    }
 
     &.text-button {
       min-width: 100px;
     }
 
+    &:first-child {
+      border-left: $space-size solid gtkalpha($text, 0.05);
+      border-top-left-radius: $corner-radius;
+      border-bottom-left-radius: $corner-radius;
+    }
+
+    &:last-child {
+      border-right: $space-size solid gtkalpha($text, 0.05);
+      border-top-right-radius: $corner-radius;
+      border-bottom-right-radius: $corner-radius;
+    }
+
     &:focus {
       box-shadow: inset 0 -2px $overlay-focus;
-      background-color: transparent;
       background-image: none;
+      background-color: gtkalpha($text, 0.05);
     }
 
     &:hover {
       box-shadow: inset 0 -2px gtkalpha(currentColor, 0.3);
-      background-color: transparent;
       background-image: none;
+      background-color: gtkalpha($text, 0.05);
     }
 
     &:active {
       box-shadow: inset 0 -2px gtkalpha($primary, 0.65);
-      background-color: transparent;
       background-image: none;
       transition: box-shadow $ripple-fade-in-duration $ease-out;
+      background-color: gtkalpha($text, 0.05);
     }
 
     &:checked {
       box-shadow: inset 0 -2px $primary;
-      background-color: transparent;
       background-image: none;
       color: $text;
       transition: box-shadow $ripple-fade-in-duration $ease-out;
+      background-color: gtkalpha($text, 0.05);
+
+      &:first-child {
+        border-left: $space-size solid transparent;
+      }
+
+      &:last-child {
+        border-right: $space-size solid transparent;
+      }
     }
   }
 

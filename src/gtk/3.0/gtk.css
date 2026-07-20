@@ -2409,11 +2409,15 @@ tabbox > tab:checked.reorderable-page, notebook > header tab:checked.reorderable
   background-color: #FFFFFF;
 }
 
-frame > paned > notebook > header, notebook.frame > header {
+frame notebook:not(.frame) {
+  background-color: #FFFFFF;
+}
+
+frame > paned > notebook.frame > header, notebook.frame > header {
   background-color: #FAFAFA;
 }
 
-notebook, notebook.frame {
+notebook.frame {
   background-color: #FFFFFF;
   border-radius: 2px;
 }
@@ -2425,6 +2429,10 @@ notebook.frame frame > border {
 
 notebook.frame frame > list row.activatable {
   border-radius: 2px;
+}
+
+notebook:not(.frame):nth-child(1) > stack:nth-child(2) {
+  background-color: #FFFFFF;
 }
 
 notebook:focus tab:checked {
@@ -3467,6 +3475,10 @@ actionbar > revealer > box {
   border-radius: 0 0 3px 3px;
 }
 
+scrolledwindow.frame {
+  background-color: #FFFFFF;
+}
+
 scrolledwindow viewport.frame {
   border: none;
 }
@@ -4345,53 +4357,66 @@ cursor-handle.insertion-cursor:dir(ltr), cursor-handle.insertion-cursor:dir(rtl)
 stackswitcher {
   min-height: 0;
   padding: 0 6px;
-  border-radius: 2px;
-  background-color: alpha(currentColor, 0.05);
 }
 
 stackswitcher.linked:not(.vertical) > button:not(.suggested-action):not(.destructive-action) {
   margin: 0;
-  background-color: transparent;
+  background-color: alpha(rgba(0, 0, 0, 0.87), 0.05);
   background-image: none;
-  border: none;
   animation: none;
   box-shadow: none;
   transition: box-shadow 225ms cubic-bezier(0, 0, 0.2, 1);
-}
-
-stackswitcher.linked:not(.vertical) > button:not(.suggested-action):not(.destructive-action), stackswitcher.linked:not(.vertical) > button:not(.suggested-action):not(.destructive-action):first-child, stackswitcher.linked:not(.vertical) > button:not(.suggested-action):not(.destructive-action):last-child {
-  border-radius: 0;
 }
 
 stackswitcher.linked:not(.vertical) > button:not(.suggested-action):not(.destructive-action).text-button {
   min-width: 100px;
 }
 
+stackswitcher.linked:not(.vertical) > button:not(.suggested-action):not(.destructive-action):first-child {
+  border-left: 6px solid alpha(rgba(0, 0, 0, 0.87), 0.05);
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+
+stackswitcher.linked:not(.vertical) > button:not(.suggested-action):not(.destructive-action):last-child {
+  border-right: 6px solid alpha(rgba(0, 0, 0, 0.87), 0.05);
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
 stackswitcher.linked:not(.vertical) > button:not(.suggested-action):not(.destructive-action):focus {
   box-shadow: inset 0 -2px alpha(currentColor, 0.08);
-  background-color: transparent;
   background-image: none;
+  background-color: alpha(rgba(0, 0, 0, 0.87), 0.05);
 }
 
 stackswitcher.linked:not(.vertical) > button:not(.suggested-action):not(.destructive-action):hover {
   box-shadow: inset 0 -2px alpha(currentColor, 0.3);
-  background-color: transparent;
   background-image: none;
+  background-color: alpha(rgba(0, 0, 0, 0.87), 0.05);
 }
 
 stackswitcher.linked:not(.vertical) > button:not(.suggested-action):not(.destructive-action):active {
   box-shadow: inset 0 -2px alpha(#1A73E8, 0.65);
-  background-color: transparent;
   background-image: none;
   transition: box-shadow 225ms cubic-bezier(0, 0, 0.2, 1);
+  background-color: alpha(rgba(0, 0, 0, 0.87), 0.05);
 }
 
 stackswitcher.linked:not(.vertical) > button:not(.suggested-action):not(.destructive-action):checked {
   box-shadow: inset 0 -2px #1A73E8;
-  background-color: transparent;
   background-image: none;
   color: rgba(0, 0, 0, 0.87);
   transition: box-shadow 225ms cubic-bezier(0, 0, 0.2, 1);
+  background-color: alpha(rgba(0, 0, 0, 0.87), 0.05);
+}
+
+stackswitcher.linked:not(.vertical) > button:not(.suggested-action):not(.destructive-action):checked:first-child {
+  border-left: 6px solid transparent;
+}
+
+stackswitcher.linked:not(.vertical) > button:not(.suggested-action):not(.destructive-action):checked:last-child {
+  border-right: 6px solid transparent;
 }
 
 stackswitcher button.text-button {
@@ -6463,6 +6488,19 @@ window.background:not(.csd) > window > menu menuitem {
   padding: 8px 4px;
 }
 
+#DialogNotebook > viewport.frame {
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 2px;
+}
+
+#DockedDialogNotebook button.close-button {
+  background-color: transparent;
+}
+
+#DockedDialogNotebook header {
+  background-color: #FAFAFA;
+}
+
 /***********
  * Synapse *
  ***********/
@@ -6514,16 +6552,18 @@ entry.search > window.background > frame > border {
 window.background:not(.solid-csd):not(.csd) > grid.horizontal > grid.horizontal {
   /*
     background-color: $titlebar;
-    box-shadow: inset 0 -1px $divider;*/
+    box-shadow: inset 0 -1px $divider;
+    */
+  /*
+    &:backdrop {
+      background-color: $titlebar-backdrop;
+    }
+    */
 }
 
 window.background:not(.solid-csd):not(.csd) > grid.horizontal > grid.horizontal > button.flat.small-button {
   border: none;
   border-radius: 9999px;
-}
-
-window.background:not(.solid-csd):not(.csd) > grid.horizontal > grid.horizontal:backdrop {
-  background-color: #3c3c3c;
 }
 
 window.background:not(.solid-csd):not(.csd) > notebook:not(.frame) {
@@ -6555,14 +6595,6 @@ window.background:not(.solid-csd):not(.csd) > notebook:not(.frame) > stack {
   color: white;
 }
 
-/************
- * DroidCam *
- ************/
-window.background > grid.horizontal > grid.horizontal {
-  box-shadow: none;
-  background-color: transparent;
-}
-
 /******************
  * SoundConverter *
  ******************/
@@ -6588,6 +6620,79 @@ frame > widget > box.vertical > notebook > stack {
  **********/
 box.dialog-vbox.vertical > box.horizontal > list {
   border-right: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+#lutris > stack:nth-child(2) > box.horizontal:nth-child(1) > box.vertical:nth-child(2) > revealer:nth-last-child(1) > box.horizontal {
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/***********
+ * Brasero *
+ ***********/
+window.background > box.vertical:nth-child(2) > notebook:nth-child(2) > stack:nth-child(1) > box.vertical:nth-child(2) > paned.horizontal:nth-child(2) > box.vertical > box.vertical:nth-child(1) > notebook:nth-child(2) > stack:nth-child(1) > frame:nth-child(1) > widget:nth-child(2) {
+  background-color: #FFFFFF;
+}
+
+/*********
+ * Gpick *
+ *********/
+window.background > box.vertical:nth-child(2) > paned.horizontal:nth-child(2) > notebook.frame:nth-child(1) > stack:nth-child(2) > box.vertical:nth-child(3) > box.horizontal:nth-child(1) > widget:nth-child(1) > toolbar.horizontal:nth-child(1) {
+  background-color: transparent;
+}
+
+/***************
+ * Filechooser *
+ ***************/
+dialog > box > filechooser {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/*******
+ * Xed *
+ *******/
+window.background.xed-window > overlay:nth-child(2) > box.vertical:nth-child(1) > box.horizontal.xed-searchbar:nth-child(4) {
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/*****************
+ * GNOME Drawing *
+ *****************/
+window.background > box.vertical:nth-child(2) > box.vertical.primary-toolbar:nth-child(1) {
+  background-color: #2C2C2C;
+}
+
+window.background > box.vertical:nth-child(2) > box.vertical.primary-toolbar:nth-child(1):backdrop {
+  background-color: #3c3c3c;
+}
+
+window.background > box.vertical:nth-child(2) > box.vertical.primary-toolbar:nth-child(1) > box:nth-child(1) > toolbar.horizontal:nth-child(1) {
+  background-color: #2C2C2C;
+}
+
+window.background > box.vertical:nth-child(2) > box.vertical.primary-toolbar:nth-child(1) > box:nth-child(1) > toolbar.horizontal:nth-child(1):backdrop {
+  background-color: #3c3c3c;
+}
+
+/********
+ * Meld *
+ ********/
+#meldapp.background.csd, #meldapp.background.csd > box.vertical:nth-child(3) > notebook.meld-notebook:nth-child(1) > stack:nth-child(2) {
+  background-color: #FFFFFF;
+}
+
+/*******************
+ * NVIDIA Settings *
+ *******************/
+window.background > box.vertical > paned.horizontal:nth-child(1) > box.horizontal:nth-child(3) > box.vertical:nth-child(1) > notebook.frame:nth-child(4) > stack:nth-child(2) > box.vertical > toolbar.horizontal:nth-child(1) {
+  background-color: #3c3c3c;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/*****************************************************
+ * Cinnamon "System Settings > Keyboard > Shortcuts" *
+ *****************************************************/
+window.background > box.vertical:nth-child(2) > stack:nth-child(2) > scrolledwindow:nth-child(2) > viewport:nth-last-child(3) > box.vertical:nth-child(1) > stack:nth-child(1) > box.vertical:nth-child(2) > box.vertical:nth-child(1) > box.horizontal:nth-child(1) > paned.horizontal:nth-child(1) > separator.wide:nth-child(2) {
+  background-image: none;
 }
 
 /*********
@@ -8310,6 +8415,10 @@ window.background.csd.thunar scrolledwindow.frame.sidebar.shortcuts-pane {
   -NemoPlacesTreeView-disk-full-bar-radius: 0;
   -NemoPlacesTreeView-disk-full-bottom-padding: 1px;
   -NemoPlacesTreeView-disk-full-max-length: 80px;
+}
+
+.nemo-desktop-window {
+  opacity: 0;
 }
 
 /* GTK NAMED COLORS

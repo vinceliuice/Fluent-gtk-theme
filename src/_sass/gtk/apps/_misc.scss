@@ -321,6 +321,20 @@ window.background:not(.csd) {
   }
 }
 
+#DialogNotebook > viewport.frame {
+  border: 1px solid $border;
+  border-radius: $corner-radius;
+}
+
+#DockedDialogNotebook {
+  button.close-button {
+    background-color: transparent;
+  }
+  header {
+    background-color: $base-alt;
+  }
+}
+
 
 /***********
  * Synapse *
@@ -395,7 +409,8 @@ window.background:not(.solid-csd):not(.csd) {
     // FIXME: Breaks DroidCam style and does not change anything in LibreOffice
     /*
     background-color: $titlebar;
-    box-shadow: inset 0 -1px $divider;*/
+    box-shadow: inset 0 -1px $divider;
+    */
 
     > button.flat.small-button {
       // 'close' button
@@ -403,9 +418,12 @@ window.background:not(.solid-csd):not(.csd) {
       border-radius: $circular-radius;
     }
 
+    // FIXME: Breaks DroidCam style and does not change anything in LibreOffice
+    /*
     &:backdrop {
       background-color: $titlebar-backdrop;
     }
+    */
   }
 
   // for 'Notebookbar' toolbar
@@ -437,16 +455,6 @@ window.background:not(.solid-csd):not(.csd) {
       label { color: on($primary); }
     }
   }
-}
-
-
-/************
- * DroidCam *
- ************/
-window.background > grid.horizontal > grid.horizontal {
-  // fixes radio/checkbox button backgrounds
-  box-shadow: none;
-  background-color: transparent;
 }
 
 
@@ -485,4 +493,98 @@ frame > widget > box.vertical > notebook > stack {
 box.dialog-vbox.vertical > box.horizontal > list {
   // border right after list in settings window
   border-right: 1px solid $border;
+}
+#lutris > stack:nth-child(2) > box.horizontal:nth-child(1) > box.vertical:nth-child(2) > revealer:nth-last-child(1) > box.horizontal {
+  // panel with "Play" button and other stuff that appears after click on game title
+  border-top: 1px solid $border;
+}
+
+
+/***********
+ * Brasero *
+ ***********/
+// FIXME: App is broken, rules work only if set as "GTK_STYLE_PROVIDER_PRIORITY_USER" (either CSS in "~/.config/gtk-3.0/gtk.css" or in GTK Inspector)
+window.background > box.vertical:nth-child(2) > notebook:nth-child(2) > stack:nth-child(1) > box.vertical:nth-child(2) > paned.horizontal:nth-child(2) > box.vertical > box.vertical:nth-child(1) > notebook:nth-child(2) > stack:nth-child(1) > frame:nth-child(1) > widget:nth-child(2) {
+  // fix white background in "New Project"
+  background-color: $base;
+}
+
+
+/*********
+ * Gpick *
+ *********/
+window.background > box.vertical:nth-child(2) > paned.horizontal:nth-child(2) > notebook.frame:nth-child(1) > stack:nth-child(2) > box.vertical:nth-child(3) > box.horizontal:nth-child(1) > widget:nth-child(1) > toolbar.horizontal:nth-child(1) {
+  // "New palette" tab, layout selection
+  background-color: transparent;
+}
+
+
+/***************
+ * Filechooser *
+ ***************/
+dialog > box > filechooser {
+  // add border to the bottom because it is absent in case file picker does not expect any file extension
+  // FIXME: Causes border above "Ok"/"Cancel" buttons when file extension is expected
+  border-bottom: 1px solid $border;
+}
+
+
+/*******
+ * Xed *
+ *******/
+window.background.xed-window > overlay:nth-child(2) > box.vertical:nth-child(1) > box.horizontal.xed-searchbar:nth-child(4) {
+  // search bar border, visible when search bar is hidden
+  border-top: 1px solid $border;
+}
+
+
+/*****************
+ * GNOME Drawing *
+ *****************/
+window.background > box.vertical:nth-child(2) > box.vertical.primary-toolbar:nth-child(1) {
+  // toolbar background
+  background-color: $titlebar;
+  &:backdrop {
+    background-color: $titlebar-backdrop;
+  }
+
+  // elements background on this toolbar
+  > box:nth-child(1) > toolbar.horizontal:nth-child(1) {
+    background-color: $titlebar;
+    &:backdrop {
+      background-color: $titlebar-backdrop;
+    }
+  }
+}
+
+
+/********
+ * Meld *
+ ********/
+// FIXME: App is broken, rules work only if set as "GTK_STYLE_PROVIDER_PRIORITY_USER" (either CSS in "~/.config/gtk-3.0/gtk.css" or in GTK Inspector)
+#meldapp.background.csd {
+  &, & > box.vertical:nth-child(3) > notebook.meld-notebook:nth-child(1) > stack:nth-child(2) {
+    // it has tabs and background color should match them
+    background-color: $base;
+  }
+}
+
+
+/*******************
+ * NVIDIA Settings *
+ *******************/
+// "Application Profiles" section
+window.background > box.vertical > paned.horizontal:nth-child(1) > box.horizontal:nth-child(3) > box.vertical:nth-child(1) > notebook.frame:nth-child(4) > stack:nth-child(2) > box.vertical > toolbar.horizontal:nth-child(1) {
+  // toolbar background and bottom border in "Rules/Profiles" table
+  background-color: $titlebar-backdrop;
+  border-bottom: 1px solid $border;
+}
+
+
+/*****************************************************
+ * Cinnamon "System Settings > Keyboard > Shortcuts" *
+ *****************************************************/
+window.background > box.vertical:nth-child(2) > stack:nth-child(2) > scrolledwindow:nth-child(2) > viewport:nth-last-child(3) > box.vertical:nth-child(1) > stack:nth-child(1) > box.vertical:nth-child(2) > box.vertical:nth-child(1) > box.horizontal:nth-child(1) > paned.horizontal:nth-child(1) > separator.wide:nth-child(2) {
+  // fix separator between "Categories" and "Keyboard shortcuts" tables has left and right borders
+  background-image: none;
 }
