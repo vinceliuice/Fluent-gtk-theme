@@ -149,7 +149,7 @@ navigation-view-page > toolbarview > scrolledwindow > viewport > clamp {
 
 $weather_thermometer_high_color: $yellow-700;
 $weather_thermometer_low_color: $blue-700;
-$weather_forecast_color: #ae7b03;
+$weather_forecast_color: if($variant == 'light', #ae7b03, #fdd835);
 
 #places-label {
   font-weight: bold;
