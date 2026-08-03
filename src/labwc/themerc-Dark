@@ -1,5 +1,5 @@
-window.titlebar.padding.height: 6
-window.titlebar.padding.width: 6
+window.titlebar.padding.height: 4
+window.titlebar.padding.width: 8
 window.active.title.bg.color: #202020
 window.inactive.title.bg.color: #2C2C2C
 window.active.label.text.color: #FFFFFF
@@ -16,6 +16,6 @@ osd.label.text.color: #FFFFFF
 window.button.hover.bg.corner-radius: 50
 window.button.width: 22
 window.button.height: 22
-window.button.spacing: 6
+window.button.spacing: 12
 
 
