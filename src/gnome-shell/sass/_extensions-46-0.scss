@@ -361,6 +361,23 @@
   }
 
   .panel-button { color: $panel_secondary_fg_color !important; }
+
+  @if $panel_style == 'compact' {
+    &#panel .arcmenu-panel-menu.panel-button {
+      border: none !important;
+      border-radius: 0 !important;
+      box-shadow: none !important;
+      margin: 0 !important;
+
+      // Match Dash to Panel's .dtp-container interaction states in both
+      // light and dark shell variants.
+      &:hover,
+      &:focus { background-color: rgba(238, 238, 236, 0.1) !important; }
+
+      &:active,
+      &:checked { background-color: rgba(238, 238, 236, 0.18) !important; }
+    }
+  }
 }
 
 //
