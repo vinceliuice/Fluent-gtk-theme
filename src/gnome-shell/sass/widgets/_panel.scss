@@ -44,7 +44,12 @@ $panel_transition_duration: 250ms; // same as the overview transition duration
   box-shadow: none;
 
   @if $window == 'round' {
-    padding: 0 2px !important;
+    @if $panel_style == 'compact' {
+      // Keep screen-edge panels clickable all the way to the corners.
+      padding: 0 !important;
+    } @else {
+      padding: 0 2px !important;
+    }
   }
 
   @if $opacity == 'solid' {
@@ -90,7 +95,14 @@ $panel_transition_duration: 250ms; // same as the overview transition duration
       border: 1px solid transparent !important;
       box-shadow: inset 0 1px transparent !important;
       border-radius: $buttons_radius;
-      margin: 2px 1px;
+
+      @if $panel_style == 'compact' {
+        // Preserve spacing between buttons without creating a dead strip at
+        // the screen edge.
+        margin: 0 1px;
+      } @else {
+        margin: 2px 1px;
+      }
     } @else {
       border-radius: 0;
       border: none !important;
@@ -328,16 +340,21 @@ $panel_transition_duration: 250ms; // same as the overview transition duration
   }
 
   @if $window == 'round' {
+    $edge_button_margin: if($panel_style == 'compact', 0, $container-padding / 2);
+
+    .arcmenu-panel-menu.panel-button,
     Gjs_ArcMenu_ApplicationsButton.panel-button,
     Gjs_arcmenu_arcmenu_com_menuButton_Arc_Menu_MenuButton.panel-button,
     Gjs_arc-menu_linuxgem33_com_menuButton_ArcMenu_MenuButton.panel-button,
     Gjs_ui_panel_ActivitiesButton.panel-button { // Activities button
-      margin-left: $container-padding / 2;
+      &:ltr { margin-left: $edge_button_margin; }
+      &:rtl { margin-right: $edge_button_margin; }
     }
 
     Gjs_AggregateMenu.panel-button,
     Gjs_ui_panel_AggregateMenu.panel-button {
-      margin-right: $container-padding / 2;
+      &:ltr { margin-right: $edge_button_margin; }
+      &:rtl { margin-left: $edge_button_margin; }
     }
   }
 
