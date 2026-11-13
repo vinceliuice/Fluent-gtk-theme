@@ -1471,6 +1471,117 @@ StScrollBar {
 // .menu-context-menu { }
 
 //
+// Menu (Cinnamon >= 6.6 applet, appmenu-* classes)
+//
+.appmenu {
+  &-background .popup-menu-content { padding: 0; }
+
+  &-main-box { spacing: $space-size * 2; }
+
+  &-right-box {
+    spacing: $space-size;
+    padding: $space-size * 2;
+  }
+
+  &-categories-applications-box {
+    spacing: $space-size * 2;
+
+    &:top { padding-top: $space-size; }
+  }
+
+  &-applications-box { padding-right: $space-size; }
+
+  &-search-box { spacing: $space-size * 2; }
+
+  &-sidebar {
+    padding: $space-size * 2 0;
+    color: $text;
+    background-color: rgba($text, 0.04);
+    border-radius: $menu-radius 0 0 $menu-radius;
+    border-right-width: 1px;
+    border-color: $divider;
+  }
+
+  &-system-box { spacing: $space-size * 2; }
+
+  &-category-button,
+  &-category-button-selected,
+  &-category-button-greyed,
+  &-application-button,
+  &-application-button-selected,
+  &-sidebar-button {
+    padding: $space-size;
+    spacing: $space-size;
+    border-radius: $corner-radius;
+  }
+
+  &-sidebar-button {
+    padding: $space-size / 2 $space-size;
+    margin: 0 $space-size * 2;
+
+    &:hover { @include button(flat-hover); }
+  }
+
+  &-system-button {
+    padding: $space-size * 1.4;
+    color: $text;
+    border: 1px solid $border;
+    border-radius: $circular-radius;
+    background-color: $fill;
+
+    &-lock:hover,
+    &-logout:hover { background-color: $divider; }
+
+    &-shutdown {
+      color: on($destructive);
+      background-color: $destructive;
+
+      &:hover { background-color: lighten($destructive, 6%); }
+    }
+  }
+
+  &-application-button {
+    &-label { padding: 0; }
+    &-description { color: $text-secondary; }
+
+    &:highlighted { font-weight: bold; }
+
+    &-selected {
+      @include button(hover);
+
+      &:highlighted { font-weight: bold; }
+    }
+  }
+
+  &-category-button {
+    &-label { padding: 0; }
+
+    &:hover { @include button(flat-hover); }
+
+    &-selected { @include button(flat-hover); }
+
+    &-greyed {
+      color: $text-disabled;
+      font-style: italic;
+
+      StIcon { opacity: 0.5; }
+    }
+  }
+
+  &-search-entry-icon {
+    icon-size: 1em;
+    color: $text;
+  }
+}
+
+#appmenu-search-entry {
+  font-weight: normal;
+  caret-color: $text;
+
+  @extend %entry;
+}
+
+//
 // OSD
 //
 .info-osd {

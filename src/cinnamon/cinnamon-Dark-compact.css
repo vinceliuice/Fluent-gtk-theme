@@ -101,7 +101,7 @@ stage {
   background-color: transparent;
 }
 
-#menu-search-entry, .notification StEntry, .menu #notification StEntry, .popup-menu #notification StEntry, #notification StEntry {
+#appmenu-search-entry, #menu-search-entry, .notification StEntry, .menu #notification StEntry, .popup-menu #notification StEntry, #notification StEntry {
   padding: 2px 8px;
   min-height: 20px;
   caret-size: 1px;
@@ -114,19 +114,19 @@ stage {
   background-color: rgba(255, 255, 255, 0.04);
 }
 
-#menu-search-entry:focus, .notification StEntry:focus, .menu #notification StEntry:focus, .popup-menu #notification StEntry:focus, #notification StEntry:focus, #menu-search-entry:hover, .notification StEntry:hover, .menu #notification StEntry:hover, .popup-menu #notification StEntry:hover, #notification StEntry:hover {
+#appmenu-search-entry:focus, #menu-search-entry:focus, .notification StEntry:focus, .menu #notification StEntry:focus, .popup-menu #notification StEntry:focus, #notification StEntry:focus, #appmenu-search-entry:hover, #menu-search-entry:hover, .notification StEntry:hover, .menu #notification StEntry:hover, .popup-menu #notification StEntry:hover, #notification StEntry:hover {
   color: white;
   background-color: rgba(255, 255, 255, 0.04);
   border: 2px solid #3281EA;
 }
 
-#menu-search-entry:insensitive, .notification StEntry:insensitive, .menu #notification StEntry:insensitive, .popup-menu #notification StEntry:insensitive, #notification StEntry:insensitive {
+#appmenu-search-entry:insensitive, #menu-search-entry:insensitive, .notification StEntry:insensitive, .menu #notification StEntry:insensitive, .popup-menu #notification StEntry:insensitive, #notification StEntry:insensitive {
   border: 2px solid transparent;
   background-color: rgba(255, 255, 255, 0.04);
   color: rgba(255, 255, 255, 0.5);
 }
 
-#menu-search-entry StIcon.capslock-warning, .notification StEntry StIcon.capslock-warning, .menu #notification StEntry StIcon.capslock-warning, .popup-menu #notification StEntry StIcon.capslock-warning, #notification StEntry StIcon.capslock-warning {
+#appmenu-search-entry StIcon.capslock-warning, #menu-search-entry StIcon.capslock-warning, .notification StEntry StIcon.capslock-warning, .menu #notification StEntry StIcon.capslock-warning, .popup-menu #notification StEntry StIcon.capslock-warning, #notification StEntry StIcon.capslock-warning {
   icon-size: 16px;
   warning-color: #FDD633;
   padding: 0 4px;
@@ -1615,6 +1615,139 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .menu-search-entry-icon {
   icon-size: 1em;
   color: white;
+}
+
+.appmenu-background .popup-menu-content {
+  padding: 0;
+}
+
+.appmenu-main-box {
+  spacing: 8px;
+}
+
+.appmenu-right-box {
+  spacing: 4px;
+  padding: 8px;
+}
+
+.appmenu-categories-applications-box {
+  spacing: 8px;
+}
+
+.appmenu-categories-applications-box:top {
+  padding-top: 4px;
+}
+
+.appmenu-applications-box {
+  padding-right: 4px;
+}
+
+.appmenu-search-box {
+  spacing: 8px;
+}
+
+.appmenu-sidebar {
+  padding: 8px 0;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.04);
+  border-radius: 5px 0 0 5px;
+  border-right-width: 1px;
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.appmenu-system-box {
+  spacing: 8px;
+}
+
+.appmenu-category-button, .appmenu-category-button-selected, .appmenu-category-button-greyed, .appmenu-application-button, .appmenu-application-button-selected, .appmenu-sidebar-button {
+  padding: 4px;
+  spacing: 4px;
+  border-radius: 2px;
+}
+
+.appmenu-sidebar-button {
+  padding: 2px 4px;
+  margin: 0 8px;
+}
+
+.appmenu-sidebar-button:hover {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.appmenu-system-button {
+  padding: 5.6px;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 9999px;
+  background-color: rgba(255, 255, 255, 0.04);
+}
+
+.appmenu-system-button-lock:hover, .appmenu-system-button-logout:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.appmenu-system-button-shutdown {
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #F28B82;
+}
+
+.appmenu-system-button-shutdown:hover {
+  background-color: #f5a59e;
+}
+
+.appmenu-application-button-label {
+  padding: 0;
+}
+
+.appmenu-application-button-description {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.appmenu-application-button:highlighted {
+  font-weight: bold;
+}
+
+.appmenu-application-button-selected {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.appmenu-application-button-selected:highlighted {
+  font-weight: bold;
+}
+
+.appmenu-category-button-label {
+  padding: 0;
+}
+
+.appmenu-category-button:hover {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.appmenu-category-button-selected {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.appmenu-category-button-greyed {
+  color: rgba(255, 255, 255, 0.5);
+  font-style: italic;
+}
+
+.appmenu-category-button-greyed StIcon {
+  opacity: 0.5;
+}
+
+.appmenu-search-entry-icon {
+  icon-size: 1em;
+  color: white;
+}
+
+#appmenu-search-entry {
+  font-weight: normal;
+  caret-color: white;
 }
 
 .info-osd {
